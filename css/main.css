@@ -94,30 +94,30 @@ body{
 .site-footer .copy{margin-top:10px;color:#b0b8c1;font-size:12px}
 
 /* ===== 종목 검색 (구글 스타일) ===== */
-.stock-search{position:relative;max-width:580px;margin:0 auto 28px}
+.stock-search{position:relative;max-width:620px;margin:0 auto 28px}
 .stock-search input{
-  width:100%;height:52px;box-sizing:border-box;
-  padding:0 52px 0 52px;
-  font-family:inherit;font-size:16px;color:#191f28;letter-spacing:-0.01em;
-  background:#fff;border:1px solid #e5e8eb;border-radius:28px;
-  box-shadow:0 1px 6px rgba(25,31,40,.06);
-  transition:box-shadow .2s ease,border-color .2s ease;
+  width:100%;height:46px;box-sizing:border-box;
+  padding:0 44px 0 44px;
+  font-family:inherit;font-size:15px;color:#191f28;letter-spacing:-0.01em;
+  background:#fff;border:1px solid #e5e8eb;border-radius:24px;
+  box-shadow:0 1px 4px rgba(25,31,40,.04);
+  transition:box-shadow .18s ease,border-color .18s ease;
   -webkit-appearance:none;
 }
 .stock-search input::-webkit-search-decoration,
 .stock-search input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
-.stock-search input::placeholder{color:#8b95a1;font-weight:400}
-.stock-search input:hover{box-shadow:0 2px 10px rgba(25,31,40,.09);border-color:#dcdfe3}
-.stock-search input:focus{outline:none;border-color:#c5cbd2;box-shadow:0 2px 12px rgba(25,31,40,.10)}
+.stock-search input::placeholder{color:#9aa2ac;font-weight:400}
+.stock-search input:hover{box-shadow:0 2px 8px rgba(25,31,40,.07);border-color:#dcdfe3}
+.stock-search input:focus{outline:none;border-color:#d1d6db;box-shadow:0 2px 10px rgba(25,31,40,.08)}
 .stock-search .s-icon{
-  position:absolute;left:20px;top:50%;transform:translateY(-50%);
-  width:20px;height:20px;color:#8b95a1;pointer-events:none;
+  position:absolute;left:16px;top:50%;transform:translateY(-50%);
+  width:15px;height:15px;color:#9aa2ac;pointer-events:none;
 }
 .stock-search .s-clear{
-  position:absolute;right:14px;top:50%;transform:translateY(-50%);
-  width:28px;height:28px;border:0;background:transparent;cursor:pointer;padding:0;
-  color:#8b95a1;border-radius:50%;display:none;align-items:center;justify-content:center;
-  font-size:14px;line-height:1;transition:background .15s ease,color .15s ease;
+  position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  width:22px;height:22px;border:0;background:transparent;cursor:pointer;padding:0;
+  color:#9aa2ac;border-radius:50%;display:none;align-items:center;justify-content:center;
+  font-size:12px;line-height:1;transition:background .15s ease,color .15s ease;
 }
 .stock-search .s-clear:hover{background:#f2f4f6;color:#4e5968}
 .stock-search.has-text .s-clear{display:inline-flex}
