@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기아 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>기아 (000270) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 대형주 | 트럼프 관세 변동성 속 하이브리드·SUV 글로벌 강자</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 기아 = "관세 리스크 vs 하이브리드 강세 + 3%대 배당 + 글로벌 SUV 파워"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 현재 리스크</b><br>트럼프 <b>자동차 관세 25%</b> 불확실성. 212,500 고점 대비 <b>-25% 급락</b>. 중국 시장 부진. EV 전환 지연. 북미 의존도 높음.
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 강점 카드</b><br>① <b>하이브리드 글로벌 1위</b> 급부상<br>② 북미 SUV <b>판매 1위</b> (텔루라이드·쏘렌토·스포티지)<br>③ <b>배당수익률 3.5%</b> 안정<br>④ 디자인·브랜드 프리미엄 강화
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가 (4.17)</div><div class="mv" style="color:#1D9E75">159,200<span style="font-size:11px;color:#888">원</span></div><div class="ms">+0.82% 반등 중</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">111,000~<br>212,500원</div><div class="ms">저점 대비 +43%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">47.5%</div><div class="ms">중립권</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 위치 47.5% — 저점(111,000) 대비 +43% 반등했으나 고점(212,500) 대비 -25% 조정. 중립 구간</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 55%,#F09595 82%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:47%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-45%)">▲ 159,200</div></div>
+    <div style="position:absolute;left:100%;top:-4px;width:3px;height:30px;background:#E24B4A;border-radius:2px;opacity:.6"><div style="position:absolute;top:31px;font-size:9px;color:#A32D2D;white-space:nowrap;transform:translateX(-90%)">고점 212,500</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 111,000</span><span>중간 161,750</span><span>고점 212,500</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 트럼프 관세 유예 기대로 111,000→212,500 (+91%) 급등 후, 불확실성으로 145,200까지 급락(-32%). 현재 159,200 반등 중. <b>관세 결정이 향후 방향성 결정. 배당 3.5%+하이브리드 강세가 하방 지지.</b>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-r" style="font-size:10px;padding:2px 7px">트럼프 관세 25% 리스크</span>
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">하이브리드 글로벌 강자</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">북미 SUV 판매 1위</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">배당수익률 3.5%</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "관세 기대 급등 212,500 → 관세 불확실 급락 145,200 → 반등 159,200"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2월 말 212,500 = 트럼프 관세 유예 기대감 피크.</b> 111,000 저점에서 +91% 급등. "관세 면제" 루머 + 북미 SUV 판매 호조 + 하이브리드 전환 수혜. 외국인·기관 동시 매수.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>3월 급락 145,200 = 관세 유예 불확실 + 차익실현.</b> 트럼프 발언 엇갈림. 멕시코 공장 관세 우려. 30% 폭락 — 대형 음봉 연속. 거래량 급증하며 패닉 매도.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>현재 <b>159,200 = 145,200 저점 반등 중</b>. MA20(153,355) 상회 성공. 배당락 전 배당 매수 + 하이브리드 실적 양호. 그러나 관세 결정 전까지 박스권 등락 예상.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>150,000~165,000 박스권 형성 중.</b> 관세 리스크 완전 해소 전까지 추가 상승 제한. 유예 확정 시 180,000+ 돌파 가능. 관세 부과 시 130,000 재하락 리스크.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">관세 기대 급등 → 불확실 급락 → 배당+HEV 반등 중</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="125" height="200" rx="4" fill="#FAEEDA" opacity=".15"/>
+    <rect x="175" y="10" width="105" height="200" rx="4" fill="#EAF3DE" opacity=".2"/>
+    <rect x="290" y="10" width="125" height="200" rx="4" fill="#FCEBEB" opacity=".15"/>
+    <rect x="425" y="10" width="245" height="200" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <text x="102" y="22" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">① 1월 하락</text>
+    <text x="227" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 2월 관세유예 급등</text>
+    <text x="352" y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">③ 3월 급락</text>
+    <text x="547" y="22" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">④ 4월 반등 중 (현재)</text>
+    <!-- 1월 하락 -->
+    <line x1="55" y1="75" x2="55" y2="89" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="77" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="70" y1="82" x2="70" y2="95" stroke="#1D9E75" stroke-width="2"/><rect x="64" y="84" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="85" y1="88" x2="85" y2="101" stroke="#E24B4A" stroke-width="2"/><rect x="79" y="90" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="100" y1="95" x2="100" y2="107" stroke="#E24B4A" stroke-width="2"/><rect x="94" y="97" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="102" x2="115" y2="114" stroke="#E24B4A" stroke-width="2"/><rect x="109" y="104" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="130" y1="108" x2="130" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="124" y="110" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="145" y1="113" x2="145" y2="125" stroke="#1D9E75" stroke-width="2"/><rect x="139" y="115" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="160" y1="111" x2="160" y2="122" stroke="#E24B4A" stroke-width="2"/><rect x="154" y="113" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <!-- 2월 관세 유예 급등 -->
+    <line x1="183" y1="106" x2="183" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="177" y="108" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="198" y1="98" x2="198" y2="109" stroke="#1D9E75" stroke-width="2.5"/><rect x="192" y="100" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="213" y1="88" x2="213" y2="100" stroke="#1D9E75" stroke-width="2.5"/><rect x="207" y="90" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <text x="207" y="84" font-size="8" fill="#27500A">관세유예</text>
+    <line x1="228" y1="75" x2="228" y2="88" stroke="#1D9E75" stroke-width="3"/><rect x="222" y="77" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="243" y1="62" x2="243" y2="76" stroke="#1D9E75" stroke-width="3"/><rect x="237" y="64" width="10" height="12" fill="#EF9F27" rx="1"/>
+    <line x1="258" y1="48" x2="258" y2="63" stroke="#1D9E75" stroke-width="3.5"/><rect x="252" y="50" width="10" height="13" fill="#EF9F27" rx="1"/>
+    <line x1="273" y1="35" x2="273" y2="49" stroke="#1D9E75" stroke-width="3.5"/><rect x="267" y="37" width="10" height="12" fill="#EF9F27" rx="1"/>
+    <line x1="273" y1="23" x2="273" y2="35" stroke="#EF9F27" stroke-width="1.5"/>
+    <circle cx="279" cy="21" r="5" fill="#EF9F27"/>
+    <text x="279" y="14" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">212,500</text>
+    <!-- 3월 급락 -->
+    <line x1="298" y1="42" x2="298" y2="57" stroke="#E24B4A" stroke-width="3"/><rect x="292" y="44" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <text x="292" y="38" font-size="8" fill="#A32D2D">관세불확실</text>
+    <line x1="313" y1="58" x2="313" y2="73" stroke="#E24B4A" stroke-width="3"/><rect x="307" y="60" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="328" y1="73" x2="328" y2="88" stroke="#E24B4A" stroke-width="3"/><rect x="322" y="75" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="343" y1="88" x2="343" y2="103" stroke="#E24B4A" stroke-width="3.5"/><rect x="337" y="90" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="358" y1="103" x2="358" y2="118" stroke="#E24B4A" stroke-width="3.5"/><rect x="352" y="105" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="373" y1="118" x2="373" y2="133" stroke="#E24B4A" stroke-width="3"/><rect x="367" y="120" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="388" y1="128" x2="388" y2="142" stroke="#E24B4A" stroke-width="2.5"/><rect x="382" y="130" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="403" y1="135" x2="403" y2="148" stroke="#1D9E75" stroke-width="2"/><rect x="397" y="137" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <circle cx="417" cy="154" r="4" fill="#E24B4A"/>
+    <text x="415" y="168" text-anchor="middle" font-size="8" fill="#A32D2D">145,200</text>
+    <!-- 4월 반등 -->
+    <line x1="433" y1="125" x2="433" y2="149" stroke="#1D9E75" stroke-width="2.5"/><rect x="427" y="127" width="10" height="20" fill="#1D9E75" rx="1"/>
+    <text x="427" y="121" font-size="8" fill="#1D9E75">배당매수</text>
+    <line x1="448" y1="118" x2="448" y2="127" stroke="#E24B4A" stroke-width="2"/><rect x="442" y="120" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="463" y1="116" x2="463" y2="125" stroke="#1D9E75" stroke-width="2"/><rect x="457" y="118" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="478" y1="114" x2="478" y2="123" stroke="#E24B4A" stroke-width="2"/><rect x="472" y="116" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="493" y1="111" x2="493" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="487" y="113" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="508" y1="113" x2="508" y2="122" stroke="#E24B4A" stroke-width="2"/><rect x="502" y="115" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="523" y1="111" x2="523" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="517" y="113" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="538" y1="108" x2="538" y2="117" stroke="#1D9E75" stroke-width="2"/><rect x="532" y="110" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="553" y1="109" x2="553" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="547" y="111" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="568" y1="107" x2="568" y2="116" stroke="#1D9E75" stroke-width="2"/><rect x="562" y="109" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="583" y1="105" x2="583" y2="114" stroke="#1D9E75" stroke-width="2"/><rect x="577" y="107" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="598" y1="106" x2="598" y2="115" stroke="#E24B4A" stroke-width="2"/><rect x="592" y="108" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <path d="M622 103 Q638 82 654 65" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a1)"/>
+    <text x="630" y="62" font-size="8" fill="#1D9E75">관세유예</text>
+    <text x="630" y="74" font-size="8" fill="#1D9E75">→ 180K+</text>
+    <!-- 수평선 -->
+    <line x1="40" y1="21" x2="640" y2="21" stroke="#EF9F27" stroke-width="0.8" stroke-dasharray="4 4" opacity=".35"/>
+    <line x1="40" y1="110" x2="640" y2="110" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="107" font-size="9" fill="#26215C" font-weight="600">현재 159,200</text>
+    <line x1="40" y1="154" x2="640" y2="154" stroke="#E24B4A" stroke-width="0.8" stroke-dasharray="3 4" opacity=".4"/>
+    <text x="42" y="151" font-size="9" fill="#A32D2D">3월 저점 145,200</text>
+    <rect x="425" y="105" width="245" height="20" rx="3" fill="#9FE1CB" opacity=".12"/>
+    <text x="547" y="119" text-anchor="middle" font-size="9" fill="#085041" font-weight="600">★ 매수 구간 145,000~155,000 / 분할 130,000~145,000</text>
+    <line x1="40" y1="213" x2="640" y2="213" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 관세 기대 급등 212,500 → 불확실 급락 145,200 → 배당+HEV 반등 159,200 박스권</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "2025 저점 박스권 → 2026 급등 → 관세 충격 급락 → 재반등"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2025년 4~9월 <b>87,000~106,000 장기 박스권</b>. EV 전환 지연+중국 부진. 그러나 하이브리드·SUV 실적은 양호 — 배당 매력으로 하방 지지.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>2026년 1~2월 <b>111,000→212,500 (+91%) V자 급등</b>. 트럼프 관세 유예 기대+북미 SUV 판매 호조. 외국인 순매수 전환. 주봉 대형 양봉 연속.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>3월 <b>관세 불확실 → 205,500→145,200 급락</b> (-29%). 주봉 대형 음봉. 그러나 111,000 저점 하회 안함 — 세력 지지선 유지.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 <b>159,200 반등 — 주봉 하락 추세선 지지 확인</b>. 관세 결정이 향후 방향 결정. 유예 시 180,000~200,000 재상승. 부과 시 130,000~140,000 재하락 리스크.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">2025 박스권 → 2026 관세기대 급등 → 급락 → 반등 중</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="280" height="175" rx="4" fill="#FAEEDA" opacity=".08"/>
+    <text x="180" y="22" text-anchor="middle" font-size="8" fill="#633806">2025 박스권 (EV 캐즘)</text>
+    <rect x="330" y="10" width="120" height="175" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="390" y="22" text-anchor="middle" font-size="8" fill="#27500A">2026 급등</text>
+    <rect x="460" y="10" width="80" height="175" rx="4" fill="#FCEBEB" opacity=".15"/>
+    <rect x="550" y="10" width="130" height="175" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <text x="612" y="22" text-anchor="middle" font-size="8" fill="#0C447C">반등 중</text>
+    <!-- 2025 박스권 -->
+    <line x1="55" y1="108" x2="55" y2="122" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="110" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="73" y1="104" x2="73" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="67" y="106" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="91" y1="107" x2="91" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="85" y="109" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="109" y1="103" x2="109" y2="116" stroke="#1D9E75" stroke-width="2"/><rect x="103" y="105" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="127" y1="105" x2="127" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="121" y="107" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="145" y1="102" x2="145" y2="115" stroke="#1D9E75" stroke-width="2"/><rect x="139" y="104" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="163" y1="104" x2="163" y2="116" stroke="#E24B4A" stroke-width="2"/><rect x="157" y="106" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="181" y1="106" x2="181" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="175" y="108" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="199" y1="103" x2="199" y2="115" stroke="#1D9E75" stroke-width="2"/><rect x="193" y="105" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="217" y1="102" x2="217" y2="113" stroke="#1D9E75" stroke-width="2"/><rect x="211" y="104" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="235" y1="100" x2="235" y2="112" stroke="#1D9E75" stroke-width="2"/><rect x="229" y="102" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="253" y1="97" x2="253" y2="109" stroke="#1D9E75" stroke-width="2"/><rect x="247" y="99" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="271" y1="98" x2="271" y2="110" stroke="#E24B4A" stroke-width="2"/><rect x="265" y="100" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="289" y1="95" x2="289" y2="107" stroke="#1D9E75" stroke-width="2"/><rect x="283" y="97" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="307" y1="96" x2="307" y2="108" stroke="#E24B4A" stroke-width="2"/><rect x="301" y="98" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <!-- 2026 급등 -->
+    <line x1="338" y1="84" x2="338" y2="105" stroke="#1D9E75" stroke-width="2.5"/><rect x="332" y="86" width="10" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="356" y1="68" x2="356" y2="86" stroke="#1D9E75" stroke-width="3"/><rect x="350" y="70" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <text x="350" y="64" font-size="8" fill="#27500A">관세유예</text>
+    <line x1="374" y1="53" x2="374" y2="70" stroke="#1D9E75" stroke-width="3"/><rect x="368" y="55" width="10" height="15" fill="#EF9F27" rx="1"/>
+    <line x1="392" y1="38" x2="392" y2="55" stroke="#1D9E75" stroke-width="3.5"/><rect x="386" y="40" width="10" height="15" fill="#EF9F27" rx="1"/>
+    <line x1="410" y1="25" x2="410" y2="40" stroke="#1D9E75" stroke-width="3.5"/><rect x="404" y="27" width="10" height="13" fill="#EF9F27" rx="1"/>
+    <line x1="428" y1="22" x2="428" y2="35" stroke="#1D9E75" stroke-width="3.5"/><rect x="422" y="24" width="10" height="11" fill="#EF9F27" rx="1"/>
+    <line x1="428" y1="15" x2="428" y2="22" stroke="#EF9F27" stroke-width="1.5"/>
+    <circle cx="434" cy="13" r="5" fill="#EF9F27"/>
+    <text x="434" y="8" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">212,500!</text>
+    <!-- 급락 -->
+    <line x1="468" y1="35" x2="468" y2="58" stroke="#E24B4A" stroke-width="3.5"/><rect x="462" y="37" width="10" height="20" fill="#E24B4A" rx="1"/>
+    <text x="462" y="31" font-size="8" fill="#A32D2D">관세불확실</text>
+    <line x1="486" y1="58" x2="486" y2="82" stroke="#E24B4A" stroke-width="3.5"/><rect x="480" y="60" width="10" height="21" fill="#E24B4A" rx="1"/>
+    <line x1="504" y1="78" x2="504" y2="98" stroke="#E24B4A" stroke-width="3"/><rect x="498" y="80" width="10" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="522" y1="92" x2="522" y2="108" stroke="#1D9E75" stroke-width="2.5"/><rect x="516" y="94" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <circle cx="536" cy="114" r="4" fill="#E24B4A"/>
+    <text x="534" y="128" text-anchor="middle" font-size="8" fill="#A32D2D">145,200</text>
+    <!-- 반등 -->
+    <line x1="558" y1="92" x2="558" y2="112" stroke="#1D9E75" stroke-width="2.5"/><rect x="552" y="94" width="10" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="576" y1="88" x2="576" y2="102" stroke="#E24B4A" stroke-width="2"/><rect x="570" y="90" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="594" y1="85" x2="594" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="588" y="87" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="612" y1="83" x2="612" y2="96" stroke="#1D9E75" stroke-width="2"/><rect x="606" y="85" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <path d="M630 80 Q645 60 660 42" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+    <text x="640" y="39" font-size="8" fill="#1D9E75">유예 → 200K</text>
+    <!-- 이평선 -->
+    <path d="M45 115 Q180 108 310 100 Q390 55 434 18 Q470 45 522 108 Q576 95 612 88 Q637 85 655 82" fill="none" stroke="#1D9E75" stroke-width="1.8"/>
+    <path d="M45 120 Q200 112 330 105 Q405 60 450 25 Q488 55 540 112 Q595 100 625 92 Q647 88 658 86" fill="none" stroke="#EF9F27" stroke-width="1.3"/>
+    <text x="650" y="79" font-size="8" fill="#1D9E75">─5주</text>
+    <text x="650" y="89" font-size="8" fill="#EF9F27">─20주</text>
+    <line x1="40" y1="90" x2="618" y2="90" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="87" font-size="9" fill="#26215C" font-weight="600">현재 159,200</text>
+    <line x1="40" y1="183" x2="640" y2="183" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025 박스권 → 2026 관세기대 +91% → 불확실 -29% → 배당+HEV 반등</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2024~2025 장기 박스권 → 2026 관세 변동성 → 회복 중"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2024~2025년 <b>89,000~125,000 장기 박스권</b>. EV 전환 지연+중국 시장 부진. 그러나 배당 3%+하이브리드 강세로 대형주 안정감 유지.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>2026년 1~2월 <b>152,600→205,500 월봉 급등</b>. 트럼프 관세 유예 기대+북미 SUV 판매 호조. 월봉 돌파 시도.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>3월 <b>145,200 급락 — 관세 불확실 충격</b>. 그러나 2025년 저점(111,000) 하회 안함. 월봉 하락 추세선 지지 확인.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 <b>159,200 회복 — 월봉 관점에서는 박스권 중심 복귀</b>. 관세 유예 확정 시 장기 상승 추세 전환 가능. 목표 180,000~200,000.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">2024~2025 박스권 → 2026 관세 변동성 → 장기 회복 기대</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="470" height="180" rx="4" fill="#FAEEDA" opacity=".08"/>
+    <text x="275" y="22" text-anchor="middle" font-size="8" fill="#633806">2024~2025 박스권 (EV 전환 지연)</text>
+    <rect x="520" y="10" width="160" height="180" rx="4" fill="#E6F1FB" opacity=".12"/>
+    <text x="600" y="22" text-anchor="middle" font-size="8" fill="#0C447C">2026 변동성</text>
+    <!-- 2024 박스권 -->
+    <line x1="55" y1="88" x2="55" y2="105" stroke="#1D9E75" stroke-width="2"/><rect x="49" y="90" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="74" y1="78" x2="74" y2="95" stroke="#1D9E75" stroke-width="2"/><rect x="68" y="80" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="93" y1="85" x2="93" y2="101" stroke:#E24B4A" stroke-width="2"/><rect x="87" y="87" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="112" y1="82" x2="112" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="106" y="84" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="131" y1="85" x2="131" y2="100" stroke="#E24B4A" stroke-width="2"/><rect x="125" y="87" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="150" y1="78" x2="150" y2="93" stroke="#1D9E75" stroke-width="2"/><rect x="144" y="80" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="169" y1="92" x2="169" y2="107" stroke="#E24B4A" stroke-width="2"/><rect x="163" y="94" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="188" y1="95" x2="188" y2="110" stroke="#E24B4A" stroke-width="2"/><rect x="182" y="97" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="207" y1="100" x2="207" y2="114" stroke="#E24B4A" stroke-width="2"/><rect x="201" y="102" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="226" y1="105" x2="226" y2="119" stroke="#E24B4A" stroke-width="2"/><rect x="220" y="107" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="245" y1="103" x2="245" y2="117" stroke="#1D9E75" stroke-width="2"/><rect x="239" y="105" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="264" y1="108" x2="264" y2="121" stroke="#E24B4A" stroke-width="2"/><rect x="258" y="110" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <!-- 2025 -->
+    <line x1="283" y1="110" x2="283" y2="123" stroke="#E24B4A" stroke-width="2"/><rect x="277" y="112" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="302" y1="112" x2="302" y2="125" stroke="#E24B4A" stroke-width="2"/><rect x="296" y="114" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="321" y1="108" x2="321" y2="121" stroke="#1D9E75" stroke-width="2"/><rect x="315" y="110" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="340" y1="107" x2="340" y2="119" stroke="#E24B4A" stroke-width="2"/><rect x="334" y="109" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="359" y1="105" x2="359" y2="117" stroke="#1D9E75" stroke-width="2"/><rect x="353" y="107" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="378" y1="102" x2="378" y2="114" stroke="#1D9E75" stroke-width="2"/><rect x="372" y="104" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="397" y1="104" x2="397" y2="116" stroke="#E24B4A" stroke-width="2"/><rect x="391" y="106" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="416" y1="102" x2="416" y2="113" stroke="#1D9E75" stroke-width="2"/><rect x="410" y="104" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="435" y1="103" x2="435" y2="114" stroke="#E24B4A" stroke-width="2"/><rect x="429" y="105" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="454" y1="100" x2="454" y2="111" stroke="#1D9E75" stroke-width="2"/><rect x="448" y="102" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="473" y1="101" x2="473" y2="112" stroke="#E24B4A" stroke-width="2"/><rect x="467" y="103" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="492" y1="99" x2="492" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="486" y="101" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <!-- 2026 급등 -->
+    <line x1="528" y1="78" x2="528" y2="108" stroke="#1D9E75" stroke-width="3"/><rect x="522" y="80" width="10" height="26" fill="#1D9E75" rx="1"/>
+    <text x="522" y="74" font-size="8" fill="#27500A">관세기대</text>
+    <line x1="547" y1="50" x2="547" y2="80" stroke="#1D9E75" stroke-width="3.5"/><rect x="541" y="52" width="10" height="26" fill="#EF9F27" rx="1"/>
+    <line x1="547" y1="38" x2="547" y2="50" stroke="#EF9F27" stroke-width="1.5"/>
+    <circle cx="553" cy="36" r="5" fill="#EF9F27"/>
+    <text x="553" y="30" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">205,500</text>
+    <!-- 급락 + 반등 -->
+    <line x1="566" y1="62" x2="566" y2="95" stroke="#E24B4A" stroke-width="3.5"/><rect x="560" y="64" width="10" height="29" fill="#E24B4A" rx="1"/>
+    <text x="560" y="58" font-size="8" fill="#A32D2D">145,200</text>
+    <line x1="585" y1="78" x2="585" y2="100" stroke="#1D9E75" stroke-width="2.5"/><rect x="579" y="80" width="10" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="604" y1="74" x2="604" y2="92" stroke="#1D9E75" stroke-width="2.5"/><rect x="598" y="76" width="10" height="15" fill="#1D9E75" rx="1" opacity=".7"/>
+    <path d="M622 70 Q640 52 656 36" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+    <text x="637" y="33" font-size="8" fill="#1D9E75">유예 → 200K</text>
+    <line x1="40" y1="86" x2="608" y2="86" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="83" font-size="9" fill="#26215C" font-weight="600">현재 159,200</text>
+    <line x1="40" y1="188" x2="640" y2="188" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024~2025 박스권 → 2026 관세 변동성 → 배당+HEV 장기 회복 기대</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">하이브리드 글로벌 1위 급부상 = EV 전환 지연 최대 수혜</span><span class="tag t-g">구조적 강점</span><div style="color:#888;margin-top:2px;font-size:11px">테슬라·BYD EV 둔화 속 하이브리드 급성장. 기아 니로·쏘렌토·스포티지 HEV 글로벌 판매 폭증. 2026년 HEV 비중 30% 돌파 전망. 도요타 독주 체제 붕괴 — 기아·현대차 글로벌 HEV 2강 구도.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">북미 SUV 판매 1위 = 텔루라이드·쏘렌토·스포티지 파워</span><span class="tag t-navy">브랜드 프리미엄</span><div style="color:#888;margin-top:2px;font-size:11px">텔루라이드 북미 3열 SUV 판매 1위. 쏘렌토·스포티지 중형 SUV 톱3. 디자인·품질·가성비 3박자. 조지아 공장 가동률 최대. 멕시코 공장 관세 리스크 있으나 북미 생산 비중 70% — 영향 제한적.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">트럼프 관세 25% = 최대 변수 (유예 vs 부과)</span><span class="tag t-a">정책 리스크</span><div style="color:#888;margin-top:2px;font-size:11px">멕시코 공장 비중 30% — 관세 부과 시 마진 타격. 그러나 ①조지아 공장 증설 ②관세 전가 가능 ③경쟁사 동일 타격으로 영향 제한적. <b>유예 확정 시 180,000+ 급등 트리거.</b></div></div></div>
+  <div class="zone"><div class="dot" style="background:#04342C"></div><div><span style="font-weight:600">배당수익률 3.5% = 안정적 배당주 매력</span><span class="tag t-teal">배당 지지</span><div style="color:#888;margin-top:2px;font-size:11px">연간 배당 5,500원 예상. 시가배당률 3.5%. 배당성향 20% — 증액 여력 충분. 실적 둔화에도 배당 유지 — 대형주 안정성. 배당락 전 수급 지지.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>하이브리드 글로벌 1위 급부상 — EV 전환 지연 최대 수혜</span><span class="tag t-g">산업 ★★★</span></div>
+  <div class="row"><span>북미 SUV 판매 1위 — 텔루라이드·쏘렌토·스포티지</span><span class="tag t-g">브랜드 ★★</span></div>
+  <div class="row"><span>배당수익률 3.5% — 안정적 배당주 매력</span><span class="tag t-teal">배당 ✓</span></div>
+  <div class="row"><span>111,000 저점 지지 확인 — 세력 매집 라인</span><span class="tag t-b">수급 ✓</span></div>
+  <div class="row"><span>52주 위치 47.5% — 중립권, 상승 여력 존재</span><span class="tag t-a">기술 △</span></div>
+  <div class="row"><span>트럼프 관세 25% 불확실 — 최대 리스크</span><span class="tag t-r">정책 ✗</span></div>
+  <div class="row"><span>중국 시장 부진 지속 — 로컬 브랜드 공세</span><span class="tag t-r">중국 ✗</span></div>
+  <div class="row"><span>고점 212,500 대비 -25% — 추가 하락 여력</span><span class="tag t-a">고점 조정 △</span></div>
+  <div class="row"><span>2026.4월 말 1Q 실적 발표</span><span class="tag t-a">단기 이벤트</span></div>
+  <div class="row"><span>관세 유예 확정 시 → 180,000+ 급등 트리거</span><span class="tag t-g">핵심 ★★★</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:58%;background:#EF9F27"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 58% — 조건부</div>
+    <div style="font-size:11px;color:#5f5e5a">관세 불확실성이 최대 변수. <b>유예 확정 시 +20~30% 급등, 부과 시 -15~20% 추가 하락.</b> 현재가 신규 매수는 위험. 145,000 이하 조정 시 분할 매수.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:72%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 72%</div>
+    <div style="font-size:11px;color:#5f5e5a">하이브리드 글로벌 강자+배당 3.5%. 관세 리스크 장기적으로 해소. 목표 180,000~200,000원. 배당 재투자 전략 유리.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "관세 변수 확인 후 분할 매수. 배당 장기 보유"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">145,000~<br>155,000</div><div>현재 근처<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">130,000~<br>145,000</div><div>추가 하락<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">180,000~<br>200,000</div><div>유예 확정<br>+20~30%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">110,000원</div><div>저점 하회 시<br>즉시 손절</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 기아 핵심 4포인트:</b><br>
+    ① <b>하이브리드 글로벌 1위</b> = EV 전환 지연 최대 수혜주<br>
+    ② <b>북미 SUV 판매 1위</b> = 텔루라이드·쏘렌토·스포티지 파워<br>
+    ③ <b>배당 3.5% 안정적</b> = 장기 보유 매력<br>
+    ④ <b>52주 위치 47.5%</b> = 중립권, 상승 여력 존재</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> <b>트럼프 관세 25%가 최대 변수.</b> 유예 불발 시 130,000 재하락 리스크. 멕시코 공장 비중 30% 타격. 중국 시장 부진 지속. 현재가(159,200) 신규 매수 위험 — 관세 결정 확인 후 또는 145,000 이하 조정 시 분할 매수 권장. 단기 변동성 클 수 있음.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+</div>
+</body>
+</html>

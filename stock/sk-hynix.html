@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK하이닉스 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>SK하이닉스 (000660) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 초대형주 | HBM3E 독점 공급 + AI 반도체 슈퍼사이클 정점권</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ SK하이닉스 = "HBM 슈퍼사이클 + 엔비디아 H200 독점 공급 → 사상 최대 실적 → 고점권 경계"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>🚀 핵심 모멘텀</b><br>① <b>HBM3E 독점 공급</b> (엔비디아 H200/B200)<br>② <b>2026 사상 최대 실적</b> 전망<br>③ <b>DDR5/LPDDR5X 전환</b> 수혜<br>④ AI 서버 DRAM 점유율 1위
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 현재 리스크</b><br>52주 위치 <b>93.3%</b> 고점권. 고점(1,173,000) 대비 -3.8%만 조정. 신규 진입 매우 위험. 반도체 사이클 정점 우려. 중국 리스크. 밸류에이션 고평가.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가 (4.17)</div><div class="mv" style="color:#E24B4A">1,128,000<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -2.34%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">501,000~<br>1,173,000원</div><div class="ms">저점 대비 +125%!</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">93.3%</div><div class="ms">🚨 고점권 경계</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 위치 93.3% — 저점 501,000 대비 +125% 급등. 고점(1,173,000) 불과 -3.8% 조정. 고점권 경계 필수</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 55%,#F09595 82%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:93.3%;top:-4px;width:3px;height:30px;background:#E24B4A;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#E24B4A;font-weight:700;white-space:nowrap;transform:translateX(-45%)">▲ 1,128,000</div></div>
+    <div style="position:absolute;left:100%;top:-4px;width:3px;height:30px;background:#A32D2D;border-radius:2px;opacity:.7"><div style="position:absolute;top:31px;font-size:9px;color:#A32D2D;white-space:nowrap;transform:translateX(-70%)">고점 1,173,000</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 501,000</span><span>중간 837,000</span><span>고점 1,173,000</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> HBM3E 독점 공급(엔비디아 H200/B200) + AI 반도체 슈퍼사이클로 2026 사상 최대 실적 전망. 2025년 501,000 저점 → 2026.4 1,173,000 신고점 — 6개월 만에 +134%. <b>현재 93.3% 고점권에서 신규 진입 매우 위험. 충분한 조정 대기 필수.</b>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">HBM3E 독점 공급</span>
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">2026 사상 최대 실적</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">DDR5 전환 수혜</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">AI 서버 DRAM 1위</span>
+    <span class="tag t-r" style="font-size:10px;padding:2px 7px">고점권 93.3% 경계</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "501K 저점 → HBM 급등 → 1,173K 신고점 → 고점권 등락"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>501,000 = 2025년 중국 리스크 저점 → HBM3E 독점 공급 확인 후 급등 시작.</b> 엔비디아 H200 전량 공급 + B200 물량 확보. AI 반도체 슈퍼사이클 본격화. 대형 양봉 연속 출현.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>1월~2월 계단식 상승 → 2월 1,099K 첫 돌파.</b> 거래량 급증 동반. 외국인·기관 동시 매수. DDR5/LPDDR5X 전환 본격화 + NAND 수익성 개선 기대감 겹침.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>3월 초 급락(807K)은 차익 실현 + 밸류에이션 부담.</b> 그러나 900K 지지 후 재반등. 4월 중순 1,173K 신고점 경신. 이평선 정배열 강세 유지.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 <b>1,100K~1,173K 고점권 박스권</b>. 93.3% 위치 = 추가 상승 제한적. 신규 진입 시 고점 물림 위험. <b>조정 시(950K~1,050K) 분할 매수가 안전.</b></div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">501K 저점 → HBM 슈퍼사이클 급등 → 1,173K 신고점 → 고점권 등락</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="65" height="200" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <rect x="115" y="10" width="160" height="200" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <rect x="285" y="10" width="90" height="200" rx="4" fill="#FAEEDA" opacity=".2"/>
+    <rect x="385" y="10" width="110" height="200" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <rect x="505" y="10" width="165" height="200" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="72" y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 저점</text>
+    <text x="195" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 계단 상승</text>
+    <text x="330" y="22" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">③ 조정</text>
+    <text x="440" y="22" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">④ 재급등</text>
+    <text x="587" y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">⑤ 고점권 (현재)</text>
+    <!-- 저점 501K -->
+    <line x1="52" y1="168" x2="52" y2="182" stroke="#E24B4A" stroke-width="2"/><rect x="46" y="170" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <circle cx="65" cy="188" r="4" fill="#E24B4A"/>
+    <text x="52" y="202" text-anchor="middle" font-size="8" fill="#A32D2D">501K 바닥</text>
+    <line x1="70" y1="163" x2="70" y2="177" stroke="#E24B4A" stroke-width="2"/><rect x="64" y="165" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="88" y1="158" x2="88" y2="172" stroke="#1D9E75" stroke-width="2"/><rect x="82" y="160" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="106" y1="154" x2="106" y2="168" stroke="#1D9E75" stroke-width="2"/><rect x="100" y="156" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <!-- 계단 상승 HBM3E -->
+    <line x1="124" y1="138" x2="124" y2="156" stroke="#1D9E75" stroke-width="2.5"/><rect x="118" y="140" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <text x="118" y="133" font-size="8" fill="#27500A">HBM3E</text>
+    <line x1="144" y1="118" x2="144" y2="140" stroke="#1D9E75" stroke-width="3"/><rect x="138" y="120" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="164" y1="100" x2="164" y2="122" stroke="#1D9E75" stroke-width="3"/><rect x="158" y="102" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="184" y1="84" x2="184" y2="104" stroke="#1D9E75" stroke-width="3"/><rect x="178" y="86" width="12" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="204" y1="68" x2="204" y2="88" stroke="#1D9E75" stroke-width="3"/><rect x="198" y="70" width="12" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="224" y1="54" x2="224" y2="72" stroke="#1D9E75" stroke-width="3"/><rect x="218" y="56" width="12" height="14" fill="#EF9F27" rx="1"/>
+    <text x="218" y="49" font-size="8" fill="#EF9F27">1,099K</text>
+    <line x1="244" y1="50" x2="244" y2="68" stroke="#1D9E75" stroke-width="2.5"/><rect x="238" y="52" width="12" height="14" fill="#EF9F27" rx="1"/>
+    <line x1="264" y1="48" x2="264" y2="66" stroke="#1D9E75" stroke-width="2"/><rect x="258" y="50" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <!-- 조정 3월 -->
+    <line x1="293" y1="50" x2="293" y2="68" stroke="#E24B4A" stroke-width="2.5"/><rect x="287" y="52" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="311" y1="64" x2="311" y2="82" stroke="#E24B4A" stroke-width="3"/><rect x="305" y="66" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="329" y1="90" x2="329" y2="108" stroke="#E24B4A" stroke-width="3"/><rect x="323" y="92" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <text x="323" y="122" text-anchor="middle" font-size="8" fill="#A32D2D">807K 조정</text>
+    <line x1="347" y1="78" x2="347" y2="96" stroke="#1D9E75" stroke-width="2"/><rect x="341" y="80" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="365" y1="72" x2="365" y2="88" stroke="#E24B4A" stroke-width="2"/><rect x="359" y="74" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <!-- 재급등 -->
+    <line x1="395" y1="64" x2="395" y2="80" stroke:#1D9E75" stroke-width="2.5"/><rect x="389" y="66" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="414" y1="56" x2="414" y2="72" stroke="#1D9E75" stroke-width="2.5"/><rect x="408" y="58" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="433" y1="44" x2="433" y2="60" stroke="#1D9E75" stroke-width="3"/><rect x="427" y="46" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="452" y1="36" x2="452" y2="50" stroke="#1D9E75" stroke-width="3"/><rect x="446" y="38" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="471" y1="28" x2="471" y2="42" stroke="#1D9E75" stroke-width="3"/><rect x="465" y="30" width="12" height="11" fill="#EF9F27" rx="1"/>
+    <line x1="490" y1="20" x2="490" y2="34" stroke="#1D9E75" stroke-width="3"/><rect x="484" y="22" width="12" height="11" fill="#EF9F27" rx="1"/>
+    <!-- 신고점 1,173K -->
+    <line x1="490" y1="14" x2="490" y2="20" stroke="#EF9F27" stroke-width="1.5"/>
+    <circle cx="496" cy="12" r="5" fill="#EF9F27"/>
+    <text x="496" y="7" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">1,173K!</text>
+    <!-- 고점권 등락 -->
+    <line x1="517" y1="16" x2="517" y2="28" stroke="#E24B4A" stroke-width="2"/><rect x="511" y="18" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="536" y1="15" x2="536" y2="27" stroke="#1D9E75" stroke-width="2"/><rect x="530" y="17" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="555" y1="14" x2="555" y2="26" stroke="#E24B4A" stroke-width="2"/><rect x="549" y="16" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="574" y1="15" x2="574" y2="27" stroke="#1D9E75" stroke-width="2"/><rect x="568" y="17" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="593" y1="16" x2="593" y2="28" stroke="#E24B4A" stroke-width="2"/><rect x="587" y="18" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="612" y1="17" x2="612" y2="29" stroke="#1D9E75" stroke-width="2"/><rect x="606" y="19" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="631" y1="18" x2="631" y2="30" stroke="#E24B4A" stroke-width="2"/><rect x="625" y="20" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="650" y1="17" x2="650" y2="29" stroke="#1D9E75" stroke-width="2"/><rect x="644" y="19" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <!-- 수평선 -->
+    <line x1="40" y1="12" x2="640" y2="12" stroke="#EF9F27" stroke-width="0.8" stroke-dasharray="4 4" opacity=".4"/>
+    <line x1="40" y1="20" x2="640" y2="20" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="17" font-size="9" fill="#A32D2D" font-weight="600">현재 1,128K (고점 -3.8%)</text>
+    <line x1="40" y1="188" x2="640" y2="188" stroke="#A32D2D" stroke-width="0.8" stroke-dasharray="3 4" opacity=".4"/>
+    <text x="42" y="185" font-size="9" fill="#A32D2D">저점 501K</text>
+    <rect x="40" y="68" width="600" height="36" rx="3" fill="#9FE1CB" opacity=".12"/>
+    <text x="340" y="89" text-anchor="middle" font-size="9" fill="#085041" font-weight="600">★ 매수 구간 950,000~1,050,000 (조정 시) / 핵심 850,000~950,000 (깊은 조정)</text>
+    <line x1="40" y1="213" x2="640" y2="213" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 501K 저점 → HBM3E 슈퍼사이클 → 1,173K 신고점 → 고점권(93.3%) 경계 구간</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "2025 저점 반등 → V자 급등 → HBM 슈퍼사이클 정점"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2024년 하반기~2025년 초 <b>중국 리스크로 501K까지 조정</b>. 미·중 반도체 갈등 + HBM 규제 우려. 그러나 엔비디아 H200 HBM3E 독점 공급 확인 후 급반등.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>주봉 <b>V자 급등 — 6개월 만에 +134%</b>. AI 서버 DRAM 수요 폭증. 외국인 대규모 순매수. DDR5 전환 본격화. 볼린저밴드 상단 돌파.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>현재 <b>1,100K~1,173K 고점권</b>. 주봉 상승 각도 과열. RSI 70+ 과매수. 추가 상승보다는 고점권 박스권 예상. 밸류에이션 부담.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>조정 시 950K~1,050K가 매수 기회.</b> 20주선(약 973K) 지지 여부 핵심. 깊은 조정 시(850K~950K) 분할 매수 적합.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">2025 저점 → HBM 슈퍼사이클 V자 급등(+134%) → 고점권 정점</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="240" height="175" rx="4" fill="#FCEBEB" opacity=".07"/>
+    <text x="160" y="22" text-anchor="middle" font-size="8" fill="#A32D2D">2024~2025 조정</text>
+    <rect x="290" y="10" width="80" height="175" rx="4" fill="#EEF2FF" opacity=".2"/>
+    <rect x="380" y="10" width="300" height="175" rx="4" fill="#EAF3DE" opacity=".1"/>
+    <text x="530" y="22" text-anchor="middle" font-size="8" fill="#27500A">HBM 슈퍼사이클 급등 + 고점권</text>
+    <!-- 하락/조정 주봉 -->
+    <line x1="55" y1="92" x2="55" y2="112" stroke="#E24B4A" stroke-width="2.5"/><rect x="49" y="94" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="77" y1="102" x2="77" y2="120" stroke="#E24B4A" stroke-width="2.5"/><rect x="71" y="104" width="12" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="99" y1="110" x2="99" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="93" y="112" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="121" y1="118" x2="121" y2="135" stroke="#E24B4A" stroke-width="2"/><rect x="115" y="120" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="143" y1="125" x2="143" y2="141" stroke="#E24B4A" stroke-width="2"/><rect x="137" y="127" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="165" y1="132" x2="165" y2="148" stroke="#E24B4A" stroke-width="2"/><rect x="159" y="134" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="187" y1="137" x2="187" y2="152" stroke="#1D9E75" stroke-width="2"/><rect x="181" y="139" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="209" y1="142" x2="209" y2="157" stroke="#E24B4A" stroke-width="2"/><rect x="203" y="144" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="231" y1="146" x2="231" y2="160" stroke="#E24B4A" stroke-width="2"/><rect x="225" y="148" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="253" y1="148" x2="253" y2="162" stroke="#E24B4A" stroke-width="2"/><rect x="247" y="150" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <!-- 저점 501K -->
+    <circle cx="305" cy="168" r="6" fill="#E24B4A"/>
+    <text x="305" y="183" text-anchor="middle" font-size="8" fill="#A32D2D">501K 저점</text>
+    <!-- V자 급등 -->
+    <line x1="323" y1="122" x2="323" y2="165" stroke="#1D9E75" stroke-width="3.5"/><rect x="317" y="125" width="12" height="36" fill="#1D9E75" rx="1"/>
+    <text x="317" y="117" font-size="8" fill="#1E3A5F">HBM3E</text>
+    <line x1="345" y1="82" x2="345" y2="122" stroke="#1D9E75" stroke-width="3.5"/><rect x="339" y="85" width="12" height="32" fill="#1D9E75" rx="1"/>
+    <line x1="367" y1="62" x2="367" y2="85" stroke="#1D9E75" stroke-width="4"/><rect x="361" y="65" width="12" height="19" fill="#EF9F27" rx="1"/>
+    <!-- 계단 급등 -->
+    <line x1="395" y1="48" x2="395" y2="68" stroke="#1D9E75" stroke-width="3"/><rect x="389" y="50" width="12" height="16" fill="#EF9F27" rx="1"/>
+    <line x1="417" y1="58" x2="417" y2="76" stroke="#E24B4A" stroke-width="2.5"/><rect x="411" y="60" width="12" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="439" y1="52" x2="439" y2="68" stroke="#1D9E75" stroke-width="2.5"/><rect x="433" y="54" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="461" y1="44" x2="461" y2="60" stroke="#1D9E75" stroke-width="3"/><rect x="455" y="46" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="483" y1="36" x2="483" y2="50" stroke="#1D9E75" stroke-width="3"/><rect x="477" y="38" width="12" height="12" fill="#EF9F27" rx="1"/>
+    <line x1="505" y1="28" x2="505" y2="42" stroke="#1D9E75" stroke-width="3"/><rect x="499" y="30" width="12" height="11" fill="#EF9F27" rx="1"/>
+    <line x1="527" y1="20" x2="527" y2="32" stroke="#1D9E75" stroke-width="3"/><rect x="521" y="22" width="12" height="10" fill="#EF9F27" rx="1"/>
+    <!-- 신고점 + 고점권 -->
+    <line x1="527" y1="14" x2="527" y2="20" stroke="#EF9F27" stroke-width="2"/>
+    <circle cx="533" cy="12" r="6" fill="#EF9F27"/>
+    <text x="533" y="6" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">1,173K!</text>
+    <rect x="545" y="14" width="135" height="40" rx="4" fill="#E24B4A" opacity=".08"/>
+    <text x="612" y="25" text-anchor="middle" font-size="8" fill="#A32D2D">고점권 박스권</text>
+    <line x1="555" y1="18" x2="555" y2="32" stroke="#E24B4A" stroke-width="2.5"/><rect x="549" y="20" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="577" y1="16" x2="577" y2="30" stroke="#1D9E75" stroke-width="2.5"/><rect x="571" y="18" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="599" y1="18" x2="599" y2="32" stroke="#E24B4A" stroke-width="2.5"/><rect x="593" y="20" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="621" y1="17" x2="621" y2="31" stroke="#1D9E75" stroke-width="2.5"/><rect x="615" y="19" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <path d="M635 22 Q645 32 655 48" fill="none" stroke="#EF9F27" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+    <text x="638" y="55" font-size="8" fill="#EF9F27">조정 대기</text>
+    <!-- 이평선 -->
+    <path d="M45 105 Q180 145 320 168 Q380 110 460 52 Q530 22 625 20" fill="none" stroke="#1D9E75" stroke-width="1.8"/>
+    <path d="M45 115 Q210 150 335 165 Q395 115 480 58 Q545 28 628 26" fill="none" stroke="#EF9F27" stroke-width="1.3"/>
+    <text x="618" y="16" font-size="8" fill="#1D9E75">─5주</text>
+    <text x="618" y="32" font-size="8" fill="#EF9F27">─20주</text>
+    <rect x="612" y="38" width="42" height="14" rx="3" fill="#EAF3DE"/>
+    <text x="633" y="48" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">정배열</text>
+    <line x1="40" y1="19" x2="625" y2="19" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="16" font-size="9" fill="#A32D2D" font-weight="600">현재 1,128K</text>
+    <line x1="40" y1="183" x2="640" y2="183" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 501K 저점 → HBM 슈퍼사이클 V자 급등(+134%) → 1,173K 신고점 → 고점권 정점 경계</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2024 중국 리스크 조정 → AI 슈퍼사이클 + HBM 독점"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2024년 <b>미·중 반도체 갈등 + HBM 규제 우려로 조정</b>. 그러나 엔비디아 H200 HBM3E 전량 공급 확인 → AI 반도체 슈퍼사이클 본격화.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>501K = <b>장기 지지선 + 외국인 저점 매집</b>. 월봉 하단 반등. 볼린저밴드 하단 이탈 후 평균 회귀. 2026년 사상 최대 실적 전망이 반등 동력.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>DDR5/LPDDR5X 전환 + AI 서버 DRAM 1위</b>가 월봉 상승 모멘텀. HBM3E 독점 공급. NAND 수익성 개선. 종합 반도체 포트폴리오 강점.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>월봉 관점에서 <b>현재 93.3% 고점권 = 조정 대기 구간</b>. 장기 목표 1,300K~1,500K 가능하나, 단기 과열. 조정 후 재진입이 안전.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">중국 리스크 조정 → AI+HBM 슈퍼사이클 → 사상 최대 실적 고점권</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="230" height="180" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="155" y="22" text-anchor="middle" font-size="8" fill="#633806">2024~2025 조정기</text>
+    <line x1="55" y1="78" x2="55" y2="102" stroke="#1D9E75" stroke-width="2.5"/><rect x="49" y="80" width="12" height="19" fill="#1D9E75" rx="1"/>
+    <line x1="77" y1="88" x2="77" y2="110" stroke="#E24B4A" stroke-width="2.5"/><rect x="71" y="90" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="99" y1="98" x2="99" y2="118" stroke="#E24B4A" stroke-width="2.5"/><rect x="93" y="100" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="121" y1="106" x2="121" y2="125" stroke="#1D9E75" stroke-width="2"/><rect x="115" y="108" width="12" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="143" y1="114" x2="143" y2="132" stroke="#E24B4A" stroke-width="2"/><rect x="137" y="116" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="165" y1="122" x2="165" y2="139" stroke="#E24B4A" stroke-width="2"/><rect x="159" y="124" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="187" y1="128" x2="187" y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="181" y="130" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="209" y1="134" x2="209" y2="150" stroke="#1D9E75" stroke-width="2"/><rect x="203" y="136" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="231" y1="140" x2="231" y2="155" stroke="#E24B4A" stroke-width="2"/><rect x="225" y="142" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <!-- 저점 501K -->
+    <circle cx="253" cy="162" r="6" fill="#E24B4A"/>
+    <text x="253" y="177" text-anchor="middle" font-size="8" fill="#A32D2D">501K 저점</text>
+    <text x="253" y="188" text-anchor="middle" font-size="7" fill="#888">2025.Q4</text>
+    <!-- HBM 슈퍼사이클 반등 -->
+    <rect x="275" y="10" width="405" height="180" rx="4" fill="#EAF3DE" opacity=".1"/>
+    <text x="477" y="22" text-anchor="middle" font-size="8" fill="#27500A">HBM 슈퍼사이클 + AI 반도체 급등</text>
+    <line x1="287" y1="108" x2="287" y2="158" stroke="#1D9E75" stroke-width="2.5"/><rect x="281" y="111" width="12" height="42" fill="#1D9E75" rx="1"/>
+    <text x="281" y="104" font-size="8" fill="#27500A">HBM3E</text>
+    <line x1="315" y1="65" x2="315" y2="108" stroke="#1D9E75" stroke-width="4"/><rect x="309" y="68" width="12" height="36" fill="#1D9E75" rx="1"/>
+    <line x1="343" y1="48" x2="343" y2="68" stroke="#1D9E75" stroke-width="4"/><rect x="337" y="51" width="12" height="15" fill="#EF9F27" rx="1"/>
+    <line x1="371" y1="56" x2="371" y2="72" stroke="#E24B4A" stroke-width="2.5"/><rect x="365" y="59" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <text x="365" y="52" font-size="8" fill="#633806">3월 조정</text>
+    <line x1="399" y1="50" x2="399" y2="66" stroke="#1D9E75" stroke-width="2.5"/><rect x="393" y="52" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="427" y1="38" x2="427" y2="54" stroke="#1D9E75" stroke-width="3"/><rect x="421" y="40" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="455" y1="28" x2="455" y2="42" stroke="#1D9E75" stroke-width="3"/><rect x="449" y="30" width="12" height="11" fill="#EF9F27" rx="1"/>
+    <line x1="483" y1="20" x2="483" y2="32" stroke="#1D9E75" stroke-width="3"/><rect x="477" y="22" width="12" height="10" fill="#EF9F27" rx="1"/>
+    <!-- 신고점 1,173K -->
+    <line x1="483" y1="14" x2="483" y2="20" stroke="#EF9F27" stroke-width="2"/>
+    <circle cx="489" cy="12" r="5" fill="#EF9F27"/>
+    <text x="489" y="6" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">1,173K!</text>
+    <!-- 고점권 -->
+    <line x1="511" y1="18" x2="511" y2="32" stroke="#E24B4A" stroke-width="2.5"/><rect x="505" y="20" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="539" y1="16" x2="539" y2="30" stroke="#1D9E75" stroke-width="2.5"/><rect x="533" y="18" width="12" height="13" fill="#1D9E75" rx="1" opacity=".7"/>
+    <path d="M565 20 Q595 38 625 55" fill="none" stroke="#EF9F27" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+    <text x="607" y="50" font-size="8" fill="#EF9F27">조정 후</text>
+    <text x="607" y="62" font-size="8" fill="#EF9F27">1,300~1,500K?</text>
+    <line x1="40" y1="19" x2="545" y2="19" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="16" font-size="9" fill="#A32D2D" font-weight="600">현재 1,128K (고점권)</text>
+    <line x1="40" y1="188" x2="640" y2="188" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 중국 리스크 조정 → AI+HBM 슈퍼사이클 → 사상 최대 실적 + 고점권(93.3%) 조정 대기</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">HBM3E 독점 공급 — 엔비디아 H200/B200 전량</span><span class="tag t-g">AI 슈퍼사이클</span><div style="color:#888;margin-top:2px;font-size:11px">엔비디아 H200 GPU용 HBM3E 12단 전량 공급. B200 HBM3E 8단 물량 확보. 삼성전자 수율 문제로 SK하이닉스 독점 구도. HBM 매출 2026년 30조원 돌파 전망.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">2026 사상 최대 실적 — 영업이익 25조 이상</span><span class="tag t-g">역대 최고</span><div style="color:#888;margin-top:2px;font-size:11px">AI 서버 DRAM 점유율 70% 이상. DDR5 전환 본격화(PC/서버). LPDDR5X 고가 믹스 개선. NAND 수익성 회복. 2026년 영업이익 25조 이상 전망 — 창사 최대.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#0C447C"></div><div><span style="font-weight:600">외국인 대규모 순매수 — 장기 포지션 확보</span><span class="tag t-b">수급 강세</span><div style="color:#888;margin-top:2px;font-size:11px">501K 저점 이후 외국인 지속 순매수. 글로벌 AI 투자 테마 핵심 수혜주. 엔비디아 공급망 직접 노출. 장기 포지션 관점 매수.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">고점권 93.3% — 조정 대기 구간</span><span class="tag t-a">밸류에이션 부담</span><div style="color:#888;margin-top:2px;font-size:11px">현재 PER 20배+ (역대 고평가 구간). 52주 고점 대비 -3.8%만 조정. 추가 상승보다는 고점권 박스권 예상. 반도체 사이클 정점 우려. 중국 리스크 재부각 가능성.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>HBM3E 독점 공급 — 엔비디아 H200/B200 전량</span><span class="tag t-g">독점 ★★★</span></div>
+  <div class="row"><span>2026 사상 최대 실적 — 영업이익 25조+ 전망</span><span class="tag t-g">실적 ★★★</span></div>
+  <div class="row"><span>DDR5/LPDDR5X 전환 본격화 + 고가 믹스 개선</span><span class="tag t-g">성장 ★★</span></div>
+  <div class="row"><span>AI 서버 DRAM 점유율 70% — 시장 지배력 독보적</span><span class="tag t-b">경쟁력 ✓</span></div>
+  <div class="row"><span>외국인 장기 순매수 — 글로벌 AI 테마 핵심</span><span class="tag t-navy">수급 ★★</span></div>
+  <div class="row"><span>52주 위치 93.3% 고점권 — 신규 진입 위험</span><span class="tag t-r">과열 ✗✗</span></div>
+  <div class="row"><span>PER 20배+ 밸류에이션 부담 — 역대 고평가 구간</span><span class="tag t-a">밸류 △</span></div>
+  <div class="row"><span>반도체 사이클 정점 우려 — 메모리 가격 상승 둔화</span><span class="tag t-a">사이클 △</span></div>
+  <div class="row"><span>중국 리스크 + 미·중 갈등 재부각 가능성</span><span class="tag t-r">정치 리스크 ✗</span></div>
+  <div class="row"><span>조정 시(950K~1,050K) 분할 매수 — 현재 대기</span><span class="tag t-navy">전략 ★★★</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:32%;background:#E24B4A"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 32% — 대기</div>
+    <div style="font-size:11px;color:#5f5e5a">93.3% 고점권. 저점 대비 +125%. <b>현재가(1,128K) 신규 진입 매우 위험. 충분한 조정(950K 이하) 필수 대기.</b></div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78%</div>
+    <div style="font-size:11px;color:#5f5e5a">HBM 슈퍼사이클 지속. AI 반도체 장기 성장. 조정 후 분할 매수 시 목표 1,300,000~1,500,000원.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "고점권 경계. 반드시 조정 대기 후 분할 매수"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">950,000~<br>1,050,000</div><div>20주선 지지<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">850,000~<br>950,000</div><div>깊은 조정<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">1,300,000~<br>1,500,000</div><div>장기 목표<br>+15~33%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">780,000원</div><div>지지선 이탈<br>즉시 손절</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 SK하이닉스 핵심 4포인트:</b><br>
+    ① <b>HBM3E 독점 공급</b> (엔비디아 H200/B200) = AI 슈퍼사이클 최대 수혜<br>
+    ② <b>2026 사상 최대 실적</b> (영업이익 25조+) = 창사 최고 수익성<br>
+    ③ <b>DDR5/LPDDR5X 전환</b> + AI 서버 DRAM 70% 점유율<br>
+    ④ <b>외국인 장기 매수</b> — 글로벌 AI 투자 테마 핵심 종목</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> <b>현재 93.3% 고점권 = 신규 진입 매우 위험</b> — 저점 대비 +125%, 고점 대비 -3.8%만 조정. PER 20배+ 고평가. 반도체 사이클 정점 우려. 중국 리스크 재부각 가능성. <b>충분한 조정(950K 이하) 확인 후 분할 매수 원칙 엄수.</b></div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+</div>
+</body>
+</html>

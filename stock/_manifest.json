@@ -93,5 +93,167 @@
     ],
     "desc": "농기계 업체의 실적 구조와 차트 포지션 분석.",
     "added": "2026-04-05"
+  },
+  {
+    "slug": "kb-financial",
+    "name": "KB금융",
+    "code": "105560",
+    "market": "코스피",
+    "tags": [],
+    "desc": "KB금융 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "lg-energy-solution",
+    "name": "LG에너지솔루션",
+    "code": "373220",
+    "market": "코스피",
+    "tags": [],
+    "desc": "LG에너지솔루션 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "lg-chem",
+    "name": "LG화학",
+    "code": "051910",
+    "market": "코스피",
+    "tags": [],
+    "desc": "LG화학 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "posco-holdings",
+    "name": "POSCO홀딩스",
+    "code": "005490",
+    "market": "코스피",
+    "tags": [],
+    "desc": "POSCO홀딩스 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "sk-hynix",
+    "name": "SK하이닉스",
+    "code": "000660",
+    "market": "코스피",
+    "tags": [],
+    "desc": "SK하이닉스 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "kia",
+    "name": "기아",
+    "code": "000270",
+    "market": "코스피",
+    "tags": [],
+    "desc": "기아 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "naver",
+    "name": "네이버",
+    "code": "035420",
+    "market": "코스피",
+    "tags": [],
+    "desc": "네이버 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "samsung-cnt",
+    "name": "삼성물산",
+    "code": "028260",
+    "market": "코스피",
+    "tags": [],
+    "desc": "삼성물산 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "samsung-biologics",
+    "name": "삼성바이오로직스",
+    "code": "207940",
+    "market": "코스피",
+    "tags": [],
+    "desc": "삼성바이오로직스 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "samsung-electronics",
+    "name": "삼성전자",
+    "code": "005930",
+    "market": "코스피",
+    "tags": [],
+    "desc": "삼성전자 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "celltrion",
+    "name": "셀트리온",
+    "code": "068270",
+    "market": "코스피",
+    "tags": [],
+    "desc": "셀트리온 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "shinhan-financial",
+    "name": "신한지주",
+    "code": "055550",
+    "market": "코스피",
+    "tags": [],
+    "desc": "신한지주 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "ecopro-bm",
+    "name": "에코프로비엠",
+    "code": "247540",
+    "market": "코스닥",
+    "tags": [],
+    "desc": "에코프로비엠 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "woori-financial",
+    "name": "우리금융지주",
+    "code": "316140",
+    "market": "코스피",
+    "tags": [],
+    "desc": "우리금융지주 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "kakao",
+    "name": "카카오",
+    "code": "035720",
+    "market": "코스피",
+    "tags": [],
+    "desc": "카카오 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "hana-financial",
+    "name": "하나금융지주",
+    "code": "086790",
+    "market": "코스피",
+    "tags": [],
+    "desc": "하나금융지주 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "hyundai-mobis",
+    "name": "현대모비스",
+    "code": "012330",
+    "market": "코스피",
+    "tags": [],
+    "desc": "현대모비스 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
+  },
+  {
+    "slug": "hyundai-motor",
+    "name": "현대차",
+    "code": "005380",
+    "market": "코스피",
+    "tags": [],
+    "desc": "현대차 세력 흐름·차트 구조·수급 종합 분석.",
+    "added": "2026-04-20"
   }
 ]
