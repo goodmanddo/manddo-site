@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나와 어울리는 주식 종목은? — 투자 성향 테스트 | 만또 인사이트</title>
+<meta name="description" content="10문항으로 알아보는 나의 투자 유형. 가치 수집가·모멘텀 사냥꾼·성장 관측가·배당 안정러·테마 서퍼·인덱스 현자 중 당신은?">
+<meta name="keywords" content="투자성향테스트, 투자MBTI, 주식성향, 나와어울리는주식, 투자자유형">
+<meta property="og:title" content="나와 어울리는 주식 종목은? — 투자 성향 테스트">
+<meta property="og:description" content="10문항으로 알아보는 나의 투자 유형. 당신은 어떤 투자자?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/mind/investor-type.html">
+<link rel="canonical" href="https://manddo.kr/mind/investor-type.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.mode-select{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.mode-btn{background:#fff;border:1px solid #eef0f3;border-radius:16px;padding:22px 18px;text-align:center;cursor:pointer;transition:all .18s;font-family:inherit}
+.mode-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(25,31,40,.10);border-color:transparent}
+.mode-btn .icon{font-size:32px;margin-bottom:8px}
+.mode-btn .label{font-size:15px;font-weight:700;color:#191f28;letter-spacing:-0.02em}
+.mode-btn .sub{font-size:12px;color:#8b95a1;margin-top:4px;font-weight:500}
+
+.progress-wrap{background:#eef0f3;border-radius:999px;height:6px;overflow:hidden;margin-bottom:24px}
+.progress-bar{background:linear-gradient(90deg,#3182F6,#1B64DA);height:100%;border-radius:999px;transition:width .3s ease}
+.q-num{font-size:12px;font-weight:700;color:#3182F6;letter-spacing:0.05em;margin-bottom:6px}
+.q-text{font-size:20px;font-weight:800;color:#191f28;letter-spacing:-0.03em;line-height:1.4;margin-bottom:20px}
+.opt-list{display:flex;flex-direction:column;gap:10px}
+.opt-btn{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:16px 18px;text-align:left;cursor:pointer;font-family:inherit;font-size:14.5px;color:#191f28;transition:all .15s;font-weight:500}
+.opt-btn:hover{border-color:#3182F6;background:#F4F9FF}
+
+.mbti-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
+.mbti-btn{background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:14px 8px;text-align:center;cursor:pointer;font-family:inherit;font-weight:700;font-size:14px;color:#191f28;letter-spacing:0.02em;transition:all .15s}
+.mbti-btn:hover{background:#EBF4FF;border-color:#3182F6;color:#1B64DA}
+
+.result-card{background:#fff;border:1px solid #eef0f3;border-radius:20px;padding:28px 24px;margin:20px 0}
+.result-emoji{font-size:52px;text-align:center;margin-bottom:8px}
+.result-type{font-size:28px;font-weight:800;color:#191f28;text-align:center;letter-spacing:-0.04em;margin-bottom:6px}
+.result-subtitle{font-size:14px;color:#8b95a1;text-align:center;margin-bottom:20px;font-weight:500}
+.result-desc{font-size:15px;color:#4e5968;line-height:1.75;margin-bottom:22px}
+.result-section{margin-top:22px;padding-top:22px;border-top:1px solid #eef0f3}
+.result-section h3{font-size:14px;font-weight:800;color:#3182F6;margin-bottom:12px;letter-spacing:0.02em;text-transform:uppercase}
+.stock-link{display:flex;align-items:center;justify-content:space-between;background:#fafbfc;border:1px solid #eef0f3;border-radius:12px;padding:14px 16px;margin-bottom:8px;text-decoration:none;color:inherit;transition:all .15s;font-weight:500}
+.stock-link:hover{background:#EBF4FF;border-color:#3182F6}
+.stock-link .name{font-size:15px;font-weight:700;color:#191f28}
+.stock-link .hint{font-size:12.5px;color:#6b7684;margin-top:2px;font-weight:500}
+.stock-link .arrow{color:#3182F6;font-weight:700}
+.avoid-list{background:#FFF5F5;border:1px solid #FED7D7;border-radius:12px;padding:14px 16px;font-size:13.5px;color:#9B2C2C;line-height:1.7}
+.model-tag{display:inline-block;background:#F7F0FF;color:#6B46C1;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;margin-top:4px}
+
+.share-row{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
+.share-btn{flex:1;min-width:100px;background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:#4e5968;transition:all .15s}
+.share-btn:hover{background:#f2f4f6;color:#191f28}
+.cta-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.cta-btn{flex:1;min-width:140px;background:#3182F6;color:#fff;border:none;border-radius:12px;padding:14px;cursor:pointer;font-family:inherit;font-size:14px;font-weight:700;text-decoration:none;text-align:center;transition:all .15s}
+.cta-btn:hover{background:#1B64DA}
+.cta-btn.ghost{background:#fff;color:#4e5968;border:1px solid #eef0f3}
+.cta-btn.ghost:hover{background:#f2f4f6;color:#191f28}
+
+.hidden{display:none}
+
+@media(max-width:480px){
+  .mode-select{grid-template-columns:1fr}
+  .mbti-grid{grid-template-columns:repeat(4,1fr);gap:6px}
+  .mbti-btn{padding:12px 4px;font-size:13px}
+  .q-text{font-size:17px}
+  .result-type{font-size:22px}
+  .result-emoji{font-size:44px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/stock/">스톡 리서치</a>
+      <a href="/mind/" class="active">마인드 랩</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- 시작 화면 -->
+  <section id="intro">
+    <h1>🎯 나와 어울리는 주식 종목은?</h1>
+    <p class="sub">10문항으로 알아보는 나의 투자 유형 · 약 2분 소요</p>
+
+    <div class="disclaimer">
+      <b>⚠ 엔터테인먼트 안내</b><br>
+      본 테스트는 재미로 보는 콘텐츠이며, 투자 권유가 아닙니다. 결과로 안내되는 종목은 만또 분석표로 연결되는 참고용 링크입니다.
+    </div>
+
+    <div class="mode-select">
+      <button class="mode-btn" onclick="showTest()">
+        <div class="icon">📝</div>
+        <div class="label">테스트 풀기</div>
+        <div class="sub">10문항 · 2분</div>
+      </button>
+      <button class="mode-btn" onclick="showMbti()">
+        <div class="icon">⚡</div>
+        <div class="label">MBTI 바로 선택</div>
+        <div class="sub">이미 알고 있어요</div>
+      </button>
+    </div>
+  </section>
+
+  <!-- MBTI 선택 -->
+  <section id="mbti-screen" class="hidden">
+    <h1>⚡ MBTI 선택</h1>
+    <p class="sub">당신의 MBTI를 선택하세요</p>
+    <div class="mbti-grid" id="mbti-grid"></div>
+    <button class="cta-btn ghost" onclick="backToIntro()">← 돌아가기</button>
+  </section>
+
+  <!-- 테스트 화면 -->
+  <section id="test-screen" class="hidden">
+    <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
+    <div class="q-num" id="qnum">Q1 / 10</div>
+    <div class="q-text" id="qtext"></div>
+    <div class="opt-list" id="opts"></div>
+  </section>
+
+  <!-- 결과 화면 -->
+  <section id="result-screen" class="hidden">
+    <div class="q-num">당신의 투자 유형</div>
+    <div class="result-card">
+      <div class="result-emoji" id="r-emoji"></div>
+      <div class="result-type" id="r-type"></div>
+      <div class="result-subtitle" id="r-subtitle"></div>
+      <div class="result-desc" id="r-desc"></div>
+
+      <div class="result-section">
+        <h3>🎯 어울리는 종목 (만또 분석)</h3>
+        <div id="r-stocks"></div>
+      </div>
+
+      <div class="result-section">
+        <h3>⚠️ 피해야 할 투자 스타일</h3>
+        <div class="avoid-list" id="r-avoid"></div>
+      </div>
+
+      <div class="result-section">
+        <h3>👤 같은 유형의 유명 투자자</h3>
+        <div class="model-tag" id="r-model"></div>
+      </div>
+    </div>
+
+    <div class="share-row">
+      <button class="share-btn" onclick="shareKakao()">📨 카카오톡</button>
+      <button class="share-btn" onclick="shareX()">𝕏 공유</button>
+      <button class="share-btn" onclick="copyLink()">🔗 링크복사</button>
+    </div>
+
+    <div class="cta-row">
+      <a href="/mind/today-fortune.html" class="cta-btn">🔮 오늘의 투자 운세 보기</a>
+      <button class="cta-btn ghost" onclick="restart()">다시 테스트</button>
+    </div>
+
+    <div class="disclaimer" style="margin-top:28px">
+      <b>⚠ 면책</b><br>
+      본 테스트 결과는 재미로 보는 콘텐츠입니다. 투자 판단과 그 결과는 전적으로 본인 책임이며, 만또 인사이트는 투자 자문업자가 아닙니다.
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+const TYPES = {
+  value: {
+    name: '가치 수집가형', emoji: '💎',
+    subtitle: '숨은 가치를 찾아내는 장기 수집가',
+    desc: '당신은 재무제표와 내재가치를 중시하는 전형적인 가치 투자자입니다. 시장이 과열될 때도 흔들리지 않고 오히려 싸게 사들일 기회를 찾죠. 단기 변동성보다 5~10년 뒤 기업의 진짜 모습을 봅니다. 인내심이 당신의 무기입니다.',
+    stocks: [
+      { slug: 'hanwha-solutions', name: '한화솔루션', hint: '태양광·석유화학 사업 구조' },
+      { slug: 'oci-holdings', name: 'OCI홀딩스', hint: '폴리실리콘·지주사 밸류체인' },
+      { slug: 'samsung-sdi', name: '삼성SDI', hint: '2025 바닥 + 전고체 장기 스토리' }
+    ],
+    avoid: '테마주 추격 매수, 검증 안 된 단기 급등주. 당신 스타일엔 단기 스윙이 독입니다. 차트만 보고 따라가는 매매는 피하세요.',
+    model: '워렌 버핏 · 찰리 멍거'
+  },
+  momentum: {
+    name: '모멘텀 사냥꾼형', emoji: '🎯',
+    subtitle: '흐름을 타고 빠르게 움직이는 사냥꾼',
+    desc: '당신은 차트와 거래량, 수급의 변화를 읽는 기민한 투자자입니다. 오를 때 올라타고, 꺾이면 빠르게 손절하는 원칙이 있죠. 정보보다 가격의 움직임이 먼저 진실을 말한다고 믿습니다. 속도와 규율이 생명입니다.',
+    stocks: [
+      { slug: 'ncsoft', name: '엔씨소프트', hint: '게임 대장주 반등 시나리오' },
+      { slug: 'sdn', name: 'SDN', hint: '중소형 성장주 매물대' },
+      { slug: 'ananti', name: '아난티', hint: '테마주 세력·수급 흐름' }
+    ],
+    avoid: '장기 보유 자산, 배당주. 당신에겐 움직이지 않는 종목이 독입니다. "좋은 회사니까 기다리자" 같은 자기합리화도 위험.',
+    model: '제시 리버모어 · 마크 미너비니'
+  },
+  growth: {
+    name: '성장 관측가형', emoji: '🔭',
+    subtitle: '미래 산업의 판을 읽는 관측가',
+    desc: '당신은 기술·산업 구조의 변화를 읽고 미래에 큰 파이를 먹을 기업을 찾습니다. PER이 높아도 성장률이 따라오면 산다는 철학이죠. 2차전지·바이오·AI 같은 섹터의 리포트를 즐겁게 읽는 타입입니다.',
+    stocks: [
+      { slug: 'samsung-sdi', name: '삼성SDI', hint: '전고체 배터리 2027 양산' },
+      { slug: 'alteogen', name: '알테오젠', hint: '바이오 기술수출 로열티' },
+      { slug: 'hanwha-solutions', name: '한화솔루션', hint: '태양광 장기 성장 스토리' }
+    ],
+    avoid: '현금흐름·배당 위주의 저성장 기업. 당신 포트에 들어오면 지루해서 결국 팔게 됩니다. 과도한 집중도 주의.',
+    model: '캐시 우드 · 필립 피셔'
+  },
+  dividend: {
+    name: '배당 안정러형', emoji: '🌱',
+    subtitle: '복리의 힘을 믿는 꾸준한 수집가',
+    desc: '당신은 화려함보다 꾸준한 현금흐름을 선택합니다. 배당·안정 실적·낮은 변동성이 삼위일체죠. 20~30년 뒤 배당금으로 생활비가 커버되는 그림을 그립니다. 조용하지만 가장 부자가 되는 스타일.',
+    stocks: [
+      { slug: 'hanwha-solutions', name: '한화솔루션', hint: '대형 화학 + 배당 기반' },
+      { slug: 'oci-holdings', name: 'OCI홀딩스', hint: '지주사 안정 수익 구조' }
+    ],
+    avoid: '급등·테마주, 무배당 성장주. 당신은 흥분하면 안 되는 타입이에요. 루틴을 깨는 순간 원칙이 무너집니다.',
+    model: '존 보글 · 찰스 슈왑'
+  },
+  theme: {
+    name: '테마 서퍼형', emoji: '🌊',
+    subtitle: '트렌드의 파도를 가볍게 올라타는 서퍼',
+    desc: '당신은 시장의 공기를 빠르게 읽고 지금 뜨는 섹터로 움직입니다. 한 종목에 집착하지 않고 순환매를 즐기는 유연한 투자자죠. 순발력이 빛나는 타입이지만, 파도에 휩쓸리지 않을 원칙도 필요해요.',
+    stocks: [
+      { slug: 'ananti', name: '아난티', hint: '레저·리조트 테마 흐름' },
+      { slug: 'tym', name: 'TYM', hint: '농기계 실적·테마 포지션' },
+      { slug: 'ncsoft', name: '엔씨소프트', hint: '게임 섹터 반등 테마' }
+    ],
+    avoid: '뒤늦게 들어가는 테마의 막차, 상투 추격. 파도가 꺾인 뒤 들어가면 혼자 남습니다. 익절 원칙이 당신 생명줄.',
+    model: '스탠리 드러켄밀러 · 조지 소로스'
+  },
+  index: {
+    name: '인덱스 현자형', emoji: '🧘',
+    subtitle: '시장 전체에 베팅하는 초연한 현자',
+    desc: '당신은 개별 종목의 유혹에서 한 발짝 떨어져, 시장 전체의 장기 성장을 믿습니다. "아무도 시장을 꾸준히 이기지 못한다"는 진실을 일찍 깨달은 타입이죠. ETF와 분산이 당신의 무기입니다.',
+    stocks: [
+      { slug: 'samsung-sdi', name: '삼성SDI', hint: '코스피 시총 상위 대형주 참고' },
+      { slug: 'hanwha-solutions', name: '한화솔루션', hint: '대형주 섹터 구성 참고' }
+    ],
+    avoid: '종목 선별 유혹, 시장 타이밍. 당신 스타일엔 "잘될 것 같은" 느낌이 가장 위험합니다. 루틴 적립이 답.',
+    model: '존 보글 · 유진 파마'
+  }
+};
+
+const QUESTIONS = [
+  { q: '주가가 하루에 10% 떨어졌다. 당신의 반응은?',
+    opts: [
+      { t: '원칙대로 손절한다', w: { momentum: 2 } },
+      { t: '싸게 잡을 기회, 물타기한다', w: { value: 2 } },
+      { t: '장기 스토리 유지되면 존버한다', w: { growth: 1, dividend: 1 } },
+      { t: '차트·수급 다시 본 뒤 판단한다', w: { momentum: 1, theme: 1 } } ] },
+  { q: '친구가 "이 종목 지금 들어가야 해" 추천했다.',
+    opts: [
+      { t: '검색해보고 바로 매수 고려', w: { theme: 2 } },
+      { t: '차트부터 본다', w: { momentum: 2 } },
+      { t: '재무제표·사업보고서부터 본다', w: { value: 2 } },
+      { t: '관심 없음, 내 원칙이 있다', w: { dividend: 1, index: 2 } } ] },
+  { q: '투자 공부는 주로 어떤 방식으로 하나요?',
+    opts: [
+      { t: '재무제표·사업보고서', w: { value: 2 } },
+      { t: '차트·거래량·수급', w: { momentum: 2 } },
+      { t: '산업 리포트·기술 트렌드', w: { growth: 2 } },
+      { t: '유튜브·커뮤니티·카페', w: { theme: 2 } },
+      { t: '공부 안 함, ETF 적립만', w: { index: 2 } } ] },
+  { q: '가장 이상적이라 느끼는 보유 기간은?',
+    opts: [
+      { t: '몇 시간 ~ 며칠', w: { momentum: 2 } },
+      { t: '몇 주 ~ 몇 개월', w: { theme: 2 } },
+      { t: '1~3년', w: { growth: 2 } },
+      { t: '5~10년', w: { value: 2 } },
+      { t: '평생', w: { dividend: 2, index: 1 } } ] },
+  { q: '가장 끌리는 섹터는?',
+    opts: [
+      { t: '반도체·AI·2차전지', w: { growth: 2 } },
+      { t: '바이오·헬스케어', w: { growth: 2 } },
+      { t: '화학·철강·조선·건설', w: { value: 2 } },
+      { t: '게임·엔터·콘텐츠', w: { momentum: 1, theme: 1 } },
+      { t: '통신·금융·담배·유틸리티', w: { dividend: 2 } },
+      { t: '지금 가장 뜨거운 섹터', w: { theme: 2 } } ] },
+  { q: '투자 자산 중 한 종목의 최대 비중은?',
+    opts: [
+      { t: '올인 가능 (80% 이상)', w: { momentum: 2 } },
+      { t: '30~50% 정도', w: { value: 1, growth: 1 } },
+      { t: '10~20% 정도', w: { growth: 1, dividend: 1 } },
+      { t: '5% 이하 (분산)', w: { index: 2, dividend: 1 } } ] },
+  { q: '수익 났을 때 당신은?',
+    opts: [
+      { t: '바로 전량 익절', w: { momentum: 2 } },
+      { t: '반만 익절, 반은 보유', w: { growth: 1, theme: 1 } },
+      { t: '배당 보고 계속 보유', w: { dividend: 2 } },
+      { t: '더 좋은 종목으로 스위칭', w: { theme: 2 } },
+      { t: '그대로 놔둠, 리밸런싱만', w: { index: 2, value: 1 } } ] },
+  { q: '밤에 잠이 안 오는 순간은?',
+    opts: [
+      { t: '내일 장이 어떻게 열릴까', w: { momentum: 2 } },
+      { t: '산 종목 실적 발표 직전', w: { value: 2 } },
+      { t: '세상이 변하는 상상을 하다가', w: { growth: 2 } },
+      { t: '별로 없다, 잘 잔다', w: { dividend: 1, index: 2 } } ] },
+  { q: '가장 존경하는 투자자 스타일은?',
+    opts: [
+      { t: '워렌 버핏', w: { value: 2 } },
+      { t: '제시 리버모어', w: { momentum: 2 } },
+      { t: '캐시 우드', w: { growth: 2 } },
+      { t: '존 보글', w: { index: 2 } },
+      { t: '조지 소로스', w: { theme: 2 } },
+      { t: '잘 모르겠음', w: { dividend: 1, theme: 1 } } ] },
+  { q: '1년 투자 목표 수익률은?',
+    opts: [
+      { t: '연 5~10% (예적금 이상이면 OK)', w: { dividend: 2, index: 1 } },
+      { t: '연 10~20% (시장 평균 초과)', w: { value: 1, growth: 1 } },
+      { t: '연 20~50% (적극 공략)', w: { growth: 1, momentum: 1 } },
+      { t: '연 50% 이상 (공격적)', w: { momentum: 2, theme: 1 } },
+      { t: '정해두지 않음', w: { theme: 1, index: 1 } } ] }
+];
+
+const MBTI_MAP = {
+  INTJ: 'growth', INTP: 'index', ENTJ: 'value',  ENTP: 'momentum',
+  INFJ: 'growth', INFP: 'dividend', ENFJ: 'theme', ENFP: 'momentum',
+  ISTJ: 'dividend', ISFJ: 'dividend', ESTJ: 'value', ESFJ: 'theme',
+  ISTP: 'momentum', ISFP: 'index', ESTP: 'momentum', ESFP: 'theme'
+};
+
+let qIdx = 0;
+let scores = { value:0, momentum:0, growth:0, dividend:0, theme:0, index:0 };
+
+function $(id){ return document.getElementById(id); }
+function hide(id){ $(id).classList.add('hidden'); }
+function show(id){ $(id).classList.remove('hidden'); }
+
+function showTest(){
+  qIdx = 0;
+  scores = { value:0, momentum:0, growth:0, dividend:0, theme:0, index:0 };
+  hide('intro'); hide('mbti-screen'); hide('result-screen'); show('test-screen');
+  renderQ();
+  window.scrollTo(0,0);
+}
+
+function showMbti(){
+  hide('intro'); hide('test-screen'); hide('result-screen'); show('mbti-screen');
+  const grid = $('mbti-grid');
+  grid.innerHTML = '';
+  Object.keys(MBTI_MAP).forEach(m => {
+    const b = document.createElement('button');
+    b.className = 'mbti-btn';
+    b.textContent = m;
+    b.onclick = () => showResult(MBTI_MAP[m]);
+    grid.appendChild(b);
+  });
+  window.scrollTo(0,0);
+}
+
+function backToIntro(){
+  hide('mbti-screen'); hide('test-screen'); hide('result-screen'); show('intro');
+  window.scrollTo(0,0);
+}
+
+function renderQ(){
+  const q = QUESTIONS[qIdx];
+  $('qnum').textContent = `Q${qIdx+1} / ${QUESTIONS.length}`;
+  $('qtext').textContent = q.q;
+  $('progress').style.width = ((qIdx)/QUESTIONS.length*100)+'%';
+  const opts = $('opts');
+  opts.innerHTML = '';
+  q.opts.forEach(o => {
+    const b = document.createElement('button');
+    b.className = 'opt-btn';
+    b.textContent = o.t;
+    b.onclick = () => {
+      for (const k in o.w) scores[k] += o.w[k];
+      qIdx++;
+      if (qIdx >= QUESTIONS.length) {
+        $('progress').style.width = '100%';
+        const winner = Object.keys(scores).reduce((a,b)=>scores[a]>=scores[b]?a:b);
+        setTimeout(()=>showResult(winner), 300);
+      } else {
+        renderQ();
+      }
+    };
+    opts.appendChild(b);
+  });
+}
+
+function showResult(typeKey){
+  const t = TYPES[typeKey];
+  $('r-emoji').textContent = t.emoji;
+  $('r-type').textContent = t.name;
+  $('r-subtitle').textContent = t.subtitle;
+  $('r-desc').textContent = t.desc;
+  const sx = $('r-stocks');
+  sx.innerHTML = '';
+  t.stocks.forEach(s => {
+    const a = document.createElement('a');
+    a.className = 'stock-link';
+    a.href = `/stock/${s.slug}.html`;
+    a.innerHTML = `<div><div class="name">${s.name}</div><div class="hint">${s.hint}</div></div><div class="arrow">분석 보기 →</div>`;
+    sx.appendChild(a);
+  });
+  $('r-avoid').textContent = t.avoid;
+  $('r-model').textContent = t.model;
+  hide('intro'); hide('test-screen'); hide('mbti-screen'); show('result-screen');
+  window.scrollTo(0,0);
+
+  try {
+    const u = new URL(location.href);
+    u.searchParams.set('r', typeKey);
+    history.replaceState(null,'',u);
+  } catch(e) {}
+}
+
+function restart(){ backToIntro(); }
+
+function shareKakao(){
+  const txt = `나의 투자 유형은 "${$('r-type').textContent}"! 당신은?\n${location.href}`;
+  if (navigator.share) { navigator.share({ title: '나와 어울리는 주식 종목은?', text: txt, url: location.href }).catch(()=>{}); }
+  else copyLink();
+}
+function shareX(){
+  const txt = `나의 투자 유형은 "${$('r-type').textContent}"! 당신은 어떤 투자자?`;
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(txt)}&url=${encodeURIComponent(location.href)}`, '_blank');
+}
+function copyLink(){
+  navigator.clipboard.writeText(location.href).then(()=>alert('링크가 복사되었습니다')).catch(()=>{});
+}
+
+(function(){
+  const params = new URLSearchParams(location.search);
+  const r = params.get('r');
+  if (r && TYPES[r]) showResult(r);
+})();
+</script>
+
+</body>
+</html>
