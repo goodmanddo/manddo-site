@@ -1,7 +1,7 @@
 {
   "date": "2026-04-17",
   "start_date": "2026-04-17",
-  "cumulative_return": 45.38,
+  "cumulative_return": 6.32,
   "week_return": 0.0,
   "win_rate": 0,
   "total_trades": 0,
@@ -12,7 +12,7 @@
       "slug": "hyundai-motor",
       "market": "코스피",
       "entry_to_current_pct": -0.19,
-      "weight_pct": 3,
+      "weight_pct": 5,
       "reason": "4/17 14:56 단타 신호 추가 진입. 자동차 섹터 반등 흐름과 미국 관세 협상 기대감이 단기 모멘텀으로 작용. 일봉 캔들이 5일선 지지 후 반등 시도."
     },
     {
@@ -28,7 +28,7 @@
       "slug": "naver",
       "market": "코스피",
       "entry_to_current_pct": 2.85,
-      "weight_pct": 7,
+      "weight_pct": 10,
       "reason": "AI 검색 엔진 개편과 광고 단가 회복 기대. 대형주 중 가장 선명한 실적 턴어라운드 시그널. 진입 후 +2.85% 흐름."
     },
     {
@@ -36,7 +36,7 @@
       "slug": "kakao",
       "market": "코스피",
       "entry_to_current_pct": -1.19,
-      "weight_pct": 6,
+      "weight_pct": 8,
       "reason": "카카오톡 개편 이슈와 자회사 IPO 모멘텀. 플랫폼 대장주의 반등 시나리오에 베팅. 단기 수급 회복 국면."
     },
     {
@@ -44,7 +44,7 @@
       "slug": "lg-chem",
       "market": "코스피",
       "entry_to_current_pct": 0.42,
-      "weight_pct": 5,
+      "weight_pct": 6,
       "reason": "4/17 14:06 단타 신호 진입. 배터리 자회사 분리 후 본업(석유화학) 가치 재평가. 주가는 저점 대비 반등 초기 구간."
     },
     {
@@ -52,7 +52,7 @@
       "slug": "",
       "market": "코스피",
       "entry_to_current_pct": 4.31,
-      "weight_pct": 8,
+      "weight_pct": 11,
       "reason": "AI합의 120일선 돌파 + 영업이익률 25% 시그널. 정부 사이버 예산 확대와 보안 수요 증가로 실적 모멘텀 강화."
     },
     {
@@ -60,7 +60,7 @@
       "slug": "",
       "market": "코스피",
       "entry_to_current_pct": 2.13,
-      "weight_pct": 3,
+      "weight_pct": 5,
       "reason": "AI합의 60일선 돌파 + 영업이익률 15.8% 시그널. K2 전차 폴란드 2차 계약 모멘텀. 방산 수주 사이클 진입."
     },
     {
@@ -68,7 +68,7 @@
       "slug": "",
       "market": "코스피",
       "entry_to_current_pct": -2.23,
-      "weight_pct": 3,
+      "weight_pct": 4,
       "reason": "AI합의 120일선 돌파 + 영업이익률 12.6% 시그널. 반도체 후공정 장비 수주 회복 구간."
     },
     {
@@ -84,7 +84,7 @@
       "slug": "",
       "market": "코스피",
       "entry_to_current_pct": 0.0,
-      "weight_pct": 3,
+      "weight_pct": 5,
       "reason": "AI합의 60일선 돌파 + 영업이익률 34% 시그널. 신작 출시 사이클과 PUBG 지속 모멘텀."
     },
     {
@@ -92,7 +92,7 @@
       "slug": "",
       "market": "코스피",
       "entry_to_current_pct": 1.13,
-      "weight_pct": 4,
+      "weight_pct": 6,
       "reason": "AI합의 60일선 돌파 + 영업이익률 7.3% 시그널. OLED 장비 투자 사이클 진입 구간."
     },
     {
@@ -100,7 +100,7 @@
       "slug": "lg-energy-solution",
       "market": "코스피",
       "entry_to_current_pct": 0.6,
-      "weight_pct": 5,
+      "weight_pct": 7,
       "reason": "배터리 업황 바닥 확인과 ESS 반등 스토리. 대형주 섹터 대표주로 포트폴리오 앵커 역할."
     },
     {
@@ -108,7 +108,7 @@
       "slug": "",
       "market": "코스피",
       "entry_to_current_pct": 0.72,
-      "weight_pct": 4,
+      "weight_pct": 5,
       "reason": "AI합의 120일선 돌파 + 영업이익률 15.4% 시그널. 친환경 소재와 고배당 매력 결합."
     }
   ],
@@ -138,67 +138,67 @@
       "name": "안랩",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 8
+      "weight_pct": 11
     },
     {
       "name": "NAVER",
       "slug": "naver",
       "market": "코스피",
-      "weight_pct": 7
+      "weight_pct": 10
     },
     {
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "weight_pct": 6
-    },
-    {
-      "name": "LG화학",
-      "slug": "lg-chem",
-      "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 8
     },
     {
       "name": "LG에너지솔루션",
       "slug": "lg-energy-solution",
       "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 7
+    },
+    {
+      "name": "LG화학",
+      "slug": "lg-chem",
+      "market": "코스피",
+      "weight_pct": 6
     },
     {
       "name": "AP시스템",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 4
-    },
-    {
-      "name": "GS피앤엘",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 4
+      "weight_pct": 6
     },
     {
       "name": "현대차",
       "slug": "hyundai-motor",
       "market": "코스피",
-      "weight_pct": 3
+      "weight_pct": 5
     },
     {
       "name": "현대로템",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 3
-    },
-    {
-      "name": "매커스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
+      "weight_pct": 5
     },
     {
       "name": "크래프톤",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 3
+      "weight_pct": 5
+    },
+    {
+      "name": "GS피앤엘",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 5
+    },
+    {
+      "name": "매커스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
     },
     {
       "name": "SK가스",
