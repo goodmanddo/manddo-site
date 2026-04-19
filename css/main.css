@@ -128,16 +128,19 @@ body{
 .stock-search.has-text .s-clear{display:inline-flex}
 /* 우측 돋보기 제출 버튼 (input 안쪽, 파란색 아이콘) */
 .stock-search .s-submit{
-  position:absolute;right:14px;top:50%;transform:translateY(-50%);
-  width:32px;height:32px;
-  display:flex;align-items:center;justify-content:center;
+  position:absolute !important;
+  right:14px;top:50%;transform:translateY(-50%);
+  width:34px;height:34px;
+  display:flex !important;align-items:center;justify-content:center;
   border:0;border-radius:50%;
   background:transparent;color:#3182F6;
-  cursor:pointer;padding:0;
+  cursor:pointer;padding:0;margin:0;
   font-size:0;line-height:0;
   z-index:3;
   transition:background .15s ease,transform .12s ease;
   -webkit-appearance:none;
+  overflow:visible;clip:auto;
+  width:34px;height:34px;
 }
 .stock-search .s-submit:hover{background:#EBF4FF}
 .stock-search .s-submit:active{transform:translateY(-50%) scale(.92)}
