@@ -179,6 +179,7 @@
 (async function(){
   const fmtPct = v => (v>0?'+':'') + v.toFixed(1) + '%';
   const cls = v => v>0 ? 'pos' : v<0 ? 'neg' : '';
+  const addCls = (el, c) => { if(c) el.classList.add(c); };
   const fmtKorDate = s => {
     const d = new Date(s+'T00:00:00');
     const days = ['일','월','화','수','목','금','토'];
@@ -199,12 +200,12 @@
   // 요약
   const cum = document.getElementById('sum-cum');
   cum.textContent = fmtPct(data.cumulative_return);
-  cum.classList.add(cls(data.cumulative_return));
+  addCls(cum, cls(data.cumulative_return));
   document.getElementById('sum-since').textContent = data.start_date + ' 이후';
 
   const wk = document.getElementById('sum-week');
   wk.textContent = fmtPct(data.week_return);
-  wk.classList.add(cls(data.week_return));
+  addCls(wk, cls(data.week_return));
 
   document.getElementById('sum-win').textContent = data.win_rate + '%';
   document.getElementById('sum-total').textContent = '누적 ' + data.total_trades + '건';
