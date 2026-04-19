@@ -10,8 +10,23 @@ import os
 import re
 import subprocess
 import sys
-from datetime import datetime, date
+from datetime import datetime, date, time, timedelta
 from pathlib import Path
+
+
+def last_market_date():
+    """마지막 장 마감일 반환. 한국 주식 기준 (주말 제외, 공휴일 미반영).
+
+    오늘이 평일이고 15:30 이후면 오늘, 아니면 직전 평일을 반환.
+    """
+    now = datetime.now()
+    today = now.date()
+    if today.weekday() < 5 and now.time() >= time(15, 30):
+        return today
+    d = today - timedelta(days=1)
+    while d.weekday() >= 5:
+        d -= timedelta(days=1)
+    return d
 
 sys.path.insert(0, str(Path.home() / "stock_auto_trade"))
 from kis_api import KISApi  # noqa: E402
@@ -115,8 +130,9 @@ def git_commit_and_push():
 
 
 def main():
-    today = date.today().isoformat()
-    log(f"업데이트 시작 ({today})")
+    market_d = last_market_date()
+    today = market_d.isoformat()  # 표시·기록용 기준일 = 마지막 장 마감일
+    log(f"업데이트 시작 (기준일 {today}, 실행일 {date.today().isoformat()})")
 
     config = load_json(CONFIG_FILE, {})
     slug_map = config.get("slug_map", {})
@@ -201,7 +217,7 @@ def main():
         if prev.get("opened_at"):
             try:
                 opened = datetime.strptime(prev["opened_at"], "%Y-%m-%d").date()
-                hold_days = (date.today() - opened).days
+                hold_days = (market_d - opened).days
             except Exception:
                 pass
         exits.append({
@@ -222,8 +238,8 @@ def main():
     else:
         win_rate = 0
 
-    # 주간 손실 공개: 최근 7일 내 손절 거래
-    today_d = date.today()
+    # 주간 손실 공개: 기준일로부터 최근 7일 내 손절 거래
+    today_d = market_d
     weekly_losses = []
     for c in reversed(completed):
         try:
@@ -267,7 +283,7 @@ def main():
     new_last_holdings = {}
     for code, h in holdings.items():
         prev = prev_holdings.get(code, {})
-        opened_at = prev.get("opened_at") or today
+        opened_at = prev.get("opened_at") or today  # today = 기준일(마지막 장 마감일)
         new_last_holdings[code] = {
             "name": h["name"],
             "qty": h["qty"],
