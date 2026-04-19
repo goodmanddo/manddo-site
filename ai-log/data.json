@@ -1,0 +1,61 @@
+{
+  "date": "2026-04-19",
+  "start_date": "2026-01-02",
+  "cumulative_return": 12.3,
+  "week_return": 1.8,
+  "win_rate": 58,
+  "total_trades": 24,
+  "ai_commentary": "이번 주는 반도체·바이오 섹터가 강세였지만, 태양광 섹터는 추세 약화가 확인돼 포지션을 축소했습니다. 전반적으로 시장 변동성이 커져 신규 진입은 보수적으로, 수익 구간은 분할 익절로 대응했습니다.",
+  "new_buys": [
+    {
+      "name": "삼성SDI",
+      "slug": "samsung-sdi",
+      "market": "코스피",
+      "entry_to_current_pct": 1.8,
+      "weight_pct": 15,
+      "reason": "ESS 반등 + 전고체 2027 양산 스토리. 일봉 60일선 돌파 후 첫 눌림목 매수."
+    },
+    {
+      "name": "알테오젠",
+      "slug": "alteogen",
+      "market": "코스닥",
+      "entry_to_current_pct": -0.4,
+      "weight_pct": 10,
+      "reason": "기술수출 로열티 구조 재평가 국면. 주봉 골든크로스 진입 확인."
+    }
+  ],
+  "exits": [
+    {
+      "type": "win",
+      "name": "엔씨소프트",
+      "slug": "ncsoft",
+      "market": "코스피",
+      "return_pct": 3.1,
+      "hold_days": 6,
+      "reason": "단기 저항대 도달. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "loss",
+      "name": "한화솔루션",
+      "slug": "hanwha-solutions",
+      "market": "코스피",
+      "return_pct": -2.2,
+      "hold_days": 4,
+      "reason": "태양광 섹터 추세 약화 확인. 손절 규칙(-2%)에 따라 청산."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "한화솔루션",
+      "slug": "hanwha-solutions",
+      "return_pct": -2.2,
+      "lesson": "섹터 흐름이 꺾인 종목은 개별 재료가 있어도 진입 타이밍을 미뤘어야 함. 다음 주부터 섹터 필터를 1단계 강화."
+    },
+    {
+      "name": "SDN",
+      "slug": "sdn",
+      "return_pct": -1.4,
+      "lesson": "거래량이 얇은 중소형주는 초기 포지션을 평소의 절반으로. 예상보다 슬리피지가 컸음."
+    }
+  ]
+}

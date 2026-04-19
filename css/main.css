@@ -65,6 +65,12 @@ body{
 }
 .hero h1{font-size:40px;font-weight:800;color:#191f28;margin-bottom:14px;letter-spacing:-0.045em;line-height:1.2;position:relative}
 .hero p{font-size:16px;color:#4e5968;margin-bottom:0;font-weight:500;position:relative}
+.hero-cta{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap;position:relative}
+.hero-btn{display:inline-block;padding:12px 22px;border-radius:10px;font-size:14.5px;font-weight:700;text-decoration:none;letter-spacing:-0.01em;transition:all .15s ease}
+.hero-btn.primary{background:#3182F6;color:#fff;box-shadow:0 6px 16px -4px rgba(49,130,246,.35)}
+.hero-btn.primary:hover{background:#1B64DA;transform:translateY(-1px);box-shadow:0 10px 22px -6px rgba(49,130,246,.45)}
+.hero-btn.ghost{background:rgba(255,255,255,.7);color:#1B64DA;border:1px solid rgba(49,130,246,.25)}
+.hero-btn.ghost:hover{background:#fff;border-color:#3182F6}
 
 /* ===== 카테고리 섹션 ===== */
 .cat-section{margin-bottom:48px}

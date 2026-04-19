@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘 AI의 선택 — 오늘 AI는 뭘 샀을까? | 만또 인사이트</title>
+<meta name="description" content="AI가 오늘 매수·매도한 종목과 판단 근거를 매일 기록합니다. 손실 케이스도 공개. 투자 권유가 아닌 AI 매매 학습 로그입니다.">
+<meta name="keywords" content="AI주식, AI매매, AI투자, 오늘의AI선택, 주식AI, AI트레이딩, 매매일지">
+<meta property="og:title" content="오늘 AI의 선택 — 오늘 AI는 뭘 샀을까?">
+<meta property="og:description" content="AI가 오늘 매수·매도한 종목과 판단 근거를 매일 기록합니다. 손실 케이스도 공개.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/ai-log/">
+<link rel="canonical" href="https://manddo.kr/ai-log/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.ai-hero{background:linear-gradient(135deg,#EBF4FF 0%,#F4F9FF 50%,#F0F4FF 100%);border-radius:20px;padding:44px 28px;margin-bottom:28px;position:relative;overflow:hidden;text-align:center}
+.ai-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 15% 25%,rgba(49,130,246,.10),transparent 55%),radial-gradient(circle at 85% 75%,rgba(107,89,255,.08),transparent 55%);pointer-events:none}
+.ai-hero .tag-live{display:inline-flex;align-items:center;gap:6px;background:rgba(49,130,246,.10);color:#1B64DA;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;margin-bottom:14px;position:relative;letter-spacing:0.02em}
+.ai-hero .tag-live::before{content:'';width:6px;height:6px;background:#3182F6;border-radius:50%;box-shadow:0 0 0 4px rgba(49,130,246,.18);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.ai-hero h1{font-size:32px;font-weight:800;letter-spacing:-0.04em;line-height:1.25;color:#191f28;margin-bottom:10px;position:relative}
+.ai-hero .date{font-size:14px;color:#4e5968;font-weight:500;position:relative}
+
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:32px}
+.summary-box{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 18px 16px}
+.summary-box .label{font-size:12px;color:#8b95a1;font-weight:600;margin-bottom:8px;letter-spacing:0.02em}
+.summary-box .value{font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#191f28;font-family:'SF Mono',ui-monospace,monospace}
+.summary-box .value.pos{color:#0C8A5A}
+.summary-box .value.neg{color:#D63939}
+.summary-box .sub{font-size:11.5px;color:#8b95a1;font-weight:500;margin-top:4px}
+
+.sec{margin-bottom:36px}
+.sec h2{font-size:20px;font-weight:800;letter-spacing:-0.035em;color:#191f28;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sec .sec-desc{font-size:13.5px;color:#6b7684;margin-bottom:16px;line-height:1.65}
+
+.trade{background:#fff;border:1px solid #eef0f3;border-left:4px solid #3182F6;border-radius:12px;padding:18px 20px;margin-bottom:10px;display:block;color:inherit;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.trade:hover{transform:translateY(-2px);box-shadow:0 8px 24px -6px rgba(25,31,40,.08)}
+.trade.win{border-left-color:#0C8A5A}
+.trade.loss{border-left-color:#D63939}
+.trade-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.trade .name{font-size:16.5px;font-weight:800;color:#191f28;letter-spacing:-0.02em}
+.trade .market{font-size:11px;color:#8b95a1;font-weight:600;margin-left:6px}
+.trade .pct{font-size:17px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.02em}
+.trade .pct.pos{color:#0C8A5A}
+.trade .pct.neg{color:#D63939}
+.trade .meta{font-size:12px;color:#8b95a1;font-weight:500;margin-bottom:6px}
+.trade .reason{font-size:13.5px;color:#4e5968;line-height:1.6}
+
+.commentary{background:#F7F9FC;border:1px solid #eef0f3;border-radius:14px;padding:20px 22px}
+.commentary .quote{font-size:14.5px;color:#4e5968;line-height:1.75;letter-spacing:-0.01em}
+.commentary .by{font-size:12px;color:#8b95a1;margin-top:10px;font-weight:500}
+
+.loss-box{background:#FFF8F8;border:1px solid #FAD4D4;border-radius:14px;padding:18px 20px;margin-bottom:10px}
+.loss-box .loss-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;gap:10px;flex-wrap:wrap}
+.loss-box .loss-name{font-size:15px;font-weight:700;color:#191f28}
+.loss-box .loss-pct{font-size:15px;font-weight:800;color:#D63939;font-family:'SF Mono',ui-monospace,monospace}
+.loss-box .lesson{font-size:13.5px;color:#4e5968;line-height:1.65}
+.loss-box .lesson b{color:#B33939;font-weight:700}
+
+.rules{background:#F7F9FC;border-radius:12px;padding:16px 20px;font-size:13px;color:#6b7684;line-height:1.8}
+.rules b{color:#4e5968}
+
+@media(max-width:640px){
+  .ai-hero{padding:32px 20px;border-radius:16px}
+  .ai-hero h1{font-size:24px}
+  .summary-box .value{font-size:19px}
+  .trade .name{font-size:15.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-log/" class="active">오늘 AI의 선택</a>
+      <a href="/stock/">스톡 리서치</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="ai-hero">
+    <div class="tag-live">● AI 매매 일지</div>
+    <h1>🤖 오늘 AI는 뭘 샀을까?</h1>
+    <div class="date" id="today-date">—</div>
+  </section>
+
+  <div class="summary-grid">
+    <div class="summary-box">
+      <div class="label">누적 수익률</div>
+      <div class="value" id="sum-cum">—</div>
+      <div class="sub" id="sum-since">—</div>
+    </div>
+    <div class="summary-box">
+      <div class="label">이번 주</div>
+      <div class="value" id="sum-week">—</div>
+      <div class="sub">W/W 기준</div>
+    </div>
+    <div class="summary-box">
+      <div class="label">승률</div>
+      <div class="value" id="sum-win">—</div>
+      <div class="sub" id="sum-total">—</div>
+    </div>
+  </div>
+
+  <section class="sec" id="sec-buys">
+    <h2>🟦 오늘의 신규 매수</h2>
+    <div class="sec-desc">AI가 오늘 새로 편입한 종목과 비중, 진입 후 현재까지의 변화율.</div>
+    <div id="list-buys"></div>
+  </section>
+
+  <section class="sec" id="sec-exits">
+    <h2>🟩 오늘의 청산</h2>
+    <div class="sec-desc">익절·손절로 포지션을 정리한 종목. 최종 수익률.</div>
+    <div id="list-exits"></div>
+  </section>
+
+  <section class="sec">
+    <h2>💬 AI의 판단 근거</h2>
+    <div class="commentary">
+      <div class="quote" id="ai-quote">—</div>
+      <div class="by">— 만또 AI, 매매 시나리오 요약</div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>📉 이번 주 손실 공개</h2>
+    <div class="sec-desc">수익만 보여주지 않습니다. 손실 케이스와 다음에 어떻게 개선할지 함께 기록합니다.</div>
+    <div id="list-losses"></div>
+  </section>
+
+  <section class="sec">
+    <h2>📏 운영 규칙</h2>
+    <div class="rules">
+      · <b>실시간 공개가 아닙니다.</b> 매매 체결 당일 장 마감 후 정리된 기록만 게시합니다.<br>
+      · <b>비중(%)과 변화율(%)만 공개</b>합니다. 절대 금액은 표기하지 않습니다.<br>
+      · <b>손실 케이스도 모두 공개</b>합니다. 승률·수익률을 왜곡하지 않습니다.<br>
+      · <b>교육·기록 목적</b>입니다. 특정 종목의 매수·매도 권유가 아닙니다.
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    <b>⚠ 투자 유의사항</b><br>
+    본 페이지는 AI의 매매 기록을 <b>교육·참고 목적</b>으로 정리한 것이며, 특정 종목의 매수·매도 권유가 아닙니다. 과거 성과가 미래 수익을 보장하지 않으며, 모든 투자 판단과 그 결과는 이용자 본인의 책임입니다. 본 사이트는 투자 자문업자가 아닙니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+(async function(){
+  const fmtPct = v => (v>0?'+':'') + v.toFixed(1) + '%';
+  const cls = v => v>0 ? 'pos' : v<0 ? 'neg' : '';
+  const fmtKorDate = s => {
+    const d = new Date(s+'T00:00:00');
+    const days = ['일','월','화','수','목','금','토'];
+    return `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일 (${days[d.getDay()]})`;
+  };
+
+  let data;
+  try{
+    const res = await fetch('/ai-log/data.json?v='+Date.now());
+    data = await res.json();
+  }catch(e){
+    document.getElementById('today-date').textContent = '데이터를 불러오지 못했습니다';
+    return;
+  }
+
+  document.getElementById('today-date').textContent = fmtKorDate(data.date);
+
+  // 요약
+  const cum = document.getElementById('sum-cum');
+  cum.textContent = fmtPct(data.cumulative_return);
+  cum.classList.add(cls(data.cumulative_return));
+  document.getElementById('sum-since').textContent = data.start_date + ' 이후';
+
+  const wk = document.getElementById('sum-week');
+  wk.textContent = fmtPct(data.week_return);
+  wk.classList.add(cls(data.week_return));
+
+  document.getElementById('sum-win').textContent = data.win_rate + '%';
+  document.getElementById('sum-total').textContent = '누적 ' + data.total_trades + '건';
+
+  // 신규 매수
+  const buysEl = document.getElementById('list-buys');
+  if(!data.new_buys || data.new_buys.length===0){
+    buysEl.innerHTML = '<div class="rules">오늘은 신규 매수가 없었습니다.</div>';
+  }else{
+    data.new_buys.forEach(t => {
+      buysEl.insertAdjacentHTML('beforeend', `
+        <a class="trade" href="/stock/${t.slug}.html">
+          <div class="trade-row">
+            <div><span class="name">${t.name}</span><span class="market">· ${t.market}</span></div>
+            <div class="pct ${cls(t.entry_to_current_pct)}">${fmtPct(t.entry_to_current_pct)}</div>
+          </div>
+          <div class="meta">진입가 대비 현재 · 포트폴리오 비중 ${t.weight_pct}%</div>
+          <div class="reason">${t.reason}</div>
+        </a>
+      `);
+    });
+  }
+
+  // 청산
+  const exEl = document.getElementById('list-exits');
+  if(!data.exits || data.exits.length===0){
+    exEl.innerHTML = '<div class="rules">오늘은 청산이 없었습니다.</div>';
+  }else{
+    data.exits.forEach(t => {
+      const kind = t.type==='win' ? 'win' : 'loss';
+      const label = t.type==='win' ? '익절' : '손절';
+      exEl.insertAdjacentHTML('beforeend', `
+        <a class="trade ${kind}" href="/stock/${t.slug}.html">
+          <div class="trade-row">
+            <div><span class="name">${t.name}</span><span class="market">· ${t.market}</span></div>
+            <div class="pct ${cls(t.return_pct)}">${fmtPct(t.return_pct)}</div>
+          </div>
+          <div class="meta">${label} · 보유 ${t.hold_days}일</div>
+          <div class="reason">${t.reason}</div>
+        </a>
+      `);
+    });
+  }
+
+  // AI 판단
+  document.getElementById('ai-quote').textContent = data.ai_commentary;
+
+  // 손실 공개
+  const lossEl = document.getElementById('list-losses');
+  if(!data.weekly_losses || data.weekly_losses.length===0){
+    lossEl.innerHTML = '<div class="rules">이번 주는 공개할 손실 사례가 없었습니다.</div>';
+  }else{
+    data.weekly_losses.forEach(l => {
+      lossEl.insertAdjacentHTML('beforeend', `
+        <div class="loss-box">
+          <div class="loss-head">
+            <div class="loss-name"><a href="/stock/${l.slug}.html" style="color:inherit;text-decoration:none">${l.name}</a></div>
+            <div class="loss-pct">${fmtPct(l.return_pct)}</div>
+          </div>
+          <div class="lesson"><b>배운 점 ·</b> ${l.lesson}</div>
+        </div>
+      `);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
