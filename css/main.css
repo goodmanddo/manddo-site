@@ -93,14 +93,23 @@ body{
 .site-footer a:hover{color:#3182F6}
 .site-footer .copy{margin-top:10px;color:#b0b8c1;font-size:12px}
 
-/* ===== 종목 검색 (구글 스타일) ===== */
-.stock-search{display:flex;gap:10px;width:100%;margin:0 0 32px;align-items:stretch}
-.stock-search .s-input{position:relative;flex:1;min-width:0}
+/* ===== 종목 검색 (구글 스타일 — 페이지 너비 확장형) ===== */
+.stock-search{
+  display:block;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  margin-top:0;margin-bottom:40px;
+  padding:0 max(20px, calc((100vw - 940px) / 2));
+  box-sizing:border-box;
+  position:relative;
+}
+.stock-search .s-input{position:relative;width:100%;display:block}
 .stock-search input{
   width:100%;height:60px;box-sizing:border-box;display:block;
-  padding:0 52px 0 56px;
+  padding:0 56px 0 58px;
   font-family:inherit;font-size:17px;color:#191f28;letter-spacing:-0.01em;
-  background:#fff;border:1px solid #e5e8eb;border-radius:999px;
+  background:#fff;border:1px solid #dfe3e8;border-radius:999px;
   box-shadow:0 2px 10px rgba(25,31,40,.06);
   transition:box-shadow .18s ease,border-color .18s ease;
   -webkit-appearance:none;outline:none;
@@ -108,38 +117,30 @@ body{
 .stock-search input::-webkit-search-decoration,
 .stock-search input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
 .stock-search input::placeholder{color:#9aa2ac;font-weight:400}
-.stock-search input:hover{box-shadow:0 4px 16px rgba(25,31,40,.09);border-color:#dcdfe3}
-.stock-search input:focus{border-color:#d1d6db;box-shadow:0 6px 22px rgba(25,31,40,.12)}
+.stock-search input:hover{box-shadow:0 4px 16px rgba(25,31,40,.10);border-color:#c5cbd2}
+.stock-search input:focus{border-color:#a6adb6;box-shadow:0 6px 22px rgba(25,31,40,.12)}
 .stock-search .s-icon{
-  position:absolute;left:22px;top:50%;transform:translateY(-50%);
-  width:18px;height:18px;color:#9aa2ac;pointer-events:none;flex:none;
+  position:absolute;left:24px;top:50%;transform:translateY(-50%);
+  width:18px;height:18px;color:#9aa2ac;pointer-events:none;
 }
 .stock-search .s-clear{
-  position:absolute;right:16px;top:50%;transform:translateY(-50%);
-  width:26px;height:26px;border:0;background:transparent;cursor:pointer;padding:0;
+  position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  width:28px;height:28px;border:0;background:transparent;cursor:pointer;padding:0;
   color:#9aa2ac;border-radius:50%;display:none;align-items:center;justify-content:center;
   font-size:13px;line-height:1;transition:background .15s ease,color .15s ease;
 }
 .stock-search .s-clear:hover{background:#f2f4f6;color:#4e5968}
 .stock-search.has-text .s-clear{display:inline-flex}
+/* 별도 검색 버튼은 숨김 (Enter/모바일 검색키로 제출) */
 .stock-search .s-submit{
-  flex:none;height:60px;padding:0 28px;
-  background:#3182F6;color:#fff;border:0;border-radius:999px;
-  font-family:inherit;font-size:15.5px;font-weight:700;letter-spacing:-0.01em;
-  cursor:pointer;transition:background .15s ease,box-shadow .15s ease;
-  box-shadow:0 4px 14px rgba(49,130,246,.28);
+  position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);border:0;
 }
-.stock-search .s-submit:hover{background:#1B64DA;box-shadow:0 6px 18px rgba(49,130,246,.38)}
 @media(max-width:640px){
-  .stock-search{
-    gap:8px;
-    width:calc(100% + 32px);
-    margin-left:-16px;margin-right:-16px;
-    padding:0 12px;
-  }
-  .stock-search input{height:52px;font-size:16px;padding-left:48px;padding-right:44px}
-  .stock-search .s-icon{left:18px;width:16px;height:16px}
-  .stock-search .s-submit{height:52px;padding:0 18px;font-size:14.5px}
+  .stock-search{padding:0 14px;margin-bottom:32px}
+  .stock-search input{height:54px;font-size:16px;padding:0 50px 0 50px}
+  .stock-search .s-icon{left:20px;width:16px;height:16px}
+  .stock-search .s-clear{right:14px;width:26px;height:26px}
 }
 .stock-empty{
   padding:36px 20px;text-align:center;color:#8b95a1;font-size:14px;
