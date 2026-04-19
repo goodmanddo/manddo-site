@@ -34,6 +34,71 @@ META_RE = re.compile(
     re.IGNORECASE,
 )
 
+# 종목명(한글/영문) → SEO 슬러그
+NAME_TO_SLUG = {
+    "삼성전자": "samsung-electronics",
+    "삼성SDI": "samsung-sdi",
+    "삼성물산": "samsung-cnt",
+    "삼성바이오로직스": "samsung-biologics",
+    "SK하이닉스": "sk-hynix",
+    "LG화학": "lg-chem",
+    "LG에너지솔루션": "lg-energy-solution",
+    "현대차": "hyundai-motor",
+    "현대모비스": "hyundai-mobis",
+    "기아": "kia",
+    "POSCO홀딩스": "posco-holdings",
+    "네이버": "naver",
+    "카카오": "kakao",
+    "셀트리온": "celltrion",
+    "에코프로비엠": "ecopro-bm",
+    "KB금융": "kb-financial",
+    "신한지주": "shinhan-financial",
+    "하나금융지주": "hana-financial",
+    "우리금융지주": "woori-financial",
+    "알테오젠": "alteogen",
+    "엔씨소프트": "ncsoft",
+    "아난티": "ananti",
+    "한화솔루션": "hanwha-solutions",
+    "OCI홀딩스": "oci-holdings",
+    "SDN": "sdn",
+    "TYM": "tym",
+}
+
+# 종목코드 → 시장(코스피/코스닥) 간이 매핑. 없으면 코스피로 추정.
+KOSDAQ_CODES = {
+    "196170",  # 알테오젠
+    "025980",  # 아난티
+    "099220",  # SDN
+    "247540",  # 에코프로비엠
+}
+
+
+def filename_fallback(html_path):
+    """파일명 패턴 '종목명_종목코드_analysis.html'에서 메타 추출."""
+    stem = html_path.stem  # ex: '삼성전자_005930_analysis'
+    parts = stem.split("_")
+    name = code = None
+    for p in parts:
+        if p.isdigit() and len(p) == 6:
+            code = p
+            break
+    name_parts = []
+    for p in parts:
+        if p == "analysis" or (p.isdigit() and len(p) == 6):
+            break
+        name_parts.append(p)
+    if name_parts:
+        name = "_".join(name_parts) if len(name_parts) > 1 else name_parts[0]
+        # 영문 슬러그 형식 (samsung_sdi)이면 그대로 사용 → 사람이 읽을 수 있게 변환은 매핑에서
+    return name, code
+
+
+def extract_title(html_text):
+    m = re.search(r"<title>([^<]+)</title>", html_text, re.IGNORECASE)
+    if m:
+        return m.group(1).strip()
+    return ""
+
 
 def load_manifest():
     if MANIFEST.exists():
@@ -46,20 +111,38 @@ def save_manifest(items):
 
 
 def parse_meta(html_path):
+    """메타 태그 우선, 없으면 파일명·title에서 자동 추출."""
     text = html_path.read_text(encoding="utf-8", errors="ignore")
     found = {key.lower(): value for key, value in META_RE.findall(text)}
-    required = ["slug", "name", "code", "market", "desc"]
-    missing = [k for k in required if k not in found]
-    if missing:
-        return None, missing
+
+    # 파일명·title 폴백
+    fname_name, fname_code = filename_fallback(html_path)
+    title = extract_title(text)  # ex: "삼성전자 세력·차트 분석"
+
+    name = found.get("name") or fname_name
+    code = found.get("code") or fname_code
+    if not name or not code:
+        return None, ["name 또는 code (파일명 패턴 종목명_종목코드_analysis.html 권장)"]
+
+    # 슬러그: 매핑 테이블 → 메타 → 파일명(영문) → 코드
+    slug = found.get("slug") or NAME_TO_SLUG.get(name)
+    if not slug:
+        if re.fullmatch(r"[a-zA-Z0-9_-]+", fname_name or ""):
+            slug = fname_name.lower().replace("_", "-")
+        else:
+            slug = code  # 한글명 매핑 미등록 → 코드를 슬러그로 사용
+
+    market = found.get("market") or ("코스닥" if code in KOSDAQ_CODES else "코스피")
+    desc = found.get("desc") or (title.replace(" 세력·차트 분석", "").strip() + " 세력 흐름·차트 구조·수급 종합 분석.")
     tags = [t.strip() for t in found.get("tags", "").split(",") if t.strip()]
+
     return {
-        "slug": found["slug"],
-        "name": found["name"],
-        "code": found["code"],
-        "market": found["market"],
+        "slug": slug,
+        "name": name,
+        "code": code,
+        "market": market,
         "tags": tags,
-        "desc": found["desc"],
+        "desc": desc,
         "added": date.today().isoformat(),
     }, []
 
