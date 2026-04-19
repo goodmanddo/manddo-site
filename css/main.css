@@ -94,36 +94,47 @@ body{
 .site-footer .copy{margin-top:10px;color:#b0b8c1;font-size:12px}
 
 /* ===== 종목 검색 (구글 스타일) ===== */
-.stock-search{position:relative;max-width:620px;margin:0 auto 28px}
+.stock-search{display:flex;gap:10px;max-width:720px;margin:0 auto 28px;align-items:stretch}
+.stock-search .s-input{position:relative;flex:1;min-width:0}
 .stock-search input{
-  width:100%;height:46px;box-sizing:border-box;
-  padding:0 44px 0 44px;
-  font-family:inherit;font-size:15px;color:#191f28;letter-spacing:-0.01em;
-  background:#fff;border:1px solid #e5e8eb;border-radius:24px;
-  box-shadow:0 1px 4px rgba(25,31,40,.04);
+  width:100%;height:50px;box-sizing:border-box;display:block;
+  padding:0 44px 0 46px;
+  font-family:inherit;font-size:15.5px;color:#191f28;letter-spacing:-0.01em;
+  background:#fff;border:1px solid #e5e8eb;border-radius:999px;
+  box-shadow:0 1px 4px rgba(25,31,40,.05);
   transition:box-shadow .18s ease,border-color .18s ease;
-  -webkit-appearance:none;
+  -webkit-appearance:none;outline:none;
 }
 .stock-search input::-webkit-search-decoration,
 .stock-search input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
 .stock-search input::placeholder{color:#9aa2ac;font-weight:400}
-.stock-search input:hover{box-shadow:0 2px 8px rgba(25,31,40,.07);border-color:#dcdfe3}
-.stock-search input:focus{outline:none;border-color:#d1d6db;box-shadow:0 2px 10px rgba(25,31,40,.08)}
+.stock-search input:hover{box-shadow:0 2px 10px rgba(25,31,40,.08);border-color:#dcdfe3}
+.stock-search input:focus{border-color:#d1d6db;box-shadow:0 4px 14px rgba(25,31,40,.10)}
 .stock-search .s-icon{
-  position:absolute;left:16px;top:50%;transform:translateY(-50%);
-  width:15px;height:15px;color:#9aa2ac;pointer-events:none;
+  position:absolute;left:18px;top:50%;transform:translateY(-50%);
+  width:16px;height:16px;color:#9aa2ac;pointer-events:none;flex:none;
 }
 .stock-search .s-clear{
-  position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
   width:22px;height:22px;border:0;background:transparent;cursor:pointer;padding:0;
   color:#9aa2ac;border-radius:50%;display:none;align-items:center;justify-content:center;
   font-size:12px;line-height:1;transition:background .15s ease,color .15s ease;
 }
 .stock-search .s-clear:hover{background:#f2f4f6;color:#4e5968}
 .stock-search.has-text .s-clear{display:inline-flex}
-.stock-search button[type="submit"]{
-  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-  clip:rect(0,0,0,0);border:0;
+.stock-search .s-submit{
+  flex:none;height:50px;padding:0 22px;
+  background:#3182F6;color:#fff;border:0;border-radius:999px;
+  font-family:inherit;font-size:14.5px;font-weight:700;letter-spacing:-0.01em;
+  cursor:pointer;transition:background .15s ease,box-shadow .15s ease;
+  box-shadow:0 2px 8px rgba(49,130,246,.22);
+}
+.stock-search .s-submit:hover{background:#1B64DA;box-shadow:0 4px 12px rgba(49,130,246,.32)}
+@media(max-width:520px){
+  .stock-search{gap:8px}
+  .stock-search input{height:46px;font-size:15px;padding-left:42px;padding-right:40px}
+  .stock-search .s-icon{left:16px;width:15px;height:15px}
+  .stock-search .s-submit{height:46px;padding:0 16px;font-size:14px}
 }
 .stock-empty{
   padding:36px 20px;text-align:center;color:#8b95a1;font-size:14px;

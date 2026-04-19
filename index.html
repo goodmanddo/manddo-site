@@ -43,10 +43,12 @@
 
   <section class="cat-section">
     <form class="stock-search" id="home-search" action="/stock/" method="get" role="search">
-      <svg class="s-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="search" name="q" placeholder="종목명 또는 코드 검색 (예: 삼성SDI, 006400)" aria-label="종목 검색" autocomplete="off">
-      <button type="button" class="s-clear" aria-label="지우기">✕</button>
-      <button type="submit" aria-label="검색">검색</button>
+      <div class="s-input">
+        <svg class="s-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" name="q" placeholder="종목명 또는 코드 검색 (예: 삼성SDI, 006400)" aria-label="종목 검색" autocomplete="off">
+        <button type="button" class="s-clear" aria-label="지우기">✕</button>
+      </div>
+      <button type="submit" class="s-submit">검색</button>
     </form>
     <div class="cat-head">
       <h2>📊 주식 차트분석 리포트</h2>
