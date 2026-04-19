@@ -17,11 +17,11 @@ declare -a MAP=(
   "tym_analysis.html|tym.html"
 )
 
-TOPBAR='<div class="manddo-topbar"><a href="/" class="manddo-logo">맨또<span>.kr</span></a><a href="/stock/" class="manddo-back">← 주식 분석 목록</a></div>'
+TOPBAR='<div class="manddo-topbar"><a href="/" class="manddo-logo">만또<span>.kr</span></a><a href="/stock/" class="manddo-back">← 주식 분석 목록</a></div>'
 
 DISCLAIMER='<div class="manddo-disclaimer"><b>⚠ 투자 유의사항</b><br>본 분석은 공개 정보 기반의 참고용 자료이며, 특정 종목의 매수·매도 권유가 아닙니다. 분석 시점 이후 시장 상황은 변할 수 있으며, 모든 투자 판단과 그 결과는 투자자 본인의 책임입니다.</div>'
 
-FOOTER='<div class="manddo-footer"><a href="/">홈</a>·<a href="/stock/">주식 분석</a>·<a href="/about.html">소개</a>·<a href="/privacy.html">개인정보</a>·<a href="/terms.html">약관</a>·<a href="/contact.html">문의</a><br>© 2026 맨또 (manddo.kr)</div>'
+FOOTER='<div class="manddo-footer"><a href="/">홈</a>·<a href="/stock/">주식 분석</a>·<a href="/about.html">소개</a>·<a href="/privacy.html">개인정보</a>·<a href="/terms.html">약관</a>·<a href="/contact.html">문의</a><br>© 2026 만또 (manddo.kr)</div>'
 
 CSS_LINK='<link rel="stylesheet" href="/css/page-nav.css">'
 
