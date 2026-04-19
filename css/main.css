@@ -137,10 +137,15 @@ body{
   overflow:hidden;clip:rect(0,0,0,0);border:0;
 }
 @media(max-width:640px){
-  .stock-search{padding:0 10px;margin-bottom:32px}
-  .stock-search input{height:62px;font-size:17px;padding:0 54px 0 56px;border-radius:999px}
-  .stock-search .s-icon{left:22px;width:18px;height:18px}
-  .stock-search .s-clear{right:16px;width:28px;height:28px;font-size:13px}
+  .stock-search{
+    width:auto;
+    margin-left:-16px;margin-right:-16px;
+    padding:0 12px;
+    margin-bottom:24px;
+  }
+  .stock-search input{height:56px;font-size:16px;padding:0 50px 0 50px;border-radius:999px}
+  .stock-search .s-icon{left:18px;width:18px;height:18px}
+  .stock-search .s-clear{right:14px;width:28px;height:28px;font-size:13px}
 }
 .stock-empty{
   padding:36px 20px;text-align:center;color:#8b95a1;font-size:14px;
