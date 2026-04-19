@@ -1,12 +1,117 @@
 {
-  "date": "2026-04-19",
-  "start_date": "2026-04-19",
-  "cumulative_return": 0.0,
+  "date": "2026-04-20",
+  "start_date": "2026-04-17",
+  "cumulative_return": 11.79,
   "week_return": 0.0,
   "win_rate": 0,
   "total_trades": 0,
-  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 +0.0%.",
-  "new_buys": [],
+  "ai_commentary": "오늘은 현대차, SK가스, NAVER 등 신규 편입. 시작 이후 누적 +11.8%.",
+  "new_buys": [
+    {
+      "name": "현대차",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.19,
+      "weight_pct": 5,
+      "reason": "현대차 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "SK가스",
+      "slug": "",
+      "market": "코스닥",
+      "entry_to_current_pct": -1.02,
+      "weight_pct": 1,
+      "reason": "SK가스 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "NAVER",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 2.85,
+      "weight_pct": 9,
+      "reason": "NAVER 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "카카오",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -1.19,
+      "weight_pct": 7,
+      "reason": "카카오 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "LG화학",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.42,
+      "weight_pct": 6,
+      "reason": "LG화학 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "안랩",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 4.31,
+      "weight_pct": 11,
+      "reason": "안랩 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "현대로템",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 2.13,
+      "weight_pct": 5,
+      "reason": "현대로템 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "매커스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -2.23,
+      "weight_pct": 4,
+      "reason": "매커스 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "노바렉스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 1.65,
+      "weight_pct": 1,
+      "reason": "노바렉스 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "크래프톤",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 4,
+      "reason": "크래프톤 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "AP시스템",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 1.13,
+      "weight_pct": 5,
+      "reason": "AP시스템 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "LG에너지솔루션",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.6,
+      "weight_pct": 7,
+      "reason": "LG에너지솔루션 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "GS피앤엘",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.72,
+      "weight_pct": 5,
+      "reason": "GS피앤엘 신규 편입. 포트폴리오 비중 조정."
+    }
+  ],
   "exits": [],
   "weekly_losses": []
 }
