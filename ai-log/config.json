@@ -1,0 +1,28 @@
+{
+  "start_date": "2026-04-19",
+  "initial_capital": 0,
+  "slug_map": {
+    "삼성SDI": "samsung-sdi",
+    "006400": "samsung-sdi",
+    "알테오젠": "alteogen",
+    "196170": "alteogen",
+    "엔씨소프트": "ncsoft",
+    "036570": "ncsoft",
+    "아난티": "ananti",
+    "025980": "ananti",
+    "한화솔루션": "hanwha-solutions",
+    "009830": "hanwha-solutions",
+    "OCI홀딩스": "oci-holdings",
+    "010060": "oci-holdings",
+    "SDN": "sdn",
+    "099220": "sdn",
+    "TYM": "tym",
+    "002900": "tym"
+  },
+  "overrides": {
+    "_example": {
+      "reasons": { "삼성SDI": "ESS 반등 + 전고체 2027 양산 스토리" },
+      "commentary": "이번 주는 반도체·바이오 섹터가 강세였지만..."
+    }
+  }
+}

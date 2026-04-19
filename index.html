@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>만또 인사이트 — 오늘 AI는 뭘 샀을까? | AI 매매 로그 · 주식 분석</title>
-<meta name="description" content="오늘 AI가 매수·매도한 종목을 매일 기록합니다. 주식 세력 분석, 연봉 실수령액 계산기, 투자 성향 테스트까지 — 무료로 한 곳에서.">
-<meta name="keywords" content="AI주식, AI매매, 오늘의AI선택, 주식분석, 세력분석, 연봉계산기, 투자성향테스트, 만또인사이트">
-<meta property="og:title" content="만또 인사이트 — 오늘 AI는 뭘 샀을까?">
-<meta property="og:description" content="오늘 AI가 매수·매도한 종목을 매일 기록합니다. 주식 분석, 계산기, 심리 테스트까지.">
+<title>만또 인사이트 — 읽고, 계산하고, 놀고 | 주식 분석 · 계산기 · 테스트</title>
+<meta name="description" content="읽고, 계산하고, 놀고 — 만또 인사이트. 오늘 AI의 매매, 주식 차트분석, 실용 계산기, 가벼운 심리 테스트까지. 숫자 너머의 인사이트를 무료로.">
+<meta name="keywords" content="만또인사이트, 주식분석, 차트분석, AI매매, 연봉계산기, 머니툴, 심리테스트, 마인드랩">
+<meta property="og:title" content="만또 인사이트 — 읽고, 계산하고, 놀고">
+<meta property="og:description" content="오늘 AI의 매매, 주식 차트분석, 실용 계산기, 심리 테스트까지. 숫자 너머의 인사이트를 무료로.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://manddo.kr/">
 <meta property="og:locale" content="ko_KR">
@@ -22,7 +22,7 @@
     <nav class="nav">
       <a href="/" class="active">홈</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
-      <a href="/stock/">스톡 리서치</a>
+      <a href="/stock/">차트분석 리포트</a>
       <a href="/tools/">머니 툴</a>
       <a href="/mind/">마인드 랩</a>
       <a href="/about.html">소개</a>
@@ -33,10 +33,10 @@
 <main class="page">
 
   <section class="hero">
-    <h1>🤖 오늘 AI는 뭘 샀을까?</h1>
-    <p>매일 업데이트되는 AI의 매매 일지 — 승률, 손실, 판단 근거까지 전부 공개합니다</p>
+    <h1>만또 인사이트</h1>
+    <p>읽고, 계산하고, 놀고 — 숫자 너머의 인사이트를 무료로</p>
     <div class="hero-cta">
-      <a href="/ai-log/" class="hero-btn primary">오늘의 매매 보기 →</a>
+      <a href="/ai-log/" class="hero-btn primary">오늘 AI의 매매 보기 →</a>
       <a href="/stock/" class="hero-btn ghost">종목 리포트 전체</a>
     </div>
   </section>
@@ -58,11 +58,15 @@
   </section>
 
   <section class="cat-section">
+    <form class="stock-search" action="/stock/" method="get" role="search">
+      <input type="search" name="q" placeholder="종목명 또는 코드 검색 (예: 삼성SDI, 006400)" aria-label="종목 검색" autocomplete="off">
+      <button type="submit" aria-label="검색">🔍</button>
+    </form>
     <div class="cat-head">
-      <h2>📊 스톡 리서치</h2>
+      <h2>📊 주식 차트분석 리포트</h2>
       <a href="/stock/" class="more">전체 보기 →</a>
     </div>
-    <p class="cat-desc">코스피·코스닥 종목의 세력 흐름, 차트 구조, 수급 상황을 한 장에 정리한 주식 분석 리포트입니다.</p>
+    <p class="cat-desc">코스피·코스닥 종목의 세력 흐름, 차트 구조, 수급 상황을 한 장에 정리한 차트분석 리포트입니다.</p>
     <div class="grid">
       <a href="/stock/samsung-sdi.html" class="card">
         <div class="cat">STOCK · 코스피</div>
@@ -71,47 +75,23 @@
         <div class="desc">2025 창사 최악 실적 바닥 확인. ESS 반등 + 전고체 2027 양산 스토리.</div>
         <div class="tags"><span class="tag">#배터리</span><span class="tag">#ESS</span><span class="tag">#전고체</span></div>
       </a>
-      <a href="/stock/alteogen.html" class="card">
-        <div class="cat">STOCK · 코스닥</div>
-        <div class="title">알테오젠</div>
-        <div class="desc">바이오 대장주. 기술수출 로열티 구조 및 차트 분석.</div>
-        <div class="tags"><span class="tag">#바이오</span><span class="tag">#기술수출</span></div>
-      </a>
       <a href="/stock/ncsoft.html" class="card">
         <div class="cat">STOCK · 코스피</div>
         <div class="title">엔씨소프트</div>
         <div class="desc">게임 대장주의 반등 시나리오와 리스크 요인 분석.</div>
         <div class="tags"><span class="tag">#게임</span><span class="tag">#반등</span></div>
       </a>
+      <a href="/stock/alteogen.html" class="card">
+        <div class="cat">STOCK · 코스닥</div>
+        <div class="title">알테오젠</div>
+        <div class="desc">바이오 대장주. 기술수출 로열티 구조 및 차트 분석.</div>
+        <div class="tags"><span class="tag">#바이오</span><span class="tag">#기술수출</span></div>
+      </a>
       <a href="/stock/ananti.html" class="card">
         <div class="cat">STOCK · 코스닥</div>
         <div class="title">아난티</div>
         <div class="desc">레저·리조트 테마주의 세력 움직임과 매물대 분석.</div>
         <div class="tags"><span class="tag">#레저</span><span class="tag">#리조트</span></div>
-      </a>
-      <a href="/stock/hanwha-solutions.html" class="card">
-        <div class="cat">STOCK · 코스피</div>
-        <div class="title">한화솔루션</div>
-        <div class="desc">태양광·석유화학 사업 구조 및 차트 포지션 분석.</div>
-        <div class="tags"><span class="tag">#태양광</span><span class="tag">#석유화학</span></div>
-      </a>
-      <a href="/stock/oci-holdings.html" class="card">
-        <div class="cat">STOCK · 코스피</div>
-        <div class="title">OCI홀딩스</div>
-        <div class="desc">폴리실리콘·태양광 밸류체인의 수급 분석.</div>
-        <div class="tags"><span class="tag">#폴리실리콘</span><span class="tag">#지주사</span></div>
-      </a>
-      <a href="/stock/sdn.html" class="card">
-        <div class="cat">STOCK · 코스닥</div>
-        <div class="title">SDN</div>
-        <div class="desc">중소형 성장주 차트 구조 및 매물대 분석.</div>
-        <div class="tags"><span class="tag">#코스닥</span></div>
-      </a>
-      <a href="/stock/tym.html" class="card">
-        <div class="cat">STOCK · 코스피</div>
-        <div class="title">TYM</div>
-        <div class="desc">농기계 업체의 실적 구조와 차트 포지션 분석.</div>
-        <div class="tags"><span class="tag">#농기계</span></div>
       </a>
     </div>
   </section>
