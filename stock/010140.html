@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>삼성중공업 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>삼성중공업 (010140) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 대형주 | 글로벌 조선 수주 호황 + 방산 수출 확대</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 삼성중공업 = "조선 슈퍼사이클 + 방산 수출 + 해양플랜트 3중 모멘텀"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 상승 동력</b><br>① <b>LNG선 수주 세계 1위</b><br>② <b>방산 수출 확대</b> (폴란드 등)<br>③ <b>해양플랜트 턴어라운드</b><br>④ 수주잔고 <b>24조</b> 역대급
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#633806">
+      <b>⚠ 현재 상황</b><br>23,000 저점 → 32,500 고점(+41%) → 조정 후 29,050. <b>52주 위치 67%</b> 중립권. 변동성 크고 박스권 등락. 조정 시 분할 매수 적합.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가 (4월 17일)</div><div class="mv" style="color:#1D9E75">29,050<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일비 +1.22%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">23,000~<br>32,000원</div><div class="ms">저점 대비 +26%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">67%</div><div class="ms">중립~고점 진입</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 위치 67% — 저점 23,000 대비 +26%. 고점 32,000 대비 -9%. 중립~고점 진입 구간</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 55%,#F09595 82%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:67%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-45%)">▲ 29,050</div></div>
+    <div style="position:absolute;left:97%;top:-4px;width:3px;height:30px;background:#E24B4A;border-radius:2px;opacity:.6"><div style="position:absolute;top:31px;font-size:9px;color:#A32D2D;white-space:nowrap;transform:translateX(-70%)">고점 32,000</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 23,000</span><span>중간 27,500</span><span>고점 32,000</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 글로벌 조선 수주 호황(LNG선·컨테이너선) + 방산 수출 확대(폴란드 K-방산) + 해양플랜트 턴어라운드. 3월 23,000 저점 → 급반등 → 현재 28,000~29,000 박스권. <b>변동성 크지만 장기 업사이클 진행 중.</b>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">LNG선 세계 1위</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">방산 수출 확대</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">수주잔고 24조</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">해양플랜트 회복</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">변동성 큼</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "23,000 저점 → 32,500 급등 → 조정 → 28,000~29,000 박스권"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>3월 초 23,000원 = 조정 저점 + 수급 흡수 완료.</b> 1~2월 30,000원대 고점에서 차익실현 물량 소화. 조선 수주 호황은 변함없어 빠르게 반등. 단기 과열 진정 후 재상승 준비 구간.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>수주잔고 24조 + 방산 수출이 급등 트리거.</b> 3월 중순 30,850까지 급반등(+34%). 폴란드 K-방산 수출 + LNG선 추가 수주 기대감. 대형 양봉과 거래량 급증 동반.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>현재 <b>28,000~29,000원 박스권 등락</b>. 고점(32,000) 돌파 시도했으나 실패. 단기 과열 구간에서 차익실현 출회. 박스권 상단 돌파에는 추가 수주 발표 필요.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>이평선 정배열 유지 + 20일선(27,125) 지지.</b> 60일선(28,249) 근처. 조정 시 25,000~27,000이 매수 적기. 장기 업사이클 초입 — 조정은 기회.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">23,000 저점 → 급등 → 고점 도전 → 박스권 등락 (현재 29,050)</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="90" height="200" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <rect x="140" y="10" width="95" height="200" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <rect x="245" y="10" width="80" height="200" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <rect x="335" y="10" width="75" height="200" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <rect x="420" y="10" width="250" height="200" rx="4" fill="#FAEEDA" opacity=".15"/>
+    <text x="85" y="22" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">① 1월 고점권</text>
+    <text x="187" y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">② 조정</text>
+    <text x="285" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">③ 급반등</text>
+    <text x="372" y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">④ 재조정</text>
+    <text x="545" y="22" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">⑤ 박스권 (현재)</text>
+    <!-- 1월 고점권 -->
+    <line x1="52" y1="52" x2="52" y2="68" stroke="#1D9E75" stroke-width="2"/><rect x="46" y="54" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="68" y1="50" x2="68" y2="66" stroke="#E24B4A" stroke-width="2"/><rect x="62" y="52" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="84" y1="48" x2="84" y2="64" stroke="#1D9E75" stroke-width="2"/><rect x="78" y="50" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="100" y1="46" x2="100" y2="62" stroke="#E24B4A" stroke-width="2"/><rect x="94" y="48" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="116" y1="44" x2="116" y2="60" stroke="#1D9E75" stroke-width="2"/><rect x="110" y="46" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <!-- 조정 -->
+    <line x1="148" y1="88" x2="148" y2="104" stroke="#E24B4A" stroke-width="2.5"/><rect x="142" y="90" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <text x="140" y="115" font-size="8" fill="#A32D2D">2월 하락</text>
+    <line x1="164" y1="94" x2="164" y2="110" stroke="#E24B4A" stroke-width="2"/><rect x="158" y="96" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="180" y1="98" x2="180" y2="114" stroke="#1D9E75" stroke-width="2"/><rect x="174" y="100" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="196" y1="102" x2="196" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="190" y="104" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="212" y1="132" x2="212" y2="152" stroke="#E24B4A" stroke-width="3"/><rect x="206" y="134" width="10" height="16" fill="#E24B4A" rx="1"/>
+    <circle cx="220" cy="160" r="4" fill="#E24B4A"/>
+    <text x="213" y="175" text-anchor="middle" font-size="8" fill="#A32D2D">23,000 저점</text>
+    <!-- 급반등 -->
+    <line x1="253" y1="104" x2="253" y2="132" stroke="#1D9E75" stroke-width="2.5"/><rect x="247" y="106" width="10" height="22" fill="#1D9E75" rx="1"/>
+    <text x="245" y="98" font-size="8" fill="#27500A">수주 기대</text>
+    <line x1="269" y1="78" x2="269" y2="104" stroke="#1D9E75" stroke-width="3"/><rect x="263" y="80" width="10" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="285" y1="52" x2="285" y2="78" stroke="#1D9E75" stroke-width="3"/><rect x="279" y="54" width="10" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="301" y1="38" x2="301" y2="58" stroke="#1D9E75" stroke-width="3"/><rect x="295" y="40" width="10" height="15" fill="#EF9F27" rx="1"/>
+    <circle cx="307" cy="36" r="5" fill="#EF9F27"/>
+    <text x="307" y="29" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">30,850</text>
+    <line x1="317" y1="42" x2="317" y2="60" stroke="#E24B4A" stroke-width="2"/><rect x="311" y="44" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <!-- 재조정 -->
+    <line x1="343" y1="48" x2="343" y2="66" stroke="#E24B4A" stroke-width="2"/><rect x="337" y="50" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="359" y1="52" x2="359" y2="70" stroke="#E24B4A" stroke-width="2"/><rect x="353" y="54" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="375" y1="56" x2="375" y2="74" stroke="#E24B4A" stroke-width="2.5"/><rect x="369" y="58" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="391" y1="122" x2="391" y2="144" stroke="#E24B4A" stroke-width="3"/><rect x="385" y="124" width="10" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="407" y1="118" x2="407" y2="138" stroke="#E24B4A" stroke-width="2.5"/><rect x="401" y="120" width="10" height="16" fill="#E24B4A" rx="1"/>
+    <!-- 박스권 현재 -->
+    <line x1="432" y1="94" x2="432" y2="112" stroke="#1D9E75" stroke-width="2.5"/><rect x="426" y="96" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="450" y1="90" x2="450" y2="108" stroke="#E24B4A" stroke-width="2"/><rect x="444" y="92" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="468" y1="82" x2="468" y2="100" stroke="#1D9E75" stroke-width="2.5"/><rect x="462" y="84" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="486" y1="88" x2="486" y2="106" stroke="#E24B4A" stroke-width="2"/><rect x="480" y="90" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="504" y1="84" x2="504" y2="102" stroke="#1D9E75" stroke-width="2"/><rect x="498" y="86" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="522" y1="92" x2="522" y2="110" stroke="#E24B4A" stroke-width="2"/><rect x="516" y="94" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="540" y1="88" x2="540" y2="106" stroke="#1D9E75" stroke-width="2"/><rect x="534" y="90" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="558" y1="86" x2="558" y2="104" stroke="#E24B4A" stroke-width="2"/><rect x="552" y="88" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="576" y1="84" x2="576" y2="102" stroke="#1D9E75" stroke-width="2"/><rect x="570" y="86" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="594" y1="82" x2="594" y2="100" stroke="#1D9E75" stroke-width="2"/><rect x="588" y="84" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <path d="M622 78 Q642 56 658 38" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a1)"/>
+    <text x="638" y="35" font-size="8" fill="#1D9E75">추가 수주</text>
+    <text x="638" y="47" font-size="8" fill="#1D9E75">→ 35,000+</text>
+    <!-- 수평선 -->
+    <line x1="40" y1="36" x2="640" y2="36" stroke="#E24B4A" stroke-width="0.8" stroke-dasharray="4 4" opacity=".35"/>
+    <text x="42" y="33" font-size="9" fill="#EF9F27" font-weight="600">고점 32,000</text>
+    <line x1="40" y1="88" x2="640" y2="88" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="85" font-size="9" fill="#26215C" font-weight="600">현재 29,050</text>
+    <rect x="40" y="102" width="600" height="38" rx="3" fill="#9FE1CB" opacity=".12"/>
+    <text x="340" y="124" text-anchor="middle" font-size="9" fill="#085041" font-weight="600">★ 매수 구간 25,000~27,000 (조정 시) / 핵심 23,000~25,000 (급락 시)</text>
+    <line x1="40" y1="213" x2="640" y2="213" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 1~2월 30,000 고점 → 3월 23,000 조정 → 급반등 → 현재 28,000~29,000 박스권</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "2025 저점권 → 조선 사이클 급등(+100%) → 변동성 확대"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2025년 상반기 14,000~18,000 = <b>조선업 턴어라운드 저점</b>. 중국 조선소 경쟁 우려 + 실적 개선 기대감 엇갈림. 볼린저밴드 하단에서 횡보.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>2025년 10월 <b>급등 시작 → 32,500 돌파(+100%)</b>. LNG선 수주 폭증 + K-방산 수출 확대 + 해양플랜트 회복. 글로벌 조선 슈퍼사이클 본격 진입. 외국인·기관 동시 매집.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>현재 <b>23,000~32,000 넓은 밴드에서 등락</b>. 단기 과열 → 조정 → 재상승 반복. 변동성 크지만 상승 추세 유지. 주봉 20주선(~26,000) 지지 중요.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>수주잔고 24조가 장기 상승 근거.</b> 2~3년 매출 확보. 주봉 이평선 정배열. 조정은 분할 매수 기회. 목표가 35,000~40,000원.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">2025 저점권(14,000~) → 조선 사이클 급등(+100%) → 23,000~32,000 변동성 확대</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="210" height="175" rx="4" fill="#E6F1FB" opacity=".1"/>
+    <text x="145" y="22" text-anchor="middle" font-size="8" fill="#0C447C">2025 저점권 횡보</text>
+    <rect x="260" y="10" width="100" height="175" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="310" y="22" text-anchor="middle" font-size="8" fill="#27500A">급등 (+100%)</text>
+    <rect x="370" y="10" width="310" height="175" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="525" y="22" text-anchor="middle" font-size="8" fill="#633806">변동성 확대 (현재)</text>
+    <!-- 저점권 횡보 -->
+    <line x1="55" y1="118" x2="55" y2="134" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="120" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="114" x2="75" y2="130" stroke="#1D9E75" stroke-width="2"/><rect x="69" y="116" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="110" x2="95" y2="126" stroke="#E24B4A" stroke-width="2"/><rect x="89" y="112" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="106" x2="115" y2="122" stroke="#1D9E75" stroke-width="2"/><rect x="109" y="108" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="135" y1="102" x2="135" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="129" y="104" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="155" y1="98" x2="155" y2="114" stroke="#E24B4A" stroke-width="2"/><rect x="149" y="100" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="94" x2="175" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="169" y="96" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="195" y1="90" x2="195" y2="106" stroke="#1D9E75" stroke-width="2"/><rect x="189" y="92" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="86" x2="215" y2="102" stroke="#E24B4A" stroke-width="2"/><rect x="209" y="88" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="235" y1="82" x2="235" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="229" y="84" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <!-- 급등 구간 -->
+    <line x1="268" y1="68" x2="268" y2="90" stroke="#1D9E75" stroke-width="3"/><rect x="262" y="70" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <text x="260" y="63" font-size="8" fill="#27500A">LNG 수주</text>
+    <line x1="288" y1="48" x2="288" y2="68" stroke="#1D9E75" stroke-width="3.5"/><rect x="282" y="50" width="12" height="14" fill="#EF9F27" rx="1"/>
+    <line x1="308" y1="32" x2="308" y2="48" stroke="#1D9E75" stroke-width="4"/><rect x="302" y="34" width="12" height="10" fill="#EF9F27" rx="1"/>
+    <circle cx="314" cy="30" r="6" fill="#EF9F27"/>
+    <text x="314" y="23" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">32,500!</text>
+    <line x1="328" y1="42" x2="328" y2="58" stroke="#E24B4A" stroke-width="2.5"/><rect x="322" y="44" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="348" y1="48" x2="348" y2="64" stroke="#E24B4A" stroke-width="2.5"/><rect x="342" y="50" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <!-- 변동성 확대 -->
+    <line x1="378" y1="36" x2="378" y2="52" stroke="#1D9E75" stroke-width="2.5"/><rect x="372" y="38" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="398" y1="52" x2="398" y2="72" stroke="#E24B4A" stroke-width="3"/><rect x="392" y="54" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="418" y1="54" x2="418" y2="72" stroke="#E24B4A" stroke-width="2.5"/><rect x="412" y="56" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="438" y1="102" x2="438" y2="128" stroke="#E24B4A" stroke-width="3.5"/><rect x="432" y="104" width="12" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="458" y1="56" x2="458" y2="102" stroke="#1D9E75" stroke-width="4"/><rect x="452" y="58" width="12" height="38" fill="#1D9E75" rx="1"/>
+    <text x="450" y="50" font-size="8" fill="#27500A">급반등</text>
+    <line x1="478" y1="38" x2="478" y2="58" stroke="#1D9E75" stroke-width="3"/><rect x="472" y="40" width="12" height="14" fill="#EF9F27" rx="1"/>
+    <line x1="498" y1="44" x2="498" y2="62" stroke="#E24B4A" stroke-width="2.5"/><rect x="492" y="46" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="518" y1="48" x2="518" y2="66" stroke="#E24B4A" stroke-width="2.5"/><rect x="512" y="50" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="538" y1="90" x2="538" y2="112" stroke="#E24B4A" stroke-width="3"/><rect x="532" y="92" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="558" y1="64" x2="558" y2="90" stroke="#1D9E75" stroke-width="3"/><rect x="552" y="66" width="12" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="578" y1="58" x2="578" y2="76" stroke="#1D9E75" stroke-width="2.5"/><rect x="572" y="60" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="598" y1="56" x2="598" y2="74" stroke="#1D9E75" stroke-width="2.5"/><rect x="592" y="58" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <path d="M622 54 Q642 38 658 24" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+    <text x="643" y="21" font-size="8" fill="#1D9E75">수주 → 35,000+</text>
+    <!-- 이평선 -->
+    <path d="M45 128 Q120 115 200 96 Q270 78 315 35 Q360 50 420 88 Q480 62 540 78 Q590 65 645 62" fill="none" stroke="#1D9E75" stroke-width="1.8"/>
+    <path d="M45 134 Q140 120 220 102 Q280 84 328 48 Q375 62 432 94 Q490 70 558 82 Q608 70 647 68" fill="none" stroke="#EF9F27" stroke-width="1.3"/>
+    <text x="637" y="60" font-size="8" fill="#1D9E75">─5주</text>
+    <text x="637" y="70" font-size="8" fill="#EF9F27">─20주</text>
+    <line x1="40" y1="60" x2="608" y2="60" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="57" font-size="9" fill="#26215C" font-weight="600">현재 29,050</text>
+    <line x1="40" y1="183" x2="640" y2="183" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025 저점권 → 조선 사이클 급등(+100%) → 23,000~32,000 변동성 확대 → 상승 추세 유지</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2024 바닥권 → 조선 업사이클 본격화 → 장기 상승 초입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2024년 7,000~11,000 = <b>조선업 장기 침체 마지막 구간</b>. 중국 조선소 저가 수주 + 해양플랜트 적자. 코로나 이후 수주 절벽. 월봉 하단 장기 횡보.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>2025년 <b>글로벌 조선 수주 폭증 시작</b>. 노후 선박 교체 + LNG 수요 증가 + 친환경 선박 전환. 중국 vs 한국 기술력 차별화. 삼성중공업 LNG선 세계 1위 입지 강화.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2025년 10월 29,550 급등</b>. K-방산 수출(폴란드·루마니아) + 해양플랜트 턴어라운드. 수주잔고 24조 = 2~3년 매출 가시성. 월봉 이평선 정배열 전환.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 <b>장기 업사이클 초입</b>. 역대 고점 32,500 vs 현재 29,050. 조선 사이클은 3~5년 지속. 목표가 40,000~50,000원 (장기). 월봉 조정은 매수 기회.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">2024 바닥권(7,000~) → 조선 업사이클 본격화 → 장기 상승 초입 (현재 29,050)</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="160" height="180" rx="4" fill="#E6F1FB" opacity=".1"/>
+    <text x="120" y="22" text-anchor="middle" font-size="8" fill="#0C447C">2024 바닥권</text>
+    <rect x="210" y="10" width="180" height="180" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="300" y="22" text-anchor="middle" font-size="8" fill="#27500A">2025 점진 상승</text>
+    <rect x="400" y="10" width="280" height="180" rx="4" fill="#FAEEDA" opacity=".15"/>
+    <text x="540" y="22" text-anchor="middle" font-size="8" fill="#633806">2026 변동성 확대 (현재)</text>
+    <!-- 2024 바닥권 -->
+    <line x1="55" y1="140" x2="55" y2="156" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="142" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="77" y1="136" x2="77" y2="152" stroke="#1D9E75" stroke-width="2"/><rect x="71" y="138" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="99" y1="130" x2="99" y2="146" stroke="#1D9E75" stroke-width="2"/><rect x="93" y="132" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="121" y1="124" x2="121" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="115" y="126" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="143" y1="118" x2="143" y2="134" stroke="#E24B4A" stroke-width="2"/><rect x="137" y="120" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="165" y1="114" x2="165" y2="130" stroke="#1D9E75" stroke-width="2"/><rect x="159" y="116" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="187" y1="110" x2="187" y2="126" stroke="#E24B4A" stroke-width="2"/><rect x="181" y="112" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <!-- 2025 점진 상승 -->
+    <line x1="218" y1="106" x2="218" y2="122" stroke="#1D9E75" stroke-width="2"/><rect x="212" y="108" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="240" y1="102" x2="240" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="234" y="104" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="262" y1="98" x2="262" y2="114" stroke="#1D9E75" stroke-width="2"/><rect x="256" y="100" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="284" y1="92" x2="284" y2="108" stroke="#1D9E75" stroke-width="2"/><rect x="278" y="94" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="306" y1="86" x2="306" y2="102" stroke="#1D9E75" stroke-width="2"/><rect x="300" y="88" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="328" y1="78" x2="328" y2="94" stroke="#1D9E75" stroke-width="2.5"/><rect x="322" y="80" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="350" y1="70" x2="350" y2="86" stroke="#1D9E75" stroke-width="2.5"/><rect x="344" y="72" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="372" y1="58" x2="372" y2="76" stroke="#1D9E75" stroke-width="3"/><rect x="366" y="60" width="12" height="14" fill="#EF9F27" rx="1"/>
+    <text x="364" y="52" font-size="8" fill="#27500A">조선 사이클</text>
+    <!-- 2026 변동성 -->
+    <line x1="408" y1="46" x2="408" y2="62" stroke="#1D9E75" stroke-width="3"/><rect x="402" y="48" width="12" height="10" fill="#EF9F27" rx="1"/>
+    <circle cx="414" cy="44" r="6" fill="#EF9F27"/>
+    <text x="414" y="36" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">29,550</text>
+    <line x1="434" y1="66" x2="434" y2="82" stroke="#E24B4A" stroke-width="2.5"/><rect x="428" y="68" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="460" y1="70" x2="460" y2="86" stroke="#E24B4A" stroke-width="2.5"/><rect x="454" y="72" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="486" y1="62" x2="486" y2="78" stroke="#1D9E75" stroke-width="2.5"/><rect x="480" y="64" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="512" y1="128" x2="512" y2="148" stroke="#E24B4A" stroke-width="3"/><rect x="506" y="130" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <text x="504" y="161" font-size="8" fill="#A32D2D">3월 조정</text>
+    <line x1="538" y1="86" x2="538" y2="128" stroke="#1D9E75" stroke-width="3.5"/><rect x="532" y="88" width="12" height="34" fill="#1D9E75" rx="1"/>
+    <text x="530" y="78" font-size="8" fill="#27500A">4월 반등</text>
+    <line x1="564" y1="68" x2="564" y2="86" stroke="#1D9E75" stroke-width="2.5"/><rect x="558" y="70" width="12" height="14" fill="#1D9E75" rx="1" opacity=".7"/>
+    <path d="M590 64 Q618 44 640 28" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+    <text x="625" y="25" font-size="8" fill="#1D9E75">수주 호황</text>
+    <text x="625" y="38" font-size="8" fill="#1D9E75">→ 40,000+</text>
+    <line x1="40" y1="70" x2="568" y2="70" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="67" font-size="9" fill="#26215C" font-weight="600">현재 29,050</text>
+    <line x1="40" y1="188" x2="640" y2="188" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024 바닥권(7,000~) → 조선 업사이클 본격화 → 변동성 크지만 장기 상승 추세 (현재 29,050)</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">LNG선 수주 세계 1위 — 글로벌 조선 수주 호황 직접 수혜</span><span class="tag t-navy">기술력 ★★★</span><div style="color:#888;margin-top:2px;font-size:11px">LNG선 세계 시장점유율 1위. 카타르·미국 LNG 수출 증가로 대형 LNG선 수주 지속. 중국 조선소 대비 기술력·안전성 우위. 수주잔고 24조 = 2~3년 매출 가시성 확보.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">K-방산 수출 확대 — 폴란드·루마니아 잠수함·구축함</span><span class="tag t-g">신규 모멘텀 ★★</span><div style="color:#888;margin-top:2px;font-size:11px">폴란드 잠수함 3척 수주(~3조원). 루마니아·필리핀 등 추가 수출 협상 중. 한화오션과 함께 K-방산 양대축. 방산은 고마진 + 장기 계약 — 실적 안정성 기여.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">해양플랜트 턴어라운드 — 2023~2024 적자 탈출</span><span class="tag t-a">구조 개선 △</span><div style="color:#888;margin-top:2px;font-size:11px">과거 해양플랜트 대규모 손실에서 벗어남. 2025년부터 신규 FPSO 수주 재개. 고유가 시대 해양플랜트 수요 회복. 적자 부담 해소 → 실적 개선 기여.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">변동성 큼 — 단기 과열 조정 반복</span><span class="tag t-r">리스크 ✗</span><div style="color:#888;margin-top:2px;font-size:11px">52주 23,000~32,000 = ±40% 변동폭. 수주 발표 시 급등 → 차익실현 급락 반복. 중국 조선소 저가 수주 경쟁. 환율·철강 가격 변동 리스크. 현재가 추격 매수 위험 — 반드시 조정 후 진입.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>LNG선 세계 1위 — 수주잔고 24조 (2~3년 매출)</span><span class="tag t-navy">핵심 ★★★</span></div>
+  <div class="row"><span>K-방산 수출 확대 — 폴란드 3조 + 루마니아 협상 중</span><span class="tag t-g">성장 ★★</span></div>
+  <div class="row"><span>해양플랜트 턴어라운드 — 적자 탈출 완료</span><span class="tag t-g">구조 개선 ✓</span></div>
+  <div class="row"><span>글로벌 조선 슈퍼사이클 — 3~5년 지속 전망</span><span class="tag t-b">섹터 ★★</span></div>
+  <div class="row"><span>저점(23,000) 대비 +26% — 중립 구간</span><span class="tag t-a">적정 △</span></div>
+  <div class="row"><span>변동성 크고 박스권 등락 — ±15% 단기 변동</span><span class="tag t-a">주의 △</span></div>
+  <div class="row"><span>중국 조선소 저가 경쟁 + 환율·철강 가격 리스크</span><span class="tag t-r">경쟁 ✗</span></div>
+  <div class="row"><span>실적 발표 (분기별) + LNG선 수주 발표 (수시)</span><span class="tag t-b">이벤트</span></div>
+  <div class="row"><span>루마니아·필리핀 방산 수주 발표 시 급등 가능</span><span class="tag t-g">단기 트리거</span></div>
+  <div class="row"><span>25,000~27,000 조정 시 = 핵심 매수 구간</span><span class="tag t-navy">전략 ★★★</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:58%;background:#EF9F27"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 58% — 조건부</div>
+    <div style="font-size:11px;color:#5f5e5a">박스권 상단(29,050). 변동성 큼. <b>현재가 추격 위험. 25,000~27,000 조정 시 분할 매수 적합.</b> 수주 발표 시 단기 급등 가능.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (1~3년)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78%</div>
+    <div style="font-size:11px;color:#5f5e5a">조선 업사이클 3~5년 지속. LNG+방산+해양 3중 모멘텀. 수주잔고 24조. 목표 35,000~40,000원. 조정 시 장기 보유 적합.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "변동성 활용 조정 시 분할 매수"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">25,000~<br>27,000</div><div>박스 하단<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">23,000~<br>25,000</div><div>저점 근접<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">35,000~<br>40,000</div><div>수주 호황<br>+20~38%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">21,000원</div><div>저점 이탈<br>즉시 손절</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 삼성중공업 핵심 4포인트:</b><br>
+    ① <b>LNG선 세계 1위 + 수주잔고 24조</b> = 2~3년 매출 가시성 확보<br>
+    ② <b>K-방산 수출 확대</b> = 고마진 신규 모멘텀<br>
+    ③ <b>조선 업사이클 초입</b> = 3~5년 장기 상승 구간<br>
+    ④ <b>변동성 큼</b> — 조정(25,000~27,000) 분할 매수가 핵심 전략</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> <b>변동성 매우 큼</b> — 52주 ±40% 변동. 현재가(29,050) 박스권 상단 = 추격 매수 위험. 반드시 25,000~27,000 조정 시 분할 매수. 중국 조선소 저가 경쟁. 환율·철강 가격 리스크. 수주 지연 시 급락 가능.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+</div>
+</body>
+</html>

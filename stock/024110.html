@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>기업은행 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>기업은행 (024110) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 중형 금융주 | 고점 조정 후 저점권 재진입 + 금리인하 수혜 대기</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 기업은행 = "2월 급등(+48%) → 3월 급락(-28%) → 저점권 안착 + 금리인하 대기"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 현재 리스크</b><br>2월 고점 29,550원 대비 <b>-23.7%</b> 조정. 52주 위치 27.3% 저점권. 단기 모멘텀 소진. 3월 급락 후 횡보. 거래량 감소.
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 반전 카드</b><br>① <b>저점 19,920 근처</b> 강한 지지<br>② <b>금리인하 기대</b> 은행주 밸류 재평가<br>③ <b>중소기업 대출 회복</b> 정책 수혜<br>④ PBR 저평가 + 배당 매력
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가 (4/17)</div><div class="mv" style="color:#E24B4A">22,550<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일비 -1.31%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">19,920~<br>29,550원</div><div class="ms">변동폭 +48.3%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">27%</div><div class="ms">저점권 근처</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 위치 27.3% — 저점 19,920 대비 +13.2%, 고점 29,550 대비 -23.7%. 저점권 안착.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 55%,#F09595 82%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:27%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-45%)">▲ 22,550</div></div>
+    <div style="position:absolute;left:0%;top:-4px;width:3px;height:30px;background:#1D9E75;border-radius:2px;opacity:.6"><div style="position:absolute;top:31px;font-size:9px;color:#085041;white-space:nowrap;transform:translateX(-30%)">저점 19,920</div></div>
+    <div style="position:absolute;left:100%;top:-4px;width:3px;height:30px;background:#E24B4A;border-radius:2px;opacity:.6"><div style="position:absolute;top:31px;font-size:9px;color:#A32D2D;white-space:nowrap;transform:translateX(-90%)">고점 29,550</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 19,920</span><span>중간 24,735</span><span>고점 29,550</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2월 20,750→29,550 급등(+42%) 후 3월 21,350까지 급락(-28%). 현재 22,000~23,000 박스권 횡보. 52주 저점 근처 안착. <b>금리인하 시 은행주 밸류 재평가 트리거.</b>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">52주 위치 27% 저점권</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">저점 19,920 근처</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">2월 급등 +42%</span>
+    <span class="tag t-r" style="font-size:10px;padding:2px 7px">3월 급락 -28%</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">금리인하 대기</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "2월 급등 → 3월 급락 → 22,000~23,000 박스권 횡보"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>1월 20,000~21,000 횡보 → 2월 급등 계단</b>. 1월말 기관 매수 시작. 2월 금리인하 기대감 + 중소기업 정책 모멘텀. 20일간 +42% 상승.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>2월 20일 29,550원 고점 형성 후 즉시 반전</b>. 단기 차익실현 물량 출회. 외국인 일부 매도. 3일간 -8.2% 급락. 고점 대응봉(긴 위꼬리) 출현.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>3월 급락 — 25,000 → 21,350 (-14.6%)</b>. 미국 금리 동결 장기화 우려. 은행주 섹터 전반 조정. 거래량 급증하며 패닉 매도. 3/31 21,350원 단기 저점.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 <b>22,000~23,000원 박스권 횡보</b>. 저점 19,920 근처 지지 확인. 이평선 역배열 지속. 거래량 감소 — 추가 모멘텀 부재. <b>금리 정책 발표 대기.</b></div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">1월 횡보 → 2월 급등(+42%) → 3월 급락(-28%) → 4월 횡보</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="90" height="200" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <rect x="140" y="10" width="140" height="200" rx="4" fill="#EAF3DE" opacity=".2"/>
+    <rect x="290" y="10" width="140" height="200" rx="4" fill="#FCEBEB" opacity=".15"/>
+    <rect x="440" y="10" width="240" height="200" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="85" y="22" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">① 1월 횡보</text>
+    <text x="210" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 2월 급등</text>
+    <text x="360" y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">③ 3월 급락</text>
+    <text x="560" y="22" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">④ 4월 횡보 (현재)</text>
+    <!-- 1월 횡보 -->
+    <line x1="50" y1="125" x2="50" y2="140" stroke="#E24B4A" stroke-width="2"/><rect x="44" y="127" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="64" y1="120" x2="64" y2="135" stroke="#1D9E75" stroke-width="2"/><rect x="58" y="122" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="78" y1="122" x2="78" y2="137" stroke="#E24B4A" stroke-width="2"/><rect x="72" y="124" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="92" y1="120" x2="92" y2="134" stroke="#1D9E75" stroke-width="2"/><rect x="86" y="122" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="106" y1="118" x2="106" y2="132" stroke="#E24B4A" stroke-width="2"/><rect x="100" y="120" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="120" y1="116" x2="120" y2="130" stroke="#1D9E75" stroke-width="2"/><rect x="114" y="118" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <!-- 2월 급등 -->
+    <line x1="148" y1="108" x2="148" y2="128" stroke="#1D9E75" stroke-width="2.5"/><rect x="142" y="92" width="12" height="18" fill="#1D9E75" rx="1"/>
+    <text x="136" y="88" font-size="8" fill="#27500A">기관 매수</text>
+    <line x1="166" y1="88" x2="166" y2="106" stroke="#1D9E75" stroke-width="2.5"/><rect x="160" y="74" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="184" y1="72" x2="184" y2="90" stroke="#1D9E75" stroke-width="2.5"/><rect x="178" y="58" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="202" y1="58" x2="202" y2="76" stroke="#1D9E75" stroke-width="3"/><rect x="196" y="44" width="12" height="16" fill="#EF9F27" rx="1"/>
+    <line x1="220" y1="44" x2="220" y2="62" stroke="#1D9E75" stroke-width="3"/><rect x="214" y="30" width="12" height="16" fill="#EF9F27" rx="1"/>
+    <line x1="238" y1="30" x2="238" y2="48" stroke="#1D9E75" stroke-width="3"/><rect x="232" y="16" width="12" height="16" fill="#EF9F27" rx="1"/>
+    <line x1="238" y1="10" x2="238" y2="16" stroke="#EF9F27" stroke-width="1.5"/>
+    <circle cx="244" cy="8" r="5" fill="#EF9F27"/>
+    <text x="244" y="2" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">29,550</text>
+    <line x1="256" y1="26" x2="256" y2="42" stroke="#E24B4A" stroke-width="2.5"/><rect x="250" y="28" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <text x="248" y="24" font-size="8" fill="#A32D2D">고점 반전</text>
+    <line x1="274" y1="32" x2="274" y2="48" stroke="#E24B4A" stroke-width="2"/><rect x="268" y="34" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <!-- 3월 급락 -->
+    <line x1="298" y1="38" x2="298" y2="54" stroke="#E24B4A" stroke-width="2.5"/><rect x="292" y="40" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="316" y1="44" x2="316" y2="60" stroke="#E24B4A" stroke-width="2.5"/><rect x="310" y="46" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="334" y1="50" x2="334" y2="66" stroke="#1D9E75" stroke-width="2"/><rect x="328" y="52" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="352" y1="55" x2="352" y2="71" stroke="#E24B4A" stroke-width="2.5"/><rect x="346" y="57" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="370" y1="62" x2="370" y2="80" stroke="#E24B4A" stroke-width="3"/><rect x="364" y="64" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <text x="362" y="60" font-size="8" fill="#A32D2D">패닉 매도</text>
+    <line x1="388" y1="70" x2="388" y2="88" stroke="#E24B4A" stroke-width="3"/><rect x="382" y="72" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="406" y1="80" x2="406" y2="98" stroke="#E24B4A" stroke-width="2.5"/><rect x="400" y="82" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="424" y1="92" x2="424" y2="108" stroke="#E24B4A" stroke-width="2"/><rect x="418" y="94" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <circle cx="424" cy="110" r="4" fill="#E24B4A"/>
+    <text x="422" y="124" text-anchor="middle" font-size="8" fill="#A32D2D">21,350 저점</text>
+    <!-- 4월 횡보 -->
+    <line x1="450" y1="88" x2="450" y2="102" stroke="#1D9E75" stroke-width="2"/><rect x="444" y="90" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="468" y1="86" x2="468" y2="100" stroke="#E24B4A" stroke-width="2"/><rect x="462" y="88" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="486" y1="84" x2="486" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="480" y="86" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="504" y1="82" x2="504" y2="96" stroke="#E24B4A" stroke-width="2"/><rect x="498" y="84" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="522" y1="84" x2="522" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="516" y="86" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="540" y1="82" x2="540" y2="96" stroke="#E24B4A" stroke-width="2"/><rect x="534" y="84" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="558" y1="80" x2="558" y2="94" stroke="#1D9E75" stroke-width="2"/><rect x="552" y="82" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="576" y1="82" x2="576" y2="96" stroke="#E24B4A" stroke-width="2"/><rect x="570" y="84" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="594" y1="80" x2="594" y2="94" stroke="#1D9E75" stroke-width="2"/><rect x="588" y="82" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="612" y1="82" x2="612" y2="96" stroke="#E24B4A" stroke-width="2"/><rect x="606" y="84" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <path d="M632 78 Q648 62 664 48" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a1)"/>
+    <text x="638" y="45" font-size="8" fill="#1D9E75">금리인하</text>
+    <text x="638" y="57" font-size="8" fill="#1D9E75">→ 반등</text>
+    <!-- 수평선 -->
+    <line x1="40" y1="8" x2="640" y2="8" stroke="#EF9F27" stroke-width="0.8" stroke-dasharray="4 4" opacity=".35"/>
+    <line x1="40" y1="85" x2="640" y2="85" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="82" font-size="9" fill="#26215C" font-weight="600">현재 22,550</text>
+    <line x1="40" y1="144" x2="640" y2="144" stroke="#1D9E75" stroke-width="0.8" stroke-dasharray="3 4" opacity=".4"/>
+    <text x="42" y="141" font-size="9" fill="#085041">저점 19,920</text>
+    <rect x="40" y="75" width="600" height="38" rx="3" fill="#9FE1CB" opacity=".12"/>
+    <text x="340" y="96" text-anchor="middle" font-size="9" fill="#085041" font-weight="600">★ 매수 구간 21,000~22,500 / 핵심 19,500~21,000 (조정 시)</text>
+    <line x1="40" y1="213" x2="640" y2="213" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 1월 횡보 → 2월 급등(+42%) → 3월 급락(-28%) → 4월 22,000대 횡보</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "저점 반등 → 급등 파동 → 고점 조정 → 저점권 복귀"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2025년 하반기 14,000~15,000 저점 박스권 → 2026년 급등 시작. <b>주봉 볼린저밴드 하단 이탈 후 평균 회귀</b>. 은행주 밸류 재평가 시작.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>1월~2월 8주간 연속 상승 +48%</b>. 주봉 장대양봉 연속 출현. 5주선 돌파 + 20주선 골든크로스. 기관 매수세 지속.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2월 3주차 29,550 고점 후 즉시 반전</b>. 주봉 긴 위꼬리 + 다음 주 음봉 확인 = 단기 고점 시그널. 5주간 -28% 조정.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 <b>22,000~23,000 박스권. 20주선(22,325) 근처 지지</b>. 52주 저점(19,920) 위에서 지지 확인. 추가 하락 제한적. 금리 정책 변화 시 재상승 가능.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">저점 14,970 → 급등 +48% → 고점 28,550 → 조정 -24% → 저점권 복귀</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="140" height="175" rx="4" fill="#E6F1FB" opacity=".12"/>
+    <text x="110" y="22" text-anchor="middle" font-size="8" fill="#0C447C">2025 하반기 박스권</text>
+    <rect x="190" y="10" width="200" height="175" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="290" y="22" text-anchor="middle" font-size="8" fill="#27500A">2026 급등 파동</text>
+    <rect x="400" y="10" width="280" height="175" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="540" y="22" text-anchor="middle" font-size="8" fill="#633806">고점 조정 + 현재</text>
+    <!-- 2025 하반기 박스권 -->
+    <line x1="55" y1="128" x2="55" y2="142" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="130" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="126" x2="75" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="69" y="128" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="128" x2="95" y2="142" stroke="#E24B4A" stroke-width="2"/><rect x="89" y="130" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="126" x2="115" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="109" y="128" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="135" y1="124" x2="135" y2="138" stroke="#E24B4A" stroke-width="2"/><rect x="129" y="126" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="155" y1="122" x2="155" y2="136" stroke="#1D9E75" stroke-width="2"/><rect x="149" y="124" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="175" y1="120" x2="175" y2="134" stroke="#E24B4A" stroke-width="2"/><rect x="169" y="122" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <!-- 급등 파동 -->
+    <line x1="200" y1="110" x2="200" y2="130" stroke="#1D9E75" stroke-width="2.5"/><rect x="194" y="94" width="12" height="18" fill="#1D9E75" rx="1"/>
+    <text x="188" y="90" font-size="8" fill="#27500A">금리인하 기대</text>
+    <line x1="224" y1="88" x2="224" y2="108" stroke="#1D9E75" stroke-width="2.5"/><rect x="218" y="72" width="12" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="248" y1="70" x2="248" y2="90" stroke="#1D9E75" stroke-width="3"/><rect x="242" y="54" width="12" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="272" y1="54" x2="272" y2="72" stroke="#1D9E75" stroke-width="3"/><rect x="266" y="38" width="12" height="18" fill="#EF9F27" rx="1"/>
+    <line x1="296" y1="38" x2="296" y2="56" stroke="#1D9E75" stroke-width="3"/><rect x="290" y="22" width="12" height="18" fill="#EF9F27" rx="1"/>
+    <line x1="320" y1="22" x2="320" y2="40" stroke="#1D9E75" stroke-width="3.5"/><rect x="314" y="8" width="12" height="16" fill="#EF9F27" rx="1"/>
+    <line x1="320" y1="4" x2="320" y2="8" stroke="#EF9F27" stroke-width="2"/>
+    <circle cx="326" cy="2" r="5" fill="#EF9F27"/>
+    <text x="326" y="-4" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">28,550</text>
+    <line x1="344" y1="18" x2="344" y2="36" stroke="#E24B4A" stroke-width="3"/><rect x="338" y="20" width="12" height="15" fill="#E24B4A" rx="1"/>
+    <text x="336" y="14" font-size="8" fill="#A32D2D">고점 반전</text>
+    <line x1="368" y1="30" x2="368" y2="48" stroke="#E24B4A" stroke-width="2.5"/><rect x="362" y="32" width="12" height="15" fill="#E24B4A" rx="1"/>
+    <!-- 조정 구간 -->
+    <line x1="408" y1="42" x2="408" y2="60" stroke="#E24B4A" stroke-width="2.5"/><rect x="402" y="44" width="12" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="432" y1="54" x2="432" y2="72" stroke="#E24B4A" stroke-width="2.5"/><rect x="426" y="56" width="12" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="456" y1="66" x2="456" y2="84" stroke="#E24B4A" stroke-width="2.5"/><rect x="450" y="68" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <circle cx="456" cy="86" r="5" fill="#E24B4A"/>
+    <text x="454" y="98" text-anchor="middle" font-size="8" fill="#A32D2D">21,350</text>
+    <line x1="480" y1="72" x2="480" y2="88" stroke="#1D9E75" stroke-width="2"/><rect x="474" y="74" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="504" y1="70" x2="504" y2="86" stroke="#E24B4A" stroke-width="2"/><rect x="498" y="72" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="528" y1="68" x2="528" y2="84" stroke="#1D9E75" stroke-width="2"/><rect x="522" y="70" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="552" y1="70" x2="552" y2="86" stroke="#E24B4A" stroke-width="2"/><rect x="546" y="72" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="576" y1="68" x2="576" y2="84" stroke="#1D9E75" stroke-width="2"/><rect x="570" y="70" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="600" y1="70" x2="600" y2="86" stroke="#E24B4A" stroke-width="2"/><rect x="594" y="72" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <path d="M622 66 Q640 50 656 36" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+    <text x="643" y="33" font-size="8" fill="#1D9E75">금리인하 → 반등</text>
+    <!-- 이평선 -->
+    <path d="M45 135 Q170 127 320 8 Q420 50 600 72" fill="none" stroke="#1D9E75" stroke-width="1.8"/>
+    <path d="M45 138 Q190 130 344 20 Q450 60 608 76" fill="none" stroke="#EF9F27" stroke-width="1.3"/>
+    <text x="615" y="70" font-size="8" fill="#1D9E75">─5주</text>
+    <text x="615" y="80" font-size="8" fill="#EF9F27">─20주</text>
+    <rect x="613" y="84" width="42" height="14" rx="3" fill="#FAEEDA"/>
+    <text x="634" y="94" text-anchor="middle" font-size="8" fill="#633806" font-weight="700">역배열</text>
+    <line x1="40" y1="72" x2="608" y2="72" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="69" font-size="9" fill="#26215C" font-weight="600">현재 22,550</text>
+    <line x1="40" y1="145" x2="620" y2="145" stroke="#1D9E75" stroke-width="0.8" stroke-dasharray="3 4" opacity=".4"/>
+    <text x="42" y="142" font-size="9" fill="#085041">저점 19,920</text>
+    <line x1="40" y1="183" x2="640" y2="183" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025 하반기 박스권 → 2026 급등(+48%) → 고점 28,550 → 조정(-24%) → 저점권 복귀</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2년 박스권 → 2026년 돌파 시도 → 고점 반전 조정"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2024~2025년 <b>12,000~15,000원 장기 박스권</b>. 금리 고점 장기화로 은행주 소외. 월봉 20개월선 저항. 저평가 지속.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>2026년 1~2월 월봉 대형 양봉 출현</b>. 박스권 상단 돌파 시도. 금리인하 기대감 + 중소기업 대출 정책. 월봉 볼린저밴드 상단 터치.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2026년 3월 긴 위꼬리 음봉 = 고점 반전 신호</b>. 단기 과열 조정. 월봉 20개월선 아래로 재하락. 박스권 돌파 실패 패턴.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 <b>박스권 중하단 재진입</b>. 20,000~25,000 지지대 테스트. 금리 정책 전환 시 박스권 재돌파 가능. 장기 관점에서 저가 매수 기회.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">2년 박스권 → 2026 돌파 시도 → 고점 반전 → 박스권 복귀</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="70" width="460" height="70" rx="4" fill="#FAEEDA" opacity=".1"/>
+    <text x="270" y="82" text-anchor="middle" font-size="8" fill="#633806">2024~2025 장기 박스권 12,000~20,000</text>
+    <!-- 2024년 박스권 -->
+    <line x1="55" y1="100" x2="55" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="49" y="102" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="78" y1="88" x2="78" y2="108" stroke="#1D9E75" stroke-width="2.5"/><rect x="72" y="90" width="12" height="16" fill="#EF9F27" rx="1"/>
+    <line x1="101" y1="95" x2="101" y2="115" stroke="#E24B4A" stroke-width="2"/><rect x="95" y="97" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="124" y1="102" x2="124" y2="122" stroke="#E24B4A" stroke-width="2"/><rect x="118" y="104" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="147" y1="106" x2="147" y2="126" stroke="#1D9E75" stroke-width="2"/><rect x="141" y="108" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="170" y1="100" x2="170" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="164" y="102" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="193" y1="98" x2="193" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="187" y="100" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="216" y1="102" x2="216" y2="122" stroke="#E24B4A" stroke-width="2"/><rect x="210" y="104" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="239" y1="104" x2="239" y2="124" stroke:#E24B4A" stroke-width="2"/><rect x="233" y="106" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="262" y1="108" x2="262" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="256" y="110" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="285" y1="104" x2="285" y2="124" stroke="#E24B4A" stroke-width="2"/><rect x="279" y="106" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="308" y1="102" x2="308" y2="122" stroke="#1D9E75" stroke-width="2"/><rect x="302" y="104" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <!-- 2025년 -->
+    <line x1="331" y1="100" x2="331" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="325" y="102" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="354" y1="106" x2="354" y2="126" stroke="#1D9E75" stroke-width="2"/><rect x="348" y="108" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="377" y1="104" x2="377" y2="124" stroke="#E24B4A" stroke-width="2"/><rect x="371" y="106" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="400" y1="102" x2="400" y2="122" stroke="#1D9E75" stroke-width="2"/><rect x="394" y="104" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="423" y1="100" x2="423" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="417" y="102" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="446" y1="98" x2="446" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="440" y="100" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="469" y1="96" x2="469" y2="116" stroke="#E24B4A" stroke-width="2"/><rect x="463" y="98" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <!-- 2026년 급등 -->
+    <rect x="500" y="10" width="180" height="180" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="590" y="22" text-anchor="middle" font-size="8" fill="#27500A">2026 돌파 시도 + 조정</text>
+    <line x1="508" y1="82" x2="508" y2="118" stroke="#1D9E75" stroke-width="3"/><rect x="502" y="66" width="12" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="537" y1="42" x2="537" y2="80" stroke="#1D9E75" stroke-width="4"/><rect x="531" y="26" width="12" height="18" fill="#EF9F27" rx="1"/>
+    <line x1="537" y1="18" x2="537" y2="26" stroke="#EF9F27" stroke-width="2"/>
+    <circle cx="543" cy="16" r="5" fill="#EF9F27"/>
+    <text x="543" y="10" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">28,550</text>
+    <line x1="566" y1="58" x2="566" y2="96" stroke="#E24B4A" stroke-width="3"/><rect x="560" y="60" width="12" height="32" fill="#E24B4A" rx="1"/>
+    <text x="554" y="54" font-size="8" fill="#A32D2D">고점 반전</text>
+    <line x1="595" y1="78" x2="595" y2="108" stroke="#E24B4A" stroke-width="2.5"/><rect x="589" y="80" width="12" height="26" fill="#E24B4A" rx="1"/>
+    <path d="M620 74 Q642 58 660 44" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a3)"/>
+    <text x="648" y="41" font-size="8" fill="#1D9E75">금리인하</text>
+    <text x="648" y="53" font-size="8" fill="#1D9E75">→ 재상승?</text>
+    <line x1="40" y1="82" x2="598" y2="82" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="79" font-size="9" fill="#26215C" font-weight="600">현재 22,550</text>
+    <line x1="40" y1="70" x2="600" y2="70" stroke="#EF9F27" stroke-width="0.8" stroke-dasharray="5 4" opacity=".35"/>
+    <text x="42" y="67" font-size="8" fill="#633806" opacity=".6">박스권 상단 ~25,000</text>
+    <line x1="40" y1="140" x2="600" y2="140" stroke="#1D9E75" stroke-width="0.8" stroke-dasharray="5 4" opacity=".35"/>
+    <text x="42" y="137" font-size="8" fill="#085041" opacity=".6">박스권 하단 ~19,000</text>
+    <line x1="40" y1="188" x2="640" y2="188" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024~2025 박스권 → 2026 돌파 시도(28,550) → 고점 반전 → 박스권 복귀</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">기관 2월 집중 매수 → 3월 일부 차익실현</span><span class="tag t-navy">단기 매매</span><div style="color:#888;margin-top:2px;font-size:11px">1월말~2월 기관 순매수 집중. 금리인하 기대 선반영. 2월 고점 형성 후 일부 차익실현. 외국인은 소극적. 개인 추종 매수 → 고점 물림.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">저점 19,920원 = 52주 지지선 + 심리적 2만원 방어</span><span class="tag t-g">하방 지지 강함</span><div style="color:#888;margin-top:2px;font-size:11px">52주 저점이 강한 지지선. 2만원 이하로 내려가면 배당 투자자 매수 유입. PBR 저평가 구간. 추가 하락 제한적.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">금리인하 기대감 = 은행주 밸류 재평가 트리거</span><span class="tag t-a">정책 변수</span><div style="color:#888;margin-top:2px;font-size:11px">한국·미국 금리인하 시 은행주 NIM(순이자마진) 개선 기대. 중소기업 대출 증가 정책 수혜. 금리 정책이 최대 변수.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">단기 과열 조정 완료 → 추가 하락 제한적</span><span class="tag t-r">기술적 조정</span><div style="color:#888;margin-top:2px;font-size:11px">2월 +42% 급등 후 -28% 조정은 건전한 패턴. RSI 과열 해소. 이동평균선 20일선(22,325) 근처 지지. 추가 조정 제한적. 다음 모멘텀 대기.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>52주 위치 27% — 저점권 매수 기회 구간</span><span class="tag t-g">위치 ★★★</span></div>
+  <div class="row"><span>저점 19,920원 근처 — 하방 지지 강함</span><span class="tag t-g">지지 ✓</span></div>
+  <div class="row"><span>금리인하 기대감 — 은행주 밸류 재평가</span><span class="tag t-b">정책 ★★</span></div>
+  <div class="row"><span>중소기업 대출 정책 수혜 — IBK 특화 영역</span><span class="tag t-b">펀더멘털 ✓</span></div>
+  <div class="row"><span>PBR 저평가 + 배당 매력 — 가치주 매력</span><span class="tag t-teal">밸류 ✓</span></div>
+  <div class="row"><span>2월 단기 과열 조정 완료 — RSI 정상화</span><span class="tag t-g">기술적 ✓</span></div>
+  <div class="row"><span>2월 고점 대비 -23.7% — 아직 회복 여력</span><span class="tag t-a">반등 여지 △</span></div>
+  <div class="row"><span>거래량 감소 — 추가 모멘텀 부재</span><span class="tag t-a">수급 △</span></div>
+  <div class="row"><span>금리 동결 장기화 리스크 — NIM 개선 지연</span><span class="tag t-r">리스크 ✗</span></div>
+  <div class="row"><span>금리인하 발표 → 은행주 동반 상승 트리거</span><span class="tag t-g">핵심 ★★★</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:68%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 68%</div>
+    <div style="font-size:11px;color:#5f5e5a">저점권 안착. 조정 완료. 금리인하 대기 구간. <b>21,000~22,500 분할 매수. 19,500 이하 추가 매수.</b></div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~18개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:62%;background:#EF9F27"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 62%</div>
+    <div style="font-size:11px;color:#5f5e5a">금리인하 시 반등. 박스권 돌파 시 28,000~32,000. 배당주 안정적. 단, 은행주 특성상 폭발적 상승 제한적.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "저점권 분할 매수 + 금리인하 카탈리스트 대기"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">1차 매수</div><div class="sp">21,000~<br>22,500</div><div>현재가 근처<br>40%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">19,500~<br>21,000</div><div>저점 재터치<br>40%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">26,500~<br>30,000</div><div>금리인하 시<br>+20~35%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">18,500원</div><div>저점 이탈<br>즉시 손절</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 기업은행 핵심 4포인트:</b><br>
+    ① <b>52주 위치 27% 저점권</b> = 충분한 조정 완료<br>
+    ② <b>저점 19,920 근처 강한 지지</b> = 하방 제한적<br>
+    ③ <b>금리인하 = 최대 상승 트리거</b> (은행주 밸류 재평가)<br>
+    ④ <b>중소기업 대출 정책 수혜</b> + PBR 저평가 + 배당 매력</div>
+  </div>
+  <div class="warn-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#633806"><b>⚠ 주의사항:</b> 은행주 특성상 <b>폭발적 상승 제한적</b>. 박스권 등락 가능성. 금리 동결 장기화 시 횡보 지속. 배당주 관점 장기 보유 적합. 단기 스윙보다 <b>분할 매수 + 금리인하 카탈리스트 대기 전략</b> 추천.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+</div>
+</body>
+</html>

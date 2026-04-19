@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>한화오션 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>한화오션 (042660) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 대형주 | K-방산 + LNG선 수주 + 원자력 추진선 턴어라운드</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 한화오션 = "조선업 턴어라운드 + K-방산 최대 수혜 + 원자력 추진선 신사업"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 상승 동력</b><br>① <b>K-방산</b> 잠수함·구축함 대규모 수주<br>② <b>카타르 LNG선</b> 100척 이상 장기 계약<br>③ <b>SMR 원자력 추진선</b> 2030 상용화<br>④ 2020 저점 21,050 → 현재 130,000 (+517%)
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#633806">
+      <b>⚠ 현재 위치</b><br>52주 범위 103,500~154,800원. 현재 <b>51.7% 중립권</b>. 3월 108,500 급락 후 회복 중. 고점 -16% 조정 → 재상승 시도. 단기 변동성 주의.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가 (4월 17일)</div><div class="mv" style="color:#1D9E75">130,000<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -1.44%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">103,500~<br>154,800원</div><div class="ms">저점 대비 +25.6%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">51.7%</div><div class="ms">중립권 (방향성 대기)</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 위치 51.7% — 중립권. 고점도 저점도 아닌 이벤트 대기 구간</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 55%,#F09595 82%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:51%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-45%)">▲ 130,000</div></div>
+    <div style="position:absolute;left:100%;top:-4px;width:3px;height:30px;background:#E24B4A;border-radius:2px;opacity:.6"><div style="position:absolute;top:31px;font-size:9px;color:#A32D2D;white-space:nowrap;transform:translateX(-70%)">고점 154,800</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 103,500</span><span>중간 129,150</span><span>고점 154,800</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2020년 대우조선 인수 후 구조조정 완료. 21,050 역대 저점 → 130,000원 (+517% 장기 상승). K-방산·LNG선·원자력 추진선 3대 테마. 3월 108,500 급락은 단기 변동성, 이후 회복. <b>현재 120,000~140,000 박스권 등락. 수주 실적이 다음 상승 트리거.</b>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">K-방산 잠수함·구축함 수주</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">카타르 LNG선 100척+</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">SMR 원자력 추진선 2030</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">52주 위치 51.7% 중립</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "고점 근접 → 3월 급락 → 빠른 회복 → 박스권 등락"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2월 149,900 고점 → 3월 108,500 급락(-28%)</b>. 단기 과열 후 급격한 조정. 변동성 큰 조선주 특성. 수급 불안정 + 차익 실현 매물 출회.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>108,500 저점에서 빠른 V자 반등</b>. 120,000~130,000 회복. 펀더멘털 건재 확인. K-방산 수주 기대감 + LNG선 발주 지속.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>현재 <b>120,000~140,000 박스권 등락</b>. MA20(123,845) 위 지지 확인. MA60(131,613) 돌파 시도 중. 방향성 대기 구간.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>수주 실적 발표가 돌파 트리거</b>. K-방산 대형 계약 or 원자력 추진선 상용화 진전 시 재상승. 단기 변동성 주의, 분할 매수 적합.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">고점 149,900 → 급락 108,500 → V자 회복 → 박스권 120~140K</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="85" height="200" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <rect x="135" y="10" width="70" height="200" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <rect x="215" y="10" width="90" height="200" rx="4" fill="#EEF2FF" opacity=".2"/>
+    <rect x="315" y="10" width="120" height="200" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <rect x="445" y="10" width="225" height="200" rx="4" fill="#FAEEDA" opacity=".15"/>
+    <text x="82" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">① 고점 근접</text>
+    <text x="170" y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">② 급락</text>
+    <text x="260" y="22" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="600">③ V자</text>
+    <text x="375" y="22" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">④ 하락</text>
+    <text x="557" y="22" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">⑤ 박스권 (현재)</text>
+    <!-- 1월 고점 근접 -->
+    <line x1="52" y1="48" x2="52" y2="64" stroke="#1D9E75" stroke-width="2"/><rect x="46" y="50" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="68" y1="52" x2="68" y2="67" stroke="#E24B4A" stroke-width="2"/><rect x="62" y="54" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="84" y1="55" x2="84" y2="69" stroke="#E24B4A" stroke-width="2"/><rect x="78" y="57" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="100" y1="56" x2="100" y2="70" stroke="#E24B4A" stroke-width="2"/><rect x="94" y="58" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="116" y1="58" x2="116" y2="72" stroke="#E24B4A" stroke-width="2"/><rect x="110" y="60" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <!-- 2월 초 급락 -->
+    <line x1="143" y1="63" x2="143" y2="78" stroke="#E24B4A" stroke-width="2.5"/><rect x="137" y="65" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="159" y1="68" x2="159" y2="82" stroke="#E24B4A" stroke-width="2"/><rect x="153" y="70" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="71" x2="175" y2="85" stroke="#1D9E75" stroke-width="2"/><rect x="169" y="73" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x="191" y1="68" x2="191" y2="82" stroke="#E24B4A" stroke-width="2"/><rect x="185" y="70" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <!-- 2월 중순 급등 -->
+    <line x1="223" y1="53" x2="223" y2="78" stroke="#1D9E75" stroke-width="3"/><rect x="217" y="50" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="239" y1="42" x2="239" y2="58" stroke="#1D9E75" stroke-width="3"/><rect x="233" y="39" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <circle cx="245" cy="37" r="5" fill="#EF9F27"/>
+    <text x="245" y="31" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">149,900</text>
+    <line x1="255" y1="44" x2="255" y2="59" stroke="#E24B4A" stroke-width="2"/><rect x="249" y="46" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="271" y1="47" x2="271" y2="61" stroke="#E24B4A" stroke-width="2"/><rect x="265" y="49" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="287" y1="50" x2="287" y2="64" stroke="#E24B4A" stroke-width="2"/><rect x="281" y="52" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="303" y1="51" x2="303" y2="65" stroke="#1D9E75" stroke-width="2"/><rect x="297" y="53" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <!-- 3월 폭락 -->
+    <line x1="323" y1="62" x2="323" y2="88" stroke="#E24B4A" stroke-width="3.5"/><rect x="317" y="64" width="10" height="21" fill="#E24B4A" rx="1"/>
+    <text x="311" y="95" font-size="8" fill="#A32D2D">3월 폭락</text>
+    <line x1="339" y1="108" x2="339" y2="138" stroke="#E24B4A" stroke-width="4"/><rect x="333" y="110" width="10" height="25" fill="#E24B4A" rx="1"/>
+    <circle cx="350" cy="142" r="6" fill="#E24B4A"/>
+    <text x="350" y="157" text-anchor="middle" font-size="8" fill="#A32D2D">108,500</text>
+    <line x1="355" y1="98" x2="355" y2="118" stroke="#1D9E75" stroke-width="2.5"/><rect x="349" y="100" width="10" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="371" y1="92" x2="371" y2="110" stroke="#1D9E75" stroke-width="2.5"/><rect x="365" y="94" width="10" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="387" y1="83" x2="387" y2="100" stroke="#1D9E75" stroke-width="2.5"/><rect x="381" y="85" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="403" y1="80" x2="403" y2="96" stroke="#1D9E75" stroke-width="2"/><rect x="397" y="82" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="419" y1="79" x2="419" y2="94" stroke="#E24B4A" stroke-width="2"/><rect x="413" y="81" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <!-- 3월 하순~4월 박스권 -->
+    <line x1="453" y1="93" x2="453" y2="107" stroke="#E24B4A" stroke-width="2"/><rect x="447" y="95" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="469" y1="88" x2="469" y2="102" stroke="#1D9E75" stroke-width="2"/><rect x="463" y="90" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="485" y1="91" x2="485" y2="105" stroke="#E24B4A" stroke-width="2"/><rect x="479" y="93" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="501" y1="90" x2="501" y2="103" stroke="#1D9E75" stroke-width="2"/><rect x="495" y="92" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="517" y1="93" x2="517" y2="106" stroke="#E24B4A" stroke-width="2"/><rect x="511" y="95" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="533" y1="95" x2="533" y2="108" stroke="#E24B4A" stroke-width="2"/><rect x="527" y="97" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="549" y1="94" x2="549" y2="107" stroke="#1D9E75" stroke-width="2"/><rect x="543" y="96" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="565" y1="91" x2="565" y2="104" stroke="#1D9E75" stroke-width="2"/><rect x="559" y="93" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="581" y1="88" x2="581" y2="101" stroke="#1D9E75" stroke-width="2"/><rect x="575" y="90" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="597" y1="83" x2="597" y2="96" stroke="#1D9E75" stroke-width="2"/><rect x="591" y="85" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="613" y1="84" x2="613" y2="97" stroke="#E24B4A" stroke-width="2"/><rect x="607" y="86" width="10" height="11" fill="#E24B4A" rx="1"/>
+    <path d="M630 82 Q644 65 658 50" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a1)"/>
+    <text x="636" y="47" font-size="8" fill="#1D9E75">수주</text>
+    <text x="636" y="59" font-size="8" fill="#1D9E75">→ 150K+</text>
+    <!-- 수평선 -->
+    <line x1="40" y1="37" x2="640" y2="37" stroke="#EF9F27" stroke-width="0.8" stroke-dasharray="4 4" opacity=".35"/>
+    <line x1="40" y1="87" x2="640" y2="87" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="84" font-size="9" fill="#26215C" font-weight="600">현재 130,000</text>
+    <line x1="40" y1="142" x2="640" y2="142" stroke="#E24B4A" stroke-width="0.8" stroke-dasharray="3 4" opacity=".4"/>
+    <text x="42" y="139" font-size="9" fill="#A32D2D">3월 저점 108,500</text>
+    <rect x="445" y="78" width="225" height="36" rx="3" fill="#9FE1CB" opacity=".12"/>
+    <text x="557" y="98" text-anchor="middle" font-size="9" fill="#085041" font-weight="600">★ 매수 구간 120,000~130,000 / 핵심 110,000~120,000 (추가 조정 시)</text>
+    <line x1="40" y1="213" x2="640" y2="213" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 2월 149,900 고점 → 3월 108,500 급락 → V자 반등 → 120~140K 박스권 등락</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "2025년 저점 탈출 → 급등 → 고점 조정 → 재상승 시도"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2025년 4~5월 <b>78,900~95,300 저점권 등락</b>. 조선업 턴어라운드 초기 단계. K-방산 수주 기대감 시작.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>2025년 7~10월 <b>90,000 → 151,600 급등(+68%)</b>. 카타르 LNG선 대규모 수주 + 한화그룹 방산 사업 확대. 외국인·기관 동시 매집.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>2025년 11~12월 <b>조정 107,800~130,800</b>. 단기 과열 해소. 2026년 1~2월 재상승 → 149,900 고점. 3월 급락 후 현재 회복 중.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>주봉 5주선 근처 지지 확인</b>. 130,000 = 중립권. 수주 실적 발표 시 160,000+ 재도전 가능. 단기 변동성 vs 중장기 상승 트렌드 유지.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">2025 저점 탈출 → +68% 급등 → 고점 조정 → 재상승 시도</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="180" height="175" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="130" y="22" text-anchor="middle" font-size="8" fill="#633806">2025 저점권 등락</text>
+    <rect x="230" y="10" width="140" height="175" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="300" y="22" text-anchor="middle" font-size="8" fill="#27500A">K-방산+LNG 급등</text>
+    <rect x="380" y="10" width="120" height="175" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <rect x="510" y="10" width="170" height="175" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <text x="595" y="22" text-anchor="middle" font-size="8" fill="#0C447C">조정 후 재상승</text>
+    <!-- 2025 저점권 -->
+    <line x1="55" y1="115" x2="55" y2="135" stroke="#E24B4A" stroke-width="2.5"/><rect x="49" y="117" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="77" y1="108" x2="77" y2="128" stroke="#1D9E75" stroke-width="2.5"/><rect x="71" y="110" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="99" y1="118" x2="99" y2="136" stroke="#E24B4A" stroke-width="2"/><rect x="93" y="120" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="121" y1="116" x2="121" y2="133" stroke="#E24B4A" stroke-width="2"/><rect x="115" y="118" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="143" y1="112" x2="143" y2="129" stroke="#1D9E75" stroke-width="2"/><rect x="137" y="114" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="165" y1="114" x2="165" y2="131" stroke="#E24B4A" stroke-width="2"/><rect x="159" y="116" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="187" y1="115" x2="187" y2="132" stroke="#1D9E75" stroke-width="2"/><rect x="181" y="117" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="209" y1="111" x2="209" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="203" y="113" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <!-- 급등 구간 -->
+    <line x1="238" y1="98" x2="238" y2="118" stroke="#1D9E75" stroke-width="2.5"/><rect x="232" y="100" width="12" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="260" y1="78" x2="260" y2="102" stroke="#1D9E75" stroke-width="3"/><rect x="254" y="80" width="12" height="19" fill="#1D9E75" rx="1"/>
+    <text x="248" y="75" font-size="8" fill="#27500A">LNG 수주</text>
+    <line x1="282" y1="62" x2="282" y2="82" stroke="#1D9E75" stroke-width="3"/><rect x="276" y="64" width="12" height="17" fill="#EF9F27" rx="1"/>
+    <line x1="304" y1="48" x2="304" y2="66" stroke="#1D9E75" stroke-width="3.5"/><rect x="298" y="50" width="12" height="15" fill="#EF9F27" rx="1"/>
+    <line x1="326" y1="38" x2="326" y2="52" stroke="#1D9E75" stroke-width="3"/><rect x="320" y="40" width="12" height="10" fill="#EF9F27" rx="1"/>
+    <line x1="326" y1="28" x2="326" y2="38" stroke="#EF9F27" stroke-width="2"/>
+    <circle cx="332" cy="26" r="5" fill="#EF9F27"/>
+    <text x="332" y="20" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">151,600</text>
+    <line x1="348" y1="45" x2="348" y2="61" stroke="#E24B4A" stroke-width="2.5"/><rect x="342" y="47" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="370" y1="50" x2="370" y2="66" stroke="#1D9E75" stroke-width="2"/><rect x="364" y="52" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <!-- 조정 -->
+    <line x1="388" y1="82" x2="388" y2="100" stroke="#E24B4A" stroke-width="2.5"/><rect x="382" y="84" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="410" y1="88" x2="410" y2="105" stroke="#E24B4A" stroke-width="2"/><rect x="404" y="90" width="12" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="432" y1="94" x2="432" y2="110" stroke="#E24B4A" stroke-width="2"/><rect x="426" y="96" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="454" y1="96" x2="454" y2="112" stroke="#1D9E75" stroke-width="2"/><rect x="448" y="98" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="476" y1="98" x2="476" y2="114" stroke="#E24B4A" stroke-width="2"/><rect x="470" y="100" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="498" y1="99" x2="498" y2="115" stroke="#1D9E75" stroke-width="2"/><rect x="492" y="101" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <!-- 재상승 시도 -->
+    <line x1="518" y1="53" x2="518" y2="73" stroke="#1D9E75" stroke-width="3"/><rect x="512" y="55" width="12" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="540" y1="44" x2="540" y2="58" stroke="#1D9E75" stroke-width="3"/><rect x="534" y="46" width="12" height="11" fill="#EF9F27" rx="1"/>
+    <line x1="562" y1="48" x2="562" y2="62" stroke="#E24B4A" stroke-width="2.5"/><rect x="556" y="50" width="12" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="584" y1="72" x2="584" y2="92" stroke="#E24B4A" stroke-width="3"/><rect x="578" y="74" width="12" height="17" fill="#E24B4A" rx="1"/>
+    <line x1="606" y1="68" x2="606" y2="85" stroke="#1D9E75" stroke-width="2.5"/><rect x="600" y="70" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="628" y1="66" x2="628" y2="82" stroke="#1D9E75" stroke-width="2.5"/><rect x="622" y="68" width="12" height="13" fill="#1D9E75" rx="1" opacity=".7"/>
+    <path d="M644 63 Q654 48 664 34" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+    <text x="652" y="31" font-size="8" fill="#1D9E75">수주 → 160K+</text>
+    <!-- 이평선 -->
+    <path d="M45 128 Q180 122 330 50 Q430 100 520 68 Q590 72 645 70" fill="none" stroke="#1D9E75" stroke-width="1.8"/>
+    <path d="M45 133 Q200 128 348 62 Q450 105 540 76 Q605 78 647 76" fill="none" stroke="#EF9F27" stroke-width="1.3"/>
+    <text x="637" y="68" font-size="8" fill="#1D9E75">─5주</text>
+    <text x="637" y="78" font-size="8" fill="#EF9F27">─20주</text>
+    <line x1="40" y1="73" x2="632" y2="73" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="70" font-size="9" fill="#26215C" font-weight="600">현재 130,000</text>
+    <line x1="40" y1="183" x2="640" y2="183" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025 저점권 → K-방산+LNG 급등(+68%) → 고점 151,600 → 조정 후 재상승 시도</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2020 역대 저점 → 구조조정 완료 → 턴어라운드 급등"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div>2020~2024년 초 <b>21,050~37,350 저점권 장기 박스</b>. 대우조선 인수 후 구조조정 기간. 적자 누적 + 수주 부진.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div>2024년 11월~2025년 초 <b>턴어라운드 시작</b>. 35,000 → 74,300 (+112%). 구조조정 완료 + LNG선 수주 회복 + K-방산 테마 부각.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div>2025년 7~10월 <b>112,300 → 137,600 역대 고점</b>. 카타르 LNG선 100척+ 장기 계약 + 원자력 추진선 개발 발표. 조선업 슈퍼사이클 기대.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div>현재 130,000 = 역대 저점 21,050 대비 <b>+517%</b>. 고점 대비 -16%. 장기 상승 트렌드 유지. 수주 잔고 역대 최대 → 향후 실적 가시성 확보.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">2020 저점 21,050 → 구조조정 → 턴어라운드 급등(+517%)</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <defs><marker id="a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/></marker></defs>
+    <rect x="40" y="10" width="280" height="180" rx="4" fill="#FCEBEB" opacity=".07"/>
+    <text x="180" y="22" text-anchor="middle" font-size="8" fill="#A32D2D">2020~2024 구조조정 저점권</text>
+    <rect x="330" y="10" width="110" height="180" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="385" y="22" text-anchor="middle" font-size="8" fill="#27500A">턴어라운드</text>
+    <rect x="450" y="10" width="230" height="180" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <text x="565" y="22" text-anchor="middle" font-size="8" fill="#0C447C">K-방산+LNG 슈퍼사이클</text>
+    <!-- 저점권 박스 -->
+    <line x1="55" y1="155" x2="55" y2="168" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="157" width="12" height="10" fill="#E24B4A" rx="1"/>
+    <circle cx="66" cy="173" r="5" fill="#E24B4A"/>
+    <text x="66" y="183" text-anchor="middle" font-size="7" fill="#A32D2D">21,050</text>
+    <line x1="77" y1="152" x2="77" y2="165" stroke="#1D9E75" stroke-width="2"/><rect x="71" y="154" width="12" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="99" y1="148" x2="99" y2="161" stroke="#E24B4A" stroke-width="2"/><rect x="93" y="150" width="12" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="121" y1="145" x2="121" y2="158" stroke="#1D9E75" stroke-width="2"/><rect x="115" y="147" width="12" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="143" y1="143" x2="143" y2="156" stroke="#E24B4A" stroke-width="2"/><rect x="137" y="145" width="12" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="165" y1="140" x2="165" y2="153" stroke="#E24B4A" stroke-width="2"/><rect x="159" y="142" width="12" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="187" y1="142" x2="187" y2="155" stroke="#1D9E75" stroke-width="2"/><rect x="181" y="144" width="12" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="209" y1="138" x2="209" y2="151" stroke="#E24B4A" stroke-width="2"/><rect x="203" y="140" width="12" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="231" y1="136" x2="231" y2="149" stroke="#E24B4A" stroke-width="2"/><rect x="225" y="138" width="12" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="253" y1="134" x2="253" y2="147" stroke="#1D9E75" stroke-width="2"/><rect x="247" y="136" width="12" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="275" y1="130" x2="275" y2="143" stroke="#1D9E75" stroke-width="2"/><rect x="269" y="132" width="12" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="297" y1="132" x2="297" y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="291" y="134" width="12" height="10" fill="#E24B4A" rx="1"/>
+    <text x="180" y="175" text-anchor="middle" font-size="8" fill="#888">20,000~40,000 장기 박스</text>
+    <!-- 턴어라운드 시작 -->
+    <line x1="338" y1="125" x2="338" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="332" y="127" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="360" y1="120" x2="360" y2="135" stroke="#1D9E75" stroke-width="2"/><rect x="354" y="122" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="382" y1="105" x2="382" y2="125" stroke="#1D9E75" stroke-width="2.5"/><rect x="376" y="107" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="404" y1="88" x2="404" y2="110" stroke="#1D9E75" stroke-width="3"/><rect x="398" y="90" width="12" height="18" fill="#EF9F27" rx="1"/>
+    <line x1="426" y1="95" x2="426" y2="115" stroke="#E24B4A" stroke-width="2.5"/><rect x="420" y="97" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <text x="385" y="84" font-size="8" fill="#27500A">턴어라운드</text>
+    <!-- 급등 -->
+    <line x1="458" y1="78" x2="458" y2="98" stroke="#1D9E75" stroke-width="2.5"/><rect x="452" y="80" width="12" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="480" y1="68" x2="480" y2="86" stroke="#1D9E75" stroke-width="3"/><rect x="474" y="70" width="12" height="15" fill="#EF9F27" rx="1"/>
+    <line x1="502" y1="55" x2="502" y2="72" stroke="#1D9E75" stroke-width="3"/><rect x="496" y="57" width="12" height="14" fill="#EF9F27" rx="1"/>
+    <text x="496" y="52" font-size="8" fill="#27500A">LNG+방산</text>
+    <line x1="524" y1="42" x2="524" y2="58" stroke="#1D9E75" stroke-width="3.5"/><rect x="518" y="44" width="12" height="13" fill="#EF9F27" rx="1"/>
+    <line x1="524" y1="32" x2="524" y2="42" stroke="#EF9F27" stroke-width="2"/>
+    <circle cx="530" cy="30" r="5" fill="#EF9F27"/>
+    <text x="530" y="24" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">137,600</text>
+    <line x1="546" y1="58" x2="546" y2="74" stroke="#E24B4A" stroke-width="2.5"/><rect x="540" y="60" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="568" y1="60" x2="568" y2="76" stroke="#1D9E75" stroke-width="2"/><rect x="562" y="62" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="590" y1="50" x2="590" y2="66" stroke="#1D9E75" stroke-width="2.5"/><rect x="584" y="52" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="612" y1="48" x2="612" y2="64" stroke="#1D9E75" stroke-width="2.5"/><rect x="606" y="50" width="12" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="634" y1="54" x2="634" y2="70" stroke="#E24B4A" stroke-width="2"/><rect x="628" y="56" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="656" y1="56" x2="656" y2="71" stroke="#1D9E75" stroke-width="2"/><rect x="650" y="58" width="12" height="12" fill="#1D9E75" rx="1" opacity=".7"/>
+    <line x1="40" y1="63" x2="656" y2="63" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="60" font-size="9" fill="#26215C" font-weight="600">현재 130,000</text>
+    <line x1="40" y1="188" x2="640" y2="188" stroke="#d3d1c7" stroke-width="1"/>
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2020 저점 21,050 → 구조조정 → 2025 턴어라운드 → K-방산+LNG 급등(+517%)</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">카타르 QatarEnergy LNG선 100척 이상 장기 계약</span><span class="tag t-navy">역대 최대 수주</span><div style="color:#888;margin-top:2px;font-size:11px">카타르 North Field 확장 프로젝트. 2030년까지 LNG선 지속 발주. 수주 잔고 역대 최대 수준. 향후 3~5년 매출 가시성 확보. 조선업 슈퍼사이클 핵심 수혜.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">K-방산 최대 수혜 — 잠수함·구축함·호위함</span><span class="tag t-g">방산 수출 급증</span><div style="color:#888;margin-top:2px;font-size:11px">KSS-III 잠수함(7.9조), KDDX 차기 구축함, FFX 호위함. 폴란드·호주·캐나다 등 해외 수출 추진. 한화그룹 방산 시너지. 해군 함정 독점 공급 체계.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">SMR 원자력 추진선 개발 — 2030 상용화 목표</span><span class="tag t-a">차세대 신사업</span><div style="color:#888;margin-top:2px;font-size:11px">소형모듈원자로(SMR) 기반 상선. 탄소중립 규제 대응. LR·DNV 등 선급 협업. 컨테이너선·벌크선 적용. 조선업 패러다임 전환.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#0C447C"></div><div><span style="font-weight:600">대우조선 인수 구조조정 완료 — 턴어라운드 가속</span><span class="tag t-b">실적 개선</span><div style="color:#888;margin-top:2px;font-size:11px">2020년 대우조선 인수 후 적자 누적. 2024~2025 구조조정 완료. 수주·매출·영업이익 개선 트렌드. 2026년 본격 흑자 전환 기대.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>카타르 LNG선 100척+ 장기 계약 — 수주 잔고 역대 최대</span><span class="tag t-navy">수주 ★★★</span></div>
+  <div class="row"><span>K-방산 잠수함·구축함 대규모 계약 진행 중</span><span class="tag t-g">방산 ★★</span></div>
+  <div class="row"><span>SMR 원자력 추진선 2030 상용화 — 차세대 신사업</span><span class="tag t-b">기술 ✓</span></div>
+  <div class="row"><span>대우조선 인수 구조조정 완료 — 턴어라운드 가속</span><span class="tag t-g">실적 개선 ✓</span></div>
+  <div class="row"><span>역대 저점 21,050 → 현재 130,000 (+517%)</span><span class="tag t-teal">장기 상승 ✓</span></div>
+  <div class="row"><span>52주 위치 51.7% — 중립권 (추가 상승 여력)</span><span class="tag t-a">중립 △</span></div>
+  <div class="row"><span>3월 108,500 급락 — 단기 변동성 큼</span><span class="tag t-r">변동성 ✗</span></div>
+  <div class="row"><span>조선업 경기 사이클 — 2027~2028 수주 둔화 우려</span><span class="tag t-a">사이클 리스크 △</span></div>
+  <div class="row"><span>2026.4.24 1Q 실적 발표 (예정)</span><span class="tag t-a">단기 이벤트</span></div>
+  <div class="row"><span>방산 수출 계약 체결 → 160,000+ 재도전 트리거</span><span class="tag t-g">핵심 ★★★</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:65%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 65%</div>
+    <div style="font-size:11px;color:#5f5e5a">52주 위치 51.7% 중립권. 3월 급락 후 회복. <b>120,000~130,000 분할 매수 적합. 단기 변동성 주의.</b></div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:82%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 82%</div>
+    <div style="font-size:11px;color:#5f5e5a">LNG+방산+원자력 3대 테마. 수주 잔고 역대 최대. 턴어라운드 가속. 목표 180,000~200,000원.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "중립권 분할 매수 + 조정 시 추가 매수"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#E6F1FB;color:#0C447C"><div style="font-weight:700">현재 진입</div><div class="sp">120,000~<br>130,000</div><div>중립권<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">110,000~<br>120,000</div><div>조정 시<br>50%</div></div>
+    <div class="strategy-box" style="background:#EAF3DE;color:#27500A"><div style="font-weight:700">목표가</div><div class="sp">180,000~<br>200,000</div><div>수주 발표<br>+40~55%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">100,000원</div><div>저점 이탈<br>즉시 손절</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 한화오션 핵심 4포인트:</b><br>
+    ① <b>카타르 LNG선 100척+</b> = 수주 잔고 역대 최대, 향후 3~5년 매출 가시성<br>
+    ② <b>K-방산 최대 수혜</b> = 잠수함·구축함 독점 공급 + 해외 수출<br>
+    ③ <b>SMR 원자력 추진선 2030</b> = 차세대 신사업 패러다임<br>
+    ④ <b>턴어라운드 완료</b> = 구조조정 끝, 2026 본격 흑자 전환</div>
+  </div>
+  <div class="warn-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#633806"><b>⚠ 핵심 리스크:</b> <b>단기 변동성 큼</b> — 3월 -28% 급락 전례. 조선업 사이클 2027~2028 수주 둔화 우려. 방산 수출 계약 지연 시 주가 조정. 글로벌 경기 침체 시 LNG선 발주 축소. 원자력 추진선 상용화 지연 가능성.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+</div>
+</body>
+</html>
