@@ -34,6 +34,34 @@ META_RE = re.compile(
     re.IGNORECASE,
 )
 
+BACK_BUTTON_MARK = "<!-- manddo-back-button -->"
+BACK_BUTTON_HTML = (
+    '\n' + BACK_BUTTON_MARK + '\n'
+    '<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;'
+    'display:inline-flex;align-items:center;gap:4px;'
+    'background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);'
+    'border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;'
+    'font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;'
+    'box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;'
+    'font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}'
+    '#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}'
+    '#__mdback:active{transform:translateY(0)}'
+    '</style>'
+    '<a id="__mdback" href="/stock/" '
+    'onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}"'
+    '>← 뒤로</a>\n'
+)
+
+
+def inject_back_button(html_text):
+    if BACK_BUTTON_MARK in html_text:
+        return html_text
+    m = re.search(r"<body[^>]*>", html_text, re.IGNORECASE)
+    if not m:
+        return html_text
+    idx = m.end()
+    return html_text[:idx] + BACK_BUTTON_HTML + html_text[idx:]
+
 # 종목명(한글/영문) → SEO 슬러그
 NAME_TO_SLUG = {
     "삼성전자": "samsung-electronics",
@@ -220,6 +248,22 @@ def git_push(added_count):
 
 def main():
     rebuild_only = "--rebuild" in sys.argv
+    inject_only = "--inject-back" in sys.argv
+
+    if inject_only:
+        changed = 0
+        for html in sorted(STOCK_DIR.glob("*.html")):
+            if html.name == "index.html":
+                continue
+            text = html.read_text(encoding="utf-8", errors="ignore")
+            new_text = inject_back_button(text)
+            if new_text != text:
+                html.write_text(new_text, encoding="utf-8")
+                changed += 1
+                print(f"  ✓ {html.name}")
+        print(f"\n뒤로가기 버튼 주입 완료: {changed}건")
+        return
+
     manifest = load_manifest()
     existing_slugs = {it["slug"] for it in manifest}
 
@@ -237,7 +281,8 @@ def main():
                 skipped_dup.append(src.name)
                 continue
             dest = STOCK_DIR / f"{meta['slug']}.html"
-            shutil.copy2(src, dest)
+            src_text = src.read_text(encoding="utf-8", errors="ignore")
+            dest.write_text(inject_back_button(src_text), encoding="utf-8")
             manifest.append(meta)
             existing_slugs.add(meta["slug"])
             added.append(meta["slug"])
