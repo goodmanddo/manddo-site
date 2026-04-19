@@ -141,6 +141,7 @@ def main():
     overrides = config.get("overrides", {}).get(today, {})
     override_reasons = overrides.get("reasons", {})
     override_commentary = overrides.get("commentary")
+    override_weekly_losses = overrides.get("weekly_losses")
 
     state = load_json(STATE_FILE, {"last_holdings": {}, "history": [], "completed_trades": []})
     prev_holdings = state.get("last_holdings", {})
@@ -148,7 +149,8 @@ def main():
     api = KISApi()
     bal = api.get_balance()
     holdings = {h["code"]: h for h in bal["holdings"]}
-    total_eval = bal["total_eval"] + bal["cash"]  # 주식평가 + 예수금 = 총자산
+    # KIS tot_evlu_amt는 이미 주식+현금 합계(총자산)
+    total_eval = bal["total_eval"] or (sum(h["current_price"] * h["qty"] for h in bal["holdings"]) + bal["cash"])
 
     # 초기 자본: 최초 실행 시 세팅
     if initial_capital <= 0:
@@ -264,6 +266,24 @@ def main():
 
     commentary = override_commentary or default_commentary(new_buys, exits, cumulative)
 
+    # 현재 보유 종목 (비중%만 공개)
+    current_holdings = []
+    for code, h in holdings.items():
+        weight = 0
+        if total_eval > 0 and h.get("current_price") and h.get("qty"):
+            weight = round(h["current_price"] * h["qty"] / total_eval * 100)
+        current_holdings.append({
+            "name": h["name"],
+            "slug": to_slug(h["name"], code, slug_map),
+            "market": market_label(code),
+            "weight_pct": weight,
+        })
+    current_holdings.sort(key=lambda x: x["weight_pct"], reverse=True)
+
+    # weekly_losses: override 우선
+    if override_weekly_losses:
+        weekly_losses = override_weekly_losses
+
     data = {
         "date": today,
         "start_date": start_date,
@@ -275,6 +295,7 @@ def main():
         "new_buys": new_buys,
         "exits": exits,
         "weekly_losses": weekly_losses,
+        "holdings": current_holdings,
     }
     save_json(DATA_FILE, data)
     log(f"data.json 저장: 매수 {len(new_buys)}, 청산 {len(exits)}, 누적 {cumulative:.2f}%")

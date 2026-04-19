@@ -60,6 +60,12 @@
 .rules{background:#F7F9FC;border-radius:12px;padding:16px 20px;font-size:13px;color:#6b7684;line-height:1.8}
 .rules b{color:#4e5968}
 
+.hold-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
+.hold-item{background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px;text-decoration:none;color:inherit;transition:border-color .15s ease,transform .15s ease}
+.hold-item:hover{border-color:#3182F6;transform:translateY(-1px)}
+.hold-item .hname{font-size:14px;font-weight:700;color:#191f28;letter-spacing:-0.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hold-item .hpct{font-size:14px;font-weight:800;color:#1B64DA;font-family:'SF Mono',ui-monospace,monospace;flex-shrink:0}
+
 @media(max-width:640px){
   .ai-hero{padding:32px 20px;border-radius:16px}
   .ai-hero h1{font-size:24px}
@@ -117,9 +123,15 @@
   </section>
 
   <section class="sec" id="sec-exits">
-    <h2>🟩 오늘의 청산</h2>
+    <h2>🟩 오늘의 매도</h2>
     <div class="sec-desc">익절·손절로 포지션을 정리한 종목. 최종 수익률.</div>
     <div id="list-exits"></div>
+  </section>
+
+  <section class="sec" id="sec-holdings">
+    <h2>📦 현재 보유 종목</h2>
+    <div class="sec-desc">AI 포트폴리오에 편입된 전체 종목과 비중(%). 절대 금액은 공개하지 않습니다.</div>
+    <div id="list-holdings"></div>
   </section>
 
   <section class="sec">
@@ -236,6 +248,25 @@
           </div>
           <div class="meta">${label} · 보유 ${t.hold_days}일</div>
           <div class="reason">${t.reason}</div>
+        </${tag}>
+      `);
+    });
+  }
+
+  // 현재 보유 종목 (비중만)
+  const holdEl = document.getElementById('list-holdings');
+  if(!data.holdings || data.holdings.length===0){
+    holdEl.innerHTML = '<div class="rules">보유 종목이 없습니다.</div>';
+  }else{
+    holdEl.insertAdjacentHTML('beforeend', '<div class="hold-grid" id="hold-grid"></div>');
+    const grid = document.getElementById('hold-grid');
+    data.holdings.forEach(h => {
+      const tag = h.slug ? 'a' : 'div';
+      const href = h.slug ? ` href="/stock/${h.slug}.html"` : '';
+      grid.insertAdjacentHTML('beforeend', `
+        <${tag} class="hold-item"${href}>
+          <div class="hname">${h.name}</div>
+          <div class="hpct">${h.weight_pct}%</div>
         </${tag}>
       `);
     });
