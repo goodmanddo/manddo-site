@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCI홀딩스 차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:5px}
+.t-r{background:#FCEBEB;color:#A32D2D}
+.t-g{background:#EAF3DE;color:#27500A}
+.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}
+.t-p{background:#EEEDFE;color:#26215C}
+.t-teal{background:#E1F5EE;color:#04342C}
+.t-gray{background:#f1efe8;color:#5f5e5a}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:7px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.chart-title{font-size:12px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+</style>
+<link rel="stylesheet" href="/css/page-nav.css">
+</head>
+<body>
+<div class="manddo-topbar"><a href="/" class="manddo-logo">맨또<span>.kr</span></a><a href="/stock/" class="manddo-back">← 주식 분석 목록</a></div>
+<div class="wrap">
+
+<h1>OCI홀딩스 (010060) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 화학 | 폴리실리콘·태양광·ESS | 52주 신고가 경신 종목</div>
+
+<!-- 현황 -->
+<div class="sec">📊 현재 주가 현황</div>
+<div class="card">
+  <div class="g3">
+    <div class="met">
+      <div class="ml">현재가 (3/21 기준)</div>
+      <div class="mv" style="color:#1D9E75">203,000<span style="font-size:12px;color:#888">원</span></div>
+      <div class="ms">일중 228,000 터치</div>
+    </div>
+    <div class="met">
+      <div class="ml">52주 범위</div>
+      <div class="mv" style="font-size:13px">58,600<br>~228,000</div>
+      <div class="ms">저점 대비 <b style="color:#1D9E75">+246%</b></div>
+    </div>
+    <div class="met">
+      <div class="ml">애널리스트 목표가</div>
+      <div class="mv" style="color:#185FA5;font-size:15px">214,250</div>
+      <div class="ms">최고 270,000원 | 전원 매수</div>
+    </div>
+  </div>
+  <!-- 52주 위치 바 -->
+  <div style="font-size:11px;color:#888;margin-bottom:3px">52주 가격 위치 — 현재 약 85% 구간 (신고가권)</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 78%,#E24B4A 100%);border-radius:5px;margin-bottom:18px">
+    <div style="position:absolute;left:83%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px">
+      <div style="position:absolute;top:30px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 203,000</div>
+    </div>
+    <div style="position:absolute;left:95%;top:-4px;width:3px;height:30px;background:#E24B4A;border-radius:2px;opacity:.7">
+      <div style="position:absolute;top:30px;font-size:9px;color:#E24B4A;font-weight:700;white-space:nowrap;transform:translateX(-50%)">228,000</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px">
+    <span>저점 58,600</span><span>중간 143,300</span><span>신고가 228,000</span>
+  </div>
+</div>
+
+<!-- ① 일봉 차트 패턴 -->
+<div class="sec">📈 일봉 차트 패턴 — "신고가 돌파 후 눌림목 조정"</div>
+<div class="chart-area">
+  <div class="chart-title">일봉 (Daily) <span class="ct-badge" style="background:#EAF3DE;color:#085041">불 플래그 (Bull Flag) — 매수 우호</span></div>
+  <svg width="100%" viewBox="0 0 680 220">
+    <defs>
+      <marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
+      </marker>
+    </defs>
+    <!-- 배경 -->
+    <rect x="40" y="10" width="210" height="190" rx="4" fill="#EAF3DE" opacity=".25"/>
+    <rect x="280" y="10" width="120" height="190" rx="4" fill="#FAEEDA" opacity=".3"/>
+    <rect x="430" y="10" width="210" height="190" rx="4" fill="#E6F1FB" opacity=".2"/>
+
+    <!-- 구간 레이블 -->
+    <text x="145" y="20" text-anchor="middle" font-size="10" fill="#27500A" font-weight="600">① 상승 추세 (저점→고점)</text>
+    <text x="340" y="20" text-anchor="middle" font-size="10" fill="#633806" font-weight="600">② 고점 눌림목</text>
+    <text x="535" y="20" text-anchor="middle" font-size="10" fill="#0C447C" font-weight="600">③ 재상승 기대 구간</text>
+
+    <!-- 박스 추가 그라데이션: 신고가 영역 표시 -->
+    <line x1="40" y1="45" x2="640" y2="45" stroke="#E24B4A" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="42" font-size="9" fill="#E24B4A" font-weight="600">52주 신고가 228,000</text>
+
+    <!-- ① 상승 캔들들 (작은 양봉 연속) -->
+    <!-- 저점에서 반등 -->
+    <line x1="55" y1="175" x2="55" y2="190" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="50" y="160" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="70" y1="158" x2="70" y2="178" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="65" y="145" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="85" y1="138" x2="85" y2="155" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="80" y="128" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="100" y1="118" x2="100" y2="140" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="95" y="108" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="115" y1="100" x2="115" y2="120" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="110" y="90" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <!-- 중간 강세 구간 -->
+    <line x1="130" y1="82" x2="130" y2="100" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="125" y="72" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="145" y1="68" x2="145" y2="85" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="140" y="58" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="160" y1="55" x2="160" y2="72" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="155" y="47" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <!-- 고점 근처 장대양봉 (신고가 돌파) -->
+    <line x1="178" y1="40" x2="178" y2="75" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="172" y="43" width="12" height="22" fill="#1D9E75" rx="1"/>
+    <text x="178" y="90" text-anchor="middle" font-size="8" fill="#1D9E75">신고가!</text>
+    <line x1="198" y1="38" x2="198" y2="68" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="192" y="41" width="12" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="218" y1="37" x2="218" y2="63" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="212" y="39" width="12" height="17" fill="#1D9E75" rx="1"/>
+    <!-- 52주 고점 닿고 윗꼬리 (228,000) -->
+    <line x1="238" y1="35" x2="238" y2="70" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="232" y="45" width="12" height="20" fill="#EF9F27" rx="1"/>
+
+    <!-- ② 눌림목 조정 (음봉 3~4개) -->
+    <line x1="295" y1="48" x2="295" y2="75" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="289" y="52" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="315" y1="58" x2="315" y2="80" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="309" y="60" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="335" y1="62" x2="335" y2="82" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="329" y="64" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="355" y1="64" x2="355" y2="82" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="349" y="65" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="375" y1="65" x2="375" y2="80" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="369" y="66" width="12" height="10" fill="#E24B4A" rx="1"/>
+
+    <!-- 눌림목 지지선 -->
+    <line x1="280" y1="78" x2="430" y2="78" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4 3"/>
+    <text x="430" y="76" font-size="9" fill="#1D9E75">눌림목 지지</text>
+    <text x="285" y="95" font-size="9" fill="#888">~185,000원</text>
+
+    <!-- ③ 재상승 기대 (현재 이후) -->
+    <line x1="445" y1="70" x2="445" y2="88" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="439" y="71" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="465" y1="65" x2="465" y2="82" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="459" y="66" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="485" y1="60" x2="485" y2="76" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="479" y="61" width="12" height="11" fill="#1D9E75" rx="1"/>
+    <!-- 예상 상승 화살표 -->
+    <path d="M510 65 Q555 45 600 35" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a1)"/>
+    <text x="560" y="33" font-size="9" fill="#1D9E75" font-weight="600">목표 250,000+</text>
+
+    <!-- 현재가 선 -->
+    <line x1="40" y1="65" x2="640" y2="65" stroke="#26215C" stroke-width="1" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="62" font-size="9" fill="#26215C" font-weight="600">현재 203,000원</text>
+
+    <!-- 1차 매수 구간 -->
+    <rect x="40" y="78" width="600" height="20" rx="2" fill="#9FE1CB" opacity=".2"/>
+    <text x="42" y="93" font-size="9" fill="#085041" font-weight="600">★ 1차 매수 185,000~195,000 (눌림목)</text>
+
+    <!-- 핵심 매수 구간 -->
+    <rect x="40" y="105" width="600" height="20" rx="2" fill="#9FE1CB" opacity=".3"/>
+    <text x="42" y="120" font-size="9" fill="#04342C" font-weight="600">★★ 핵심 매수 160,000~175,000</text>
+
+    <!-- 손절 -->
+    <line x1="40" y1="150" x2="640" y2="150" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 4" opacity=".5"/>
+    <text x="42" y="147" font-size="9" fill="#A32D2D">손절 145,000 이탈</text>
+
+    <rect x="40" y="200" width="600" height="1" fill="#d3d1c7"/>
+    <text x="340" y="214" text-anchor="middle" font-size="9" fill="#b4b2a9">불 플래그(Bull Flag): 강한 상승 → 횡보/소폭 조정 → 재상승 가능성 높음</text>
+  </svg>
+</div>
+
+<!-- ② 주봉 차트 -->
+<div class="sec">📈 주봉 차트 패턴 — "엘리어트 3파 진행 중"</div>
+<div class="chart-area">
+  <div class="chart-title">주봉 (Weekly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">상승 추세 정배열 — 3~5파 진행</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <defs>
+      <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
+      </marker>
+    </defs>
+    <!-- 파동 경로 -->
+    <!-- 1파 (저점에서 1차 상승) -->
+    <path d="M50 175 Q75 150 95 120" fill="none" stroke="#1D9E75" stroke-width="2.5"/>
+    <circle cx="95" cy="120" r="4" fill="#1D9E75"/>
+    <text x="95" y="112" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="600">1파</text>
+    <!-- 2파 (조정) -->
+    <path d="M95 120 Q115 140 130 148" fill="none" stroke="#E24B4A" stroke-width="1.5"/>
+    <circle cx="130" cy="148" r="3" fill="#E24B4A"/>
+    <text x="130" y="158" text-anchor="middle" font-size="9" fill="#E24B4A">2파</text>
+    <!-- 3파 (현재 진행 중 — 가장 강한 상승파) -->
+    <path d="M130 148 Q200 80 300 40" fill="none" stroke="#1D9E75" stroke-width="3"/>
+    <circle cx="300" cy="40" r="5" fill="#EF9F27"/>
+    <text x="300" y="32" text-anchor="middle" font-size="10" fill="#EF9F27" font-weight="700">3파 (현재)</text>
+    <text x="300" y="22" text-anchor="middle" font-size="9" fill="#EF9F27">228,000 신고가</text>
+    <!-- 4파 예상 (조정) -->
+    <path d="M300 40 Q330 65 350 80" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <circle cx="350" cy="80" r="4" fill="#E24B4A" opacity=".6"/>
+    <text x="355" y="90" font-size="9" fill="#E24B4A">4파 예상</text>
+    <text x="355" y="100" font-size="9" fill="#E24B4A">185,000~</text>
+    <text x="355" y="110" font-size="9" fill="#E24B4A">195,000</text>
+    <!-- 5파 예상 (최고점) -->
+    <path d="M350 80 Q420 30 480 20" fill="none" stroke="#1D9E75" stroke-width="2" stroke-dasharray="5 4"/>
+    <circle cx="480" cy="20" r="4" fill="#1D9E75" opacity=".6"/>
+    <text x="490" y="18" font-size="9" fill="#1D9E75">5파 목표</text>
+    <text x="490" y="28" font-size="9" fill="#1D9E75">250,000~270,000</text>
+    <!-- 이동평균선들 (정배열) -->
+    <!-- 5주선 -->
+    <path d="M50 180 Q120 140 200 90 Q280 50 380 60 Q450 65 520 62" fill="none" stroke="#1D9E75" stroke-width="1.5"/>
+    <!-- 20주선 -->
+    <path d="M50 185 Q130 160 230 120 Q320 80 400 75 Q470 72 520 72" fill="none" stroke="#EF9F27" stroke-width="1.2"/>
+    <!-- 60주선 -->
+    <path d="M50 192 Q150 178 260 155 Q360 120 430 100 Q490 85 520 83" fill="none" stroke="#E24B4A" stroke-width="1"/>
+
+    <!-- 정배열 설명 -->
+    <text x="530" y="60" font-size="9" fill="#1D9E75">─ 5주선</text>
+    <text x="530" y="72" font-size="9" fill="#EF9F27">─ 20주선</text>
+    <text x="530" y="83" font-size="9" fill="#E24B4A">─ 60주선</text>
+    <text x="530" y="96" font-size="9" fill="#27500A" font-weight="600">✓ 정배열 확인</text>
+
+    <!-- 현재가 표시 -->
+    <line x1="50" y1="50" x2="630" y2="50" stroke="#26215C" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="52" y="47" font-size="9" fill="#26215C" font-weight="600">현재 203,000</text>
+
+    <!-- 저점 표시 -->
+    <circle cx="50" cy="175" r="5" fill="#E24B4A"/>
+    <text x="50" y="193" text-anchor="middle" font-size="9" fill="#A32D2D">52주저점</text>
+    <text x="50" y="203" text-anchor="middle" font-size="9" fill="#A32D2D">58,600</text>
+
+    <rect x="40" y="183" width="600" height="1" fill="#d3d1c7"/>
+    <text x="340" y="195" text-anchor="middle" font-size="9" fill="#b4b2a9">엘리어트 3파 진행 중 → 4파 조정(매수 타이밍) → 5파 목표 250,000~270,000원</text>
+  </svg>
+</div>
+
+<!-- ③ 월봉 차트 -->
+<div class="sec">📈 월봉 차트 패턴 — "장기 바닥 탈출 후 신고가 행진"</div>
+<div class="chart-area">
+  <div class="chart-title">월봉 (Monthly) <span class="ct-badge" style="background:#EEEDFE;color:#26215C">장기 하락 이탈 + V자 반등 + 신고가 갱신</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <!-- 장기 하락 구간 (2022~2024) -->
+    <rect x="40" y="10" width="220" height="180" rx="4" fill="#FCEBEB" opacity=".15"/>
+    <text x="150" y="22" text-anchor="middle" font-size="10" fill="#A32D2D">2022~2024 장기 하락</text>
+    <!-- 장기 저항선 -->
+    <line x1="40" y1="50" x2="660" y2="50" stroke="#888" stroke-width="0.8" stroke-dasharray="4 4" opacity=".4"/>
+
+    <!-- 월봉 캔들 (하락 구간) -->
+    <line x1="60" y1="60" x2="60" y2="80" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="54" y="63" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="80" y1="75" x2="80" y2="100" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="74" y="78" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="100" y1="92" x2="100" y2="118" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="94" y="95" width="12" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="120" y1="113" x2="120" y2="138" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="114" y="116" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="140" y1="128" x2="140" y2="155" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="134" y="131" width="12" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="160" y1="148" x2="160" y2="175" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="154" y="151" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="180" y1="155" x2="180" y2="180" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="174" y="158" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <!-- 바닥권 (58,600) -->
+    <line x1="200" y1="158" x2="200" y2="183" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="194" y="161" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="220" y1="160" x2="220" y2="180" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="214" y="162" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <circle cx="210" cy="183" r="6" fill="#E24B4A"/>
+    <text x="210" y="200" text-anchor="middle" font-size="8" fill="#A32D2D">바닥 58,600</text>
+
+    <!-- V자 반등 시작 (2025 하반기) -->
+    <rect x="260" y="10" width="150" height="180" rx="4" fill="#EAF3DE" opacity=".2"/>
+    <line x1="240" y1="165" x2="240" y2="185" stroke="#1D9E75" stroke-width="2"/>
+    <rect x="234" y="155" width="12" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="260" y1="140" x2="260" y2="170" stroke="#1D9E75" stroke-width="2"/>
+    <rect x="254" y="130" width="12" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="280" y1="105" x2="280" y2="142" stroke="#1D9E75" stroke-width="2"/>
+    <rect x="274" y="108" width="12" height="26" fill="#1D9E75" rx="1"/>
+    <line x1="300" y1="80" x2="300" y2="115" stroke="#1D9E75" stroke-width="2"/>
+    <rect x="294" y="84" width="12" height="26" fill="#1D9E75" rx="1"/>
+    <line x1="320" y1="60" x2="320" y2="92" stroke="#1D9E75" stroke-width="2"/>
+    <rect x="314" y="63" width="12" height="24" fill="#1D9E75" rx="1"/>
+    <!-- 신고가 돌파 (2026) -->
+    <rect x="410" y="10" width="230" height="180" rx="4" fill="#E6F1FB" opacity=".2"/>
+    <line x1="345" y1="50" x2="345" y2="78" stroke="#1D9E75" stroke-width="2"/>
+    <rect x="339" y="53" width="12" height="20" fill="#1D9E75" rx="1"/>
+    <!-- 52주 저항선 돌파 -->
+    <line x1="370" y1="42" x2="370" y2="68" stroke="#1D9E75" stroke-width="2.5"/>
+    <rect x="364" y="45" width="12" height="18" fill="#EF9F27" rx="1"/>
+    <text x="370" y="35" text-anchor="middle" font-size="8" fill="#EF9F27" font-weight="600">저항선 돌파!</text>
+    <line x1="395" y1="38" x2="395" y2="62" stroke="#1D9E75" stroke-width="2.5"/>
+    <rect x="389" y="41" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <!-- 신고가 228,000 -->
+    <line x1="420" y1="30" x2="420" y2="58" stroke="#1D9E75" stroke-width="3"/>
+    <rect x="414" y="34" width="12" height="19" fill="#1D9E75" rx="1"/>
+    <text x="420" y="22" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">신고가 228,000</text>
+    <!-- 현재 조정 후 예상 -->
+    <line x1="445" y1="42" x2="445" y2="62" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="439" y="44" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <!-- 추가 상승 예상 -->
+    <path d="M470 50 Q520 30 570 20 Q610 15 640 12" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+    <text x="610" y="10" font-size="8" fill="#1D9E75" font-weight="600">270,000+</text>
+
+    <!-- 장기 저항→지지로 전환 -->
+    <text x="420" y="55" font-size="8" fill="#0F6E56">저항→지지 전환</text>
+    <!-- 현재가 선 -->
+    <line x1="40" y1="44" x2="660" y2="44" stroke="#26215C" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="41" font-size="9" fill="#26215C" font-weight="600">현재 203,000</text>
+
+    <rect x="40" y="188" width="600" height="1" fill="#d3d1c7"/>
+    <text x="340" y="200" text-anchor="middle" font-size="9" fill="#b4b2a9">장기 하락 추세 이탈 → V자 반등 → 52주 신고가 경신 → 강세장 진입 확인</text>
+  </svg>
+</div>
+
+<!-- 세력 분석 -->
+<div class="sec">🧲 세력 관점 분석 — "매집 → 1차 펌핑 완료, 2차 펌핑 준비"</div>
+<div class="card">
+  <div class="zone">
+    <div class="dot" style="background:#0F6E56"></div>
+    <div><span style="font-weight:600">세력 매집 구간</span><span class="tag t-teal">58,600~90,000</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 중반 정책 불확실성 저점. 볼린저밴드 극도 수축 + 거래량 극소. 기관·외국인 은밀 진입</div></div>
+  </div>
+  <div class="zone">
+    <div class="dot" style="background:#1D9E75"></div>
+    <div><span style="font-weight:600">1차 진입 후 가격 관리</span><span class="tag t-g">90,000~150,000</span><div style="color:#888;margin-top:2px;font-size:11px">4Q25 흑자전환 + 비중국 프리미엄 호재 노출. 20주선 관리하며 점진적 상승. 개미 후속 매수 유입</div></div>
+  </div>
+  <div class="zone">
+    <div class="dot" style="background:#EF9F27"></div>
+    <div><span style="font-weight:600">1차 펌핑 완료</span><span class="tag t-a">150,000~228,000</span><div style="color:#888;margin-top:2px;font-size:11px">텍사스 프로젝트 금융조달 + SpaceX 우주 데이터센터 연결 찌라시. 228,000 신고가 터치. 현재 조정 중</div></div>
+  </div>
+  <div class="zone">
+    <div class="dot" style="background:#185FA5"></div>
+    <div><span style="font-weight:600">현재 구간 — 2차 매집 or 분산 판단 필요</span><span class="tag t-b">185,000~210,000</span><div style="color:#888;margin-top:2px;font-size:11px">눌림목 양봉(오를때 거래량↑) vs 음봉(내릴때 거래량↓) 패턴 확인 필수. 이것이 세력 잔류 확인 방법</div></div>
+  </div>
+  <div class="zone">
+    <div class="dot" style="background:#534AB7"></div>
+    <div><span style="font-weight:600">2차 펌핑 촉매 (예정)</span><span class="tag t-p">1Q26 실적 발표 4/29</span><div style="color:#888;margin-top:2px;font-size:11px">텍사스 500MW 매각 + 베트남 웨이퍼 양산 + 흑자전환 확인 시 → 250,000~270,000원 목표 가능</div></div>
+  </div>
+</div>
+
+<!-- 세력 체크리스트 -->
+<div class="sec">✅ 세력·펀더멘털 체크리스트</div>
+<div class="card">
+  <div class="row"><span>저점 58,600 대비 +246%, 52주 신고가(228,000) 경신</span><span class="tag t-g">최강 신호 ✓</span></div>
+  <div class="row"><span>4명 애널리스트 전원 매수, 목표가 평균 214,250원 (최고 270,000)</span><span class="tag t-g">확인 ✓</span></div>
+  <div class="row"><span>4Q25 영업이익 273억 → 3분기 만에 흑자전환</span><span class="tag t-g">확인 ✓</span></div>
+  <div class="row"><span>비중국산 폴리실리콘 프리미엄 2~3배 (중국산 vs 비중국산)</span><span class="tag t-g">강점 ✓</span></div>
+  <div class="row"><span>텍사스 7GW 파이프라인 + 1Q26 500MW 매각 예정</span><span class="tag t-b">핵심 촉매 ▲</span></div>
+  <div class="row"><span>부채비율 70%, 현금 1.22조 보유 (재무 건전성 우수)</span><span class="tag t-g">안정 ✓</span></div>
+  <div class="row"><span>자사주 매입·소각 500억 (2029년까지) + DPS 1,000원</span><span class="tag t-g">주주환원 ✓</span></div>
+  <div class="row"><span>2026 연간 영업이익 최대 3,595억 예상</span><span class="tag t-b">기대 ▲</span></div>
+  <div class="row"><span>미국 정책 불확실성 (트럼프 상호관세) — 말레이시아 공장 영향</span><span class="tag t-a">리스크 △</span></div>
+  <div class="row"><span>PBR 0.73배 저평가 유지 (자산 대비 주가 낮음)</span><span class="tag t-g">가치 ✓</span></div>
+</div>
+
+<!-- 매수 전략 -->
+<div class="sec">🎯 매수 관점 종합 판단</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (1~2개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:68%;background:#EF9F27"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:6px">매수 매력도 68% — 조건부 매수</div>
+    <div style="font-size:11px;color:#5f5e5a">현재 203,000원은 신고가 직후 조정 구간. 185,000~195,000 눌림목 확인 시 1차 진입. 4/29 실적 발표 전후 변동성 주의</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (3~12개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:88%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:6px">매수 매력도 88% — 강력 매수</div>
+    <div style="font-size:11px;color:#5f5e5a">엘리어트 5파 목표 250,000~270,000원. 텍사스 프로젝트 + 비중국 밸류체인 완성 시 구조적 상승 가능. 한화솔루션 대비 압도적 우위</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#aaa">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px">📌 추천 분할 매수 전략</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EAF3DE;color:#085041">
+      <div style="font-weight:700">1차 진입</div>
+      <div class="sp">185,000~<br>195,000</div>
+      <div>눌림목 지지<br>전체 30%</div>
+    </div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C">
+      <div style="font-weight:700">★ 핵심 매수</div>
+      <div class="sp">160,000~<br>175,000</div>
+      <div>추가 조정 시<br>전체 50%</div>
+    </div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53">
+      <div style="font-weight:700">목표가</div>
+      <div class="sp">250,000~<br>270,000</div>
+      <div>엘리어트 5파<br>+30~45%↑</div>
+    </div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F">
+      <div style="font-weight:700">손절</div>
+      <div class="sp">145,000</div>
+      <div>이탈 시 즉시<br>손절</div>
+    </div>
+  </div>
+
+  <div class="info-box" style="margin-top:10px;margin-bottom:0">
+    <div style="font-size:11px;color:#085041"><b>💡 한화솔루션과의 결정적 차이:</b> OCI홀딩스는 <b>유상증자 없음 + 재무 건전 + 실적 흑자전환 + 신고가 행진</b>. 같은 재생에너지 테마지만 차트·펀더멘털 모두 OCI홀딩스가 압도적으로 유리</div>
+  </div>
+
+  <div class="warn-box" style="margin-top:8px;margin-bottom:0">
+    <div style="font-size:11px;color:#633806"><b>⚠ 핵심 리스크:</b> 트럼프 상호관세 정책 변화 → 말레이시아 공장 가동률 영향 / 미국 PFE 규정 변경 / 4/29 실적이 기대 이하일 경우 단기 조정 가능</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+</div>
+<div class="manddo-disclaimer"><b>⚠ 투자 유의사항</b><br>본 분석은 공개 정보 기반의 참고용 자료이며, 특정 종목의 매수·매도 권유가 아닙니다. 분석 시점 이후 시장 상황은 변할 수 있으며, 모든 투자 판단과 그 결과는 투자자 본인의 책임입니다.</div>
+<div class="manddo-footer"><a href="/">홈</a>·<a href="/stock/">주식 분석</a>·<a href="/about.html">소개</a>·<a href="/privacy.html">개인정보</a>·<a href="/terms.html">약관</a>·<a href="/contact.html">문의</a><br>© 2026 맨또 (manddo.kr)</div>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TYM 티와이엠 차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:5px}
+.t-r{background:#FCEBEB;color:#A32D2D}
+.t-g{background:#EAF3DE;color:#27500A}
+.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}
+.t-p{background:#EEEDFE;color:#26215C}
+.t-teal{background:#E1F5EE;color:#04342C}
+.t-gray{background:#f1efe8;color:#5f5e5a}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:7px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.chart-title{font-size:12px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+</style>
+<link rel="stylesheet" href="/css/page-nav.css">
+</head>
+<body>
+<div class="manddo-topbar"><a href="/" class="manddo-logo">맨또<span>.kr</span></a><a href="/stock/" class="manddo-back">← 주식 분석 목록</a></div>
+<div class="wrap">
+
+<h1>TYM 티와이엠 (002900) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 기계·장비 | 농기계(트랙터·콤바인) + 담배필터 | 소형주 테마주</div>
+
+<!-- 현황 -->
+<div class="sec">📊 현재 주가 현황</div>
+<div class="card">
+  <div class="g3">
+    <div class="met">
+      <div class="ml">현재가 (4월 초 기준)</div>
+      <div class="mv" style="color:#E24B4A">4,460<span style="font-size:12px;color:#888">원</span></div>
+      <div class="ms">고점 대비 -38.5% 하락</div>
+    </div>
+    <div class="met">
+      <div class="ml">52주 범위</div>
+      <div class="mv" style="font-size:13px">3,905<br>~7,250</div>
+      <div class="ms">저점 대비 +14%</div>
+    </div>
+    <div class="met">
+      <div class="ml">52주 내 위치</div>
+      <div class="mv" style="color:#E24B4A;font-size:16px">16%</div>
+      <div class="ms">저점권 근처 위치</div>
+    </div>
+  </div>
+  <!-- 52주 바 -->
+  <div style="font-size:11px;color:#888;margin-bottom:3px">52주 가격 위치 — 현재 약 16% 구간 (저점권)</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#E24B4A 0%,#F09595 20%,#FAC775 50%,#9FE1CB 100%);border-radius:5px;margin-bottom:18px">
+    <div style="position:absolute;left:15%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px">
+      <div style="position:absolute;top:30px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-40%)">▲ 4,460</div>
+    </div>
+    <div style="position:absolute;left:72%;top:-4px;width:3px;height:30px;background:#EF9F27;border-radius:2px;opacity:.6">
+      <div style="position:absolute;top:30px;font-size:9px;color:#EF9F27;font-weight:700;white-space:nowrap;transform:translateX(-50%)">우크라<br>상한가</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px">
+    <span>저점 3,905</span><span>중간 5,578</span><span>고점 7,250</span>
+  </div>
+</div>
+
+<!-- 기업 특성 -->
+<div class="sec">🏭 기업 특성 — "소형주 테마주 농기계 대표"</div>
+<div class="card">
+  <div style="font-size:12px;color:#5f5e5a;margin-bottom:8px">TYM은 1951년 설립된 <b>국내 농기계 3대 기업</b>(대동·LS엠트론·TYM) 중 하나. 트랙터 매출 비중 90%. 시가총액 약 <b>230억원 내외</b>의 소형주로, 테마 이슈 발생 시 시총이 작아 주가 변동성이 극단적으로 큼.</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px">
+    <span class="tag t-a" style="font-size:11px;padding:3px 8px">우크라이나 재건 테마</span>
+    <span class="tag t-g" style="font-size:11px;padding:3px 8px">농기계 대장주</span>
+    <span class="tag t-b" style="font-size:11px;padding:3px 8px">자율주행 농기계 2026 목표</span>
+    <span class="tag t-teal" style="font-size:11px;padding:3px 8px">유럽법인 설립 (암스테르담)</span>
+    <span class="tag t-p" style="font-size:11px;padding:3px 8px">북미 딜러스초이스 4년 연속 1위</span>
+  </div>
+</div>
+
+<!-- ① 일봉 차트 패턴 -->
+<div class="sec">📈 일봉 차트 패턴 — "테마 급등 후 하락 추세 + 저점 형성 중"</div>
+<div class="chart-area">
+  <div class="chart-title">일봉 (Daily) <span class="ct-badge" style="background:#FAEEDA;color:#633806">테마 소멸 후 하락채널 + 바닥권 횡보</span></div>
+  <svg width="100%" viewBox="0 0 680 230">
+    <defs>
+      <marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
+      </marker>
+    </defs>
+    <!-- 배경 구간 -->
+    <rect x="40" y="10" width="130" height="200" rx="4" fill="#EAF3DE" opacity=".2"/>
+    <rect x="180" y="10" width="60" height="200" rx="4" fill="#FAEEDA" opacity=".35"/>
+    <rect x="250" y="10" width="200" height="200" rx="4" fill="#FCEBEB" opacity=".2"/>
+    <rect x="460" y="10" width="180" height="200" rx="4" fill="#E6F1FB" opacity=".2"/>
+
+    <text x="105" y="20" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">① 저점 매집</text>
+    <text x="210" y="20" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">② 상한가 펌핑</text>
+    <text x="350" y="20" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">③ 하락 추세</text>
+    <text x="550" y="20" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">④ 바닥권 횡보</text>
+
+    <!-- 저점 횡보 구간 (3,905 근처) -->
+    <line x1="55" y1="185" x2="55" y2="200" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="50" y="175" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="70" y1="182" x2="70" y2="197" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="65" y="172" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="85" y1="180" x2="85" y2="195" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="80" y="171" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="100" y1="178" x2="100" y2="192" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="95" y="168" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="175" x2="115" y2="189" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="110" y="165" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="130" y1="172" x2="130" y2="186" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="125" y="163" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="145" y1="168" x2="145" y2="182" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="140" y="158" width="10" height="10" fill="#1D9E75" rx="1"/>
+
+    <!-- 우크라이나 상한가 (장대양봉) -->
+    <line x1="183" y1="95" x2="183" y2="175" stroke="#1D9E75" stroke-width="2"/>
+    <rect x="177" y="100" width="12" height="62" fill="#1D9E75" rx="1"/>
+    <text x="183" y="88" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">+30%</text>
+    <text x="183" y="79" text-anchor="middle" font-size="8" fill="#27500A">상한가!</text>
+
+    <!-- 연속 강세 며칠 -->
+    <line x1="200" y1="80" x2="200" y2="112" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="194" y="84" width="12" height="22" fill="#1D9E75" rx="1"/>
+    <line x1="217" y1="75" x2="217" y2="100" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="211" y="78" width="12" height="18" fill="#1D9E75" rx="1"/>
+
+    <!-- 고점 (7,250) 윗꼬리 -->
+    <line x1="234" y1="62" x2="234" y2="95" stroke="#EF9F27" stroke-width="1.5"/>
+    <rect x="228" y="70" width="12" height="20" fill="#EF9F27" rx="1"/>
+    <text x="234" y="55" text-anchor="middle" font-size="8" fill="#EF9F27" font-weight="700">7,250</text>
+
+    <!-- 하락 추세 시작 -->
+    <line x1="263" y1="88" x2="263" y2="115" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="257" y="92" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="283" y1="98" x2="283" y2="125" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="277" y="102" width="12" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="303" y1="110" x2="303" y2="135" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="297" y="114" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="323" y1="118" x2="323" y2="142" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="317" y="120" width="12" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="343" y1="126" x2="343" y2="148" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="337" y="128" width="12" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="363" y1="135" x2="363" y2="155" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="357" y="137" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="383" y1="140" x2="383" y2="160" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="377" y="142" width="12" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="403" y1="148" x2="403" y2="166" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="397" y="150" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="423" y1="152" x2="423" y2="168" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="417" y="153" width="12" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="443" y1="155" x2="443" y2="170" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="437" y="156" width="12" height="11" fill="#E24B4A" rx="1"/>
+
+    <!-- 하락 채널 라인 -->
+    <line x1="234" y1="68" x2="443" y2="155" stroke="#E24B4A" stroke-width="1" stroke-dasharray="4 3" opacity=".6"/>
+    <line x1="183" y1="95" x2="443" y2="170" stroke="#E24B4A" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+    <text x="390" y="132" font-size="9" fill="#A32D2D">하락채널</text>
+
+    <!-- 바닥권 횡보 (현재) -->
+    <line x1="475" y1="165" x2="475" y2="180" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="469" y="167" width="11" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="492" y1="163" x2="492" y2="177" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="486" y="164" width="11" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="508" y1="164" x2="508" y2="177" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="502" y="165" width="11" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="524" y1="163" x2="524" y2="176" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="518" y="164" width="11" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="540" y1="162" x2="540" y2="175" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="534" y="163" width="11" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="556" y1="163" x2="556" y2="175" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="550" y="164" width="11" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="572" y1="162" x2="572" y2="174" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="566" y="163" width="11" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="588" y1="163" x2="588" y2="174" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="582" y="164" width="11" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="604" y1="162" x2="604" y2="173" stroke="#E24B4A" stroke-width="1"/>
+    <rect x="598" y="163" width="11" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="620" y1="162" x2="620" y2="172" stroke="#1D9E75" stroke-width="1"/>
+    <rect x="614" y="162" width="11" height="9" fill="#1D9E75" rx="1"/>
+
+    <!-- 주요 가격 라인 -->
+    <!-- 현재가 4,460 -->
+    <line x1="40" y1="165" x2="640" y2="165" stroke="#26215C" stroke-width="1.5" stroke-dasharray="5 3" opacity=".6"/>
+    <text x="42" y="162" font-size="9" fill="#26215C" font-weight="600">현재 4,460원</text>
+
+    <!-- 52주 저점 3,905 -->
+    <line x1="40" y1="188" x2="640" y2="188" stroke="#E24B4A" stroke-width="1" stroke-dasharray="4 4" opacity=".5"/>
+    <text x="42" y="185" font-size="9" fill="#A32D2D">52주 저점 3,905</text>
+
+    <!-- 1차 저항 5,500 -->
+    <line x1="40" y1="118" x2="640" y2="118" stroke="#EF9F27" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="115" font-size="9" fill="#633806">1차 저항 5,500~6,000</text>
+
+    <!-- 매수 구간 표시 -->
+    <rect x="40" y="165" width="600" height="23" rx="3" fill="#1D9E75" opacity=".1"/>
+    <text x="340" y="180" text-anchor="middle" font-size="9" fill="#0F6E56" font-weight="600">★ 매수 고려 구간: 4,000~4,600원 (바닥권)</text>
+
+    <rect x="40" y="215" width="600" height="1" fill="#d3d1c7"/>
+    <text x="340" y="226" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 우크라이나 이슈 급등 → 하락채널 진입 → 저점 횡보 (재매집 가능성)</text>
+  </svg>
+</div>
+
+<!-- ② 주봉 차트 -->
+<div class="sec">📈 주봉 차트 패턴 — "이슈 소멸 후 역배열, 단기 바닥 형성 중"</div>
+<div class="chart-area">
+  <div class="chart-title">주봉 (Weekly) <span class="ct-badge" style="background:#FCEBEB;color:#A32D2D">역배열 하락 추세 → 바닥권 수렴</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <defs>
+      <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
+      </marker>
+    </defs>
+    <!-- 장기 횡보 (2022~2024 전반) -->
+    <path d="M50 150 Q80 145 100 155 Q120 145 140 152 Q160 145 175 150" fill="none" stroke="#888" stroke-width="1.5"/>
+    <text x="110" y="168" text-anchor="middle" font-size="9" fill="#888">장기 박스권 횡보</text>
+    <text x="110" y="178" text-anchor="middle" font-size="9" fill="#888">(3,000~5,000)</text>
+
+    <!-- 저점 형성 후 테마 급등 -->
+    <circle cx="175" cy="150" r="5" fill="#E24B4A"/>
+    <path d="M175 150 Q200 130 220 95 Q235 68 248 55" fill="none" stroke="#1D9E75" stroke-width="2.5"/>
+    <!-- 주봉 고점 (7,250) -->
+    <circle cx="248" cy="55" r="6" fill="#EF9F27"/>
+    <text x="248" y="46" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">52주 고점</text>
+    <text x="248" y="36" text-anchor="middle" font-size="9" fill="#EF9F27">7,250원</text>
+    <!-- 윗꼬리 (상한가 당일 주봉) -->
+    <line x1="248" y1="30" x2="248" y2="65" stroke="#EF9F27" stroke-width="2"/>
+
+    <!-- 하락 주봉 연속 -->
+    <path d="M248 55 Q290 90 330 120 Q370 145 400 155 Q430 160 455 163" fill="none" stroke="#E24B4A" stroke-width="2.5"/>
+
+    <!-- 이평선 역배열 -->
+    <!-- 5주선 (가장 아래 = 역배열) -->
+    <path d="M50 158 Q130 152 200 120 Q280 85 320 105 Q380 130 430 148 Q470 158 520 162" fill="none" stroke="#E24B4A" stroke-width="1.5"/>
+    <!-- 20주선 -->
+    <path d="M50 162 Q150 158 240 135 Q310 115 360 125 Q410 140 460 150 Q490 155 520 157" fill="none" stroke="#EF9F27" stroke-width="1.2"/>
+    <!-- 60주선 -->
+    <path d="M50 165 Q180 162 270 155 Q340 148 390 148 Q440 150 520 152" fill="none" stroke="#1D9E75" stroke-width="1"/>
+
+    <!-- 역배열 설명 -->
+    <text x="530" y="153" font-size="9" fill="#E24B4A">─ 5주선</text>
+    <text x="530" y="163" font-size="9" fill="#EF9F27">─ 20주선</text>
+    <text x="530" y="172" font-size="9" fill="#1D9E75">─ 60주선</text>
+    <rect x="526" y="178" width="90" height="14" rx="3" fill="#FCEBEB"/>
+    <text x="571" y="188" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="700">⚠ 역배열 상태</text>
+
+    <!-- 현재 바닥권 수렴 -->
+    <path d="M455 163 Q480 162 510 161 Q540 161 570 160 Q600 160 630 159" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <circle cx="550" cy="161" r="4" fill="#26215C" opacity=".5"/>
+    <text x="550" y="150" text-anchor="middle" font-size="9" fill="#26215C">바닥 수렴</text>
+
+    <!-- 현재가 선 -->
+    <line x1="40" y1="163" x2="640" y2="163" stroke="#26215C" stroke-width="1.5" stroke-dasharray="5 3" opacity=".6"/>
+    <text x="42" y="160" font-size="9" fill="#26215C" font-weight="600">현재 4,460원</text>
+
+    <!-- 저점 표시 -->
+    <circle cx="175" cy="150" r="5" fill="#E24B4A"/>
+    <text x="165" y="183" text-anchor="middle" font-size="8" fill="#A32D2D">저점</text>
+    <text x="165" y="193" text-anchor="middle" font-size="8" fill="#A32D2D">3,905</text>
+
+    <!-- 정배열 전환 조건 -->
+    <text x="350" y="25" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">★ 정배열 전환 조건: 5주선 > 20주선 > 60주선 순서 + 거래량 급증</text>
+
+    <rect x="40" y="188" width="600" height="1" fill="#d3d1c7"/>
+    <text x="340" y="199" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 이평선 역배열 → 매수 불리. 정배열 전환 확인 후 진입이 안전</text>
+  </svg>
+</div>
+
+<!-- ③ 월봉 차트 -->
+<div class="sec">📈 월봉 차트 패턴 — "10년 장기 박스권 + 이슈형 스파이크 반복"</div>
+<div class="chart-area">
+  <div class="chart-title">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">장기 박스권 종목 — 테마 발생 시 급등 반복 패턴</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <!-- 장기 박스권 배경 -->
+    <rect x="40" y="100" width="600" height="80" rx="4" fill="#E6F1FB" opacity=".2"/>
+    <text x="340" y="195" text-anchor="middle" font-size="9" fill="#0C447C">장기 박스권 2,000~6,000원 (10년+)</text>
+
+    <!-- 박스권 라인 -->
+    <line x1="40" y1="100" x2="640" y2="100" stroke="#EF9F27" stroke-width="1" stroke-dasharray="5 3" opacity=".5"/>
+    <line x1="40" y1="178" x2="640" y2="178" stroke="#EF9F27" stroke-width="1" stroke-dasharray="5 3" opacity=".5"/>
+    <text x="42" y="97" font-size="9" fill="#633806">박스권 상단 6,000</text>
+    <text x="42" y="195" font-size="9" fill="#633806">박스권 하단 2,000</text>
+
+    <!-- 월봉 캔들들 -->
+    <!-- 2022~2024 박스권 내 횡보 -->
+    <line x1="60" y1="138" x2="60" y2="158" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="55" y="140" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="80" y1="142" x2="80" y2="162" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="75" y="144" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="100" y1="148" x2="100" y2="168" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="95" y="150" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="120" y1="145" x2="120" y2="165" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="115" y="147" width="10" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="140" y1="152" x2="140" y2="170" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="135" y="154" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="160" y1="148" x2="160" y2="167" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="155" y="150" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="180" y1="150" x2="180" y2="168" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="175" y="152" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="200" y1="152" x2="200" y2="170" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="195" y="154" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="220" y1="150" x2="220" y2="167" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="215" y="152" width="10" height="11" fill="#1D9E75" rx="1"/>
+
+    <!-- 저점 매집 구간 -->
+    <line x1="240" y1="158" x2="240" y2="178" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="235" y="161" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="260" y1="160" x2="260" y2="178" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="255" y="162" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <!-- 52주 저점 -->
+    <circle cx="270" cy="178" r="5" fill="#E24B4A"/>
+    <text x="270" y="192" text-anchor="middle" font-size="8" fill="#A32D2D">3,905</text>
+
+    <!-- 우크라이나 이슈 급등 (스파이크) -->
+    <line x1="290" y1="45" x2="290" y2="168" stroke="#1D9E75" stroke-width="3"/>
+    <rect x="284" y="65" width="12" height="88" fill="#1D9E75" rx="1"/>
+    <line x1="290" y1="30" x2="290" y2="55" stroke="#EF9F27" stroke-width="1.5"/>
+    <text x="290" y="20" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">52주 최고</text>
+    <text x="290" y="10" text-anchor="middle" font-size="9" fill="#EF9F27">7,250</text>
+    <!-- 윗꼬리 -->
+    <text x="310" y="58" font-size="9" fill="#633806">스파이크!</text>
+
+    <!-- 하락 후 박스권 복귀 -->
+    <line x1="320" y1="108" x2="320" y2="138" stroke="#E24B4A" stroke-width="2"/>
+    <rect x="314" y="112" width="12" height="22" fill="#E24B4A" rx="1"/>
+    <line x1="345" y1="118" x2="345" y2="148" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="339" y="122" width="12" height="21" fill="#E24B4A" rx="1"/>
+    <line x1="370" y1="128" x2="370" y2="155" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="364" y="130" width="12" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="395" y1="138" x2="395" y2="160" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="389" y="140" width="12" height="17" fill="#E24B4A" rx="1"/>
+    <line x1="420" y1="145" x2="420" y2="165" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="414" y="147" width="12" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="445" y1="148" x2="445" y2="167" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="439" y="150" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="470" y1="150" x2="470" y2="168" stroke="#E24B4A" stroke-width="1.5"/>
+    <rect x="464" y="151" width="12" height="13" fill="#E24B4A" rx="1"/>
+    <!-- 현재 -->
+    <line x1="495" y1="152" x2="495" y2="168" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="489" y="153" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="520" y1="151" x2="520" y2="167" stroke="#1D9E75" stroke-width="1.5"/>
+    <rect x="514" y="152" width="12" height="12" fill="#1D9E75" rx="1"/>
+
+    <!-- 현재가 선 -->
+    <line x1="40" y1="162" x2="640" y2="162" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="560" y="160" font-size="9" fill="#26215C" font-weight="600">현재 4,460</text>
+
+    <!-- 다음 이슈 화살표 -->
+    <path d="M555 155 Q595 120 630 95" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+    <text x="610" y="88" font-size="9" fill="#1D9E75">다음 이슈</text>
+    <text x="610" y="100" font-size="9" fill="#1D9E75">급등 예상</text>
+  </svg>
+</div>
+
+<!-- 세력 분석 -->
+<div class="sec">🧲 세력 관점 분석 — "소형주 테마형 세력 운용 패턴"</div>
+<div class="card">
+  <div class="zone">
+    <div class="dot" style="background:#0F6E56"></div>
+    <div><span style="font-weight:600">매집 구간</span><span class="tag t-teal">3,905~4,500 (바닥권)</span><div style="color:#888;margin-top:2px;font-size:11px">시총 230억 초소형주 → 수억원만 투입해도 주가 수십% 움직임. 테마 뉴스 전 야금야금 매집. 거래량 극소 + 볼린저밴드 수축이 신호</div></div>
+  </div>
+  <div class="zone">
+    <div class="dot" style="background:#EF9F27"></div>
+    <div><span style="font-weight:600">이슈 발생 → 단기 펌핑</span><span class="tag t-a">우크라이나 방한 → 상한가</span><div style="color:#888;margin-top:2px;font-size:11px">우크라이나 의원단 방문 공시 → 당일 +30% 상한가. 연속 강세 며칠 → 7,250 고점. 테마주의 전형적 단기 펌핑 패턴</div></div>
+  </div>
+  <div class="zone">
+    <div class="dot" style="background:#E24B4A"></div>
+    <div><span style="font-weight:600">이슈 소멸 → 하락 + 설거지</span><span class="tag t-r">현재 하락 추세 중</span><div style="color:#888;margin-top:2px;font-size:11px">이슈 후속 뉴스 없음 → 개미 손절 + 세력 분산 완료. 고점 7,250에서 현재 4,460까지 -38%. 하락채널 진행 중</div></div>
+  </div>
+  <div class="zone">
+    <div class="dot" style="background:#185FA5"></div>
+    <div><span style="font-weight:600">재매집 준비 구간 (현재)</span><span class="tag t-b">4,000~4,600 바닥 횡보</span><div style="color:#888;margin-top:2px;font-size:11px">52주 저점(3,905) 근처에서 거래량 줄며 횡보 → 다음 이슈 찌라시 준비 중. 종전/우크라이나 재건 뉴스가 차기 촉매</div></div>
+  </div>
+</div>
+
+<!-- 세력 체크리스트 -->
+<div class="sec">✅ 세력·펀더멘털 체크리스트</div>
+<div class="card">
+  <div class="row"><span>52주 저점(3,905) 근처 저가 매력 — 하방 리스크 제한적</span><span class="tag t-g">저점권 ✓</span></div>
+  <div class="row"><span>우크라이나 재건 테마 — 종전 뉴스 시 즉각 반응 가능</span><span class="tag t-b">촉매 대기 ▲</span></div>
+  <div class="row"><span>자율주행 농기계 2026년 5단계 개발 목표</span><span class="tag t-b">미래 테마 ▲</span></div>
+  <div class="row"><span>유럽 법인 설립(암스테르담) + 유럽 점유율 10% 목표</span><span class="tag t-g">성장 ✓</span></div>
+  <div class="row"><span>1Q25 영업이익 +41% YoY — 실적 개선 중</span><span class="tag t-g">확인 ✓</span></div>
+  <div class="row"><span>시총 230억 초소형주 — 적은 자금으로 주가 크게 움직임</span><span class="tag t-a">양날의 검 △</span></div>
+  <div class="row"><span>이평선 역배열 — 현재 기술적 하락 추세 진행 중</span><span class="tag t-r">리스크 ✗</span></div>
+  <div class="row"><span>대주주 리스크 — 마약·음주운전 최대주주 이슈 존재</span><span class="tag t-r">리스크 ✗</span></div>
+</div>
+
+<!-- 주의 경고 -->
+<div class="danger-box">
+  <div style="font-size:12px;font-weight:700;color:#A32D2D;margin-bottom:4px">⚠ 소형주 테마주의 핵심 위험</div>
+  <div style="font-size:11px;color:#791F1F">
+    ① <b>이슈 없으면 주가 움직임 없음</b> — 거래량 극소, 수익 실현 어려움<br>
+    ② <b>단기 급등 후 원위치</b> — 테마주 특성상 이슈 소멸 시 원래 주가로 복귀<br>
+    ③ <b>이평선 역배열 현재 진행 중</b> — 기술적 진입 타이밍 아직 아님<br>
+    ④ <b>대주주 리스크</b> — 최대주주 관련 리스크 상존
+  </div>
+</div>
+
+<!-- 매수 전략 -->
+<div class="sec">🎯 매수 관점 종합 판단</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (지금 바로)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:35%;background:#E24B4A"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:6px">매수 매력도 35% — 이평선 역배열</div>
+    <div style="font-size:11px;color:#5f5e5a">이평선 역배열 + 하락채널 진행 중. 지금 진입은 물량 받기 위험. 거래량 급증 신호 대기</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">이슈 발생 시 단기 매매</div>
+    <div class="score-wrap"><div class="score-fill" style="width:75%;background:#EF9F27"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:6px">매수 매력도 75% — 조건부 유망</div>
+    <div style="font-size:11px;color:#5f5e5a">종전·우크라이나 재건 뉴스 발생 시 즉각 단기 매매. 상한가 첫날 추격 매수 X → 다음날 눌림목 진입. 빠른 익절 필수</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#aaa">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px">📌 추천 전략 — 2단계 접근</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#FAEEDA;color:#633806">
+      <div style="font-weight:700">관망 + 준비</div>
+      <div class="sp">현재</div>
+      <div>우크라이나<br>뉴스 모니터링</div>
+    </div>
+    <div class="strategy-box" style="background:#EAF3DE;color:#085041">
+      <div style="font-weight:700">바닥 매수</div>
+      <div class="sp">4,000~<br>4,300원</div>
+      <div>이슈 전<br>소량 선진입</div>
+    </div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53">
+      <div style="font-weight:700">이슈 목표</div>
+      <div class="sp">6,000~<br>7,000원</div>
+      <div>이슈 발생 시<br>+50~70%↑</div>
+    </div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F">
+      <div style="font-weight:700">손절</div>
+      <div class="sp">3,800원</div>
+      <div>저점 이탈<br>즉시 손절</div>
+    </div>
+  </div>
+
+  <div class="info-box" style="margin-top:10px;margin-bottom:0">
+    <div style="font-size:11px;color:#085041"><b>💡 TYM의 핵심 매매 전략:</b> "이슈 전 바닥권 소량 매집 → 상한가 첫날 추격 금지 → 둘째날 눌림목 추가 진입 → 이슈 소멸 신호 오면 즉각 익절". 소형주 테마주는 <b>짧고 굵게</b>가 원칙</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+</div>
+<div class="manddo-disclaimer"><b>⚠ 투자 유의사항</b><br>본 분석은 공개 정보 기반의 참고용 자료이며, 특정 종목의 매수·매도 권유가 아닙니다. 분석 시점 이후 시장 상황은 변할 수 있으며, 모든 투자 판단과 그 결과는 투자자 본인의 책임입니다.</div>
+<div class="manddo-footer"><a href="/">홈</a>·<a href="/stock/">주식 분석</a>·<a href="/about.html">소개</a>·<a href="/privacy.html">개인정보</a>·<a href="/terms.html">약관</a>·<a href="/contact.html">문의</a><br>© 2026 맨또 (manddo.kr)</div>
+</body>
+</html>

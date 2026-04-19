@@ -1,0 +1,67 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;font-size:15px;line-height:1.65}
+
+/* ===== 공용 헤더 ===== */
+.site-header{background:#fff;border-bottom:1px solid #d3d1c7;position:sticky;top:0;z-index:100}
+.site-header-inner{max-width:960px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:18px;font-weight:800;color:#1E3A5F;text-decoration:none;letter-spacing:-0.5px}
+.logo span{color:#1D9E75}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:#2c2c2a;text-decoration:none;font-size:13px;font-weight:600;padding:6px 10px;border-radius:6px}
+.nav a:hover{background:#f5f5f0;color:#1D9E75}
+.nav a.active{background:#EEF2FF;color:#1E3A5F}
+
+/* ===== 페이지 공용 ===== */
+.page{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+.page h1{font-size:26px;font-weight:800;margin-bottom:8px;color:#1E3A5F;letter-spacing:-0.5px}
+.page h2{font-size:18px;font-weight:700;margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid #d3d1c7}
+.page h3{font-size:15px;font-weight:700;margin:18px 0 8px}
+.page p{margin-bottom:12px;color:#44443f}
+.page ul,.page ol{margin:0 0 14px 22px}
+.page li{margin-bottom:6px;color:#44443f}
+.page .sub{font-size:13px;color:#888780;margin-bottom:18px}
+.page a{color:#1D9E75;text-decoration:underline}
+
+/* ===== 카드/그리드 ===== */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:16px}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:12px;padding:18px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;display:block}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06);border-color:#1D9E75}
+.card .cat{font-size:10px;font-weight:700;color:#1D9E75;background:#E1F5EE;display:inline-block;padding:2px 7px;border-radius:3px;margin-bottom:8px;letter-spacing:0.5px}
+.card .title{font-size:16px;font-weight:700;color:#1E3A5F;margin-bottom:4px;letter-spacing:-0.3px}
+.card .code{font-size:11px;color:#888780;margin-bottom:8px;font-family:monospace}
+.card .desc{font-size:13px;color:#5f5e5a;line-height:1.55}
+.card .tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:4px}
+.card .tag{font-size:10px;padding:2px 6px;border-radius:3px;background:#f5f5f0;color:#5f5e5a}
+
+/* ===== 히어로 ===== */
+.hero{background:linear-gradient(135deg,#EEF2FF 0%,#E1F5EE 100%);border-radius:14px;padding:36px 28px;margin-bottom:28px;text-align:center}
+.hero h1{font-size:28px;font-weight:800;color:#1E3A5F;margin-bottom:10px;letter-spacing:-0.8px}
+.hero p{font-size:15px;color:#5f5e5a;margin-bottom:0}
+
+/* ===== 카테고리 섹션 ===== */
+.cat-section{margin-bottom:36px}
+.cat-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px}
+.cat-head h2{font-size:20px;font-weight:700;color:#1E3A5F;border:none;padding:0;margin:0}
+.cat-head .more{font-size:13px;color:#1D9E75;text-decoration:none;font-weight:600}
+.cat-head .more:hover{text-decoration:underline}
+.cat-desc{font-size:13px;color:#888780;margin-bottom:14px}
+
+/* ===== 면책/푸터 ===== */
+.disclaimer{background:#FAEEDA;border-left:3px solid #EF9F27;border-radius:8px;padding:14px 16px;margin:24px 0;font-size:12px;color:#633806;line-height:1.6}
+.disclaimer b{color:#4a2a05}
+.site-footer{border-top:1px solid #d3d1c7;margin-top:48px;padding:24px 16px;background:#fff}
+.site-footer-inner{max-width:960px;margin:0 auto;font-size:12px;color:#888780;text-align:center;line-height:1.8}
+.site-footer a{color:#5f5e5a;text-decoration:none;margin:0 6px}
+.site-footer a:hover{color:#1D9E75;text-decoration:underline}
+.site-footer .copy{margin-top:8px;color:#b4b2a9}
+
+/* ===== 준비중 ===== */
+.coming{background:#fff;border:1px dashed #d3d1c7;border-radius:12px;padding:24px;text-align:center;color:#888780;font-size:13px}
+
+@media(max-width:600px){
+  .site-header-inner{flex-direction:column;align-items:flex-start;gap:10px}
+  .nav{width:100%}
+  .hero{padding:28px 20px}
+  .hero h1{font-size:22px}
+  .page h1{font-size:22px}
+}
