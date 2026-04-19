@@ -93,26 +93,20 @@ body{
 .site-footer a:hover{color:#3182F6}
 .site-footer .copy{margin-top:10px;color:#b0b8c1;font-size:12px}
 
-/* ===== 종목 검색 (네이버 스타일 — 큰 pill) ===== */
+/* ===== 종목 검색 (페이지 박스 너비 + 우측 돋보기 버튼) ===== */
 .stock-search{
   display:block;
-  width:100vw;
-  margin-left:calc(50% - 50vw);
-  margin-right:calc(50% - 50vw);
-  margin-top:0;margin-bottom:40px;
-  padding:0 max(20px, calc((100vw - 940px) / 2));
-  box-sizing:border-box;
+  width:100%;
+  margin:0 0 40px;
   position:relative;
 }
-/* SVG 아이콘 요소는 모든 화면에서 숨기고, input 배경으로 대체 (위치 버그 차단) */
 .stock-search .s-icon{display:none !important}
 .stock-search .s-input{position:relative;width:100%;display:block}
 .stock-search input{
-  width:100%;height:60px;box-sizing:border-box;display:block;
-  padding:0 52px 0 52px;
-  font-family:inherit;font-size:17px;color:#191f28;letter-spacing:-0.01em;
-  background:#fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%239aa2ac' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='11' cy='11' r='7'/><line x1='21' y1='21' x2='16.65' y2='16.65'/></svg>") no-repeat 18px center;
-  background-size:20px 20px;
+  width:100%;height:56px;box-sizing:border-box;display:block;
+  padding:0 96px 0 22px;
+  font-family:inherit;font-size:16px;color:#191f28;letter-spacing:-0.01em;
+  background:#fff;
   border:1px solid #dfe3e8;border-radius:999px;
   box-shadow:0 2px 10px rgba(25,31,40,.06);
   transition:box-shadow .18s ease,border-color .18s ease;
@@ -122,34 +116,40 @@ body{
 .stock-search input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
 .stock-search input::placeholder{color:#9aa2ac;font-weight:400}
 .stock-search input:hover{box-shadow:0 4px 16px rgba(25,31,40,.10);border-color:#c5cbd2}
-.stock-search input:focus{border-color:#a6adb6;box-shadow:0 6px 22px rgba(25,31,40,.12)}
+.stock-search input:focus{border-color:#3182F6;box-shadow:0 0 0 3px rgba(49,130,246,.15)}
 .stock-search .s-clear{
-  position:absolute;right:14px;top:50%;transform:translateY(-50%);
-  width:28px;height:28px;border:0;background:transparent;cursor:pointer;padding:0;
+  position:absolute;right:58px;top:50%;transform:translateY(-50%);
+  width:24px;height:24px;border:0;background:transparent;cursor:pointer;padding:0;
   color:#9aa2ac;border-radius:50%;display:none;align-items:center;justify-content:center;
-  font-size:13px;line-height:1;transition:background .15s ease,color .15s ease;
+  font-size:12px;line-height:1;transition:background .15s ease,color .15s ease;
   z-index:2;
 }
 .stock-search .s-clear:hover{background:#f2f4f6;color:#4e5968}
 .stock-search.has-text .s-clear{display:inline-flex}
-/* 별도 검색 버튼은 숨김 (Enter/모바일 검색키로 제출) */
+/* 우측 돋보기 제출 버튼 */
 .stock-search .s-submit{
-  display:none !important;
+  position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  border:0;border-radius:50%;
+  background:#3182F6;color:#fff;
+  cursor:pointer;padding:0;
+  font-size:0;line-height:0;
+  z-index:3;
+  transition:background .15s ease,transform .12s ease;
+  -webkit-appearance:none;
 }
+.stock-search .s-submit:hover{background:#1B64DA}
+.stock-search .s-submit:active{transform:translateY(-50%) scale(.95)}
+.stock-search .s-submit svg{width:20px;height:20px;display:block}
 @media(max-width:640px){
-  .stock-search{
-    width:auto;
-    margin-left:-16px;margin-right:-16px;
-    padding:0 12px;
-    margin-bottom:24px;
-  }
+  .stock-search{margin-bottom:24px}
   .stock-search input{
-    height:62px;font-size:16px;padding:0 52px 0 52px;
-    border-radius:999px;
-    box-shadow:0 3px 12px rgba(25,31,40,.08);
-    background-position:18px center;background-size:22px 22px;
+    height:54px;font-size:15px;padding:0 88px 0 20px;
   }
-  .stock-search .s-clear{right:14px;width:30px;height:30px;font-size:14px}
+  .stock-search .s-clear{right:54px;width:24px;height:24px}
+  .stock-search .s-submit{width:42px;height:42px;right:6px}
+  .stock-search .s-submit svg{width:18px;height:18px}
 }
 .stock-empty{
   padding:36px 20px;text-align:center;color:#8b95a1;font-size:14px;
