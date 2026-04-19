@@ -1,11 +1,11 @@
 {
-  "date": "2026-04-20",
+  "date": "2026-04-17",
   "start_date": "2026-04-17",
   "cumulative_return": 11.79,
   "week_return": 0.0,
   "win_rate": 0,
   "total_trades": 0,
-  "ai_commentary": "지난 금요일(4/17) AI가 13종목 신규 편입. 자동차·게임·방산·배터리 등 다양한 섹터에 분산. 시작 이후 누적 +11.8%.",
+  "ai_commentary": "오늘은 현대차, SK가스, NAVER 등 신규 편입. 시작 이후 누적 +11.8%.",
   "new_buys": [
     {
       "name": "현대차",
@@ -13,7 +13,7 @@
       "market": "코스피",
       "entry_to_current_pct": -0.19,
       "weight_pct": 5,
-      "reason": "지난 금요일 진입. 자동차 섹터 반등 + 미국 관세 협상 기대."
+      "reason": "현대차 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "SK가스",
@@ -21,7 +21,7 @@
       "market": "코스닥",
       "entry_to_current_pct": -1.02,
       "weight_pct": 1,
-      "reason": "지난 금요일 진입. LPG·LNG 가격 안정 + 배당 매력."
+      "reason": "SK가스 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "NAVER",
@@ -29,7 +29,7 @@
       "market": "코스피",
       "entry_to_current_pct": 2.85,
       "weight_pct": 9,
-      "reason": "지난 금요일 진입. AI 검색 엔진 개편 + 광고 단가 회복."
+      "reason": "NAVER 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "카카오",
@@ -37,7 +37,7 @@
       "market": "코스피",
       "entry_to_current_pct": -1.19,
       "weight_pct": 7,
-      "reason": "지난 금요일 진입. 카카오톡 개편 + 자회사 IPO 기대."
+      "reason": "카카오 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "LG화학",
@@ -45,7 +45,7 @@
       "market": "코스피",
       "entry_to_current_pct": 0.42,
       "weight_pct": 6,
-      "reason": "지난 금요일 진입. 배터리 자회사 분리 후 본업 가치 재평가."
+      "reason": "LG화학 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "안랩",
@@ -53,7 +53,7 @@
       "market": "코스피",
       "entry_to_current_pct": 4.31,
       "weight_pct": 11,
-      "reason": "지난 금요일 진입. 보안 수요 증가 + 정부 사이버 예산 확대."
+      "reason": "안랩 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "현대로템",
@@ -61,7 +61,7 @@
       "market": "코스피",
       "entry_to_current_pct": 2.13,
       "weight_pct": 5,
-      "reason": "지난 금요일 진입. K2 전차 폴란드 2차 계약 + 방산 모멘텀."
+      "reason": "현대로템 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "매커스",
@@ -69,7 +69,7 @@
       "market": "코스피",
       "entry_to_current_pct": -2.23,
       "weight_pct": 4,
-      "reason": "지난 금요일 진입. 반도체 후공정 장비 수주 회복."
+      "reason": "매커스 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "노바렉스",
@@ -77,7 +77,7 @@
       "market": "코스피",
       "entry_to_current_pct": 1.65,
       "weight_pct": 1,
-      "reason": "지난 금요일 진입. 건강기능식품 ODM 실적 턴어라운드."
+      "reason": "노바렉스 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "크래프톤",
@@ -85,7 +85,7 @@
       "market": "코스피",
       "entry_to_current_pct": 0.0,
       "weight_pct": 4,
-      "reason": "지난 금요일 진입. 신작 출시 사이클 + PUBG 모멘텀."
+      "reason": "크래프톤 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "AP시스템",
@@ -93,7 +93,7 @@
       "market": "코스피",
       "entry_to_current_pct": 1.13,
       "weight_pct": 5,
-      "reason": "지난 금요일 진입. OLED 장비 투자 사이클 진입."
+      "reason": "AP시스템 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "LG에너지솔루션",
@@ -101,7 +101,7 @@
       "market": "코스피",
       "entry_to_current_pct": 0.6,
       "weight_pct": 7,
-      "reason": "지난 금요일 진입. 배터리 업황 바닥 확인 + ESS 반등."
+      "reason": "LG에너지솔루션 신규 편입. 포트폴리오 비중 조정."
     },
     {
       "name": "GS피앤엘",
@@ -109,7 +109,7 @@
       "market": "코스피",
       "entry_to_current_pct": 0.72,
       "weight_pct": 5,
-      "reason": "지난 금요일 진입. 친환경 소재 + 고배당 매력."
+      "reason": "GS피앤엘 신규 편입. 포트폴리오 비중 조정."
     }
   ],
   "exits": [],
