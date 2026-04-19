@@ -203,15 +203,17 @@
     buysEl.innerHTML = '<div class="rules">오늘은 신규 매수가 없었습니다.</div>';
   }else{
     data.new_buys.forEach(t => {
+      const tag = t.slug ? 'a' : 'div';
+      const href = t.slug ? ` href="/stock/${t.slug}.html"` : '';
       buysEl.insertAdjacentHTML('beforeend', `
-        <a class="trade" href="/stock/${t.slug}.html">
+        <${tag} class="trade"${href}>
           <div class="trade-row">
             <div><span class="name">${t.name}</span><span class="market">· ${t.market}</span></div>
             <div class="pct ${cls(t.entry_to_current_pct)}">${fmtPct(t.entry_to_current_pct)}</div>
           </div>
           <div class="meta">진입가 대비 현재 · 포트폴리오 비중 ${t.weight_pct}%</div>
           <div class="reason">${t.reason}</div>
-        </a>
+        </${tag}>
       `);
     });
   }
@@ -224,15 +226,17 @@
     data.exits.forEach(t => {
       const kind = t.type==='win' ? 'win' : 'loss';
       const label = t.type==='win' ? '익절' : '손절';
+      const tag = t.slug ? 'a' : 'div';
+      const href = t.slug ? ` href="/stock/${t.slug}.html"` : '';
       exEl.insertAdjacentHTML('beforeend', `
-        <a class="trade ${kind}" href="/stock/${t.slug}.html">
+        <${tag} class="trade ${kind}"${href}>
           <div class="trade-row">
             <div><span class="name">${t.name}</span><span class="market">· ${t.market}</span></div>
             <div class="pct ${cls(t.return_pct)}">${fmtPct(t.return_pct)}</div>
           </div>
           <div class="meta">${label} · 보유 ${t.hold_days}일</div>
           <div class="reason">${t.reason}</div>
-        </a>
+        </${tag}>
       `);
     });
   }
@@ -249,7 +253,7 @@
       lossEl.insertAdjacentHTML('beforeend', `
         <div class="loss-box">
           <div class="loss-head">
-            <div class="loss-name"><a href="/stock/${l.slug}.html" style="color:inherit;text-decoration:none">${l.name}</a></div>
+            <div class="loss-name">${l.slug ? `<a href="/stock/${l.slug}.html" style="color:inherit;text-decoration:none">${l.name}</a>` : l.name}</div>
             <div class="loss-pct">${fmtPct(l.return_pct)}</div>
           </div>
           <div class="lesson"><b>배운 점 ·</b> ${l.lesson}</div>

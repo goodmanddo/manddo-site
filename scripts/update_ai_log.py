@@ -160,11 +160,9 @@ def main():
         if code in prev_holdings:
             continue
         name = h["name"]
-        slug = to_slug(name, code, slug_map)
+        slug = to_slug(name, code, slug_map)  # 미등록 시 빈 문자열 — 카드는 표시하되 링크 비활성
         if not slug:
-            # 미등록 종목: 카드 생략
-            log(f"신규 매수 (slug 미등록, 스킵): {name}/{code}")
-            continue
+            log(f"신규 매수 (slug 미등록, 카드만 표시): {name}/{code}")
         entry = h.get("avg_price") or h.get("current_price") or 0
         cur = h.get("current_price") or entry
         pct = ((cur - entry) / entry * 100) if entry else 0.0
@@ -189,8 +187,7 @@ def main():
         name = prev.get("name") or code
         slug = to_slug(name, code, slug_map)
         if not slug:
-            log(f"청산 (slug 미등록, 스킵): {name}/{code}")
-            continue
+            log(f"청산 (slug 미등록, 카드만 표시): {name}/{code}")
         # 실현 손익률: 오늘 현재가 기준 근사
         try:
             cur = api.get_current_price(code).get("price") or 0
