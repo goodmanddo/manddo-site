@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>강원랜드 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>강원랜드 (035250) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSPI 레저(카지노) | 52주 저점 터치 후 재매집 구간 진입</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 강원랜드 = "독점 카지노, 고점 분산 후 저점 횡보 매집 구간"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 국내 유일 내국인 출입 카지노 독점 지위<br>② 안정적 현금흐름 (연매출 1.5조원대)<br>③ 52주 저점권(15.0%) 진입 = 저가 매수 기회<br>④ 중장기 관광 회복 수혜 기대
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>역배열(16,920 &lt; MA20 17,184 &lt; MA60 17,840) 지속 = 단기 약세. 16,450원 이탈 시 16,000원까지 추가 하락 가능. 외국인 관광 회복 지연 시 실적 부진 우려.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#E24B4A">16,920<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -0.99%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">16,450~<br>19,590원</div><div class="ms">저점 대비 +2.9%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">15.0%</div><div class="ms">극저점권 (위험/기회)</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">2월 고점(19,590) 대비 -13.6% 하락. 4월 7일 52주 저점 16,450원 터치 후 바닥 다지기 횡보 중. 세력 재매집 vs 추가 하락 분기점.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:15%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 16,920</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 16,450</span><span>중간 18,020</span><span>고점 19,590</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2월 19,590원 고점 형성 후 3~4월 급락(-16.0%)으로 52주 저점 터치. 엘리어트 파동상 ④파 깊은 조정(피보나치 78.6% 이상 되돌림) 진행 중. 현재 16,450~17,200원 박스권 횡보 = 세력 재매집 구간 vs 추가 하락 전 일시 휴식 판단 필요. 거래량 감소(45만주대)는 패닉 진정 신호. MA20(17,184) 돌파 시 반등 확인, 16,450 이탈 시 추가 하락.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-r" style="font-size:10px;padding:2px 7px">역배열 약세</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">저점권 15%</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">횡보 매집 가능</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">엘리어트 ④파 조정</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">독점 카지노</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "고점 분산 후 저점 횡보, 세력 재매집 구간 진입 여부 확인 단계"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>3~4월 급락 후 횡보 = 세력 털기 완료 신호.</b> 3/30~3/31 거래량 폭증(109만주×2일) = 투매성 물량 출회. 이후 4월 거래량 45만~60만주로 급감 = 패닉 진정 + 저점 횡보 매집 가능성. 세력은 16,450~17,200원 구간에서 재매집 시도 중.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>역배열(16,920 &lt; MA20 17,184 &lt; MA60 17,840) = 단기 약세 지속.</b> MA20이 1차 저항선. 돌파 시 17,840(MA60)까지 반등 가능하나, 이탈 지속 시 추가 하락. 현재 MA20 아래에서 눌림 → 매수 타이밍 아님, 돌파 대기.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 78.6% 이상 되돌림 = 추세 훼손 경계 구간.</b> 19,590→16,450 하락 = -16.0%. 61.8% 되돌림(17,649)도 하회 = 깊은 조정. 단, 이 정도 조정 후 지지 시 반등 탄력 크고, 이탈 시 16,000원 이하까지 추가 하락 가능.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>16,450원 = 세력 본전 방어선 추정.</b> 4/7 저점 터치 후 즉각 반등 → 세력이 이 가격 이하로 내주지 않으려는 의지. 이 구간 지지 확인 시 분할 매수, 이탈 시 손절. 단기 카탈리스트: 4월 실적 발표·관광객 회복 뉴스 주시.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#FCEBEB;color:#A32D2D">고점 분산 후 저점 박스권</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="25" width="140" height="185" rx="3" fill="#EAF3DE" opacity=".12"/>
+    <text x="110" y="38" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2월 고점 형성</text>
+    <rect x="185" y="25" width="180" height="185" rx="3" fill="#FCEBEB" opacity=".15"/>
+    <text x="275" y="38" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">3~4월 급락 털기</text>
+    <rect x="370" y="25" width="270" height="185" rx="3" fill="#E1F5EE" opacity=".12"/>
+    <text x="505" y="38" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">저점 횡보 매집 구간?</text>
+    
+    <line x1="55" y1="80" x2="55" y2="95" stroke="#1D9E75" stroke-width="2.2"/><rect x="49" y="82" width="11" height="11" fill="#1D9E75" rx="1.5"/>
+    <line x1="75" y1="75" x2="75" y2="88" stroke="#1D9E75" stroke-width="2.2"/><rect x="69" y="77" width="11" height="9" fill="#1D9E75" rx="1.5"/>
+    <line x1="95" y1="70" x2="95" y2="83" stroke="#1D9E75" stroke-width="2.2"/><rect x="89" y="72" width="11" height="9" fill="#1D9E75" rx="1.5"/>
+    <line x1="115" y1="55" x2="115" y2="68" stroke="#1D9E75" stroke-width="2.2"/><rect x="109" y="57" width="11" height="9" fill="#1D9E75" rx="1.5"/>
+    <line x1="135" y1="50" x2="135" y2="62" stroke="#1D9E75" stroke-width="2.2"/><rect x="129" y="52" width="11" height="8" fill="#1D9E75" rx="1.5"/>
+    <line x="155" y1="48" x2="155" y2="59" stroke="#1D9E75" stroke-width="2.2"/><rect x="149" y="50" width="11" height="8" fill="#1D9E75" rx="1.5"/>
+    
+    <line x1="195" y1="52" x2="195" y2="68" stroke="#E24B4A" stroke-width="2.2"/><rect x="189" y="60" width="11" height="6" fill="#E24B4A" rx="1.5"/>
+    <line x1="215" y1="82" x2="215" y2="100" stroke="#E24B4A" stroke-width="2.2"/><rect x="209" y="90" width="11" height="8" fill="#E24B4A" rx="1.5"/>
+    <line x1="235" y1="105" x2="235" y2="122" stroke="#E24B4A" stroke-width="2.2"/><rect x="229" y="113" width="11" height="6" fill="#E24B4A" rx="1.5"/>
+    <line x1="255" y1="95" x2="255" y2="112" stroke="#E24B4A" stroke-width="2.2"/><rect x="249" y="103" width="11" height="7" fill="#E24B4A" rx="1.5"/>
+    <line x1="275" y1="100" x2="275" y2="118" stroke="#E24B4A" stroke-width="2.2"/><rect x="269" y="108" width="11" height="8" fill="#E24B4A" rx="1.5"/>
+    <line x1="295" y1="130" x2="295" y2="152" stroke="#E24B4A" stroke-width="2.2"/><rect x="289" y="140" width="11" height="10" fill="#E24B4A" rx="1.5"/>
+    <line x1="315" y1="155" x2="315" y2="172" stroke="#E24B4A" stroke-width="2.2"/><rect x="309" y="163" width="11" height="7" fill="#E24B4A" rx="1.5"/>
+    <line x1="335" y1="170" x2="335" y2="185" stroke="#E24B4A" stroke-width="2.2"/><rect x="329" y="177" width="11" height="6" fill="#E24B4A" rx="1.5"/>
+    <line x1="355" y1="180" x2="355" y2="195" stroke="#E24B4A" stroke-width="2.2"/><rect x="349" y="187" width="11" height="6" fill="#E24B4A" rx="1.5"/>
+    
+    <line x1="395" y1="188" x2="395" y2="198" stroke="#888" stroke-width="2"/><rect x="389" y="192" width="11" height="5" fill="#888" rx="1.5"/>
+    <line x1="420" y1="186" x2="420" y2="196" stroke="#888" stroke-width="2"/><rect x="414" y="190" width="11" height="4" fill="#888" rx="1.5"/>
+    <line x1="445" y1="183" x2="445" y2="194" stroke="#1D9E75" stroke-width="2"/><rect x="439" y="187" width="11" height="5" fill="#1D9E75" rx="1.5"/>
+    <line x1="470" y1="180" x2="470" y2="192" stroke="#888" stroke-width="2"/><rect x="464" y="185" width="11" height="5" fill="#888" rx="1.5"/>
+    <line x1="495" y1="175" x2="495" y2="188" stroke="#1D9E75" stroke-width="2"/><rect x="489" y="179" width="11" height="7" fill="#1D9E75" rx="1.5"/>
+    <line x1="520" y1="172" x2="520" y2="185" stroke="#1D9E75" stroke-width="2"/><rect x="514" y="176" width="11" height="7" fill="#1D9E75" rx="1.5"/>
+    <line x1="545" y1="178" x2="545" y2="190" stroke="#E24B4A" stroke-width="2"/><rect x="539" y="183" width="11" height="5" fill="#E24B4A" rx="1.5"/>
+    <line x1="570" y1="180" x2="570" y2="192" stroke="#1D9E75" stroke-width="2"/><rect x="564" y="185" width="11" height="5" fill="#1D9E75" rx="1.5"/>
+    <line x1="595" y1="182" x2="595" y2="194" stroke="#E24B4A" stroke-width="2"/><rect x="589" y="187" width="11" height="5" fill="#E24B4A" rx="1.5"/>
+    <line x1="620" y1="185" x2="620" y2="197" stroke="#E24B4A" stroke-width="2"/><rect x="614" y="190" width="11" height="5" fill="#E24B4A" rx="1.5"/>
+    
+    <line x1="40" y1="50" x2="640" y2="50" stroke="#A32D2D" stroke-width="1.8" stroke-dasharray="5 3" opacity=".6"/>
+    <text x="42" y="46" font-size="9" fill="#A32D2D" font-weight="600">2월 고점 19,590</text>
+    
+    <line x1="40" y1="125" x2="640" y2="125" stroke="#1E3A5F" stroke-width="1.3" stroke-dasharray="3 2" opacity=".5"/>
+    <text x="42" y="121" font-size="8.5" fill="#1E3A5F" font-weight="600">MA20 17,184</text>
+    
+    <line x1="40" y1="190" x2="640" y2="190" stroke="#E24B4A" stroke-width="1.8" stroke-dasharray="5 3" opacity=".6"/>
+    <text x="42" y="186" font-size="9" fill="#E24B4A" font-weight="600">52주 저점 16,450</text>
+    
+    <rect x="380" y="180" width="250" height="20" rx="3" fill="#E1F5EE" opacity=".3" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="3 2"/>
+    <text x="505" y="193" text-anchor="middle" font-size="8.5" fill="#04342C" font-weight="600">세력 재매집 구간 16,450~17,200</text>
+    
+    <circle cx="355" cy="188" r="12" fill="none" stroke="#EF9F27" stroke-width="2" opacity=".7"/>
+    <text x="355" y="215" text-anchor="middle" font-size="8" fill="#EF9F27" font-weight="700">3/31 급락</text>
+    <text x="355" y="224" text-anchor="middle" font-size="7" fill="#888">109만주 투매</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 2월 고점 분산 → 3~4월 급락 털기 → 4월 저점 횡보. MA20 돌파 vs 16,450 이탈 분기점</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 ④파 깊은 조정, ⑤파 마지막 상승 대기 구간"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>엘리어트 파동 ④파 조정 진행 중.</b> ①파(25년 5~7월, 16,000→20,700) → ②파(25년 7~10월, 20,700→16,870) → ③파(25년 11월~26년 2월, 16,870→19,590, 미완성 3파) → 현재 ④파(19,590→16,450, -16.0%). ⑤파 마지막 상승 대기 중이나, ④파 깊이가 61.8% 초과로 추세 약화 가능성도 존재.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>20주선(약 17,800) 이탈, 60주선(약 17,500) 근접.</b> 주봉 역배열 진입. 20주선 재돌파 시 중기 반등 신호. 60주선 이탈 시 120주선(약 17,200)까지 추가 조정 가능. 현재 60~120주선 사이 = 중장기 매수 구간.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2025년 6~7월 급등 후 8개월간 소화·조정.</b> 20,700원 고점 이후 16,450~19,590 박스권 등락 반복 = 세력이 고점 물량 소화하며 장기 횡보. 이 과정에서 약손 털어내고 강손 매집 → 이후 시세 분출 가능성.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 카탈리스트: 2026년 하반기 관광 회복 기대.</b> 외국인 관광객 증가 + 내국인 여가 소비 회복 시 실적 개선. 목표: 18,500원(MA60 회복) → 19,500원(전고점 재도전) → 21,000원(피보나치 확장 1.272).</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEEDFE;color:#26215C">엘리어트 ④파 조정</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <rect x="40" y="20" width="130" height="160" rx="3" fill="#EAF3DE" opacity=".12"/>
+    <text x="105" y="33" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">①파 상승</text>
+    <rect x="175" y="20" width="110" height="160" rx="3" fill="#FAC775" opacity=".1"/>
+    <text x="230" y="33" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">②파 조정</text>
+    <rect x="290" y="20" width="150" height="160" rx="3" fill="#E6F1FB" opacity=".12"/>
+    <text x="365" y="33" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">③파 상승(미완)</text>
+    <rect x="445" y="20" width="195" height="160" rx="3" fill="#FCEBEB" opacity=".13"/>
+    <text x="543" y="33" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">④파 조정 중</text>
+    
+    <line x1="55" y1="130" x2="55" y2="145" stroke="#1D9E75" stroke-width="2.8"/><rect x="47" y="133" width="15" height="10" fill="#1D9E75" rx="1.5"/>
+    <line x1="80" y1="105" x2="80" y2="125" stroke="#1D9E75" stroke-width="2.8"/><rect x="72" y="108" width="15" height="15" fill="#1D9E75" rx="1.5"/>
+    <line x1="105" y1="70" x2="105" y2="92" stroke="#1D9E75" stroke-width="2.8"/><rect x="97" y="73" width="15" height="17" fill="#1D9E75" rx="1.5"/>
+    <line x1="130" y1="45" x2="130" y2="65" stroke="#1D9E75" stroke-width="2.8"/><rect x="122" y="48" width="15" height="15" fill="#1D9E75" rx="1.5"/>
+    <line x1="155" y1="35" x2="155" y2="52" stroke="#1D9E75" stroke-width="2.8"/><rect x="147" y="38" width="15" height="12" fill="#1D9E75" rx="1.5"/>
+    <text x="155" y="28" text-anchor="middle" font-size="10" fill="#27500A" font-weight="700">①</text>
+    
+    <line x1="185" y1="50" x2="185" y2="68" stroke="#E24B4A" stroke-width="2.8"/><rect x="177" y="58" width="15" height="8" fill="#E24B4A" rx="1.5"/>
+    <line x1="210" y1="75" x2="210" y2="95" stroke="#E24B4A" stroke-width="2.8"/><rect x="202" y="83" width="15" height="10" fill="#E24B4A" rx="1.5"/>
+    <line x1="235" y1="105" x2="235" y2="125" stroke="#E24B4A" stroke-width="2.8"/><rect x="227" y="113" width="15" height="10" fill="#E24B4A" rx="1.5"/>
+    <line x1="260" y1="110" x2="260" y2="128" stroke="#E24B4A" stroke-width="2.8"/><rect x="252" y="117" width="15" height="9" fill="#E24B4A" rx="1.5"/>
+    <text x="235" y="100" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">②</text>
+    
+    <line x1="305" y1="115" x2="305" y2="132" stroke="#1D9E75" stroke-width="2.8"/><rect x="297" y="119" width="15" height="11" fill="#1D9E75" rx="1.5"/>
+    <line x1="330" y1="95" x2="330" y2="112" stroke="#1D9E75" stroke-width="2.8"/><rect x="322" y="99" width="15" height="11" fill="#1D9E75" rx="1.5"/>
+    <line x1="355" y1="75" x2="355" y2="93" stroke="#1D9E75" stroke-width="2.8"/><rect x="347" y="79" width="15" height="12" fill="#1D9E75" rx="1.5"/>
+    <line x1="380" y1="60" x2="380" y2="78" stroke="#1D9E75" stroke-width="2.8"/><rect x="372" y="64" width="15" height="12" fill="#1D9E75" rx="1.5"/>
+    <line x1="405" y1="52" x2="405" y2="68" stroke="#1D9E75" stroke-width="2.8"/><rect x="397" y="56" width="15" height="10" fill="#1D9E75" rx="1.5"/>
+    <line x1="430" y1="48" x2="430" y2="63" stroke="#1D9E75" stroke-width="2.8"/><rect x="422" y="52" width="15" height="9" fill="#1D9E75" rx="1.5"/>
+    <text x="380" y="53" text-anchor="middle" font-size="10" fill="#27500A" font-weight="700">③</text>
+    
+    <line x1="465" y1="63" x2="465" y2="82" stroke="#E24B4A" stroke-width="2.8"/><rect x="457" y="71" width="15" height="9" fill="#E24B4A" rx="1.5"/>
+    <line x1="490" y1="95" x2="490" y2="115" stroke="#E24B4A" stroke-width="2.8"/><rect x="482" y="103" width="15" height="10" fill="#E24B4A" rx="1.5"/>
+    <line x1="515" y1="118" x2="515" y2="138" stroke="#E24B4A" stroke-width="2.8"/><rect x="507" y="126" width="15" height="10" fill="#E24B4A" rx="1.5"/>
+    <line x1="540" y1="140" x2="540" y2="158" stroke="#E24B4A" stroke-width="2.8"/><rect x="532" y="148" width="15" height="8" fill="#E24B4A" rx="1.5"/>
+    <line x1="565" y1="152" x2="565" y2="168" stroke="#E24B4A" stroke-width="2.8"/><rect x="557" y="159" width="15" height="7" fill="#E24B4A" rx="1.5"/>
+    <line x1="590" y1="155" x2="590" y2="170" stroke="#888" stroke-width="2.8"/><rect x="582" y="161" width="15" height="7" fill="#888" rx="1.5"/>
+    <line x1="615" y1="157" x2="615" y2="172" stroke="#E24B4A" stroke-width="2.8"/><rect x="607" y="163" width="15" height="7" fill="#E24B4A" rx="1.5"/>
+    <text x="540" y="135" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">④</text>
+    
+    <line x1="40" y1="35" x2="640" y2="35" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="31" font-size="8.5" fill="#26215C" font-weight="600">25년 7월 고점 20,700</text>
+    
+    <line x1="40" y1="48" x2="640" y2="48" stroke="#A32D2D" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="44" font-size="8.5" fill="#A32D2D" font-weight="600">26년 2월 고점 19,590</text>
+    
+    <line x1="40" y1="165" x2="640" y2="165" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="161" font-size="8.5" fill="#E24B4A" font-weight="600">52주 저점 16,450</text>
+    
+    <path d="M 55 140 Q 200 80, 430 55" stroke="#1E3A5F" stroke-width="2" fill="none" stroke-dasharray="5 3" opacity=".4"/>
+    <text x="250" y="72" font-size="8" fill="#1E3A5F" font-weight="600">상승 추세선(①~③파)</text>
+    
+    <circle cx="540" cy="154" r="14" fill="none" stroke="#EF9F27" stroke-width="2" opacity=".7"/>
+    <text x="540" y="177" text-anchor="middle" font-size="7.5" fill="#EF9F27" font-weight="600">현재 위치</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: ①파(25.6~7월 급등) → ②파 조정 → ③파(미완 신고점 실패) → ④파 깊은 조정 → ⑤파 대기</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2024년 저점 이후 대형 상승파 진행 중, 2026년 조정은 중간 숨고르기"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024년 6월 13,720원 = 사이클 바닥 확정.</b> 이후 2025년 7월 20,700원까지 +50.8% 상승. 독점 사업 구조 + 턴어라운드 기대감 반영. 현재 조정은 대세 상승 중간 휴식 구간.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>월봉 20선(약 18,200) 이탈, 60선(약 17,500) 근접.</b> 월봉 60선 = 장기 생명선. 이 구간 지지 시 중장기 상승 재개. 이탈 시 120선(약 16,800) 재시험 가능하나, 독점 사업 특성상 대폭락 가능성 낮음.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2024~2025년 대형 컵앤핸들 패턴 진행 중.</b> 2024년 저점(13,720) → 2025년 고점(20,700) = 컵 형성. 2026년 조정(16,450~19,590 박스) = 핸들 조정. 핸들 이탈 후 20,700 돌파 시 +30~50% 추가 상승 기대.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망: 2026~2027년 22,000~25,000원 목표.</b> 외국인 관광 회복 + 국내 여가 소비 증가 + 배당 매력(시가배당률 3~4%). 리스크: 규제 강화(도박 중독 대책), 경기 침체 시 방문객 감소. 16,000원 이하 이탈 시 시나리오 재검토 필요.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">컵앤핸들 핸들 조정 중</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="25" width="180" height="160" rx="3" fill="#FCEBEB" opacity=".1"/>
+    <text x="130" y="38" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">2024년 바닥 구간</text>
+    <rect x="225" y="25" width="220" height="160" rx="3" fill="#EAF3DE" opacity=".12"/>
+    <text x="335" y="38" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2025년 상승파 (컵 형성)</text>
+    <rect x="450" y="25" width="190" height="160" rx="3" fill="#FAC775" opacity=".1"/>
+    <text x="545" y="38" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">2026년 핸들 조정</text>
+    
+    <line x1="55" y1="95" x2="55" y2="120" stroke="#E24B4A" stroke-width="3"/><rect x="45" y="103" width="19" height="15" fill="#E24B4A" rx="2"/>
+    <line x1="85" y1="90" x2="85" y2="110" stroke="#1D9E75" stroke-width="3"/><rect x="75" y="95" width="19" height="13" fill="#1D9E75" rx="2"/>
+    <line x1="115" y1="105" x2="115" y2="128" stroke="#E24B4A" stroke-width="3"/><rect x="105" y="113" width="19" height="13" fill="#E24B4A" rx="2"/>
+    <line x1="145" y1="115" x2="145" y2="135" stroke="#E24B4A" stroke-width="3"/><rect x="135" y="122" width="19" height="11" fill="#E24B4A" rx="2"/>
+    <line x1="175" y1="130" x2="175" y2="150" stroke="#E24B4A" stroke-width="3"/><rect x="165" y="137" width="19" height="11" fill="#E24B4A" rx="2"/>
+    <line x1="205" y1="135" x2="205" y2="153" stroke="#E24B4A" stroke-width="3"/><rect x="195" y="141" width="19" height="10" fill="#E24B4A" rx="2"/>
+    <text x="115" y="170" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">24.6월 저점</text>
+    <text x="115" y="179" text-anchor="middle" font-size="7.5" fill="#888">13,720</text>
+    
+    <line x1="245" y1="120" x2="245" y2="138" stroke="#1D9E75" stroke-width="3"/><rect x="235" y="125" width="19" height="11" fill="#1D9E75" rx="2"/>
+    <line x1="275" y1="100" x2="275" y2="118" stroke="#1D9E75" stroke-width="3"/><rect x="265" y="105" width="19" height="11" fill="#1D9E75" rx="2"/>
+    <line x1="305" y1="80" x2="305" y2="98" stroke="#1D9E75" stroke-width="3"/><rect x="295" y="85" width="19" height="11" fill="#1D9E75" rx="2"/>
+    <line x1="335" y1="65" x2="335" y2="83" stroke="#1D9E75" stroke-width="3"/><rect x="325" y="70" width="19" height="11" fill="#1D9E75" rx="2"/>
+    <line x1="365" y1="55" x2="365" y2="72" stroke="#1D9E75" stroke-width="3"/><rect x="355" y="59" width="19" height="11" fill="#1D9E75" rx="2"/>
+    <line x1="395" y1="40" x2="395" y2="57" stroke="#1D9E75" stroke-width="3"/><rect x="385" y="44" width="19" height="11" fill="#1D9E75" rx="2"/>
+    <line x1="425" y1="48" x2="425" y2="65" stroke="#E24B4A" stroke-width="3"/><rect x="415" y="53" width="19" height="10" fill="#E24B4A" rx="2"/>
+    <text x="395" y="33" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">25.7월 고점</text>
+    <text x="395" y="42" text-anchor="middle" font-size="7.5" fill="#888">20,700</text>
+    
+    <line x1="470" y1="70" x2="470" y2="88" stroke="#E24B4A" stroke-width="3"/><rect x="460" y="75" width="19" height="11" fill="#E24B4A" rx="2"/>
+    <line x1="500" y1="85" x2="500" y2="103" stroke="#E24B4A" stroke-width="3"/><rect x="490" y="90" width="19" height="11" fill="#E24B4A" rx="2"/>
+    <line x1="530" y1="75" x2="530" y2="93" stroke="#1D9E75" stroke-width="3"/><rect x="520" y="80" width="19" height="11" fill="#1D9E75" rx="2"/>
+    <line x1="560" y1="68" x2="560" y2="85" stroke="#E24B4A" stroke-width="3"/><rect x="550" y="73" width="19" height="10" fill="#E24B4A" rx="2"/>
+    <line x1="590" y1="95" x2="590" y2="113" stroke="#E24B4A" stroke-width="3"/><rect x="580" y="100" width="19" height="11" fill="#E24B4A" rx="2"/>
+    <line x1="620" y1="115" x2="620" y2="132" stroke="#E24B4A" stroke-width="3"/><rect x="610" y="120" width="19" height="10" fill="#E24B4A" rx="2"/>
+    
+    <line x1="40" y1="40" x2="640" y2="40" stroke="#26215C" stroke-width="1.6" stroke-dasharray="5 3" opacity=".5"/>
+    <text x="42" y="36" font-size="8.5" fill="#26215C" font-weight="600">역대 고점 20,700</text>
+    
+    <line x1="40" y1="70" x2="640" y2="70" stroke="#1E3A5F" stroke-width="1.3" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="42" y="66" font-size="8" fill="#1E3A5F" font-weight="600">26년 2월 고점 19,590</text>
+    
+    <line x1="40" y1="125" x2="640" y2="125" stroke="#E24B4A" stroke-width="1.6" stroke-dasharray="5 3" opacity=".5"/>
+    <text x="42" y="121" font-size="8.5" fill="#E24B4A" font-weight="600">현재가 16,920 / 저점 16,450</text>
+    
+    <path d="M 175 143 Q 275 113, 395 50 Q 470 75, 560 80" stroke="#1D9E75" stroke-width="2.5" fill="none" stroke-dasharray="6 4" opacity=".4"/>
+    <text x="350" y="93" font-size="8" fill="#1D9E75" font-weight="600">컵앤핸들 패턴</text>
+    
+    <circle cx="620" cy="125" r="16" fill="none" stroke="#EF9F27" stroke-width="2.2" opacity=".7"/>
+    <text x="620" y="150" text-anchor="middle" font-size="7.5" fill="#EF9F27" font-weight="600">현재 2026.4</text>
+    
+    <line x1="560" y1="155" x2="600" y2="120" stroke="#633806" stroke-width="1.5" fill="none" marker-end="url(#arr)" opacity=".6"/>
+    <text x="560" y="153" text-anchor="end" font-size="7.5" fill="#633806" font-weight="600">핸들 조정 중</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 24년 저점(13,720) → 25년 고점(20,700) 컵 형성 → 26년 핸들 조정 → 돌파 시 22,000+ 목표</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">① 16,450~17,200원 = 세력 재매집 구간 추정</span><span class="tag t-g">매집 중</span><div style="color:#888;margin-top:2px;font-size:11px">3월 말~4월 급락 시 거래량 폭증(109만주×2일) = 투매성 물량 출회. 이후 거래량 급감(45만~60만주) = 패닉 진정. 세력은 본인 매집 본전(추정 16,450~16,800) 밑으로 내주지 않으려는 의지 확인. 4/7 저점 터치 후 즉각 반등 = 방어 매수 신호. 이 구간 지지 확인 시 ⑤파 상승 기대.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">② 독점 사업 구조 = 하방 제한, 상방 탄력 제한</span><span class="tag t-navy">안정성</span><div style="color:#888;margin-top:2px;font-size:11px">국내 유일 내국인 출입 카지노. 경쟁사 없음 = 안정적 현금흐름(연매출 1.5조, 영업이익률 20%대). 단, 성장성 제한 = 급등 기대 어려움. 배당 매력(시가배당률 3~4%) = 장기 보유 적합. 외국인·기관 수급: 2월 고점에서 일부 차익실현 후 현재 횡보. 추가 매집 신호 없음 = 개인 주도 장세.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">③ 2026년 카탈리스트: 관광 회복 + 배당</span><span class="tag t-a">이벤트</span><div style="color:#888;margin-top:2px;font-size:11px">외국인 관광객 증가(K-콘텐츠 효과) + 내국인 여가 소비 회복 = 실적 개선 기대. 2분기 실적 발표(5월) 주시. 연간 배당 예상 600~700원(시가배당률 3.5~4.1%) = 16,000원대 매수 시 배당 매력 ↑. 단, 실적 서프라이즈 가능성 낮음 = 주가 급등 기대 어려움.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">④ 리스크: 16,450 이탈 시 16,000 → 15,500 추가 하락</span><span class="tag t-r">경계</span><div style="color:#888;margin-top:2px;font-size:11px">역배열 지속 = 단기 약세. 52주 저점(16,450) 이탈 시 심리적 지지선 16,000 → 2024년 저점 15,350까지 하락 가능. 거시 리스크: 경기 침체 시 방문객 감소, 도박 중독 규제 강화(사행산업 통합감독법 개정안) 통과 시 영업 제약. 단, 독점 구조상 대폭락 가능성 낮음 = 분할 매수 전략 유효.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>52주 위치 15.0% = 극저점권 진입, 저가 매수 기회</span><span class="tag t-g">기회</span></div>
+  <div class="row"><span>독점 카지노 사업 = 안정적 현금흐름 + 하방 제한</span><span class="tag t-navy">구조적</span></div>
+  <div class="row"><span>엘리어트 ④파 조정 중 = ⑤파 마지막 상승 대기</span><span class="tag t-b">파동</span></div>
+  <div class="row"><span>2026년 외국인 관광 회복 기대 + 배당 매력(3.5~4%)</span><span class="tag t-g">카탈리스트</span></div>
+  <div class="row"><span>거래량 감소(45만주) = 패닉 진정, 횡보 매집 신호</span><span class="tag t-teal">수급</span></div>
+  <div class="row"><span>월봉 컵앤핸들 핸들 조정 = 돌파 시 22,000+ 목표</span><span class="tag t-b">패턴</span></div>
+  <div class="row"><span>역배열(16,920 &lt; 17,184 &lt; 17,840) = 단기 약세 지속</span><span class="tag t-a">주의</span></div>
+  <div class="row"><span>MA20(17,184) 돌파 실패 = 추가 조정 가능성</span><span class="tag t-a">저항</span></div>
+  <div class="row"><span>16,450원 이탈 시 16,000 → 15,500 추가 하락</span><span class="tag t-r">리스크</span></div>
+  <div class="row"><span>도박 규제 강화 + 경기 침체 시 실적 부진 우려</span><span class="tag t-r">리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:55%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 55점 — 관망 후 조건부 매수</div>
+    <div style="font-size:11px;color:#5f5e5a">역배열 지속 = 단기 약세. MA20(17,184) 돌파 확인 후 매수 or 16,450 지지 확인 후 분할 매수. 목표: 17,800(MA60) → 18,500. 손절: 16,200 이탈 시.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:72%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 72점</div>
+    <div style="font-size:11px;color:#5f5e5a">독점 사업 + 저점권 진입 = 중장기 매력 ↑. 16,450~17,000 분할 매수 후 18개월 보유. 목표: 19,500(전고점) → 22,000(컵앤핸들 돌파). 배당 3.5~4% 추가 수익. 16,000 이하 이탈 시 재검토.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "저점 분할 매수 후 MA20 돌파 시 추가 매수"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">17,100~<br>17,300</div><div>MA20(17,184) 근처<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">16,450~<br>16,800</div><div>52주 저점~피보 78.6%<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">18,500~<br>19,500</div><div>MA60 회복+전고점<br>+9~15%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">16,200원</div><div>52주 저점 이탈 시</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 강원랜드 핵심 4포인트:</b><br>
+    ① <b>52주 위치 15.0% = 극저점권</b> — 2월 고점 대비 -13.6% 하락, 저가 매수 기회<br>
+    ② <b>세력 재매집 구간 16,450~17,200</b> — 거래량 감소 = 패닉 진정, 바닥 다지기<br>
+    ③ <b>엘리어트 ④파 조정 → ⑤파 대기</b> — 깊은 조정 후 반등 시 탄력 ↑<br>
+    ④ <b>독점 사업 + 배당 3.5~4%</b> — 중장기 안정 수익 + 관광 회복 수혜</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 역배열 지속 = 단기 약세. 16,450원 이탈 시 16,000 → 15,500 추가 하락 가능. 도박 규제 강화(사행산업법 개정) + 경기 침체 시 방문객 감소 → 실적 부진 우려. MA20(17,184) 돌파 확인 전까지 추격 매수 금지.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4)</div>
+</div>
+</body>
+</html>

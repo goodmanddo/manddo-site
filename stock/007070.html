@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GS리테일 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>GS리테일 (007070) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSPI 유통업 | 52주 신고가 재도전·5파 엔딩 국면 진입</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ GS리테일 = "8개월 매집 후 2차 분출·전고점 24,100 돌파 여부가 승부처"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 2025년 5~10월 13,000~17,000원 장기 횡보 = 세력 대량 매집<br>② 3월 17,800 급락 후 V자 반등 = 매집 원가선 사수<br>③ 이평선 완벽 정배열 (23,600 > 22,067 > 21,361)<br>④ 편의점(GS25) 점포 확대 + 호텔 회복 = 실적 턴어라운드
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>52주 위치 92.1%(고점권) = 추격 시 고점 물림 리스크. 24,100 전고점 돌파 실패 시 22,000~21,000 재조정 가능. 편의점 업계 경쟁 심화·소비 침체 변수.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">23,600<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 +0.85%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">17,800~<br>24,100원</div><div class="ms">저점 대비 +32.6%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">92.1%</div><div class="ms">초고점권 (돌파 대기)</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">현재가 23,600원은 52주 고점 24,100원 대비 -2.1%. 엘리어트 5파 종착 or 돌파 후 연장파 갈림길.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:92.1%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 23,600</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 17,800</span><span>중간 20,950</span><span>고점 24,100</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2025년 5~10월 8개월 횡보 매집(13,000~17,000원) 후 11월 1차 분출(→21,950). 2026년 1~3월 조정(17,800까지 -18%) 후 4월 2차 분출로 고점 재도전 중. 24,100 돌파 시 26,000~28,000 목표. 실패 시 22,000 되돌림.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">5파 엔딩</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">정배열 완성</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">세력 매집 완료</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">전고점 돌파 대기</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">고점권 추격 주의</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "4월 가속 상승·24,100 저항 3차 도전 중"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>3월 17,800 급락 = 세력 본전 사수선.</b> 2025년 매집 원가(15,000~17,000) 근처까지 하락했으나 즉시 V자 반등 = 세력이 본전 밑 하락 용납 못함. 이후 거래량 수반 재상승 = 2차 시세 준비 완료.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>이평선 완벽 정배열.</b> 현재가 23,600 > MA20 22,067(+6.9%) > MA60 21,361 ≈ MA120 21,375. 단기·중기·장기 모두 상승 지지. MA20이 지지선 역할 중 (22,000 터치 후 반등 3회).</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 23.6%(22,613) 돌파 후 고점 재터치.</b> 3월 조정 후 50%(20,950) → 38.2%(21,693) → 23.6%(22,613) 순차 돌파. 현재 24,100 저항에서 3차 도전 중. 돌파 시 확장 목표 26,500(1.382배).</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>4월 14~16일 가속 상승(22,000→23,700) = 단기 과열.</b> 3일간 +7.7% 급등 후 거래량 감소·횡보 = 단기 피로. 24,100 돌파 실패 시 22,500~22,000 조정 후 재도전 가능성.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">고점 재도전·상승삼각형 돌파 시도</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#26215C"/></marker></defs>
+    
+    <rect x="40" y="50" width="140" height="150" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="110" y="62" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 3월 급락·매집 원가 사수</text>
+    
+    <rect x="185" y="35" width="150" height="165" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="260" y="47" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② V자 반등·재상승</text>
+    
+    <rect x="340" y="20" width="140" height="180" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="410" y="32" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">③ 고점 재도전 (과열)</text>
+    
+    <line x1="55" y1="175" x2="55" y2="190" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="178" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="70" y1="170" x2="70" y2="185" stroke="#E24B4A" stroke-width="2"/><rect x="64" y="173" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="85" y1="165" x2="85" y2="195" stroke="#E24B4A" stroke-width="2"/><rect x="79" y="170" width="10" height="22" fill="#E24B4A" rx="1"/>
+    <line x1="100" y1="150" x2="100" y2="180" stroke="#E24B4A" stroke-width="2"/><rect x="94" y="155" width="10" height="22" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="140" x2="115" y2="170" stroke="#E24B4A" stroke-width="2"/><rect x="109" y="145" width="10" height="22" fill="#E24B4A" rx="1"/>
+    <line x1="130" y1="135" x2="130" y2="160" stroke="#1D9E75" stroke-width="2"/><rect x="124" y="138" width="10" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="145" y1="130" x2="145" y2="155" stroke="#1D9E75" stroke-width="2"/><rect x="139" y="133" width="10" height="20" fill="#1D9E75" rx="1"/>
+    
+    <line x1="195" y1="125" x2="195" y2="145" stroke="#1D9E75" stroke-width="2"/><rect x="189" y="128" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="210" y1="115" x2="210" y2="135" stroke="#1D9E75" stroke-width="2"/><rect x="204" y="118" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="225" y1="105" x2="225" y2="125" stroke="#1D9E75" stroke-width="2"/><rect x="219" y="108" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="240" y1="95" x2="240" y2="115" stroke="#1D9E75" stroke-width="2"/><rect x="234" y="98" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="255" y1="90" x2="255" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="249" y="93" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="270" y1="85" x2="270" y2="105" stroke="#1D9E75" stroke-width="2"/><rect x="264" y="88" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="285" y1="80" x2="285" y2="100" stroke="#1D9E75" stroke-width="2"/><rect x="279" y="83" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="300" y1="75" x2="300" y2="95" stroke="#1D9E75" stroke-width="2"/><rect x="294" y="78" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="315" y1="72" x2="315" y2="92" stroke="#1D9E75" stroke-width="2"/><rect x="309" y="75" width="10" height="15" fill="#1D9E75" rx="1"/>
+    
+    <line x1="350" y1="70" x2="350" y2="88" stroke="#1D9E75" stroke-width="2"/><rect x="344" y="73" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="365" y1="55" x2="365" y2="75" stroke="#1D9E75" stroke-width="2"/><rect x="359" y="58" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="380" y1="45" x2="380" y2="65" stroke="#1D9E75" stroke-width="2"/><rect x="374" y="48" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="395" y1="35" x2="395" y2="55" stroke="#1D9E75" stroke-width="2"/><rect x="389" y="38" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="410" y1="32" x2="410" y2="52" stroke="#1D9E75" stroke-width="2"/><rect x="404" y="35" width="10" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="425" y1="30" x2="425" y2="48" stroke="#1D9E75" stroke-width="2"/><rect x="419" y="33" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="440" y1="28" x2="440" y2="46" stroke="#EF9F27" stroke-width="2"/><rect x="434" y="31" width="10" height="13" fill="#EF9F27" rx="1"/>
+    <line x1="455" y1="26" x2="455" y2="44" stroke="#EF9F27" stroke-width="2"/><rect x="449" y="29" width="10" height="13" fill="#EF9F27" rx="1"/>
+    
+    <line x1="40" y1="30" x2="640" y2="30" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="3 2" opacity=".6"/>
+    <text x="545" y="27" font-size="9" fill="#E24B4A" font-weight="600">저항 24,100 (52주 고점)</text>
+    
+    <line x1="40" y1="75" x2="640" y2="75" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="72" font-size="9" fill="#26215C" font-weight="600">현재 23,600</text>
+    
+    <line x1="40" y1="110" x2="640" y2="110" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="545" y="107" font-size="8" fill="#1D9E75">MA20 22,067</text>
+    
+    <rect x="480" y="60" width="140" height="28" rx="4" fill="#E6F1FB" opacity=".8"/>
+    <text x="550" y="72" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">📌 매수 구간</text>
+    <text x="550" y="83" text-anchor="middle" font-size="8" fill="#0C447C">22,000~22,500 (MA20 지지)</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 3월 급락(세력 본전선 사수) → V자 반등 → 4월 가속 상승 → 24,100 저항 3차 도전 중</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 5파 종착·돌파 or 조정 갈림길"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2025년 5~10월 장기 횡보(13,700~17,400) = 세력 8개월 대량 매집.</b> 이 구간이 현재 시세의 핵심 원가선. 급하게 올린 종목은 짧게 가지만, 횡보 매집 후 올린 종목은 길게 간다(PDF 3 원칙). 3월 17,800 급락도 이 원가선까지만 허용.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>엘리어트 5파 진행 중 (주봉 기준).</b> ①파: 5~6월 상승(13,700→17,750). ②파: 7~10월 조정(16,000~17,400 횡보). ③파: 11월 돌파(17,400→21,950, 가장 강력). ④파: 12월~3월 조정(17,800까지 깊은 되돌림). ⑤파: 3월~현재(17,800→23,600). 현재 5파 종착 or 연장 여부 판단 시점.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>주봉 20/60/120선 정배열 완성.</b> 주봉 MA20(약 22,000) 위 안착 = 단기 상승 추세 확립. MA60(약 19,500) 이탈 안 하는 한 중기 추세 유지. 17,800은 MA120(약 17,000) 근처 터치 후 반등 = 장기 추세선 사수.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 목표: 24,100 돌파 후 26,000~28,000.</b> 피보나치 확장 1.382배(26,500), 1.618배(28,000) 도달 가능. 단, 24,100 3차 실패 시 4파 연장으로 21,000~20,000 재조정 후 최종 5파 가능성도 존재 = 분할 대응 필수.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 5파 종착·상승 채널 유지</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#1E3A5F"/></marker></defs>
+    
+    <rect x="50" y="130" width="120" height="50" rx="4" fill="#E1F5EE" opacity=".15"/>
+    <text x="110" y="142" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">①②파 (매집 구간)</text>
+    
+    <line x1="65" y1="165" x2="65" y2="175" stroke="#1D9E75" stroke-width="2.5"/><rect x="60" y="167" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="80" y1="160" x2="80" y2="170" stroke="#1D9E75" stroke-width="2.5"/><rect x="75" y="162" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="155" x2="95" y2="168" stroke="#1D9E75" stroke-width="2.5"/><rect x="90" y="158" width="9" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="110" y1="152" x2="110" y2="163" stroke="#1D9E75" stroke-width="2.5"/><rect x="105" y="154" width="9" height="7" fill="#1D9E75" rx="1"/>
+    <line x1="125" y1="150" x2="125" y2="160" stroke="#1D9E75" stroke-width="2.5"/><rect x="120" y="152" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="140" y1="148" x2="140" y2="158" stroke="#1D9E75" stroke-width="2.5"/><rect x="135" y="150" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="155" y1="145" x2="155" y2="156" stroke="#1D9E75" stroke-width="2.5"/><rect x="150" y="147" width="9" height="7" fill="#1D9E75" rx="1"/>
+    
+    <text x="110" y="190" text-anchor="middle" font-size="8" fill="#1E3A5F" font-weight="700">① 1파</text>
+    <text x="150" y="165" text-anchor="middle" font-size="8" fill="#888" font-weight="600">② 2파</text>
+    
+    <line x1="185" y1="115" x2="185" y2="135" stroke="#1D9E75" stroke-width="2.5"/><rect x="180" y="118" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="200" y1="90" x2="200" y2="110" stroke="#1D9E75" stroke-width="2.5"/><rect x="195" y="93" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="65" x2="215" y2="85" stroke="#1D9E75" stroke-width="2.5"/><rect x="210" y="68" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="230" y1="50" x2="230" y2="70" stroke="#1D9E75" stroke-width="2.5"/><rect x="225" y="53" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="245" y1="45" x2="245" y2="65" stroke="#1D9E75" stroke-width="2.5"/><rect x="240" y="48" width="9" height="15" fill="#1D9E75" rx="1"/>
+    
+    <text x="215" y="40" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="700">③ 3파 (최강)</text>
+    
+    <line x1="275" y1="55" x2="275" y2="75" stroke="#E24B4A" stroke-width="2.5"/><rect x="270" y="58" width="9" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="290" y1="65" x2="290" y2="85" stroke="#E24B4A" stroke-width="2.5"/><rect x="285" y="68" width="9" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="305" y1="70" x2="305" y2="90" stroke="#E24B4A" stroke-width="2.5"/><rect x="300" y="73" width="9" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="320" y1="75" x2="320" y2="95" stroke="#E24B4A" stroke-width="2.5"/><rect x="315" y="78" width="9" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="335" y1="100" x2="335" y2="130" stroke="#E24B4A" stroke-width="2.5"/><rect x="330" y="105" width="9" height="22" fill="#E24B4A" rx="1"/>
+    <line x1="350" y1="120" x2="350" y2="145" stroke="#E24B4A" stroke-width="2.5"/><rect x="345" y="123" width="9" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="365" y1="130" x2="365" y2="155" stroke="#E24B4A" stroke-width="2.5"/><rect x="360" y="133" width="9" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="380" y1="140" x2="380" y2="165" stroke="#E24B4A" stroke-width="2.5"/><rect x="375" y="143" width="9" height="20" fill="#E24B4A" rx="1"/>
+    
+    <text x="335" y="95" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">④ 4파 (깊은 조정)</text>
+    
+    <line x1="410" y1="125" x2="410" y2="145" stroke="#1D9E75" stroke-width="2.5"/><rect x="405" y="128" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="425" y1="105" x2="425" y2="125" stroke="#1D9E75" stroke-width="2.5"/><rect x="420" y="108" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="440" y1="85" x2="440" y2="105" stroke="#1D9E75" stroke-width="2.5"/><rect x="435" y="88" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="455" y1="70" x2="455" y2="90" stroke="#1D9E75" stroke-width="2.5"/><rect x="450" y="73" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="470" y1="58" x2="470" y2="78" stroke="#1D9E75" stroke-width="2.5"/><rect x="465" y="61" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="485" y1="50" x2="485" y2="70" stroke="#1D9E75" stroke-width="2.5"/><rect x="480" y="53" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="500" y1="45" x2="500" y2="65" stroke="#EF9F27" stroke-width="2.5"/><rect x="495" y="48" width="9" height="15" fill="#EF9F27" rx="1"/>
+    <line x1="515" y1="42" x2="515" y2="62" stroke="#EF9F27" stroke-width="2.5"/><rect x="510" y="45" width="9" height="15" fill="#EF9F27" rx="1"/>
+    
+    <text x="470" y="38" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="700">⑤ 5파 (종착?)</text>
+    
+    <line x1="50" y1="42" x2="640" y2="42" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
+    <text x="555" y="39" font-size="8" fill="#E24B4A" font-weight="600">24,100 돌파 대기</text>
+    
+    <line x1="50" y1="175" x2="550" y2="30" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="5 3" opacity=".35"/>
+    <text x="420" y="65" font-size="8" fill="#1E3A5F" transform="rotate(-20 420 65)">상승 추세선</text>
+    
+    <path d="M 60 175 Q 200 150, 350 130 T 515 55" stroke="#EF9F27" stroke-width="1.2" fill="none" opacity=".4"/>
+    <text x="340" y="110" font-size="8" fill="#EF9F27">MA60 (중기 지지선)</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 엘리어트 5파 진행 중·상승 채널 유지·24,100 돌파가 승부처</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2년 컵앤핸들 완성·장기 상승 트렌드 진입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024~2025년 U자형 컵(13,350→19,000) 형성 = 장기 바닥 완료.</b> 2024년 2~4월 17,000~19,000 고점 → 2025년 1~5월 13,350 저점(역사적 바닥) → 2025년 6~10월 회복. 이 과정이 '컵' 형성.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>2026년 1~3월 조정 = '핸들' 형성 후 돌파.</b> 11월 21,550 급등 후 조정(19,800~22,000 박스, 3월 17,800 급락) = 컵앤핸들의 '핸들'. 4월 재돌파(23,600) = 패턴 완성. 목표가 = 컵 깊이(19,000-13,350=5,650) 더하면 27,200.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>월봉 MA20(약 20,000) 돌파 = 장기 추세 전환 확정.</b> 2024년 중반~2025년 중반 20,000 밑에서 횡보 = 약세장. 2025년 11월 돌파 후 현재 MA20 위 안착 = 강세장 전환. MA20이 하방 지지선 역할 수행 중.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망: 24,100 돌파 후 27,000~30,000 목표. 리스크는 20,000 이탈.</b> 월봉 상 20,000 이탈 시 컵앤핸들 무효화 = 장기 추세 훼손. 반대로 24,100 돌파 시 2~3년 상승 사이클 진입 가능성. 편의점 성장+호텔 회복+실적 개선 = 펀더멘털 뒷받침.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">컵앤핸들 완성·장기 상승 트렌드</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="80" y="80" width="200" height="105" rx="5" fill="#E6F1FB" opacity=".12"/>
+    <text x="180" y="93" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">컵 (CUP) 형성</text>
+    
+    <rect x="285" y="70" width="100" height="85" rx="5" fill="#FAEEDA" opacity=".12"/>
+    <text x="335" y="83" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">핸들</text>
+    
+    <rect x="390" y="50" width="120" height="105" rx="5" fill="#EAF3DE" opacity=".12"/>
+    <text x="450" y="63" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">돌파 (2026)</text>
+    
+    <line x1="90" y1="95" x2="90" y2="110" stroke="#888" stroke-width="3"/><rect x="84" y="98" width="11" height="10" fill="#888" rx="1"/>
+    <line x1="108" y1="100" x2="108" y2="115" stroke="#888" stroke-width="3"/><rect x="102" y="103" width="11" height="10" fill="#888" rx="1"/>
+    <line x1="126" y1="105" x2="126" y2="125" stroke="#E24B4A" stroke-width="3"/><rect x="120" y="108" width="11" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="144" y1="120" x2="144" y2="140" stroke="#E24B4A" stroke-width="3"/><rect x="138" y="123" width="11" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="162" y1="135" x2="162" y2="155" stroke="#E24B4A" stroke-width="3"/><rect x="156" y="138" width="11" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="180" y1="150" x2="180" y2="170" stroke="#E24B4A" stroke-width="3"/><rect x="174" y="153" width="11" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="198" y1="160" x2="198" y2="180" stroke="#E24B4A" stroke-width="3"/><rect x="192" y="163" width="11" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="216" y1="155" x2="216" y2="175" stroke="#1D9E75" stroke-width="3"/><rect x="210" y="158" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="234" y1="145" x2="234" y2="165" stroke="#1D9E75" stroke-width="3"/><rect x="228" y="148" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="252" y1="135" x2="252" y2="155" stroke="#1D9E75" stroke-width="3"/><rect x="246" y="138" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="270" y1="125" x2="270" y2="145" stroke="#1D9E75" stroke-width="3"/><rect x="264" y="128" width="11" height="14" fill="#1D9E75" rx="1"/>
+    
+    <text x="180" y="197" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">▼ 13,350 (2025.5 바닥)</text>
+    
+    <line x1="300" y1="95" x2="300" y2="115" stroke="#1D9E75" stroke-width="3"/><rect x="294" y="98" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="318" y1="80" x2="318" y2="100" stroke="#1D9E75" stroke-width="3"/><rect x="312" y="83" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="336" y1="70" x2="336" y2="95" stroke="#E24B4A" stroke-width="3"/><rect x="330" y="73" width="11" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="354" y1="85" x2="354" y2="110" stroke="#E24B4A" stroke-width="3"/><rect x="348" y="88" width="11" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="372" y1="95" x2="372" y1="120" stroke="#E24B4A" stroke-width="3"/><rect x="366" y="98" width="11" height="20" fill="#E24B4A" rx="1"/>
+    
+    <line x1="405" y1="100" x2="405" y2="120" stroke="#1D9E75" stroke-width="3"/><rect x="399" y="103" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="423" y1="80" x2="423" y2="100" stroke="#1D9E75" stroke-width="3"/><rect x="417" y="83" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="441" y1="65" x2="441" y2="85" stroke="#1D9E75" stroke-width="3"/><rect x="435" y="68" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="459" y1="55" x2="459" y2="75" stroke="#1D9E75" stroke-width="3"/><rect x="453" y="58" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="477" y1="50" x2="477" y2="70" stroke="#1D9E75" stroke-width="3"/><rect x="471" y="53" width="11" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="495" y1="48" x2="495" y2="68" stroke="#EF9F27" stroke-width="3"/><rect x="489" y="51" width="11" height="14" fill="#EF9F27" rx="1"/>
+    
+    <text x="336" y="53" text-anchor="middle" font-size="8" fill="#1E3A5F" font-weight="700">21,550 (2025.11)</text>
+    
+    <line x1="60" y1="48" x2="640" y2="48" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="560" y="44" font-size="9" fill="#E24B4A" font-weight="600">24,100 돌파 시 27,000+ 목표</text>
+    
+    <path d="M 180 170 Q 270 130, 400 100 T 500 60" stroke="#0C447C" stroke-width="1.5" fill="none" stroke-dasharray="5 4" opacity=".4"/>
+    <text x="350" y="115" font-size="8" fill="#0C447C">컵앤핸들 추세선</text>
+    
+    <line x1="60" y1="125" x2="640" y2="125" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="565" y="122" font-size="8" fill="#1D9E75">MA20 (20,000)</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2년간 컵앤핸들 완성·장기 상승 트렌드 진입·목표 27,000~30,000</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">매집 완료·2차 시세 분출 중</span><span class="tag t-g">세력 컨트롤</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 5~10월 8개월간 13,000~17,000원 장기 횡보 = 세력 대량 매집 구간. 이후 11월 1차 분출(→21,950), 조정 후 2026년 4월 2차 분출(→23,600). <b>3월 17,800 급락 시 즉시 V자 반등 = 세력이 본전(매집 원가 15,000~17,000) 밑 하락 용납 못함.</b> 거래량 패턴: 매집 시 소량·지속, 분출 시 대량·폭발(2/5 789K, 2/10 518K). 현재 고점권 거래량 감소 = 세력 일부 분산 가능성 vs 돌파 후 본격 분산 대기 중.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">외국인·기관 매수세 전환 (2026년)</span><span class="tag t-navy">수급 개선</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 하반기 외국인·기관 매도 우세 → 2026년 1~4월 순매수 전환 추정(차트상 상승 시 거래량 증가 = 수급 유입). <b>3월 17,800 급락 후 빠른 회복 = 저가 매수 세력 대기 중.</b> 유통주 ETF·밸류업 테마 수혜 가능성. 단, 24,100 돌파 실패 시 외국인 차익 실현 리스크.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">편의점 점포 확대·호텔 회복 = 실적 턴어라운드</span><span class="tag t-a">펀더멘털</span><div style="color:#888;margin-top:2px;font-size:11px">GS25 점포 수 지속 증가(2026년 1.7만 개 돌파 추정), 호텔신라 인수 후 파르나스호텔 수익성 개선, 친환경·ESG 투자 지속. <b>2026년 1~2분기 실적 턴어라운드 기대감</b> → 현재 주가 상승의 펀더멘털 근거. 단, PER 15~18배 수준 = 저평가 아님, 성장성 프리미엄 반영 중.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">고점권 추격 리스크·편의점 경쟁 심화</span><span class="tag t-r">리스크</span><div style="color:#888;margin-top:2px;font-size:11px"><b>52주 위치 92.1% = 초고점권. 24,100 돌파 실패 시 22,000~20,000 조정 리스크.</b> 편의점 업계 경쟁 심화(세븐일레븐·CU·이마트24), 소비 침체 시 매출 둔화 가능. 호텔 부문 외부 변수(환율·여행 수요). <b>엘리어트 5파 종착 = 대세 상승 마지막 단계 → 고점 추격 금지, 조정 시 분할 매수 원칙.</b></div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>✅ 2025년 8개월 횡보 매집 후 시세 분출 = 세력 컨트롤 종목</span><span class="tag t-g">강력</span></div>
+  <div class="row"><span>✅ 이평선 완벽 정배열 (MA20 > MA60 ≈ MA120) = 추세 확립</span><span class="tag t-b">기술적</span></div>
+  <div class="row"><span>✅ 3월 17,800 급락 후 V자 반등 = 세력 본전선 사수 확인</span><span class="tag t-g">세력 시그널</span></div>
+  <div class="row"><span>✅ 컵앤핸들 패턴 완성 (목표가 27,200) = 장기 상승 트렌드</span><span class="tag t-g">패턴</span></div>
+  <div class="row"><span>✅ GS25 점포 확대·호텔 회복 = 실적 턴어라운드 기대</span><span class="tag t-navy">펀더멘털</span></div>
+  <div class="row"><span>✅ 밸류업 테마·유통주 재평가 모멘텀 (2026년)</span><span class="tag t-teal">섹터</span></div>
+  <div class="row"><span>⚠ 52주 위치 92.1% = 고점권 추격 매수 경계</span><span class="tag t-a">주의</span></div>
+  <div class="row"><span>⚠ 24,100 저항 3차 도전 중 = 돌파 실패 시 조정 가능</span><span class="tag t-a">기술적</span></div>
+  <div class="row"><span>🚨 엘리어트 5파 종착 = 상승 마지막 단계·과욕 금물</span><span class="tag t-r">리스크</span></div>
+  <div class="row"><span>🚨 편의점 경쟁 심화·소비 침체 시 실적 둔화 리스크</span><span class="tag t-r">산업 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:65%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 65% — 조정 대기 후 분할 매수</div>
+    <div style="font-size:11px;color:#5f5e5a">현재 고점권(92.1%) = 추격 금지. <b>24,100 돌파 시 26,000 목표 추격 가능</b>하나, 돌파 실패 시 22,000(MA20) or 21,000(MA60) 조정 대기 후 분할 매수 권장. 5파 종착 = 단기 과욕 금물.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78%</div>
+    <div style="font-size:11px;color:#5f5e5a">컵앤핸들 완성 + 실적 턴어라운드 = 장기 상승 트렌드 진입. <b>목표가 27,000~30,000 (컵 깊이 투영 + 펀더멘털 개선)</b>. 20,000(MA120) 이탈 전까지 중장기 홀딩 전략 유효. 편의점 성장성 + 밸류업 수혜 = 2~3년 관점 매력적.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "고점권 추격 금지·조정 시 분할 매수·24,100 돌파 시 추격"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">22,000~<br>22,500원</div><div>MA20 지지<br>(피보나치 23.6%)<br>비중 30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">21,000~<br>21,500원</div><div>MA60 근처<br>(피보나치 38.2%)<br>비중 50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">26,000~<br>28,000원</div><div>컵앤핸들 목표<br>(24,100 +10~16%)<br>+10~18%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">20,000원</div><div>MA120·50% 피보<br>이탈 시 손절</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 GS리테일 핵심 4포인트:</b><br>
+    ① <b>8개월 횡보 매집 후 2차 분출</b> — 세력이 15,000~17,000원 원가선 사수 중. 3월 17,800 급락 후 V자 반등이 증거.<br>
+    ② <b>컵앤핸들 완성 = 27,000 목표</b> — 2년 바닥 형성 후 돌파. 월봉 상 장기 상승 트렌드 진입.<br>
+    ③ <b>편의점 성장 + 호텔 회복</b> — GS25 점포 확대·파르나스 수익성 개선 = 실적 턴어라운드 기대.<br>
+    ④ <b>24,100 돌파가 승부처</b> — 돌파 시 26,000~28,000. 실패 시 22,000~21,000 조정 후 재도전.</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 52주 위치 92.1% 초고점권 = 현 시점 추격 시 고점 물림 리스크 높음. <b>엘리어트 5파 종착 = 상승 마지막 단계</b> → 조정 없는 추격 금지. 24,100 3차 돌파 실패 시 22,000~20,000 재조정 가능. 편의점 경쟁·소비 침체 시 실적 둔화 변수. <b>전략: 22,000 이하 조정 시 분할 매수. 24,100 돌파 확인 후 추격 or 조정 대기.</b></div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4)</div>
+</div>
+</body>
+</html>

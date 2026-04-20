@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에이비엘바이오 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>에이비엘바이오 (298380) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스닥 바이오 | 엘리어트 5파 완료 후 깊은 조정, 52주 저점 9% 위치 = 바닥 탐색 vs 추가 하락 갈림길</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 에이비엘바이오 = "2025년 6개월 횡보 매집 후 10배 급등→세력 분산 완료, 현재 78.6% 되돌림 바닥권"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 2025년 5~10월 60K~100K 박스권 = 세력 매집 원가 80K 추정<br>② 엘리어트 ⑤파 완료(257,500 신고점) → a-b-c 조정 c파 진행 중<br>③ 52주 위치 9% = 극저점권, 과매도 반등 여력 충분<br>④ 세력 매집가(80K) 대비 현재 2배 = 세력 아직 수익권, 80K 최종 방어선
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>역배열 지속(현재 160K < MA20 164K < MA60 183K < MA120 187K) = 하락 추세 유효. 52주 저점 150,600 이탈 시 신저점 140K 테스트 가능. 바이오 업종 임상·실적 리스크 상존. 1월 30일 거래량 6.2M 폭발 = 세력 물량 털기 완료 신호.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#E24B4A">160,200<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -0.8%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">150,600~<br>257,500원</div><div class="ms">저점 대비 +6.4%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">9.0%</div><div class="ms">극저점권 / 바닥 탐색</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">1월 급등(10배) 후 50% 급락, 현재 52주 저점 근처 = 세력 재매집 vs 신저점 갈림길</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:9%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 160,200</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 150,600</span><span>중간 204,000</span><span>고점 257,500</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2025년 11월 급등(100K→257K) = 세력 시세 분출 완료. 1월 30일 거래량 6.2M 급락 = 세력 털기 시작. 현재 78.6% 피보나치 되돌림(추세 전환 경계선) 도달. 세력 매집가 80K 대비 2배 수준 → 80K까지는 방어 가능하나, 52주 저점 150,600 이탈 시 신저점 리스크.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-r" style="font-size:10px;padding:2px 7px">역배열 지속</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">세력 분산 완료</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">a-b-c 조정 c파</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">52주 저점 9%</span>
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">과매도 반등 대기</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "1월 신고점(257K) 급락 후 150K 저점 테스트, 하락 채널 바닥권"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>거래량 폭발 = 세력 털기 완료.</b> 1월 26~30일 5일간 거래량 15.7M(평소의 50배) = 세력이 257K 신고점에서 물량 분산 완료. 이후 거래량 급감(300K대) = 개미 관망, 세력 이탈.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>이평선 역배열 = 하락 추세 유효.</b> 현재 160K < MA20(164K) < MA60(183K) < MA120(187K). 20일선 이탈 후 60·120일선과 거리 확대 중 → 단기 반등해도 MA20(164K)·170K가 1차 저항.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 78.6% 되돌림 = 추세 전환 경계.</b> 고점 257,500 → 저점 150,600 하락 중 현재 78.6% 되돌림(166,620) 근처 도달. 61.8% 이미 하회 → 추세 완전 훼손. 150,600 지지 여부가 신저점 vs 반등 갈림길.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>카탈리스트 부재 = 관망 지속.</b> 바이오 업종 특성상 임상·실적 뉴스 없으면 방향성 약함. 단기 150K 지지 확인 시 160~170K 박스권 횡보 가능. 돌파 시 190K(피보나치 61.8% 회복) 목표.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#FCEBEB;color:#A32D2D">하락 채널 바닥권</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#E24B4A"/></marker></defs>
+    <rect x="40" y="35" width="115" height="170" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="97" y="47" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 1/26 급등 257K</text>
+    <rect x="160" y="85" width="130" height="120" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="225" y="97" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">② 2~3월 하락</text>
+    <rect x="295" y="120" width="180" height="85" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="385" y="132" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">③ 4월 저점 테스트</text>
+    
+    <line x1="55" y1="90" x2="55" y2="50" stroke="#1D9E75" stroke-width="2.2"/><rect x="50" y="50" width="10" height="38" fill="#1D9E75" rx="1.5"/>
+    <line x1="75" y1="60" x2="75" y2="42" stroke="#1D9E75" stroke-width="2.2"/><rect x="70" y="42" width="10" height="16" fill="#1D9E75" rx="1.5"/>
+    <line x1="95" y1="50" x2="95" y2="25" stroke="#1D9E75" stroke-width="2.5"/><rect x="89" y="25" width="12" height="22" fill="#1D9E75" rx="1.5"/>
+    <text x="95" y="20" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">257K</text>
+    <line x1="115" y1="45" x2="115" y2="32" stroke="#1D9E75" stroke-width="2.2"/><rect x="110" y="32" width="10" height="12" fill="#1D9E75" rx="1.5"/>
+    <line x1="135" y1="38" x2="135" y2="95" stroke="#E24B4A" stroke-width="2.5"/><rect x="130" y="72" width="10" height="23" fill="#E24B4A" rx="1.5"/>
+    <text x="135" y="110" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">1/30 급락</text>
+    
+    <line x1="165" y1="100" x2="165" y2="92" stroke="#E24B4A" stroke-width="2"/><rect x="160.5" y="92" width="9" height="7" fill="#E24B4A" rx="1"/>
+    <line x1="185" y1="95" x2="185" y2="88" stroke="#1D9E75" stroke-width="2"/><rect x="180.5" y="88" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="205" y1="102" x2="205" y2="96" stroke="#E24B4A" stroke-width="2"/><rect x="200.5" y="96" width="9" height="5" fill="#E24B4A" rx="1"/>
+    <line x1="225" y1="108" x2="225" y2="101" stroke="#E24B4A" stroke-width="2"/><rect x="220.5" y="101" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="245" y1="115" x2="245" y2="107" stroke="#E24B4A" stroke-width="2"/><rect x="240.5" y="107" width="9" height="7" fill="#E24B4A" rx="1"/>
+    <line x1="265" y1="110" x2="265" y2="103" stroke="#1D9E75" stroke-width="2"/><rect x="260.5" y="103" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="285" y1="105" x2="285" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="280.5" y="98" width="9" height="6" fill="#1D9E75" rx="1"/>
+    
+    <line x1="310" y1="125" x2="310" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="305.5" y="118" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="330" y1="142" x2="330" y2="170" stroke="#E24B4A" stroke-width="2.2"/><rect x="325.5" y="152" width="9" height="18" fill="#E24B4A" rx="1"/>
+    <text x="330" y="188" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">3/4 급락 152K</text>
+    <line x1="350" y1="155" x2="350" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="345.5" y="140" width="9" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="370" y1="145" x2="370" y2="135" stroke="#1D9E75" stroke-width="2"/><rect x="365.5" y="135" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="390" y1="140" x2="390" y2="132" stroke="#1D9E75" stroke-width="2"/><rect x="385.5" y="132" width="9" height="7" fill="#1D9E75" rx="1"/>
+    <line x1="410" y1="138" x2="410" y2="130" stroke="#E24B4A" stroke-width="2"/><rect x="405.5" y="130" width="9" height="7" fill="#E24B4A" rx="1"/>
+    <line x1="430" y1="148" x2="430" y2="162" stroke="#E24B4A" stroke-width="2"/><rect x="425.5" y="154" width="9" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="450" y1="165" x2="450" y2="175" stroke="#E24B4A" stroke-width="2"/><rect x="445.5" y="169" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="470" y1="172" x2="470" y2="162" stroke="#1D9E75" stroke-width="2"/><rect x="465.5" y="162" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="490" y1="169" x2="490" y2="176" stroke="#E24B4A" stroke-width="2"/><rect x="485.5" y="172" width="9" height="4" fill="#E24B4A" rx="1"/>
+    <line x1="510" y1="175" x2="510" y2="165" stroke="#1D9E75" stroke-width="2"/><rect x="505.5" y="165" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="530" y1="172" x2="530" y2="164" stroke="#1D9E75" stroke-width="2"/><rect x="525.5" y="164" width="9" height="7" fill="#1D9E75" rx="1"/>
+    <line x1="550" y1="170" x2="550" y2="163" stroke="#E24B4A" stroke-width="2"/><rect x="545.5" y="163" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="570" y1="168" x2="570" y2="173" stroke="#E24B4A" stroke-width="2"/><rect x="565.5" y="169" width="9" height="4" fill="#E24B4A" rx="1"/>
+    
+    <line x1="40" y1="168" x2="620" y2="168" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="165" font-size="9" fill="#26215C" font-weight="600">현재 160,200</text>
+    
+    <line x1="40" y1="177" x2="620" y2="177" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="525" y="175" font-size="8" fill="#E24B4A" font-weight="600">52주 저점 150,600</text>
+    
+    <line x1="40" y1="98" x2="620" y2="98" stroke="#888780" stroke-width="1" stroke-dasharray="2 2" opacity=".3"/>
+    <text x="42" y="95" font-size="8" fill="#888780">MA20 164K</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 세력 분산 완료 후 하락 채널, 150K 지지 여부가 신저점 vs 반등 갈림길</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 ①~⑤파 완료(257K 신고점), a-b-c 조정 c파 진행 중"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2025년 5~10월 6개월 횡보 = 세력 매집.</b> 60K~100K 박스권에서 거래량 증가하며 장기 횡보 → "횡보는 매집"의 법칙. 세력 매집 원가 80K 추정. 이후 11월 급등(174K, 거래량 14.8M) = 시세 분출 시작.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>엘리어트 ①~⑤파 완료.</b> ①파(5월, 26K→80K) → ②파(6~8월 조정) → ③파(8~11월, 가장 강력한 상승 174K) → ④파(12월 소폭 조정) → ⑤파(1월 26일 주, 257K 신고점) = 5파 상승 완성. 현재 a파 급락(1/30) → b파 반등(2~3월) → c파 하락(현재) 조정 중.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>주봉 20·60·120선 역배열 전환.</b> 1월까지 정배열 유지했으나 2~3월 급락으로 역배열 전환. 주봉 20선(약 185K) 이탈 = 중기 하락 추세. 주봉 60선(약 155K) 근처 현재 위치 = 지지 테스트 중.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>c파 목표가 = 피보나치 61.8% or 매집 구간.</b> a-b-c 조정에서 c파는 통상 38.2~61.8% 되돌림. 현재 78.6% 도달 = 과도한 조정. 150,600(52주 저점) 지지 확인 시 c파 종료 → 새로운 ①파 시작 가능. 이탈 시 매집 구간 80K까지 하락 리스크.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 5파 완료 → a-b-c 조정</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#1E3A5F"/></marker></defs>
+    <rect x="40" y="50" width="110" height="130" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="95" y="62" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">매집 구간 6개월</text>
+    <rect x="155" y="35" width="140" height="145" rx="4" fill="#E6F1FB" opacity=".12"/>
+    <text x="225" y="47" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">엘리어트 ①~⑤파</text>
+    <rect x="300" y="70" width="160" height="110" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="380" y="82" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">a-b-c 조정</text>
+    
+    <line x1="50" y1="155" x2="50" y2="145" stroke="#888" stroke-width="1.8"/><rect x="46" y="145" width="8" height="9" fill="#888" rx="1"/>
+    <line x1="65" y1="150" x2="65" y2="140" stroke="#1D9E75" stroke-width="1.8"/><rect x="61" y="140" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <text x="65" y="133" text-anchor="middle" font-size="8" fill="#1E3A5F" font-weight="700">①파</text>
+    <line x1="80" y1="145" x2="80" y2="135" stroke="#1D9E75" stroke-width="1.8"/><rect x="76" y="135" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="142" x2="95" y2="150" stroke="#E24B4A" stroke-width="1.8"/><rect x="91" y="145" width="8" height="5" fill="#E24B4A" rx="1"/>
+    <text x="95" y="163" text-anchor="middle" font-size="8" fill="#1E3A5F" font-weight="700">②파</text>
+    <line x1="110" y1="148" x2="110" y2="138" stroke="#1D9E75" stroke-width="1.8"/><rect x="106" y="138" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="125" y1="142" x2="125" y2="132" stroke="#1D9E75" stroke-width="1.8"/><rect x="121" y="132" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="140" y1="138" x2="140" y2="128" stroke="#1D9E75" stroke-width="1.8"/><rect x="136" y="128" width="8" height="9" fill="#1D9E75" rx="1"/>
+    
+    <line x1="165" y1="130" x2="165" y2="95" stroke="#1D9E75" stroke-width="2.2"/><rect x="160.5" y="95" width="9" height="33" fill="#1D9E75" rx="1.5"/>
+    <text x="165" y="88" text-anchor="middle" font-size="8" fill="#1E3A5F" font-weight="700">③파(강력)</text>
+    <line x1="185" y1="102" x2="185" y2="92" stroke="#1D9E75" stroke-width="2"/><rect x="180.5" y="92" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="205" y1="100" x2="205" y2="90" stroke="#1D9E75" stroke-width="2"/><rect x="200.5" y="90" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="225" y1="95" x2="225" y2="102" stroke="#E24B4A" stroke-width="2"/><rect x="220.5" y="98" width="9" height="4" fill="#E24B4A" rx="1"/>
+    <text x="225" y="113" text-anchor="middle" font-size="8" fill="#1E3A5F" font-weight="700">④파</text>
+    <line x1="245" y1="100" x2="100" y2="97" stroke="#1D9E75" stroke-width="2"/><rect x="240.5" y="97" width="9" height="3" fill="#1D9E75" rx="1"/>
+    <line x1="265" y1="95" x2="265" y2="55" stroke="#1D9E75" stroke-width="2.2"/><rect x="260.5" y="55" width="9" height="38" fill="#1D9E75" rx="1.5"/>
+    <text x="265" y="48" text-anchor="middle" font-size="8" fill="#1E3A5F" font-weight="700">⑤파 257K</text>
+    <line x1="285" y1="62" x2="285" y2="58" stroke="#1D9E75" stroke-width="2"/><rect x="280.5" y="58" width="9" height="3" fill="#1D9E75" rx="1"/>
+    
+    <line x1="310" y1="65" x2="310" y2="115" stroke="#E24B4A" stroke-width="2.2"/><rect x="305.5" y="95" width="9" height="20" fill="#E24B4A" rx="1.5"/>
+    <text x="310" y="128" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">a파 급락</text>
+    <line x1="335" y1="112" x2="335" y2="102" stroke="#E24B4A" stroke-width="2"/><rect x="330.5" y="102" width="9" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="360" y1="110" x2="360" y2="100" stroke="#1D9E75" stroke-width="2"/><rect x="355.5" y="100" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <text x="360" y="93" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">b파</text>
+    <line x1="385" y1="108" x2="385" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="380.5" y="98" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="410" y1="105" x2="410" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="405.5" y="112" width="9" height="8" fill="#E24B4A" rx="1"/>
+    <text x="410" y="133" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">c파</text>
+    <line x1="435" y1="122" x2="435" y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="430.5" y="135" width="9" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="460" y1="143" x2="460" y2="155" stroke="#E24B4A" stroke-width="2"/><rect x="455.5" y="149" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="485" y1="152" x2="485" y2="158" stroke="#E24B4A" stroke-width="2"/><rect x="480.5" y="154" width="9" height="4" fill="#E24B4A" rx="1"/>
+    <line x1="510" y1="155" x2="510" y2="160" stroke="#E24B4A" stroke-width="2"/><rect x="505.5" y="157" width="9" height="3" fill="#E24B4A" rx="1"/>
+    
+    <line x1="40" y1="158" x2="560" y2="158" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="155" font-size="9" fill="#26215C" font-weight="600">현재 160,200</text>
+    
+    <path d="M 50 145 Q 95 145, 140 128 T 265 55" stroke="#1E3A5F" stroke-width="1.5" fill="none" opacity=".4" stroke-dasharray="3 2"/>
+    <text x="150" y="118" font-size="8" fill="#1E3A5F">상승 추세선</text>
+    
+    <line x1="40" y1="140" x2="560" y2="140" stroke="#27500A" stroke-width="1" stroke-dasharray="2 2" opacity=".3"/>
+    <text x="465" y="137" font-size="8" fill="#27500A">매집 구간 80K</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 6개월 매집 → 5파 완료(257K) → 현재 c파 조정, 150K 지지 확인이 핵심</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2024년 저점(22K)에서 10배 상승 후 50% 되돌림, 장기 사이클 조정"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024년 22K = 장기 사이클 바닥.</b> 2022~2024년 2년간 하락 후 2024년 2월 22K 저점 형성 = 역사적 저점(18,960) 근처. 이후 2025년 4~5월 급등 시작 = 구조적 턴어라운드 트리거 작동.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>2025년 = 대세 상승 1년.</b> 4월 26K → 11월 188K(7배), 1월 257K(10배) = 바이오 업종 호황 + 개별 임상·실적 호재 결합. 월봉 정배열 유지하며 강력한 상승 추세.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2026년 = 50% 되돌림 조정.</b> 257K → 160K = -37.7% 하락. 저점 22K → 고점 257K 상승 기준 50% 되돌림(139K) 근처. 월봉 20선(약 195K) 이탈 = 단기 추세 전환, 월봉 60선(약 75K)까지는 장기 상승 추세 유효.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망 = 신저점 vs 2차 상승 기로.</b> 150K 지지 확인 시 2025년 매집 구간(80K) 위에서 재상승 → 2차 목표 300K+. 150K 이탈 시 80K 매집 구간까지 재매집 → 2027년 이후 3차 상승. 리스크는 바이오 업종 사이클 전환(임상 실패·실적 악화).</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">10배 상승 완료 후 50% 조정</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="95" width="90" height="90" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <text x="85" y="107" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">2024 바닥</text>
+    <rect x="135" y="50" width="220" height="135" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="245" y="62" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2025 대세 상승 (10배)</text>
+    <rect x="360" y="75" width="150" height="110" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="435" y="87" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">2026 조정</text>
+    
+    <line x1="50" y1="175" x2="50" y2="170" stroke="#888" stroke-width="2"/><rect x="46" y="170" width="8" height="4" fill="#888" rx="1"/>
+    <line x1="65" y1="173" x2="65" y2="168" stroke="#888" stroke-width="2"/><rect x="61" y="168" width="8" height="4" fill="#888" rx="1"/>
+    <line x1="80" y1="172" x2="80" y2="167" stroke="#888" stroke-width="2"/><rect x="76" y="167" width="8" height="4" fill="#888" rx="1"/>
+    <text x="65" y="192" text-anchor="middle" font-size="8" fill="#888">2024년 22~27K</text>
+    <line x1="95" y1="170" x2="95" y2="165" stroke="#888" stroke-width="2"/><rect x="91" y="165" width="8" height="4" fill="#888" rx="1"/>
+    <line x1="110" y1="168" x2="110" y2="163" stroke="#888" stroke-width="2"/><rect x="106" y="163" width="8" height="4" fill="#888" rx="1"/>
+    <line x1="125" y1="167" x2="125" y2="162" stroke="#888" stroke-width="2"/><rect x="121" y="162" width="8" height="4" fill="#888" rx="1"/>
+    
+    <line x1="145" y1="165" x2="145" y2="147" stroke="#1D9E75" stroke-width="2.2"/><rect x="141" y="147" width="8" height="17" fill="#1D9E75" rx="1"/>
+    <text x="145" y="140" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">4월 급등</text>
+    <line x1="165" y1="150" x2="165" y2="138" stroke="#1D9E75" stroke-width="2"/><rect x="161" y="138" width="8" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="185" y1="142" x2="185" y2="130" stroke="#1D9E75" stroke-width="2"/><rect x="181" y="130" width="8" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="205" y1="135" x2="205" y2="125" stroke="#1D9E75" stroke-width="2"/><rect x="201" y="125" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="225" y1="128" x2="225" y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="221" y="136" width="8" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="245" y1="143" x2="245" y2="133" stroke="#1D9E75" stroke-width="2"/><rect x="241" y="133" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="265" y1="138" x2="265" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="261" y="128" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="285" y1="132" x2="285" y2="105" stroke="#1D9E75" stroke-width="2.2"/><rect x="281" y="105" width="8" height="26" fill="#1D9E75" rx="1"/>
+    <text x="285" y="98" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">11월 188K</text>
+    <line x1="305" y1="108" x2="305" y2="98" stroke="#1D9E75" stroke-width="2"/><rect x="301" y="98" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="325" y1="102" x2="325" y2="92" stroke="#1D9E75" stroke-width="2"/><rect x="321" y="92" width="8" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="345" y1="95" x2="345" y2="60" stroke="#1D9E75" stroke-width="2.5"/><rect x="340.5" y="60" width="9" height="33" fill="#1D9E75" rx="1.5"/>
+    <text x="345" y="53" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">1월 257K 신고점</text>
+    
+    <line x1="375" y1="68" x2="375" y2="100" stroke="#E24B4A" stroke-width="2.2"/><rect x="371" y="87" width="8" height="13" fill="#E24B4A" rx="1"/>
+    <text x="375" y="113" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">2월 -24%</text>
+    <line x1="405" y1="105" x2="405" y2="130" stroke="#E24B4A" stroke-width="2.2"/><rect x="401" y="120" width="8" height="10" fill="#E24B4A" rx="1"/>
+    <text x="405" y="143" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">3월 -14%</text>
+    <line x1="435" y1="128" x2="435" y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="431" y="138" width="8" height="7" fill="#E24B4A" rx="1"/>
+    <text x="435" y="158" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">4월 -3%</text>
+    
+    <line x1="40" y1="145" x2="520" y2="145" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="455" y="142" font-size="9" fill="#26215C" font-weight="600">현재 160,200</text>
+    
+    <line x1="40" y1="165" x2="520" y2="165" stroke="#27500A" stroke-width="1.2" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="455" y="162" font-size="8" fill="#27500A">50% 되돌림 139K</text>
+    
+    <path d="M 50 170 Q 245 133, 345 60" stroke="#1E3A5F" stroke-width="1.8" fill="none" opacity=".4"/>
+    <text x="200" y="115" font-size="8" fill="#1E3A5F">2025 상승 추세선</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024년 바닥(22K) → 2025년 10배 상승(257K) → 2026년 50% 조정, 장기 사이클 전환점</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">Zone① 매집 완료·분산 완료 = 세력 엑시트</span><span class="tag t-g">물량 정리</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 5~10월 6개월간 60K~100K 박스권 횡보 + 거래량 증가 = 세력 매집. 추정 매집가 80K(총 매집 물량 약 20~30M주). 11월~1월 급등(257K) + 1월 26~30일 거래량 15.7M 폭발 = 세력 목표가 도달 후 물량 털기 완료. 현재 거래량 300K대 = 세력 이탈, 개미 관망. <b>세력은 80K 본전 위에서 수익 실현 완료 → 재매집 전까지 방치 가능성.</b></div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">Zone② 수급 = 외국인·기관 이탈, 개인만 남음</span><span class="tag t-navy">약세 수급</span><div style="color:#888;margin-top:2px;font-size:11px">바이오 업종 특성상 외국인·기관은 임상·실적 뉴스에 단타 대응. 1월 급등 시 외국인 매도 전환 = 고점 신호. 기관도 200K 이상에서 물량 정리. 현재 개인 투자자만 물려 있는 구조 = 반등 시 매물대 저항 강함. <b>190~200K = 1~2월 거래 집중 구간 = 강력한 매물대.</b></div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">Zone③ 피보나치·매물대 = 78.6% 되돌림 과매도</span><span class="tag t-a">기술적 반등 대기</span><div style="color:#888;margin-top:2px;font-size:11px">고점 257,500 → 저점 150,600 하락 중 현재 78.6% 되돌림(166,620) 근처 = <b>추세 전환 경계선.</b> 61.8%(191,470) 이미 하회 = 추세 완전 훼손. 단, 78.6%는 과도한 조정 → 단기 기술적 반등 가능성. <b>저항선: 170K(이탈 지지선) / 180K(MA20) / 190K(피보나치 61.8% + 매물대) / 200K(심리선). 지지선: 160K(현재) / 150.6K(52주 저점) / 140K(신저점).</b></div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">Zone④ 리스크 = 52주 저점 이탈 시 80K 재매집까지</span><span class="tag t-r">신저점 경계</span><div style="color:#888;margin-top:2px;font-size:11px"><b>150,600(52주 저점) 이탈 = 140K → 120K → 100K → 80K(세력 매집가)까지 단계적 하락 가능.</b> 바이오 업종 임상 실패·실적 악화 리스크 상존. 거래량 지속 감소 = 관심 저하 → 유동성 마르면 급락 가능. 이평선 역배열 지속 = 추세적 약세. 세력 재매집 신호(80~100K 박스권 횡보 + 거래량 증가) 전까지는 관망 우세.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>52주 위치 9% = 극저점권, 과매도 반등 여력 충분</span><span class="tag t-g">기술적 반등</span></div>
+  <div class="row"><span>세력 매집가 80K 대비 2배 수준, 80K까지는 방어 가능</span><span class="tag t-g">세력 원가 위</span></div>
+  <div class="row"><span>엘리어트 5파 완료 후 c파 조정 = 조정 종료 시 신규 ①파 가능</span><span class="tag t-b">파동 전환</span></div>
+  <div class="row"><span>바이오 업종 2026년 2분기 임상·실적 시즌 = 호재 기대</span><span class="tag t-navy">섹터 이벤트</span></div>
+  <div class="row"><span>150,600(52주 저점) 지지 확인 시 단기 160~180K 반등</span><span class="tag t-teal">지지 테스트</span></div>
+  <div class="row"><span>거래량 300K대 = 저관심, 관망 우세 = 변동성 낮음</span><span class="tag t-a">유동성 저하</span></div>
+  <div class="row"><span>이평선 역배열 지속 = 단기 반등해도 MA20(164K) 저항</span><span class="tag t-a">추세 약세</span></div>
+  <div class="row"><span>1월 거래량 15.7M 폭발 = 세력 분산 완료, 재매집 신호 전까지 방치</span><span class="tag t-a">세력 이탈</span></div>
+  <div class="row"><span>52주 저점 150,600 이탈 시 140K → 120K → 80K 재매집 구간까지 하락</span><span class="tag t-r">신저점 리스크</span></div>
+  <div class="row"><span>바이오 업종 임상 실패·실적 악화 시 급락 가능성</span><span class="tag t-r">펀더멘털 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:45%;background:#EF9F27"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 45% — 신중 대응</div>
+    <div style="font-size:11px;color:#5f5e5a">150,600 지지 확인 후 분할매수. 단기 목표 180K(MA20 돌파) = +12%. 이탈 시 140K 재진입. 역배열 + 세력 이탈로 단기 반등 제한적.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:60%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 60%</div>
+    <div style="font-size:11px;color:#5f5e5a">80~100K 재매집 구간 진입 시 적극 매수. 2025년 패턴 반복 시 2027년 300K+ 목표. 바이오 사이클 회복 + 임상 호재 결합 시 2차 랠리 가능.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "150K 지지 확인 후 분할매수, 이탈 시 80~100K 재매집 대기"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">150,000~<br>155,000</div><div>52주 저점 지지 확인<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">140,000~<br>145,000</div><div>신저점 or 80~100K 재매집<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">190,000~<br>220,000</div><div>피보나치 61.8%·38.2% 회복<br>+19~35%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">135,000원</div><div>52주 저점 -10% 이탈</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 에이비엘바이오 핵심 4포인트:</b><br>
+    ① <b>세력 매집가 80K</b> — 2025년 5~10월 6개월 횡보 구간이 최종 방어선<br>
+    ② <b>엘리어트 5파 완료</b> — 257K 신고점 = 세력 목표가 도달, 현재 c파 조정 마무리 국면<br>
+    ③ <b>52주 위치 9% = 극저점</b> — 78.6% 피보나치 되돌림, 과매도 반등 여력 충분<br>
+    ④ <b>150K 지지 = 신저점 vs 반등 갈림길</b> — 지지 확인 시 190K 목표, 이탈 시 80K 재매집</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> ① 역배열 지속(현재 < MA20 < MA60 < MA120) = 추세적 약세. ② 1월 거래량 15.7M 폭발 = 세력 물량 털기 완료, 재매집 신호 전까지 방치 가능. ③ 52주 저점 150,600 이탈 시 140K → 120K → 100K → 80K 단계적 하락. ④ 바이오 임상 실패·실적 악화 리스크.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4)</div>
+</div>
+</body>
+</html>

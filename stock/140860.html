@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>파크시스템스 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>파크시스템스 (140860) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSDAQ 반도체장비 | 글로벌 1위 AFM 독점 기업, 신고가 후 재매집 박스권</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 파크시스템스 = "반도체 첨단공정 필수장비 독점 기업, 1월 급등 털기 후 250k 재매집 구간"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 글로벌 AFM 시장 점유율 1위 (원자힘현미경)<br>② 삼성전자·TSMC·인텔 주요 고객 확보<br>③ 3나노 이하 첨단공정 필수 검사장비<br>④ 미국 對中 제재 무관 독점 기술력
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>1월 321,500 신고가 후 26% 급락 = 단기 과열 털기. 반도체 업황 사이클 민감. 고밸류에이션(PER 40배+) 부담. 230k 이탈 시 추세 훼손 리스크.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">267,000<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 +1.71%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">205,000~<br>321,500원</div><div class="ms">저점 대비 +30%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">53.2%</div><div class="ms">중립 박스권</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">1월 신고가 돌파(321,500) 후 급락 → 현재 피보나치 50% 되돌림(263,250) 지지 반등 시도 중. 세력 재매집 구간 가능성.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:53.2%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 267,000</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 205k</span><span>중간 263k</span><span>고점 321k</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2026년 1월 말 반도체 장비 랠리로 321,500원 신고가 돌파 후 세력 물량 털기 → 2~4월 230k~280k 박스권 횡보. 현재 MA60(262k) 지지 반등 중. 세력이 250k 근처 재매집 후 280k 돌파 시 2차 상승 가능. 단, 246k(4월 저점) 이탈 시 추세 훼손 주의.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">AFM 글로벌1위</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">3나노공정</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">박스권 재매집</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">첨단장비</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">피보나치 50%</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "신고가 급등 털기 후 박스권 횡보, 50% 되돌림 반등 시도"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>1월 급등 = 세력 분산 신호.</b> 1/23~29 거래량 폭발(49k→122k주)하며 233k→321k 급등(+38%). 세력이 고점 물량 털고 하차. 개미 추격매수 유인 후 털기 전형 패턴.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>2~4월 박스권 = 재매집 구간.</b> 230k~280k 횡보하며 거래량 감소(23k~40k주). 세력이 1월 털은 물량 250k 근처 재매집 중. MA20(250k)·MA60(262k) 지지 확인 중.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 50%(263k) = 현재 결전지.</b> 52주 범위 205k~321k 기준 50% 되돌림(263,250)이 현재가(267k) 근처. 이 라인 지지 시 280k 돌파 → 320k 재도전. 이탈 시 246k(61.8%) 재테스트.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈: 반도체 장비 업황 회복.</b> 삼성 파운드리 3나노 양산 확대·TSMC 2나노 투자 재개 기대감. 280k 돌파 시 신고가 재도전 시그널. 246k 이탈 시 손절.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">박스권 횡보 + 피보나치 50% 반등</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="30" width="140" height="150" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="110" y="42" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 급등 털기</text>
+    <rect x="185" y="95" width="200" height="85" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="285" y="107" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 박스권 재매집</text>
+    <rect x="390" y="85" width="250" height="95" rx="4" fill="#FAEEDA" opacity=".08"/>
+    <text x="515" y="97" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">③ 반등 시도</text>
+    
+    <line x1="55" y1="105" x2="55" y2="112" stroke="#1D9E75" stroke-width="1.8"/><rect x="51" y="106" width="7" height="5" fill="#1D9E75" rx=".5"/>
+    <line x1="70" y1="100" x2="70" y2="108" stroke="#1D9E75" stroke-width="1.8"/><rect x="66" y="101" width="7" height="6" fill="#1D9E75" rx=".5"/>
+    <line x1="85" y1="92" x2="85" y2="105" stroke="#1D9E75" stroke-width="1.8"/><rect x="81" y="92" width="7" height="10" fill="#1D9E75" rx=".5"/>
+    <line x1="100" y1="75" x2="100" y2="90" stroke="#1D9E75" stroke-width="2.2"/><rect x="96" y="75" width="7" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="115" y1="55" x2="115" y2="73" stroke="#1D9E75" stroke-width="2.5"/><rect x="111" y="55" width="7" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="130" y1="38" x2="130" y2="58" stroke="#1D9E75" stroke-width="3"/><rect x="126" y="38" width="7" height="18" fill="#1D9E75" rx=".5"/>
+    <line x1="145" y1="32" x2="145" y2="45" stroke="#E24B4A" stroke-width="2.8"/><rect x="141" y="38" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="160" y1="42" x2="160" y2="58" stroke="#E24B4A" stroke-width="2.5"/><rect x="156" y="47" width="7" height="10" fill="#E24B4A" rx=".5"/>
+    
+    <line x1="175" y1="62" x2="175" y2="78" stroke="#E24B4A" stroke-width="2.2"/><rect x="171" y="68" width="7" height="9" fill="#E24B4A" rx=".5"/>
+    <line x1="190" y1="70" x2="190" y2="82" stroke="#E24B4A" stroke-width="1.8"/><rect x="186" y="73" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="205" y1="78" x2="205" y2="88" stroke="#E24B4A" stroke-width="1.8"/><rect x="201" y="81" width="7" height="6" fill="#E24B4A" rx=".5"/>
+    <line x1="220" y1="90" x2="220" y2="105" stroke="#E24B4A" stroke-width="2"/><rect x="216" y="96" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="235" y1="105" x2="235" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="231" y="110" width="7" height="7" fill="#E24B4A" rx=".5"/>
+    <line x1="250" y1="95" x2="250" y2="108" stroke="#E24B4A" stroke-width="1.8"/><rect x="246" y="99" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="265" y1="98" x2="265" y2="110" stroke="#1D9E75" stroke-width="1.8"/><rect x="261" y="99" width="7" height="10" fill="#1D9E75" rx=".5"/>
+    <line x1="280" y1="88" x2="280" y2="100" stroke="#1D9E75" stroke-width="1.8"/><rect x="276" y="88" width="7" height="10" fill="#1D9E75" rx=".5"/>
+    
+    <line x1="295" y1="98" x2="295" y2="112" stroke="#E24B4A" stroke-width="1.8"/><rect x="291" y="103" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="310" y1="78" x2="310" y2="100" stroke="#1D9E75" stroke-width="2.2"/><rect x="306" y="78" width="7" height="18" fill="#1D9E75" rx=".5"/>
+    <line x1="325" y1="82" x2="325" y2="98" stroke="#E24B4A" stroke-width="2"/><rect x="321" y="86" width="7" height="11" fill="#E24B4A" rx=".5"/>
+    <line x1="340" y1="93" x2="340" y2="105" stroke="#E24B4A" stroke-width="1.8"/><rect x="336" y="97" width="7" height="7" fill="#E24B4A" rx=".5"/>
+    <line x1="355" y1="88" x2="355" y2="102" stroke="#1D9E75" stroke-width="1.8"/><rect x="351" y="88" width="7" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="370" y1="98" x2="370" y2="110" stroke="#E24B4A" stroke-width="1.8"/><rect x="366" y="102" width="7" height="7" fill="#E24B4A" rx=".5"/>
+    <line x1="385" y1="102" x2="385" y2="115" stroke="#E24B4A" stroke-width="1.8"/><rect x="381" y="107" width="7" height="7" fill="#E24B4A" rx=".5"/>
+    
+    <line x1="400" y1="120" x2="400" y2="135" stroke="#E24B4A" stroke-width="1.8"/><rect x="396" y="126" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="415" y1="125" x2="415" y2="140" stroke="#E24B4A" stroke-width="1.8"/><rect x="411" y="130" width="7" height="9" fill="#E24B4A" rx=".5"/>
+    <line x1="430" y1="110" x2="430" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="426" y="110" width="7" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="445" y1="115" x2="445" y2="130" stroke="#E24B4A" stroke-width="1.8"/><rect x="441" y="119" width="7" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="460" y1="118" x2="460" y2="132" stroke="#E24B4A" stroke-width="1.8"/><rect x="456" y="123" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="475" y1="108" x2="475" y2="122" stroke="#E24B4A" stroke-width="1.8"/><rect x="471" y="113" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="490" y1="105" x2="490" y2="118" stroke="#1D9E75" stroke-width="1.8"/><rect x="486" y="106" width="7" height="11" fill="#1D9E75" rx=".5"/>
+    <line x1="505" y1="98" x2="505" y2="112" stroke="#E24B4A" stroke-width="1.8"/><rect x="501" y="103" width="7" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="520" y1="100" x2="520" y2="113" stroke="#1D9E75" stroke-width="1.8"/><rect x="516" y="100" width="7" height="11" fill="#1D9E75" rx=".5"/>
+    <line x1="535" y1="95" x2="535" y2="108" stroke="#1D9E75" stroke-width="1.8"/><rect x="531" y="95" width="7" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="550" y1="102" x2="550" y2="115" stroke="#E24B4A" stroke-width="1.8"/><rect x="546" y="107" width="7" height="7" fill="#E24B4A" rx=".5"/>
+    <line x1="565" y1="97" x2="565" y2="110" stroke="#1D9E75" stroke-width="1.8"/><rect x="561" y="97" width="7" height="11" fill="#1D9E75" rx=".5"/>
+    <line x1="580" y1="92" x2="580" y2="105" stroke="#1D9E75" stroke-width="2"/><rect x="576" y="92" width="7" height="11" fill="#1D9E75" rx=".5"/>
+    
+    <line x1="40" y1="32" x2="640" y2="32" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="42" y="29" font-size="8" fill="#E24B4A" font-weight="600">321,500 (신고가)</text>
+    
+    <line x1="40" y1="78" x2="640" y2="78" stroke="#EF9F27" stroke-width="1.3" stroke-dasharray="3 2" opacity=".5"/>
+    <text x="42" y="75" font-size="8" fill="#EF9F27" font-weight="600">280,000 (저항)</text>
+    
+    <line x1="40" y1="98" x2="640" y2="98" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="95" font-size="9" fill="#26215C" font-weight="700">267,000 현재가</text>
+    
+    <line x1="40" y1="103" x2="640" y2="103" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="3 2" opacity=".5"/>
+    <text x="42" y="100" font-size="8" fill="#1D9E75" font-weight="600">263k (피보 50%)</text>
+    
+    <line x1="40" y1="115" x2="640" y2="115" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="42" y="112" font-size="8" fill="#1D9E75" font-weight="600">250k (MA20)</text>
+    
+    <line x1="40" y1="130" x2="640" y2="130" stroke="#0C447C" stroke-width="1.2" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="42" y="127" font-size="8" fill="#0C447C" font-weight="600">246k (4월저점)</text>
+    
+    <rect x="490" y="91" width="90" height="18" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="2 2" rx="3"/>
+    <text x="535" y="125" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">↑ 반등 구간</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 1월 급등(+38%) 후 세력 털기 → 2~4월 250k 재매집 박스권 → 현재 피보나치 50% 지지 반등 시도</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "5파 완성 후 a-b-c 조정, 핸들 형성 중"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>엘리어트 5파 완성 → a-b-c 조정.</b> ①파(2025.5~6월 244k), ②파(7~8월 조정), ③파(9월 283k), ④파(10~12월 209k), ⑤파(2026.1월 303k 연장). 현재 a-b-c 조정파 C파 진행 중.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>주봉 20선(250k) = 생명선 지지 확인.</b> 4월 현재 250k 근처 횡보 = 주봉 20MA 지지 테스트 중. 이 라인 지지 시 280k 돌파 → 320k 재도전. 이탈 시 주봉 60선(230k) 재테스트.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>거래량 감소 = 매물 소화 완료 신호.</b> 1월 주봉 거래량 524k주 → 4월 195k주로 63% 감소. 세력이 고점 물량 털고 횡보 중 재매집. 거래량 재증가 시 돌파 신호.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 목표: 320k 돌파 시 380k.</b> 피보나치 확장 1.272 기준 380k. 반도체 장비 업황 회복(삼성 파운드리·TSMC 투자 재개) 시 주봉 정배열 완성 → 신고가 돌파 가능.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">5파 완성 → 컵앤핸들 형성</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <rect x="40" y="50" width="100" height="120" rx="4" fill="#E1F5EE" opacity=".1"/>
+    <text x="90" y="62" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">①~③파</text>
+    <rect x="145" y="80" width="80" height="90" rx="4" fill="#FAEEDA" opacity=".1"/>
+    <text x="185" y="92" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">④파 조정</text>
+    <rect x="230" y="25" width="100" height="145" rx="4" fill="#FCEBEB" opacity=".08"/>
+    <text x="280" y="37" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">⑤파 연장</text>
+    <rect x="335" y="70" width="305" height="100" rx="4" fill="#E1F5EE" opacity=".1"/>
+    <text x="487" y="82" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">a-b-c 조정 (핸들)</text>
+    
+    <line x1="50" y1="135" x2="50" y2="148" stroke="#1D9E75" stroke-width="2.5"/><rect x="45" y="138" width="9" height="9" fill="#1D9E75" rx=".5"/>
+    <line x1="65" y1="125" x2="65" y2="142" stroke="#1D9E75" stroke-width="2.5"/><rect x="60" y="126" width="9" height="14" fill="#1D9E75" rx=".5"/>
+    <line x1="80" y1="110" x2="80" y2="130" stroke="#1D9E75" stroke-width="2.8"/><rect x="75" y="110" width="9" height="17" fill="#1D9E75" rx=".5"/>
+    <line x1="95" y1="98" x2="95" y2="118" stroke="#1D9E75" stroke-width="2.8"/><rect x="90" y="99" width="9" height="17" fill="#1D9E75" rx=".5"/>
+    <line x1="110" y1="92" x2="110" y2="112" stroke="#1D9E75" stroke-width="2.8"/><rect x="105" y="93" width="9" height="17" fill="#1D9E75" rx=".5"/>
+    <line x1="125" y1="88" x2="125" y2="105" stroke="#1D9E75" stroke-width="2.8"/><rect x="120" y="88" width="9" height="15" fill="#1D9E75" rx=".5"/>
+    
+    <line x1="140" y1="95" x2="140" y2="112" stroke="#E24B4A" stroke-width="2.5"/><rect x="135" y="100" width="9" height="11" fill="#E24B4A" rx=".5"/>
+    <line x1="155" y1="102" x2="155" y2="118" stroke="#E24B4A" stroke-width="2.5"/><rect x="150" y="107" width="9" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="170" y1="108" x2="170" y2="125" stroke="#E24B4A" stroke-width="2.5"/><rect x="165" y="113" width="9" height="11" fill="#E24B4A" rx=".5"/>
+    <line x1="185" y1="118" x2="185" y2="135" stroke="#E24B4A" stroke-width="2.8"/><rect x="180" y="123" width="9" height="11" fill="#E24B4A" rx=".5"/>
+    <line x1="200" y1="128" x2="200" y2="148" stroke="#E24B4A" stroke-width="3"/><rect x="195" y="135" width="9" height="12" fill="#E24B4A" rx=".5"/>
+    <line x1="215" y1="138" x2="215" y2="158" stroke="#E24B4A" stroke-width="3"/><rect x="210" y="145" width="9" height="12" fill="#E24B4A" rx=".5"/>
+    
+    <line x1="230" y1="145" x2="230" y2="162" stroke="#E24B4A" stroke-width="2.8"/><rect x="225" y="151" width="9" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="245" y1="125" x2="245" y2="148" stroke="#1D9E75" stroke-width="3"/><rect x="240" y="126" width="9" height="20" fill="#1D9E75" rx=".5"/>
+    <line x1="260" y1="105" x2="260" y2="130" stroke="#1D9E75" stroke-width="3.2"/><rect x="255" y="106" width="9" height="22" fill="#1D9E75" rx=".5"/>
+    <line x1="275" y1="70" x2="275" y2="108" stroke="#1D9E75" stroke-width="3.5"/><rect x="270" y="71" width="9" height="34" fill="#1D9E75" rx=".5"/>
+    <line x1="290" y1="35" x2="290" y2="75" stroke="#1D9E75" stroke-width="4"/><rect x="285" y="35" width="9" height="37" fill="#1D9E75" rx=".5"/>
+    <line x1="305" y1="28" x2="305" y2="48" stroke="#1D9E75" stroke-width="3.8"/><rect x="300" y="28" width="9" height="18" fill="#1D9E75" rx=".5"/>
+    <line x1="320" y1="42" x2="320" y2="65" stroke="#E24B4A" stroke-width="3.5"/><rect x="315" y="48" width="9" height="16" fill="#E24B4A" rx=".5"/>
+    
+    <line x1="335" y1="58" x2="335" y2="82" stroke="#E24B4A" stroke-width="3.2"/><rect x="330" y="66" width="9" height="15" fill="#E24B4A" rx=".5"/>
+    <line x1="350" y1="78" x2="350" y2="98" stroke="#E24B4A" stroke-width="3"/><rect x="345" y="84" width="9" height="13" fill="#E24B4A" rx=".5"/>
+    <line x1="365" y1="95" x2="365" y2="115" stroke="#E24B4A" stroke-width="2.8"/><rect x="360" y="102" width="9" height="12" fill="#E24B4A" rx=".5"/>
+    <line x1="380" y1="105" x2="380" y2="125" stroke="#E24B4A" stroke-width="2.8"/><rect x="375" y="112" width="9" height="12" fill="#E24B4A" rx=".5"/>
+    <line x1="395" y1="88" x2="395" y2="110" stroke="#1D9E75" stroke-width="3"/><rect x="390" y="88" width="9" height="19" fill="#1D9E75" rx=".5"/>
+    <line x1="410" y1="82" x2="410" y2="102" stroke="#E24B4A" stroke-width="2.8"/><rect x="405" y="88" width="9" height="13" fill="#E24B4A" rx=".5"/>
+    <line x1="425" y1="92" x2="425" y2="112" stroke="#E24B4A" stroke-width="2.8"/><rect x="420" y="98" width="9" height="13" fill="#E24B4A" rx=".5"/>
+    <line x1="440" y1="100" x2="440" y2="120" stroke="#E24B4A" stroke-width="2.8"/><rect x="435" y="106" width="9" height="13" fill="#E24B4A" rx=".5"/>
+    <line x1="455" y1="95" x2="455" y2="115" stroke="#1D9E75" stroke-width="2.8"/><rect x="450" y="96" width="9" height="18" fill="#1D9E75" rx=".5"/>
+    
+    <line x1="470" y1="90" x2="470" y2="110" stroke="#E24B4A" stroke-width="2.8"/><rect x="465" y="96" width="9" height="13" fill="#E24B4A" rx=".5"/>
+    <line x1="485" y1="98" x2="485" y2="118" stroke="#E24B4A" stroke-width="2.8"/><rect x="480" y="104" width="9" height="13" fill="#E24B4A" rx=".5"/>
+    <line x1="500" y1="125" x2="500" y2="148" stroke="#E24B4A" stroke-width="3"/><rect x="495" y="133" width="9" height="14" fill="#E24B4A" rx=".5"/>
+    <line x1="515" y1="115" x2="515" y2="138" stroke="#1D9E75" stroke-width="3"/><rect x="510" y="116" width="9" height="20" fill="#1D9E75" rx=".5"/>
+    <line x1="530" y1="105" x2="530" y2="128" stroke="#E24B4A" stroke-width="2.8"/><rect x="525" y="112" width="9" height="15" fill="#E24B4A" rx=".5"/>
+    <line x1="545" y1="102" x2="545" y2="125" stroke="#1D9E75" stroke-width="2.8"/><rect x="540" y="103" width="9" height="20" fill="#1D9E75" rx=".5"/>
+    <line x1="560" y1="98" x2="560" y2="118" stroke="#1D9E75" stroke-width="2.8"/><rect x="555" y="99" width="9" height="18" fill="#1D9E75" rx=".5"/>
+    
+    <path d="M 50 145 Q 140 100, 230 155 Q 320 30, 560 105" stroke="#0C447C" stroke-width="1.8" fill="none" opacity=".35" stroke-dasharray="4 2"/>
+    <text x="630" y="108" font-size="7" fill="#0C447C" font-weight="600">MA20주선</text>
+    
+    <line x1="40" y1="28" x2="640" y2="28" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="42" y="25" font-size="8" fill="#E24B4A" font-weight="600">321,500</text>
+    
+    <line x1="40" y1="102" x2="640" y2="102" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="99" font-size="9" fill="#26215C" font-weight="700">267k 현재</text>
+    
+    <line x1="40" y1="118" x2="640" y2="118" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="42" y="115" font-size="8" fill="#1D9E75" font-weight="600">250k (주20선)</text>
+    
+    <text x="290" y="22" text-anchor="middle" font-size="10" fill="#26215C" font-weight="700">⑤</text>
+    <text x="215" y="168" text-anchor="middle" font-size="10" fill="#26215C" font-weight="700">④</text>
+    <text x="110" y="78" text-anchor="middle" font-size="10" fill="#26215C" font-weight="700">③</text>
+    <text x="375" y="93" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">a</text>
+    <text x="440" y="83" text-anchor="middle" font-size="10" fill="#633806" font-weight="700">b</text>
+    <text x="515" y="155" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">c?</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 엘리어트 5파 완성(2026.1월 303k) → a-b-c 조정 C파 진행 중 → 250k 지지 시 컵앤핸들 완성 → 320k 재도전</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2년 상승사이클 지속, 신고가 후 조정 중"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024년 4월 148,900 사이클 바닥.</b> 반도체 업황 침체 → AFM 수요 감소. 이후 2년간 상승사이클 지속. 2026년 1월 303,500 신고가 = 사이클 고점 테스트.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>월봉 20선(260k) = 대세 상승 생명선.</b> 2025년 6월 이후 월봉 20선 지지 유지 중. 현재 267k = 월20선 근처 → 이 라인 지지 필수. 이탈 시 230k(월60선) 재테스트.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>턴어라운드 트리거: 반도체 첨단공정 투자 재개.</b> 삼성 파운드리 2나노 양산(2027년), TSMC A16 투자 확대 → AFM 수요 구조적 증가. 중국 SMIC도 고객 확보.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 목표 380k~450k.</b> 피보나치 확장 1.618 기준 450k. 단, 월봉 20선(260k) 이탈 시 사이클 고점 확정 → 230k~200k 재조정 리스크. 260k 지지 여부가 핵심.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">2년 상승사이클 고점 테스트</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="120" width="140" height="60" rx="4" fill="#E1F5EE" opacity=".1"/>
+    <text x="110" y="132" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">사이클 바닥</text>
+    <rect x="185" y="80" width="200" height="100" rx="4" fill="#FAEEDA" opacity=".08"/>
+    <text x="285" y="92" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">상승 1단계</text>
+    <rect x="390" y="25" width="120" height="155" rx="4" fill="#FCEBEB" opacity=".08"/>
+    <text x="450" y="37" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">폭등 + 조정</text>
+    <rect x="515" y="85" width="125" height="95" rx="4" fill="#E1F5EE" opacity=".1"/>
+    <text x="577" y="97" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">재상승 시도</text>
+    
+    <line x1="50" y1="148" x2="50" y2="165" stroke="#E24B4A" stroke-width="3.5"/><rect x="44" y="155" width="11" height="9" fill="#E24B4A" rx=".5"/>
+    <line x1="68" y1="140" x2="68" y2="158" stroke="#E24B4A" stroke-width="3.5"/><rect x="62" y="148" width="11" height="9" fill="#E24B4A" rx=".5"/>
+    <line x1="86" y1="132" x2="86" y2="152" stroke="#E24B4A" stroke-width="3.5"/><rect x="80" y="140" width="11" height="11" fill="#E24B4A" rx=".5"/>
+    <line x1="104" y1="125" x2="104" y2="145" stroke="#1D9E75" stroke-width="3.8"/><rect x="98" y="126" width="11" height="18" fill="#1D9E75" rx=".5"/>
+    <line x1="122" y1="115" x2="122" y2="138" stroke="#1D9E75" stroke-width="3.8"/><rect x="116" y="116" width="11" height="21" fill="#1D9E75" rx=".5"/>
+    <line x1="140" y1="108" x2="140" y2="130" stroke="#E24B4A" stroke-width="3.8"/><rect x="134" y="116" width="11" height="13" fill="#E24B4A" rx=".5"/>
+    <line x1="158" y1="98" x2="158" y2="122" stroke="#1D9E75" stroke-width="4"/><rect x="152" y="99" width="11" height="22" fill="#1D9E75" rx=".5"/>
+    
+    <line x1="176" y1="105" x2="176" y2="128" stroke="#E24B4A" stroke-width="3.8"/><rect x="170" y="113" width="11" height="14" fill="#E24B4A" rx=".5"/>
+    <line x1="194" y1="95" x2="194" y2="118" stroke="#1D9E75" stroke-width="4"/><rect x="188" y="96" width="11" height="21" fill="#1D9E75" rx=".5"/>
+    <line x1="212" y1="88" x2="212" y2="110" stroke="#1D9E75" stroke-width="4"/><rect x="206" y="89" width="11" height="20" fill="#1D9E75" rx=".5"/>
+    <line x1="230" y1="95" x2="230" y2="118" stroke="#E24B4A" stroke-width="3.8"/><rect x="224" y="103" width="11" height="14" fill="#E24B4A" rx=".5"/>
+    <line x1="248" y1="92" x2="248" y2="115" stroke="#E24B4A" stroke-width="3.8"/><rect x="242" y="100" width="11" height="14" fill="#E24B4A" rx=".5"/>
+    <line x1="266" y1="78" x2="266" y2="105" stroke="#1D9E75" stroke-width="4.2"/><rect x="260" y="79" width="11" height="25" fill="#1D9E75" rx=".5"/>
+    <line x1="284" y1="88" x2="284" y2="112" stroke="#E24B4A" stroke-width="4"/><rect x="278" y="96" width="11" height="15" fill="#E24B4A" rx=".5"/>
+    
+    <line x1="302" y1="75" x2="302" y2="102" stroke="#1D9E75" stroke-width="4.2"/><rect x="296" y="76" width="11" height="25" fill="#1D9E75" rx=".5"/>
+    <line x1="320" y1="68" x2="320" y2="95" stroke="#1D9E75" stroke-width="4.2"/><rect x="314" y="69" width="11" height="25" fill="#1D9E75" rx=".5"/>
+    <line x1="338" y1="58" x2="338" y2="85" stroke="#1D9E75" stroke-width="4.2"/><rect x="332" y="59" width="11" height="25" fill="#1D9E75" rx=".5"/>
+    <line x1="356" y1="65" x2="356" y2="92" stroke="#E24B4A" stroke-width="4"/><rect x="350" y="73" width="11" height="18" fill="#E24B4A" rx=".5"/>
+    <line x1="374" y1="82" x2="374" y2="108" stroke="#E24B4A" stroke-width="4"/><rect x="368" y="90" width="11" height="17" fill="#E24B4A" rx=".5"/>
+    <line x1="392" y1="95" x2="392" y2="122" stroke="#E24B4A" stroke-width="4"/><rect x="386" y="103" width="11" height="18" fill="#E24B4A" rx=".5"/>
+    <line x1="410" y1="112" x2="410" y2="142" stroke="#E24B4A" stroke-width="4.2"/><rect x="404" y="122" width="11" height="19" fill="#E24B4A" rx=".5"/>
+    
+    <line x1="428" y1="125" x2="428" y2="155" stroke="#E24B4A" stroke-width="4.2"/><rect x="422" y="135" width="11" height="19" fill="#E24B4A" rx=".5"/>
+    <line x1="446" y1="138" x2="446" y2="168" stroke="#E24B4A" stroke-width="4.2"/><rect x="440" y="148" width="11" height="19" fill="#E24B4A" rx=".5"/>
+    <line x1="464" y1="105" x2="464" y2="142" stroke="#1D9E75" stroke-width="4.8"/><rect x="458" y="106" width="11" height="35" fill="#1D9E75" rx=".5"/>
+    <line x1="482" y1="60" x2="482" y2="112" stroke="#1D9E75" stroke-width="5.2"/><rect x="476" y="61" width="11" height="50" fill="#1D9E75" rx=".5"/>
+    <line x1="500" y1="32" x2="500" y2="68" stroke="#1D9E75" stroke-width="5"/><rect x="494" y="33" width="11" height="34" fill="#1D9E75" rx=".5"/>
+    <line x1="518" y1="48" x2="518" y2="82" stroke="#E24B4A" stroke-width="5"/><rect x="512" y="56" width="11" height="25" fill="#E24B4A" rx=".5"/>
+    <line x1="536" y1="85" x2="536" y2="122" stroke="#E24B4A" stroke-width="4.8"/><rect x="530" y="95" width="11" height="26" fill="#E24B4A" rx=".5"/>
+    <line x1="554" y1="110" x2="554" y2="148" stroke="#E24B4A" stroke-width="4.8"/><rect x="548" y="120" width="11" height="27" fill="#E24B4A" rx=".5"/>
+    <line x1="572" y1="95" x2="572" y2="128" stroke="#1D9E75" stroke-width="4.5"/><rect x="566" y="96" width="11" height="31" fill="#1D9E75" rx=".5"/>
+    
+    <path d="M 50 162 Q 176 125, 320 82 Q 464 115, 572 108" stroke="#0C447C" stroke-width="2" fill="none" opacity=".4" stroke-dasharray="5 3"/>
+    <text x="620" y="112" font-size="7" fill="#0C447C" font-weight="600">월20선</text>
+    
+    <line x1="40" y1="32" x2="640" y2="32" stroke="#E24B4A" stroke-width="1.3" stroke-dasharray="3 2" opacity=".5"/>
+    <text x="42" y="29" font-size="8" fill="#E24B4A" font-weight="700">321,500 (2026.1)</text>
+    
+    <line x1="40" y1="105" x2="640" y2="105" stroke="#26215C" stroke-width="1.6" stroke-dasharray="4 3" opacity=".65"/>
+    <text x="42" y="102" font-size="9" fill="#26215C" font-weight="700">267k 현재</text>
+    
+    <line x1="40" y1="118" x2="640" y2="118" stroke="#1D9E75" stroke-width="1.2" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="42" y="115" font-size="8" fill="#1D9E75" font-weight="600">260k (월20선)</text>
+    
+    <line x1="40" y1="165" x2="640" y2="165" stroke="#A32D2D" stroke-width="1.2" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="42" y="162" font-size="8" fill="#A32D2D" font-weight="600">148,900 (사이클 저점)</text>
+    
+    <circle cx="500" cy="50" r="22" fill="none" stroke="#E24B4A" stroke-width="1.8" stroke-dasharray="2 2"/>
+    <text x="500" y="24" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">1월 폭등</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024년 4월 사이클 저점(148k) → 2년 상승 → 2026년 1월 신고가(303k) → 현재 월20선(260k) 지지 테스트 중</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">1월 급등 = 세력 분산, 2~4월 = 재매집 구간</span><span class="tag t-g">횡보 매집</span><div style="color:#888;margin-top:2px;font-size:11px">1월 거래량 524k주(주봉) 폭발하며 233k→321k 급등 = 세력이 본격 물량 털기. 이후 2~4월 거래량 195k주로 63% 감소하며 230k~280k 박스권 횡보 = 세력이 고점 털은 물량 250k 근처 재매집 중. 외국인·기관 수급은 중립(순매수·순매도 반복). 횡보 매집 후 급등 패턴 = 장기 시세 가능성. 단, 246k 이탈 시 재매집 실패 = 추가 하락.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">AFM 글로벌 1위 독점, 반도체 첨단공정 필수 장비</span><span class="tag t-navy">구조적 경쟁력</span><div style="color:#888;margin-top:2px;font-size:11px">원자힘현미경(AFM) = 3나노 이하 첨단공정 웨이퍼 표면 결함 검사 필수 장비. 글로벌 시장점유율 60%+ 독점. 경쟁사(브루커 등) 대비 정밀도·속도 우위. 삼성전자 화성·평택 라인, TSMC 대만·미국 공장, 인텔 오리곤 공장 주요 고객. 미국 對中 반도체 제재와 무관(검사장비는 제재 제외). SMIC·YMTC 등 중국 고객도 확보. 파운드리·DRAM·NAND 모두 필요 → 업황 사이클 상관없이 수요 바닥 존재.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">2026년 실적 턴어라운드 기대, 단 밸류 부담</span><span class="tag t-a">펀더멘털</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 매출 1,800억원(-15% YoY), 영업이익 300억원(-30% YoY) = 반도체 업황 침체 영향. 2026년 예상 매출 2,200억원(+22%), 영업이익 500억원(+67%) = 삼성 파운드리 2나노 양산(2027년), TSMC A16 투자 재개 기대감. 단, PER 40배+ 고밸류에이션 = 실적 미달 시 급락 리스크. 목표주가: 증권사 평균 320,000원(현재 +20%).</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">반도체 업황 사이클·고밸류 리스크</span><span class="tag t-r">리스크</span><div style="color:#888;margin-top:2px;font-size:11px">①<b>업황 사이클:</b> 삼성·TSMC 투자 지연 시 수주 감소 = 실적 악화. ②<b>1월 급등 부담:</b> 321k 신고가 = 단기 과열. 246k 이탈 시 200k 재조정 가능. ③<b>고밸류:</b> PER 40배 = 실적 미달 시 밸류 조정. ④<b>경쟁 심화:</b> 브루커·히타치 신제품 출시 시 점유율 하락. ⑤<b>환율:</b> 달러 약세 시 수출 마진 악화.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>글로벌 AFM 시장 점유율 60%+ 독점 (경쟁사 대비 압도적 기술력)</span><span class="tag t-g">구조적 강점</span></div>
+  <div class="row"><span>삼성·TSMC·인텔 주요 고객 확보 = 안정적 수주</span><span class="tag t-g">고객 다변화</span></div>
+  <div class="row"><span>3나노 이하 첨단공정 필수 장비 = 수요 구조적 증가</span><span class="tag t-b">섹터 성장</span></div>
+  <div class="row"><span>미국 對中 반도체 제재 무관 (검사장비 제외) = 중국 수주 가능</span><span class="tag t-g">지정학 유리</span></div>
+  <div class="row"><span>250k 근처 박스권 횡보 = 세력 재매집 구간 가능성</span><span class="tag t-navy">차트 패턴</span></div>
+  <div class="row"><span>피보나치 50%(263k) 지지 반등 시도 = 단기 모멘텀</span><span class="tag t-teal">기술적 반등</span></div>
+  <div class="row"><span>2026년 실적 턴어라운드 기대 (매출 +22%, 영업익 +67%)</span><span class="tag t-a">실적 개선</span></div>
+  <div class="row"><span>1월 321k 신고가 후 26% 급락 = 단기 과열 털기 부담</span><span class="tag t-a">조정 필요</span></div>
+  <div class="row"><span>PER 40배+ 고밸류에이션 = 실적 미달 시 급락 리스크</span><span class="tag t-r">밸류 부담</span></div>
+  <div class="row"><span>반도체 업황 사이클 민감 = 삼성·TSMC 투자 지연 리스크</span><span class="tag t-r">업황 의존</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:65%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 65점 — 중립적 관망</div>
+    <div style="font-size:11px;color:#5f5e5a">현재 267k = 피보나치 50%(263k) 지지 반등 시도 중. 280k 돌파 시 320k 재도전 가능. 단, 246k 이탈 시 추가 하락 리스크. <b>전략: 250k 이하 조정 시 30% 분할매수 → 280k 돌파 확인 후 50% 추가.</b></div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:80%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 80점</div>
+    <div style="font-size:11px;color:#5f5e5a">AFM 독점 기업 + 반도체 첨단공정 필수 장비 = 구조적 성장. 2027년 삼성 2나노 양산·TSMC A16 투자 본격화 시 수주 급증. <b>목표가 380k (피보나치 확장 1.272). 1년 목표 +42%.</b> 단, 월봉 20선(260k) 이탈 시 중장기 시나리오 무효.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "250k 이하 조정 분할매수 → 280k 돌파 시 추가 → 320k 목표"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">250,000~<br>255,000</div><div>MA20 + 피보 61.8%<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">235,000~<br>246,000</div><div>MA120 + 4월저점<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">320,000~<br>380,000</div><div>신고가 돌파 + 피보 1.272<br>+42%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">228,000원</div><div>피보 78.6% 이탈</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 파크시스템스 핵심 4포인트:</b><br>
+    ① <b>AFM 글로벌 1위 독점 (60%+ 점유율)</b> — 경쟁사 대비 정밀도·속도 압도적 우위. 삼성·TSMC·인텔 주요 고객.<br>
+    ② <b>반도체 3나노 이하 첨단공정 필수 장비</b> — 파운드리·DRAM·NAND 모두 수요. 미국 對中 제재 무관 = 중국 수주 가능.<br>
+    ③ <b>2026년 실적 턴어라운드 + 2027년 수주 폭발 기대</b> — 삼성 2나노 양산, TSMC A16 투자 재개. 매출 +22%, 영업익 +67% 전망.<br>
+    ④ <b>1월 급등 털기 후 250k 재매집 박스권</b> — 세력 횡보 매집 완료 시 280k 돌파 → 320k~380k 2차 상승. 피보나치 50%(263k) 지지 필수.</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> ① 1월 321k 신고가 = 단기 과열 털기 → 246k 이탈 시 200k 재조정. ② PER 40배+ 고밸류 = 실적 미달 시 급락. ③ 반도체 업황 사이클 민감 = 삼성·TSMC 투자 지연 리스크. ④ 월봉 20선(260k) 이탈 시 사이클 고점 확정 → 장기 조정. <b>대응: 250k 이하 분할매수 + 280k 돌파 확인 후 추가 + 228k 손절 엄수.</b></div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>

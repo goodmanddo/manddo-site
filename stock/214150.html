@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>클래시스 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>클래시스 (214150) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스닥 미용의료기기 | 52주 저점권 박스 횡보, MA60 돌파 여부가 분기점</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 클래시스 = "1월 급등 후 조정 완료 vs 재하락 갈림길, 49,000원 세력 매집 구간 지지 여부 주목"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 52주 저점(49,000) 터치 후 반등 (저점 대비 +17%)<br>② 3~4월 박스권 거래량 감소 = 세력 매집 가능성<br>③ 미용의료 수출주, 글로벌 수요 견조<br>④ 피보나치 23.6% 지지 확인, 38.2% 돌파 시 탄력
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>1월 급등(+36%) 후 2월 급락(-37%)의 상흔. 2/25 거래량 826만주 세력 털기 의심. MA60(59,099) + MA120(58,047) 이중 저항대 미돌파. 49,000 이탈 시 재하락 리스크.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#888780">57,400<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -1.37%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">49,000~<br>77,600원</div><div class="ms">저점 대비 +17.1%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">29.4%</div><div class="ms">저점권 (하위 30%)</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 위치 29.4% = 저점권. 세력은 본인 매집 본전 밑으로 내리기 싫어하므로 49K 지지 시 반등 기회, 이탈 시 추가 하락.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:29.4%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 57,400</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 49,000</span><span>중간 63,300</span><span>고점 77,600</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 1월 급등(57K→77.6K) 후 2월 급락(49K 52주 저점), 이후 49K~58K 박스권 2개월 횡보 중. 현재 MA20(53,730) 위 안착했으나 MA60(59,099) 저항 앞. 피보나치 23.6~38.2% 구간에서 세력 매집 vs 분산 경합 중. MA60 돌파 시 60K 이상 재도전, 49K 이탈 시 재하락.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">박스권 횡보</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">52주 저점권</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">세력 매집 의심</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">MA60 저항</span>
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">미용의료 수출주</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "MA60 직전 박스권 상단, 돌파 여부가 단기 분수령"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2/25 거래량 826만주 폭발 = 세력 털기.</b> 이후 거래량 급감(10~30만주). 세력이 고점에서 물량 던진 후 바닥 재매집 or 이탈 준비 중.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>MA20(53,730) 지지 확인, MA60(59,099) 저항 미돌파.</b> 현재가 57,400은 두 이평선 사이 = 단기 상승 vs 중기 하락 충돌 구간. MA60 돌파해야 상승 전환.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 23.6%(55,750) 지지, 38.2%(59,925) 저항.</b> 현재 이 사이 횡보 = 조정 후 재상승 준비 or 하락 중 단순 되돌림 구간. 60K 돌파해야 상승파 지속.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>49,000원 = 52주 저점 = 세력 방어선.</b> 세력은 본전 밑으로 내리기 싫어함. 3~4월 49~58K 박스 = 매집 원가 52~55K 추정. 49K 지지 시 반등, 이탈 시 손절 폭포.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#FAEEDA;color:#633806">박스권 횡보</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker></defs>
+    
+    <rect x="40" y="50" width="140" height="140" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="110" y="63" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 1월 급등</text>
+    
+    <rect x="180" y="80" width="120" height="110" rx="4" fill="#FAE5D3" opacity=".12"/>
+    <text x="240" y="93" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">② 급락</text>
+    
+    <rect x="300" y="110" width="320" height="80" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="460" y="123" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">③ 박스 횡보 (매집 의심)</text>
+    
+    <line x1="55" y1="130" x2="55" y2="100" stroke="#1D9E75" stroke-width="1.8"/><rect x="50" y="102" width="9" height="26" fill="#1D9E75" rx="1"/>
+    <line x1="75" y1="95" x2="75" y2="80" stroke="#1D9E75" stroke-width="1.8"/><rect x="70" y="82" width="9" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="78" x2="95" y2="60" stroke="#1D9E75" stroke-width="1.8"/><rect x="90" y="62" width="9" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="115" y1="55" x2="115" y2="25" stroke="#1D9E75" stroke-width="1.8"/><rect x="110" y="27" width="9" height="26" fill="#1D9E75" rx="1"/>
+    <text x="115" y="20" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">77.6K</text>
+    
+    <line x1="135" y1="35" x2="135" y2="45" stroke="#E24B4A" stroke-width="1.8"/><rect x="130" y="39" width="9" height="4" fill="#E24B4A" rx="1"/>
+    <line x1="155" y1="48" x2="155" y2="70" stroke="#E24B4A" stroke-width="1.8"/><rect x="150" y="58" width="9" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="72" x2="175" y2="85" stroke="#E24B4A" stroke-width="1.8"/><rect x="170" y="78" width="9" height="5" fill="#E24B4A" rx="1"/>
+    <line x1="195" y1="90" x2="195" y2="105" stroke="#E24B4A" stroke-width="1.8"/><rect x="190" y="98" width="9" height="5" fill="#E24B4A" rx="1"/>
+    <line x1="215" y1="80" x2="215" y2="95" stroke="#1D9E75" stroke-width="1.8"/><rect x="210" y="87" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="235" y1="100" x2="235" y2="165" stroke="#E24B4A" stroke-width="2.2"/><rect x="230" y="145" width="9" height="18" fill="#E24B4A" rx="1"/>
+    <text x="235" y="180" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">2/25 털기</text>
+    <text x="235" y="189" text-anchor="middle" font-size="7" fill="#888">826만주</text>
+    
+    <line x1="255" y1="170" x2="255" y2="155" stroke="#E24B4A" stroke-width="1.8"/><rect x="250" y="157" width="9" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="275" y1="175" x2="275" y2="185" stroke="#E24B4A" stroke-width="1.8"/><rect x="270" y="177" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="295" y1="180" x2="295" y2="190" stroke="#E24B4A" stroke-width="1.8"/><rect x="290" y="183" width="9" height="5" fill="#E24B4A" rx="1"/>
+    <text x="295" y="203" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="700">49K 저점</text>
+    
+    <line x1="315" y1="188" x2="315" y2="165" stroke="#1D9E75" stroke-width="1.8"/><rect x="310" y="167" width="9" height="19" fill="#1D9E75" rx="1"/>
+    <line x1="335" y1="170" x2="335" y2="155" stroke="#E24B4A" stroke-width="1.8"/><rect x="330" y="157" width="9" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="355" y1="160" x2="355" y2="150" stroke="#1D9E75" stroke-width="1.8"/><rect x="350" y="152" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="375" y1="155" x2="375" y2="145" stroke="#1D9E75" stroke-width="1.8"/><rect x="370" y="147" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="395" y1="150" x2="395" y2="160" stroke="#E24B4A" stroke-width="1.8"/><rect x="390" y="152" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="415" y1="165" x2="415" y2="170" stroke="#E24B4A" stroke-width="1.8"/><rect x="410" y="167" width="9" height="2" fill="#E24B4A" rx="1"/>
+    <line x1="435" y1="173" x2="435" y2="180" stroke="#E24B4A" stroke-width="1.8"/><rect x="430" y="175" width="9" height="4" fill="#E24B4A" rx="1"/>
+    <line x1="455" y1="178" x2="178" y2="165" stroke="#1D9E75" stroke-width="1.8"/><rect x="450" y="167" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="475" y1="168" x2="475" y2="155" stroke="#E24B4A" stroke-width="1.8"/><rect x="470" y="157" width="9" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="495" y1="160" x2="495" y2="150" stroke="#1D9E75" stroke-width="1.8"/><rect x="490" y="152" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="515" y1="155" x2="515" y2="165" stroke="#E24B4A" stroke-width="1.8"/><rect x="510" y="157" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="535" y1="163" x2="535" y2="150" stroke="#1D9E75" stroke-width="1.8"/><rect x="530" y="152" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="555" y1="155" x2="555" y2="135" stroke="#1D9E75" stroke-width="1.8"/><rect x="550" y="137" width="9" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="575" y1="140" x2="575" y2="130" stroke="#1D9E75" stroke-width="1.8"/><rect x="570" y="132" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="595" y1="135" x2="595" y2="125" stroke="#1D9E75" stroke-width="1.8"/><rect x="590" y="127" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="615" y1="130" x2="615" y2="135" stroke="#E24B4A" stroke-width="1.8"/><rect x="610" y="132" width="9" height="2" fill="#E24B4A" rx="1"/>
+    
+    <line x1="40" y1="133" x2="640" y2="133" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="130" font-size="9" fill="#26215C" font-weight="600">현재 57,400</text>
+    
+    <line x1="40" y1="120" x2="640" y2="120" stroke="#0C447C" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="540" y="117" font-size="8" fill="#0C447C" font-weight="600">MA60 (59,099)</text>
+    
+    <line x1="40" y1="145" x2="640" y2="145" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="540" y="142" font-size="8" fill="#1D9E75" font-weight="600">MA20 (53,730)</text>
+    
+    <line x1="40" y1="190" x2="640" y2="190" stroke="#A32D2D" stroke-width="1.2" opacity=".5"/>
+    <text x="42" y="187" font-size="8" fill="#A32D2D" font-weight="600">49K 지지선</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 1월 급등→2월 털기→49K 저점→박스 횡보. MA60(59K) 돌파가 핵심 분기점</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 5파 실패 후 A-B-C 조정, 신규 1파 vs 재하락 분기점"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>엘리어트: 2025년 10월 ④파 저점(45,450) → 1월 ⑤파 시도(77,600) 실패.</b> 고점 갱신했으나 거래량 미지속 = 세력 유인 후 털기. 현재 조정파 A-B-C 진행 중.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>주봉 MA20(약 54K) 돌파 시도 중, MA60(약 58K) 저항.</b> 정배열 전환 실패 = 중기 상승 모멘텀 부족. MA60 돌파해야 ⑤파 연장 or 신규 1파 시작 가능.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>1/26~2/6 주봉 2개 상승(+58%), 2/23~3/3 주봉 2개 하락(-37%).</b> 급하게 올린 종목은 짧게 간다(세력 철칙). 횡보 매집 없이 급등 = 지속력 의심.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>3~4월 6주간 박스 횡보 = 세력 재매집 vs 포기 갈림길.</b> 거래량 감소(20~40만주) = 세력 대기 중. 다음 주봉 돌파(60K+) or 이탈(49K-) 시그널 주시.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#FAEEDA;color:#633806">⑤파 실패 조정</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker></defs>
+    
+    <rect x="40" y="30" width="120" height="130" rx="4" fill="#E1F5EE" opacity=".1"/>
+    <text x="100" y="43" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">④파 바닥</text>
+    
+    <rect x="160" y="20" width="100" height="140" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="210" y="33" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">⑤파 시도</text>
+    
+    <rect x="260" y="80" width="360" height="80" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="440" y="93" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">A-B-C 조정파 (or 신규 ①파 시작)</text>
+    
+    <line x1="60" y1="120" x2="60" y2="140" stroke="#E24B4A" stroke-width="2"/><rect x="55" y="128" width="9" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="80" y1="130" x2="80" y2="155" stroke="#E24B4A" stroke-width="2"/><rect x="75" y="138" width="9" height="15" fill="#E24B4A" rx="1"/>
+    <text x="80" y="172" text-anchor="middle" font-size="8" fill="#888">④ 45K</text>
+    
+    <line x1="100" y1="145" x2="100" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="95" y="122" width="9" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="120" y1="125" x2="120" y2="105" stroke="#1D9E75" stroke-width="2"/><rect x="115" y="107" width="9" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="140" y1="110" x2="140" y2="95" stroke="#1D9E75" stroke-width="2"/><rect x="135" y="97" width="9" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="160" y1="100" x2="160" y2="85" stroke="#E24B4A" stroke-width="2"/><rect x="155" y="87" width="9" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="180" y1="90" x2="180" y2="75" stroke="#1D9E75" stroke-width="2"/><rect x="175" y="77" width="9" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="200" y1="80" x2="200" y2="50" stroke="#1D9E75" stroke-width="2"/><rect x="195" y="52" width="9" height="26" fill="#1D9E75" rx="1"/>
+    <line x1="220" y1="55" x2="220" y2="30" stroke="#1D9E75" stroke-width="2.5"/><rect x="215" y="32" width="9" height="21" fill="#1D9E75" rx="1"/>
+    <text x="220" y="25" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">⑤ 77.6K</text>
+    
+    <line x1="240" y1="40" x2="240" y2="70" stroke="#E24B4A" stroke-width="2"/><rect x="235" y="52" width="9" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="260" y1="75" x2="260" y2="90" stroke="#E24B4A" stroke-width="2"/><rect x="255" y="80" width="9" height="8" fill="#E24B4A" rx="1"/>
+    <text x="260" y="100" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">A파</text>
+    
+    <line x1="280" y1="95" x2="280" y2="80" stroke="#1D9E75" stroke-width="2"/><rect x="275" y="82" width="9" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="300" y1="85" x2="300" y2="95" stroke="#E24B4A" stroke-width="2"/><rect x="295" y="88" width="9" height="5" fill="#E24B4A" rx="1"/>
+    <line x1="320" y1="100" x2="320" y2="145" stroke="#E24B4A" stroke-width="2.2"/><rect x="315" y="118" width="9" height="25" fill="#E24B4A" rx="1"/>
+    <text x="320" y="160" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">C파 49K</text>
+    
+    <line x1="340" y1="143" x2="340" y2="125" stroke="#1D9E75" stroke-width="2"/><rect x="335" y="127" width="9" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="360" y1="130" x2="360" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="355" y="122" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="380" y1="125" x2="380" y2="115" stroke="#E24B4A" stroke-width="2"/><rect x="375" y="117" width="9" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="400" y1="120" x2="400" y2="125" stroke="#E24B4A" stroke-width="2"/><rect x="395" y="122" width="9" height="2" fill="#E24B4A" rx="1"/>
+    <line x1="420" y1="128" x2="420" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="415" y="120" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="440" y1="123" x2="440" y2="130" stroke="#E24B4A" stroke-width="2"/><rect x="435" y="125" width="9" height="4" fill="#E24B4A" rx="1"/>
+    <line x1="460" y1="133" x2="460" y2="125" stroke="#1D9E75" stroke-width="2"/><rect x="455" y="127" width="9" height="4" fill="#1D9E75" rx="1"/>
+    <line x1="480" y1="130" x2="480" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="475" y="122" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="500" y1="125" x2="500" y2="115" stroke="#1D9E75" stroke-width="2"/><rect x="495" y="117" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="520" y1="120" x2="520" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="515" y="112" width="9" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="540" y1="115" x2="540" y2="95" stroke="#1D9E75" stroke-width="2"/><rect x="535" y="97" width="9" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="560" y1="100" x2="560" y2="92" stroke="#1D9E75" stroke-width="2"/><rect x="555" y="94" width="9" height="4" fill="#1D9E75" rx="1"/>
+    <line x1="580" y1="97" x2="580" y2="90" stroke="#1D9E75" stroke-width="2"/><rect x="575" y="92" width="9" height="3" fill="#1D9E75" rx="1"/>
+    <line x1="600" y1="95" x2="600" y2="98" stroke="#E24B4A" stroke-width="2"/><rect x="595" y="97" width="9" height="1" fill="#E24B4A" rx="1"/>
+    
+    <path d="M 60 135 Q 120 115, 220 45" stroke="#EF9F27" stroke-width="1.5" fill="none" stroke-dasharray="5 3" opacity=".6"/>
+    <text x="140" y="70" font-size="8" fill="#EF9F27" font-weight="600">상승 추세선 (붕괴)</text>
+    
+    <line x1="40" y1="92" x2="620" y2="92" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="520" y="89" font-size="8" fill="#26215C" font-weight="600">현재 57,400</text>
+    
+    <text x="380" y="170" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">← 박스 횡보 6주 (세력 매집 의심) →</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: ④파 바닥→⑤파 급등 실패→A-B-C 조정 완료? 신규 ①파 vs 재하락 갈림길</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2024년 5월 고점 후 장기 조정, 사이클 바닥 테스트 중"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024년 5월 고점(52,300→급등) 이후 20개월 조정.</b> 전고점(2024.6 약 56K) 돌파 실패 반복 = 장기 하락 추세. 저점 높이기(45K→49K) 시작 = 바닥 다지기 신호.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>월봉 MA60/MA120 역배열 지속, 정배열 전환 실패.</b> 중장기 추세는 여전히 하락. 월봉 MA20(약 57K) 돌파 시도 중 = 단기 반등 가능성, 지속 여부는 60K+ 돌파 확인 필요.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2026년 1월 77.6K 돌파 = 2024년 6월 이후 최고가 갱신.</b> 그러나 단 1개 월봉으로 급등 후 급락 = 세력 유인 후 털기. 횡보 매집 없이 급등 = 지속 불가.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망: 49K 지지 유지 시 이중바닥(더블바텀) 형성 가능.</b> 2026년 3월 49K = 2026년 10월 45K와 비슷 수준 = W자 형성 중. 넥라인(60~63K) 돌파 시 중기 상승 전환.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">장기 조정 → 바닥 다지기</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="50" width="180" height="110" rx="4" fill="#E1F5EE" opacity=".1"/>
+    <text x="130" y="63" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">2024 고점 형성</text>
+    
+    <rect x="220" y="80" width="200" height="80" rx="4" fill="#FAE5D3" opacity=".12"/>
+    <text x="320" y="93" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">2025 조정</text>
+    
+    <rect x="420" y="60" width="220" height="100" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="530" y="73" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">2026 V자 반등 시도 (실패?)</text>
+    
+    <line x1="60" y1="140" x2="60" y2="125" stroke="#1D9E75" stroke-width="2.5"/><rect x="54" y="127" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="80" y1="130" x2="80" y2="115" stroke="#1D9E75" stroke-width="2.5"/><rect x="74" y="117" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="100" y1="120" x2="100" y2="105" stroke="#1D9E75" stroke-width="2.5"/><rect x="94" y="107" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="120" y1="110" x2="120" y2="55" stroke="#1D9E75" stroke-width="2.5"/><rect x="114" y="57" width="11" height="50" fill="#1D9E75" rx="1"/>
+    <text x="120" y="50" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">2024.5 급등</text>
+    
+    <line x1="140" y1="60" x2="140" y2="70" stroke="#1D9E75" stroke-width="2.5"/><rect x="134" y="64" width="11" height="4" fill="#1D9E75" rx="1"/>
+    <line x1="160" y1="75" x2="160" y2="95" stroke="#E24B4A" stroke-width="2.5"/><rect x="154" y="80" width="11" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="180" y1="100" x2="180" y2="85" stroke="#1D9E75" stroke-width="2.5"/><rect x="174" y="87" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="200" y1="90" x2="200" y2="80" stroke="#1D9E75" stroke-width="2.5"/><rect x="194" y="82" width="11" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="220" y1="85" x2="220" y2="100" stroke="#E24B4A" stroke-width="2.5"/><rect x="214" y="90" width="11" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="240" y1="105" x2="240" y2="120" stroke="#E24B4A" stroke-width="2.5"/><rect x="234" y="110" width="11" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="260" y1="125" x2="260" y2="110" stroke="#1D9E75" stroke-width="2.5"/><rect x="254" y="112" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="280" y1="115" x2="280" y2="100" stroke="#1D9E75" stroke-width="2.5"/><rect x="274" y="102" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="300" y1="105" x2="300" y2="70" stroke="#1D9E75" stroke-width="2.5"/><rect x="294" y="72" width="11" height="31" fill="#1D9E75" rx="1"/>
+    <text x="300" y="65" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">2025.2 반등</text>
+    
+    <line x1="320" y1="75" x2="320" y2="95" stroke="#E24B4A" stroke-width="2.5"/><rect x="314" y="82" width="11" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="340" y1="100" x2="340" y2="85" stroke="#1D9E75" stroke-width="2.5"/><rect x="334" y="87" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="360" y1="90" x2="360" y2="105" stroke="#E24B4A" stroke-width="2.5"/><rect x="354" y="95" width="11" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="380" y1="110" x2="380" y2="125" stroke="#E24B4A" stroke-width="2.5"/><rect x="374" y="115" width="11" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="400" y1="130" x2="400" y2="120" stroke="#E24B4A" stroke-width="2.5"/><rect x="394" y="122" width="11" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="420" y1="125" x2="420" y2="140" stroke="#E24B4A" stroke-width="2.5"/><rect x="414" y="130" width="11" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="440" y1="145" x2="445" y2="135" stroke="#1D9E75" stroke-width="2.5"/><rect x="434" y="137" width="11" height="6" fill="#1D9E75" rx="1"/>
+    <line x1="460" y1="140" x2="460" y2="125" stroke="#1D9E75" stroke-width="2.5"/><rect x="454" y="127" width="11" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="480" y1="130" x2="480" y2="115" stroke="#1D9E75" stroke-width="2.5"/><rect x="474" y="117" width="11" height="11" fill="#1D9E75" rx="1"/>
+    
+    <line x1="500" y1="120" x2="500" y2="35" stroke="#1D9E75" stroke-width="3"/><rect x="494" y="37" width="11" height="80" fill="#1D9E75" rx="1"/>
+    <text x="500" y="28" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">2026.1 77.6K 신고가</text>
+    
+    <line x1="520" y1="45" x2="520" y2="105" stroke="#E24B4A" stroke-width="2.5"/><rect x="514" y="70" width="11" height="33" fill="#E24B4A" rx="1"/>
+    <line x1="540" y1="110" x2="540" y2="145" stroke="#E24B4A" stroke-width="2.5"/><rect x="534" y="120" width="11" height="23" fill="#E24B4A" rx="1"/>
+    <text x="540" y="160" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">3월 49K</text>
+    
+    <line x1="560" y1="143" x2="560" y2="130" stroke="#1D9E75" stroke-width="2.5"/><rect x="554" y="132" width="11" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="580" y1="135" x2="580" y2="110" stroke="#1D9E75" stroke-width="2.5"/><rect x="574" y="112" width="11" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="600" y1="115" x2="600" y2="108" stroke="#E24B4A" stroke-width="2.5"/><rect x="594" y="110" width="11" height="3" fill="#E24B4A" rx="1"/>
+    
+    <line x1="40" y1="108" x2="620" y2="108" stroke="#26215C" stroke-width="1.5" stroke-dasharray="5 4" opacity=".5"/>
+    <text x="520" y="105" font-size="8" fill="#26215C" font-weight="600">현재 57,400</text>
+    
+    <ellipse cx="500" cy="85" rx="85" ry="75" stroke="#EF9F27" stroke-width="1.5" fill="none" stroke-dasharray="6 3" opacity=".5"/>
+    <text x="500" y="25" text-anchor="middle" font-size="8" fill="#EF9F27" font-weight="600">세력 유인 후 털기 의심</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024.5 고점 후 20개월 조정→2026.1 급등(실패)→사이클 바닥 테스트 중</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">Zone① 수급·매집 — 49K 방어선 = 세력 본전 라인</span><span class="tag t-g">매집 의심</span><div style="color:#888;margin-top:2px;font-size:11px">3~4월 49~58K 박스권 2개월 횡보, 거래량 10~30만주로 급감 = 세력이 조용히 재매집 중이거나 이탈 준비 중. 세력은 본전 밑으로 내리기 싫어하므로 49K = 매집 원가 하단 추정. 52~55K = 핵심 매집 원가대. 49K 지지 시 반등, 이탈 시 손절 폭포.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">Zone② 거래량 분석 — 2/25 826만주 = 세력 털기 시그널</span><span class="tag t-navy">분산 완료</span><div style="color:#888;margin-top:2px;font-size:11px">1월 급등(146만주) 후 2/25 거래량 826만주 폭발 = 평소(20만주)의 40배 = 세력이 고점에서 물량 던짐. 이후 거래량 급감 = 개미 물량 털린 후 조용. 외국인·기관 수급 데이터 없으나 거래량 패턴상 세력 분산 후 재매집 vs 이탈 갈림길.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">Zone③ 구조적 경쟁력 — 미용의료 수출주, 글로벌 수요 견조</span><span class="tag t-a">펀더멘털 양호</span><div style="color:#888;margin-top:2px;font-size:11px">클래시스는 의료용 레이저·필러 제조사. 북미·유럽·아시아 수출 비중 높음. 미용 시장 성장 트렌드(안티에이징, 비수술 시술) 수혜. 경쟁사: 루트로닉, 클래스원텍. 실적 호전 시 주가 재평가 가능. 단, 1분기 실적 발표(4월 말) 주시.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">Zone④ 리스크 — 급등 후 조정 미완 가능성, MA60 미돌파 시 재하락</span><span class="tag t-r">핵심 리스크</span><div style="color:#888;margin-top:2px;font-size:11px">1월 급등(+36%) 후 2월 급락(-37%) = 세력 장난 의심. 횡보 매집 없이 급등 = 지속력 부족(세력 철칙). MA60(59,099) + MA120(58,047) 이중 저항 미돌파 = 중기 하락 추세 유지. 49K 이탈 시 재하락(목표 45K). 거래량 부진 = 세력 이탈 우려.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>✅ 52주 저점(49,000) 터치 후 반등 (+17.1%)</span><span class="tag t-g">저점 매수 기회</span></div>
+  <div class="row"><span>✅ 3~4월 박스권 횡보 = 세력 재매집 가능성</span><span class="tag t-teal">매집 의심</span></div>
+  <div class="row"><span>✅ 피보나치 23.6%(55,750) 지지 확인, 38.2%(59,925) 돌파 대기</span><span class="tag t-b">기술적 반등</span></div>
+  <div class="row"><span>✅ MA20(53,730) 위 안착, 단기 정배열 시작</span><span class="tag t-g">단기 상승</span></div>
+  <div class="row"><span>✅ 미용의료 수출주, 글로벌 수요 견조 (안티에이징 트렌드)</span><span class="tag t-navy">구조적 성장</span></div>
+  <div class="row"><span>📅 4월 말 1분기 실적 발표 — 턴어라운드 확인 필요</span><span class="tag t-p">카탈리스트</span></div>
+  <div class="row"><span>⚠ 2/25 거래량 826만주 = 세력 털기 의심</span><span class="tag t-a">분산 시그널</span></div>
+  <div class="row"><span>⚠ MA60(59,099) + MA120(58,047) 이중 저항 미돌파</span><span class="tag t-a">중기 약세</span></div>
+  <div class="row"><span>🚨 1월 급등 후 조정 미완 가능성 (횡보 매집 없이 급등)</span><span class="tag t-r">급등 후유증</span></div>
+  <div class="row"><span>🚨 49,000 이탈 시 재하락 리스크 (목표 45K~42K)</span><span class="tag t-r">핵심 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:55%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 55% — 중립 (관망 우세)</div>
+    <div style="font-size:11px;color:#5f5e5a">MA60(59K) 돌파 확인 후 추격 or 49K 재터치 시 분할매수. 박스권 상단/하단 대응 전략. 60K 돌파 시 63K 목표 (+10%), 49K 이탈 시 손절.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:62%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 62% — 중립+</div>
+    <div style="font-size:11px;color:#5f5e5a">이중바닥(W) 완성 시 중기 상승 전환 가능. 넥라인(60~63K) 돌파 후 66K→70K 목표. 미용의료 구조적 성장 수혜. 단, 49K 이탈 시 사이클 바닥(42~45K) 재테스트.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "박스권 하단 분할매수 + MA60 돌파 추격, 49K 이탈 시 관망"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">53,000~<br>54,500원</div><div>MA20 지지 확인<br>비중 20%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">49,000~<br>51,000원</div><div>52주 저점 재터치<br>비중 50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">60,000~<br>66,000원</div><div>피보 38.2~61.8%<br>+15~25%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">48,000원</div><div>52주 저점 이탈</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 클래시스 핵심 4포인트:</b><br>
+    ① <b>52주 저점(49K) 지지 = 세력 매집 본전 라인.</b> 방어 시 반등, 이탈 시 재하락.<br>
+    ② <b>MA60(59K) 돌파가 단기 분수령.</b> 돌파 시 60~66K 목표, 실패 시 박스 재횡보.<br>
+    ③ <b>3~4월 박스 횡보 2개월 = 세력 재매집 vs 이탈 갈림길.</b> 거래량 급감 = 조용한 매집 or 포기.<br>
+    ④ <b>미용의료 수출주, 구조적 성장 수혜.</b> 1분기 실적(4월 말) 호전 시 재평가 가능.</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 1월 급등(+36%) 후 2월 급락(-37%) = 세력 털기 의심. 횡보 매집 없이 급등 = 지속력 부족. 2/25 거래량 826만주 = 분산 완료 신호. MA60/MA120 이중 저항 미돌파. <b>49K 이탈 시 45K→42K 재하락 리스크.</b> 거래량 부진(10~30만주) = 세력 이탈 우려. 단기 투기 금지, 49K 지지 확인 후 분할매수 권장.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>
