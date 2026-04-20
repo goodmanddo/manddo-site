@@ -53,16 +53,36 @@ body{
 .card .tag{font-size:11px;padding:4px 9px;border-radius:999px;background:#f2f4f6;color:#6b7684;font-weight:500}
 
 /* ===== 페이지네이션 ===== */
-.pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin:32px 0 8px;flex-wrap:wrap}
-.pagination button{background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:9px 14px;font-size:14px;font-weight:600;color:#4e5968;cursor:pointer;transition:all .15s ease;min-width:40px;font-family:inherit}
-.pagination button:hover:not(:disabled){background:#f2f4f6;color:#191f28;border-color:#dfe3e8}
-.pagination button.active{background:#3182F6;color:#fff;border-color:#3182F6;pointer-events:none}
-.pagination button:disabled{opacity:.35;cursor:not-allowed}
-.pagination .ellipsis{color:#8b95a1;padding:0 4px;font-weight:600;user-select:none}
-.pagination .pg-info{font-size:12px;color:#8b95a1;margin-left:10px;font-weight:500}
+.pagination{display:flex;justify-content:center;align-items:center;gap:4px;margin:40px 0 12px;flex-wrap:wrap}
+.pagination button{
+  background:transparent;border:none;border-radius:50%;
+  width:44px;height:44px;padding:0;
+  font-size:15px;font-weight:600;color:#8b95a1;cursor:pointer;
+  transition:color .15s ease,background .15s ease,transform .15s ease;
+  font-family:inherit;display:inline-flex;align-items:center;justify-content:center;
+  -webkit-tap-highlight-color:transparent
+}
+.pagination button:hover:not(:disabled):not(.active){color:#3182F6;background:rgba(49,130,246,.08)}
+.pagination button:active:not(:disabled){transform:scale(.94)}
+.pagination button.active{
+  color:#fff;background:#3182F6;font-weight:700;
+  box-shadow:0 4px 12px -2px rgba(49,130,246,.45);
+  pointer-events:none
+}
+.pagination button[data-pg="prev"],
+.pagination button[data-pg="next"]{
+  color:#3182F6;font-size:20px;font-weight:500;
+  width:44px;height:44px
+}
+.pagination button[data-pg="prev"]:hover:not(:disabled),
+.pagination button[data-pg="next"]:hover:not(:disabled){background:rgba(49,130,246,.10)}
+.pagination button:disabled{opacity:.25;cursor:not-allowed;color:#c5cad1}
+.pagination .ellipsis{color:#c5cad1;padding:0 2px;font-weight:600;user-select:none;width:24px;text-align:center}
+.pagination .pg-info{font-size:12px;color:#b0b8c1;margin-left:14px;font-weight:500;letter-spacing:0.01em}
 @media(max-width:640px){
-  .pagination button{padding:8px 11px;font-size:13px;min-width:36px}
-  .pagination .pg-info{width:100%;text-align:center;margin:8px 0 0}
+  .pagination{gap:2px;margin:32px 0 8px}
+  .pagination button{width:42px;height:42px;font-size:14px}
+  .pagination .pg-info{width:100%;text-align:center;margin:10px 0 0}
 }
 
 /* ===== 히어로 ===== */

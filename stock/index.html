@@ -384,7 +384,7 @@
   function buildPager(totalPages){
     if(totalPages <= 1){ pager.innerHTML=''; return; }
     const parts = [];
-    parts.push(`<button type="button" data-pg="prev" ${currentPage===1?'disabled':''} aria-label="이전 페이지">‹ 이전</button>`);
+    parts.push(`<button type="button" data-pg="prev" ${currentPage===1?'disabled':''} aria-label="이전 페이지">‹</button>`);
 
     const pages = new Set([1, totalPages, currentPage, currentPage-1, currentPage+1]);
     const shown = Array.from(pages).filter(p => p>=1 && p<=totalPages).sort((a,b)=>a-b);
@@ -395,7 +395,7 @@
       last = p;
     }
 
-    parts.push(`<button type="button" data-pg="next" ${currentPage===totalPages?'disabled':''} aria-label="다음 페이지">다음 ›</button>`);
+    parts.push(`<button type="button" data-pg="next" ${currentPage===totalPages?'disabled':''} aria-label="다음 페이지">›</button>`);
     parts.push(`<span class="pg-info">${matched.length}개 중 ${(currentPage-1)*PAGE_SIZE+1}-${Math.min(currentPage*PAGE_SIZE, matched.length)}</span>`);
     pager.innerHTML = parts.join('');
   }
