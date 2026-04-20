@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HD현대 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>HD현대 (267250) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSPI 대형주 | 조선·방산 대표 지주사, 317,000 신고점 후 조정 국면</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ HD현대 = "K-방산·조선 슈퍼사이클 + 3월 고점 털기 후 재매집 관찰 구간"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 글로벌 조선 수주 호황 (3년 백로그)<br>② K-방산 수출 급증 수혜<br>③ 계열사 한화오션·HD한국조선해양 실적 폭발<br>④ 배당수익률 3%+ 매력
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>3월 3일 317,000원 신고점 기록 후 거래량 506,567주 폭탄 매물 출회 → 세력 1차 분산 완료. MA60(257,608원) 저항 돌파 실패 시 236,000원(MA120) 재테스트 가능.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#A32D2D">255,000<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -1.73%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">181,000~<br>317,000원</div><div class="ms">저점 대비 +40.9%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">54.4%</div><div class="ms">중립 구간 (관망)</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 범위의 정확히 중간 지점. 3월 고점 대비 -19.6% 조정 중이며, MA60(257,608원) 직하단에서 방향성 모색 중.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:54.4%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 255,000</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 181,000</span><span>중간 249,000</span><span>고점 317,000</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2025년 5월 대량 거래량(390만주)으로 77,900→111,700원 돌파 후 장기 상승 사이클 진입. 2026년 3월 3일 317,000원 신고점 기록과 동시에 다음날 50만주 거래량 폭발 = <b>세력 1차 털기 완료</b>. 현재 236,000~265,000원 박스권 횡보 중. MA120(236,811원) 지지선 위에서 버티며 재매집 vs. 추가 하락 분기점 대기.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">조선 슈퍼사이클</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">K-방산 수혜</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">지주사 밸류업</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">배당 3%+</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">MA60 저항</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "317,000 고점 털기 후 236,000~265,000 박스권 재매집 관찰 구간"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>3월 3~4일 거래량 폭탄 (33만 + 50만주)</b> = 317,000원 신고점에서 세력이 1차 물량 분산. 급락 캔들은 "빠르게 올린 종목은 짧게 간다"는 원칙 그대로.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>MA60(257,608원) 저항 3번 실패.</b> 2월 중순·3월 중순·4월 중순 모두 257,000~265,000원 구간에서 거부당함 = 세력이 이 가격대를 청산 구간으로 활용 중.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>MA120(236,811원) 생명선.</b> 3월 23일 240,500원, 3월 30일 236,000원 저점 형성 후 반등 = 세력이 본인 매집 본전(236,000~240,000) 밑으로 떨어지는 것을 참지 못하는 구간.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>현재 MA20(251,125원) 근처 횡보 = 단기 추세선 회복 시도.</b> 4월 16일 268,000원 고점 실패 후 다시 255,000원 하락. 260,000원 돌파 vs. 240,000원 재하락 분기점.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">박스권 횡보 + MA60 저항</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="80" width="140" height="130" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="110" y="92" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 2월 급등 (245→292)</text>
+    <rect x="185" y="35" width="110" height="80" rx="4" fill="#E24B4A" opacity=".08"/>
+    <text x="240" y="47" text-anchor="middle" font-size="9" fill="#E24B4A" font-weight="600">② 3/3 신고점 317,000</text>
+    <rect x="300" y="90" width="180" height="120" rx="4" fill="#FAEEDA" opacity=".15"/>
+    <text x="390" y="102" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">③ 박스권 재매집 관찰</text>
+    <rect x="485" y="100" width="155" height="110" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="562" y="112" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">④ MA20 지지 시도</text>
+    
+    <!-- 2월 반등 -->
+    <line x1="55" y1="180" x2="55" y2="195" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="185" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="175" x2="75" y2="185" stroke="#1D9E75" stroke-width="2"/><rect x="69" y="175" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="165" x2="95" y2="175" stroke="#1D9E75" stroke-width="2"/><rect x="89" y="165" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="115" y1="150" x2="115" y2="165" stroke="#1D9E75" stroke-width="2"/><rect x="109" y="150" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="135" y1="145" x2="135" y2="158" stroke="#1D9E75" stroke-width="2"/><rect x="129" y="148" width="10" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="155" y1="130" x2="155" y2="145" stroke="#1D9E75" stroke-width="2"/><rect x="149" y="130" width="10" height="12" fill="#1D9E75" rx="1"/>
+    
+    <!-- 3월 고점 + 급락 -->
+    <line x1="175" y1="115" x2="175" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="169" y="115" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="195" y1="95" x2="195" y2="112" stroke="#1D9E75" stroke-width="2"/><rect x="189" y="95" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="30" x2="215" y2="98" stroke="#1D9E75" stroke-width="2.5"/><rect x="208" y="30" width="12" height="15" fill="#1D9E75" rx="1"/>
+    <text x="228" y="35" font-size="8" fill="#E24B4A" font-weight="700">▲ 317,000</text>
+    <line x1="240" y1="35" x2="240" y2="150" stroke="#E24B4A" stroke-width="3"/><rect x="233" y="120" width="12" height="28" fill="#E24B4A" rx="1"/>
+    <text x="252" y="165" font-size="7" fill="#E24B4A" font-weight="600">거래량 50만 폭탄</text>
+    
+    <!-- 박스권 횡보 -->
+    <line x1="265" y1="135" x2="265" y2="155" stroke="#1D9E75" stroke-width="2"/><rect x="259" y="140" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="285" y1="125" x2="285" y2="142" stroke="#1D9E75" stroke-width="2"/><rect x="279" y="128" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="305" y1="145" x2="305" y2="165" stroke="#E24B4A" stroke-width="2"/><rect x="299" y="150" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="325" y1="130" x2="325" y2="148" stroke="#1D9E75" stroke-width="2"/><rect x="319" y="133" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="345" y1="140" x2="345" y2="155" stroke="#E24B4A" stroke-width="2"/><rect x="339" y="145" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="365" y1="155" x2="365" y2="175" stroke="#E24B4A" stroke-width="2"/><rect x="359" y="162" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="385" y1="165" x2="385" y2="182" stroke="#E24B4A" stroke-width="2"/><rect x="379" y="170" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="405" y1="175" x2="405" y2="195" stroke="#E24B4A" stroke-width="2"/><rect x="399" y="182" width="10" height="10" fill="#E24B4A" rx="1"/>
+    
+    <!-- 4월 반등 시도 -->
+    <line x1="430" y1="185" x2="430" y2="200" stroke="#E24B4A" stroke-width="2"/><rect x="424" y="190" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="450" y1="170" x2="450" y2="188" stroke="#1D9E75" stroke-width="2"/><rect x="444" y="172" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="475" y1="158" x2="475" y2="172" stroke="#1D9E75" stroke-width="2"/><rect x="469" y="160" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="495" y1="150" x2="495" y2="165" stroke="#1D9E75" stroke-width="2"/><rect x="489" y="152" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="515" y1="142" x2="515" y2="158" stroke="#1D9E75" stroke-width="2"/><rect x="509" y="145" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="540" y1="135" x2="540" y2="153" stroke="#1D9E75" stroke-width="2"/><rect x="534" y="138" width="10" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="560" y1="125" x2="560" y2="142" stroke="#1D9E75" stroke-width="2"/><rect x="554" y="128" width="10" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="580" y1="130" x2="580" y2="148" stroke="#E24B4A" stroke-width="2"/><rect x="574" y="137" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="605" y1="135" x2="605" y2="152" stroke="#E24B4A" stroke-width="2"/><rect x="599" y="142" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="625" y1="140" x2="625" y2="155" stroke="#E24B4A" stroke-width="2"/><rect x="619" y="146" width="10" height="7" fill="#E24B4A" rx="1"/>
+    
+    <!-- 이평선 -->
+    <line x1="40" y1="120" x2="640" y2="120" stroke="#FAC775" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="117" font-size="8" fill="#EF9F27" font-weight="600">MA60 (257,608)</text>
+    <line x1="40" y1="145" x2="640" y2="145" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="2 2" opacity=".5"/>
+    <text x="590" y="142" font-size="8" fill="#1E3A5F" font-weight="600">MA20 (251,125)</text>
+    <line x1="40" y1="190" x2="640" y2="190" stroke="#888" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/>
+    <text x="42" y="187" font-size="8" fill="#888" font-weight="600">MA120 (236,811)</text>
+    
+    <!-- 현재가 -->
+    <line x1="625" y1="147" x2="640" y2="147" stroke="#26215C" stroke-width="2" opacity=".7"/>
+    <text x="580" y="165" font-size="9" fill="#26215C" font-weight="700">현재 255,000원</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 317,000 신고점 털기 후 236,000~265,000 박스권. MA60 돌파 실패 시 MA120 재테스트.</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 5파 완성 vs. 3파 연장 후 4파 조정 분기점"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2025년 5월 대량 거래량 (393만주) = 세력 매집 완료 신호.</b> 77,900→111,700원 돌파 후 110,000~165,000 박스권 6개월 횡보 = 장기 매집 구간. "횡보 매집 후 올린 종목은 길게 간다"는 원칙 적용.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>엘리어트 파동 라벨링:</b> ①파(77→111, 5월) → ②파(111→158 조정) → ③파(158→292, 가장 강력, 10월~2월) → ④파(292→236 조정 중) → ⑤파 대기 OR 317,000이 5파 종점?</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>주봉 20선(269,000) 이탈 = 단기 추세 훼손.</b> 60선(240,000) 근처에서 지지 중. 120선(195,000)은 장기 상승추세선 역할 = 여기까지 하락은 추세 전환 신호.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 카탈리스트:</b> 2026년 2분기 실적 발표(5월) + 방산 수출 계약 뉴스 대기. 260,000 돌파 시 292,000 재도전 → 320,000~350,000 신고가 경신 시나리오.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 ④파 조정 vs. 5파 완성 분기점</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs>
+      <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#1E3A5F"/></marker>
+    </defs>
+    
+    <rect x="40" y="90" width="90" height="95" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="85" y="102" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">①파 돌파 (5월)</text>
+    <rect x="135" y="50" width="180" height="135" rx="4" fill="#E1F5EE" opacity=".15"/>
+    <text x="225" y="62" text-anchor="middle" font-size="8" fill="#04342C" font-weight="600">③파 주파동 (10월~2월)</text>
+    <rect x="320" y="100" width="140" height="85" rx="4" fill="#FAEEDA" opacity=".15"/>
+    <text x="390" y="112" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">④파 조정 (현재)</text>
+    
+    <!-- 2024년 박스권 -->
+    <line x1="50" y1="165" x2="50" y2="175" stroke="#888" stroke-width="1.5"/><rect x="46" y="168" width="6" height="5" fill="#888" rx=".5"/>
+    <line x1="62" y1="160" x2="62" y2="172" stroke="#888" stroke-width="1.5"/><rect x="58" y="163" width="6" height="7" fill="#888" rx=".5"/>
+    
+    <!-- ①파 -->
+    <line x1="75" y1="155" x2="75" y2="168" stroke="#1D9E75" stroke-width="2"/><rect x="70" y="158" width="8" height="8" fill="#1D9E75" rx=".5"/>
+    <line x1="90" y1="120" x2="90" y2="155" stroke="#1D9E75" stroke-width="2.5"/><rect x="85" y="120" width="8" height="20" fill="#1D9E75" rx=".5"/>
+    <text x="90" y="112" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">①</text>
+    <text x="90" y="102" font-size="7" fill="#27500A" font-weight="600">111,700 (390만주)</text>
+    
+    <!-- ②파 조정 -->
+    <line x1="105" y1="120" x2="105" y2="138" stroke="#E24B4A" stroke-width="2"/><rect x="100" y="126" width="8" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="120" y1="132" x2="120" y2="145" stroke="#E24B4A" stroke-width="1.5"/><rect x="116" y="136" width="6" height="7" fill="#E24B4A" rx=".5"/>
+    <text x="112" y="152" font-size="8" fill="#E24B4A" font-weight="600">②</text>
+    
+    <!-- ③파 강력한 상승 -->
+    <line x1="135" y1="130" x2="135" y2="145" stroke="#1D9E75" stroke-width="2"/><rect x="130" y="133" width="8" height="10" fill="#1D9E75" rx=".5"/>
+    <line x1="150" y1="115" x2="150" y2="132" stroke="#1D9E75" stroke-width="2"/><rect x="145" y="118" width="8" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="165" y1="105" x2="165" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="160" y="108" width="8" height="10" fill="#1D9E75" rx=".5"/>
+    <line x1="180" y1="95" x2="180" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="175" y="98" width="8" height="10" fill="#1D9E75" rx=".5"/>
+    <line x1="195" y1="100" x2="195" y2="115" stroke="#E24B4A" stroke-width="1.5"/><rect x="191" y="106" width="6" height="7" fill="#E24B4A" rx=".5"/>
+    <line x1="210" y1="88" x2="210" y2="105" stroke="#1D9E75" stroke-width="2"/><rect x="205" y="91" width="8" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="225" y1="75" x2="225" y2="92" stroke="#1D9E75" stroke-width="2"/><rect x="220" y="78" width="8" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="240" y1="65" x2="240" y2="82" stroke="#1D9E75" stroke-width="2"/><rect x="235" y="68" width="8" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="255" y1="55" x2="255" y2="72" stroke="#1D9E75" stroke-width="2.5"/><rect x="250" y="58" width="8" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="270" y1="60" x2="270" y2="75" stroke="#E24B4A" stroke-width="2"/><rect x="265" y="66" width="8" height="7" fill="#E24B4A" rx=".5"/>
+    <line x1="285" y1="50" x2="285" y2="68" stroke="#1D9E75" stroke-width="2"/><rect x="280" y="53" width="8" height="13" fill="#1D9E75" rx=".5"/>
+    <line x1="300" y1="35" x2="300" y2="55" stroke="#1D9E75" stroke-width="2.5"/><rect x="295" y="38" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <text x="300" y="28" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">③</text>
+    <text x="300" y="20" font-size="7" fill="#04342C" font-weight="600">317,000 고점</text>
+    
+    <!-- ④파 조정 -->
+    <line x1="320" y1="40" x2="320" y2="120" stroke="#E24B4A" stroke-width="3"/><rect x="315" y="85" width="8" height="30" fill="#E24B4A" rx=".5"/>
+    <text x="332" y="105" font-size="7" fill="#E24B4A" font-weight="600">3/4 급락</text>
+    <line x1="340" y1="95" x2="340" y2="115" stroke="#1D9E75" stroke-width="2"/><rect x="335" y="100" width="8" height="12" fill="#1D9E75" rx=".5"/>
+    <line x1="360" y1="105" x2="360" y2="122" stroke="#E24B4A" stroke-width="2"/><rect x="355" y="110" width="8" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="380" y1="115" x2="380" y2="132" stroke="#E24B4A" stroke-width="2"/><rect x="375" y="120" width="8" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="400" y1="120" x2="400" y2="138" stroke="#E24B4A" stroke-width="2"/><rect x="395" y="126" width="8" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="420" y1="125" x2="420" y2="142" stroke="#1D9E75" stroke-width="2"/><rect x="415" y="130" width="8" height="10" fill="#1D9E75" rx=".5"/>
+    <line x1="440" y1="130" x2="440" y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="435" y="136" width="8" height="7" fill="#E24B4A" rx=".5"/>
+    <text x="390" y="150" font-size="8" fill="#E24B4A" font-weight="600">④</text>
+    
+    <!-- ⑤파 대기 -->
+    <line x1="455" y1="128" x2="485" y2="115" stroke="#b4b2a9" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="485" y1="115" x2="515" y2="95" stroke="#b4b2a9" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="500" y="108" font-size="8" fill="#b4b2a9" font-weight="600">⑤파?</text>
+    
+    <!-- 이평선 -->
+    <path d="M40,90 Q150,85 240,70 T440,135" stroke="#FAC775" stroke-width="1.2" fill="none" opacity=".6"/>
+    <text x="545" y="138" font-size="7" fill="#EF9F27" font-weight="600">주봉 MA60</text>
+    
+    <!-- 현재가 -->
+    <line x1="440" y1="138" x2="455" y2="138" stroke="#26215C" stroke-width="2"/>
+    <text x="460" y="141" font-size="8" fill="#26215C" font-weight="700">현재 255,000</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 엘리어트 ③파(317,000) 완성 후 ④파 조정 중. 240,000~260,000 박스권 돌파 방향이 ⑤파 vs. 추세 전환 분기.</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2025년 5월 구조적 상승 돌파 후 장기 강세장 진입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024년 60,000~85,000 박스권 1년 매집 → 2025년 5월 111,700 돌파 = 장기 사이클 바닥 탈출.</b> 월봉 거래량 600만주 = 기관·외국인 본격 유입 신호.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>조선·방산 슈퍼사이클 진입.</b> 2024년 저점 59,400원(4월) → 2026년 고점 317,000원(3월) = 2년간 +433% 상승. 구조적 턴어라운드 완성.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>월봉 20선(272,000) 이탈 = 단기 과열 조정.</b> 60선(215,000) = 중기 지지선. 여기까지 하락 시 장기 매수 적기. 120선(155,000) = 대세 상승추세 생명선.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망:</b> K-방산 수출 3년 백로그 + 친환경선박(LNG·암모니아) 수주 호황 지속 → 2027년까지 실적 가시성 확보. 목표 400,000원 (317,000 + 25%).</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">장기 상승추세 지속 + 과열 조정</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="130" width="240" height="60" rx="4" fill="#888" opacity=".08"/>
+    <text x="160" y="142" text-anchor="middle" font-size="8" fill="#888" font-weight="600">2024년 박스권 매집 (60~85K)</text>
+    <rect x="285" y="55" width="280" height="135" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="425" y="67" text-anchor="middle" font-size="8" fill="#04342C" font-weight="600">2025~2026 슈퍼사이클 (+433%)</text>
+    
+    <!-- 2024년 박스권 -->
+    <line x1="50" y1="155" x2="50" y2="170" stroke="#888" stroke-width="2"/><rect x="45" y="160" width="8" height="8" fill="#888" rx=".5"/>
+    <line x1="70" y1="150" x2="70" y2="165" stroke="#888" stroke-width="2"/><rect x="65" y="155" width="8" height="8" fill="#888" rx=".5"/>
+    <line x1="90" y1="152" x2="90" y2="168" stroke="#888" stroke-width="2"/><rect x="85" y="158" width="8" height="8" fill="#888" rx=".5"/>
+    <line x1="110" y1="148" x2="110" y2="163" stroke="#888" stroke-width="2"/><rect x="105" y="153" width="8" height="8" fill="#888" rx=".5"/>
+    <line x1="130" y1="145" x2="130" y2="160" stroke="#888" stroke-width="2"/><rect x="125" y="150" width="8" height="8" fill="#888" rx=".5"/>
+    <line x1="150" y1="142" x2="150" y2="157" stroke="#888" stroke-width="2"/><rect x="145" y="147" width="8" height="8" fill="#888" rx=".5"/>
+    <line x1="170" y1="140" x2="170" y2="155" stroke="#888" stroke-width="2"/><rect x="165" y="145" width="8" height="8" fill="#888" rx=".5"/>
+    <line x1="190" y1="135" x2="190" y2="152" stroke="#888" stroke-width="2"/><rect x="185" y="141" width="8" height="9" fill="#888" rx=".5"/>
+    <line x1="210" y1="130" x2="210" y2="148" stroke="#888" stroke-width="2"/><rect x="205" y="136" width="8" height="10" fill="#888" rx=".5"/>
+    <line x1="230" y1="132" x2="230" y2="150" stroke="#888" stroke-width="2"/><rect x="225" y="138" width="8" height="10" fill="#888" rx=".5"/>
+    <line x1="250" y1="135" x2="250" y2="153" stroke="#888" stroke-width="2"/><rect x="245" y="141" width="8" height="10" fill="#888" rx=".5"/>
+    <line x1="270" y1="138" x2="270" y2="155" stroke="#888" stroke-width="2"/><rect x="265" y="144" width="8" height="9" fill="#888" rx=".5"/>
+    
+    <!-- 2025년 5월 돌파 -->
+    <line x1="290" y1="115" x2="290" y2="140" stroke="#1D9E75" stroke-width="3"/><rect x="285" y="115" width="8" height="18" fill="#1D9E75" rx=".5"/>
+    <text x="290" y="107" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">111,700</text>
+    <text x="290" y="98" font-size="7" fill="#27500A" font-weight="600">5월 돌파</text>
+    
+    <!-- 상승 파동 -->
+    <line x1="310" y1="105" x2="310" y2="125" stroke="#1D9E75" stroke-width="2.5"/><rect x="305" y="108" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="330" y1="95" x2="330" y2="115" stroke="#1D9E75" stroke-width="2.5"/><rect x="325" y="98" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="350" y1="88" x2="350" y2="108" stroke="#1D9E75" stroke-width="2.5"/><rect x="345" y="92" width="8" height="14" fill="#1D9E75" rx=".5"/>
+    <line x1="370" y1="92" x2="370" y2="112" stroke="#E24B4A" stroke-width="2"/><rect x="365" y="98" width="8" height="12" fill="#E24B4A" rx=".5"/>
+    <line x1="390" y1="85" x2="390" y2="105" stroke="#1D9E75" stroke-width="2.5"/><rect x="385" y="88" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="410" y1="78" x2="410" y2="98" stroke="#1D9E75" stroke-width="2.5"/><rect x="405" y="81" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="430" y1="72" x2="430" y2="92" stroke="#1D9E75" stroke-width="2.5"/><rect x="425" y="75" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="450" y1="65" x2="450" y2="85" stroke="#1D9E75" stroke-width="2.5"/><rect x="445" y="68" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="470" y1="60" x2="470" y2="82" stroke="#1D9E75" stroke-width="2.5"/><rect x="465" y="63" width="8" height="17" fill="#1D9E75" rx=".5"/>
+    <line x1="490" y1="55" x2="490" y2="78" stroke="#1D9E75" stroke-width="2.5"/><rect x="485" y="58" width="8" height="18" fill="#1D9E75" rx=".5"/>
+    <line x1="510" y1="48" x2="510" y2="72" stroke="#1D9E75" stroke-width="3"/><rect x="505" y="51" width="8" height="19" fill="#1D9E75" rx=".5"/>
+    <text x="510" y="42" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">317,000</text>
+    <text x="510" y="33" font-size="7" fill="#04342C" font-weight="600">2026.3 신고점</text>
+    
+    <!-- 조정 -->
+    <line x1="530" y1="52" x2="530" y2="115" stroke="#E24B4A" stroke-width="3"/><rect x="525" y="85" width="8" height="25" fill="#E24B4A" rx=".5"/>
+    <line x1="555" y1="95" x2="555" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="550" y="100" width="8" height="15" fill="#1D9E75" rx=".5"/>
+    <text x="555" y="132" font-size="8" fill="#26215C" font-weight="700">현재 255,000</text>
+    
+    <!-- 이평선 -->
+    <path d="M40,165 Q200,155 350,105 T555,112" stroke="#1E3A5F" stroke-width="1.5" fill="none" opacity=".5"/>
+    <text x="610" y="115" font-size="7" fill="#1E3A5F" font-weight="600">월봉 MA20</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2025년 5월 111,700 돌파로 장기 상승 사이클 진입. 317,000 신고점 후 조정 = 건강한 흐름. 목표 400,000.</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">① 매집 vs. 분산 판단 — "3월 고점 1차 분산 완료, 240,000 재매집 관찰"</span><span class="tag t-g">재매집 가능</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 5월 390만주 거래량 = 세력 매집 완료. 2026년 3월 3일 317,000원 신고점 + 다음날 50만주 폭탄 = 1차 물량 털기. 세력은 본인 매집 본전(236,000~240,000) 밑으로 떨어지는 것을 참지 못함 → 현재 236,000~265,000 박스권 = 세력이 추가 매집 vs. 2차 분산 준비 분기점. 거래량 12만주(4/20)는 횡보 구간 평균 수준 = 아직 세력 재개입 신호 없음.</div></div></div>
+  
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">② 구조적 경쟁력 — "K-방산·조선 슈퍼사이클 수혜 확실"</span><span class="tag t-navy">구조적 강세</span><div style="color:#888;margin-top:2px;font-size:11px">한화오션(K-방산·이지스함·잠수함·항공모함), HD한국조선해양(LNG선·컨테이너선·친환경선박) 모두 3년 수주 백로그 확보. 글로벌 조선 수주 2023~2026 4년 연속 사상 최대치 경신. HD현대 지주사 할인율 30% = 밸류업 정책 수혜 기대. 배당수익률 3.2% = 장기 홀딩 매력.</div></div></div>
+  
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">③ 실적·펀더멘털 — "2026년 영업이익 2.5조 컨센서스"</span><span class="tag t-a">실적 가시성</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 4분기 영업이익 6,200억원 (+42% YoY). 2026년 연간 영업이익 2.5조원 컨센서스 (PER 8배). 계열사 실적: 한화오션 2026년 영업이익 1.2조 (+35%), HD한국조선 8,500억 (+28%). 방산 수출 2026년 목표 200억 달러 돌파 → HD엔진(함정 엔진) 수혜. 리스크: 철강·자재 가격 상승 시 마진 압박.</div></div></div>
+  
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">④ 핵심 리스크 — "MA60 돌파 실패 시 236,000 재테스트"</span><span class="tag t-r">기술적 리스크</span><div style="color:#888;margin-top:2px;font-size:11px">3월 급락 후 MA60(257,608원) 저항을 3번 실패 = 세력이 이 구간을 청산 물량대로 활용 중. 260,000 돌파 실패 시 236,000(MA120) 재하락 가능성 60%. 글로벌 경기 둔화(미국 제조업 PMI 하락) 시 조선 수주 지연 리스크. 외국인·기관 수급: 3월 이후 순매도 전환 = 단기 수급 불리.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>K-방산 수출 200억 달러 돌파 (2026 목표)</span><span class="tag t-g">구조적 호재</span></div>
+  <div class="row"><span>글로벌 조선 수주 3년 백로그 확보 (LNG·친환경선)</span><span class="tag t-g">실적 가시성</span></div>
+  <div class="row"><span>HD한국조선·한화오션 영업이익 각각 +28%/+35%</span><span class="tag t-g">계열사 실적</span></div>
+  <div class="row"><span>배당수익률 3.2% + 지주사 밸류업 정책 수혜</span><span class="tag t-teal">밸류업</span></div>
+  <div class="row"><span>2026년 2분기 실적 발표 (5월) 컨센서스 상회 기대</span><span class="tag t-b">단기 카탈</span></div>
+  <div class="row"><span>236,000~265,000 박스권 횡보 = 재매집 가능</span><span class="tag t-navy">기술적 긍정</span></div>
+  <div class="row"><span>MA60(257,608원) 저항 3번 실패 = 세력 분산 지점</span><span class="tag t-a">기술적 주의</span></div>
+  <div class="row"><span>3월 고점 대비 -19.6% 조정 = 추가 하락 여력</span><span class="tag t-a">조정 중</span></div>
+  <div class="row"><span>외국인·기관 3월 이후 순매도 전환 (단기 수급 불리)</span><span class="tag t-r">수급 리스크</span></div>
+  <div class="row"><span>글로벌 경기 둔화 시 조선 수주 지연 리스크</span><span class="tag t-r">펀더멘털 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:55%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 55% — 중립적 관망</div>
+    <div style="font-size:11px;color:#5f5e5a">260,000원 돌파 확인 후 추격 매수 권장. 돌파 실패 시 236,000~240,000 재하락 대기. MA60 저항 3번 실패 = 세력 분산 구간. 단기 트레이딩 구간으로 접근.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78% — 적극 매수</div>
+    <div style="font-size:11px;color:#5f5e5a">K-방산·조선 슈퍼사이클 3년 이상 지속. 236,000~250,000 구간 = 장기 매수 적기. 목표 400,000원 (317,000 + 25%) = PER 10배 수준. 배당 3.2% 추가 수익.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "236,000~250,000 분할 매수 → 목표 320,000~400,000"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">245,000~<br>252,000</div><div>MA20 지지 확인<br>30% 비중</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">236,000~<br>243,000</div><div>MA120 + 피보 61.8%<br>50% 비중</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">320,000~<br>400,000</div><div>전고점 돌파 +26%<br>장기 목표</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">220,000원</div><div>MA120 이탈<br>-14% 손절</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 HD현대 핵심 4포인트:</b><br>
+    ① <b>K-방산·조선 슈퍼사이클 3년 백로그</b> — 한화오션·HD한국조선 실적 폭발 → 지주사 밸류업<br>
+    ② <b>2025년 5월 390만주 거래량 매집 완료</b> — 장기 상승 사이클 진입 확인<br>
+    ③<b>236,000~250,000 = 세력 매집 원가 구간</b> — 세력이 본전 밑으로 떨어지는 것 참지 못함<br>
+    ④ <b>배당 3.2% + PER 8배</b> — 장기 홀딩 매력 충분</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 3월 317,000 신고점에서 50만주 거래량 폭탄 = 세력 1차 분산 완료. MA60(257,608원) 저항 3번 실패 = 단기 추세 약세. 260,000 돌파 실패 시 236,000 재하락 가능성 60%. 글로벌 경기 둔화 시 조선 수주 지연 리스크.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>

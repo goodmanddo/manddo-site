@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>효성중공업 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>효성중공업 (298040) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSDAQ 전기전자 | AI 데이터센터 전력 인프라 핵심 수혜주</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 효성중공업 = "장기 매집 완료 후 5파 연장 중, 3,200만원 돌파 여부가 향후 30% 추가 상승 관문"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 2025년 5~6월 47만→61만원 세력 매집 후 +420% 시세 분출 완료<br>② MA20·60·120 완벽 정배열, 추세 훼손 없음<br>③ AI 데이터센터 전력 수요 폭증 → 변압기 수주잔고 역대급<br>④ 엘리어트 5파 연장(Extension) 패턴 — 주도주 특성
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>52주 위치 88.5% 고점권 → 세력 분산 가능성 경계. 3,177만원 신고점 이탈 시 23.6% 되돌림(283만원)까지 조정 가능. 단기 과열 구간 진입, 3,200만원 저항 돌파 실패 시 2,800만원대 재테스트.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">3,010,000<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 +1.01%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">1,731,000~<br>3,177,000원</div><div class="ms">저점 대비 +73.9%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">88.5%</div><div class="ms">고점권 — 조정 대기</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">4월 14일 317만원 신고점 후 현재 -5.3% 조정. 23.6% 피보나치 되돌림(283만원) 위에서 지지 중 = 강세 조정 구간. 세력은 280만원(MA20) 밑으로 내리지 않으려는 의도 명확.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:88.5%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 301만</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 173만</span><span>중간 245만</span><span>고점 317만</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2025년 5~6월 47만→61만원 장기 횡보 매집 완료 후 6개월간 +249% 폭발적 상승. 2026년 들어 엘리어트 5파 연장 진행 중 (178만→317만). 현재 317만원 신고점 터치 후 짧은 조정 국면. 정배열 견고 + 거래량 건전 → 추세 지속 가능성 높음. 단, 고점권 88.5% 위치로 인해 단기 추격매수는 경계, 280만원(MA20) or 260만원(MA60) 조정 시 분할매수 전략 유리.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">AI 전력 인프라</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">변압기 수주 급증</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">엘리어트 5파 연장</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">정배열 견고</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">52주 고점권 88%</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "신고점 후 상승깃발형 조정, 280만원 지지 확인 시 재상승 시도"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>3월 25일 299만원 돌파 후 거래량 79,587주 폭발</b> → 세력이 300만원 벽을 본격 돌파하며 시세 분출. 이후 4월 14일 317만원 신고점까지 연속 상승 (거래량 지속 5만~7만주 유지 = 매집 아닌 분산 가능성 낮음, 추세 추종 매수세 유입)</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>MA20(279만원) 완벽 지지</b>. 3월 30일 250만원까지 급락했으나 MA60(260만원) 터치 후 즉각 반등 → 세력은 260만원 매집원가 구간을 지키려는 의도. 현재 MA20 위에서 횡보 = 건강한 조정</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 23.6% 되돌림(283만원) 위 지지 중</b>. 317만원 고점 대비 -5.3% 조정은 강세 조정 범주. 280만~300만원 박스권 횡보 시 상승깃발형(Bull Flag) 패턴 완성 → 돌파 시 350만~380만원 타겟</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈리스트: 2026 상반기 데이터센터 수주 발표 대기</b>. 삼성전자·네이버 등 국내 AI 인프라 투자 가속화 → 효성중공업 변압기 수주 증가 기대. 280만원 지지 확인 시 재매수, 260만원 이탈 시 관망 전환</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">상승깃발형 조정</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="60" width="140" height="145" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="110" y="72" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">① 2~3월 변동성 조정</text>
+    <rect x="190" y="35" width="180" height="170" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="280" y="47" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 3월 25일 돌파 후 상승</text>
+    <rect x="380" y="50" width="250" height="155" rx="4" fill="#E6F1FB" opacity=".12"/>
+    <text x="505" y="62" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">③ 신고점 후 깃발형 조정</text>
+    
+    <line x1="55" y1="135" x2="55" y2="155" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="140" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="70" y1="130" x2="70" y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="64" y="133" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="85" y1="140" x2="85" y2="160" stroke="#E24B4A" stroke-width="2"/><rect x="79" y="143" width="10" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="100" y1="125" x2="100" y2="150" stroke="#1D9E75" stroke-width="2"/><rect x="94" y="128" width="10" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="115" y1="120" x2="115" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="109" y="124" width="10" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="130" y1="115" x2="130" y2="135" stroke="#E24B4A" stroke-width="2"/><rect x="124" y="120" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="145" y1="125" x2="145" y2="140" stroke="#E24B4A" stroke-width="2"/><rect x="139" y="128" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="160" y1="130" x2="160" y2="150" stroke="#E24B4A" stroke-width="2"/><rect x="154" y="134" width="10" height="12" fill="#E24B4A" rx="1"/>
+    
+    <line x1="200" y1="115" x2="200" y2="130" stroke="#1D9E75" stroke-width="2"/><rect x="194" y="118" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="220" y1="105" x2="220" y2="120" stroke="#1D9E75" stroke-width="2"/><rect x="214" y="108" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="240" y1="95" x2="240" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="234" y="98" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="260" y1="80" x2="260" y2="100" stroke="#1D9E75" stroke-width="2"/><rect x="254" y="83" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="280" y1="75" x2="280" y2="95" stroke="#1D9E75" stroke-width="2"/><rect x="274" y="78" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="300" y1="85" x2="300" y2="100" stroke="#E24B4A" stroke-width="2"/><rect x="294" y="88" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="320" y1="90" x2="320" y2="105" stroke="#E24B4A" stroke-width="2"/><rect x="314" y="93" width="10" height="10" fill="#E24B4A" rx="1"/>
+    
+    <line x1="350" y1="70" x2="350" y2="85" stroke="#1D9E75" stroke-width="2"/><rect x="344" y="73" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="375" y1="60" x2="375" y2="75" stroke="#1D9E75" stroke-width="2"/><rect x="369" y="63" width="10" height="10" fill="#1D9E75" rx="1"/>
+    
+    <line x1="410" y1="45" x2="410" y2="62" stroke="#1D9E75" stroke-width="2.5"/><rect x="403" y="48" width="12" height="12" fill="#1D9E75" rx="1"/>
+    <circle cx="410" cy="45" r="7" fill="none" stroke="#27500A" stroke-width="1.5"/>
+    <text x="410" y="32" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">신고점 317만</text>
+    
+    <line x1="445" y1="50" x2="445" y2="65" stroke="#E24B4A" stroke-width="2"/><rect x="439" y="54" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="475" y1="55" x2="475" y2="70" stroke="#1D9E75" stroke-width="2"/><rect x="469" y="58" width="10" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="505" y1="58" x2="505" y2="72" stroke="#E24B4A" stroke-width="2"/><rect x="499" y="61" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="535" y1="60" x2="535" y2="74" stroke="#1D9E75" stroke-width="2"/><rect x="529" y="63" width="10" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="565" y1="56" x2="565" y2="70" stroke="#1D9E75" stroke-width="2.2"/><rect x="559" y="59" width="10" height="9" fill="#1D9E75" rx="1"/>
+    
+    <line x1="40" y1="67" x2="640" y2="67" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="64" font-size="9" fill="#26215C" font-weight="600">현재 301만</text>
+    
+    <line x1="40" y1="98" x2="640" y2="98" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="580" y="95" font-size="8" fill="#1D9E75" font-weight="600">MA20 (279만)</text>
+    
+    <line x1="40" y1="120" x2="640" y2="120" stroke="#0C447C" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="580" y="117" font-size="8" fill="#0C447C" font-weight="600">MA60 (260만)</text>
+    
+    <rect x="450" y="48" width="130" height="28" fill="none" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="3 2" rx="3"/>
+    <text x="515" y="85" font-size="8" fill="#1E3A5F" font-weight="600">상승깃발형 횡보</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 3월 25일 돌파 → 4월 14일 신고점 317만 → 현재 280만~310만 깃발형 조정, MA20 지지 확인 중</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 5파 연장(Extension) 진행 중, 세력은 350만원 이상 타겟"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2025년 5~6월 47만→61만원 장기 횡보 = 세력 매집 구간</b>. 6개월간 40만~61만원 박스권에서 거래량 꾸준히 소화 → 이후 6월부터 +249% 폭발적 상승. "횡보 매집 후 올린 종목은 길게 간다"는 세력 관점 법칙 적용</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>엘리어트 파동 라벨링</b>: ① 5~8월(47만→124만) / ② 8~9월 조정(107만) / ③ 9~11월 강력한 3파(213만) / ④ 11월~1월 조정(178만) / ⑤ 1월~현재 5파 연장(178만→317만). 5파가 3파보다 길어지는 "연장 패턴" = 주도주 특성</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>주봉 MA20(약 230만) / MA60(약 150만) 완벽 정배열</b>. 모든 조정에서 MA20 이탈 없음 → 세력이 230만원 매집원가를 철저히 방어. 현재 301만원은 MA20 대비 +30% 상회 = 과열 아닌 정상 상승파 구간</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 카탈리스트: 2026 하반기 실적 가이던스 상향 가능성</b>. AI 데이터센터 전력 인프라 투자 본격화 → 변압기·중전기기 수주 급증 → 영업이익률 개선 기대. 목표: 350만~400만원 (5파 연장 피보나치 1.618 확장 기준)</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 5파 연장</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs>
+      <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#26215C"/></marker>
+    </defs>
+    
+    <rect x="40" y="130" width="80" height="55" rx="4" fill="#E1F5EE" opacity=".15"/>
+    <text x="80" y="142" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">① 매집 구간</text>
+    <text x="80" y="178" text-anchor="middle" font-size="7" fill="#04342C">47만→61만 횡보</text>
+    
+    <line x1="50" y1="150" x2="50" y2="165" stroke="#1D9E75" stroke-width="3"/><rect x="42" y="153" width="14" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="70" y1="148" x2="70" y2="163" stroke="#1D9E75" stroke-width="3"/><rect x="62" y="151" width="14" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="90" y1="147" x2="90" y2="160" stroke="#1D9E75" stroke-width="3"/><rect x="82" y="150" width="14" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="110" y1="145" x2="110" y2="158" stroke="#1D9E75" stroke-width="3"/><rect x="102" y="148" width="14" height="8" fill="#1D9E75" rx="1"/>
+    
+    <text x="135" y="138" font-size="10" fill="#26215C" font-weight="700">①파</text>
+    <line x1="130" y1="135" x2="130" y2="150" stroke="#1D9E75" stroke-width="3"/><rect x="122" y="138" width="14" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="150" y1="120" x2="150" y2="135" stroke="#1D9E75" stroke-width="3"/><rect x="142" y="123" width="14" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="170" y1="105" x2="170" y2="120" stroke="#1D9E75" stroke-width="3"/><rect x="162" y="108" width="14" height="10" fill="#1D9E75" rx="1"/>
+    
+    <text x="195" y="118" font-size="10" fill="#E24B4A" font-weight="700">②파</text>
+    <line x1="190" y1="115" x2="190" y2="128" stroke="#E24B4A" stroke-width="3"/><rect x="182" y="118" width="14" height="8" fill="#E24B4A" rx="1"/>
+    
+    <text x="230" y="98" font-size="11" fill="#27500A" font-weight="700">③파(최강)</text>
+    <line x1="210" y1="105" x2="210" y2="118" stroke="#1D9E75" stroke-width="3"/><rect x="202" y="108" width="14" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="230" y1="85" x2="230" y2="100" stroke="#1D9E75" stroke-width="3.5"/><rect x="221" y="88" width="16" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="250" y1="65" x2="250" y2="80" stroke="#1D9E75" stroke-width="3.5"/><rect x="241" y="68" width="16" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="270" y1="50" x2="270" y2="65" stroke="#1D9E75" stroke-width="3.5"/><rect x="261" y="53" width="16" height="10" fill="#1D9E75" rx="1"/>
+    <circle cx="270" cy="50" r="9" fill="none" stroke="#27500A" stroke-width="1.8"/>
+    <text x="270" y="38" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">213만 고점</text>
+    
+    <text x="315" y="78" font-size="10" fill="#E24B4A" font-weight="700">④파</text>
+    <line x1="290" y1="60" x2="290" y2="75" stroke="#E24B4A" stroke-width="3"/><rect x="282" y="64" width="14" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="310" y1="70" x2="310" y2="85" stroke="#E24B4A" stroke-width="3"/><rect x="302" y="74" width="14" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="330" y1="75" x2="330" y2="90" stroke="#E24B4A" stroke-width="3"/><rect x="322" y="79" width="14" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="350" y1="78" x2="350" y2="92" stroke="#E24B4A" stroke-width="3"/><rect x="342" y="82" width="14" height="8" fill="#E24B4A" rx="1"/>
+    
+    <text x="415" y="48" font-size="11" fill="#1E3A5F" font-weight="700">⑤파 연장</text>
+    <line x1="370" y1="85" x2="370" y2="98" stroke="#1D9E75" stroke-width="3"/><rect x="362" y="88" width="14" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="390" y1="75" x2="390" y2="88" stroke="#1D9E75" stroke-width="3"/><rect x="382" y="78" width="14" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="410" y1="65" x2="410" y2="78" stroke="#1D9E75" stroke-width="3"/><rect x="402" y="68" width="14" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="430" y1="55" x2="430" y2="68" stroke="#1D9E75" stroke-width="3"/><rect x="422" y="58" width="14" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="450" y1="48" x2="450" y2="61" stroke="#1D9E75" stroke-width="3"/><rect x="442" y="51" width="14" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="470" y1="40" x2="470" y2="53" stroke="#1D9E75" stroke-width="3.5"/><rect x="461" y="43" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <circle cx="470" cy="40" r="9" fill="none" stroke="#26215C" stroke-width="2"/>
+    <text x="470" y="28" text-anchor="middle" font-size="8" fill="#26215C" font-weight="700">신고점 317만</text>
+    
+    <line x1="490" y1="43" x2="490" y2="56" stroke="#1D9E75" stroke-width="3"/><rect x="482" y="46" width="14" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="510" y1="45" x2="510" y2="58" stroke="#1D9E75" stroke-width="3"/><rect x="502" y="48" width="14" height="9" fill="#1D9E75" rx="1"/>
+    
+    <path d="M 130,140 Q 180,95 270,57" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <path d="M 370,92 L 510,52" fill="none" stroke="#1E3A5F" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    
+    <line x1="40" y1="58" x2="640" y2="58" stroke="#26215C" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="580" y="55" font-size="8" fill="#26215C" font-weight="600">현재 301만</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025년 5~6월 매집 → ①~③파 상승 → ④파 조정 → 2026년 ⑤파 연장 신고점 317만 돌파</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2024 바닥 → 2025 매집 → 2026 컵앤핸들 돌파, 장기 상승 사이클 초입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024년 1~4월 16만~31만원 = 장기 사이클 바닥</b>. 역사적 저점 15.6만원(2024.1) 형성 후 컵(Cup) 모양 형성. 세력은 이 구간에서 1차 물량 확보</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>2024년 11월~2025년 5월 40만~61만원 핸들(Handle) 매집</b>. 6개월간 횡보하며 거래량 꾸준히 소화 → 전형적인 컵앤핸들 패턴. 61만원 돌파 = 본격 상승 신호</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2025년 6월~10월 대세 상승파 (61만→213만, +249%)</b>. 월봉 5개월 연속 양봉 = 강력한 모멘텀. AI 데이터센터 전력 인프라 테마 부각 + 실적 개선 기대감 → 기관·외국인 순매수 유입</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>2026년 장기 전망: 350만~400만원 타겟 유효</b>. 컵앤핸들 목표가 = 핸들 상단(61만) + 컵 깊이(45만) = 106만 → 이미 달성. 2차 목표 = 피보나치 확장 2.618배 = 약 380만원. 리스크는 320만원 저항 돌파 실패 시 260만원 재조정 가능성</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">컵앤핸들 완성</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="140" width="100" height="50" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <text x="90" y="152" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">2024 바닥</text>
+    <text x="90" y="183" text-anchor="middle" font-size="7" fill="#A32D2D">15.6만~44만</text>
+    
+    <rect x="150" y="120" width="110" height="70" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="205" y="132" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">핸들 매집</text>
+    <text x="205" y="183" text-anchor="middle" font-size="7" fill="#04342C">40만~61만 6개월</text>
+    
+    <rect x="270" y="50" width="140" height="140" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="340" y="62" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">대세 상승파</text>
+    
+    <rect x="420" y="40" width="220" height="150" rx="4" fill="#E6F1FB" opacity=".12"/>
+    <text x="530" y="52" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">2026 신고점 경신</text>
+    
+    <line x1="50" y1="160" x2="50" y2="175" stroke="#E24B4A" stroke-width="3.5"/><rect x="41" y="164" width="16" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="70" y1="155" x2="70" y2="170" stroke="#1D9E75" stroke-width="3.5"/><rect x="61" y="159" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="90" y1="145" x2="90" y2="160" stroke="#1D9E75" stroke-width="3.5"/><rect x="81" y="149" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="110" y1="135" x2="110" y2="150" stroke="#1D9E75" stroke-width="3.5"/><rect x="101" y="139" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="130" y1="130" x2="130" y2="145" stroke="#1D9E75" stroke-width="3.5"/><rect x="121" y="134" width="16" height="9" fill="#1D9E75" rx="1"/>
+    
+    <line x1="155" y1="128" x2="155" y2="143" stroke="#E24B4A" stroke-width="3.5"/><rect x="146" y="132" width="16" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="132" x2="175" y2="147" stroke="#E24B4A" stroke-width="3.5"/><rect x="166" y="136" width="16" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="195" y1="135" x2="195" y2="150" stroke="#1D9E75" stroke-width="3.5"/><rect x="186" y="139" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="133" x2="215" y2="148" stroke="#E24B4A" stroke-width="3.5"/><rect x="206" y="137" width="16" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="235" y1="130" x2="235" y2="145" stroke="#1D9E75" stroke-width="3.5"/><rect x="226" y="134" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="255" y1="128" x2="255" y2="143" stroke="#1D9E75" stroke-width="3.5"/><rect x="246" y="132" width="16" height="9" fill="#1D9E75" rx="1"/>
+    
+    <path d="M 50,168 Q 130,137 255,136" fill="none" stroke="#1E3A5F" stroke-width="2" stroke-dasharray="5 3" opacity=".6"/>
+    <text x="150" y="120" font-size="8" fill="#1E3A5F" font-weight="600">컵(Cup)</text>
+    <text x="205" y="120" font-size="8" fill="#1E3A5F" font-weight="600">핸들(Handle)</text>
+    
+    <line x1="280" y1="120" x2="280" y2="135" stroke="#1D9E75" stroke-width="3.5"/><rect x="271" y="124" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="305" y1="105" x2="305" y2="120" stroke="#1D9E75" stroke-width="3.5"/><rect x="296" y="109" width="16" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="330" y1="85" x2="330" y2="100" stroke="#1D9E75" stroke-width="4"/><rect x="320" y="89" width="18" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="355" y1="65" x2="355" y2="80" stroke="#1D9E75" stroke-width="4"/><rect x="345" y="69" width="18" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="380" y1="55" x2="380" y2="70" stroke="#1D9E75" stroke-width="4"/><rect x="370" y="59" width="18" height="9" fill="#1D9E75" rx="1"/>
+    <circle cx="380" cy="55" r="10" fill="none" stroke="#27500A" stroke-width="2"/>
+    <text x="380" y="42" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">2025.10 최고점</text>
+    
+    <line x1="410" y1="70" x2="410" y2="85" stroke="#E24B4A" stroke-width="3.5"/><rect x="401" y="74" width="16" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="435" y1="75" x2="435" y2="90" stroke="#E24B4A" stroke-width="3.5"/><rect x="426" y="79" width="16" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="460" y1="78" x2="460" y2="93" stroke="#E24B4A" stroke-width="3.5"/><rect x="451" y="82" width="16" height="9" fill="#E24B4A" rx="1"/>
+    
+    <line x1="490" y1="68" x2="490" y2="83" stroke="#1D9E75" stroke-width="4"/><rect x="480" y="72" width="18" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="520" y1="55" x2="520" y2="70" stroke="#1D9E75" stroke-width="4"/><rect x="510" y="59" width="18" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="550" y1="48" x2="550" y2="63" stroke="#1D9E75" stroke-width="4"/><rect x="540" y="52" width="18" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="580" y1="40" x2="580" y2="55" stroke="#1D9E75" stroke-width="4"/><rect x="570" y="44" width="18" height="9" fill="#1D9E75" rx="1"/>
+    <circle cx="580" cy="40" r="11" fill="none" stroke="#26215C" stroke-width="2.5"/>
+    <text x="580" y="26" text-anchor="middle" font-size="9" fill="#26215C" font-weight="700">2026.4 신고점 317만</text>
+    
+    <line x1="610" y1="43" x2="610" y2="58" stroke="#1D9E75" stroke-width="3.5"/><rect x="601" y="47" width="16" height="9" fill="#1D9E75" rx="1"/>
+    
+    <line x1="40" y1="62" x2="640" y2="62" stroke="#26215C" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="590" y="59" font-size="8" fill="#26215C" font-weight="600">현재 301만</text>
+    
+    <line x1="255" y1="136" x2="280" y2="127" stroke="#EF9F27" stroke-width="2.5" marker-end="url(#arr2)"/>
+    <text x="270" y="170" font-size="9" fill="#EF9F27" font-weight="700">61만 돌파</text>
+    <text x="270" y="180" font-size="7" fill="#EF9F27">= 본격 상승 시작</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024 바닥 15.6만 → 2025 매집 61만 → 컵앤핸들 완성 → 2026 신고점 317만 (장기 상승 사이클 초입)</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">매집 완료 후 시세 분출 구간 — 세력은 280만원 밑으로 내리지 않음</span><span class="tag t-g">분산 아님</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 5~6월 47만→61만원 6개월 횡보 = 전형적인 세력 매집 구간. 이후 +420% 시세 분출. 현재 MA20(279만) 완벽 지지 = 세력은 자신의 매집원가(260만~280만) 밑으로 떨어지는 것을 참지 못한다는 법칙 적용. 거래량 패턴 분석: 상승 시 5만~7만주 유지 (분산 수준 아님), 조정 시 3만주 축소 (투매 없음) = 세력 물량 홀딩 중. 외국인·기관 순매수 지속 → 추가 상승 여력 충분.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">AI 데이터센터 전력 인프라 핵심 수혜 — 구조적 경쟁력</span><span class="tag t-navy">테마 선도</span><div style="color:#888;margin-top:2px;font-size:11px">효성중공업은 국내 변압기 시장 점유율 1위 (약 35%). 2026년 삼성전자·네이버·카카오 등 AI 데이터센터 건설 본격화 → 초고압 변압기·중전기기 수요 폭증. 경쟁사(현대일렉트릭) 대비 기술력·납기 우위. 2026 상반기 수주잔고 전년 대비 +80% 예상 (업계 추정). 세력은 이 구조적 성장 스토리에 베팅 → 350만~400만원 타겟 설정 가능.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">2026 실적 턴어라운드 기대 — 영업이익률 5%→10% 개선 전망</span><span class="tag t-a">실적 개선</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 영업이익률 약 5% (원자재 가격 상승 영향). 2026년 변압기 수주 단가 인상 + 고부가 제품 믹스 개선 → 영업이익률 10% 돌파 가능성. 분기 실적 발표 시점(5월 중순) 주목 — 가이던스 상향 시 추가 모멘텀. 단, 실적 부진 시 260만원(MA60)까지 조정 가능 → 실적 발표 전 분할매수 권장.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">고점권 88.5% 위치 + 320만원 저항 — 단기 과열 리스크</span><span class="tag t-r">조정 경계</span><div style="color:#888;margin-top:2px;font-size:11px">52주 위치 88.5% = 역사적 고점권. 317만원 신고점 이후 단기 차익실현 압력 존재. 320만원 저항선 돌파 실패 시 피보나치 23.6% 되돌림(283만) → 38.2% 되돌림(262만)까지 조정 가능. 엘리어트 5파 연장 완료 시 a-b-c 조정파 진입 리스크 (목표: 230만~250만원, MA120 근처). 추격매수 금지. 280만원 지지 확인 후 분할매수 전략 필수.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>2025년 5~6월 47만→61만원 장기 횡보 매집 완료</span><span class="tag t-g">세력 매집</span></div>
+  <div class="row"><span>엘리어트 5파 연장 진행 중 (주도주 특성)</span><span class="tag t-b">파동 유리</span></div>
+  <div class="row"><span>MA20·60·120 정배열 견고, 추세 훼손 없음</span><span class="tag t-g">정배열</span></div>
+  <div class="row"><span>AI 데이터센터 전력 인프라 수요 폭증 (구조적)</span><span class="tag t-g">테마 강력</span></div>
+  <div class="row"><span>변압기 국내 점유율 1위, 기술력·납기 경쟁력</span><span class="tag t-navy">업계 선도</span></div>
+  <div class="row"><span>2026 상반기 수주잔고 +80% 증가 예상 (업계)</span><span class="tag t-teal">실적 모멘텀</span></div>
+  <div class="row"><span>외국인·기관 순매수 지속, 물량 홀딩 패턴</span><span class="tag t-b">수급 우호</span></div>
+  <div class="row"><span>52주 위치 88.5% 고점권 — 단기 과열 구간</span><span class="tag t-a">과열 경계</span></div>
+  <div class="row"><span>320만원 저항 돌파 실패 시 280만→260만 조정</span><span class="tag t-r">저항 리스크</span></div>
+  <div class="row"><span>5파 연장 완료 시 a-b-c 조정파 (230만까지) 가능</span><span class="tag t-r">파동 전환</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:65%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 65% — 조정 대기 후 진입 권장</div>
+    <div style="font-size:11px;color:#5f5e5a">현재 301만원은 고점권 88.5% 위치로 추격매수 부적절. 280만원(MA20) 지지 확인 또는 260만원(MA60, 38.2% 되돌림) 조정 시 분할매수. 목표가 350만원 (+16%), 손절 230만원(MA120 이탈). 5월 실적 발표 주목.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:82%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 82% — 구조적 성장 스토리 강력</div>
+    <div style="font-size:11px;color:#5f5e5a">AI 데이터센터 전력 인프라 수요는 2026~2027 지속 확대. 효성중공업은 업계 1위 경쟁력 + 수주잔고 급증 → 2027 목표가 380만~420만원 (피보나치 1.618~2.0 확장). 260만원 이하 조정 시 장기 적립식 매수 유리. 리스크는 경기 침체 시 데이터센터 투자 지연.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "280만원 or 260만원 조정 대기 후 분할매수, 목표 350만원"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">2,800,000~<br>2,850,000</div><div>MA20 지지 확인<br>(23.6% 되돌림)<br>30% 비중</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">2,600,000~<br>2,650,000</div><div>MA60 + 38.2% 되돌림<br>세력 매집원가<br>50% 비중</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">3,500,000~<br>3,800,000</div><div>5파 확장 피보나치<br>1.272~1.414<br>+16~26%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">2,300,000</div><div>MA120 이탈<br>61.8% 되돌림 붕괴<br>추세 전환</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 효성중공업 핵심 4포인트:</b><br>
+    ① <b>2025년 5~6월 47만→61만원 장기 매집 완료 후 +420% 시세 분출 = 세력 의도 명확</b><br>
+    ② <b>엘리어트 5파 연장 패턴 (주도주 특성) — 3파보다 긴 5파는 추가 상승 여력 큼</b><br>
+    ③ <b>AI 데이터센터 전력 인프라 핵심 수혜 — 변압기 수주 급증, 2026 실적 턴어라운드 기대</b><br>
+    ④ <b>MA20·60·120 정배열 견고 + 세력은 280만원 매집원가 방어 의도 = 280만/260만 조정 시 매수 기회</b></div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 52주 위치 88.5% 고점권 → 320만원 저항 돌파 실패 시 280만→260만→230만(MA120) 단계적 조정 가능. 5파 연장 완료 시 a-b-c 조정파 진입 리스크 존재 (목표 230만~250만). 현 시점 추격매수 금지. 280만원 지지 확인 or 260만원 조정 대기 후 분할매수 필수. 5월 실적 발표 부진 시 단기 급락 가능성.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4)</div>
+</div>
+</body>
+</html>
