@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이수페타시스 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>이수페타시스 (007660) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSPI 화학/에너지 | 더블바텀 완성 후 피보나치 61.8% 도달, 세력 시세 분출 초기</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 이수페타시스 = "52주 저점 매집 완료 후 골든크로스 동반 급반등, 피보나치 61.8% 도달 후 재조정 여부가 핵심"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 3월 98,000원 더블바텀 완성 (52주 저점 매집)<br>② MA20/60 골든크로스 직후 정배열 전환<br>③ 4월 거래량 급증 동반 +38% 반등<br>④ 피보나치 61.8% 도달로 중기 저항 테스트 중
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>3개월 변동성 극심 (98k~156k 오락가락). 61.8% 저항 실패 시 재조정 가능. 2025년 11월 156,600원 고점 대비 -15% 미회복. 98,000원 이탈 시 추세 붕괴.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">133,300<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 +10.81%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">96,300~<br>156,600원</div><div class="ms">저점 대비 +38.5%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">61.4%</div><div class="ms">중립권 상단</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">3월 말 52주 저점(96,300) 재터치 후 4월 급반등으로 피보나치 61.8%(133,565) 도달. 골든크로스 직후 정배열 전환 초기.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:61.4%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 133,300</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 96,300</span><span>중간 126,450</span><span>고점 156,600</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 3월 98,000원에서 더블바텀 완성 후 세력이 본격 매수 개입. MA20/60 골든크로스 동반 정배열 전환하며 4월 20일 현재 피보나치 61.8% 저항선(133,565) 정확히 도달. 이 자리에서 지지 확인 시 전고점(156,600) 재도전, 이탈 시 120,000~125,000 재조정 가능성.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">더블바텀 완성</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">골든크로스</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">피보나치 61.8%</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">정배열 전환</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">거래량 급증</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "더블바텀 완성 후 피보나치 61.8% 저항 테스트, 재조정 or 돌파 기로"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>세력 매집 완료:</b> 3월 말 98,000원은 52주 저점(96,300) 근처로 세력이 본인 매집 본전 밑으로 떨어지는 것을 참지 못하는 구간. 이후 4월 거래량 367만주 급증하며 +38% 반등 = 세력 시세 분출 시작.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>MA20/60 골든크로스:</b> MA20(114,450)과 MA60(114,115)이 거의 교차 지점. 현재가(133,300)가 MA120(119,108) 위로 올라서며 역배열→정배열 전환. 20일선이 생명선 역할 시작.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 61.8% 도달:</b> 52주 범위(96,300~156,600) 기준 61.8% = 133,565원. 현재가(133,300)가 정확히 이 저항선 도달. 엘리어트 파동 관점에서 ④파 조정 후 ⑤파 시작 가능성. 이 자리 이탈 시 50%(126,450) or 38.2%(119,335) 재조정.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈리스트:</b> 화학/에너지 섹터 반등 수혜. 133,000 지지 확인 시 전고점(156,600) 재도전 시나리오. 120,000 이탈 시 골든크로스 무효화 우려로 관망 전환 필요.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">더블바텀 + 골든크로스</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1D9E75"/></marker>
+    </defs>
+    <rect x="40" y="120" width="140" height="85" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="110" y="132" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 2월 조정</text>
+    <rect x="180" y="135" width="110" height="70" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="235" y="147" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">② 3월 더블바텀</text>
+    <rect x="290" y="45" width="180" height="160" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="380" y="57" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">③ 4월 세력 분출</text>
+    
+    <line x1="55" y1="140" x2="55" y2="165" stroke="#E24B4A" stroke-width="1.8"/><rect x="50" y="145" width="9" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="135" x2="75" y2="158" stroke="#E24B4A" stroke-width="1.8"/><rect x="70" y="138" width="9" height="17" fill="#E24B4A" rx="1"/>
+    <line x1="95" y1="150" x2="95" y2="175" stroke="#E24B4A" stroke-width="1.8"/><rect x="90" y="155" width="9" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="145" x2="115" y2="170" stroke="#1D9E75" stroke-width="1.8"/><rect x="110" y="147" width="9" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="135" y1="142" x2="135" y2="168" stroke="#E24B4A" stroke-width="1.8"/><rect x="130" y="150" width="9" height="16" fill="#E24B4A" rx="1"/>
+    
+    <line x1="155" y1="158" x2="155" y2="183" stroke="#E24B4A" stroke-width="1.8"/><rect x="150" y="165" width="9" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="170" x2="175" y2="195" stroke="#E24B4A" stroke-width="1.8"/><rect x="170" y="175" width="9" height="17" fill="#E24B4A" rx="1"/>
+    <text x="175" y="210" font-size="8" fill="#A32D2D" font-weight="600" text-anchor="middle">101,600</text>
+    
+    <line x1="195" y1="165" x2="195" y2="188" stroke="#1D9E75" stroke-width="1.8"/><rect x="190" y="167" width="9" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="155" x2="215" y2="180" stroke="#E24B4A" stroke-width="1.8"/><rect x="210" y="162" width="9" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="235" y1="172" x2="235" y2="198" stroke="#E24B4A" stroke-width="1.8"/><rect x="230" y="178" width="9" height="17" fill="#E24B4A" rx="1"/>
+    <text x="235" y="212" font-size="8" fill="#A32D2D" font-weight="600" text-anchor="middle">98,000 ★바텀</text>
+    
+    <line x1="255" y1="160" x2="255" y2="185" stroke="#1D9E75" stroke-width="1.8"/><rect x="250" y="162" width="9" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="275" y1="150" x2="275" y2="175" stroke="#1D9E75" stroke-width="1.8"/><rect x="270" y="152" width="9" height="20" fill="#1D9E75" rx="1"/>
+    
+    <line x1="305" y1="130" x2="305" y2="155" stroke="#1D9E75" stroke-width="2"/><rect x="299" y="132" width="11" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="330" y1="115" x2="330" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="324" y="117" width="11" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="355" y1="105" x2="355" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="349" y="107" width="11" height="19" fill="#1D9E75" rx="1"/>
+    <line x1="380" y1="95" x2="380" y2="118" stroke="#1D9E75" stroke-width="2"/><rect x="374" y="97" width="11" height="19" fill="#1D9E75" rx="1"/>
+    <line x1="405" y1="82" x2="405" y2="105" stroke="#1D9E75" stroke-width="2.2"/><rect x="399" y="84" width="11" height="19" fill="#1D9E75" rx="1"/>
+    <text x="405" y="75" font-size="8" fill="#27500A" font-weight="700" text-anchor="middle">120,100</text>
+    
+    <line x1="430" y1="88" x2="430" y2="112" stroke="#E24B4A" stroke-width="1.8"/><rect x="424" y="95" width="11" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="455" y1="78" x2="455" y2="100" stroke="#1D9E75" stroke-width="2"/><rect x="449" y="80" width="11" height="18" fill="#1D9E75" rx="1"/>
+    
+    <line x1="485" y1="55" x2="485" y2="78" stroke="#1D9E75" stroke-width="2.5"/><rect x="478" y="57" width="13" height="19" fill="#1D9E75" rx="1"/>
+    <text x="485" y="48" font-size="9" fill="#1D9E75" font-weight="700" text-anchor="middle">133,300 ★현재</text>
+    <circle cx="485" cy="66" r="18" fill="none" stroke="#26215C" stroke-width="1.5" stroke-dasharray="2 2"/>
+    
+    <line x1="40" y1="65" x2="640" y2="65" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="545" y="62" font-size="8.5" fill="#26215C" font-weight="600">피보나치 61.8% (133,565)</text>
+    
+    <line x1="40" y1="110" x2="640" y2="110" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="545" y="107" font-size="8" fill="#1E3A5F">MA20 (114,450)</text>
+    
+    <line x1="40" y1="113" x2="640" y2="113" stroke="#0C447C" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="545" y="123" font-size="8" fill="#0C447C">MA60 (114,115) ★골든크로스</text>
+    
+    <path d="M 180 195 Q 200 190, 235 198 Q 260 185, 280 170" stroke="#A32D2D" stroke-width="1.5" fill="none" stroke-dasharray="3 2"/>
+    <text x="220" y="220" font-size="8" fill="#A32D2D" font-weight="600">W자 더블바텀</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 3월 더블바텀 완성 후 세력 급매집, 피보나치 61.8% 저항 도달 지점</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 ④파 조정 완료 후 ⑤파 시작 가능성, 전고점 재도전 여부가 핵심"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>엘리어트 파동 라벨링:</b> 2025년 6~11월 ③파(38k→156k) 강한 상승 후, 2025년 12월~2026년 3월 ④파 조정(156k→96k). 현재 ⑤파 시작 시도 중. ④파가 78.6% 깊은 조정이었으나 ①파 저점(30k대) 미이탈로 파동 유효.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>주봉 20/60/120선 정배열 진입:</b> 주봉 MA20이 상승 전환하며 MA60 돌파 시도 중. 주봉 정배열 완성 시 중기 상승 추세 확정. 현재 과도기로 120~130k 박스권 형성 중.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>횡보 매집 구간:</b> 2026년 1~3월 3개월간 98k~130k 박스권은 세력 입장에서 매집 구간. 거래량이 줄지 않고 지속 = 세력이 돈 묻는 중. 이후 4월 거래량 급증 동반 상승 = 시세 분출 신호.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>목표가:</b> ⑤파 목표는 전고점(156,600) 돌파 후 피보나치 확장 1.618 = 193,800원. 단, ④파 깊은 조정 후라 ⑤파 연장 가능성 낮음. 보수적 목표 180,000 설정.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 ⑤파 시작</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs>
+      <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker>
+    </defs>
+    
+    <rect x="40" y="140" width="60" height="45" rx="3" fill="#E6F1FB" opacity=".2"/>
+    <text x="70" y="150" text-anchor="middle" font-size="8" fill="#0C447C" font-weight="600">①파</text>
+    
+    <rect x="120" y="100" width="150" height="85" rx="3" fill="#EAF3DE" opacity=".18"/>
+    <text x="195" y="110" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">③파 (강한 상승)</text>
+    
+    <rect x="270" y="85" width="140" height="100" rx="3" fill="#FCEBEB" opacity=".12"/>
+    <text x="340" y="95" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">④파 조정</text>
+    
+    <rect x="410" y="60" width="100" height="125" rx="3" fill="#FAEEDA" opacity=".15"/>
+    <text x="460" y="70" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">⑤파?</text>
+    
+    <line x1="55" y1="155" x2="55" y2="168" stroke="#1D9E75" stroke-width="1.5"/><rect x="51" y="157" width="7" height="10" fill="#1D9E75" rx=".8"/>
+    <text x="55" y="178" font-size="7" fill="#888" text-anchor="middle">①</text>
+    
+    <line x1="75" y1="158" x2="75" y2="165" stroke="#E24B4A" stroke-width="1.3"/><rect x="71" y="161" width="7" height="3" fill="#E24B4A" rx=".8"/>
+    <text x="75" y="175" font-size="7" fill="#888" text-anchor="middle">②</text>
+    
+    <line x1="95" y1="148" x2="95" y2="162" stroke="#1D9E75" stroke-width="1.5"/><rect x="91" y="150" width="7" height="11" fill="#1D9E75" rx=".8"/>
+    <line x1="115" y1="138" x2="115" y2="154" stroke="#1D9E75" stroke-width="1.6"/><rect x="111" y="140" width="7" height="13" fill="#1D9E75" rx=".8"/>
+    <line x1="135" y1="125" x2="135" y2="142" stroke="#1D9E75" stroke-width="1.7"/><rect x="131" y="127" width="7" height="14" fill="#1D9E75" rx=".8"/>
+    <line x1="155" y1="108" x2="155" y2="128" stroke="#1D9E75" stroke-width="1.8"/><rect x="151" y="110" width="7" height="17" fill="#1D9E75" rx=".8"/>
+    <line x1="175" y1="88" x2="175" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="171" y="90" width="7" height="19" fill="#1D9E75" rx=".8"/>
+    <line x1="195" y1="70" x2="195" y2="93" stroke="#1D9E75" stroke-width="2.2"/><rect x="191" y="72" width="7" height="20" fill="#1D9E75" rx=".8"/>
+    <line x1="215" y1="52" x2="215" y2="75" stroke="#1D9E75" stroke-width="2.4"/><rect x="211" y="54" width="7" height="20" fill="#1D9E75" rx=".8"/>
+    <line x1="235" y1="35" x2="235" y2="58" stroke="#1D9E75" stroke-width="2.5"/><rect x="231" y="37" width="7" height="20" fill="#1D9E75" rx=".8"/>
+    <text x="235" y="28" font-size="8" fill="#27500A" font-weight="700" text-anchor="middle">156,600 ★③파정점</text>
+    <text x="235" y="70" font-size="7" fill="#27500A" text-anchor="middle">③</text>
+    
+    <line x1="255" y1="48" x2="255" y2="72" stroke="#E24B4A" stroke-width="1.8"/><rect x="251" y="55" width="7" height="15" fill="#E24B4A" rx=".8"/>
+    <line x1="275" y1="92" x2="275" y2="115" stroke="#E24B4A" stroke-width="2"/><rect x="271" y="98" width="7" height="15" fill="#E24B4A" rx=".8"/>
+    <line x1="295" y1="125" x2="295" y2="148" stroke="#E24B4A" stroke-width="2.2"/><rect x="291" y="132" width="7" height="14" fill="#E24B4A" rx=".8"/>
+    <line x1="315" y1="138" x2="315" y2="162" stroke="#1D9E75" stroke-width="1.6"/><rect x="311" y="140" width="7" height="20" fill="#1D9E75" rx=".8"/>
+    <line x1="335" y1="148" x2="335" y2="172" stroke="#E24B4A" stroke-width="2"/><rect x="331" y="155" width="7" height="15" fill="#E24B4A" rx=".8"/>
+    <line x1="355" y1="158" x2="355" y2="178" stroke="#E24B4A" stroke-width="1.8"/><rect x="351" y="163" width="7" height="13" fill="#E24B4A" rx=".8"/>
+    <line x1="375" y1="165" x2="375" y2="183" stroke="#E24B4A" stroke-width="1.6"/><rect x="371" y="170" width="7" height="11" fill="#E24B4A" rx=".8"/>
+    <text x="375" y="191" font-size="7.5" fill="#A32D2D" font-weight="600" text-anchor="middle">96,300 ④파바닥</text>
+    <text x="335" y="155" font-size="7" fill="#A32D2D" text-anchor="middle">④</text>
+    
+    <line x1="395" y1="155" x2="395" y2="175" stroke="#1D9E75" stroke-width="1.7"/><rect x="391" y="157" width="7" height="16" fill="#1D9E75" rx=".8"/>
+    <line x1="415" y1="142" x2="415" y2="162" stroke="#1D9E75" stroke-width="1.8"/><rect x="411" y="144" width="7" height="17" fill="#1D9E75" rx=".8"/>
+    <line x1="435" y1="128" x2="435" y2="148" stroke="#1D9E75" stroke-width="1.9"/><rect x="431" y="130" width="7" height="17" fill="#1D9E75" rx=".8"/>
+    <line x1="455" y1="115" x2="455" y2="135" stroke="#1D9E75" stroke-width="2"/><rect x="451" y="117" width="7" height="17" fill="#1D9E75" rx=".8"/>
+    <line x1="475" y1="98" x2="475" y2="118" stroke="#1D9E75" stroke-width="2.2"/><rect x="471" y="100" width="7" height="17" fill="#1D9E75" rx=".8"/>
+    <text x="475" y="92" font-size="8" fill="#633806" font-weight="700" text-anchor="middle">133,300 ⑤파?</text>
+    <circle cx="475" cy="108" r="16" fill="none" stroke="#26215C" stroke-width="1.3" stroke-dasharray="2 1.5"/>
+    <text x="475" y="128" font-size="7" fill="#633806" text-anchor="middle">⑤</text>
+    
+    <path d="M 55 162 Q 95 140, 135 132 Q 195 75, 235 46" stroke="#27500A" stroke-width="1.3" fill="none" stroke-dasharray="2 2" opacity=".5"/>
+    <path d="M 255 60 Q 295 135, 375 174" stroke="#A32D2D" stroke-width="1.3" fill="none" stroke-dasharray="2 2" opacity=".5"/>
+    <path d="M 395 166 Q 435 138, 475 108" stroke="#1D9E75" stroke-width="1.3" fill="none" stroke-dasharray="2 2" opacity=".5"/>
+    
+    <line x1="40" y1="108" x2="640" y2="90" stroke="#26215C" stroke-width="1" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="550" y="94" font-size="7.5" fill="#26215C">피보나치 61.8%</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 엘리어트 ③파 강한 상승 → ④파 깊은 조정(78.6%) → 현재 ⑤파 시작 초기, 전고점 재도전 구간</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2025년 하반기 폭등 후 급락 조정 완료, 2026년 재상승 사이클 진입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>장기 사이클 바닥:</b> 2024년 25k~40k 박스권 → 2025년 상반기 30k~50k 횡보 매집 → 2025년 하반기 폭등(156k). 이후 2025년 12월 급락(26k)은 단기 과열 해소 조정. 월봉 RSI 30 이하 과매도 해소 중.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>구조적 턴어라운드:</b> 2024년 저점(20,422) 대비 현재 +552% 상승. 화학/에너지 섹터 턴어라운드 사이클 진입. 2026년은 재상승 2년차로 실적 개선 기대감.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>대세 상승 기간:</b> 2025년 6~11월 6개월간 +300% 상승은 세력 주도 시세. 급하게 올린 종목은 짧게 가지만, 2024~2025년 상반기 횡보 매집 구간이 길어 재상승 여력 있음.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 리스크:</b> 2025년 고점(156,600) 재돌파 실패 시 박스권 장기화. 96,000 이탈 시 2025년 12월 저점(26,598) 재테스트 우려. 월봉 120선(약 80k) 지지 여부가 중기 추세 분기점.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">사이클 바닥 완료</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="140" width="180" height="50" rx="3" fill="#E6F1FB" opacity=".2"/>
+    <text x="130" y="152" text-anchor="middle" font-size="8" fill="#0C447C" font-weight="600">2024~2025 상반기 횡보 매집</text>
+    
+    <rect x="220" y="40" width="100" height="150" rx="3" fill="#EAF3DE" opacity=".18"/>
+    <text x="270" y="52" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">2025 하반기 폭등</text>
+    
+    <rect x="320" y="90" width="140" height="100" rx="3" fill="#FCEBEB" opacity=".12"/>
+    <text x="390" y="102" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">2025.12~2026.3 조정</text>
+    
+    <rect x="460" y="85" width="90" height="105" rx="3" fill="#FAEEDA" opacity=".15"/>
+    <text x="505" y="97" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">2026.4 재상승</text>
+    
+    <line x1="50" y1="168" x2="50" y2="178" stroke="#0C447C" stroke-width="1.2"/><rect x="47" y="170" width="5" height="7" fill="#0C447C" rx=".6"/>
+    <line x1="65" y1="165" x2="65" y2="176" stroke="#1D9E75" stroke-width="1.2"/><rect x="62" y="167" width="5" height="8" fill="#1D9E75" rx=".6"/>
+    <line x1="80" y1="158" x2="80" y2="171" stroke="#1D9E75" stroke-width="1.3"/><rect x="77" y="160" width="5" height="10" fill="#1D9E75" rx=".6"/>
+    <line x1="95" y1="160" x2="95" y2="172" stroke="#E24B4A" stroke-width="1.2"/><rect x="92" y="164" width="5" height="7" fill="#E24B4A" rx=".6"/>
+    <line x1="110" y1="162" x2="110" y2="174" stroke="#1D9E75" stroke-width="1.2"/><rect x="107" y="164" width="5" height="9" fill="#1D9E75" rx=".6"/>
+    <line x1="125" y1="163" x2="125" y2="175" stroke="#E24B4A" stroke-width="1.2"/><rect x="122" y="167" width="5" height="7" fill="#E24B4A" rx=".6"/>
+    <line x1="140" y1="161" x2="140" y2="173" stroke="#1D9E75" stroke-width="1.2"/><rect x="137" y="163" width="5" height="9" fill="#1D9E75" rx=".6"/>
+    <line x1="155" y1="158" x2="155" y2="171" stroke="#1D9E75" stroke-width="1.3"/><rect x="152" y="160" width="5" height="10" fill="#1D9E75" rx=".6"/>
+    <line x1="170" y1="155" x2="170" y2="169" stroke="#1D9E75" stroke-width="1.3"/><rect x="167" y="157" width="5" height="11" fill="#1D9E75" rx=".6"/>
+    <line x1="185" y1="152" x2="185" y2="167" stroke="#E24B4A" stroke-width="1.3"/><rect x="182" y="157" width="5" height="9" fill="#E24B4A" rx=".6"/>
+    <line x1="200" y1="153" x2="200" y2="168" stroke="#1D9E75" stroke-width="1.3"/><rect x="197" y="155" width="5" height="12" fill="#1D9E75" rx=".6"/>
+    
+    <line x1="220" y1="145" x2="220" y2="160" stroke="#1D9E75" stroke-width="1.4"/><rect x="217" y="147" width="5" height="12" fill="#1D9E75" rx=".6"/>
+    <line x1="240" y1="135" x2="240" y2="152" stroke="#1D9E75" stroke-width="1.5"/><rect x="237" y="137" width="5" height="14" fill="#1D9E75" rx=".6"/>
+    <line x1="260" y1="118" x2="260" y2="138" stroke="#1D9E75" stroke-width="1.7"/><rect x="257" y="120" width="5" height="17" fill="#1D9E75" rx=".6"/>
+    <line x1="280" y1="95" x2="280" y2="120" stroke="#1D9E75" stroke-width="1.9"/><rect x="277" y="97" width="5" height="22" fill="#1D9E75" rx=".6"/>
+    <line x1="300" y1="55" x2="300" y2="85" stroke="#1D9E75" stroke-width="2.2"/><rect x="297" y="57" width="5" height="27" fill="#1D9E75" rx=".6"/>
+    <text x="300" y="48" font-size="8" fill="#27500A" font-weight="700" text-anchor="middle">156,600</text>
+    
+    <line x1="320" y1="65" x2="320" y2="95" stroke="#E24B4A" stroke-width="2"/><rect x="317" y="72" width="5" height="21" fill="#E24B4A" rx=".6"/>
+    <line x1="340" y1="165" x2="340" y2="185" stroke="#E24B4A" stroke-width="2.3"/><rect x="337" y="172" width="5" height="11" fill="#E24B4A" rx=".6"/>
+    <text x="340" y="194" font-size="7.5" fill="#A32D2D" font-weight="600" text-anchor="middle">26,598</text>
+    
+    <line x1="360" y1="155" x2="360" y2="175" stroke="#1D9E75" stroke-width="1.5"/><rect x="357" y="157" width="5" height="17" fill="#1D9E75" rx=".6"/>
+    <line x1="380" y1="152" x2="380" y2="172" stroke="#1D9E75" stroke-width="1.5"/><rect x="377" y="154" width="5" height="17" fill="#1D9E75" rx=".6"/>
+    <line x1="400" y1="158" x2="400" y2="177" stroke="#E24B4A" stroke-width="1.4"/><rect x="397" y="163" width="5" height="13" fill="#E24B4A" rx=".6"/>
+    <line x1="420" y1="138" x2="420" y2="160" stroke="#1D9E75" stroke-width="1.6"/><rect x="417" y="140" width="5" height="19" fill="#1D9E75" rx=".6"/>
+    <line x1="440" y1="115" x2="440" y2="140" stroke="#1D9E75" stroke-width="1.7"/><rect x="437" y="117" width="5" height="22" fill="#1D9E75" rx=".6"/>
+    
+    <line x1="470" y1="145" x2="470" y2="168" stroke="#E24B4A" stroke-width="1.6"/><rect x="467" y="152" width="5" height="15" fill="#E24B4A" rx=".6"/>
+    <line x1="490" y1="162" x2="490" y2="182" stroke="#E24B4A" stroke-width="1.5"/><rect x="487" y="168" width="5" height="13" fill="#E24B4A" rx=".6"/>
+    <text x="490" y="191" font-size="7.5" fill="#A32D2D" font-weight="600" text-anchor="middle">98,000</text>
+    
+    <line x1="510" y1="148" x2="510" y2="168" stroke="#1D9E75" stroke-width="1.6"/><rect x="507" y="150" width="5" height="17" fill="#1D9E75" rx=".6"/>
+    <line x1="530" y1="132" x2="530" y2="153" stroke="#1D9E75" stroke-width="1.8"/><rect x="527" y="134" width="5" height="18" fill="#1D9E75" rx=".6"/>
+    <text x="530" y="125" font-size="8" fill="#633806" font-weight="700" text-anchor="middle">133,300</text>
+    <circle cx="530" cy="143" r="17" fill="none" stroke="#26215C" stroke-width="1.4" stroke-dasharray="2 1.5"/>
+    
+    <line x1="40" y1="143" x2="640" y2="125" stroke="#26215C" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+    <text x="560" y="129" font-size="7.5" fill="#26215C">현재 133,300</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024~2025 상반기 횡보 매집 → 2025 하반기 폭등 → 2025.12 급락 조정 → 2026.4 재상승 사이클</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">① 세력 매집 완료 → 시세 분출 초기</span><span class="tag t-g">강력</span><div style="color:#888;margin-top:2px;font-size:11px">3월 98,000원(52주 저점 근처)에서 더블바텀 완성은 세력이 본인 매집 본전 밑으로 떨어지는 것을 참지 못한 신호. 이후 4월 거래량 367만주 급증하며 +38% 반등 = 세력 시세 분출 시작. 세력은 급하게 올리지 않고 120k~133k 박스권에서 추가 매집 중. 거래량=돈이므로 이 구간 거래량 유지 시 추가 상승 여력.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">② 화학/에너지 섹터 턴어라운드 수혜</span><span class="tag t-navy">중립</span><div style="color:#888;margin-top:2px;font-size:11px">2024~2025년 화학/에너지 업종 사이클 바닥 탈출. 주요 화학주 동반 상승 중. 이수페타시스는 OLED 소재·2차전지 소재 사업 확장으로 구조적 성장 트리거 보유. 단, 경쟁사 대비 밸류에이션 높아 실적 모멘텀 필수.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">③ 피보나치 61.8% 저항 — 재조정 vs 돌파 기로</span><span class="tag t-a">주의</span><div style="color:#888;margin-top:2px;font-size:11px">현재 133,300원은 52주 범위 기준 피보나치 61.8%(133,565) 정확히 도달. 엘리어트 관점에서 ⑤파 초기지만 61.8% 이탈 시 재조정(50% = 126,450 or 38.2% = 119,335). 133,000 지지 확인 시 전고점(156,600) 재도전 시나리오. 이 자리에서 3~5일 횡보 후 방향 결정.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">④ 핵심 리스크 — 96,000 이탈 시 추세 붕괴</span><span class="tag t-r">경계</span><div style="color:#888;margin-top:2px;font-size:11px">3개월 변동성 극심(98k~156k 오락가락). 133,000 저항 돌파 실패 시 재조정 가능성. 최악 시나리오는 96,000 이탈 → 2025년 12월 저점(26,598) 재테스트. MA120(119,108) 이탈 시 추세 전환 신호로 손절 필수. 세력도 본전 밑(추정 105k~115k)으로는 안 떨어뜨리므로 110k 이하 급락 시 재매집 기회.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>더블바텀(W자) 완성 (2월 101,600 + 3월 98,000)</span><span class="tag t-g">강력</span></div>
+  <div class="row"><span>MA20/60 골든크로스 직후 정배열 전환</span><span class="tag t-g">강력</span></div>
+  <div class="row"><span>4월 거래량 367만주 급증 동반 +10.81% 상승</span><span class="tag t-g">강력</span></div>
+  <div class="row"><span>엘리어트 ④파 조정 완료 후 ⑤파 시작 시도</span><span class="tag t-b">긍정</span></div>
+  <div class="row"><span>52주 저점(96,300) 근처에서 세력 매집 확인</span><span class="tag t-teal">긍정</span></div>
+  <div class="row"><span>화학/에너지 섹터 턴어라운드 사이클 진입</span><span class="tag t-navy">중립</span></div>
+  <div class="row"><span>OLED·2차전지 소재 사업 확장 기대감</span><span class="tag t-navy">중립</span></div>
+  <div class="row"><span>피보나치 61.8% 저항선 도달 (재조정 가능)</span><span class="tag t-a">주의</span></div>
+  <div class="row"><span>3개월 변동성 극심 — 박스권 장기화 우려</span><span class="tag t-a">주의</span></div>
+  <div class="row"><span>96,000 이탈 시 추세 붕괴 리스크</span><span class="tag t-r">리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:72%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 72% — 조건부 긍정</div>
+    <div style="font-size:11px;color:#5f5e5a">133,000 지지 확인 시 전고점(156,600) 재도전 가능. 단, 61.8% 저항 실패 시 120k~125k 재조정 대비 필요. 분할매수 전략 추천 (120k 1차, 110k 2차).</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:68%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 68%</div>
+    <div style="font-size:11px;color:#5f5e5a">화학/에너지 섹터 사이클 상승 초기. 목표가 180,000 (전고점 돌파 +15%). 단, 실적 개선 모멘텀 필수. 110k 이하 조정 시 중장기 비중 확대 기회.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "133k 지지 확인 후 분할매수, 재조정 시 110k~120k 추가 매집"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">120,000~<br>125,000</div><div>MA20 지지<br>(피보나치 50%)<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">110,000~<br>115,000</div><div>MA60 지지<br>(피보나치 38.2%)<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">156,600~<br>180,000</div><div>전고점 돌파<br>+15%<br>(+35~51%)</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">96,000원</div><div>52주 저점 이탈<br>(MA120 붕괴)</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 이수페타시스 핵심 4포인트:</b><br>
+    ① <b>더블바텀 완성 후 세력 시세 분출 초기</b> — 3월 98,000원 매집 완료 후 4월 거래량 급증 동반 +38% 반등<br>
+    ② <b>MA20/60 골든크로스 직후 정배열 전환</b> — 단기 추세 상승 전환 확인, 20일선 생명선 역할 시작<br>
+    ③ <b>엘리어트 ⑤파 시작 시도</b> — ④파 깊은 조정 후 전고점(156,600) 재도전 구간, 목표 180k<br>
+    ④ <b>피보나치 61.8% 저항 테스트</b> — 133,565원 도달 지점, 지지 확인 시 추가 상승, 이탈 시 재조정</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 3개월 변동성 극심 (98k~133k 오락가락). 61.8% 저항 돌파 실패 시 120k~125k 재조정 가능. 96,000 이탈 시 추세 붕괴로 2025년 12월 저점(26,598) 재테스트 우려. MA120(119,108) 이탈 시 손절 필수. 화학/에너지 섹터 모멘텀 둔화 시 박스권 장기화 리스크.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>
