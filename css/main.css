@@ -52,6 +52,19 @@ body{
 .card .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
 .card .tag{font-size:11px;padding:4px 9px;border-radius:999px;background:#f2f4f6;color:#6b7684;font-weight:500}
 
+/* ===== 페이지네이션 ===== */
+.pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin:32px 0 8px;flex-wrap:wrap}
+.pagination button{background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:9px 14px;font-size:14px;font-weight:600;color:#4e5968;cursor:pointer;transition:all .15s ease;min-width:40px;font-family:inherit}
+.pagination button:hover:not(:disabled){background:#f2f4f6;color:#191f28;border-color:#dfe3e8}
+.pagination button.active{background:#3182F6;color:#fff;border-color:#3182F6;pointer-events:none}
+.pagination button:disabled{opacity:.35;cursor:not-allowed}
+.pagination .ellipsis{color:#8b95a1;padding:0 4px;font-weight:600;user-select:none}
+.pagination .pg-info{font-size:12px;color:#8b95a1;margin-left:10px;font-weight:500}
+@media(max-width:640px){
+  .pagination button{padding:8px 11px;font-size:13px;min-width:36px}
+  .pagination .pg-info{width:100%;text-align:center;margin:8px 0 0}
+}
+
 /* ===== 히어로 ===== */
 .hero{
   background:linear-gradient(135deg,#EBF4FF 0%,#F4F9FF 50%,#EAF5F1 100%);

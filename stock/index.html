@@ -351,6 +351,8 @@
     검색 결과가 없어요. 다른 키워드로 시도해보세요.
   </div>
 
+  <nav class="pagination" id="pagination" aria-label="페이지 이동"></nav>
+
 </main>
 
 <footer class="site-footer">
@@ -365,36 +367,90 @@
 
 <script>
 (function(){
+  const PAGE_SIZE = 20;
   const form = document.getElementById('search-form');
   const input = document.getElementById('q');
   const clearBtn = document.getElementById('q-clear');
   const grid = document.getElementById('stock-grid');
   const empty = document.getElementById('empty');
+  const pager = document.getElementById('pagination');
   const cards = Array.from(grid.querySelectorAll('.card'));
 
+  let currentPage = 1;
+  let matched = cards;
+
   function norm(s){ return (s||'').toLowerCase().replace(/\s+/g,''); }
-  function filter(){
+
+  function buildPager(totalPages){
+    if(totalPages <= 1){ pager.innerHTML=''; return; }
+    const parts = [];
+    parts.push(`<button type="button" data-pg="prev" ${currentPage===1?'disabled':''} aria-label="이전 페이지">‹ 이전</button>`);
+
+    const pages = new Set([1, totalPages, currentPage, currentPage-1, currentPage+1]);
+    const shown = Array.from(pages).filter(p => p>=1 && p<=totalPages).sort((a,b)=>a-b);
+    let last = 0;
+    for(const p of shown){
+      if(p - last > 1) parts.push('<span class="ellipsis">…</span>');
+      parts.push(`<button type="button" data-pg="${p}" class="${p===currentPage?'active':''}" aria-label="${p}페이지"${p===currentPage?' aria-current="page"':''}>${p}</button>`);
+      last = p;
+    }
+
+    parts.push(`<button type="button" data-pg="next" ${currentPage===totalPages?'disabled':''} aria-label="다음 페이지">다음 ›</button>`);
+    parts.push(`<span class="pg-info">${matched.length}개 중 ${(currentPage-1)*PAGE_SIZE+1}-${Math.min(currentPage*PAGE_SIZE, matched.length)}</span>`);
+    pager.innerHTML = parts.join('');
+  }
+
+  function render(){
+    cards.forEach(c => c.style.display='none');
+    if(matched.length === 0){
+      empty.style.display = 'block';
+      pager.innerHTML = '';
+      return;
+    }
+    empty.style.display = 'none';
+    const totalPages = Math.max(1, Math.ceil(matched.length / PAGE_SIZE));
+    if(currentPage > totalPages) currentPage = totalPages;
+    const start = (currentPage-1) * PAGE_SIZE;
+    matched.slice(start, start + PAGE_SIZE).forEach(c => c.style.display='');
+    buildPager(totalPages);
+  }
+
+  function filter(resetPage){
     const q = norm(input.value);
     form.classList.toggle('has-text', !!input.value);
-    let visible = 0;
-    cards.forEach(c => {
-      if(!q){ c.style.display=''; visible++; return; }
-      const hay = norm([c.dataset.name, c.dataset.code, c.dataset.tags, c.querySelector('.title')?.textContent].join(' '));
-      const show = hay.includes(q);
-      c.style.display = show ? '' : 'none';
-      if(show) visible++;
-    });
-    empty.style.display = visible ? 'none' : 'block';
+    if(!q){
+      matched = cards;
+    }else{
+      matched = cards.filter(c => {
+        const hay = norm([c.dataset.name, c.dataset.code, c.dataset.tags, c.querySelector('.title')?.textContent].join(' '));
+        return hay.includes(q);
+      });
+    }
+    if(resetPage) currentPage = 1;
+    render();
   }
+
+  pager.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-pg]');
+    if(!btn) return;
+    const v = btn.dataset.pg;
+    const totalPages = Math.max(1, Math.ceil(matched.length / PAGE_SIZE));
+    if(v === 'prev' && currentPage > 1) currentPage--;
+    else if(v === 'next' && currentPage < totalPages) currentPage++;
+    else if(/^\d+$/.test(v)) currentPage = parseInt(v, 10);
+    else return;
+    render();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
 
   const params = new URLSearchParams(location.search);
   const q0 = params.get('q');
   if(q0){ input.value = q0; }
-  filter();
+  filter(true);
 
-  input.addEventListener('input', filter);
-  clearBtn.addEventListener('click', () => { input.value=''; filter(); input.focus(); });
-  form.addEventListener('submit', e => { e.preventDefault(); filter(); input.blur(); });
+  input.addEventListener('input', () => filter(true));
+  clearBtn.addEventListener('click', () => { input.value=''; filter(true); input.focus(); });
+  form.addEventListener('submit', e => { e.preventDefault(); filter(true); input.blur(); });
 })();
 </script>
 
