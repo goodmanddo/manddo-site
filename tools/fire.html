@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>경제적 자유 D-Day — FIRE 은퇴 나이 계산기 | 만또 인사이트</title>
+<meta name="description" content="현재 자산·월 저축·수익률을 입력하면 경제적 자유(FIRE)를 달성하는 날짜를 계산합니다. Lean·Regular·Fat FIRE 3단계 시나리오 비교.">
+<meta name="keywords" content="FIRE계산기, 경제적자유계산기, 파이어족, 조기은퇴, 4%룰, Lean FIRE, Fat FIRE, 은퇴나이계산기">
+<meta property="og:title" content="경제적 자유 D-Day — FIRE 은퇴 나이 계산기">
+<meta property="og:description" content="언제 경제적 자유를 이룰 수 있을까? 4% 룰 기반 Lean·Regular·Fat FIRE 시나리오 계산기.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/tools/fire.html">
+<link rel="canonical" href="https://manddo.kr/tools/fire.html">
+<link rel="stylesheet" href="/css/main.css?v=20260420b">
+<style>
+.calc-form{background:#fff;border:1px solid #eef0f3;border-radius:20px;padding:28px 24px;margin:20px 0}
+.field{margin-bottom:22px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:13px;font-weight:700;color:#191f28;margin-bottom:8px;letter-spacing:-0.01em}
+.field .hint{font-size:12px;color:#8b95a1;font-weight:500;margin-top:6px;line-height:1.5}
+.input-row{display:flex;align-items:center;gap:10px}
+.input-row input[type=number]{
+  flex:1;min-width:0;padding:14px 16px;font-size:16px;font-weight:600;
+  border:1px solid #eef0f3;border-radius:12px;color:#191f28;font-family:inherit;
+  background:#fafbfc;transition:all .15s;-moz-appearance:textfield;
+}
+.input-row input[type=number]::-webkit-outer-spin-button,
+.input-row input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.input-row input[type=number]:focus{outline:none;border-color:#3182F6;background:#fff;box-shadow:0 0 0 3px rgba(49,130,246,.1)}
+.input-row .unit{font-size:15px;font-weight:700;color:#4e5968;white-space:nowrap}
+.range{width:100%;margin-top:12px;accent-color:#3182F6}
+.range-label{display:flex;justify-content:space-between;font-size:11.5px;color:#8b95a1;margin-top:4px;font-weight:500}
+
+.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{
+  background:#fff;border:1px solid #eef0f3;border-radius:999px;
+  padding:8px 14px;font-size:13px;font-weight:600;color:#4e5968;
+  cursor:pointer;font-family:inherit;transition:all .15s;
+}
+.chip:hover{background:#f2f4f6}
+.chip.active{background:#EBF4FF;border-color:#3182F6;color:#1B64DA}
+
+.hero-result{
+  background:linear-gradient(135deg,#1E3A5F 0%,#1B64DA 50%,#3182F6 100%);
+  border-radius:24px;padding:36px 28px;margin:24px 0;
+  position:relative;overflow:hidden;color:#fff;
+}
+.hero-result::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.18),transparent 50%),
+             radial-gradient(circle at 20% 80%,rgba(107,89,255,.22),transparent 55%);
+  pointer-events:none;
+}
+.hr-label{font-size:12px;font-weight:800;letter-spacing:0.1em;opacity:.82;position:relative}
+.hr-date{font-size:38px;font-weight:800;letter-spacing:-0.04em;line-height:1.1;margin:8px 0 6px;position:relative}
+.hr-date .age{font-size:17px;font-weight:700;opacity:.88;margin-left:6px}
+.hr-sub{font-size:14px;opacity:.88;font-weight:500;position:relative}
+.hr-divider{height:1px;background:rgba(255,255,255,.22);margin:22px 0 18px;position:relative}
+.hr-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative}
+.hr-cell{position:relative}
+.hr-cell .t{font-size:11px;font-weight:700;opacity:.78;letter-spacing:0.04em;margin-bottom:2px}
+.hr-cell .v{font-size:20px;font-weight:800;letter-spacing:-0.02em;font-family:'SF Mono',ui-monospace,monospace}
+.hr-cell .v .u{font-size:14px;font-weight:700;opacity:.85;margin-left:2px}
+
+.progress-ring{margin:20px 0;position:relative}
+.pr-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;font-size:13px;color:#4e5968;font-weight:600}
+.pr-head .pct{color:#3182F6;font-weight:800;font-size:16px;font-family:'SF Mono',ui-monospace,monospace}
+.pr-bar{height:12px;background:#EBF4FF;border-radius:999px;overflow:hidden;position:relative}
+.pr-fill{height:100%;background:linear-gradient(90deg,#3182F6,#6B59FF);border-radius:999px;transition:width .4s ease}
+
+.scenarios{margin:28px 0}
+.scenarios h2{font-size:18px;font-weight:800;letter-spacing:-0.03em;margin-bottom:12px;color:#191f28}
+.scn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.scn-card{
+  background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 16px;
+  text-align:center;transition:all .18s ease;position:relative;
+}
+.scn-card.highlight{border-color:#3182F6;background:linear-gradient(135deg,#F4F9FF,#EBF4FF)}
+.scn-card .kind{font-size:11px;font-weight:800;color:#8b95a1;letter-spacing:0.06em;margin-bottom:6px}
+.scn-card.highlight .kind{color:#1B64DA}
+.scn-card .scn-spend{font-size:13px;color:#4e5968;font-weight:600;margin-bottom:10px}
+.scn-card .scn-years{font-size:24px;font-weight:800;color:#191f28;letter-spacing:-0.03em;font-family:'SF Mono',ui-monospace,monospace}
+.scn-card .scn-years .u{font-size:14px;color:#8b95a1;font-weight:700;margin-left:2px}
+.scn-card .scn-target{font-size:11.5px;color:#8b95a1;margin-top:6px;font-weight:500}
+
+.info-card{background:#FFF8E6;border:1px solid #FDE9A8;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:13px;color:#6b4a00;line-height:1.7}
+.info-card b{color:#4a3300}
+
+details.faq{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:4px 16px;margin-bottom:10px}
+details.faq summary{padding:14px 0;font-size:14.5px;font-weight:700;color:#191f28;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:'+';color:#8b95a1;font-size:20px;font-weight:400}
+details.faq[open] summary::after{content:'−'}
+details.faq .answer{padding:0 0 16px;font-size:13.5px;color:#4e5968;line-height:1.75}
+details.faq .answer p{margin-bottom:8px}
+details.faq .answer ul{margin:6px 0 6px 18px}
+details.faq .answer li{margin-bottom:4px;font-size:13.5px}
+details.faq .answer b{color:#191f28;font-weight:700}
+
+.cta-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.cta-btn{flex:1;min-width:140px;background:#3182F6;color:#fff;border:none;border-radius:12px;padding:14px;cursor:pointer;font-family:inherit;font-size:14px;font-weight:700;text-decoration:none;text-align:center;transition:all .15s}
+.cta-btn:hover{background:#1B64DA}
+.cta-btn.ghost{background:#fff;color:#4e5968;border:1px solid #eef0f3}
+.cta-btn.ghost:hover{background:#f2f4f6;color:#191f28}
+
+.never-msg{
+  background:#FCEBEB;border:1px solid #FAD4D4;border-radius:12px;
+  padding:14px 16px;margin:16px 0;font-size:13.5px;color:#A32D2D;line-height:1.65;
+}
+.never-msg b{color:#7a1f1f}
+
+@media(max-width:540px){
+  .hr-date{font-size:28px}
+  .hr-date .age{font-size:14px}
+  .hr-cell .v{font-size:17px}
+  .scn-grid{grid-template-columns:1fr;gap:8px}
+  .scn-card{padding:16px 16px;display:flex;justify-content:space-between;align-items:center;text-align:left}
+  .scn-card .scn-spend{margin-bottom:0}
+  .scn-card .scn-years{margin-left:auto}
+  .scn-card .scn-target{width:100%;text-align:right;margin-top:4px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/tools/" class="active">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <h1>🔥 경제적 자유 D-Day</h1>
+  <p class="sub">내가 언제 일 안 해도 살 수 있을까? — 4% 룰 기반 FIRE 달성 시점 계산기</p>
+
+  <div class="calc-form">
+    <div class="field">
+      <label for="assets">현재 순자산 (만원)</label>
+      <div class="input-row">
+        <input type="number" id="assets" value="5000" min="0" max="10000000" step="100" inputmode="numeric">
+        <span class="unit">만원</span>
+      </div>
+      <div class="hint">현금·예적금·주식·부동산 자산 합계에서 대출·부채를 뺀 금액</div>
+    </div>
+
+    <div class="field">
+      <label for="spend">은퇴 후 월 목표 지출 (만원)</label>
+      <div class="input-row">
+        <input type="number" id="spend" value="300" min="50" max="2000" step="10" inputmode="numeric">
+        <span class="unit">만원/월</span>
+      </div>
+      <div class="chip-row">
+        <button class="chip" data-spend="200">월 200 (Lean)</button>
+        <button class="chip active" data-spend="300">월 300</button>
+        <button class="chip" data-spend="400">월 400</button>
+        <button class="chip" data-spend="500">월 500 (Fat)</button>
+      </div>
+      <div class="hint">은퇴 후에도 쓰고 싶은 월 지출. 이 금액의 25배(연 지출 ×25)가 FIRE 목표 자산</div>
+    </div>
+
+    <div class="field">
+      <label for="save">월 저축·투자액 (만원)</label>
+      <div class="input-row">
+        <input type="number" id="save" value="200" min="0" max="2000" step="10" inputmode="numeric">
+        <span class="unit">만원/월</span>
+      </div>
+      <div class="hint">매월 순자산에 추가하는 금액 (저축 + 주식·ETF 등 투자 합계)</div>
+    </div>
+
+    <div class="field">
+      <label for="rate">연 기대 수익률 <span id="rate-val" style="color:#3182F6;font-weight:800;font-family:'SF Mono',ui-monospace,monospace">6.0%</span></label>
+      <input type="range" id="rate" class="range" min="2" max="12" step="0.5" value="6">
+      <div class="range-label"><span>2% (예금)</span><span>6% (S&P 평균)</span><span>12%</span></div>
+      <div class="hint">인플레이션 차감 후 실질 수익률. 통상 주식 위주 포트폴리오 6~7% 가정이 일반적</div>
+    </div>
+
+    <div class="field">
+      <label for="age">현재 나이 (선택)</label>
+      <div class="input-row">
+        <input type="number" id="age" value="30" min="15" max="80" step="1" inputmode="numeric">
+        <span class="unit">세</span>
+      </div>
+      <div class="hint">입력 시 FIRE 달성 나이를 함께 표시합니다</div>
+    </div>
+  </div>
+
+  <div class="hero-result" id="hero">
+    <div class="hr-label">● 경제적 자유 D-DAY</div>
+    <div class="hr-date"><span id="r-date">—</span><span class="age" id="r-age"></span></div>
+    <div class="hr-sub" id="r-sub">지금부터 준비하면 어느날 일을 안 해도 됩니다</div>
+
+    <div class="hr-divider"></div>
+
+    <div class="hr-grid">
+      <div class="hr-cell">
+        <div class="t">FIRE 목표 자산</div>
+        <div class="v"><span id="r-target">0</span><span class="u">만원</span></div>
+      </div>
+      <div class="hr-cell">
+        <div class="t">월 저축률</div>
+        <div class="v"><span id="r-rate">0</span><span class="u">%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-ring">
+    <div class="pr-head">
+      <span>현재 FIRE 달성률</span>
+      <span class="pct" id="r-progress">0%</span>
+    </div>
+    <div class="pr-bar"><div class="pr-fill" id="r-progress-fill" style="width:0%"></div></div>
+  </div>
+
+  <div class="never-msg" id="never-msg" style="display:none">
+    <b>⚠ 현재 조건으로는 FIRE 달성이 어렵습니다.</b><br>
+    저축액이 수익률을 고려해도 목표 자산에 도달하지 못하는 구조입니다. 월 지출을 낮추거나 월 저축액을 늘려보세요.
+  </div>
+
+  <div class="scenarios">
+    <h2>📊 3단계 FIRE 시나리오</h2>
+    <div class="scn-grid" id="scn-grid">
+      <div class="scn-card" data-scn="lean">
+        <div class="kind">LEAN FIRE</div>
+        <div class="scn-spend">월 200만원 지출</div>
+        <div class="scn-years"><span class="scn-val">—</span><span class="u">년</span></div>
+        <div class="scn-target">목표 6억원</div>
+      </div>
+      <div class="scn-card highlight" data-scn="reg">
+        <div class="kind">REGULAR FIRE</div>
+        <div class="scn-spend">월 350만원 지출</div>
+        <div class="scn-years"><span class="scn-val">—</span><span class="u">년</span></div>
+        <div class="scn-target">목표 10.5억원</div>
+      </div>
+      <div class="scn-card" data-scn="fat">
+        <div class="kind">FAT FIRE</div>
+        <div class="scn-spend">월 500만원 지출</div>
+        <div class="scn-years"><span class="scn-val">—</span><span class="u">년</span></div>
+        <div class="scn-target">목표 15억원</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <b>ℹ️ 계산 기준 — 4% 룰(Trinity Study)</b><br>
+    은퇴 시점 자산의 4%를 매년 인출해도 30년간 자산이 고갈되지 않는다는 미국 금융학계의 연구. 반대로 표현하면 "연 지출의 25배 = 경제적 자유 자산"입니다. 한국의 경우 금리·물가 차이로 3~3.5% 룰이 보수적이라는 의견도 있습니다.
+  </div>
+
+  <h2>❓ 자주 묻는 질문</h2>
+
+  <details class="faq">
+    <summary>경제적 자유(FIRE)란 무엇인가요?</summary>
+    <div class="answer">
+      <p><b>FIRE</b>는 <b>F</b>inancial <b>I</b>ndependence, <b>R</b>etire <b>E</b>arly의 약자로, "경제적 자립으로 조기 은퇴가 가능한 상태"를 뜻합니다. 자산에서 발생하는 수익(이자·배당·매매차익)만으로 생활비를 충당할 수 있으면 FIRE를 달성한 것으로 봅니다.</p>
+      <p>꼭 은퇴하지 않더라도 "일을 그만둘 수 있는 선택권"을 가진다는 점에서 가치가 있습니다.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>4% 룰은 왜 25배인가요?</summary>
+    <div class="answer">
+      <p>1994년 트리니티 대학의 연구에서 시작됐습니다. 연간 자산의 4%만 인출하면, 주식·채권 혼합 포트폴리오 기준 30년간 자산이 고갈될 확률이 매우 낮았다는 결과입니다.</p>
+      <p>수식으로 보면: <b>연 지출 ÷ 0.04 = 필요 자산 = 연 지출 × 25배</b>. 월 300만원(연 3,600만원) 지출이면 필요 자산은 9억원입니다.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Lean FIRE / Regular FIRE / Fat FIRE 차이는?</summary>
+    <div class="answer">
+      <ul>
+        <li><b>Lean FIRE</b>: 월 200만원 이하의 검소한 생활로 조기은퇴. 목표 자산 약 6억원. 지방 거주·미니멀리즘 선호하는 경우.</li>
+        <li><b>Regular FIRE</b>: 월 300~400만원 평균적 생활. 목표 자산 9~12억원. 한국 직장인 평균 은퇴 후 생활비 수준.</li>
+        <li><b>Fat FIRE</b>: 월 500만원 이상의 여유로운 생활. 목표 자산 15억원 이상. 여행·취미 여유 있는 라이프스타일.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>연 기대수익률 몇 %가 현실적인가요?</summary>
+    <div class="answer">
+      <p><b>명목 수익률</b>이 아니라 <b>실질 수익률(인플레이션 차감 후)</b>을 입력하는 것이 중요합니다.</p>
+      <ul>
+        <li><b>예금·적금 위주</b>: 2~3% (사실상 인플레 반영 시 0~1%)</li>
+        <li><b>채권 위주</b>: 3~4%</li>
+        <li><b>S&P500·글로벌 ETF 중심</b>: 6~7% (과거 100년 평균)</li>
+        <li><b>개별주 적극 투자</b>: 변동성 크나 8% 이상 목표 가능</li>
+      </ul>
+      <p>너무 낙관적인 수익률(10% 이상)은 현실 격차가 클 수 있으니 <b>6~7%</b>를 기본값으로 잡는 것을 추천합니다.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>저축률이 FIRE에 얼마나 중요한가요?</summary>
+    <div class="answer">
+      <p>FIRE 커뮤니티에서 가장 중요한 지표로 꼽는 것이 <b>저축률</b>입니다. 소득이 아니라 <b>소득 대비 저축 비중</b>이 은퇴 시기를 결정합니다.</p>
+      <ul>
+        <li>저축률 10% → FIRE까지 약 50년</li>
+        <li>저축률 25% → 약 32년</li>
+        <li>저축률 50% → 약 17년</li>
+        <li>저축률 75% → 약 7년</li>
+      </ul>
+      <p>수익률 증가보다 <b>지출을 줄여 저축률을 높이는 것</b>이 훨씬 강력한 레버리지입니다.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>한국에서 FIRE는 현실적인가요?</summary>
+    <div class="answer">
+      <p>가능하지만 몇 가지 주의할 점이 있습니다:</p>
+      <ul>
+        <li><b>금리 차이</b>: 한국은 미국 대비 주식 장기 수익률이 낮고 금리도 다르므로 4%보다 보수적인 3~3.5% 룰이 안전합니다.</li>
+        <li><b>주거비 리스크</b>: 전월세 상승 가능성을 고려해 주거비는 별도 안전 마진을 두는 것이 좋습니다.</li>
+        <li><b>건강보험료</b>: 직장에서 퇴직하면 지역가입자 전환으로 건보료가 크게 증가할 수 있습니다.</li>
+        <li><b>국민연금</b>: 65세 이후 수령액을 감안하면 그 전까지의 자산만 계산하면 됩니다.</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="cta-row">
+    <a href="/tools/" class="cta-btn ghost">🧮 다른 계산기 보기</a>
+    <a href="/tools/salary.html" class="cta-btn">💰 내 월급 실수령액은?</a>
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    본 계산기는 4% 룰(Trinity Study) 기반 단순화 모델이며, 실제 수익률·인플레이션·세금·개인 상황에 따라 결과는 달라집니다. 투자 상품 추천이 아니며, 구체적인 은퇴 계획은 공인 재무설계사(CFP)와 상담하세요.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+const MAN = 10000;
+
+function yearsToTarget(pv, pmtMonthly, target, annualRate){
+  if(pv >= target) return 0;
+  const r = Math.pow(1 + annualRate, 1/12) - 1;
+  if(r === 0){
+    if(pmtMonthly <= 0) return Infinity;
+    return (target - pv) / pmtMonthly / 12;
+  }
+  const denom = pv + pmtMonthly/r;
+  const numer = target + pmtMonthly/r;
+  if(denom <= 0) return Infinity;
+  const ratio = numer / denom;
+  if(ratio <= 0) return Infinity;
+  const nMonths = Math.log(ratio) / Math.log(1 + r);
+  if(!isFinite(nMonths) || nMonths < 0) return Infinity;
+  return nMonths / 12;
+}
+
+function fmt(n){
+  if(!isFinite(n)) return '—';
+  return Math.round(n).toLocaleString('ko-KR');
+}
+function fmtAsset(manWon){
+  if(!isFinite(manWon) || manWon <= 0) return '0만원';
+  const eok = Math.floor(manWon / 10000);
+  const man = Math.round(manWon % 10000);
+  if(eok >= 1 && man === 0) return `${eok}억원`;
+  if(eok >= 1) return `${eok}억 ${man.toLocaleString('ko-KR')}만원`;
+  return `${manWon.toLocaleString('ko-KR')}만원`;
+}
+function addYears(years){
+  const d = new Date();
+  const totalMonths = Math.round(years * 12);
+  d.setMonth(d.getMonth() + totalMonths);
+  return d;
+}
+function fmtDate(d){
+  return `${d.getFullYear()}년 ${d.getMonth()+1}월`;
+}
+function fmtYears(years){
+  if(!isFinite(years)) return '—';
+  if(years < 1) return `${Math.round(years*12)}개월`;
+  const y = Math.floor(years);
+  const m = Math.round((years - y) * 12);
+  if(m === 0) return `${y}년`;
+  return `${y}년 ${m}개월`;
+}
+
+function run(){
+  const assets = (parseFloat(document.getElementById('assets').value) || 0);
+  const spend = (parseFloat(document.getElementById('spend').value) || 0);
+  const save = (parseFloat(document.getElementById('save').value) || 0);
+  const rate = (parseFloat(document.getElementById('rate').value) || 0) / 100;
+  const age = parseInt(document.getElementById('age').value) || 0;
+
+  document.getElementById('rate-val').textContent = (rate*100).toFixed(1) + '%';
+
+  const target = spend * 12 * 25;  // 만원
+  const years = yearsToTarget(assets * MAN, save * MAN, target * MAN, rate);
+
+  // 저축률
+  const savingRate = (save + spend) > 0 ? Math.round(save / (save + spend) * 100) : 0;
+  document.getElementById('r-rate').textContent = savingRate;
+
+  // 목표 자산
+  document.getElementById('r-target').textContent = fmt(target);
+
+  // 진행률
+  const progress = target > 0 ? Math.min(assets / target * 100, 100) : 0;
+  document.getElementById('r-progress').textContent = progress.toFixed(1) + '%';
+  document.getElementById('r-progress-fill').style.width = progress.toFixed(1) + '%';
+
+  const neverMsg = document.getElementById('never-msg');
+
+  if(assets >= target){
+    document.getElementById('r-date').textContent = '지금 바로';
+    document.getElementById('r-age').textContent = age > 0 ? `· ${age}세` : '';
+    document.getElementById('r-sub').textContent = '🎉 이미 FIRE 목표를 달성하셨습니다!';
+    neverMsg.style.display = 'none';
+  }else if(!isFinite(years)){
+    document.getElementById('r-date').textContent = '달성 어려움';
+    document.getElementById('r-age').textContent = '';
+    document.getElementById('r-sub').textContent = '현재 저축·수익률로는 목표에 도달하지 못합니다';
+    neverMsg.style.display = 'block';
+  }else{
+    const d = addYears(years);
+    document.getElementById('r-date').textContent = fmtDate(d);
+    document.getElementById('r-age').textContent = age > 0 ? `· ${age + Math.floor(years)}세` : '';
+    document.getElementById('r-sub').textContent = `지금으로부터 ${fmtYears(years)} 후`;
+    neverMsg.style.display = 'none';
+  }
+
+  // 시나리오 (Lean 200 / Regular 350 / Fat 500)
+  const scenarios = [
+    { k:'lean', spend:200 },
+    { k:'reg',  spend:350 },
+    { k:'fat',  spend:500 },
+  ];
+  scenarios.forEach(s => {
+    const t = s.spend * 12 * 25;
+    const y = yearsToTarget(assets * MAN, save * MAN, t * MAN, rate);
+    const cell = document.querySelector(`.scn-card[data-scn="${s.k}"] .scn-val`);
+    if(assets >= t){
+      cell.textContent = '달성';
+    }else if(!isFinite(y)){
+      cell.textContent = '—';
+    }else{
+      cell.textContent = y < 1 ? `${Math.round(y*12)}개월` : Math.round(y);
+    }
+  });
+}
+
+// === 이벤트 바인딩 ===
+['assets','spend','save','age'].forEach(id => {
+  document.getElementById(id).addEventListener('input', run);
+});
+document.getElementById('rate').addEventListener('input', run);
+
+document.querySelectorAll('.chip[data-spend]').forEach(c => {
+  c.addEventListener('click', () => {
+    document.querySelectorAll('.chip[data-spend]').forEach(x => x.classList.remove('active'));
+    c.classList.add('active');
+    document.getElementById('spend').value = c.dataset.spend;
+    run();
+  });
+});
+
+// 지출액 직접 입력 시 칩 active 해제
+document.getElementById('spend').addEventListener('input', () => {
+  const v = document.getElementById('spend').value;
+  document.querySelectorAll('.chip[data-spend]').forEach(x => {
+    x.classList.toggle('active', x.dataset.spend === v);
+  });
+});
+
+run();
+</script>
+
+</body>
+</html>
