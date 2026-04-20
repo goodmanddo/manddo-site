@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK바이오팜 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>SK바이오팜 (326030) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스피 제약/바이오 | 52주 저점권 반등 — 세력 매집 완료 후 재상승 초입</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ SK바이오팜 = "3월 패닉 저점 → 세력 1,113만주 매집 완료 → V자 반등 진행형"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 52주 저점권(23.3%) — 상승 여력 77% 확보<br>② 3월 26일 거래량 1,113만주 = 세력 매집 완료 신호<br>③ 91,200원 = 세력 본전선 → 강력 지지<br>④ 엑스코프리 글로벌 확대 + 신약 파이프라인
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>MA60(105,706원) / MA120(115,063원) 역배열 저항. 고점(144,100원) 대비 -28% 하락. 제약 섹터 규제 리스크. 단기 과열 조정 가능성. 105,000~108,000원 돌파 실패 시 재조정.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">103,500<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -1.9%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">91,200~<br>144,100원</div><div class="ms">저점 대비 +13.5%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#1D9E75;font-size:15px">23.3%</div><div class="ms">저점권 — 매집 영역</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">현재가 103,500원은 52주 저점(91,200원) 대비 13.5% 반등. 피보나치 23.6% 되돌림 구간. 세력 매집 완료 후 재상승 초입 단계.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:23.3%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 103,500</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 91,200</span><span>중간 117,650</span><span>고점 144,100</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2025년 11월 144,100원 고점 이후 5개월 하락. 2026년 3월 23일 91,200원으로 52주 신저점 기록 후, 3월 26일 거래량 1,113만주(평상시 20~30만주) 폭발 = 세력 대량 매집 신호. 이후 V자 반등하여 현재 103,500원. MA20(98,650원) 돌파 성공, MA60(105,706원) 테스트 중. 세력은 91,200~95,000원 구간 본전선을 사수할 것이며, MA60 돌파 시 본격 상승 2파 출발.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">세력매집완료</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">저점권23.3%</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">V자반등</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">엑스코프리</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">MA60돌파대기</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "V자 반등 → 상승삼각형 초입 (MA60 돌파 시험 중)"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>3월 26일 거래량 1,113만주 = 세력 강력 매집.</b> 평상시 20~30만주 대비 50배 폭발. 세력은 91,200~95,000원 구간에서 본전을 쌓았고, 이 밑으로는 절대 내주지 않을 것. 이후 거래량 정상화 = 물량 정리 완료.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>MA20(98,650원) 돌파 성공 → MA60(105,706원) 문턱.</b> 현재가 103,500원은 피보나치 23.6% 되돌림(103,684원) 정확히 부합. MA60 돌파 실패 시 98,000~95,000원 재조정, 돌파 시 111,400원(피보나치 38.2%) 목표.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>엘리어트 1파 완성 → 2파 조정 or 직행 3파 분기점.</b> 3월 저점(91,200원)을 엘리어트 신규 사이클 起点으로 보면, 4월 15일 고점(105,700원)까지가 1파. 현재 소폭 조정 중. 2파는 보통 1파의 50~61.8% 되돌림이므로 98,000~95,000원까지 내려올 수 있으나, 세력 매집가 근처라 지지 강할 것.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>엑스코프리 글로벌 확대 기대 + 신약 소식 대기.</b> 단기 카탈리스트 없으면 박스권(95,000~108,000원) 횡보 가능. 호재 발생 시 MA60·MA120 연속 돌파하며 120,000원+ 재도전. 대응 전략: MA60 돌파 확인 후 추격 or 98,000원 조정 시 분할 매수.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">V자 반등 → 상승삼각형</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="120" width="140" height="90" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="110" y="132" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 급락 구간</text>
+    <rect x="180" y="140" width="80" height="70" rx="4" fill="#E1F5EE" opacity=".15"/>
+    <text x="220" y="152" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">② 세력매집</text>
+    <rect x="260" y="60" width="180" height="150" rx="4" fill="#EEF2FF" opacity=".12"/>
+    <text x="350" y="72" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="600">③ V자 반등</text>
+    <rect x="440" y="80" width="190" height="130" rx="4" fill="#FAEEDA" opacity=".1"/>
+    <text x="535" y="92" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">④ MA60 시험</text>
+    
+    <!-- 일봉 캔들 (3월~4월 주요 15개) -->
+    <line x1="55" y1="150" x2="55" y2="165" stroke="#E24B4A" stroke-width="1.8"/><rect x="50" y="155" width="10" height="8" fill="#E24B4A" rx=".5"/>
+    <line x1="75" y1="155" x2="75" y2="172" stroke="#E24B4A" stroke-width="1.8"/><rect x="70" y="160" width="10" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="95" y1="160" x2="95" y2="180" stroke="#E24B4A" stroke-width="1.8"/><rect x="90" y="165" width="10" height="12" fill="#E24B4A" rx=".5"/>
+    <line x1="115" y1="170" x2="115" y2="190" stroke="#E24B4A" stroke-width="1.8"/><rect x="110" y="178" width="10" height="10" fill="#E24B4A" rx=".5"/>
+    <line x1="135" y1="180" x2="135" y2="200" stroke="#E24B4A" stroke-width="1.8"/><rect x="130" y="186" width="10" height="12" fill="#E24B4A" rx=".5"/>
+    <line x1="155" y1="190" x2="155" y2="208" stroke="#E24B4A" stroke-width="1.8"/><rect x="150" y="196" width="10" height="10" fill="#E24B4A" rx=".5"/>
+    
+    <!-- 3/26 세력 매집일 (거래량 표시) -->
+    <line x1="200" y1="195" x2="200" y2="210" stroke="#1D9E75" stroke-width="3.5"/><rect x="193" y="202" width="14" height="6" fill="#1D9E75" rx="1"/>
+    <text x="200" y="195" text-anchor="middle" font-size="8" fill="#04342C" font-weight="700">3/26</text>
+    <text x="200" y="203" text-anchor="middle" font-size="7" fill="#04342C" font-weight="600">1113만주</text>
+    <rect x="195" y="213" width="10" height="28" fill="#04342C" opacity=".3"/>
+    
+    <!-- V자 반등 캔들 -->
+    <line x1="230" y1="185" x2="230" y2="205" stroke="#1D9E75" stroke-width="1.8"/><rect x="225" y="185" width="10" height="16" fill="#1D9E75" rx=".5"/>
+    <line x1="260" y1="170" x2="260" y2="190" stroke="#1D9E75" stroke-width="1.8"/><rect x="255" y="170" width="10" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="290" y1="155" x2="290" y2="175" stroke="#1D9E75" stroke-width="1.8"/><rect x="285" y="155" width="10" height="16" fill="#1D9E75" rx=".5"/>
+    <line x1="320" y1="145" x2="320" y2="165" stroke="#1D9E75" stroke-width="1.8"/><rect x="315" y="145" width="10" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="350" y1="135" x2="350" y2="155" stroke="#1D9E75" stroke-width="1.8"/><rect x="345" y="135" width="10" height="17" fill="#1D9E75" rx=".5"/>
+    <line x1="380" y1="125" x2="380" y2="145" stroke="#1D9E75" stroke-width="1.8"/><rect x="375" y="125" width="10" height="16" fill="#1D9E75" rx=".5"/>
+    <line x1="410" y1="118" x2="410" y2="138" stroke="#1D9E75" stroke-width="1.8"/><rect x="405" y="118" width="10" height="16" fill="#1D9E75" rx=".5"/>
+    
+    <!-- 4월 조정 캔들 -->
+    <line x1="450" y1="122" x2="450" y2="142" stroke="#E24B4A" stroke-width="1.8"/><rect x="445" y="128" width="10" height="12" fill="#E24B4A" rx=".5"/>
+    <line x1="480" y1="125" x2="480" y2="145" stroke="#1D9E75" stroke-width="1.8"/><rect x="475" y="125" width="10" height="15" fill="#1D9E75" rx=".5"/>
+    <line x1="510" y1="105" x2="510" y2="125" stroke="#1D9E75" stroke-width="1.8"/><rect x="505" y="105" width="10" height="17" fill="#1D9E75" rx=".5"/>
+    <line x1="540" y1="100" x2="540" y2="120" stroke="#1D9E75" stroke-width="1.8"/><rect x="535" y="100" width="10" height="16" fill="#1D9E75" rx=".5"/>
+    <line x1="570" y1="98" x2="570" y2="118" stroke="#1D9E75" stroke-width="1.8"/><rect x="565" y="98" width="10" height="17" fill="#1D9E75" rx=".5"/>
+    
+    <!-- 현재가 (4/20) -->
+    <line x1="600" y1="102" x2="600" y2="122" stroke="#26215C" stroke-width="2.2"/><rect x="594" y="106" width="12" height="14" fill="#26215C" rx=".5"/>
+    <circle cx="600" cy="113" r="4" fill="none" stroke="#26215C" stroke-width="1.5"/>
+    
+    <!-- 주요 가격선 -->
+    <line x1="40" y1="210" x2="640" y2="210" stroke="#A32D2D" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="42" y="207" font-size="8" fill="#A32D2D" font-weight="600">91,200 (52주저점)</text>
+    
+    <line x1="40" y1="140" x2="640" y2="140" stroke="#888" stroke-width=".8" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="42" y="137" font-size="8" fill="#888" font-weight="500">98,650 (MA20)</text>
+    
+    <line x1="40" y1="95" x2="640" y2="95" stroke="#0C447C" stroke-width="1.2" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="92" font-size="8" fill="#0C447C" font-weight="600">105,706 (MA60)</text>
+    
+    <line x1="40" y1="113" x2="640" y2="113" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="500" y="110" font-size="9" fill="#26215C" font-weight="700">▶ 현재 103,500</text>
+    
+    <!-- 피보나치 표시 -->
+    <line x1="580" y1="113" x2="620" y2="113" stroke="#633806" stroke-width="1" opacity=".4"/>
+    <text x="625" y="116" font-size="7" fill="#633806" font-weight="600">Fibo 23.6%</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 3월 패닉 저점 → 세력 1,113만주 매집 → V자 14% 반등 → MA60(105,706원) 돌파 시험 중</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "5개월 하락파(a-b-c) 완료 → 신규 상승 1파 출발"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2025년 11월 고점(144,100원)을 엘리어트 5파 정점으로 판단.</b> 이후 2026년 3월까지 a파(급락) → b파(반등 시도) → c파(최종 하락) 완료. 3월 넷째주 거래량 1,224만주 = c파 클라이맥스. 현재 신규 상승 사이클 1파 진행 중.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>주봉 MA20(20주선) = 현재 약 102,000원 근처.</b> 4월 셋째주 주봉이 MA20 근처에서 마감하며 지지 확인 중. MA60(60주선) = 약 115,000원, MA120(120주선) = 약 125,000원. 중기 목표는 MA60 돌파 → 120,000원 재진입.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 되돌림: 144,100 → 91,200 하락의 38.2% = 111,400원.</b> 현재 103,500원은 23.6% 되돌림. 1차 목표 111,400원 돌파 시 50% 되돌림(117,650원) → 61.8% 되돌림(123,900원) 순차 공략. 61.8% 돌파 = 추세 전환 확정.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>세력 매집 완료 후 시세 분출 초입.</b> 주봉 차트에서 3월 넷째주 긴 아래꼬리(91,200 → 100,300 마감) + 거래량 1,224만주 = 전형적인 세력 매집 시그널. 횡보 없이 급하게 올린 종목은 짧게 가지만, 이 종목은 5개월 조정 + 저점 대량 매집 = 길게 갈 구조.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">a-b-c 조정 완료 → 신규 ①파</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs>
+      <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1E3A5F"/></marker>
+    </defs>
+    
+    <!-- 배경 구간 -->
+    <rect x="40" y="30" width="220" height="140" rx="4" fill="#EAF3DE" opacity=".08"/>
+    <text x="150" y="42" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2025년 상승파 (①~⑤)</text>
+    
+    <rect x="260" y="50" width="200" height="120" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <text x="360" y="62" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">조정파 (a-b-c)</text>
+    
+    <rect x="460" y="70" width="170" height="100" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="545" y="82" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">신규 상승 ①파</text>
+    
+    <!-- 주봉 캔들 (2025년 하반기~2026년 4월) -->
+    <line x1="55" y1="110" x2="55" y2="125" stroke="#1D9E75" stroke-width="2.2"/><rect x="49" y="110" width="12" height="13" fill="#1D9E75" rx=".8"/>
+    <line x1="80" y1="95" x2="80" y2="112" stroke="#1D9E75" stroke-width="2.2"/><rect x="74" y="95" width="12" height="15" fill="#1D9E75" rx=".8"/>
+    <line x1="105" y1="80" x2="105" y2="98" stroke="#1D9E75" stroke-width="2.2"/><rect x="99" y="80" width="12" height="16" fill="#1D9E75" rx=".8"/>
+    <line x1="130" y1="65" x2="130" y2="82" stroke="#1D9E75" stroke-width="2.2"/><rect x="124" y="65" width="12" height="15" fill="#1D9E75" rx=".8"/>
+    <line x1="155" y1="50" x2="155" y2="67" stroke="#1D9E75" stroke-width="2.2"/><rect x="149" y="50" width="12" height="15" fill="#1D9E75" rx=".8"/>
+    <line x1="180" y1="45" x2="180" y2="62" stroke="#1D9E75" stroke-width="2.2"/><rect x="174" y="45" width="12" height="15" fill="#1D9E75" rx=".8"/>
+    
+    <!-- 2025년 11월 고점 (⑤파) -->
+    <line x1="205" y1="25" x2="205" y2="42" stroke="#1D9E75" stroke-width="2.5"/><rect x="198" y="25" width="14" height="16" fill="#1D9E75" rx=".8"/>
+    <circle cx="205" cy="33" r="10" fill="none" stroke="#26215C" stroke-width="1.3"/>
+    <text x="205" y="18" text-anchor="middle" font-size="10" fill="#26215C" font-weight="700">⑤ 144,100</text>
+    
+    <!-- a파 하락 -->
+    <line x1="230" y1="40" x2="230" y2="65" stroke="#E24B4A" stroke-width="2.2"/><rect x="224" y="50" width="12" height="13" fill="#E24B4A" rx=".8"/>
+    <line x1="255" y1="60" x2="255" y2="85" stroke="#E24B4A" stroke-width="2.2"/><rect x="249" y="70" width="12" height="13" fill="#E24B4A" rx=".8"/>
+    <text x="242" y="58" font-size="8" fill="#A32D2D" font-weight="600">a파</text>
+    
+    <!-- b파 반등 -->
+    <line x1="280" y1="75" x2="280" y2="90" stroke="#1D9E75" stroke-width="2"/><rect x="274" y="75" width="12" height="13" fill="#1D9E75" rx=".8"/>
+    <line x1="305" y1="70" x2="305" y2="85" stroke="#1D9E75" stroke-width="2"/><rect x="299" y="70" width="12" height="13" fill="#1D9E75" rx=".8"/>
+    <text x="292" y="68" font-size="8" fill="#633806" font-weight="600">b파</text>
+    
+    <!-- c파 최종 하락 -->
+    <line x1="330" y1="85" x2="330" y2="110" stroke="#E24B4A" stroke-width="2.2"/><rect x="324" y="95" width="12" height="13" fill="#E24B4A" rx=".8"/>
+    <line x1="355" y1="100" x2="355" y2="125" stroke="#E24B4A" stroke-width="2.2"/><rect x="349" y="110" width="12" height="13" fill="#E24B4A" rx=".8"/>
+    <line x1="380" y1="115" x2="380" y2="140" stroke="#E24B4A" stroke-width="2.2"/><rect x="374" y="125" width="12" height="13" fill="#E24B4A" rx=".8"/>
+    <line x1="405" y1="125" x2="405" y2="155" stroke="#E24B4A" stroke-width="2.2"/><rect x="399" y="135" width="12" height="18" fill="#E24B4A" rx=".8"/>
+    <text x="392" y="118" font-size="8" fill="#A32D2D" font-weight="600">c파</text>
+    
+    <!-- 3월 넷째주 세력 매집 주봉 -->
+    <line x1="430" y1="135" x2="430" y2="170" stroke="#1D9E75" stroke-width="3.5"/><rect x="422" y="145" width="16" height="20" fill="#1D9E75" rx=".8"/>
+    <text x="430" y="132" text-anchor="middle" font-size="8" fill="#04342C" font-weight="700">세력매집</text>
+    <text x="430" y="141" text-anchor="middle" font-size="7" fill="#04342C" font-weight="600">1224만주</text>
+    <rect x="425" y="172" width="10" height="18" fill="#04342C" opacity=".25"/>
+    <circle cx="430" cy="160" r="7" fill="none" stroke="#04342C" stroke-width="1.2"/>
+    
+    <!-- 신규 상승 1파 -->
+    <line x1="470" y1="130" x2="470" y2="150" stroke="#1D9E75" stroke-width="2.2"/><rect x="464" y="130" width="12" height="18" fill="#1D9E75" rx=".8"/>
+    <line x1="500" y1="120" x2="500" y2="140" stroke="#1D9E75" stroke-width="2.2"/><rect x="494" y="120" width="12" height="18" fill="#1D9E75" rx=".8"/>
+    <line x1="530" y1="105" x2="530" y2="125" stroke="#1D9E75" stroke-width="2.2"/><rect x="524" y="105" width="12" height="18" fill="#1D9E75" rx=".8"/>
+    <line x1="560" y1="95" x2="560" y2="115" stroke="#1D9E75" stroke-width="2.2"/><rect x="554" y="95" width="12" height="18" fill="#1D9E75" rx=".8"/>
+    
+    <!-- 현재 (4월 셋째주) -->
+    <line x1="590" y1="100" x2="590" y2="120" stroke="#26215C" stroke-width="2.5"/><rect x="583" y="105" width="14" height="13" fill="#26215C" rx=".8"/>
+    <text x="590" y="95" text-anchor="middle" font-size="9" fill="#26215C" font-weight="700">① 현재</text>
+    
+    <!-- 주요 가격선 -->
+    <line x1="40" y1="108" x2="640" y2="108" stroke="#26215C" stroke-width="1" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="540" y="105" font-size="8" fill="#26215C" font-weight="600">103,500 (현재)</text>
+    
+    <line x1="40" y1="85" x2="640" y2="85" stroke="#0C447C" stroke-width=".9" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="42" y="82" font-size="8" fill="#0C447C" font-weight="500">115,063 (MA120)</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025.11 고점(⑤파) → a-b-c 조정 완료 → 3월 세력 대량 매집 → 신규 상승 ①파 출발 (목표 111,400→120,000원)</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2년 사이클 조정 바닥 확인 → 장기 턴어라운드 초입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2024년 8월 72,600원 → 2025년 11월 144,100원 (+98%) 상승 사이클.</b> 이후 2026년 3월까지 5개월 -35% 조정. 월봉상 2024년 8월 저점(72,600원)과 2026년 3월 저점(91,200원)을 연결한 상승 추세선은 여전히 유효. 현재는 상승 추세 내 2차 저점 매수 기회.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>제약/바이오 섹터 사이클: 2024년 하반기 바닥 → 2025년 상승 → 2026년 초 조정 → 2026년 중반 재상승 예상.</b> 글로벌 신약 승인 사이클과 연동. 엑스코프리 FDA 승인(2022) 이후 매출 확대 기대감이 주가 장기 상승 동력. 2026년 하반기 추가 적응증 승인 기대.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>월봉 이평선: 현재가 < MA20 < MA60 < MA120 역배열.</b> MA20(20개월선) = 약 118,000원, MA60 = 약 108,000원. 역배열 구조이나, 2024년 8월 이후 상승 추세가 깨지지 않았으므로 중기 조정으로 판단. MA20 돌파(118,000원) 시 장기 상승 재개 확정.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 목표: 2027년까지 200,000원 도전 가능.</b> 엑스코프리 글로벌 매출 확대 + 신약 파이프라인(cenobamate 추가 적응증, 새로운 뇌전증 신약) 성공 시 시총 2배 가능. 단, 신약 개발 실패 / 경쟁 심화 / 규제 리스크는 상시 모니터링 필요.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">2년 사이클 저점 확인</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <!-- 배경 구간 -->
+    <rect x="40" y="140" width="150" height="50" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="115" y="152" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">2024 바닥 구간</text>
+    
+    <rect x="190" y="40" width="200" height="150" rx="4" fill="#EAF3DE" opacity=".08"/>
+    <text x="290" y="52" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2025 상승 사이클</text>
+    
+    <rect x="390" y="100" width="130" height="90" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <text x="455" y="112" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">2026 조정</text>
+    
+    <rect x="520" y="90" width="110" height="100" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="575" y="102" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">재상승</text>
+    
+    <!-- 월봉 캔들 (2024년~2026년) -->
+    <line x1="55" y1="150" x2="55" y2="172" stroke="#E24B4A" stroke-width="2.5"/><rect x="48" y="158" width="14" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="80" y1="155" x2="80" y2="178" stroke="#E24B4A" stroke-width="2.5"/><rect x="73" y="163" width="14" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="105" y1="160" x2="105" y2="183" stroke="#E24B4A" stroke-width="2.5"/><rect x="98" y="168" width="14" height="13" fill="#E24B4A" rx="1"/>
+    
+    <!-- 2024년 8월 저점 72,600원 -->
+    <line x1="130" y1="165" x2="130" y2="190" stroke="#E24B4A" stroke-width="3"/><rect x="122" y="175" width="16" height="13" fill="#E24B4A" rx="1"/>
+    <circle cx="130" cy="182" r="11" fill="none" stroke="#A32D2D" stroke-width="1.4"/>
+    <text x="130" y="175" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">저점</text>
+    <text x="130" y="168" text-anchor="middle" font-size="7" fill="#A32D2D" font-weight="600">72,600</text>
+    
+    <!-- 2024년 하반기~2025년 상승 -->
+    <line x1="155" y1="155" x2="155" y2="175" stroke="#1D9E75" stroke-width="2.5"/><rect x="148" y="155" width="14" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="180" y1="135" x2="180" y2="158" stroke="#1D9E75" stroke-width="2.5"/><rect x="173" y="135" width="14" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="205" y1="115" x2="205" y2="138" stroke="#1D9E75" stroke-width="2.5"/><rect x="198" y="115" width="14" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="230" y1="95" x2="230" y2="118" stroke="#1D9E75" stroke-width="2.5"/><rect x="223" y="95" width="14" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="255" y1="75" x2="255" y2="98" stroke="#1D9E75" stroke-width="2.5"/><rect x="248" y="75" width="14" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="280" y1="60" x2="280" y2="83" stroke="#1D9E75" stroke-width="2.5"/><rect x="273" y="60" width="14" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="305" y1="50" x2="305" y2="73" stroke="#1D9E75" stroke-width="2.5"/><rect x="298" y="50" width="14" height="21" fill="#1D9E75" rx="1"/>
+    
+    <!-- 2025년 11월 고점 144,100원 -->
+    <line x1="330" y1="25" x2="330" y2="48" stroke="#1D9E75" stroke-width="3.2"/><rect x="322" y="25" width="16" height="22" fill="#1D9E75" rx="1"/>
+    <circle cx="330" cy="36" r="12" fill="none" stroke="#27500A" stroke-width="1.5"/>
+    <text x="330" y="20" text-anchor="middle" font-size="9" fill="#27500A" font-weight="700">고점 144,100</text>
+    
+    <!-- 2026년 조정 -->
+    <line x1="360" y1="48" x2="360" y2="75" stroke="#E24B4A" stroke-width="2.5"/><rect x="353" y="58" width="14" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="390" y1="70" x2="390" y2="98" stroke="#E24B4A" stroke-width="2.5"/><rect x="383" y="80" width="14" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="420" y1="95" x2="420" y2="125" stroke="#E24B4A" stroke-width="2.5"/><rect x="413" y="105" width="14" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="450" y1="115" x2="450" y2="148" stroke="#E24B4A" stroke-width="2.5"/><rect x="443" y="125" width="14" height="21" fill="#E24B4A" rx="1"/>
+    
+    <!-- 2026년 3월 저점 91,200원 -->
+    <line x1="480" y1="130" x2="480" y2="165" stroke="#E24B4A" stroke-width="3"/><rect x="472" y="145" width="16" height="18" fill="#E24B4A" rx="1"/>
+    <circle cx="480" cy="154" r="10" fill="none" stroke="#A32D2D" stroke-width="1.3"/>
+    <text x="480" y="148" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">2차 저점</text>
+    <text x="480" y="141" text-anchor="middle" font-size="7" fill="#A32D2D" font-weight="600">91,200</text>
+    
+    <!-- 2026년 4월 반등 -->
+    <line x1="520" y1="135" x2="520" y2="158" stroke="#1D9E75" stroke-width="2.5"/><rect x="513" y="135" width="14" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="555" y1="120" x2="555" y2="143" stroke="#1D9E75" stroke-width="2.5"/><rect x="548" y="120" width="14" height="21" fill="#1D9E75" rx="1"/>
+    
+    <!-- 현재 (2026년 4월) -->
+    <line x1="590" y1="118" x2="590" y2="141" stroke="#26215C" stroke-width="3"/><rect x="582" y="123" width="16" height="16" fill="#26215C" rx="1"/>
+    <text x="590" y="113" text-anchor="middle" font-size="9" fill="#26215C" font-weight="700">현재 103,500</text>
+    
+    <!-- 추세선 -->
+    <line x1="130" y1="182" x2="480" y2="154" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 3" opacity=".5"/>
+    <text x="305" y="165" font-size="8" fill="#27500A" font-weight="600">상승 추세선 (유효)</text>
+    
+    <!-- 목표가 -->
+    <line x1="40" y1="90" x2="640" y2="90" stroke="#0C447C" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+    <text x="590" y="87" text-anchor="end" font-size="8" fill="#0C447C" font-weight="600">목표 120,000</text>
+    
+    <line x1="40" y1="50" x2="640" y2="50" stroke="#633806" stroke-width="1" stroke-dasharray="4 3" opacity=".35"/>
+    <text x="590" y="47" text-anchor="end" font-size="8" fill="#633806" font-weight="500">장기 목표 150,000+</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024.8 바닥(72,600) → 2025.11 고점(144,100) → 2026.3 조정 저점(91,200) → 장기 상승 추세 유효, 재상승 초입</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">Zone ① 매집 완료 → 분산 준비 단계</span><span class="tag t-g">세력 본진</span><div style="color:#888;margin-top:2px;font-size:11px">3월 26일 거래량 1,113만주(평상시 대비 50배) = 세력이 91,200~95,000원 구간에서 대량 매집 완료. 이후 거래량 정상화(10~20만주) = 물량 정리 완료. 세력 입장에서 본전은 91,200~95,000원이며, 이 밑으로는 절대 내주지 않을 것. 현재 103,500원은 본전 대비 +9~13% 구간으로, 아직 본격 분산 전. 세력은 120,000~130,000원 이상에서 분산 시작 예상. 외국인·기관 수급은 3월 이후 순매수 전환 확인 필요 (데이터 미제공 시 일봉 거래량 패턴으로 추정).</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">Zone ② 엑스코프리 글로벌 확대 = 구조적 성장 동력</span><span class="tag t-navy">실적 모멘텀</span><div style="color:#888;margin-top:2px;font-size:11px">엑스코프리(cenobamate)는 FDA 승인(2022) 이후 미국 시장 점유율 확대 중. 2025년 연간 매출 약 1,500억원 추정, 2026년 2,000억원 돌파 기대. 유럽·아시아 진출 본격화 시 2027년 이후 연 3,000억원+ 가능. 제약/바이오 업종 특성상 신약 하나의 성공이 기업 가치를 2~3배 끌어올림. 경쟁사(UCB, Eisai 등) 대비 efficacy·safety 우위 확보. 단, 글로벌 제약사의 경쟁 신약 출시 / 특허 만료 리스크는 상시 체크.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">Zone ③ 기술적 관점: 피보나치 23.6% 돌파 → 38.2% 도전</span><span class="tag t-a">차트 구조</span><div style="color:#888;margin-top:2px;font-size:11px">144,100 → 91,200 하락의 피보나치 되돌림: 23.6% = 103,684원(현재 위치), 38.2% = 111,408원, 50% = 117,650원, 61.8% = 123,892원. 현재 23.6% 돌파 성공 시 38.2%(111,400원) 목표. 38.2% 돌파 = 추세 전환 강력 시그널. 50% 돌파 시 중기 상승 확정, 61.8% 돌파 시 장기 강세 재개. 엘리어트 파동: 현재 신규 사이클 1파 완성 후 2파 조정 or 직행 3파 분기점. 3파 진입 시 목표가 120,000~130,000원.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">Zone ④ 핵심 리스크 3가지</span><span class="tag t-r">경계 구간</span><div style="color:#888;margin-top:2px;font-size:11px">① MA60(105,706원) / MA120(115,063원) 역배열 저항 — 돌파 실패 시 98,000~95,000원 재조정. ② 제약 섹터 규제 리스크 — FDA/EMA 정책 변화, 약가 인하 압력. ③ 신약 파이프라인 실패 — 임상 3상 실패 / 경쟁 신약 우위 확보 시 주가 급락 가능. ④ 단기 과열 — 3월 저점 대비 2주 만에 14% 반등 = RSI 과매수 진입 가능. 105,000~108,000원 돌파 실패 시 단기 조정 불가피.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>✅ 3월 세력 매집 1,113만주 완료 (평상시 50배)</span><span class="tag t-g">매집 확정</span></div>
+  <div class="row"><span>✅ 52주 저점권 23.3% — 상승 여력 77% 확보</span><span class="tag t-g">저점 기회</span></div>
+  <div class="row"><span>✅ 엑스코프리 글로벌 매출 확대 (2026년 2,000억 목표)</span><span class="tag t-navy">실적 모멘텀</span></div>
+  <div class="row"><span>✅ 신약 파이프라인 (cenobamate 추가 적응증 기대)</span><span class="tag t-b">파이프라인</span></div>
+  <div class="row"><span>✅ V자 반등 패턴 — MA20 돌파 성공</span><span class="tag t-teal">기술적 강세</span></div>
+  <div class="row"><span>📅 2026년 하반기 엑스코프리 추가 적응증 승인 기대</span><span class="tag t-navy">카탈리스트</span></div>
+  <div class="row"><span>⚠ MA60(105,706원) 돌파 실패 시 재조정 리스크</span><span class="tag t-a">저항선</span></div>
+  <div class="row"><span>⚠ MA120(115,063원) 역배열 — 중기 저항</span><span class="tag t-a">기술적 부담</span></div>
+  <div class="row"><span>🚨 제약 섹터 규제 리스크 (약가 인하 압력)</span><span class="tag t-r">정책 리스크</span></div>
+  <div class="row"><span>🚨 신약 임상 실패 / 경쟁 신약 출시 리스크</span><span class="tag t-r">사업 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:72%;background:linear-gradient(90deg,#1D9E75,#27500A)"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 72% — <b style="color:#27500A">적극 매수</b></div>
+    <div style="font-size:11px;color:#5f5e5a">세력 매집 완료 후 시세 분출 초입. MA60(105,706원) 돌파 시 111,400원(피보나치 38.2%) → 120,000원 목표. 단, 105,000~108,000원 돌파 실패 시 98,000원까지 조정 가능. 분할 매수 전략: ① 현재가 근처 30%, ② 98,000원 조정 시 40%, ③ 95,000원 이하 30%.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:linear-gradient(90deg,#1D9E75,#27500A)"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78% — <b style="color:#27500A">강력 매수</b></div>
+    <div style="font-size:11px;color:#5f5e5a">엑스코프리 글로벌 확대 + 신약 파이프라인 성공 시 2027년까지 150,000~200,000원 목표. 2024년 8월 저점(72,600원) 이후 장기 상승 추세 유효. 91,200원 = 세력 본전선 = 장기 강력 지지선. 중장기 목표가: ① 1차 120,000원(MA120), ② 2차 144,100원(고점 재도전), ③ 3차 180,000원(신고가).</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "세력 본전선(91,200~95,000원) 사수 구간 = 분할 매수 최적기"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">95,000~<br>98,000원</div><div>MA20 지지<br>Fibo 23.6% 이하<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심 매수</div><div class="sp">91,200~<br>94,000원</div><div>세력 본전선<br>52주 저점<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">120,000~<br>130,000원</div><div>MA120 돌파<br>Fibo 50~61.8%<br>+16~26%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">88,000원</div><div>52주 저점<br>3% 이탈</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 SK바이오팜 핵심 4포인트:</b><br>
+    ① <b>3월 26일 거래량 1,113만주 = 세력 매집 완료 확정 신호</b><br>
+    ② <b>52주 저점권(23.3%) = 상승 여력 77% 확보, 리스크 대비 보상 우수</b><br>
+    ③ <b>엑스코프리 글로벌 확대 = 2026년 매출 2,000억원 돌파 기대</b><br>
+    ④ <b>91,200원 = 세력 본전선 = 장기 강력 지지선 (재진입 최적 구간)</b></div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> MA60(105,706원) / MA120(115,063원) 역배열 저항. 돌파 실패 시 98,000~95,000원 재조정. 제약 섹터 규제 리스크(약가 인하). 신약 파이프라인 실패 / 경쟁 신약 우위 확보 시 주가 급락 가능. 단기 RSI 과매수 진입 시 조정 불가피. 손절선(88,000원) 엄수 필수.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>

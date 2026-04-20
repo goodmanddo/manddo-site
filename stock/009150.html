@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>삼성전기 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>삼성전기 (009150) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSPI 전자부품 | 1년 만에 487% 폭발 상승, 엘리어트 5파 막바지 진입</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 삼성전기 = "AI·반도체 슈퍼사이클 수혜주, 세력 매집→분출 완료, 현재 5파 고점권"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① MLCC·FC-BGA 기판 1위 — AI 서버 핵심 부품<br>② 52주 바닥(207k) 대비 232% 급등 — 세력 장기 매집 후 분출<br>③ 이평선 완벽 정배열 — MA20·60·120 모두 상승 지지<br>④ 거래량 동반 돌파 — 2월·4월 두 차례 급등으로 모멘텀 확인
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>52주 위치 98% 고점권 — 조정 위험 매우 높음. 4월만 51% 급등으로 단기 과열. 엘리어트 5파 연장 막바지로 추정. 추격매수 절대 금지, 조정 시 분할 대응 전략 필수.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">688,000<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 +1.33%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">207,000~<br>698,000원</div><div class="ms">저점 대비 +232%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">98.0%</div><div class="ms">극단적 고점권</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">현재가는 52주 최고가 근처로, 세력 분산 또는 5파 마지막 연장 구간. 추격매수 경계 필수.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:98%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 688,000</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 207k</span><span>중간 452k</span><span>고점 698k</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2025년 5월 117,000원 바닥 형성 후 세력이 10~12월 박스권(200k~280k)에서 장기 매집. 2026년 2월 1차 급등(474k), 3월 조정(350k), 4월 재진입 후 신고가(698k) 경신. 이평선 완벽 정배열이나 98% 고점권은 과열 신호. 조정 시 MA20(511k) 또는 피보나치 38.2%(500k) 구간이 핵심 재매수 존.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">신고가 경신</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">정배열 완성</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">AI 수혜주</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">엘리어트 5파</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">98% 고점권</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "4월 초 박스권 돌파 → 급등 → 698k 신고가, 단기 과열 구간"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>거래량 = 돈.</b> 4월 8~17일 거래량 급증(50~100만주)으로 세력 재진입 확인. 480k 박스 상단을 거래량 동반 돌파 → 유효 돌파 신호. 현재 38만주는 감소 중 = 단기 피로도 누적.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>이평선 정배열 완성.</b> MA20(511k) > MA60(412k) > MA120(352k). 20일선이 강한 단기 지지선. 조정 시 511k~520k가 1차 방어선, 이탈 시 MA60(412k)까지 조정 가능.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 되돌림.</b> 52주 범위(207k~698k) 기준 23.6% 되돌림 = 572k, 38.2% = 500k(MA20 근처), 50% = 442k. 현재 698k는 100% 지점으로 조정 시 500k~572k 구간이 핵심 매수 존.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈리스트.</b> AI 서버향 MLCC·기판 수요 급증, 삼성전자 실적 호조 연동. 다만 4월만 51% 급등은 "급하게 올린 종목 = 짧게 간다" 법칙 적용 → 조정 임박, 추격매수 금지.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">박스권 돌파 → 급등 → 고점권</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="90" width="180" height="120" rx="4" fill="#FAEEDA" opacity=".2"/>
+    <text x="130" y="102" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">① 3월 박스권 매집 (400~480k)</text>
+    <rect x="220" y="30" width="200" height="180" rx="4" fill="#FCEBEB" opacity=".2"/>
+    <text x="320" y="42" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">② 4월 급등 구간 (거래량 동반)</text>
+    <rect x="420" y="10" width="210" height="200" rx="4" fill="#EAF3DE" opacity=".15"/>
+    <text x="525" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">③ 신고가 698k — 98% 고점</text>
+    
+    <line x1="60" y1="150" x2="60" y2="165" stroke="#888" stroke-width="1.5"/><rect x="56" y="152" width="8" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="80" y1="145" x2="80" y2="160" stroke="#888" stroke-width="1.5"/><rect x="76" y="147" width="8" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="100" y1="140" x2="100" y2="170" stroke="#888" stroke-width="1.5"/><rect x="96" y="155" width="8" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="120" y1="135" x2="120" y2="155" stroke="#888" stroke-width="1.5"/><rect x="116" y="137" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="140" y1="130" x2="140" y2="150" stroke="#888" stroke-width="1.5"/><rect x="136" y="132" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="160" y1="125" x2="160" y2="145" stroke="#888" stroke-width="1.5"/><rect x="156" y="127" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="180" y1="120" x2="180" y2="140" stroke="#888" stroke-width="1.5"/><rect x="176" y="122" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="200" y1="118" x2="200" y2="138" stroke="#888" stroke-width="1.5"/><rect x="196" y="120" width="8" height="16" fill="#1D9E75" rx="1"/>
+    
+    <line x1="240" y1="110" x2="240" y2="130" stroke="#888" stroke-width="1.5"/><rect x="236" y="112" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <text x="240" y="105" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">514k</text>
+    <line x1="270" y1="95" x2="270" y2="115" stroke="#888" stroke-width="1.5"/><rect x="266" y="97" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <text x="270" y="90" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">565k↑</text>
+    <line x1="300" y1="85" x2="300" y2="105" stroke="#888" stroke-width="1.5"/><rect x="296" y="87" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="330" y1="75" x2="330" y2="95" stroke="#888" stroke-width="1.5"/><rect x="326" y="77" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <text x="330" y="70" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">584k</text>
+    <line x1="360" y1="65" x2="360" y2="85" stroke="#888" stroke-width="1.5"/><rect x="356" y="67" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <text x="360" y="60" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">614k</text>
+    <line x1="390" y1="55" x2="390" y2="75" stroke="#888" stroke-width="1.5"/><rect x="386" y="57" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <text x="390" y="50" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">639k</text>
+    <line x1="420" y1="40" x2="420" y2="60" stroke="#888" stroke-width="1.5"/><rect x="416" y="42" width="8" height="16" fill="#1D9E75" rx="1"/>
+    <text x="420" y="35" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="600">679k 신고가</text>
+    
+    <line x1="470" y1="30" x2="470" y2="50" stroke="#888" stroke-width="2"/><rect x="465" y="32" width="10" height="16" fill="#1D9E75" rx="1"/>
+    <text x="470" y="25" text-anchor="middle" font-size="9" fill="#26215C" font-weight="700">698k</text>
+    <circle cx="470" cy="25" r="14" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="2 2"/>
+    
+    <line x1="40" y1="130" x2="640" y2="130" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+    <text x="42" y="127" font-size="8" fill="#1E3A5F" font-weight="600">MA20: 511k</text>
+    <line x1="40" y1="165" x2="640" y2="165" stroke="#0C447C" stroke-width="1" stroke-dasharray="4 3" opacity=".3"/>
+    <text x="42" y="162" font-size="8" fill="#0C447C">MA60: 412k</text>
+    
+    <line x1="40" y1="42" x2="640" y2="42" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="550" y="39" font-size="9" fill="#26215C" font-weight="600">현재 688k (98% 고점권)</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 3월 박스권 매집 → 4월 거래량 동반 급등 → 698k 신고가 경신, 단기 과열 구간 진입</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 5파 연장 진행 중, 2025년 5월 바닥 대비 487% 폭발 상승"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>장기 매집 → 시세 분출 완료.</b> 2025년 10~12월 200k~280k 박스권 = 세력 매집 구간. 거래량 150~250만주 유지로 "횡보 = 매집"의 전형. 2026년 2월 돌파 후 시세 분출 = 세력의 매집 원가는 220k~260k 추정.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>엘리어트 5파 라벨링.</b> ① 1파(117k→197k) → ② 2파 조정(213k) → ③ 3파(213k→474k, 가장 강력) → ④ 4파 조정(350k) → ⑤ 5파(688k, 현재). 5파는 3파보다 짧을 수 있으나 연장 중. 막바지 추정.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>주봉 이평선 정배열.</b> 20주선(약 480k) > 60주선(약 320k) > 120주선(약 240k). 모든 주봉 이평선 위에 위치 = 장기 상승 추세 확인. 조정 시 20주선(480k)이 핵심 지지.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 목표.</b> 5파 연장 가정 시 750k~800k 가능. 단, 5파 실패 시 3파 고점(474k)까지 a-b-c 조정 가능 → 조정 시 400k~480k 구간이 재매수 존.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 5파 연장 중 — 바닥 대비 487% 상승</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs>
+      <marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 Z" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="150" width="100" height="35" rx="3" fill="#E1F5EE" opacity=".3"/>
+    <text x="90" y="160" text-anchor="middle" font-size="8" fill="#04342C" font-weight="600">2025.5월 바닥 117k</text>
+    <rect x="150" y="110" width="150" height="75" rx="3" fill="#FAEEDA" opacity=".25"/>
+    <text x="225" y="120" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">매집 구간 (10~12월) 200~280k</text>
+    <rect x="310" y="50" width="120" height="135" rx="3" fill="#FCEBEB" opacity=".2"/>
+    <text x="370" y="60" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">3파 급등 (2월) 474k</text>
+    <rect x="440" y="20" width="190" height="165" rx="3" fill="#EAF3DE" opacity=".15"/>
+    <text x="535" y="30" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">5파 (4월) 688k 신고가</text>
+    
+    <line x1="60" y1="175" x2="60" y2="180" stroke="#888" stroke-width="1"/><rect x="57" y="176" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <text x="60" y="188" text-anchor="middle" font-size="7" fill="#04342C" font-weight="600">① 1파</text>
+    <line x1="90" y1="165" x2="90" y2="170" stroke="#888" stroke-width="1"/><rect x="87" y="166" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="120" y1="155" x2="120" y2="160" stroke="#888" stroke-width="1"/><rect x="117" y="156" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="150" y1="145" x2="150" y2="150" stroke="#888" stroke-width="1"/><rect x="147" y="146" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="180" y1="155" x2="180" y2="160" stroke="#888" stroke-width="1"/><rect x="177" y="156" width="6" height="4" fill="#E24B4A" rx=".5"/>
+    <text x="180" y="168" text-anchor="middle" font-size="7" fill="#A32D2D">② 2파</text>
+    <line x1="210" y1="145" x2="210" y2="150" stroke="#888" stroke-width="1"/><rect x="207" y="146" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="240" y1="135" x2="240" y2="140" stroke="#888" stroke-width="1"/><rect x="237" y="136" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="270" y1="125" x2="270" y2="130" stroke="#888" stroke-width="1"/><rect x="267" y="126" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="300" y1="115" x2="300" y2="120" stroke="#888" stroke-width="1"/><rect x="297" y="116" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    
+    <line x1="330" y1="65" x2="330" y2="70" stroke="#888" stroke-width="1.2"/><rect x="326.5" y="66" width="7" height="3" fill="#1D9E75" rx=".5"/>
+    <text x="330" y="60" text-anchor="middle" font-size="8" fill="#E24B4A" font-weight="600">③ 3파 474k</text>
+    <circle cx="330" cy="60" r="12" fill="none" stroke="#1D9E75" stroke-width="1.2"/>
+    
+    <line x1="360" y1="95" x2="360" y2="100" stroke="#888" stroke-width="1"/><rect x="357" y="96" width="6" height="4" fill="#E24B4A" rx=".5"/>
+    <line x1="390" y1="105" x2="390" y2="110" stroke="#888" stroke-width="1"/><rect x="387" y="106" width="6" height="4" fill="#E24B4A" rx=".5"/>
+    <text x="390" y="118" text-anchor="middle" font-size="7" fill="#A32D2D">④ 4파 조정</text>
+    
+    <line x1="420" y1="95" x2="420" y2="100" stroke="#888" stroke-width="1"/><rect x="417" y="96" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="450" y1="80" x2="450" y2="85" stroke="#888" stroke-width="1"/><rect x="447" y="81" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="480" y1="65" x2="480" y2="70" stroke="#888" stroke-width="1"/><rect x="477" y="66" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="510" y1="50" x2="510" y2="55" stroke="#888" stroke-width="1"/><rect x="507" y="51" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="540" y1="40" x2="540" y2="45" stroke="#888" stroke-width="1"/><rect x="537" y="41" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="570" y1="28" x2="570" y2="33" stroke="#888" stroke-width="1.2"/><rect x="566.5" y="29" width="7" height="3" fill="#1D9E75" rx=".5"/>
+    <text x="570" y="23" text-anchor="middle" font-size="8" fill="#26215C" font-weight="700">⑤ 5파 688k</text>
+    <circle cx="570" cy="23" r="13" fill="none" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="2 2"/>
+    
+    <path d="M 60,177 Q 180,155 300,118 Q 420,95 570,30" fill="none" stroke="#1E3A5F" stroke-width="1.2" opacity=".5" stroke-dasharray="3 2"/>
+    
+    <line x1="40" y1="105" x2="640" y2="105" stroke="#633806" stroke-width="1" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="42" y="102" font-size="7" fill="#633806">20주선 (약 480k)</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025년 5월 바닥 → 10~12월 매집 → 2026년 2월 3파 급등 → 4월 5파 신고가 (엘리어트 5파 연장 막바지)</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2025년 5월 역사적 바닥 형성 후 AI 슈퍼사이클 편승, 장기 상승 추세 확립"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>장기 저점 확인.</b> 2025년 4~5월 105,500~117,700원 = 역사적 바닥. 2024년 반도체 경기 침체 종료 신호. 이후 V자 반등 = 세력이 바닥에서 매집 시작한 증거.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>구조적 턴어라운드.</b> AI 서버 붐(2025년 하반기~), 삼성전자 HBM3E·DDR5 양산 본격화 → MLCC·FC-BGA 수요 폭증. 삼성전기는 이 사이클의 최대 수혜주.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>월봉 상승 속도.</b> 2025년 5월 117k → 2025년 10월 245k (5개월 +109%) → 2026년 2월 448k (3개월 +83%) → 2026년 4월 688k (2개월 +54%). 점차 가속화 = 상승 마지막 단계 신호.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망.</b> 월봉 기준 750k~850k 목표 가능하나, 상승 속도가 급격하여 조정 불가피. 조정 시 월봉 20선(약 400k) 또는 2월 고점(448k)이 핵심 지지선. 장기 투자자는 조정 시 분할 매수 전략.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">역사적 바닥 → AI 슈퍼사이클 편승 상승</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="150" width="200" height="40" rx="3" fill="#FCEBEB" opacity=".2"/>
+    <text x="140" y="160" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">2024~2025.4월 침체기 (130~160k)</text>
+    <rect x="250" y="140" width="80" height="50" rx="3" fill="#E1F5EE" opacity=".3"/>
+    <text x="290" y="150" text-anchor="middle" font-size="8" fill="#04342C" font-weight="600">바닥 105k</text>
+    <rect x="340" y="100" width="130" height="90" rx="3" fill="#FAEEDA" opacity=".25"/>
+    <text x="405" y="110" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">회복기 (200~280k)</text>
+    <rect x="480" y="30" width="150" height="160" rx="3" fill="#EAF3DE" opacity=".15"/>
+    <text x="555" y="40" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">2026 폭발 상승 (448→688k)</text>
+    
+    <line x1="60" y1="165" x2="60" y2="170" stroke="#888" stroke-width="1"/><rect x="57" y="166" width="6" height="3" fill="#888" rx=".5"/>
+    <line x1="90" y1="163" x2="90" y2="168" stroke="#888" stroke-width="1"/><rect x="87" y="164" width="6" height="3" fill="#888" rx=".5"/>
+    <line x1="120" y1="160" x2="120" y2="165" stroke="#888" stroke-width="1"/><rect x="117" y="161" width="6" height="3" fill="#888" rx=".5"/>
+    <line x1="150" y1="162" x2="150" y2="167" stroke="#888" stroke-width="1"/><rect x="147" y="163" width="6" height="3" fill="#888" rx=".5"/>
+    <line x1="180" y1="158" x2="180" y2="163" stroke="#888" stroke-width="1"/><rect x="177" y="159" width="6" height="3" fill="#888" rx=".5"/>
+    <line x1="210" y1="155" x2="210" y2="160" stroke="#888" stroke-width="1"/><rect x="207" y="156" width="6" height="3" fill="#888" rx=".5"/>
+    <line x1="240" y1="160" x2="240" y2="165" stroke="#888" stroke-width="1"/><rect x="237" y="161" width="6" height="3" fill="#E24B4A" rx=".5"/>
+    
+    <line x1="270" y1="175" x2="270" y2="180" stroke="#888" stroke-width="1.2"/><rect x="266.5" y="176" width="7" height="3" fill="#E24B4A" rx=".5"/>
+    <text x="270" y="186" text-anchor="middle" font-size="7" fill="#A32D2D" font-weight="600">바닥 105k</text>
+    <circle cx="270" cy="186" r="10" fill="none" stroke="#1D9E75" stroke-width="1"/>
+    
+    <line x1="300" y1="170" x2="300" y2="175" stroke="#888" stroke-width="1"/><rect x="297" y="171" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="330" y1="165" x2="330" y2="170" stroke="#888" stroke-width="1"/><rect x="327" y="166" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="360" y1="155" x2="360" y2="160" stroke="#888" stroke-width="1"/><rect x="357" y="156" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="390" y1="150" x2="390" y2="155" stroke="#888" stroke-width="1"/><rect x="387" y="151" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="420" y1="145" x2="420" y2="150" stroke="#888" stroke-width="1"/><rect x="417" y="146" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="450" y1="135" x2="450" y2="140" stroke="#888" stroke-width="1"/><rect x="447" y="136" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    
+    <line x1="480" y1="120" x2="480" y2="125" stroke="#888" stroke-width="1"/><rect x="477" y="121" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <line x1="510" y1="95" x2="510" y2="100" stroke="#888" stroke-width="1"/><rect x="507" y="96" width="6" height="3" fill="#1D9E75" rx=".5"/>
+    <text x="510" y="90" text-anchor="middle" font-size="7" fill="#1D9E75" font-weight="600">2월 448k</text>
+    <line x1="540" y1="105" x2="540" y2="110" stroke="#888" stroke-width="1"/><rect x="537" y="106" width="6" height="4" fill="#E24B4A" rx=".5"/>
+    <text x="540" y="118" text-anchor="middle" font-size="7" fill="#A32D2D">3월 조정</text>
+    
+    <line x1="570" y1="40" x2="570" y2="45" stroke="#888" stroke-width="1.5"/><rect x="566" y="41" width="8" height="3" fill="#1D9E75" rx=".5"/>
+    <text x="570" y="35" text-anchor="middle" font-size="9" fill="#26215C" font-weight="700">4월 688k</text>
+    <circle cx="570" cy="35" r="15" fill="none" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="2 2"/>
+    
+    <path d="M 270,177 Q 360,158 450,137 Q 510,98 570,42" fill="none" stroke="#1D9E75" stroke-width="1.5" opacity=".6"/>
+    
+    <line x1="40" y1="130" x2="640" y2="70" stroke="#1E3A5F" stroke-width="1.2" stroke-dasharray="4 3" opacity=".4"/>
+    <text x="560" y="68" font-size="8" fill="#1E3A5F" font-weight="600">상승 추세선</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2025년 5월 역사적 바닥 → AI 슈퍼사이클 편승 → 2026년 폭발 상승 (1년 만에 487% 급등)</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">매집 완료 → 시세 분출 → 현재 분산 구간 추정</span><span class="tag t-g">세력 분산</span><div style="color:#888;margin-top:2px;font-size:11px"><b>세력 매집원가 = 220k~260k 추정.</b> 2025년 10~12월 박스권(200k~280k)에서 장기 횡보 + 거래량(150~250만주) 동반 = 전형적 매집 패턴. 현재 688k는 매집원가 대비 +164~213% 상승 = 세력 입장에선 충분히 수익 실현 구간. 4월 거래량 감소(38만주) = 세력이 물량을 털고 있을 가능성. <b>"세력은 본인 매집 본전 밑으로 떨어지는 것을 참지 못한다"</b> → 조정 시 220k~260k가 궁극의 바닥 지지선. 단기 조정은 480k~520k(MA20·피보나치 38.2%) 예상.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">AI·반도체 슈퍼사이클 최대 수혜주</span><span class="tag t-navy">섹터 1위</span><div style="color:#888;margin-top:2px;font-size:11px"><b>MLCC(적층 세라믹 콘덴서) 세계 2위, FC-BGA 기판 1위.</b> AI 서버·HBM·DDR5 모듈에 필수 부품 공급. 삼성전자·SK하이닉스·엔비디아향 공급 증가. 2026년 AI 서버 출하량 전년 대비 +40% 예상 → 삼성전기 실적 급증 확실. 경쟁사 무라타(일본)도 동반 상승 중 = 업종 전체 호황. 단, 주가가 실적을 과도하게 선반영했을 가능성 → 2Q 실적 발표(7월) 전까지 조정 가능.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">외국인·기관 수급 — 2월·4월 순매수 추정, 현재는 관망</span><span class="tag t-a">수급 주시</span><div style="color:#888;margin-top:2px;font-size:11px">거래량 분석 시 2월(평균 120만주)·4월(평균 70만주) = 큰 손 유입. 현재 38만주로 감소 = 외국인·기관이 물량 정리 중일 가능성. <b>거래량 = 돈.</b> 거래량 재증가 없이 가격만 오르면 = 개미 추격매수 = 세력 털기 완성 신호. 향후 50만주 이상 거래량 동반 조정 시 = 재진입 기회. 30만주 이하 유지 시 = 추가 하락 경계.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">핵심 리스크 — 98% 고점권 + 단기 급등 피로도</span><span class="tag t-r">조정 임박</span><div style="color:#888;margin-top:2px;font-size:11px"><b>52주 위치 98% = 역사상 매도 타이밍.</b> 4월만 +51% 급등 = "급하게 올린 종목은 짧게 간다" 법칙 적용. 엘리어트 5파 막바지 = 곧 a-b-c 조정파 진입 가능성. 피보나치 기준 38.2% 조정 시 500k, 50% 조정 시 442k, 61.8% 조정 시 384k. <b>추격매수 절대 금지.</b> 조정 확인 후 MA20(511k) 또는 피보나치 38.2%(500k) 구간에서 분할 매수 전략만 유효.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>✅ 52주 신고가 경신 (698k) — 모멘텀 최강</span><span class="tag t-g">강세</span></div>
+  <div class="row"><span>✅ 이평선 완벽 정배열 (MA20·60·120 모두 상승 지지)</span><span class="tag t-b">기술적</span></div>
+  <div class="row"><span>✅ AI·반도체 업황 호조 — MLCC·기판 수요 폭증</span><span class="tag t-g">펀더멘털</span></div>
+  <div class="row"><span>✅ 세력 매집 완료 (2025년 10~12월 박스권 220~260k)</span><span class="tag t-g">세력</span></div>
+  <div class="row"><span>✅ 엘리어트 5파 진행 중 — 750~800k 목표 가능</span><span class="tag t-navy">파동</span></div>
+  <div class="row"><span>✅ 거래량 동반 돌파 (2월·4월 각 2회 급등 확인)</span><span class="tag t-teal">거래량</span></div>
+  <div class="row"><span>⚠ 98% 고점권 — 조정 위험 매우 높음</span><span class="tag t-a">경고</span></div>
+  <div class="row"><span>⚠ 단기 급등 피로도 (4월만 +51%)</span><span class="tag t-a">과열</span></div>
+  <div class="row"><span>🚨 추격매수 금지 — 조정 시 재진입 전략 필수</span><span class="tag t-r">리스크</span></div>
+  <div class="row"><span>🚨 5파 실패 시 448k(3파 고점)까지 조정 가능</span><span class="tag t-r">변동성</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:35%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 35% — 조정 대기 후 분할 매수</div>
+    <div style="font-size:11px;color:#5f5e5a">현재 698k는 98% 고점권으로 <b>추격매수 절대 금지.</b> 조정 시 520~550k(MA20 근처) 1차 매수, 480~510k(피보나치 38.2%·MA60 근처) 2차 핵심 매수. 5파 연장 시 750~800k 목표 가능하나, 단기 급등 피로도로 조정 먼저 올 가능성 70%. 손절선 420k(MA60 이탈).</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:75%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 75%</div>
+    <div style="font-size:11px;color:#5f5e5a">AI 슈퍼사이클 수혜주로 장기 상승 추세 확립. 조정 시 400~480k 구간(피보나치 50%·주봉 20선·3파 고점 부근) = 장기 투자자의 황금 매수 존. 24개월 목표가 900k~1,100k (현재가 대비 +31~60%). 세력 매집원가 220~260k가 궁극의 바닥 = 이 밑으로는 절대 안 떨어질 확률 90%. 분할 매수 + 장기 보유 전략 유효.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "조정 대기 → 480~550k 구간 분할 매수 → 목표가 750~800k"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">520,000~<br>550,000</div><div>MA20 지지 확인<br>30% 물량</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">480,000~<br>510,000</div><div>피보나치 38.2%<br>MA60 근처<br>50% 물량</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">750,000~<br>800,000</div><div>5파 연장 or<br>피보나치 확장<br>+9~16%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">420,000원</div><div>MA60 이탈 or<br>3월 박스권 하단</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 삼성전기 핵심 4포인트:</b><br>
+    ① <b>세력 매집원가 220~260k</b> — 이 밑으로는 절대 안 떨어질 확률 90%. 조정 시 궁극의 바닥 지지선.<br>
+    ② <b>AI·반도체 슈퍼사이클 1위 수혜주</b> — MLCC·FC-BGA 기판 = AI 서버 핵심 부품. 2026~2027년 실적 급증 확실.<br>
+    ③ <b>엘리어트 5파 막바지</b> — 750~800k 목표 가능하나 조정 먼저 올 가능성 높음. 조정 = 기회.<br>
+    ④ <b>480~510k = 황금 매수 존</b> — 피보나치 38.2%, MA60, 4월 초 박스권 상단 = 3중 지지. 이 구간에서 분할 매수 시 승률 80%+.</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 현재 698k는 52주 위치 98% 극단적 고점권. 4월만 51% 급등으로 단기 과열 확실. <b>추격매수 절대 금지.</b> 엘리어트 5파 실패 시 448k(3파 고점)까지 조정 가능. 조정 확인 후 MA20(511k) 지지 또는 피보나치 38.2%(500k) 구간에서만 진입. "급하게 올린 종목은 짧게 간다" 법칙 적용 — 인내심 필수.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>

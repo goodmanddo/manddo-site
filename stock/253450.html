@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스튜디오드래곤 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>스튜디오드래곤 (253450) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | 코스닥 콘텐츠 | 52주 저점권 진입, 세력 매집 구간 주목</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 스튜디오드래곤 = "52주 신저점 터치 후 반등 초기 — 세력 매집 vs 추가 하락 갈림길"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 52주 위치 17.4% = 저점권 매집 가능성<br>② 넷플릭스 등 글로벌 OTT 안정적 수요<br>③ K-콘텐츠 IP 경쟁력 (킹덤·스위트홈 등)<br>④ 33,000원 = 세력이 지키려는 핵심 지지선
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>2026년 신작 라인업 약화 우려·OTT 제작비 경쟁 심화·실적 둔화 가능성. MA60(41,292)·MA120(41,429) 역배열 지속 = 중기 하락추세 미전환. 33,000 이탈 시 추가 급락 리스크.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#E24B4A">36,050<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -0.69%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">33,000~<br>50,500원</div><div class="ms">저점 대비 +9.2%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">17.4%</div><div class="ms">극단적 저점권</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">2026년 1월 50,500원 고점 도전 실패 → 3개월간 -28.5% 급락 → 4월 7일 33,000원(52주 신저점) 터치 후 반등 중</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:17.4%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 36,050</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 33,000</span><span>중간 41,750</span><span>고점 50,500</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 1월 말 50,500원(52주 신고점) 재돌파 시도 실패 → 2~4월 급락으로 33,000원 신저점 형성. 현재 피보나치 23.6% 되돌림(37,130) 돌파 시도 중. <b>세력 관점:</b> 33,000~40,000원 박스권 = 매집 구간 or 투매 후 정리. 거래량 감소 = 세력 개입 대기 신호. MA20(35,640) 탈환 성공 시 단기 반등 탄력.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-r" style="font-size:10px;padding:2px 7px">52주 저점권</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">역배열</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">반등 초기</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">더블바텀?</span>
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">K-콘텐츠</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "52주 신저점 터치 후 MA20 탈환 시도, 반등 초기 단계"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>거래량·세력:</b> 4월 초 33,000원 신저점에서 거래량 급증(11만주) 후 감소 = 투매 출회 완료 or 세력 매집 가능성. 현재 2.4만주로 축소 = 세력이 본격 개입 전 관망 단계.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>이평선·매물대:</b> MA60(41,292)·MA120(41,429) 역배열 지속 = 중기 하락추세. 다만 MA20(35,640) 돌파 성공 = 단기 반등 신호. 33,000~37,000 박스권 = 과거 2024년 하반기 거래량 밀집 구간 → 강한 지지/저항 교차 지대.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>엘리어트·피보나치:</b> 1월 50,500원 = 2파 반등 고점 실패 → 3파(c파) 하락으로 33,000 저점. 현재 피보나치 23.6% 되돌림(37,130) 근처 = 약한 저항. 38.2% 되돌림(39,685) 돌파 여부가 추세 전환 관건.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈리스트:</b> 4월 중순 이후 소폭 반등 = 기술적 반등 or 세력 시험 매집. 37,000원 돌파 시 39,700(38.2% 되돌림) 재도전. 실패 시 33,000 재터치 → 더블바텀 or 추가 하락 분기점.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">52주 신저점 터치 → 반등 초기</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="40" width="160" height="150" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="120" y="52" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 고점 실패 급락</text>
+    <rect x="210" y="120" width="160" height="70" rx="4" fill="#E1F5EE" opacity=".15"/>
+    <text x="290" y="132" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">② 저점 다지기</text>
+    <rect x="380" y="105" width="240" height="85" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="500" y="117" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">③ 반등 시도 중</text>
+    
+    <!-- 1월 고점 -->
+    <line x1="60" y1="80" x2="60" y2="35" stroke="#E24B4A" stroke-width="2"/><rect x="54" y="35" width="12" height="45" fill="#E24B4A" rx="1.5"/>
+    <line x1="80" y1="75" x2="80" y2="40" stroke="#E24B4A" stroke-width="2"/><rect x="74" y="40" width="12" height="35" fill="#E24B4A" rx="1.5"/>
+    <line x1="100" y1="70" x2="100" y2="30" stroke="#E24B4A" stroke-width="2"/><rect x="94" y="30" width="12" height="40" fill="#E24B4A" rx="1.5"/>
+    <text x="100" y="22" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">50,500 고점</text>
+    
+    <!-- 2월 급락 -->
+    <line x1="120" y1="90" x2="120" y2="50" stroke="#E24B4A" stroke-width="2"/><rect x="114" y="65" width="12" height="25" fill="#E24B4A" rx="1.5"/>
+    <line x1="140" y1="110" x2="140" y2="75" stroke="#E24B4A" stroke-width="2"/><rect x="134" y="85" width="12" height="25" fill="#E24B4A" rx="1.5"/>
+    <line x1="160" y1="130" x2="160" y2="95" stroke="#E24B4A" stroke-width="2"/><rect x="154" y="105" width="12" height="25" fill="#E24B4A" rx="1.5"/>
+    <line x1="180" y1="155" x2="180" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="174" y="130" width="12" height="25" fill="#E24B4A" rx="1.5"/>
+    
+    <!-- 3월 박스권 -->
+    <line x1="220" y1="170" x2="220" y2="145" stroke="#888" stroke-width="2"/><rect x="214" y="150" width="12" height="20" fill="#666" rx="1.5"/>
+    <line x1="245" y1="175" x2="245" y2="155" stroke="#888" stroke-width="2"/><rect x="239" y="160" width="12" height="15" fill="#666" rx="1.5"/>
+    <line x1="270" y1="165" x2="270" y2="145" stroke="#888" stroke-width="2"/><rect x="264" y="148" width="12" height="17" fill="#666" rx="1.5"/>
+    <line x1="295" y1="170" x2="295" y2="150" stroke="#888" stroke-width="2"/><rect x="289" y="153" width="12" height="17" fill="#666" rx="1.5"/>
+    <line x1="320" y1="172" x2="320" y2="155" stroke="#888" stroke-width="2"/><rect x="314" y="158" width="12" height="14" fill="#666" rx="1.5"/>
+    <line x1="345" y1="178" x2="345" y2="160" stroke="#888" stroke-width="2"/><rect x="339" y="163" width="12" height="15" fill="#666" rx="1.5"/>
+    
+    <!-- 4월 신저점 + 반등 -->
+    <line x1="390" y1="190" x2="390" y2="170" stroke="#E24B4A" stroke-width="2"/><rect x="384" y="175" width="12" height="15" fill="#E24B4A" rx="1.5"/>
+    <text x="390" y="205" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">33,000 저점</text>
+    <line x1="420" y1="185" x2="420" y2="165" stroke="#1D9E75" stroke-width="2"/><rect x="414" y="168" width="12" height="17" fill="#1D9E75" rx="1.5"/>
+    <line x1="450" y1="180" x2="450" y2="162" stroke="#1D9E75" stroke-width="2"/><rect x="444" y="164" width="12" height="16" fill="#1D9E75" rx="1.5"/>
+    <line x1="480" y1="175" x2="480" y2="158" stroke="#1D9E75" stroke-width="2"/><rect x="474" y="160" width="12" height="15" fill="#1D9E75" rx="1.5"/>
+    <line x1="510" y1="170" x2="510" y2="153" stroke="#1D9E75" stroke-width="2"/><rect x="504" y="155" width="12" height="15" fill="#1D9E75" rx="1.5"/>
+    <line x1="540" y1="168" x2="540" y2="152" stroke="#1D9E75" stroke-width="2"/><rect x="534" y="154" width="12" height="14" fill="#1D9E75" rx="1.5"/>
+    <line x1="570" y1="165" x2="570" y2="150" stroke="#1D9E75" stroke-width="2"/><rect x="564" y="152" width="12" height="13" fill="#1D9E75" rx="1.5"/>
+    <line x1="600" y1="163" x2="600" y2="148" stroke="#888" stroke-width="2"/><rect x="594" y="150" width="12" height="13" fill="#666" rx="1.5"/>
+    
+    <!-- 현재가 라인 -->
+    <line x1="40" y1="150" x2="640" y2="150" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="147" font-size="9" fill="#26215C" font-weight="600">현재 36,050</text>
+    
+    <!-- MA20 -->
+    <line x1="40" y1="152" x2="640" y2="152" stroke="#1D9E75" stroke-width="1" stroke-dasharray="2 2" opacity=".4"/>
+    <text x="645" y="154" font-size="8" fill="#1D9E75">MA20</text>
+    
+    <!-- MA60 -->
+    <line x1="40" y1="95" x2="640" y2="95" stroke="#EF9F27" stroke-width="1" stroke-dasharray="2 2" opacity=".4"/>
+    <text x="645" y="97" font-size="8" fill="#EF9F27">MA60</text>
+    
+    <!-- 피보나치 23.6% -->
+    <line x1="380" y1="145" x2="640" y2="145" stroke="#0C447C" stroke-width=".8" stroke-dasharray="1 2" opacity=".35"/>
+    <text x="645" y="147" font-size="7" fill="#0C447C">23.6% 37,130</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 1월 고점 실패 → 3개월 급락 → 4월 신저점 33,000 터치 → MA20 탈환 시도 중</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "2025년 상반기 5파 종료 후 대규모 a-b-c 조정파 진행 중, c파 저점 확인 중"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>엘리어트 파동:</b> 2024년 하반기~2025년 상반기 = ①-②-③-④-⑤ 상승 5파. 2025년 6월 57,000원 = ⑤파 종료. 이후 a(2025.8월 44k)-b(2026.1월 50k)-c(2026.4월 33k) 조정파 진행. <b>현재 c파 저점 확인 단계.</b></div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>장기 이평선:</b> 20주선(약 39,000 추정)·60주선(약 43,000 추정) 모두 현재가 위 = 중장기 하락추세. 120주선(약 42,000 추정)도 역배열. <b>세력 관점:</b> 주봉 20주선(39k) 회복 실패 = 세력 매집 미완료. 회복 성공 시 = 본격 시세 신호.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>매물대:</b> 45,000~50,000원 = 2024~2025년 최대 거래량 구간 → 현 위치에서 강한 저항대. 37,000~40,000원 = 2024년 하반기 박스권 하단 → 지지 기능 기대. 33,000 이탈 시 30,000까지 매물대 공백.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 전망:</b> c파 저점(33k) 확인 → 신규 상승 1파 시작 가능성. 목표: 피보나치 61.8% 되돌림(43,800) = 주봉 20/60선 회복. 단, 33,000 이탈 시 2024년 저점(30,000 추정) 재시험.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 a-b-c 조정파 c파 저점 확인 중</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <rect x="40" y="25" width="250" height="140" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="165" y="37" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">①~⑤ 상승 5파 (2025.H1)</text>
+    <rect x="300" y="50" width="340" height="115" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="470" y="62" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">a-b-c 조정파 (2025.H2~2026)</text>
+    
+    <!-- 2025년 상승 -->
+    <line x1="60" y1="120" x2="60" y2="90" stroke="#1D9E75" stroke-width="2.5"/><rect x="53" y="95" width="14" height="25" fill="#1D9E75" rx="1.5"/>
+    <text x="60" y="85" text-anchor="middle" font-size="7" fill="#27500A" font-weight="600">①</text>
+    <line x1="90" y1="110" x2="90" y2="85" stroke="#E24B4A" stroke-width="2.5"/><rect x="83" y="95" width="14" height="15" fill="#E24B4A" rx="1.5"/>
+    <text x="90" y="80" text-anchor="middle" font-size="7" fill="#A32D2D">②</text>
+    <line x1="120" y1="95" x2="120" y2="55" stroke="#1D9E75" stroke-width="2.5"/><rect x="113" y="60" width="14" height="35" fill="#1D9E75" rx="1.5"/>
+    <text x="120" y="50" text-anchor="middle" font-size="7" fill="#27500A" font-weight="700">③ 강력</text>
+    <line x1="150" y1="85" x2="150" y2="65" stroke="#E24B4A" stroke-width="2.5"/><rect x="143" y="72" width="14" height="13" fill="#E24B4A" rx="1.5"/>
+    <text x="150" y="62" text-anchor="middle" font-size="7" fill="#A32D2D">④</text>
+    <line x1="180" y1="75" x2="180" y2="35" stroke="#1D9E75" stroke-width="2.5"/><rect x="173" y="40" width="14" height="35" fill="#1D9E75" rx="1.5"/>
+    <text x="180" y="30" text-anchor="middle" font-size="7" fill="#27500A" font-weight="700">⑤</text>
+    <line x1="180" y1="25" x2="180" y2="10" stroke="#26215C" stroke-width="1" marker-end="url(#arr)"/>
+    <text x="185" y="18" font-size="8" fill="#26215C" font-weight="600">57,000 고점</text>
+    <line x1="210" y1="70" x2="210" y2="45" stroke="#1D9E75" stroke-width="2.5"/><rect x="203" y="50" width="14" height="20" fill="#1D9E75" rx="1.5"/>
+    <line x1="240" y1="80" x2="240" y2="55" stroke="#1D9E75" stroke-width="2.5"/><rect x="233" y="60" width="14" height="20" fill="#1D9E75" rx="1.5"/>
+    <line x1="270" y1="75" x2="270" y2="50" stroke="#1D9E75" stroke-width="2.5"/><rect x="263" y="55" width="14" height="20" fill="#1D9E75" rx="1.5"/>
+    
+    <!-- 조정 a파 -->
+    <line x1="310" y1="100" x2="310" y2="75" stroke="#E24B4A" stroke-width="2.5"/><rect x="303" y="85" width="14" height="15" fill="#E24B4A" rx="1.5"/>
+    <text x="310" y="107" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">a</text>
+    <line x1="340" y1="115" x2="340" y2="90" stroke="#E24B4A" stroke-width="2.5"/><rect x="333" y="100" width="14" height="15" fill="#E24B4A" rx="1.5"/>
+    <line x1="370" y1="125" x2="370" y2="105" stroke="#E24B4A" stroke-width="2.5"/><rect x="363" y="112" width="14" height="13" fill="#E24B4A" rx="1.5"/>
+    
+    <!-- b파 반등 -->
+    <line x1="400" y1="115" x2="400" y2="85" stroke="#1D9E75" stroke-width="2.5"/><rect x="393" y="90" width="14" height="25" fill="#1D9E75" rx="1.5"/>
+    <text x="400" y="80" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">b (1월 50k)</text>
+    <line x1="430" y1="105" x2="430" y2="80" stroke="#1D9E75" stroke-width="2.5"/><rect x="423" y="85" width="14" height="20" fill="#1D9E75" rx="1.5"/>
+    
+    <!-- c파 급락 -->
+    <line x1="460" y1="125" x2="460" y2="100" stroke="#E24B4A" stroke-width="2.5"/><rect x="453" y="110" width="14" height="15" fill="#E24B4A" rx="1.5"/>
+    <text x="460" y="132" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">c</text>
+    <line x1="490" y1="140" x2="490" y2="115" stroke="#E24B4A" stroke-width="2.5"/><rect x="483" y="125" width="14" height="15" fill="#E24B4A" rx="1.5"/>
+    <line x1="520" y1="155" x2="520" y2="135" stroke="#E24B4A" stroke-width="2.5"/><rect x="513" y="142" width="14" height="13" fill="#E24B4A" rx="1.5"/>
+    <line x1="550" y1="165" x2="550" y2="150" stroke="#E24B4A" stroke-width="2.5"/><rect x="543" y="155" width="14" height="10" fill="#E24B4A" rx="1.5"/>
+    <text x="550" y="178" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">33,000 저점</text>
+    
+    <!-- 반등 초기 -->
+    <line x1="580" y1="160" x2="580" y2="145" stroke="#1D9E75" stroke-width="2.5"/><rect x="573" y="148" width="14" height="12" fill="#1D9E75" rx="1.5"/>
+    <line x1="610" y1="155" x2="610" y2="142" stroke="#1D9E75" stroke-width="2.5"/><rect x="603" y="144" width="14" height="11" fill="#1D9E75" rx="1.5"/>
+    
+    <!-- MA20주선 -->
+    <path d="M 40 100 Q 200 70, 400 95 T 640 135" stroke="#1D9E75" stroke-width="1.2" fill="none" opacity=".45" stroke-dasharray="3 2"/>
+    <text x="645" y="137" font-size="7" fill="#1D9E75">20주선</text>
+    
+    <!-- MA60주선 -->
+    <path d="M 40 90 Q 200 60, 400 85 T 640 115" stroke="#EF9F27" stroke-width="1.2" fill="none" opacity=".45" stroke-dasharray="3 2"/>
+    <text x="645" y="117" font-size="7" fill="#EF9F27">60주선</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025년 6월 57,000 ⑤파 종료 → a-b-c 조정파 c파(33,000) 저점 확인 → 신규 1파 시작 가능성</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2025년 상반기 대세 상승 종료, 8개월 조정 후 극단적 저점권 진입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>장기 사이클:</b> 2024년 하반기~2025년 상반기 = 대세 상승 사이클 (36k→57k, +58%). 2025년 하반기~2026년 = 대규모 조정 사이클 (57k→33k, -42%). 현재 조정 8개월째 = 과거 평균 조정 기간(6~9개월) 말미.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>턴어라운드 트리거:</b> 2026년 하반기 신규 콘텐츠 라인업 공개 + 글로벌 OTT 계약 갱신 이슈 = 실적 반등 기대감. 현 저점권 = 선반영 매집 구간 가능성. 단, 실적 악화 지속 시 추가 조정 불가피.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>대세 상승/하락:</b> 월봉 기준 2025년 2~6월 = 5개월 상승 (37k→57k). 2025년 7월~2026년 4월 = 10개월 하락. <b>세력 관점:</b> "급하게 올린 종목은 짧게, 횡보 매집 후 올린 종목은 길게" → 2025년 상승이 빨랐으므로 조정도 길고 깊게 진행.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망:</b> 33,000 = 2024년 저점(36,300) 이탈 = 신규 저점 갱신. 월봉 차원에서 30,000(심리적 지지선) 방어 성공 시 = 2026년 하반기~2027년 재상승 사이클 기대. 실패 시 25,000까지 하락 가능.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">대규모 조정 8개월, 저점 바닥 확인 중</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="60" width="200" height="110" rx="4" fill="#f1efe8" opacity=".25"/>
+    <text x="140" y="72" text-anchor="middle" font-size="9" fill="#888" font-weight="600">2024년 박스권</text>
+    <rect x="250" y="30" width="180" height="140" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="340" y="42" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2025년 H1 대세 상승</text>
+    <rect x="440" y="65" width="200" height="105" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="540" y="77" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">2025 H2~2026 급락</text>
+    
+    <!-- 2024년 -->
+    <line x1="60" y1="130" x2="60" y2="110" stroke="#888" stroke-width="3"/><rect x="51" y="115" width="18" height="15" fill="#666" rx="2"/>
+    <line x1="85" y1="135" x2="85" y2="115" stroke="#888" stroke-width="3"/><rect x="76" y="120" width="18" height="15" fill="#666" rx="2"/>
+    <line x1="110" y1="140" x2="110" y2="120" stroke="#888" stroke-width="3"/><rect x="101" y="125" width="18" height="15" fill="#666" rx="2"/>
+    <line x1="135" y1="138" x2="135" y2="118" stroke="#888" stroke-width="3"/><rect x="126" y="123" width="18" height="15" fill="#666" rx="2"/>
+    <line x1="160" y1="142" x2="160" y2="122" stroke="#888" stroke-width="3"/><rect x="151" y="127" width="18" height="15" fill="#666" rx="2"/>
+    <line x1="185" y1="145" x2="185" y2="130" stroke="#888" stroke-width="3"/><rect x="176" y="134" width="18" height="11" fill="#666" rx="2"/>
+    <line x1="210" y1="150" x2="210" y2="135" stroke="#888" stroke-width="3"/><rect x="201" y="139" width="18" height="11" fill="#666" rx="2"/>
+    <line x1="235" y1="148" x2="235" y2="133" stroke="#888" stroke-width="3"/><rect x="226" y="137" width="18" height="11" fill="#666" rx="2"/>
+    
+    <!-- 2025년 상승 -->
+    <line x1="265" y1="145" x2="265" y2="120" stroke="#1D9E75" stroke-width="3"/><rect x="256" y="125" width="18" height="20" fill="#1D9E75" rx="2"/>
+    <line x1="295" y1="130" x2="295" y2="95" stroke="#1D9E75" stroke-width="3"/><rect x="286" y="100" width="18" height="30" fill="#1D9E75" rx="2"/>
+    <text x="295" y="88" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">2월 51k</text>
+    <line x1="325" y1="115" x2="325" y2="80" stroke="#1D9E75" stroke-width="3"/><rect x="316" y="85" width="18" height="30" fill="#1D9E75" rx="2"/>
+    <line x1="355" y1="105" x2="355" y2="70" stroke="#1D9E75" stroke-width="3"/><rect x="346" y="75" width="18" height="30" fill="#1D9E75" rx="2"/>
+    <line x1="385" y1="90" x2="385" y2="50" stroke="#1D9E75" stroke-width="3"/><rect x="376" y="55" width="18" height="35" fill="#1D9E75" rx="2"/>
+    <text x="385" y="43" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">6월 57k 고점</text>
+    <line x1="415" y1="100" x2="415" y2="70" stroke="#1D9E75" stroke-width="3"/><rect x="406" y="75" width="18" height="25" fill="#1D9E75" rx="2"/>
+    
+    <!-- 2025 하반기~2026 급락 -->
+    <line x1="460" y1="120" x2="460" y2="95" stroke="#E24B4A" stroke-width="3"/><rect x="451" y="105" width="18" height="15" fill="#E24B4A" rx="2"/>
+    <line x1="490" y1="135" x2="490" y2="110" stroke="#E24B4A" stroke-width="3"/><rect x="481" y="120" width="18" height="15" fill="#E24B4A" rx="2"/>
+    <line x1="520" y1="145" x2="520" y2="125" stroke="#E24B4A" stroke-width="3"/><rect x="511" y="132" width="18" height="13" fill="#E24B4A" rx="2"/>
+    <line x1="550" y1="155" x2="550" y2="135" stroke="#E24B4A" stroke-width="3"/><rect x="541" y="142" width="18" height="13" fill="#E24B4A" rx="2"/>
+    <text x="550" y="130" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">1월 49k</text>
+    <line x1="580" y1="162" x2="580" y2="145" stroke="#E24B4A" stroke-width="3"/><rect x="571" y="151" width="18" height="11" fill="#E24B4A" rx="2"/>
+    <line x1="610" y1="168" x2="610" y2="155" stroke="#E24B4A" stroke-width="3"/><rect x="601" y="160" width="18" height="8" fill="#E24B4A" rx="2"/>
+    <text x="610" y="180" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="700">4월 36k</text>
+    <line x1="610" y1="175" x2="610" y2="185" stroke="#26215C" stroke-width="1" marker-end="url(#arr)"/>
+    
+    <!-- 30,000 심리선 -->
+    <line x1="40" y1="175" x2="640" y2="175" stroke="#A32D2D" stroke-width="1" stroke-dasharray="4 3" opacity=".4"/>
+    <text x="42" y="172" font-size="8" fill="#A32D2D" font-weight="600">30,000 심리적 지지선</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2025년 상반기 대세 상승(+58%) 종료 → 8개월 조정(-42%) → 현재 2024년 저점 이탈, 바닥 확인 중</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">① 매집 구간 진입 가능성 — 거래량 축소 = 세력 대기</span><span class="tag t-g">매집 신호</span><div style="color:#888;margin-top:2px;font-size:11px">4월 초 33,000원 신저점에서 거래량 급증(11만주) 후 현재 2.4만주로 감소 = <b>투매 출회 완료 + 세력 개입 대기 단계.</b> 33,000~37,000 박스권 = 과거 2024년 하반기 거래량 밀집 구간 → 세력이 본격 매집 시작할 최적 가격대. 단, MA60(41,292) 회복 실패 시 = 세력 매집 미완료 신호 → 추가 조정 가능.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">② K-콘텐츠 구조적 경쟁력 — 넷플릭스 의존도 vs IP 다각화</span><span class="tag t-navy">구조 이슈</span><div style="color:#888;margin-top:2px;font-size:11px">넷플릭스·디즈니+ 등 글로벌 OTT 안정적 수요 지속 = 장기 펀더멘털 우호적. 킹덤·스위트홈·더 글로리 등 IP 검증 완료. 단, <b>2026년 신작 라인업 약화 우려</b> + OTT 제작비 경쟁 심화 = 실적 둔화 리스크. 외국인·기관 수급: 2025년 하반기 이후 순매도 지속 = 대형 손실 미청산.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">③ 피보나치·매물대 — 38.2% 되돌림(39,685) 돌파가 추세 전환 관건</span><span class="tag t-a">기술적 분기</span><div style="color:#888;margin-top:2px;font-size:11px">현재 피보나치 23.6% 되돌림(37,130) 돌파 시도 중. <b>38.2% 되돌림(39,685) = 핵심 저항선</b> → 돌파 시 MA60(41,292) 재도전 가능. 실패 시 33,000 재터치 → 더블바텀 or 추가 하락 분기점. 45,000~50,000원 = 2024~2025년 최대 매물대 → 장기 저항. 33,000 = 세력이 지키려는 최후 방어선 (이탈 시 30,000까지 매물대 공백).</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">④ 핵심 리스크 — 실적 악화·OTT 경쟁 심화·33,000 이탈 시 급락</span><span class="tag t-r">고위험</span><div style="color:#888;margin-top:2px;font-size:11px">2026년 Q1~Q2 실적 가이던스 하향 가능성 (신작 부진). OTT 플랫폼 제작비 협상력 약화 = 마진 압박. <b>33,000원 이탈 시</b> = 30,000(심리선) → 25,000(2023년 저점 추정)까지 추가 급락 리스크. 역배열 지속 = 중기 하락추세 미전환. 외국인·기관 순매도 지속 = 대형 손실 미청산 리스크.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>52주 위치 17.4% = 극단적 저점권, 상대적 안전마진 확보</span><span class="tag t-g">밸류</span></div>
+  <div class="row"><span>넷플릭스·디즈니+ 글로벌 OTT 수요 안정적 지속</span><span class="tag t-g">구조 호재</span></div>
+  <div class="row"><span>킹덤·스위트홈·더 글로리 등 검증된 IP 포트폴리오</span><span class="tag t-teal">IP 경쟁력</span></div>
+  <div class="row"><span>33,000~37,000 박스권 = 과거 매물대 밀집 구간 → 세력 매집 최적 가격대</span><span class="tag t-g">매집 구간</span></div>
+  <div class="row"><span>엘리어트 a-b-c 조정파 c파 저점 확인 → 신규 1파 시작 가능성</span><span class="tag t-navy">파동 전환</span></div>
+  <div class="row"><span>2026년 하반기 신규 콘텐츠 라인업 공개 이벤트 대기</span><span class="tag t-b">카탈리스트</span></div>
+  <div class="row"><span>2026년 신작 라인업 약화 우려 (vs 2025년 강력한 라인업)</span><span class="tag t-a">실적 우려</span></div>
+  <div class="row"><span>OTT 제작비 협상력 약화 가능성 → 마진 압박</span><span class="tag t-a">수익성</span></div>
+  <div class="row"><span>MA60(41,292)·MA120(41,429) 역배열 지속 = 중기 하락추세 미전환</span><span class="tag t-r">기술 약세</span></div>
+  <div class="row"><span>33,000 이탈 시 30,000→25,000 추가 급락 리스크 (매물대 공백)</span><span class="tag t-r">급락 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:45%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 45% — 중립·기술적 반등 기대</div>
+    <div style="font-size:11px;color:#5f5e5a"><b>전략:</b> 33,000~35,600 분할매수 → 38.2% 되돌림(39,685) 돌파 시 MA60(41,292) 재도전 목표. 단, 33,000 이탈 시 즉시 손절. 거래량 동반 37,000 돌파 = 단기 상승 신호. 미동반 시 = 추가 조정 대기.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:55%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 55%</div>
+    <div style="font-size:11px;color:#5f5e5a"><b>전략:</b> 33,000 = 2~3년 관점 저점 매집 구간. K-콘텐츠 구조적 성장 + 글로벌 OTT 수요 지속 = 장기 우호적. 목표가: 2027년 피보나치 1.618 확장(약 60,000) or 2025년 고점 57,000 재도전. 단, 실적 악화 지속 시 목표 하향.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "33,000 방어 확인 후 분할매수, 38.2% 되돌림 돌파 = 본격 진입"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">34,500~<br>35,600</div><div>MA20 지지<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">33,000~<br>34,000</div><div>52주 저점, 세력 매집<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">43,800~<br>47,000</div><div>피보나치 61.8% + MA60 회복<br>+28%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">31,500원</div><div>52주 저점 -5% 이탈</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 스튜디오드래곤 핵심 4포인트:</b><br>
+    ① <b>52주 위치 17.4% = 극단적 저점권</b> → 상대적 안전마진 확보, 세력 매집 최적 구간<br>
+    ② <b>33,000~37,000 박스권 = 과거 매물대 밀집</b> → 세력이 본격 매집 시작할 가격대<br>
+    ③ <b>엘리어트 c파 저점 확인 중</b> → 신규 상승 1파 시작 가능성, 38.2% 되돌림(39,685) 돌파가 관건<br>
+    ④ <b>K-콘텐츠 구조적 성장</b> → 넷플릭스·디즈니+ 안정적 수요, 장기 펀더멘털 우호적</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 2026년 신작 라인업 약화 우려·OTT 제작비 경쟁 심화 → 실적 둔화 가능성. <b>33,000원 이탈 시</b> 30,000(심리선) → 25,000까지 추가 급락 리스크 (매물대 공백). 역배열 지속 = 중기 하락추세 미전환. 외국인·기관 순매도 지속 = 대형 손실 미청산 리스크.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>

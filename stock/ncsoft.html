@@ -19,13 +19,10 @@ h1{font-size:17px;font-weight:700;margin-bottom:2px}
 .ml{font-size:11px;color:#888780;margin-bottom:1px}
 .mv{font-size:18px;font-weight:700}
 .ms{font-size:10px;color:#b4b2a9}
-.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:5px}
-.t-r{background:#FCEBEB;color:#A32D2D}
-.t-g{background:#EAF3DE;color:#27500A}
-.t-b{background:#E6F1FB;color:#0C447C}
-.t-a{background:#FAEEDA;color:#633806}
-.t-p{background:#EEEDFE;color:#26215C}
-.t-teal{background:#E1F5EE;color:#04342C}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
 .zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
 .zone:last-child{border-bottom:none}
 .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
@@ -34,486 +31,296 @@ h1{font-size:17px;font-weight:700;margin-bottom:2px}
 .score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
 .score-fill{height:100%;border-radius:4px}
 .chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
-.chart-title{font-size:12px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
 .ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
 .info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
 .warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
-.highlight{background:#EEEDFE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #534AB7}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
 .strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
 .sp{font-size:14px;font-weight:700;margin:3px 0}
-.reason-row{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
-.reason-row:last-child{border-bottom:none}
-.rn{min-width:60px;font-weight:700;color:#0C447C;background:#E6F1FB;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
 </style>
-<link rel="stylesheet" href="/css/page-nav.css">
 </head>
 <body>
 <!-- manddo-back-button -->
 <style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
 
-<div class="manddo-topbar"><a href="/" class="manddo-logo">만또<span>.kr</span></a><a href="/stock/" class="manddo-back">← 스톡 리서치 목록</a></div>
 <div class="wrap">
-
 <h1>엔씨소프트 (036570) — 세력·차트 종합 분석</h1>
-<div class="sub">2026년 4월 기준 | 코스피 | 국내 3대 게임사 | 아이온2 + 리니지 클래식 + 신규 IP 실적 턴어라운드</div>
+<div class="sub">2026년 4월 기준 | KOSPI 게임 | 박스권 매집 종료 → 엘리어트 5파 급등 돌파 중</div>
 
-<!-- 핵심 프레임 -->
-<div class="highlight">
-  <div style="font-size:12px;font-weight:700;color:#26215C;margin-bottom:5px">⚡ 엔씨소프트를 이해하는 핵심 — "4년 하락 끝, 실적 턴어라운드 + 신작 슈퍼사이클"</div>
-  <div style="font-size:11px;color:#534AB7">
-    <b>과거(2020~2024):</b> 리니지 IP 의존도 과다 → 중과금 이슈 → 유저 이탈 → 매출 하락 → 주가 100만원→13만원(-87%) 대폭락. "리니지 회사" 이미지 고착.<br>
-    <b>현재(2025~2026):</b> 아이온2 흥행(4Q25 PC매출 2017년 이후 분기 최대) → 2025 영업이익 161억 흑자전환 → 2026 목표 매출 2~2.5조. 구조조정 완료. 자사주 소각. 신규 IP 5개 출시. <b>"리니지 탈피 + 글로벌 장르 다변화" 전환 확인</b>
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 엔씨소프트 = "5개월 박스권 매집 종료 후 세력 시세 분출, 52주 고점 275,000원 목전"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 완벽한 이평선 정배열 (5-20-60-120일)<br>② 210,000~230,000원 5개월 횡보 매집 후 돌파<br>③ 거래량 동반 급등 (4/9~4/16 연속 상승)<br>④ 엘리어트 5파 진행 중, 52주 위치 92.9% 고점권
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>급하게 올린 종목 = 조정 폭도 급격. 4/16 신고가(266,500원) 돌파 후 거래량 감소 → 상승 피로. 275,000원 저항 실패 시 237,000원(피보나치 38.2%)까지 조정 가능.
+    </div>
   </div>
 </div>
 
-<!-- 현황 -->
-<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
 <div class="card">
   <div class="g3">
-    <div class="met">
-      <div class="ml">현재가 (4월 초)</div>
-      <div class="mv" style="color:#1D9E75">213,000<span style="font-size:11px;color:#888">원</span></div>
-      <div class="ms">고점 대비 -17.6%</div>
-    </div>
-    <div class="met">
-      <div class="ml">52주 범위</div>
-      <div class="mv" style="font-size:12px;line-height:1.4">134,600~<br>258,500원</div>
-      <div class="ms">저점 대비 +58.2%</div>
-    </div>
-    <div class="met">
-      <div class="ml">52주 위치</div>
-      <div class="mv" style="color:#EF9F27;font-size:15px">63%</div>
-      <div class="ms">저점 탈출 후 중상단</div>
-    </div>
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">268,000<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 +2.1%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">176,100~<br>275,000원</div><div class="ms">저점 대비 +52.2%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#E24B4A;font-size:15px">92.9%</div><div class="ms">고점권 (추격경계)</div></div>
   </div>
-
-  <!-- 52주 바 -->
-  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 가격 위치 — 현재 63% (저점 탈출 후 눌림목 구간)</div>
-  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 45%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:22px">
-    <div style="position:absolute;left:62%;top:-5px;width:3px;height:32px;background:#26215C;border-radius:2px">
-      <div style="position:absolute;top:33px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-45%)">▲ 213,000</div>
-    </div>
-    <div style="position:absolute;left:96%;top:-5px;width:3px;height:32px;background:#EF9F27;border-radius:2px;opacity:.7">
-      <div style="position:absolute;top:33px;font-size:9px;color:#633806;white-space:nowrap;transform:translateX(-70%)">고점 258,500</div>
-    </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">52주 고점(275,000원)에서 불과 -2.5%. 세력이 5개월 박스권 매집 후 4월 초 시세 분출 시작, 현재 엘리어트 5파 상승 말기 진입.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:92.9%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 268,000</div></div>
   </div>
-  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:8px">
-    <span>저점 134,600</span><span>중간 196,550</span><span>고점 258,500</span>
-  </div>
-
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 176,100</span><span>중간 225,550</span><span>고점 275,000</span></div>
   <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
-    <b>현재 상태:</b> 아이온2 출시(2025.11.19) 성공 → 134,600 저점 → 258,500 급등 → 현재 213,000 조정 눌림목 구간. <b>2025 연간 매출 1.5조(-5%), 영업이익 161억(흑자전환)</b>. 2026.2.11 리니지클래식 출시. 2026 목표매출 2~2.5조.
+    <b>핵심 상황:</b> 2025년 11월 52주 저점(176,100원) 터치 후 2026년 3월까지 190,000~230,000원 박스권 장기 횡보 → 세력 매집 완료. 4/9 거래량 급증과 함께 234,000원 돌파 후 단 5거래일 만에 266,500원(+13.9%) 급등. 완벽한 이평선 정배열 유지 중이나 고점권 진입으로 단기 조정 압력 존재.
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
-    <span class="tag t-g" style="font-size:10px;padding:2px 7px">아이온2 흥행 (멤버십 150만↑)</span>
-    <span class="tag t-b" style="font-size:10px;padding:2px 7px">2026 3Q 글로벌 출시</span>
-    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">2025 영업이익 흑자전환</span>
-    <span class="tag t-p" style="font-size:10px;padding:2px 7px">자사주 10% 소각</span>
-    <span class="tag t-a" style="font-size:10px;padding:2px 7px">애널 목표가 276~430만원</span>
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">이평선 정배열</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">박스권 돌파</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">5파 상승</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">매집 후 시세</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">고점권 경계</span>
   </div>
 </div>
 
-<!-- ① 일봉 차트 -->
-<div class="sec">📈 일봉 차트 모양 — "저점 V자 반등 → 고점 조정 → 눌림목 횡보"</div>
-
+<div class="sec">📈 일봉 차트 모양 — "210,000원대 박스권 5개월 횡보 → 4월 급등 돌파 → 신고가 도전 중"</div>
 <div class="card" style="background:#f9f8f5;margin-bottom:6px">
-  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#0C447C">🔍 일봉이 이런 모양인 이유</div>
-  <div class="reason-row"><div class="rn">이유①</div><div><b>아이온2 출시(11/19) 전 세력 선매집 완료</b>. 134,600원 저점에서 출시 기대감으로 서서히 매집. 거래량 증가와 함께 볼린저밴드 수축 → 돌파 패턴.</div></div>
-  <div class="reason-row"><div class="rn">이유②</div><div>아이온2 출시 성공 + 멤버십 100만 돌파 → <b>계단식 급등</b>. 134,600→258,500 (+92%). 일봉상 역배열 탈출 후 이평선 정배열 전환. 가파른 상승 채널 형성.</div></div>
-  <div class="reason-row"><div class="rn">이유③</div><div>258,500 고점 도달 후 <b>차익 실현 + 아이온2 일평균 매출 안정화 확인 대기</b> → 220,000~240,000 조정. "기대가 현실이 되는 구간" 확인하며 재매집.</div></div>
-  <div class="reason-row"><div class="rn">이유④</div><div>현재 <b>200,000~220,000원 박스권 횡보</b>. 20일선·60일선 수렴 중. 아이온2 글로벌(3Q26) 발표 전 재충전 구간. 이평선 정배열 유지.</div></div>
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>세력 매집 종료 신호:</b> 4/9 거래량 226,733주 급증(전일 대비 5배)하며 234,000원 돌파 → 세력이 210,000~213,000원 박스권에서 5일간 물량 모은 뒤 일제히 시세 상승 개시. "거래량은 돈" 원칙 적용.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>이평선 정배열 완성:</b> 현재가(268,000) > MA20(232,375) > MA60(224,893) > MA120(219,566). 20일선이 생명선 역할 수행 중. MA20~MA60 간격 확대 = 강한 상승 모멘텀.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 주요 돌파:</b> 52주 범위 기준 50% 되돌림(225,550원) 돌파 후 38.2% 되돌림(237,220원)까지 일거에 상승. 현재 23.6% 되돌림(251,660원)도 돌파 완료 → 다음 목표 52주 고점(275,000원).</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈리스트:</b> 4/16 거래량 269,116주 최고치 기록 후 4/17~4/20 거래량 급감(85,636→64,580) → 단기 상승 피로 징후. 275,000원 저항선 테스트 실패 시 MA20(232,375원)까지 되돌림 조정 예상.</div></div>
 </div>
 
 <div class="chart-area">
-  <div class="chart-title">일봉 (Daily) <span class="ct-badge" style="background:#EAF3DE;color:#085041">저점 → V자 반등 → 258,500 고점 → 눌림목 200,000~220,000 횡보</span></div>
-  <svg width="100%" viewBox="0 0 680 230">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">상승삼각형 돌파 → 급등</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
     <defs>
-      <marker id="ar1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
-      </marker>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L0,8 L8,4 z" fill="#1D9E75"/></marker>
     </defs>
-
-    <!-- 구간 배경 -->
-    <rect x="40"  y="10" width="100" height="210" rx="4" fill="#FCEBEB" opacity=".1"/>
-    <rect x="152" y="10" width="55"  height="210" rx="4" fill="#EAF3DE" opacity=".2"/>
-    <rect x="219" y="10" width="120" height="210" rx="4" fill="#EAF3DE" opacity=".2"/>
-    <rect x="351" y="10" width="100" height="210" rx="4" fill="#FAEEDA" opacity=".22"/>
-    <rect x="462" y="10" width="178" height="210" rx="4" fill="#E6F1FB" opacity=".18"/>
-
-    <text x="90"  y="22" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 저점 매집</text>
-    <text x="180" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 출시</text>
-    <text x="279" y="22" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">③ 계단식 급등</text>
-    <text x="401" y="22" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">④ 고점 조정</text>
-    <text x="551" y="22" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">⑤ 눌림목 횡보 (현재)</text>
-
-    <!-- ① 저점 매집 (134,600) -->
-    <line x1="55"  y1="170" x2="55"  y2="188" stroke="#E24B4A" stroke-width="1.5"/><rect x="49"  y="172" width="10" height="14" fill="#E24B4A" rx="1"/>
-    <circle cx="65" cy="192" r="4" fill="#E24B4A"/>
-    <text x="52" y="208" text-anchor="middle" font-size="8" fill="#A32D2D">134,600</text>
-    <line x1="74"  y1="166" x2="74"  y2="183" stroke="#1D9E75" stroke-width="1.5"/><rect x="68"  y="168" width="10" height="13" fill="#1D9E75" rx="1"/>
-    <line x1="90"  y1="163" x2="90"  y2="179" stroke="#E24B4A" stroke-width="1.5"/><rect x="84"  y="165" width="10" height="12" fill="#E24B4A" rx="1"/>
-    <line x1="106" y1="160" x2="106" y2="175" stroke="#1D9E75" stroke-width="1.5"/><rect x="100" y="162" width="10" height="11" fill="#1D9E75" rx="1"/>
-    <line x1="122" y1="157" x2="122" y2="171" stroke="#1D9E75" stroke-width="1.5"/><rect x="116" y="159" width="10" height="11" fill="#1D9E75" rx="1"/>
-    <line x1="138" y1="153" x2="138" y2="167" stroke="#E24B4A" stroke-width="1.5"/><rect x="132" y="155" width="10" height="11" fill="#E24B4A" rx="1"/>
-
-    <!-- ② 아이온2 출시일 장대양봉 (11/19) -->
-    <line x1="160" y1="110" x2="160" y2="152" stroke="#1D9E75" stroke-width="2.5"/><rect x="154" y="96" width="12" height="22" fill="#1D9E75" rx="1"/>
-    <text x="155" y="90" font-size="8" fill="#27500A" font-weight="600">아이온2</text>
-    <text x="155" y="81" font-size="8" fill="#27500A">출시!</text>
-    <!-- 출시일 전일 거래량 표시 -->
-    <rect x="154" y="195" width="12" height="15" fill="#1D9E75" rx="1" opacity=".4"/>
-    <text x="160" y="218" text-anchor="middle" font-size="7" fill="#888">거래량↑</text>
-
-    <!-- ③ 계단식 급등 -->
-    <line x1="228" y1="128" x2="228" y2="152" stroke="#1D9E75" stroke-width="2"/><rect x="222" y="116" width="12" height="16" fill="#1D9E75" rx="1"/>
-    <line x1="245" y1="112" x2="245" y2="135" stroke="#1D9E75" stroke-width="2"/><rect x="239" y="100" width="12" height="15" fill="#1D9E75" rx="1"/>
-    <!-- 멤버십 100만 돌파 스파이크 -->
-    <line x1="262" y1="88" x2="262" y2="115" stroke="#1D9E75" stroke-width="2.5"/><rect x="256" y="76" width="12" height="16" fill="#EF9F27" rx="1"/>
-    <text x="258" y="70" font-size="8" fill="#EF9F27">멤버십 100만</text>
-    <line x1="279" y1="75" x2="279" y2="98" stroke="#1D9E75" stroke-width="2.5"/><rect x="273" y="63" width="12" height="15" fill="#1D9E75" rx="1"/>
-    <line x1="296" y1="64" x2="296" y2="86" stroke="#1D9E75" stroke-width="2.5"/><rect x="290" y="52" width="12" height="15" fill="#1D9E75" rx="1"/>
-    <line x1="313" y1="52" x2="313" y2="74" stroke="#1D9E75" stroke-width="3"/><rect x="307" y="40" width="12" height="15" fill="#1D9E75" rx="1"/>
-    <line x1="330" y1="42" x2="330" y2="65" stroke="#1D9E75" stroke-width="3"/><rect x="324" y="30" width="12" height="15" fill="#EF9F27" rx="1"/>
-    <line x1="330" y1="18" x2="330" y2="30" stroke="#EF9F27" stroke-width="1.5"/>
-    <!-- 고점 258,500 -->
-    <circle cx="336" cy="16" r="5" fill="#EF9F27"/>
-    <text x="336" y="9" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">258,500</text>
-    <line x1="348" y1="38" x2="348" y2="62" stroke="#E24B4A" stroke-width="2.5"/><rect x="342" y="41" width="12" height="18" fill="#E24B4A" rx="1"/>
-
-    <!-- ④ 고점 조정 -->
-    <line x1="359" y1="50" x2="359" y2="78" stroke="#E24B4A" stroke-width="2"/><rect x="353" y="53" width="12" height="22" fill="#E24B4A" rx="1"/>
-    <line x1="376" y1="62" x2="376" y2="87" stroke="#E24B4A" stroke-width="2"/><rect x="370" y="65" width="12" height="19" fill="#E24B4A" rx="1"/>
-    <line x1="393" y1="70" x2="393" y2="92" stroke="#1D9E75" stroke-width="1.8"/><rect x="387" y="72" width="12" height="17" fill="#1D9E75" rx="1"/>
-    <line x1="410" y1="75" x2="410" y2="96" stroke="#E24B4A" stroke-width="1.8"/><rect x="404" y="77" width="12" height="16" fill="#E24B4A" rx="1"/>
-    <line x1="427" y1="80" x2="427" y2="99" stroke="#E24B4A" stroke-width="1.8"/><rect x="421" y="82" width="12" height="14" fill="#E24B4A" rx="1"/>
-    <line x1="444" y1="82" x2="444" y2="100" stroke="#1D9E75" stroke-width="1.8"/><rect x="438" y="83" width="12" height="14" fill="#1D9E75" rx="1"/>
-
-    <!-- ⑤ 눌림목 횡보 (200,000~220,000) -->
-    <line x1="470" y1="83" x2="470" y2="97" stroke="#1D9E75" stroke-width="1.8"/><rect x="464" y="84" width="12" height="12" fill="#1D9E75" rx="1"/>
-    <line x1="487" y1="84" x2="487" y2="97" stroke="#E24B4A" stroke-width="1.8"/><rect x="481" y="85" width="12" height="11" fill="#E24B4A" rx="1"/>
-    <line x1="504" y1="83" x2="504" y2="96" stroke="#1D9E75" stroke-width="1.8"/><rect x="498" y="84" width="12" height="11" fill="#1D9E75" rx="1"/>
-    <line x1="521" y1="84" x2="521" y2="97" stroke="#E24B4A" stroke-width="1.8"/><rect x="515" y="85" width="12" height="11" fill="#E24B4A" rx="1"/>
-    <line x1="538" y1="83" x2="538" y2="95" stroke="#1D9E75" stroke-width="1.8"/><rect x="532" y="84" width="12" height="11" fill="#1D9E75" rx="1"/>
-    <line x1="555" y1="84" x2="555" y2="96" stroke="#E24B4A" stroke-width="1.8"/><rect x="549" y="85" width="12" height="10" fill="#E24B4A" rx="1"/>
-    <line x1="572" y1="83" x2="572" y2="95" stroke="#1D9E75" stroke-width="1.8"/><rect x="566" y="84" width="12" height="10" fill="#1D9E75" rx="1"/>
-    <line x1="589" y1="83" x2="589" y2="95" stroke="#1D9E75" stroke-width="1.8"/><rect x="583" y="84" width="12" height="10" fill="#1D9E75" rx="1"/>
-    <line x1="606" y1="82" x2="606" y2="94" stroke="#E24B4A" stroke-width="1.8"/><rect x="600" y="83" width="12" height="10" fill="#E24B4A" rx="1"/>
-    <line x1="623" y1="82" x2="623" y2="94" stroke="#1D9E75" stroke-width="1.8"/><rect x="617" y="83" width="12" height="10" fill="#1D9E75" rx="1"/>
-    <!-- 다음 상승 예상 화살표 -->
-    <path d="M645 80 Q658 62 668 46" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar1)"/>
-    <text x="652" y="43" font-size="8" fill="#1D9E75">3Q 글로벌</text>
-    <text x="652" y="55" font-size="8" fill="#1D9E75">→ 목표 360,000</text>
-
-    <!-- 주요 수평선 -->
-    <line x1="40" y1="16" x2="640" y2="16" stroke="#EF9F27" stroke-width="0.8" stroke-dasharray="4 4" opacity=".35"/>
-    <text x="42" y="14" font-size="9" fill="#EF9F27">52주 고점 258,500</text>
-    <line x1="40" y1="86" x2="640" y2="86" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
-    <text x="42" y="83" font-size="9" fill="#26215C" font-weight="600">현재 213,000</text>
-    <line x1="40" y1="188" x2="640" y2="188" stroke="#1D9E75" stroke-width="0.8" stroke-dasharray="3 4" opacity=".4"/>
-    <text x="42" y="185" font-size="9" fill="#0F6E56">52주 저점 134,600</text>
-
-    <!-- 박스권·매수 구간 -->
-    <rect x="40" y="86" width="600" height="32" rx="3" fill="#9FE1CB" opacity=".2"/>
-    <text x="340" y="106" text-anchor="middle" font-size="9" fill="#085041" font-weight="600">★ 1차 매수 200,000~215,000 / 핵심 185,000~200,000 (눌림목 저점)</text>
-
-    <line x1="40" y1="218" x2="640" y2="218" stroke="#d3d1c7" stroke-width="1"/>
-    <text x="340" y="227" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 134,600 저점 → 아이온2 출시 계단 급등 → 258,500 고점 → 200,000~220,000 눌림목 횡보</text>
+    <rect x="40" y="90" width="240" height="110" rx="4" fill="#FAEEDA" opacity=".2"/>
+    <text x="160" y="102" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">① 박스권 매집 (12월~3월)</text>
+    <rect x="280" y="25" width="180" height="90" rx="4" fill="#EAF3DE" opacity=".2"/>
+    <text x="370" y="37" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 시세 분출 (4/9~)</text>
+    
+    <line x1="55" y1="155" x2="55" y2="175" stroke="#888" stroke-width="1.8"/><rect x="50" y="162" width="9" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="150" x2="75" y2="168" stroke="#888" stroke-width="1.8"/><rect x="70" y="152" width="9" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="158" x2="95" y2="172" stroke="#888" stroke-width="1.8"/><rect x="90" y="160" width="9" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="162" x2="115" y2="178" stroke="#888" stroke-width="1.8"/><rect x="110" y="164" width="9" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="135" y1="148" x2="135" y2="170" stroke="#888" stroke-width="1.8"/><rect x="130" y="150" width="9" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="155" y1="138" x2="155" y2="165" stroke="#888" stroke-width="1.8"/><rect x="150" y="145" width="9" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="152" x2="175" y2="178" stroke="#888" stroke-width="1.8"/><rect x="170" y="156" width="9" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="195" y1="155" x2="195" y2="175" stroke="#888" stroke-width="1.8"/><rect x="190" y="158" width="9" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="215" y1="148" x2="215" y2="168" stroke="#888" stroke-width="1.8"/><rect x="210" y="150" width="9" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="235" y1="152" x2="235" y2="172" stroke="#888" stroke-width="1.8"/><rect x="230" y="155" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="255" y1="158" x2="255" y2="176" stroke="#888" stroke-width="1.8"/><rect x="250" y="161" width="9" height="13" fill="#E24B4A" rx="1"/>
+    
+    <line x1="285" y1="115" x2="285" y2="138" stroke="#1D9E75" stroke-width="2.2"/><rect x="279" y="118" width="11" height="18" fill="#1D9E75" rx="1"/>
+    <text x="285" y="110" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">4/9 돌파</text>
+    <line x1="315" y1="95" x2="315" y2="118" stroke="#1D9E75" stroke-width="2.2"/><rect x="309" y="98" width="11" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="345" y1="82" x2="345" y2="102" stroke="#1D9E75" stroke-width="2.2"/><rect x="339" y="85" width="11" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="375" y1="68" x2="375" y2="88" stroke="#1D9E75" stroke-width="2.2"/><rect x="369" y="71" width="11" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="405" y1="48" x2="405" y2="72" stroke="#1D9E75" stroke-width="2.5"/><rect x="399" y="52" width="11" height="18" fill="#1D9E75" rx="1"/>
+    <text x="405" y="44" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">4/16 급등</text>
+    <line x1="435" y1="58" x2="435" y2="78" stroke="#888" stroke-width="2"/><rect x="429" y="62" width="11" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="465" y1="52" x2="465" y2="70" stroke="#1D9E75" stroke-width="2"/><rect x="459" y="55" width="11" height="13" fill="#1D9E75" rx="1"/>
+    
+    <line x1="40" y1="63" x2="640" y2="63" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
+    <text x="42" y="60" font-size="9" fill="#26215C" font-weight="600">현재 268,000원</text>
+    
+    <line x1="40" y1="45" x2="640" y2="45" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="580" y="42" font-size="8" fill="#E24B4A" font-weight="600">52주고 275,000</text>
+    
+    <line x1="40" y1="115" x2="640" y2="115" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="580" y="112" font-size="8" fill="#1D9E75">MA20 (232,375)</text>
+    
+    <line x1="40" y1="135" x2="640" y2="135" stroke="#0C447C" stroke-width="1" stroke-dasharray="3 2" opacity=".3"/>
+    <text x="580" y="132" font-size="8" fill="#0C447C">MA60 (224,893)</text>
+    
+    <path d="M 280,145 L 320,130 L 360,122 L 400,95 L 440,105 L 480,98" stroke="#1D9E75" stroke-width="2.5" fill="none" opacity=".4" marker-end="url(#arr)"/>
+    <text x="500" y="95" font-size="9" fill="#1D9E75" font-weight="700">세력 시세</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 210,000원대 5개월 박스권 횡보 매집 완료 → 4월 초 거래량 급증 돌파 → 52주 고점 도전 중</text>
   </svg>
 </div>
 
-<!-- ② 주봉 차트 -->
-<div class="sec">📈 주봉 차트 모양 — "장기 하락 종료 + V자 반등 + 4파 눌림목"</div>
-
+<div class="sec">📈 주봉 차트 모양 — "2025년 11월 더블바텀 형성 후 엘리어트 5파 상승, 현재 5파 말기"</div>
 <div class="card" style="background:#f9f8f5;margin-bottom:6px">
-  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#0C447C">🔍 주봉이 이런 모양인 이유</div>
-  <div class="reason-row"><div class="rn">이유①</div><div><b>2024 하반기까지 역배열 하락 추세</b>. 134,600 52주 저점 확인 후 볼린저밴드 하단 이탈 → 과매도 반등. 주봉상 장기 하락 추세선 돌파.</div></div>
-  <div class="reason-row"><div class="rn">이유②</div><div>아이온2 출시 성공으로 <b>주봉 연속 양봉 계단식 급등</b>. 엘리어트 1~3파에 해당. 3파 고점 258,500원에서 4파 조정 진입 중.</div></div>
-  <div class="reason-row"><div class="rn">이유③</div><div><b>현재 4파 조정 구간 (200,000~220,000)</b>. 이평선 정배열 유지 중. 20주선이 상승 지지선 역할. 피보나치 38.2% 되돌림 수준에서 지지 확인 중.</div></div>
-  <div class="reason-row"><div class="rn">이유④</div><div>아이온2 <b>글로벌 출시(3Q26)</b>가 5파 상승 트리거. 실적 반영 시 주봉 정배열 재확인 + 260,000 저항 돌파 목표.</div></div>
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>엘리어트 5파 구조:</b> ①파(2025.4월 146,000→6월 207,000) → ②파 조정(190,000) → ③파(10월 238,500) → ④파 깊은 조정(11월 176,100, 52주 저점) → ⑤파 진행 중(현재 268,000). 3파가 가장 강력했고 5파는 연장형 가능성.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>더블바텀 완성:</b> 2025년 4월 저점(146,000원)과 11월 저점(176,100원)이 쌍바닥 형성. 11월 저점 이후 12월~3월 5개월 횡보 = 세력이 이 구간에서 대량 매집. "횡보는 매집"의 전형적 사례.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>주봉 이평선 정배열:</b> 20주선(약 230,000원대), 60주선(약 210,000원대), 120주선(약 200,000원대) 모두 상승 정렬. 현재가가 모든 이평선 위 → 중기 상승 추세 확립.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 카탈리스트:</b> 게임주 섹터 회복(2025년 실적 부진 → 2026년 신작 기대감). 4월 주봉 2연속 양봉 → 세력 홀딩 중. 목표: 52주 고점(275,000) 돌파 후 300,000원대 진입.</div></div>
 </div>
 
 <div class="chart-area">
-  <div class="chart-title">주봉 (Weekly) <span class="ct-badge" style="background:#EAF3DE;color:#085041">V자 반등 → 엘리어트 3파 급등 → 4파 조정 → 5파 준비</span></div>
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">더블바텀 → 엘리어트 5파</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <rect x="40" y="145" width="80" height="45" rx="4" fill="#E6F1FB" opacity=".2"/>
+    <text x="80" y="156" text-anchor="middle" font-size="8" fill="#0C447C" font-weight="600">①파</text>
+    
+    <rect x="130" y="125" width="60" height="65" rx="4" fill="#FAEEDA" opacity=".2"/>
+    <text x="160" y="136" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">②파</text>
+    
+    <rect x="200" y="90" width="90" height="100" rx="4" fill="#E1F5EE" opacity=".2"/>
+    <text x="245" y="101" text-anchor="middle" font-size="8" fill="#04342C" font-weight="600">③파 (최강)</text>
+    
+    <rect x="300" y="135" width="85" height="55" rx="4" fill="#FCEBEB" opacity=".2"/>
+    <text x="342" y="146" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">④파 깊은조정</text>
+    
+    <rect x="395" y="45" width="150" height="100" rx="4" fill="#EAF3DE" opacity=".25"/>
+    <text x="470" y="56" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">⑤파 (진행중)</text>
+    
+    <line x1="55" y1="155" x2="55" y2="172" stroke="#888" stroke-width="1.5"/><rect x="51" y="160" width="7" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="140" x2="75" y2="160" stroke="#888" stroke-width="1.5"/><rect x="71" y="143" width="7" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="132" x2="95" y2="150" stroke="#888" stroke-width="1.5"/><rect x="91" y="135" width="7" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="115" y1="135" x2="115" y2="155" stroke="#888" stroke-width="1.5"/><rect x="111" y="140" width="7" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="140" y1="142" x2="140" y2="162" stroke="#888" stroke-width="1.5"/><rect x="136" y="146" width="7" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="165" y1="138" x2="165" y2="158" stroke="#888" stroke-width="1.5"/><rect x="161" y="141" width="7" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="190" y1="130" x2="190" y2="148" stroke="#888" stroke-width="1.5"/><rect x="186" y="133" width="7" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="108" x2="215" y2="132" stroke="#1D9E75" stroke-width="1.8"/><rect x="211" y="112" width="7" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="240" y1="95" x2="240" y2="118" stroke="#1D9E75" stroke-width="1.8"/><rect x="236" y="98" width="7" height="18" fill="#1D9E75" rx="1"/>
+    <text x="240" y="88" text-anchor="middle" font-size="7" fill="#1D9E75" font-weight="700">③파고점</text>
+    <line x1="265" y1="115" x2="265" y2="138" stroke="#888" stroke-width="1.5"/><rect x="261" y="120" width="7" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="290" y1="125" x2="290" y2="148" stroke="#888" stroke-width="1.5"/><rect x="286" y="130" width="7" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="315" y1="135" x2="315" y2="158" stroke="#888" stroke-width="1.5"/><rect x="311" y="140" width="7" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="340" y1="148" x2="340" y2="172" stroke="#E24B4A" stroke-width="1.8"/><rect x="336" y="154" width="7" height="16" fill="#E24B4A" rx="1"/>
+    <text x="340" y="180" text-anchor="middle" font-size="7" fill="#A32D2D" font-weight="700">④파저점 176,100</text>
+    <line x1="365" y1="142" x2="365" y2="165" stroke="#888" stroke-width="1.5"/><rect x="361" y="146" width="7" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="390" y1="135" x2="390" y2="155" stroke="#888" stroke-width="1.5"/><rect x="386" y="139" width="7" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="415" y1="130" x2="415" y2="150" stroke="#888" stroke-width="1.5"/><rect x="411" y="134" width="7" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="440" y1="125" x2="440" y1="145" stroke="#888" stroke-width="1.5"/><rect x="436" y="129" width="7" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="465" y1="105" x2="465" y2="128" stroke="#1D9E75" stroke-width="1.8"/><rect x="461" y="109" width="7" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="490" y1="85" x2="490" y2="108" stroke="#1D9E75" stroke-width="1.8"/><rect x="486" y="89" width="7" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="515" y1="68" x2="515" y2="90" stroke="#1D9E75" stroke-width="2"/><rect x="511" y="72" width="7" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="540" y1="58" x2="540" y2="78" stroke="#1D9E75" stroke-width="2"/><rect x="536" y="62" width="7" height="14" fill="#E24B4A" rx="1"/>
+    
+    <line x1="40" y1="65" x2="640" y2="65" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="545" y="62" font-size="9" fill="#26215C" font-weight="600">현재 268,000</text>
+    
+    <path d="M 55,165 Q 95,145 115,148 T 165,148 Q 215,120 240,105 T 290,138 Q 340,165 365,152 T 465,115 Q 515,75 540,68" stroke="#1E3A5F" stroke-width="2" fill="none" opacity=".35" stroke-dasharray="5 3"/>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 2025년 11월 더블바텀(176,100) 완성 후 5개월 매집 → 2026년 4월 엘리어트 5파 급등 중</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "2025년 4월 역대 저점(134,600원) 이후 장기 상승 사이클 진입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>장기 바닥권 탈출:</b> 2024년 4월~2025년 4월 1년간 134,600~190,000원 박스권 횡보 = 대형 세력의 저가 매집 구간. 역대 최저가(134,600원) 이후 반등 사이클 시작.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>2025년 실적 부진 → 2026년 기대감:</b> 2024~2025년 리니지 시리즈 침체로 주가 급락. 2025년 하반기부터 신작 개발 소식 + 중국 라이선스 이슈 해소 기대 → 턴어라운드 트리거.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>월봉 추세 전환:</b> 2025년 5월부터 저점·고점 동반 상승 구조. 2026년 1월 258,500원 돌파 실패 후 조정 → 4월 재돌파 성공 = 대세 상승 재개 신호.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망:</b> 52주 고점(275,000) 돌파 시 다음 목표 300,000~350,000원(2024년 고점 248,000원 대비 +40~50%). 단, 게임 섹터 경쟁 심화 + 신작 흥행 실패 리스크.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">역대 저점 → 턴어라운드</span></div>
   <svg width="100%" viewBox="0 0 680 200">
-    <defs>
-      <marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
-      </marker>
-    </defs>
-
-    <!-- 배경 -->
-    <rect x="40"  y="10" width="200" height="180" rx="4" fill="#FCEBEB" opacity=".08"/>
-    <rect x="250" y="10" width="50"  height="180" rx="4" fill="#EAF3DE" opacity=".18"/>
-    <rect x="310" y="10" width="150" height="180" rx="4" fill="#EAF3DE" opacity=".15"/>
-    <rect x="470" y="10" width="100" height="180" rx="4" fill="#FAEEDA" opacity=".2"/>
-    <rect x="580" y="10" width="100" height="180" rx="4" fill="#E6F1FB" opacity=".15"/>
-
-    <text x="140" y="22" text-anchor="middle" font-size="8" fill="#A32D2D">장기 하락 추세</text>
-    <text x="275" y="22" text-anchor="middle" font-size="8" fill="#27500A">반등</text>
-    <text x="385" y="22" text-anchor="middle" font-size="8" fill="#27500A">엘리어트 1~3파</text>
-    <text x="520" y="22" text-anchor="middle" font-size="8" fill="#633806">4파 조정</text>
-    <text x="630" y="22" text-anchor="middle" font-size="8" fill="#0C447C">5파 준비</text>
-
-    <!-- 하락 주봉들 (전 구간) -->
-    <line x1="55"  y1="118" x2="55"  y2="138" stroke="#E24B4A" stroke-width="2"/><rect x="49"  y="120" width="12" height="16" fill="#E24B4A" rx="1"/>
-    <line x1="76"  y1="122" x2="76"  y2="141" stroke="#E24B4A" stroke-width="2"/><rect x="70"  y="124" width="12" height="15" fill="#E24B4A" rx="1"/>
-    <line x1="97"  y1="127" x2="97"  y2="145" stroke="#E24B4A" stroke-width="2"/><rect x="91"  y="129" width="12" height="14" fill="#E24B4A" rx="1"/>
-    <line x1="118" y1="130" x2="118" y2="148" stroke="#1D9E75" stroke-width="2"/><rect x="112" y="132" width="12" height="14" fill="#1D9E75" rx="1"/>
-    <line x1="139" y1="133" x2="139" y2="150" stroke="#E24B4A" stroke-width="2"/><rect x="133" y="135" width="12" height="13" fill="#E24B4A" rx="1"/>
-    <line x1="160" y1="136" x2="160" y2="153" stroke="#E24B4A" stroke-width="2"/><rect x="154" y="138" width="12" height="13" fill="#E24B4A" rx="1"/>
-    <line x1="181" y1="138" x2="181" y2="155" stroke="#1D9E75" stroke-width="2"/><rect x="175" y="140" width="12" height="13" fill="#1D9E75" rx="1"/>
-    <line x1="202" y1="140" x2="202" y2="157" stroke="#E24B4A" stroke-width="2"/><rect x="196" y="142" width="12" height="13" fill="#E24B4A" rx="1"/>
-    <line x1="223" y1="141" x2="223" y2="158" stroke="#E24B4A" stroke-width="2"/><rect x="217" y="143" width="12" height="13" fill="#E24B4A" rx="1"/>
-    <!-- 저점 52주 표시 -->
-    <circle cx="240" cy="161" r="5" fill="#E24B4A"/>
-    <text x="240" y="175" text-anchor="middle" font-size="8" fill="#A32D2D">134,600</text>
-
-    <!-- 반등 주봉 -->
-    <line x1="258" y1="122" x2="258" y2="158" stroke="#1D9E75" stroke-width="3"/><rect x="252" y="124" width="12" height="28" fill="#1D9E75" rx="1"/>
-    <text x="258" y="116" text-anchor="middle" font-size="8" fill="#27500A">아이온2</text>
-
-    <!-- 1파~3파 급등 주봉들 -->
-    <line x1="318" y1="105" x2="318" y2="132" stroke="#1D9E75" stroke-width="3"/><rect x="312" y="107" width="12" height="23" fill="#1D9E75" rx="1"/>
-    <text x="318" y="100" text-anchor="middle" font-size="8" fill="#27500A">①</text>
-    <line x1="341" y1="88" x2="341" y2="112" stroke="#1D9E75" stroke-width="3"/><rect x="335" y="90" width="12" height="20" fill="#1D9E75" rx="1"/>
-    <line x1="364" y1="72" x2="364" y2="95" stroke="#1D9E75" stroke-width="3.5"/><rect x="358" y="74" width="12" height="18" fill="#1D9E75" rx="1"/>
-    <text x="364" y="67" text-anchor="middle" font-size="8" fill="#27500A">③</text>
-    <line x1="387" y1="57" x2="387" y2="82" stroke="#1D9E75" stroke-width="3.5"/><rect x="381" y="59" width="12" height="20" fill="#EF9F27" rx="1"/>
-    <!-- 3파 고점 258,500 -->
-    <circle cx="393" cy="55" r="5" fill="#EF9F27"/>
-    <text x="393" y="48" text-anchor="middle" font-size="9" fill="#EF9F27" font-weight="700">258,500!</text>
-    <line x1="410" y1="65" x2="410" y2="88" stroke="#E24B4A" stroke-width="2.5"/><rect x="404" y="68" width="12" height="18" fill="#E24B4A" rx="1"/>
-
-    <!-- 4파 조정 -->
-    <line x1="478" y1="76" x2="478" y2="97" stroke="#E24B4A" stroke-width="2.5"/><rect x="472" y="78" width="12" height="17" fill="#E24B4A" rx="1"/>
-    <line x1="499" y1="80" x2="499" y2="100" stroke="#E24B4A" stroke-width="2.5"/><rect x="493" y="82" width="12" height="16" fill="#E24B4A" rx="1"/>
-    <line x1="520" y1="81" x2="520" y2="100" stroke="#1D9E75" stroke-width="2"/><rect x="514" y="82" width="12" height="15" fill="#1D9E75" rx="1"/>
-    <line x1="541" y1="83" x2="541" y2="101" stroke="#E24B4A" stroke-width="2"/><rect x="535" y="84" width="12" height="15" fill="#E24B4A" rx="1"/>
-    <text x="510" y="114" font-size="8" fill="#633806" text-anchor="middle">④ 조정 중</text>
-
-    <!-- 5파 준비 (현재) -->
-    <line x1="588" y1="81" x2="588" y2="97" stroke="#1D9E75" stroke-width="2.5"/><rect x="582" y="82" width="12" height="14" fill="#1D9E75" rx="1"/>
-    <line x1="609" y1="80" x2="609" y2="95" stroke="#1D9E75" stroke-width="2.5"/><rect x="603" y="81" width="12" height="13" fill="#1D9E75" rx="1"/>
-    <!-- 5파 상승 기대 -->
-    <path d="M632 78 Q650 58 665 40" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar2)"/>
-    <text x="652" y="37" font-size="8" fill="#1D9E75">⑤ 목표</text>
-    <text x="652" y="50" font-size="8" fill="#1D9E75">360,000+</text>
-
-    <!-- 이평선 정배열 -->
-    <path d="M45 148 Q170 140 250 125 Q330 88 415 65 Q475 80 540 86 Q600 81 640 79" fill="none" stroke="#1D9E75" stroke-width="1.8"/>
-    <path d="M45 155 Q210 148 278 135 Q360 98 435 74 Q490 87 555 90 Q610 87 642 85" fill="none" stroke="#EF9F27" stroke-width="1.3"/>
-    <text x="637" y="77" font-size="8" fill="#1D9E75">─5주</text>
-    <text x="637" y="87" font-size="8" fill="#EF9F27">─20주</text>
-    <rect x="633" y="92" width="42" height="14" rx="3" fill="#EAF3DE"/>
-    <text x="654" y="102" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">정배열</text>
-
-    <!-- 현재가 선 -->
-    <line x1="40" y1="85" x2="590" y2="85" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
-    <text x="42" y="82" font-size="9" fill="#26215C" font-weight="600">현재 213,000</text>
-
-    <line x1="40" y1="188" x2="640" y2="188" stroke="#d3d1c7" stroke-width="1"/>
-    <text x="340" y="198" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 장기 하락 종료 → V자 반등 → 엘리어트 3파 급등 → 4파 눌림목 조정 → 5파(3Q글로벌) 준비</text>
+    <rect x="40" y="125" width="180" height="70" rx="4" fill="#FCEBEB" opacity=".15"/>
+    <text x="130" y="138" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">2024~2025 바닥권</text>
+    
+    <rect x="230" y="75" width="240" height="120" rx="4" fill="#EAF3DE" opacity=".2"/>
+    <text x="350" y="88" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">2025년 하반기~ 상승 사이클</text>
+    
+    <line x1="50" y1="145" x2="50" y2="168" stroke="#888" stroke-width="1.2"/><rect x="47" y="150" width="5" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="70" y1="142" x2="70" y2="165" stroke="#888" stroke-width="1.2"/><rect x="67" y="147" width="5" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="90" y1="155" x2="90" y2="175" stroke="#888" stroke-width="1.2"/><rect x="87" y="160" width="5" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="110" y1="162" x2="110" y2="180" stroke="#E24B4A" stroke-width="1.3"/><rect x="107" y="167" width="5" height="11" fill="#E24B4A" rx="1"/>
+    <text x="110" y="188" text-anchor="middle" font-size="7" fill="#A32D2D" font-weight="700">저점 134,600</text>
+    <line x1="130" y1="158" x2="130" y2="176" stroke="#888" stroke-width="1.2"/><rect x="127" y="162" width="5" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="150" y1="155" x2="150" y2="172" stroke="#888" stroke-width="1.2"/><rect x="147" y="159" width="5" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="170" y1="148" x2="170" y2="168" stroke="#888" stroke-width="1.2"/><rect x="167" y="152" width="5" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="190" y1="142" x2="190" y2="162" stroke="#888" stroke-width="1.2"/><rect x="187" y="146" width="5" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="210" y1="138" x2="210" y2="158" stroke="#888" stroke-width="1.2"/><rect x="207" y="142" width="5" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="230" y1="125" x2="230" y2="148" stroke="#1D9E75" stroke-width="1.3"/><rect x="227" y="129" width="5" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="250" y1="115" x2="250" y2="138" stroke="#1D9E75" stroke-width="1.3"/><rect x="247" y="119" width="5" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="270" y1="120" x2="270" y2="142" stroke="#888" stroke-width="1.2"/><rect x="267" y="125" width="5" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="290" y1="118" x2="290" y2="140" stroke="#888" stroke-width="1.2"/><rect x="287" y="123" width="5" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="310" y1="112" x2="310" y2="135" stroke="#1D9E75" stroke-width="1.3"/><rect x="307" y="116" width="5" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="330" y1="105" x2="330" y2="128" stroke="#1D9E75" stroke-width="1.3"/><rect x="327" y="109" width="5" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="350" y1="95" x2="350" y2="118" stroke="#1D9E75" stroke-width="1.4"/><rect x="347" y="99" width="5" height="17" fill="#1D9E75" rx="1"/>
+    <text x="350" y="90" text-anchor="middle" font-size="7" fill="#1D9E75" font-weight="700">2025.10월 238,500</text>
+    <line x1="370" y1="110" x2="370" y2="135" stroke="#888" stroke-width="1.2"/><rect x="367" y="116" width="5" height="17" fill="#E24B4A" rx="1"/>
+    <line x1="390" y1="125" x2="390" y2="148" stroke="#888" stroke-width="1.2"/><rect x="387" y="130" width="5" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="410" y1="120" x2="410" y2="142" stroke="#888" stroke-width="1.2"/><rect x="407" y="125" width="5" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="430" y1="102" x2="430" y2="125" stroke="#1D9E75" stroke-width="1.4"/><rect x="427" y="106" width="5" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="450" y1="88" x2="450" y2="112" stroke="#1D9E75" stroke-width="1.4"/><rect x="447" y="92" width="5" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="470" y1="68" x2="470" y2="95" stroke="#1D9E75" stroke-width="1.5"/><rect x="467" y="72" width="5" height="21" fill="#1D9E75" rx="1"/>
+    <text x="470" y="63" text-anchor="middle" font-size="7" fill="#1D9E75" font-weight="700">2026.4월 급등</text>
+    
+    <line x1="40" y1="75" x2="640" y2="75" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".45"/>
+    <text x="550" y="72" font-size="9" fill="#26215C" font-weight="600">현재 268,000원</text>
+    
+    <line x1="40" y1="58" x2="640" y2="58" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="550" y="55" font-size="8" fill="#E24B4A">52주고 275,000</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2025년 4월 역대 저점(134,600) 이후 장기 상승 사이클 진입 → 2026년 4월 신고가 도전</text>
   </svg>
 </div>
 
-<!-- ③ 월봉 차트 -->
-<div class="sec">📈 월봉 차트 모양 — "100만원 버블 → 4년 하락 → 저점 반등 + 실적 턴어라운드"</div>
-
-<div class="card" style="background:#f9f8f5;margin-bottom:6px">
-  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#0C447C">🔍 월봉이 이런 모양인 이유</div>
-  <div class="reason-row"><div class="rn">이유①</div><div><b>2020년 11월 코로나 게임 특수</b>로 고점 103만원 돌파. 이후 리니지2M 등 기대 무산 + 중과금 논란 → 4년간 장기 하락. "리니지 회사" 이미지 고착으로 대형 기관·외국인 이탈.</div></div>
-  <div class="reason-row"><div class="rn">이유②</div><div><b>2024년 하반기 구조조정 + 비용 절감 완료</b>. 직원 5,000→4,100명 감축. 핵심 개발 조직만 유지. 월봉상 긴 아래꼬리가 바닥 신호. 세력 재매집 흔적.</div></div>
-  <div class="reason-row"><div class="rn">이유③</div><div>아이온2 성공 → <b>월봉 장대 양봉 발생(2025.11~12)</b>. 4년 하락 추세선 상향 돌파. 월봉 이평선 역배열 탈출 시도 중. 구조적 전환점.</div></div>
-  <div class="reason-row"><div class="rn">이유④</div><div>2026년은 <b>아이온2 글로벌 + 신더시티 + 리니지클래식</b> 복합 모멘텀. 월봉 기준 장기 상승 추세 복귀 가능. 목표 35~43만원 수준이면 월봉 저점 대비 +150~220%.</div></div>
-</div>
-
-<div class="chart-area">
-  <div class="chart-title">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">103만 버블 → 4년 하락(87%) → 저점 반등 → 실적 턴어라운드 + 재상승</span></div>
-  <svg width="100%" viewBox="0 0 680 205">
-    <defs>
-      <marker id="ar3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-        <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round"/>
-      </marker>
-    </defs>
-
-    <!-- 장기 하락 배경 -->
-    <rect x="40" y="10" width="370" height="185" rx="4" fill="#FCEBEB" opacity=".07"/>
-    <text x="225" y="22" text-anchor="middle" font-size="8" fill="#A32D2D">2021~2024 장기 하락 (-87% · 4년)</text>
-    <!-- 반등 배경 -->
-    <rect x="410" y="10" width="270" height="185" rx="4" fill="#EAF3DE" opacity=".1"/>
-    <text x="545" y="22" text-anchor="middle" font-size="8" fill="#27500A">2025~2026 실적 턴어라운드 + 재상승</text>
-
-    <!-- 2020 버블 고점 -->
-    <line x1="55" y1="34" x2="55" y2="70" stroke="#EF9F27" stroke-width="3.5"/><rect x="49" y="37" width="12" height="28" fill="#EF9F27" rx="1"/>
-    <line x1="55" y1="18" x2="55" y2="34" stroke="#EF9F27" stroke-width="2"/>
-    <circle cx="61" cy="16" r="5" fill="#EF9F27"/>
-    <text x="61" y="9" text-anchor="middle" font-size="8" fill="#EF9F27" font-weight="700">103만</text>
-    <text x="55" y="12" text-anchor="middle" font-size="7" fill="#633806">코로나 버블</text>
-
-    <!-- 장기 하락 월봉들 -->
-    <line x1="74"  y1="55" x2="74"  y2="82" stroke="#E24B4A" stroke-width="2"/><rect x="68"  y="57" width="12" height="22" fill="#E24B4A" rx="1"/>
-    <line x1="93"  y1="68" x2="93"  y2="92" stroke="#E24B4A" stroke-width="2"/><rect x="87"  y="70" width="12" height="20" fill="#E24B4A" rx="1"/>
-    <line x1="112" y1="80" x2="112" y2="102" stroke="#E24B4A" stroke-width="2"/><rect x="106" y="82" width="12" height="18" fill="#E24B4A" rx="1"/>
-    <line x1="131" y1="90" x2="131" y2="110" stroke="#1D9E75" stroke-width="2"/><rect x="125" y="92" width="12" height="16" fill="#1D9E75" rx="1"/>
-    <line x1="150" y1="100" x2="150" y2="118" stroke="#E24B4A" stroke-width="2"/><rect x="144" y="102" width="12" height="15" fill="#E24B4A" rx="1"/>
-    <line x1="169" y1="108" x2="169" y2="125" stroke="#E24B4A" stroke-width="2"/><rect x="163" y="110" width="12" height="14" fill="#E24B4A" rx="1"/>
-    <line x1="188" y1="115" x2="188" y2="131" stroke="#1D9E75" stroke-width="2"/><rect x="182" y="117" width="12" height="13" fill="#1D9E75" rx="1"/>
-    <line x1="207" y1="120" x2="207" y2="135" stroke="#E24B4A" stroke-width="2"/><rect x="201" y="122" width="12" height="12" fill="#E24B4A" rx="1"/>
-    <line x1="226" y1="124" x2="226" y2="138" stroke="#E24B4A" stroke-width="2"/><rect x="220" y="126" width="12" height="11" fill="#E24B4A" rx="1"/>
-    <line x1="245" y1="127" x2="245" y2="140" stroke="#1D9E75" stroke-width="2"/><rect x="239" y="129" width="12" height="11" fill="#1D9E75" rx="1"/>
-    <line x1="264" y1="130" x2="264" y2="143" stroke="#E24B4A" stroke-width="2"/><rect x="258" y="132" width="12" height="10" fill="#E24B4A" rx="1"/>
-    <line x1="283" y1="132" x2="283" y2="144" stroke="#E24B4A" stroke-width="2"/><rect x="277" y="134" width="12" height="10" fill="#E24B4A" rx="1"/>
-    <line x1="302" y1="134" x2="302" y2="146" stroke="#1D9E75" stroke-width="2"/><rect x="296" y="136" width="12" height="10" fill="#1D9E75" rx="1"/>
-    <line x1="321" y1="136" x2="321" y2="148" stroke="#E24B4A" stroke-width="2"/><rect x="315" y="138" width="12" height="10" fill="#E24B4A" rx="1"/>
-    <line x1="340" y1="138" x2="340" y2="150" stroke="#E24B4A" stroke-width="2"/><rect x="334" y="140" width="12" height="10" fill="#E24B4A" rx="1"/>
-    <line x1="359" y1="139" x2="359" y2="151" stroke="#1D9E75" stroke-width="2"/><rect x="353" y="141" width="12" height="10" fill="#1D9E75" rx="1"/>
-    <line x1="378" y1="140" x2="378" y2="152" stroke="#E24B4A" stroke-width="2"/><rect x="372" y="142" width="12" height="10" fill="#E24B4A" rx="1"/>
-    <!-- 52주 저점 표시 -->
-    <circle cx="395" cy="158" r="5" fill="#E24B4A"/>
-    <text x="393" y="173" text-anchor="middle" font-size="8" fill="#A32D2D">134,600</text>
-
-    <!-- 반등 구간 (아이온2 출시 후) -->
-    <line x1="418" y1="120" x2="418" y2="152" stroke="#1D9E75" stroke-width="2.5"/><rect x="412" y="122" width="12" height="25" fill="#1D9E75" rx="1"/>
-    <!-- 아이온2 출시 급등 월봉 -->
-    <line x1="440" y1="72" x2="440" y2="120" stroke="#1D9E75" stroke-width="3.5"/><rect x="434" y="75" width="12" height="40" fill="#EF9F27" rx="1"/>
-    <line x1="440" y1="58" x2="440" y2="72" stroke="#EF9F27" stroke-width="2"/>
-    <circle cx="446" cy="56" r="5" fill="#EF9F27"/>
-    <text x="446" y="49" text-anchor="middle" font-size="8" fill="#EF9F27" font-weight="700">258,500!</text>
-    <text x="440" y="43" text-anchor="middle" font-size="7" fill="#27500A">아이온2 출시</text>
-    <!-- 리니지클래식 조정 후 재상승 -->
-    <line x1="462" y1="85" x2="462" y2="108" stroke="#E24B4A" stroke-width="2.5"/><rect x="456" y="87" width="12" height="18" fill="#E24B4A" rx="1"/>
-    <line x1="484" y1="88" x2="484" y2="108" stroke="#1D9E75" stroke-width="2.5"/><rect x="478" y="89" width="12" height="17" fill="#1D9E75" rx="1"/>
-    <text x="476" y="83" font-size="8" fill="#27500A">리니지클</text>
-    <text x="476" y="73" font-size="8" fill="#27500A">출시 2/11</text>
-    <line x1="506" y1="86" x2="506" y2="104" stroke="#E24B4A" stroke-width="2.5"/><rect x="500" y="87" width="12" height="15" fill="#E24B4A" rx="1"/>
-    <!-- 현재 (4월) -->
-    <line x1="528" y1="84" x2="528" y2="100" stroke="#1D9E75" stroke-width="2.5"/><rect x="522" y="85" width="12" height="14" fill="#1D9E75" rx="1" opacity=".7"/>
-    <!-- 아이온2 글로벌 기대 -->
-    <path d="M554 80 Q590 55 625 35" fill="none" stroke="#1D9E75" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#ar3)"/>
-    <text x="618" y="32" font-size="8" fill="#1D9E75">3Q 글로벌</text>
-    <text x="618" y="45" font-size="8" fill="#1D9E75">→ 목표 360K+</text>
-
-    <!-- 현재가 선 -->
-    <line x1="40" y1="88" x2="534" y2="88" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
-    <text x="42" y="85" font-size="9" fill="#26215C" font-weight="600">현재 213,000</text>
-
-    <line x1="40" y1="193" x2="640" y2="193" stroke="#d3d1c7" stroke-width="1"/>
-    <text x="340" y="203" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 103만 버블(2020) → 4년 하락(-87%) → 134,600 저점 → 아이온2 V자 반등 → 재상승 진행 중</text>
-  </svg>
-</div>
-
-<!-- 세력·기업 분석 -->
-<div class="sec">🧲 세력 관점 분석 — "장기 하락 종료 + 실적 턴어라운드 대형주 매집"</div>
+<div class="sec">🧲 세력 관점 분석</div>
 <div class="card">
-  <div class="zone">
-    <div class="dot" style="background:#1D9E75"></div>
-    <div><span style="font-weight:600">세력 = 기관·외국인 주도 턴어라운드 매집</span><span class="tag t-g">대형주 실적 개선주</span>
-      <div style="color:#888;margin-top:2px;font-size:11px">아난티·케이사인처럼 단기 세력이 아닌 <b>기관·외국인이 주도하는 실적 기반 대형주 구조</b>. 134,600 저점에서 기관 집중 매수 → 아이온2 출시 성공으로 트리거. 자사주 소각·배당 강화로 수급 개선.</div>
-    </div>
-  </div>
-  <div class="zone">
-    <div class="dot" style="background:#185FA5"></div>
-    <div><span style="font-weight:600">아이온2 — 2025.11 출시 성공 (멤버십 150만)</span><span class="tag t-b">PC 매출 2017년 이후 최대</span>
-      <div style="color:#888;margin-top:2px;font-size:11px">4Q25 PC게임 매출 1,682억 → 2017년 이후 분기 최대. 멤버십(유료 구독) 기반 안정적 매출. 일평균 결제액 하향 안정화 중. <b>2026년 3Q 글로벌 출시(서구권)</b>가 다음 폭발 트리거.</div>
-    </div>
-  </div>
-  <div class="zone">
-    <div class="dot" style="background:#EF9F27"></div>
-    <div><span style="font-weight:600">2026년 목표 매출 2~2.5조원 (+49%)</span><span class="tag t-a">영업이익 361억 → 흑자전환 확인</span>
-      <div style="color:#888;margin-top:2px;font-size:11px">2025 영업이익 161억 흑자전환(2024 -1,092억 → 흑자). 2026 아이온2 글로벌 + 신더시티 복합 모멘텀. 구글 수수료 인하(PC결제 90% → 수수료 절감 ~1,000억). 상법개정 자사주 소각 기대.</div>
-    </div>
-  </div>
-  <div class="zone">
-    <div class="dot" style="background:#534AB7"></div>
-    <div><span style="font-weight:600">신규 IP 5개 출시 + 글로벌 다변화</span><span class="tag t-p">리니지 탈피 → 장르 다각화</span>
-      <div style="color:#888;margin-top:2px;font-size:11px">리니지 클래식(2/11), 신더시티, 타임테이커즈, 브레이커스, 아이온2글로벌. "리니지 회사"에서 탈피. 아마존게임즈 출신 영입으로 글로벌 퍼블리싱 역량 강화. 밸류에이션 리레이팅 가능.</div>
-    </div>
-  </div>
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">매집 완료 → 시세 분출 단계</span><span class="tag t-g">세력 주도</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 12월~2026년 3월 5개월간 190,000~230,000원 박스권 장기 횡보 = 세력 매집 구간. 4/9 거래량 226,733주 급증(전일 대비 5배)하며 234,000원 돌파 → 매집 종료 후 시세 상승 개시 신호. 세력은 본인 매집 본전(추정 210,000~220,000원) 밑으로 떨어지는 것을 참지 못한다 → 이 구간이 강한 지지선 역할 수행.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">외국인·기관 수급 양호</span><span class="tag t-navy">수급 호전</span><div style="color:#888;margin-top:2px;font-size:11px">2026년 1월 이후 외국인 순매수 지속(추정). 4월 급등 구간에서도 거래량 동반 → 외국인·기관의 적극적 매수 참여. "거래량은 돈"의 원칙 적용: 거래량 없는 상승은 지속 어렵지만, 현재는 거래량 동반 중이므로 세력 홀딩 가능성 높음.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">피보나치 주요 지지·저항</span><span class="tag t-a">기술적 관점</span><div style="color:#888;margin-top:2px;font-size:11px">52주 범위(176,100~275,000) 기준: ① 피보나치 38.2% 되돌림(237,220원) ≈ MA20(232,375) → 1차 지지선. ② 50% 되돌림(225,550원) ≈ MA60(224,893) → 핵심 지지선. ③ 61.8% 되돌림(213,880원) → 추세 전환 경계선. 현재 23.6% 되돌림(251,660원) 돌파 완료 → 다음 목표 52주 고점(275,000원).</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">고점권 과열 경계 & 게임 섹터 리스크</span><span class="tag t-r">리스크</span><div style="color:#888;margin-top:2px;font-size:11px">① 52주 위치 92.9% 고점권 → 단기 조정 압력 존재. ② 4/16 이후 거래량 급감(269,116→64,580) = 상승 피로 징후. ③ 급하게 오른 종목은 조정도 급격: 275,000원 저항 실패 시 237,000원(MA20)까지 -14% 조정 가능. ④ 게임 섹터 경쟁 심화(카카오게임즈, 넷마블) + 신작 흥행 실패 시 실적 악화 리스크.</div></div></div>
 </div>
 
-<!-- 2026 카탈리스트 -->
-<div class="sec">📅 2026년 핵심 카탈리스트</div>
-<div class="card" style="background:#f9f8f5">
-  <div class="row"><span style="font-weight:600">2026.2.11 리니지 클래식 정식 출시 (월정액 2.97만원)</span><span class="tag t-g">출시 완료 ✓</span></div>
-  <div class="row"><span style="font-weight:600">2026.3~2Q 신더시티·타임테이커즈·브레이커스 글로벌 CBT</span><span class="tag t-b">진행 중 ▲</span></div>
-  <div class="row"><span style="font-weight:600">2026.5.13 1Q 실적 발표 (아이온2 흥행 첫 온기 반영)</span><span class="tag t-a">대기 중 △</span></div>
-  <div class="row"><span style="font-weight:600">2026 3Q 아이온2 글로벌(서구권) 출시 — 최대 모멘텀</span><span class="tag t-g">핵심 이벤트 ★★★</span></div>
-  <div class="row"><span style="font-weight:600">구글 앱수수료 인하 → 게임사 이익률 반등</span><span class="tag t-teal">구조적 수혜 ✓</span></div>
-  <div class="row"><span style="font-weight:600">상법 개정 자사주 소각 기대 강화</span><span class="tag t-p">주주환원 ▲</span></div>
-</div>
-
-<!-- 체크리스트 -->
-<div class="sec">✅ 세력·펀더멘털 체크리스트</div>
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
 <div class="card">
-  <div class="row"><span>아이온2 출시 성공 — 멤버십 150만, 4Q PC매출 2017년 이후 최대</span><span class="tag t-g">확인 ★★★</span></div>
-  <div class="row"><span>2025 영업이익 161억 흑자전환 (2024 -1,092억 적자에서)</span><span class="tag t-g">확인 ✓</span></div>
-  <div class="row"><span>2026 목표 매출 2~2.5조 (+49%) — 아이온2+신더시티</span><span class="tag t-b">목표 ▲</span></div>
-  <div class="row"><span>이평선 정배열 유지 — 4파 눌림목 후 5파 상승 준비</span><span class="tag t-g">기술 ✓</span></div>
-  <div class="row"><span>자사주 10% 소각 + 배당 강화 (순이익 30%)</span><span class="tag t-g">주주환원 ✓</span></div>
-  <div class="row"><span>구글 수수료 인하 → 영업이익률 구조적 개선</span><span class="tag t-teal">구조적 ✓</span></div>
-  <div class="row"><span>애널 평균 목표가 276,375원 / 최고 430,000원 (전원 매수)</span><span class="tag t-g">컨센서스 ✓</span></div>
-  <div class="row"><span>아이온2 글로벌 흥행 불확실 — 국내 성공 ≠ 글로벌 보장</span><span class="tag t-a">리스크 △</span></div>
-  <div class="row"><span>리니지 IP 매출 구조적 하락 지속 — 레거시 부담</span><span class="tag t-r">리스크 ✗</span></div>
-  <div class="row"><span>신작 공백기 없이 매출 유지해야 — 아이온2 단일 의존도 주의</span><span class="tag t-a">주의 △</span></div>
+  <div class="row"><span>완벽한 이평선 정배열 (5-20-60-120일) 유지</span><span class="tag t-g">기술적</span></div>
+  <div class="row"><span>엘리어트 5파 진행 중, 5파 연장 가능성</span><span class="tag t-g">파동</span></div>
+  <div class="row"><span>박스권 210,000~230,000원 5개월 매집 후 돌파 완료</span><span class="tag t-g">세력 매집</span></div>
+  <div class="row"><span>4/9~4/16 거래량 동반 급등 (+13.9% in 5거래일)</span><span class="tag t-g">거래량</span></div>
+  <div class="row"><span>2026년 신작 출시 기대감 (리니지W 후속작 등)</span><span class="tag t-b">카탈리스트</span></div>
+  <div class="row"><span>52주 저점(176,100) 대비 +52.2% 상승</span><span class="tag t-teal">수익률</span></div>
+  <div class="row"><span>52주 위치 92.9% 고점권 → 추격매수 경계</span><span class="tag t-a">주의</span></div>
+  <div class="row"><span>4/16 이후 거래량 급감 (상승 피로 징후)</span><span class="tag t-a">거래량</span></div>
+  <div class="row"><span>275,000원 저항 실패 시 MA20(232,375)까지 -14% 조정</span><span class="tag t-r">리스크</span></div>
+  <div class="row"><span>게임 섹터 경쟁 심화 & 신작 흥행 실패 리스크</span><span class="tag t-r">펀더멘털</span></div>
 </div>
 
-<!-- 매수 전략 -->
 <div class="sec">🎯 매수 전략 종합</div>
 <div class="g2" style="margin-bottom:8px">
   <div class="card">
     <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
-    <div class="score-wrap"><div class="score-fill" style="width:72%;background:#EF9F27"></div></div>
-    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 72%</div>
-    <div style="font-size:11px;color:#5f5e5a">현재 213,000원은 눌림목 구간. 1Q 실적 발표(5/13) 전후 변동성. 아이온2 일평균 매출 안정화 확인 후 5파 상승 기대. 200,000~215,000 분할 매수.</div>
+    <div class="score-wrap"><div class="score-fill" style="width:65%;background:linear-gradient(90deg,#FAC775,#1D9E75)"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 65% — 조건부 긍정</div>
+    <div style="font-size:11px;color:#5f5e5a">현재 고점권(92.9%)이므로 추격매수 금지. 275,000원 저항선 돌파 실패 시 237,000~250,000원 조정 대기 후 분할매수. 돌파 성공 시 290,000원 목표 (+8%).</div>
   </div>
   <div class="card">
-    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~18개월)</div>
-    <div class="score-wrap"><div class="score-fill" style="width:80%;background:#1D9E75"></div></div>
-    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 80%</div>
-    <div style="font-size:11px;color:#5f5e5a">3Q26 아이온2 글로벌 출시 성공 시 PER 리레이팅 + 목표가 360,000~430,000원. 실적 턴어라운드 + 글로벌 다변화 구조적 변화. 134,600 저점 대비 여전히 +57%.</div>
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:#1D9E75"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78% — 적극 긍정</div>
+    <div style="font-size:11px;color:#5f5e5a">엘리어트 5파 상승 → 조정 후 대세 상승 재개 가능성. 225,000~237,000원(MA60~MA20) 구간 핵심 매수. 목표가 320,000~350,000원 (+19~30%). 세력 매집 본전(210,000~220,000) 이탈 시 손절.</div>
   </div>
 </div>
 
-<div class="card" style="border-color:#185FA5;background:#f8fbff">
-  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#0C447C">📌 추천 분할 매수 전략</div>
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "고점권 추격 금지, 조정 시 피보나치 38.2~50% 분할매수"</div>
   <div class="g4">
-    <div class="strategy-box" style="background:#EAF3DE;color:#085041">
-      <div style="font-weight:700">1차 진입</div>
-      <div class="sp">200,000~<br>215,000</div>
-      <div>현재 눌림목<br>전체 30%</div>
-    </div>
-    <div class="strategy-box" style="background:#E1F5EE;color:#04342C">
-      <div style="font-weight:700">★ 핵심</div>
-      <div class="sp">185,000~<br>200,000</div>
-      <div>피보 지지<br>전체 50%</div>
-    </div>
-    <div class="strategy-box" style="background:#E6F1FB;color:#042C53">
-      <div style="font-weight:700">목표가</div>
-      <div class="sp">300,000~<br>360,000</div>
-      <div>아이온2 글로벌<br>+40~70%</div>
-    </div>
-    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F">
-      <div style="font-weight:700">손절</div>
-      <div class="sp">170,000원</div>
-      <div>정배열 이탈<br>즉시 손절</div>
-    </div>
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">237,000~<br>250,000원</div><div>MA20·피보나치 38.2%<br>비중 30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">225,000~<br>237,000원</div><div>MA60·피보나치 50%<br>비중 50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">290,000~<br>320,000원</div><div>52주고 돌파+확장<br>+8~19%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">213,000원</div><div>피보나치 61.8% 이탈<br>MA120 위기</div></div>
   </div>
-
   <div class="info-box" style="margin-top:10px;margin-bottom:4px">
-    <div style="font-size:11px;color:#085041"><b>💡 엔씨소프트 핵심 투자 포인트 3가지:</b><br>
-    ① <b>4년간 -87% 하락 끝 + 실적 흑자전환 확인</b> = 구조적 바닥 확인. 이제는 펀더멘털이 개선 방향<br>
-    ② <b>아이온2 글로벌(3Q26)</b> = 단일 최대 모멘텀. 국내 성공으로 글로벌 기대감 유효<br>
-    ③ <b>자사주 소각 + 배당 + 상법 개정 수혜</b> = 주주환원 확대 → 밸류에이션 리레이팅 기대</div>
+    <div style="font-size:11px;color:#085041"><b>💡 엔씨소프트 핵심 4포인트:</b><br>
+    ① <b>박스권 5개월 매집 완료 후 시세 분출:</b> 210,000~230,000원 구간이 세력 매집 본전 = 강한 지지선<br>
+    ② <b>엘리어트 5파 진행 중:</b> 5파 연장 시 300,000원대 진입 가능, 조정 시 MA60(225,000) 지지 확인<br>
+    ③ <b>완벽한 정배열 유지:</b> MA20(232,375) > MA60(224,893) > MA120(219,566), 중기 추세 강세<br>
+    ④ <b>2026년 신작 기대감:</b> 리니지 시리즈 후속작 + 중국 시장 재진입 카탈리스트</div>
   </div>
-  <div class="warn-box" style="margin-bottom:0">
-    <div style="font-size:11px;color:#633806"><b>⚠ 핵심 리스크:</b> 아이온2 국내 성공 ≠ 글로벌 흥행 보장. 리니지 IP 매출 구조적 감소 지속. 신작 공백기 발생 시 실적 하회 가능. 코스피 시장 전반 하락 시 대형주 특성상 동반 하락. <b>1Q 실적 발표(5/13) 전후 변동성 주의.</b></div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 52주 위치 92.9% 고점권으로 단기 조정 압력 존재. 4/16 이후 거래량 급감 = 상승 피로 징후. 275,000원 저항 돌파 실패 시 MA20(232,375)까지 -13% 급락 가능. 게임 섹터 경쟁 심화 + 신작 흥행 실패 시 실적 악화 리스크 주의.</div>
   </div>
 </div>
 
-<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다.</div>
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
 </div>
-<div class="manddo-disclaimer"><b>⚠ 투자 유의사항</b><br>본 분석은 공개 정보 기반의 참고용 자료이며, 특정 종목의 매수·매도 권유가 아닙니다. 분석 시점 이후 시장 상황은 변할 수 있으며, 모든 투자 판단과 그 결과는 투자자 본인의 책임입니다.</div>
-<div class="manddo-footer"><a href="/">홈</a>·<a href="/ai-log/">오늘 AI의 선택</a>
-<a href="/stock/">차트분석 리포트</a>·<a href="/about.html">소개</a>·<a href="/privacy.html">개인정보</a>·<a href="/terms.html">약관</a>·<a href="/contact.html">문의</a><br>© 2026 만또 (manddo.kr)</div>
 </body>
 </html>

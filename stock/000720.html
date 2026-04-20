@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>현대건설 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>현대건설 (000720) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSPI 건설 | 신고가 돌파 후 5파 연장 조정, 정배열 유지 중 재매수 구간 모색</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 현대건설 = "중동 수주 + SOC 재개 + 재건축 수혜 트리플 모멘텀"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 1년 만에 저점(5.9만) 대비 +202% 상승<br>② 완벽한 이평선 정배열 (20&gt;60&gt;120)<br>③ 중동 대형 프로젝트 수주 잇따름<br>④ 정부 SOC·재건축 정책 수혜주
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>4월 8일 신고가(19.84만원) 기록 후 단기 조정 진입. 52주 위치 85% 고점권으로 추격매수 경계. 엘리어트 5파 연장 후 a-b-c 조정 가능성 → MA20(16.4만원) 이탈 시 MA60(14.3만원)까지 조정 각오 필요.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4.20 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">177,400<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 +0.23%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">58,700~<br>198,400원</div><div class="ms">저점 대비 +202%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">85%</div><div class="ms">고점권 (조정 주시)</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">신고가(19.84만원) 기록 12일 후 17.74만원 — 피보나치 23.6% 되돌림(16.54만원) 지지 테스트 중</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:85%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 177,400</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 58,700</span><span>중간 128,550</span><span>고점 198,400</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2025년 5월 5.87만원 바닥 확인 후 1년간 장대 상승. 2026년 1월 10만원 돌파, 2월 중동 수주 이슈로 16만원 급등, 4월 8일 19.84만원 신고가 기록 후 털기 조정 진입. 현재 MA20(16.43만원) 상단에서 지지 확인 중. 세력은 신고가 구간에서 물량 분산했으나 정배열 유지로 추세는 살아있음. 23.6% 피보나치(16.54만원) 지지 시 2차 상승, 이탈 시 38.2%(14.5만원) 재매수 대기.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">이평선 완벽 정배열</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">엘리어트 5파 연장</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">중동 수주 호재</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">SOC 재개 수혜</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">고점권 조정 주의</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "신고가 털기 후 피보나치 23.6% 지지 테스트"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>거래량 = 세력 털기 신호.</b> 4/8 신고가(19.84만) 기록 시 거래량 589만주 폭발. 2/27 거래량 965만주 1차 털기 후 3월 조정(12만원대), 4월 재차 털기. 현재 거래량 64만주로 급감 = 단기 세력 물량 정리 완료 추정.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>MA20(16.43만원) = 생명선.</b> 현재가 17.74만원은 MA20 상단 +8%. 4/17~20 이틀간 MA20 위에서 횡보 = 지지 확인 중. 이탈 시 MA60(14.29만원) 2차 지지선 테스트 불가피.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 23.6% 되돌림(16.54만원) 지지 여부가 핵심.</b> 신고가 대비 -10.6% 조정은 강세장 내 정상 범위. 16.5만원 지지 시 상승 깃발형(bull flag) 패턴 완성 → 재상승. 이탈 시 38.2%(14.5만원) 깊은 조정.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈리스트 = 5월 실적 발표.</b> 1Q 영업이익 컨센서스 상회 시 재상승 트리거. 반대로 중동 수주 지연 뉴스 나오면 MA60까지 조정 각오. 대응: 16.5만원 지지 확인 후 분할매수 / 16만원 이탈 시 14.5만원 재매수.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">상승 깃발형 조정 중</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker></defs>
+    <rect x="40" y="60" width="160" height="150" rx="4" fill="#FAEEDA" opacity=".12"/>
+    <text x="120" y="72" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">① 1월 매집 (10만원대)</text>
+    <rect x="210" y="30" width="180" height="180" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="300" y="42" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 2~3월 급등 (12→16만)</text>
+    <rect x="400" y="20" width="120" height="190" rx="4" fill="#E6F1FB" opacity=".12"/>
+    <text x="460" y="32" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">③ 4월 신고가</text>
+    <rect x="530" y="50" width="100" height="160" rx="4" fill="#FCEBEB" opacity=".12"/>
+    <text x="580" y="62" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">④ 털기 조정</text>
+    
+    <line x1="55" y1="140" x2="55" y2="155" stroke="#888" stroke-width="2"/><rect x="50" y="142" width="9" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="75" y1="135" x2="75" y2="150" stroke="#888" stroke-width="2"/><rect x="70" y="140" width="9" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="125" x2="95" y2="145" stroke="#888" stroke-width="2"/><rect x="90" y="128" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="115" y1="130" x2="115" y2="143" stroke="#888" stroke-width="2"/><rect x="110" y="133" width="9" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="135" y1="120" x2="135" y2="138" stroke="#888" stroke-width="2"/><rect x="130" y="123" width="9" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="155" y1="125" x2="155" y2="135" stroke="#888" stroke-width="2"/><rect x="150" y="127" width="9" height="7" fill="#1D9E75" rx="1"/>
+    <line x1="175" y1="128" x2="175" y2="140" stroke="#888" stroke-width="2"/><rect x="170" y="131" width="9" height="7" fill="#E24B4A" rx="1"/>
+    
+    <line x1="215" y1="110" x2="215" y2="130" stroke="#888" stroke-width="2"/><rect x="210" y="113" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="235" y1="95" x2="235" y2="115" stroke="#888" stroke-width="2"/><rect x="230" y="98" width="9" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="255" y1="80" x2="255" y2="105" stroke="#888" stroke-width="2"/><rect x="250" y="85" width="9" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="275" y1="70" x2="275" y2="95" stroke="#888" stroke-width="2"/><rect x="270" y="75" width="9" height="17" fill="#1D9E75" rx="1"/>
+    <line x1="295" y1="65" x2="295" y2="88" stroke="#888" stroke-width="2"/><rect x="290" y="70" width="9" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="315" y1="95" x2="315" y2="120" stroke="#888" stroke-width="2"/><rect x="310" y="100" width="9" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="335" y1="105" x2="335" y2="125" stroke="#888" stroke-width="2"/><rect x="330" y="110" width="9" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="355" y1="85" x2="355" y2="110" stroke="#888" stroke-width="2"/><rect x="350" y="90" width="9" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="375" y1="75" x2="375" y2="95" stroke="#888" stroke-width="2"/><rect x="370" y="80" width="9" height="13" fill="#1D9E75" rx="1"/>
+    
+    <line x1="415" y1="65" x2="415" y2="85" stroke="#888" stroke-width="2"/><rect x="410" y="70" width="9" height="13" fill="#1D9E75" rx="1"/>
+    <line x1="435" y1="30" x2="435" y2="75" stroke="#888" stroke-width="2.5"/><rect x="430" y="35" width="9" height="38" fill="#1D9E75" rx="1"/>
+    <text x="435" y="24" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="700">신고가 19.84만</text>
+    <line x1="455" y1="45" x2="455" y2="70" stroke="#888" stroke-width="2"/><rect x="450" y="50" width="9" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="475" y1="50" x2="475" y2="68" stroke="#888" stroke-width="2"/><rect x="470" y="54" width="9" height="12" fill="#E24B4A" rx="1"/>
+    
+    <line x1="535" y1="60" x2="535" y2="75" stroke="#888" stroke-width="2"/><rect x="530" y="63" width="9" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="555" y1="55" x2="555" y2="72" stroke="#888" stroke-width="2"/><rect x="550" y="59" width="9" height="11" fill="#1D9E75" rx="1"/>
+    <line x1="575" y1="58" x2="575" y2="70" stroke="#888" stroke-width="2"/><rect x="570" y="61" width="9" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="595" y1="55" x2="595" y2="68" stroke="#888" stroke-width="2"/><rect x="590" y="58" width="9" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="615" y1="57" x2="615" y2="66" stroke="#888" stroke-width="2"/><rect x="610" y="59" width="9" height="6" fill="#1D9E75" rx="1"/>
+    
+    <line x1="40" y1="60" x2="640" y2="60" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="57" font-size="9" fill="#26215C" font-weight="600">현재 177,400</text>
+    
+    <line x1="40" y1="127" x2="640" y2="127" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="642" y="130" font-size="8" fill="#1D9E75" font-weight="600">MA20 (164,270)</text>
+    
+    <line x1="40" y1="155" x2="640" y2="155" stroke="#0C447C" stroke-width="1" stroke-dasharray="3 2" opacity=".35"/>
+    <text x="642" y="158" font-size="8" fill="#0C447C" font-weight="600">MA60 (142,931)</text>
+    
+    <rect x="520" y="75" width="110" height="35" rx="4" fill="#FAEEDA" opacity=".9" stroke="#EF9F27" stroke-width="1"/>
+    <text x="575" y="87" text-anchor="middle" font-size="8" fill="#633806" font-weight="700">🔍 피보나치 23.6%</text>
+    <text x="575" y="97" text-anchor="middle" font-size="8" fill="#633806">165,427원 지지 테스트</text>
+    <text x="575" y="105" text-anchor="middle" font-size="7" fill="#888">이탈 시 MA60까지 조정</text>
+    
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 신고가 털기 후 MA20 지지 확인 중 — 16.5만원 방어 시 재상승, 이탈 시 14.5만원 2차 매수</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 5파 연장 완성 후 a파 조정 초기"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>장기 매집 구간 = 2025년 7~10월 (5.7~7만원대).</b> 5~6월 급등 후 4개월 횡보는 세력 매집 신호. 거래량 감소 속 가격 박스권 = 전형적 세력 매집 패턴. 이후 10월 말부터 시세 분출.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>엘리어트 5파 구조 완성.</b> ①파(5월 4만→6.8만) ②파(7~10월 조정 5.4만) ③파(10월~2월 16.4만, 가장 강력) ④파(3월 14만 조정) ⑤파(4월 19.8만 연장). 5파 연장 후 a-b-c 조정 진입 예상. a파 목표 = 피보나치 38.2% (14.5만원).</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>주봉 이평선 20/60/120주선 정배열 유지.</b> 단기 조정에도 주봉 20주선(약 15.8만원 추정) 지지 유지 중 = 중기 추세 훼손 없음. 20주선 이탈 시 60주선(약 12만원대)까지 조정 가능성.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>중기 카탈리스트 = 2Q 중동 수주 실적.</b> 사우디·UAE 대형 프로젝트 수주 발표 시 b파 반등 후 c파 최종 조정 생략하고 재상승 가능. 목표가 = 25~28만원 (신고가 대비 +25~40%).</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">5파 연장 완성 + a파 조정</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1E3A5F"/></marker></defs>
+    
+    <rect x="40" y="90" width="80" height="100" rx="4" fill="#E6F1FB" opacity=".1"/>
+    <text x="80" y="100" text-anchor="middle" font-size="8" fill="#0C447C" font-weight="600">①파 (5월)</text>
+    
+    <rect x="130" y="110" width="100" height="80" rx="4" fill="#FCEBEB" opacity=".1"/>
+    <text x="180" y="120" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">②파 (7~10월 조정)</text>
+    
+    <rect x="240" y="40" width="140" height="150" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="310" y="50" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">③파 (10월~2월, 가장 강력)</text>
+    
+    <rect x="390" y="70" width="80" height="120" rx="4" fill="#FAEEDA" opacity=".1"/>
+    <text x="430" y="80" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">④파 (3월)</text>
+    
+    <rect x="480" y="30" width="100" height="160" rx="4" fill="#E1F5EE" opacity=".12"/>
+    <text x="530" y="40" text-anchor="middle" font-size="8" fill="#04342C" font-weight="700">⑤파 (4월 연장)</text>
+    
+    <line x1="55" y1="150" x2="55" y2="165" stroke="#888" stroke-width="3"/><rect x="48" y="153" width="13" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="75" y1="130" x2="75" y2="155" stroke="#888" stroke-width="3"/><rect x="68" y="135" width="13" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="95" y1="110" x2="95" y2="140" stroke="#888" stroke-width="3"/><rect x="88" y="115" width="13" height="23" fill="#1D9E75" rx="1"/>
+    <text x="95" y="105" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="700">①</text>
+    
+    <line x1="115" y1="115" x2="115" y2="138" stroke="#888" stroke-width="3"/><rect x="108" y="120" width="13" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="135" y1="130" x2="135" y2="150" stroke="#888" stroke-width="3"/><rect x="128" y="135" width="13" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="155" y1="135" x2="155" y2="155" stroke="#888" stroke-width="3"/><rect x="148" y="140" width="13" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="140" x2="175" y2="158" stroke="#888" stroke-width="3"/><rect x="168" y="144" width="13" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="195" y1="135" x2="195" y2="153" stroke="#888" stroke-width="3"/><rect x="188" y="139" width="13" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="140" x2="215" y2="155" stroke="#888" stroke-width="3"/><rect x="208" y="144" width="13" height="9" fill="#E24B4A" rx="1"/>
+    <text x="175" y="165" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="700">②</text>
+    
+    <line x1="245" y1="125" x2="245" y2="148" stroke="#888" stroke-width="3"/><rect x="238" y="130" width="13" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="265" y1="110" x2="265" y2="135" stroke="#888" stroke-width="3"/><rect x="258" y="115" width="13" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="285" y1="95" x2="285" y2="120" stroke="#888" stroke-width="3"/><rect x="278" y="100" width="13" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="305" y1="75" x2="305" y2="105" stroke="#888" stroke-width="3"/><rect x="298" y="82" width="13" height="21" fill="#1D9E75" rx="1"/>
+    <line x1="325" y1="55" x2="325" y2="88" stroke="#888" stroke-width="3"/><rect x="318" y="62" width="13" height="24" fill="#1D9E75" rx="1"/>
+    <line x1="345" y1="50" x2="345" y2="78" stroke="#888" stroke-width="3"/><rect x="338" y="57" width="13" height="19" fill="#1D9E75" rx="1"/>
+    <line x1="365" y1="60" x2="365" y2="82" stroke="#888" stroke-width="3"/><rect x="358" y="65" width="13" height="15" fill="#1D9E75" rx="1"/>
+    <text x="325" y="45" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="700">③</text>
+    
+    <line x1="400" y1="70" x2="400" y2="95" stroke="#888" stroke-width="3"/><rect x="393" y="77" width="13" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="420" y1="85" x2="420" y2="108" stroke="#888" stroke-width="3"/><rect x="413" y="91" width="13" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="440" y1="80" x2="440" y2="100" stroke="#888" stroke-width="3"/><rect x="433" y="86" width="13" height="12" fill="#1D9E75" rx="1"/>
+    <text x="420" y="120" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="700">④</text>
+    
+    <line x1="490" y1="65" x2="490" y2="88" stroke="#888" stroke-width="3"/><rect x="483" y="71" width="13" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="510" y1="30" x2="510" y2="75" stroke="#888" stroke-width="3.5"/><rect x="503" y="38" width="13" height="35" fill="#1D9E75" rx="1"/>
+    <text x="510" y="25" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">19.84만</text>
+    <line x1="530" y1="45" x2="530" y2="68" stroke="#888" stroke-width="3"/><rect x="523" y="51" width="13" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="550" y1="50" x2="550" y2="70" stroke="#888" stroke-width="3"/><rect x="543" y="55" width="13" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="570" y1="48" x2="570" y2="65" stroke="#888" stroke-width="3"/><rect x="563" y="53" width="13" height="10" fill="#1D9E75" rx="1"/>
+    <text x="550" y="85" text-anchor="middle" font-size="9" fill="#1E3A5F" font-weight="700">⑤</text>
+    
+    <line x1="40" y1="58" x2="640" y2="58" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="55" font-size="9" fill="#26215C" font-weight="600">현재 177,400</text>
+    
+    <path d="M 55,165 Q 155,160 245,148 T 440,95 T 570,60" stroke="#1D9E75" stroke-width="2" fill="none" opacity=".5" stroke-dasharray="5 3"/>
+    <text x="300" y="175" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">20주 이평선 (정배열 유지)</text>
+    
+    <rect x="590" y="95" width="85" height="30" rx="3" fill="#FAEEDA" opacity=".95" stroke="#EF9F27" stroke-width="1"/>
+    <text x="632" y="106" text-anchor="middle" font-size="7" fill="#633806" font-weight="700">a파 조정 예상</text>
+    <text x="632" y="114" text-anchor="middle" font-size="7" fill="#633806">목표 14.5~15.8만</text>
+    <text x="632" y="122" text-anchor="middle" font-size="6" fill="#888">(피보 38.2~50%)</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 엘리어트 5파 연장 완성 후 a-b-c 조정 초기 — 14.5만원 지지 시 재상승, c파 생략 가능</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "장기 바닥 탈출 + 컵앤핸들 완성, 대세 상승 초입"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>장기 바닥 = 2024~2025년 초 (2.5~4만원대).</b> 2024년 내내 3만원대 박스권 횡보 = 2년간 세력 저가 매집. 월봉 거래량 감소 속 가격 횡보는 전형적 바닥 다지기. 2025년 5월 4만원 돌파 = 2년 박스권 상방 돌파 신호.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>턴어라운드 트리거 = 정부 SOC 재개 + 중동 수주.</b> 2025년 하반기부터 정부 인프라 투자 확대 정책. 사우디·UAE 대형 프로젝트 수주 잇따름. 국내 재건축 규제 완화 수혜. 구조적 실적 개선 기대감 = 월봉 대세 상승 배경.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>상승 기간 10개월, 상승 폭 +238% (5.87만→19.84만).</b> 월봉 10연양(2025년 5월~2026년 2월) = 강력한 추세. 3월 조정은 건전한 되돌림. 월봉 20개월선(약 8만원대) 지지 유지 중 = 대세 상승 추세 훼손 없음.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망 = 25~30만원 (신고가 대비 +25~50%).</b> 월봉 컵앤핸들 패턴 완성 시 목표가는 컵 깊이(약 14만원)만큼 상승 = 19.8만 + 14만 = 33만원 이론가. 단 5파 연장 후 조정 리스크로 현실 목표 25~28만원. 리스크 = 중동 수주 지연, 금리 재인상, 부동산 경기 악화 시 10~12만원대 재조정.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">컵앤핸들 완성 + 대세 상승</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="100" width="200" height="95" rx="4" fill="#E6F1FB" opacity=".08"/>
+    <text x="140" y="110" text-anchor="middle" font-size="8" fill="#0C447C" font-weight="600">2024~2025 초: 2년 바닥권 (2.5~4만)</text>
+    
+    <rect x="250" y="50" width="180" height="145" rx="4" fill="#EAF3DE" opacity=".12"/>
+    <text x="340" y="60" text-anchor="middle" font-size="8" fill="#27500A" font-weight="700">2025 하반기~2026: 대세 상승 (+238%)</text>
+    
+    <rect x="440" y="70" width="100" height="125" rx="4" fill="#FAEEDA" opacity=".1"/>
+    <text x="490" y="80" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">2026.3~4: 조정</text>
+    
+    <line x1="50" y1="165" x2="50" y2="175" stroke="#888" stroke-width="3"/><rect x="43" y="167" width="13" height="7" fill="#E24B4A" rx="1"/>
+    <line x1="70" y1="163" x2="70" y2="173" stroke="#888" stroke-width="3"/><rect x="63" y="165" width="13" height="7" fill="#1D9E75" rx="1"/>
+    <line x1="90" y1="160" x2="90" y2="172" stroke="#888" stroke-width="3"/><rect x="83" y="163" width="13" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="110" y1="162" x2="110" y2="174" stroke="#888" stroke-width="3"/><rect x="103" y="165" width="13" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="130" y1="160" x2="130" y2="170" stroke="#888" stroke-width="3"/><rect x="123" y="162" width="13" height="7" fill="#E24B4A" rx="1"/>
+    <line x1="150" y1="158" x2="150" y2="169" stroke="#888" stroke-width="3"/><rect x="143" y="161" width="13" height="7" fill="#1D9E75" rx="1"/>
+    <line x1="170" y1="155" x2="170" y2="167" stroke="#888" stroke-width="3"/><rect x="163" y="158" width="13" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="190" y1="157" x2="190" y2="168" stroke="#888" stroke-width="3"/><rect x="183" y="159" width="13" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="210" y1="153" x2="210" y2="165" stroke="#888" stroke-width="3"/><rect x="203" y="156" width="13" height="8" fill="#1D9E75" rx="1"/>
+    <line x1="230" y1="150" x2="230" y2="162" stroke="#888" stroke-width="3"/><rect x="223" y="153" width="13" height="8" fill="#1D9E75" rx="1"/>
+    
+    <line x1="260" y1="145" x2="260" y2="158" stroke="#888" stroke-width="3"/><rect x="253" y="148" width="13" height="9" fill="#1D9E75" rx="1"/>
+    <line x1="280" y1="130" x2="280" y2="152" stroke="#888" stroke-width="3"/><rect x="273" y="135" width="13" height="15" fill="#1D9E75" rx="1"/>
+    <line x1="300" y1="110" x2="300" y2="138" stroke="#888" stroke-width="3"/><rect x="293" y="117" width="13" height="19" fill="#1D9E75" rx="1"/>
+    <line x1="320" y1="90" x2="320" y2="120" stroke="#888" stroke-width="3"/><rect x="313" y="98" width="13" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="340" y1="75" x2="340" y2="105" stroke="#888" stroke-width="3"/><rect x="333" y="83" width="13" height="20" fill="#1D9E75" rx="1"/>
+    <line x1="360" y1="80" x2="360" y2="108" stroke="#888" stroke-width="3"/><rect x="353" y="88" width="13" height="18" fill="#E24B4A" rx="1"/>
+    <line x1="380" y1="70" x2="380" y2="95" stroke="#888" stroke-width="3"/><rect x="373" y="77" width="13" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="400" y1="60" x2="400" y2="83" stroke="#888" stroke-width="3"/><rect x="393" y="67" width="13" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="420" y1="65" x2="420" y2="85" stroke="#888" stroke-width="3"/><rect x="413" y="71" width="13" height="12" fill="#1D9E75" rx="1"/>
+    
+    <line x1="450" y1="95" x2="450" y2="120" stroke="#888" stroke-width="3"/><rect x="443" y="102" width="13" height="16" fill="#E24B4A" rx="1"/>
+    <line x1="470" y1="85" x2="470" y2="108" stroke="#888" stroke-width="3"/><rect x="463" y="92" width="13" height="14" fill="#E24B4A" rx="1"/>
+    <line x1="490" y1="75" x2="490" y2="98" stroke="#888" stroke-width="3"/><rect x="483" y="82" width="13" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="510" y1="30" x2="510" y2="88" stroke="#888" stroke-width="3.5"/><rect x="503" y="40" width="13" height="46" fill="#1D9E75" rx="1"/>
+    <text x="510" y="25" text-anchor="middle" font-size="9" fill="#1D9E75" font-weight="700">19.84만</text>
+    <line x1="535" y1="50" x2="535" y2="73" stroke="#888" stroke-width="3"/><rect x="528" y="56" width="13" height="15" fill="#1D9E75" rx="1"/>
+    
+    <line x1="40" y1="67" x2="640" y2="67" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+    <text x="42" y="64" font-size="9" fill="#26215C" font-weight="600">현재 177,400</text>
+    
+    <path d="M 50,175 L 90,170 L 150,165 L 210,160 Q 280,145 340,95 T 420,75 T 535,65" stroke="#1D9E75" stroke-width="2.5" fill="none" opacity=".4"/>
+    <text x="340" y="40" text-anchor="middle" font-size="8" fill="#1D9E75" font-weight="600">컵앤핸들 패턴 (컵: 2024~2025 / 핸들: 2026.3~4)</text>
+    
+    <line x1="50" y1="180" x2="230" y2="165" stroke="#0C447C" stroke-width="1.5" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="140" y="185" text-anchor="middle" font-size="7" fill="#0C447C" font-weight="600">2년 바닥권 (세력 매집 구간)</text>
+    
+    <rect x="550" y="105" width="120" height="50" rx="3" fill="#E1F5EE" opacity=".95" stroke="#1D9E75" stroke-width="1.5"/>
+    <text x="610" y="116" text-anchor="middle" font-size="8" fill="#04342C" font-weight="700">월봉 목표가</text>
+    <text x="610" y="126" text-anchor="middle" font-size="8" fill="#04342C">25~30만원</text>
+    <text x="610" y="135" text-anchor="middle" font-size="7" fill="#888">(신고가 +25~50%)</text>
+    <text x="610" y="143" text-anchor="middle" font-size="7" fill="#888">컵깊이(14만)만큼</text>
+    <text x="610" y="151" text-anchor="middle" font-size="7" fill="#888">상승 시 33만원 가능</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2년 바닥 탈출 후 컵앤핸들 완성 — 대세 상승 초입, 조정 시 분할매수로 14.5~15.8만 핵심 매집</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">① 세력 분산 완료, 재매집 구간 진입 예상</span><span class="tag t-g">수급 긍정</span><div style="color:#888;margin-top:2px;font-size:11px"><b>4월 8일 신고가(19.84만원) 기록 시 거래량 589만주 폭발 = 세력 1차 털기.</b> 이후 거래량 64만주로 급감 = 물량 정리 완료 추정. 2월 27일 거래량 965만주 1차 털기 후 3월 12만원대 조정했다가 4월 재차 신고가 = 세력이 본인 매집 본전(추정 10~12만원대) 밑으로 떨어지는 것을 참지 못하고 재진입한 패턴. <b>현재 17.74만원은 세력 매집 원가 대비 +50% 수준으로, MA20(16.43만원) 방어 시 2차 상승 가능성 높음.</b> 외국인·기관 수급은 3~4월 순매도 전환(털기 동참) → 조정 마무리 후 재매수 시점 포착 필요.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">② 중동 수주 + SOC 재개 + 재건축 규제 완화 트리플 모멘텀</span><span class="tag t-navy">구조적 호재</span><div style="color:#888;margin-top:2px;font-size:11px"><b>사우디 네옴시티, UAE 인프라 프로젝트 대형 수주 잇따름.</b> 중동 오일머니 유입으로 건설 발주 급증. 국내는 정부 SOC 투자 2026년 전년 대비 +15% 확대 발표. 재건축 규제 완화로 서울 강남·목동 등 재건축 수주 기대. 현대건설은 시공 능력 평가 1위 유지 + 브랜드 파워로 수주 경쟁력 최상위. <b>1Q 영업이익 컨센서스 3,200억원 → 실적 발표(5월 초) 상회 시 재상승 트리거.</b></div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">③ 실적 개선 가시화 — 2026년 영업이익 1.5조원 전망</span><span class="tag t-a">펀더멘털 개선</span><div style="color:#888;margin-top:2px;font-size:11px"><b>2025년 영업이익 1.2조원(YoY +35%) 달성 후 2026년 1.5조원 전망.</b> 중동 수주 본격 매출 인식 시작. 국내 재건축 수주 증가. 원자재 가격 안정으로 수익성 개선. PER 8배 수준으로 건설업 평균(PER 10~12배) 대비 저평가. <b>목표 주가 = 2026년 EPS(예상 2.2만원) × PER 10배 = 22만원.</b> 현재가 17.74만원 대비 +24% 상승 여력. 배당 수익률 3% 수준으로 중장기 투자 매력도 높음.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">④ 리스크: 중동 수주 지연, 금리 재인상, 부동산 경기 악화</span><span class="tag t-r">핵심 리스크</span><div style="color:#888;margin-top:2px;font-size:11px"><b>중동 지정학 리스크 = 사우디·UAE 정세 불안 시 프로젝트 지연 가능.</b> 중동 매출 비중 30% 수준으로 타격 클 수 있음. 금리 재인상 시 국내 부동산 경기 악화 → 재건축 수주 감소. 원자재 가격 재상승 시 수익성 악화. <b>기술적 리스크 = MA60(14.29만원) 이탈 시 MA120(11.58만원)까지 조정 가능성.</b> 52주 저점(5.87만원) 대비 +202% 상승했으므로 고점 대비 -30~40% 조정(12~14만원대) 가능성 상존. 손절가 = MA120(11.58만원) 이탈 시.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>✅ 완벽한 이평선 정배열 (20&gt;60&gt;120) 유지 중</span><span class="tag t-g">기술적 강세</span></div>
+  <div class="row"><span>✅ 1년간 저점 대비 +202% 상승 — 대세 상승 추세</span><span class="tag t-g">추세 확립</span></div>
+  <div class="row"><span>✅ 중동 대형 프로젝트 수주 잇따름 (사우디·UAE)</span><span class="tag t-navy">수주 호재</span></div>
+  <div class="row"><span>✅ 정부 SOC 투자 +15% 확대 + 재건축 규제 완화</span><span class="tag t-teal">정책 수혜</span></div>
+  <div class="row"><span>✅ 2026년 영업이익 1.5조원 전망 (YoY +25%)</span><span class="tag t-b">실적 개선</span></div>
+  <div class="row"><span>✅ PER 8배 저평가 + 배당수익률 3% 중장기 매력</span><span class="tag t-g">밸류에이션</span></div>
+  <div class="row"><span>⚠ 52주 위치 85% 고점권 — 추격매수 경계</span><span class="tag t-a">기술적 주의</span></div>
+  <div class="row"><span>⚠ 4월 8일 신고가 후 거래량 폭발 = 세력 털기</span><span class="tag t-a">수급 경계</span></div>
+  <div class="row"><span>🚨 중동 지정학 리스크 (매출 비중 30%)</span><span class="tag t-r">핵심 리스크</span></div>
+  <div class="row"><span>🚨 금리 재인상 시 부동산 경기 악화 가능성</span><span class="tag t-r">거시 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:60%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 60% — 조정 후 재매수 권장</div>
+    <div style="font-size:11px;color:#5f5e5a"><b>피보나치 23.6%(16.54만원) 지지 확인 후 분할매수.</b> MA20(16.43만원) 이탈 시 MA60(14.29만원)까지 대기. 5월 초 1Q 실적 발표 상회 시 재상승 기대. 단기 목표 20~22만원 (+13~24%). 손절 = MA60 이탈.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78% — 조정 시 적극 매수</div>
+    <div style="font-size:11px;color:#5f5e5a"><b>월봉 컵앤핸들 완성 + 구조적 턴어라운드 초입.</b> 14.5~15.8만원 조정 시 핵심 매집 구간. 중동 수주 본격 매출 인식 + SOC 재개 장기 수혜. 목표 25~30만원 (+41~69%). 리스크 = MA120(11.58만원) 이탈 시 추세 전환 인정.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "조정 시 분할매수, MA20 지지 확인 후 적극 매수"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">164,000~<br>168,000원</div><div>MA20(164,270) 지지<br>비중 30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">145,000~<br>150,000원</div><div>MA60 + 피보 38.2%<br>비중 50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">230,000~<br>250,000원</div><div>신고가 +20~30%<br>+30~41%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">115,000원</div><div>MA120 이탈</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 현대건설 핵심 4포인트:</b><br>
+    ① <b>엘리어트 5파 연장 완성 후 a파 조정 = 재매수 구간.</b> 14.5~16.5만원 지지 확인 시 b파 반등 기대.<br>
+    ② <b>세력은 10~12만원대 매집 추정.</b> 신고가 털기 후 재진입 패턴. MA20(16.43만원) 방어 시 2차 상승.<br>
+    ③ <b>중동 수주 + SOC 재개 트리플 모멘텀.</b> 1Q 실적 컨센서스 상회 시 재상승 트리거.<br>
+    ④ <b>월봉 컵앤핸들 완성, 목표 25~30만원.</b> 컵 깊이(14만원)만큼 상승 시 33만원 가능.</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 중동 지정학 리스크(매출 30%) + 금리 재인상 시 부동산 경기 악화. 기술적으로 MA60(14.29만원) 이탈 시 MA120(11.58만원)까지 조정 각오. 손절가 = MA120 이탈 (추세 전환 인정).</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>

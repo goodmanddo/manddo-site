@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>삼성에스디에스 세력·차트 분석</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
+.wrap{max-width:740px;margin:0 auto}
+h1{font-size:17px;font-weight:700;margin-bottom:2px}
+.sub{font-size:12px;color:#888780;margin-bottom:16px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
+.ml{font-size:11px;color:#888780;margin-bottom:1px}
+.mv{font-size:18px;font-weight:700}
+.ms{font-size:10px;color:#b4b2a9}
+.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
+.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
+.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
+.t-navy{background:#EEF2FF;color:#1E3A5F}
+.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zone:last-child{border-bottom:none}
+.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.row:last-child{border-bottom:none}
+.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
+.score-fill{height:100%;border-radius:4px}
+.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
+.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
+.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
+.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
+.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
+.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
+.sp{font-size:14px;font-weight:700;margin:3px 0}
+.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr:last-child{border-bottom:none}
+.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+</style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+<div class="wrap">
+<h1>삼성에스디에스 (018260) — 세력·차트 종합 분석</h1>
+<div class="sub">2026년 4월 기준 | KOSPI IT서비스 | 세력 털기 완료 후 5파 재상승 초입 — 196,900 전고점 돌파 대기</div>
+
+<div class="navy-box">
+  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 삼성에스디에스 = "급락 털기 후 V자 반등 — 세력 재진입 확인, 5파 연장 가능성"</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
+      <b>📈 구조적 강점</b><br>① 4/15 거래량 폭발(143만주) — 세력 재진입 신호<br>② 정배열 완성 — 현재가 182,400 > MA120/60/20 모두 상회<br>③ 146,100 저점 V자 반등 — 피보나치 61.8% 돌파<br>④ 삼성그룹 IT 핵심 — 클라우드·AI·물류 성장 트랙
+    </div>
+    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
+      <b>⚠ 리스크</b><br>3월 급락(-21% in 3일)의 트라우마 — 196,900 전고점 저항 강력. 52주 위치 71.5%로 고점권 진입. 삼성전자 실적 부진 시 동반 약세. 단기 과열 시 조정 불가피.
+    </div>
+  </div>
+</div>
+
+<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
+<div class="card">
+  <div class="g3">
+    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">182,400<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -0.05%</div></div>
+    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">146,100~<br>196,900원</div><div class="ms">저점 대비 +24.8%</div></div>
+    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">71.5%</div><div class="ms">고점권 진입 — 조정 대비</div></div>
+  </div>
+  <div style="font-size:11px;color:#888;margin-bottom:4px">4월 급반등으로 52주 범위 상단 71.5% 위치 — 전고점 196,900 대비 -7.4%. 세력 재진입 후 본전 회복 완료, 추가 상승 여력 확인 단계.</div>
+  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
+    <div style="position:absolute;left:71.5%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 182,400</div></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 146,100</span><span>중간 171,500</span><span>고점 196,900</span></div>
+  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
+    <b>핵심 상황:</b> 2월 27일 196,900 신고가 이후 3월 급락으로 146,100까지 하락(-25.8%)했으나, 4월 15일 갑작스런 거래량 폭발과 함께 V자 반등. 세력이 3월 털기로 개미 물량 정리 후 재매집 완료한 것으로 판단. 현재 정배열 완성·피보나치 61.8% 돌파로 196,900 전고점 재도전 준비 중. 단기 과열 경계하되 중장기 상승 구조 유효.
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
+    <span class="tag t-g" style="font-size:10px;padding:2px 7px">세력 재진입</span>
+    <span class="tag t-b" style="font-size:10px;padding:2px 7px">정배열 완성</span>
+    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">5파 연장 가능</span>
+    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">삼성 IT 핵심</span>
+    <span class="tag t-a" style="font-size:10px;padding:2px 7px">고점권 경계</span>
+  </div>
+</div>
+
+<div class="sec">📈 일봉 차트 모양 — "V자 반등 후 전고점 도전 대기 — 4/16 상승 실패 후 재정비"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>거래량 폭발 = 세력 복귀:</b> 4/15 거래량 143만주(평균 대비 6배↑)는 세력이 146,100 저점에서 대량 매집 완료 후 급반등 시도한 신호. 이전 3월 급락으로 개미 물량 털어낸 뒤 본격 재상승 준비.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>정배열 완성 = 추세 전환:</b> 현재가 182,400이 MA20(159,035) / MA60(166,180) / MA120(169,227) 모두 상회. 20일선이 바닥에서 상승 전환 중 — 단기 추세 강화 신호. 60/120선도 수렴 후 골든크로스 임박.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 61.8% 돌파:</b> 196,900→146,100 하락 대비 61.8%(177,494) 돌파 완료. 현재 182,400은 강한 되돌림 구간 — 78.6%(186,029) 돌파 시 전고점 재도전 본격화. 50%(171,500)가 이제 지지선.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>4/16 고점 194,000 실패 주목:</b> 전고점 196,900 바로 아래에서 저항 받고 조정 — 세력이 단숨에 치고 나가지 않고 매물 소화 중. 182,000~186,000 박스권 횡보 예상. 돌파 시 신고가 경신 → 5파 연장 시나리오.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">V자 반등 후 저항대 재정비</span></div>
+  <svg width="100%" viewBox="0 0 680 225">
+    <defs>
+      <marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker>
+    </defs>
+    <rect x="40" y="130" width="140" height="85" rx="4" fill="#FCEBEB" opacity=".18"/>
+    <text x="110" y="143" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">① 3월 급락 털기</text>
+    <rect x="185" y="50" width="100" height="165" rx="4" fill="#EAF3DE" opacity=".18"/>
+    <text x="235" y="63" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 4/15 급반등</text>
+    <rect x="290" y="30" width="140" height="185" rx="4" fill="#E6F1FB" opacity=".18"/>
+    <text x="360" y="43" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">③ 전고점 도전</text>
+    
+    <line x1="55" y1="90" x2="55" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="49" y="105" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="85" x2="75" y2="115" stroke="#E24B4A" stroke-width="2"/><rect x="69" y="100" width="10" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="95" y1="135" x2="95" y2="165" stroke="#E24B4A" stroke-width="2"/><rect x="89" y="148" width="10" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="115" y1="155" x2="115" y2="195" stroke="#E24B4A" stroke-width="2"/><rect x="109" y="172" width="10" height="21" fill="#E24B4A" rx="1"/>
+    <line x1="135" y1="175" x2="135" y2="200" stroke="#1D9E75" stroke-width="2"/><rect x="129" y="175" width="10" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="155" y1="185" x2="155" y2="205" stroke="#E24B4A" stroke-width="2"/><rect x="149" y="193" width="10" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="190" x2="175" y2="210" stroke="#1D9E75" stroke-width="2"/><rect x="169" y="190" width="10" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="195" y1="165" x2="195" y2="210" stroke="#1D9E75" stroke-width="2"/><rect x="189" y="165" width="10" height="28" fill="#1D9E75" rx="1"/>
+    <line x1="215" y1="80" x2="215" y2="170" stroke="#1D9E75" stroke-width="2"/><rect x="209" y="80" width="10" height="58" fill="#1D9E75" rx="1"/>
+    <line x1="235" y1="55" x2="235" y2="85" stroke="#1D9E75" stroke-width="2"/><rect x="229" y="55" width="10" height="22" fill="#1D9E75" rx="1"/>
+    <line x1="255" y1="60" x2="255" y2="95" stroke="#E24B4A" stroke-width="2"/><rect x="249" y="78" width="10" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="275" y1="65" x2="275" y2="75" stroke="#E24B4A" stroke-width="2"/><rect x="269" y="68" width="10" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="305" y1="63" x2="305" y2="73" stroke="#E24B4A" stroke-width="2"/><rect x="299" y="66" width="10" height="6" fill="#E24B4A" rx="1"/>
+    <line x1="335" y1="35" x2="335" y2="70" stroke="#1D9E75" stroke-width="2"/><rect x="329" y="35" width="10" height="24" fill="#1D9E75" rx="1"/>
+    <line x1="365" y1="25" x2="365" y2="45" stroke="#E24B4A" stroke-width="2"/><rect x="359" y="34" width="10" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="395" y1="52" x2="395" y2="68" stroke="#E24B4A" stroke-width="2"/><rect x="389" y="58" width="10" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="425" y1="62" x2="425" y2="70" stroke="#E24B4A" stroke-width="2"/><rect x="419" y="64" width="10" height="5" fill="#E24B4A" rx="1"/>
+    
+    <line x1="40" y1="50" x2="640" y2="50" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".55"/>
+    <text x="42" y="47" font-size="9" fill="#26215C" font-weight="600">현재 182,400</text>
+    <line x1="40" y1="23" x2="640" y2="23" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="3 2" opacity=".45"/>
+    <text x="42" y="20" font-size="8" fill="#E24B4A" font-weight="600">전고점 196,900</text>
+    <line x1="40" y1="120" x2="640" y2="120" stroke="#1D9E75" stroke-width="1" stroke-dasharray="2 2" opacity=".35"/>
+    <text x="42" y="117" font-size="8" fill="#1D9E75">피보 50% 171,500</text>
+    
+    <circle cx="215" cy="123" r="14" fill="none" stroke="#EF9F27" stroke-width="2" opacity=".6"/>
+    <text x="215" y="148" text-anchor="middle" font-size="8" fill="#EF9F27" font-weight="700">4/15 거래량 폭발</text>
+    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 3월 세력 털기 완료 → 4/15 재진입 → 196,900 전고점 돌파 대기</text>
+  </svg>
+</div>
+
+<div class="sec">📈 주봉 차트 모양 — "엘리어트 5파 시작 — 3파 고점 196,900 돌파 시 연장파 가능"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>엘리어트 파동 ④파 완료:</b> ①파(2025년 6월 109,000→198,800), ②파(조정 144,900), ③파(2026년 2월 196,900 신고가), ④파(3~4월 146,100 깊은 조정) → 현재 ⑤파 초입. ④파가 61.8% 깊이 조정 = 전형적 4파 패턴.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>20주선 돌파 완료:</b> 주봉 MA20(약 168,000) 돌파하며 중기 추세 전환 확인. 60/120주선도 수렴 중 — 골든크로스 시 중장기 상승 추세 본격화. 현재 정배열 초입 단계.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>W패턴 완성 후 상승:</b> 4월 저점 146,100이 3월 초 저점 155,200과 더블바텀 형성 — 네크라인 170,000 돌파로 W패턴 완성. 목표가 계산: 146,100 + (170,000-146,100) = 194,000 (이미 달성).</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>5파 연장 가능성:</b> 주도주에서 5파가 1·3파보다 길게 연장되는 경우 많음 (엘리어트). 3파 고점 196,900 돌파 시 → 220,000~240,000 목표 가능. 단, 고점권 진입으로 분할 매수·익절 병행 필수.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">5파 연장 초입 — W패턴 완성</span></div>
+  <svg width="100%" viewBox="0 0 680 195">
+    <defs>
+      <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#1E3A5F"/></marker>
+    </defs>
+    <rect x="40" y="80" width="80" height="105" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <text x="80" y="93" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">①파 상승</text>
+    <rect x="125" y="95" width="55" height="90" rx="4" fill="#FCEBEB" opacity=".15"/>
+    <text x="152" y="108" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">②파</text>
+    <rect x="185" y="60" width="110" height="125" rx="4" fill="#E6F1FB" opacity=".15"/>
+    <text x="240" y="73" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">③파 신고가</text>
+    <rect x="300" y="105" width="90" height="80" rx="4" fill="#FAEEDA" opacity=".18"/>
+    <text x="345" y="118" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">④파 털기</text>
+    <rect x="395" y="50" width="70" height="135" rx="4" fill="#EAF3DE" opacity=".18"/>
+    <text x="430" y="63" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">⑤파?</text>
+    
+    <line x1="50" y1="165" x2="50" y2="180" stroke="#1D9E75" stroke-width="2.5"/><rect x="42" y="165" width="14" height="12" fill="#1D9E75" rx="1"/>
+    <line x1="70" y1="120" x2="70" y2="145" stroke="#1D9E75" stroke-width="2.5"/><rect x="62" y="120" width="14" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="90" y1="85" x2="90" y2="125" stroke="#1D9E75" stroke-width="2.5"/><rect x="82" y="85" width="14" height="28" fill="#1D9E75" rx="1"/>
+    <line x1="110" y1="40" x2="110" y2="90" stroke="#1D9E75" stroke-width="2.5"/><rect x="102" y="40" width="14" height="35" fill="#1D9E75" rx="1"/>
+    <line x1="130" y1="95" x2="130" y2="125" stroke="#E24B4A" stroke-width="2.5"/><rect x="122" y="108" width="14" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="150" y1="125" x2="150" y2="155" stroke="#E24B4A" stroke-width="2.5"/><rect x="142" y="138" width="14" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="170" y1="140" x2="170" y2="165" stroke="#E24B4A" stroke-width="2.5"/><rect x="162" y="151" width="14" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="190" y1="145" x2="190" y2="168" stroke="#1D9E75" stroke-width="2.5"/><rect x="182" y="145" width="14" height="16" fill="#1D9E75" rx="1"/>
+    <line x1="210" y1="100" x2="210" y2="150" stroke="#1D9E75" stroke-width="2.5"/><rect x="202" y="100" width="14" height="35" fill="#1D9E75" rx="1"/>
+    <line x1="230" y1="70" x2="230" y2="105" stroke="#1D9E75" stroke-width="2.5"/><rect x="222" y="70" width="14" height="25" fill="#1D9E75" rx="1"/>
+    <line x1="250" y1="60" x2="250" y2="75" stroke="#1D9E75" stroke-width="2.5"/><rect x="242" y="60" width="14" height="10" fill="#1D9E75" rx="1"/>
+    <line x1="270" y1="25" x2="270" y2="65" stroke="#1D9E75" stroke-width="2.5"/><rect x="262" y="25" width="14" height="28" fill="#1D9E75" rx="1"/>
+    <line x1="290" y1="30" x2="290" y2="50" stroke="#E24B4A" stroke-width="2.5"/><rect x="282" y="38" width="14" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="310" y1="105" x2="310" y2="145" stroke="#E24B4A" stroke-width="2.5"/><rect x="302" y="122" width="14" height="21" fill="#E24B4A" rx="1"/>
+    <line x1="330" y1="135" x2="330" y2="175" stroke="#E24B4A" stroke-width="2.5"/><rect x="322" y="153" width="14" height="20" fill="#E24B4A" rx="1"/>
+    <line x1="350" y1="145" x2="350" y2="170" stroke="#E24B4A" stroke-width="2.5"/><rect x="342" y="156" width="14" height="12" fill="#E24B4A" rx="1"/>
+    <line x1="370" y1="160" x2="370" y2="178" stroke="#E24B4A" stroke-width="2.5"/><rect x="362" y="168" width="14" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="390" y1="168" x2="390" y2="182" stroke="#E24B4A" stroke-width="2.5"/><rect x="382" y="173" width="14" height="8" fill="#E24B4A" rx="1"/>
+    <line x1="410" y1="115" x2="410" y2="175" stroke="#1D9E75" stroke-width="2.5"/><rect x="402" y="115" width="14" height="42" fill="#1D9E75" rx="1"/>
+    <line x1="430" y1="55" x2="430" y2="120" stroke="#1D9E75" stroke-width="2.5"/><rect x="422" y="55" width="14" height="48" fill="#1D9E75" rx="1"/>
+    <line x1="450" y1="68" x2="450" y2="78" stroke="#E24B4A" stroke-width="2.5"/><rect x="442" y="71" width="14" height="6" fill="#E24B4A" rx="1"/>
+    
+    <path d="M 50,178 L 70,138 L 90,108 L 110,65 L 130,112 L 150,145 L 170,158 L 190,151 L 210,120 L 230,88 L 250,65 L 270,38 L 290,43 L 310,132 L 330,162 L 350,162 L 370,174 L 390,177 L 410,138 L 430,78 L 450,73" stroke="#1E3A5F" stroke-width="1.5" fill="none" opacity=".5" stroke-dasharray="3 2"/>
+    
+    <text x="110" y="32" text-anchor="middle" font-size="10" fill="#0C447C" font-weight="700">①</text>
+    <text x="150" y="102" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">②</text>
+    <text x="270" y="18" text-anchor="middle" font-size="10" fill="#0C447C" font-weight="700">③</text>
+    <text x="345" y="100" text-anchor="middle" font-size="10" fill="#633806" font-weight="700">④</text>
+    <text x="430" y="48" text-anchor="middle" font-size="10" fill="#27500A" font-weight="700">⑤</text>
+    
+    <line x1="40" y1="28" x2="620" y2="28" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="3 2" opacity=".4"/>
+    <text x="520" y="25" font-size="8" fill="#E24B4A" font-weight="600">전고점 196,900</text>
+    
+    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: ④파 깊은 조정 완료 → ⑤파 시작 — 196,900 돌파 시 연장파 220K 목표</text>
+  </svg>
+</div>
+
+<div class="sec">📈 월봉 차트 모양 — "장기 W패턴 완성 후 상승 채널 — 2025년 6월 대폭락 극복"</div>
+<div class="card" style="background:#f9f8f5;margin-bottom:6px">
+  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
+  <div class="rr"><div class="rn">이유①</div><div><b>2025년 1월 109,000 저점 = 장기 바닥:</b> 월봉 기준 역대급 하락 후 V자 반등 — 이후 198,800까지 +82% 상승. 이 저점이 깨지지 않는 한 장기 상승 구조 유지. 현재 146,100도 109,000 대비 +34% 높은 수준.</div></div>
+  <div class="rr"><div class="rn">이유②</div><div><b>더블바텀 완성:</b> 2024년 11월 125,400 저점 / 2025년 1월 109,000 저점 → 2026년 3~4월 146,100 저점까지 3중 바닥. 장기 매집 구간 형성 후 상승 전환 — 세력이 이 구간에서 물량 확보 완료.</div></div>
+  <div class="rr"><div class="rn">이유③</div><div><b>2025년 6~7월 폭등 = 세력 시세:</b> 2개월 만에 109,000→198,800(+82%) 폭등은 테마·실적 보다 세력 주도 시세 신호. 이후 조정·재상승 반복 = 세력이 본격 장기 사이클 시작한 것으로 해석.</div></div>
+  <div class="rr"><div class="rn">이유④</div><div><b>2026~2027년 목표:</b> 월봉 관점 198,800 돌파 → 피보나치 확장 1.618 적용 시 109,000 + (198,800-109,000) × 1.618 = 254,248. 중장기 목표 250,000 설정 가능. 단, 2~3년 시야 필요.</div></div>
+</div>
+
+<div class="chart-area">
+  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">W패턴 후 상승 사이클</span></div>
+  <svg width="100%" viewBox="0 0 680 200">
+    <rect x="40" y="120" width="140" height="70" rx="4" fill="#E1F5EE" opacity=".2"/>
+    <text x="110" y="133" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">장기 매집 구간</text>
+    <rect x="185" y="35" width="110" height="155" rx="4" fill="#EAF3DE" opacity=".18"/>
+    <text x="240" y="48" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">세력 시세 분출</text>
+    <rect x="300" y="70" width="160" height="120" rx="4" fill="#E6F1FB" opacity=".18"/>
+    <text x="380" y="83" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">재상승 사이클</text>
+    
+    <line x1="50" y1="95" x2="50" y2="125" stroke="#E24B4A" stroke-width="3"/><rect x="40" y="108" width="18" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="75" y1="105" x2="75" y2="130" stroke="#E24B4A" stroke-width="3"/><rect x="65" y="115" width="18" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="100" y1="125" x2="100" y2="155" stroke="#E24B4A" stroke-width="3"/><rect x="90" y="138" width="18" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="125" y1="150" x2="125" y2="175" stroke="#E24B4A" stroke-width="3"/><rect x="115" y="162" width="18" height="11" fill="#E24B4A" rx="1"/>
+    <line x1="150" y1="165" x2="150" y2="185" stroke="#E24B4A" stroke-width="3"/><rect x="140" y="173" width="18" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="175" y1="170" x2="175" y2="188" stroke="#1D9E75" stroke-width="3"/><rect x="165" y="170" width="18" height="14" fill="#1D9E75" rx="1"/>
+    <line x1="200" y1="145" x2="200" y2="175" stroke="#1D9E75" stroke-width="3"/><rect x="190" y="145" width="18" height="22" fill="#1D9E75" rx="1"/>
+    <line x1="225" y1="85" x2="225" y2="150" stroke="#1D9E75" stroke-width="3"/><rect x="215" y="85" width="18" height="48" fill="#1D9E75" rx="1"/>
+    <line x1="250" y1="35" x2="250" y2="90" stroke="#1D9E75" stroke-width="3"/><rect x="240" y="35" width="18" height="40" fill="#1D9E75" rx="1"/>
+    <line x1="275" y1="88" x2="275" y2="128" stroke="#E24B4A" stroke-width="3"/><rect x="265" y="105" width="18" height="21" fill="#E24B4A" rx="1"/>
+    <line x1="300" y1="115" x2="300" y2="145" stroke="#E24B4A" stroke-width="3"/><rect x="290" y="128" width="18" height="15" fill="#E24B4A" rx="1"/>
+    <line x1="325" y1="125" x2="325" y2="150" stroke="#1D9E75" stroke-width="3"/><rect x="315" y="125" width="18" height="18" fill="#1D9E75" rx="1"/>
+    <line x1="350" y1="95" x2="350" y2="130" stroke="#1D9E75" stroke-width="3"/><rect x="340" y="95" width="18" height="25" fill="#1D9E75" rx="1"/>
+    <line x1="375" y1="88" x2="375" y2="102" stroke="#E24B4A" stroke-width="3"/><rect x="365" y="92" width="18" height="9" fill="#E24B4A" rx="1"/>
+    <line x1="400" y1="100" x2="400" y2="120" stroke="#E24B4A" stroke-width="3"/><rect x="390" y="108" width="18" height="10" fill="#E24B4A" rx="1"/>
+    <line x1="425" y1="58" x2="425" y2="105" stroke="#1D9E75" stroke-width="3"/><rect x="415" y="58" width="18" height="34" fill="#1D9E75" rx="1"/>
+    <line x1="450" y1="145" x2="450" y2="175" stroke="#E24B4A" stroke-width="3"/><rect x="440" y="160" width="18" height="13" fill="#E24B4A" rx="1"/>
+    <line x1="475" y1="75" x2="475" y2="105" stroke="#1D9E75" stroke-width="3"/><rect x="465" y="75" width="18" height="22" fill="#1D9E75" rx="1"/>
+    
+    <line x1="40" y1="38" x2="620" y2="38" stroke="#E24B4A" stroke-width="1.2" stroke-dasharray="4 3" opacity=".45"/>
+    <text x="520" y="35" font-size="8" fill="#E24B4A" font-weight="600">역대고점 198,800 (2025.6)</text>
+    <line x1="40" y1="180" x2="620" y2="180" stroke="#1D9E75" stroke-width="1" stroke-dasharray="2 2" opacity=".35"/>
+    <text x="520" y="177" font-size="8" fill="#1D9E75">장기 바닥 109,000</text>
+    
+    <circle cx="150" cy="179" r="16" fill="none" stroke="#04342C" stroke-width="2" opacity=".5"/>
+    <text x="150" y="168" text-anchor="middle" font-size="7" fill="#04342C" font-weight="700">2025.1</text>
+    <text x="150" y="176" text-anchor="middle" font-size="7" fill="#04342C" font-weight="700">109K</text>
+    
+    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 109,000 장기 바닥 후 W패턴 완성 — 198,800 돌파 시 250,000 목표</text>
+  </svg>
+</div>
+
+<div class="sec">🧲 세력 관점 분석</div>
+<div class="card">
+  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">① 4/15 거래량 폭발 = 세력 재매집 완료 신호</span><span class="tag t-g">수급 강화</span><div style="color:#888;margin-top:2px;font-size:11px">4월 15일 거래량 143만주(평균 20만주 대비 7배↑) — 3월 급락으로 개미 물량 털어낸 후 146,100 저점에서 세력 대량 매집. 이후 5거래일 만에 +24% 폭등 = 세력 복귀 확인. 외국인 4월 들어 3거래일 연속 순매수 — 기관도 동반 매수. 세력 평균 매집가 165,000~175,000 추정 → 현재가 182,400은 본전 이상 = 추가 상승 여력 충분.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">② 삼성 IT 핵심 계열사 — 클라우드·AI 성장 트랙</span><span class="tag t-navy">구조적 수혜</span><div style="color:#888;margin-top:2px;font-size:11px">삼성전자·삼성물산 등 삼성그룹 IT 인프라 전담 — 안정적 매출 기반. 클라우드(Brightics) + 물류(Cello) + AI 솔루션 확장 중. 2026년 영업이익률 개선 전망 — 글로벌 AI 인프라 투자 확대로 수주잔고↑. 배당 수익률 2%대 유지로 장기 투자 매력. 단, 삼성전자 실적 부진 시 동반 약세 리스크 존재.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">③ 피보나치 61.8% 돌파 — 78.6% 돌파 시 전고점 재도전</span><span class="tag t-a">기술적 모멘텀</span><div style="color:#888;margin-top:2px;font-size:11px">196,900→146,100 하락 대비 피보나치 61.8%(177,494) 돌파 완료 — 강한 되돌림 신호. 78.6%(186,029) 돌파 시 전고점 재도전 본격화. 현재 182,400은 중간 지점 = 186,000 돌파 여부가 단기 분기점. 정배열 완성(MA20 < MA60 < MA120 < 현재가)으로 추세 전환 확인. 단, 52주 위치 71.5%로 고점권 진입 = 조정 대비 필수.</div></div></div>
+  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">④ 3월 급락 트라우마 + 196,900 저항 강력</span><span class="tag t-r">핵심 리스크</span><div style="color:#888;margin-top:2px;font-size:11px">2/27 신고가 196,900 → 3/4 단 3일 만에 155,200(-21%) 급락 = 개미 투자자 트라우마. 196,900 근처 매물 두터움. 4/16 이미 194,000까지 상승 후 저항 받고 조정 = 전고점 돌파 쉽지 않음. 코스피 전체 조정 시 동반 하락 가능성. 단기 과열(RSI 70 근접) 경계 — 186,000 이상 단기 익절 고려. 손절선 165,000(피보나치 50% or MA60) 필수.</div></div></div>
+</div>
+
+<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
+<div class="card">
+  <div class="row"><span>4/15 거래량 143만주 폭발 — 세력 재진입 확인</span><span class="tag t-g">✓ 수급 강화</span></div>
+  <div class="row"><span>정배열 완성 (현재가 > MA120 > MA60 > MA20)</span><span class="tag t-b">✓ 추세 전환</span></div>
+  <div class="row"><span>피보나치 61.8% 돌파 → 78.6% 도전 중</span><span class="tag t-g">✓ 기술적 돌파</span></div>
+  <div class="row"><span>엘리어트 5파 시작 — 연장파 220K 목표 가능</span><span class="tag t-g">✓ 파동 구조</span></div>
+  <div class="row"><span>삼성 AI·클라우드 인프라 투자 확대 (2026 H2)</span><span class="tag t-navy">✓ 펀더멘털</span></div>
+  <div class="row"><span>월봉 W패턴 완성 — 장기 상승 사이클 초입</span><span class="tag t-teal">✓ 장기 구조</span></div>
+  <div class="row"><span>52주 위치 71.5% — 고점권 진입으로 조정 경계</span><span class="tag t-a">△ 주의</span></div>
+  <div class="row"><span>196,900 전고점 저항 강력 (4/16 194K 실패)</span><span class="tag t-a">△ 기술적 저항</span></div>
+  <div class="row"><span>3월 급락(-21% in 3일) 트라우마 — 매물대 두터움</span><span class="tag t-r">✗ 심리 리스크</span></div>
+  <div class="row"><span>삼성전자 실적 부진 시 동반 약세 가능성</span><span class="tag t-r">✗ 연관 리스크</span></div>
+</div>
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="g2" style="margin-bottom:8px">
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:72%;background:#FAC775"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 72% — 조건부 매수 (고점권 경계)</div>
+    <div style="font-size:11px;color:#5f5e5a">세력 재진입·정배열 완성으로 단기 모멘텀 강하나 52주 위치 71.5%로 고점권. 186,000 돌파 확인 후 분할 매수 추천. 목표가 196,900(전고점) — 돌파 시 추가 상승. 단기 과열 경계 — 조정 시 175,000에서 재매수.</div>
+  </div>
+  <div class="card">
+    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
+    <div class="score-wrap"><div class="score-fill" style="width:78%;background:#9FE1CB"></div></div>
+    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 78% — 적극 매수</div>
+    <div style="font-size:11px;color:#5f5e5a">월봉 W패턴 완성·엘리어트 5파 연장 시나리오로 중장기 상승 구조 우수. 삼성 AI·클라우드 성장 트랙 수혜. 목표가 1차 220,000(+20%), 2차 250,000(+37%). 165,000~175,000 조정 시 핵심 매수 구간 — 장기 보유 추천.</div>
+  </div>
+</div>
+
+<div class="card" style="border-color:#1E3A5F">
+  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "고점권 분할 매수 + 전고점 돌파 후 추격"</div>
+  <div class="g4">
+    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">175,000~<br>178,000</div><div>피보 61.8% 지지<br>30%</div></div>
+    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">165,000~<br>170,000</div><div>MA60 + 피보 50%<br>50%</div></div>
+    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">196,900<br>→220,000</div><div>전고점 돌파 후<br>+20%</div></div>
+    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">160,000원</div><div>MA20 이탈<br>or 피보 38.2%</div></div>
+  </div>
+  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
+    <div style="font-size:11px;color:#085041"><b>💡 삼성에스디에스 핵심 4포인트:</b><br>
+    ① <b>4/15 거래량 143만주 폭발 = 세력 재진입 완료</b> — 3월 털기 후 본격 재상승 시작<br>
+    ② <b>정배열 + 피보나치 61.8% 돌파</b> — 기술적 모멘텀 강화, 186,000 돌파 시 전고점 도전<br>
+    ③ <b>엘리어트 5파 초입</b> — 196,900 돌파 시 연장파 220,000~240,000 목표 가능<br>
+    ④ <b>삼성 AI·클라우드 핵심 계열사</b> — 구조적 성장 트랙, 배당 2%대 안정성</div>
+  </div>
+  <div class="danger-box" style="margin-bottom:0">
+    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 52주 위치 71.5% 고점권 진입 — 단기 과열 경계. 3월 급락(-21%)의 트라우마로 196,900 전고점 저항 강력. 4/16 이미 194,000에서 실패 전례. 단기 익절·분할 매수 필수. 손절선 165,000(MA60) or 160,000(MA20 이탈) 엄수. 삼성전자 실적 악화 시 동반 하락 리스크.</div>
+  </div>
+</div>
+
+<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4.20)</div>
+</div>
+</body>
+</html>
