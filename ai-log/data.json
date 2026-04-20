@@ -1,136 +1,65 @@
 {
-  "date": "2026-04-17",
+  "date": "2026-04-20",
   "start_date": "2026-04-17",
-  "cumulative_return": 6.32,
-  "week_return": 0.0,
-  "win_rate": 0,
-  "total_trades": 0,
-  "ai_commentary": "4월 3주차 AI가 누적 13종목으로 포트폴리오 구축 완료. 4/17 당일은 LG화학·현대차 단타 신호로 추가 편입하며 자동차·배터리 비중 확대. 진입 종류는 '120일선 돌파 + 영업이익률' 조건의 AI합의 시그널(6종)과 '단타 신호' 반등 시그널(7종)로 구분. 섹터 분산은 자동차·IT플랫폼·방산·배터리·보안·반도체·게임까지 7개. 변동성이 제한적인 에너지(SK가스)·소형주(노바렉스)는 비중 1%로 헷지. 대형주 비중은 NAVER·안랩 중심으로 확대.",
+  "cumulative_return": 5.98,
+  "week_return": -0.32,
+  "win_rate": 50,
+  "total_trades": 4,
+  "ai_commentary": "오늘은 더블유게임즈 등 신규 편입. 2건 익절로 수익 확정. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 +6.0%.",
   "new_buys": [
     {
-      "name": "현대차",
-      "slug": "hyundai-motor",
-      "market": "코스피",
-      "entry_to_current_pct": -0.19,
-      "weight_pct": 5,
-      "reason": "4/17 14:56 단타 신호 추가 진입. 자동차 섹터 반등 흐름과 미국 관세 협상 기대감이 단기 모멘텀으로 작용. 일봉 캔들이 5일선 지지 후 반등 시도."
-    },
-    {
-      "name": "SK가스",
+      "name": "더블유게임즈",
       "slug": "",
-      "market": "코스닥",
-      "entry_to_current_pct": -1.02,
-      "weight_pct": 1,
-      "reason": "LPG·LNG 가격 안정세와 배당 매력으로 주초 편입. 에너지 섹터 방어주 성격으로 포지션 헷지 역할."
-    },
-    {
-      "name": "NAVER",
-      "slug": "naver",
       "market": "코스피",
-      "entry_to_current_pct": 2.85,
-      "weight_pct": 10,
-      "reason": "AI 검색 엔진 개편과 광고 단가 회복 기대. 대형주 중 가장 선명한 실적 턴어라운드 시그널. 진입 후 +2.85% 흐름."
-    },
+      "entry_to_current_pct": -0.76,
+      "weight_pct": 6,
+      "reason": "더블유게임즈 신규 편입. 포트폴리오 비중 조정."
+    }
+  ],
+  "exits": [
     {
+      "type": "loss",
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "entry_to_current_pct": -1.19,
-      "weight_pct": 8,
-      "reason": "카카오톡 개편 이슈와 자회사 IPO 모멘텀. 플랫폼 대장주의 반등 시나리오에 베팅. 단기 수급 회복 국면."
+      "return_pct": -3.06,
+      "hold_days": 3,
+      "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
     },
     {
+      "type": "win",
       "name": "LG화학",
       "slug": "lg-chem",
       "market": "코스피",
-      "entry_to_current_pct": 0.42,
-      "weight_pct": 6,
-      "reason": "4/17 14:06 단타 신호 진입. 배터리 자회사 분리 후 본업(석유화학) 가치 재평가. 주가는 저점 대비 반등 초기 구간."
+      "return_pct": 2.65,
+      "hold_days": 3,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
     },
     {
-      "name": "안랩",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 4.31,
-      "weight_pct": 11,
-      "reason": "AI합의 120일선 돌파 + 영업이익률 25% 시그널. 정부 사이버 예산 확대와 보안 수요 증가로 실적 모멘텀 강화."
-    },
-    {
-      "name": "현대로템",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 2.13,
-      "weight_pct": 5,
-      "reason": "AI합의 60일선 돌파 + 영업이익률 15.8% 시그널. K2 전차 폴란드 2차 계약 모멘텀. 방산 수주 사이클 진입."
-    },
-    {
+      "type": "loss",
       "name": "매커스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -2.23,
-      "weight_pct": 4,
-      "reason": "AI합의 120일선 돌파 + 영업이익률 12.6% 시그널. 반도체 후공정 장비 수주 회복 구간."
+      "return_pct": -5.06,
+      "hold_days": 3,
+      "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
     },
     {
-      "name": "노바렉스",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 1.65,
-      "weight_pct": 1,
-      "reason": "건강기능식품 ODM 실적 턴어라운드 기대. 소형주 분산 차원의 소액 편입(비중 1%)."
-    },
-    {
-      "name": "크래프톤",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.0,
-      "weight_pct": 5,
-      "reason": "AI합의 60일선 돌파 + 영업이익률 34% 시그널. 신작 출시 사이클과 PUBG 지속 모멘텀."
-    },
-    {
-      "name": "AP시스템",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 1.13,
-      "weight_pct": 6,
-      "reason": "AI합의 60일선 돌파 + 영업이익률 7.3% 시그널. OLED 장비 투자 사이클 진입 구간."
-    },
-    {
+      "type": "win",
       "name": "LG에너지솔루션",
       "slug": "lg-energy-solution",
       "market": "코스피",
-      "entry_to_current_pct": 0.6,
-      "weight_pct": 7,
-      "reason": "배터리 업황 바닥 확인과 ESS 반등 스토리. 대형주 섹터 대표주로 포트폴리오 앵커 역할."
-    },
-    {
-      "name": "GS피앤엘",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.72,
-      "weight_pct": 5,
-      "reason": "AI합의 120일선 돌파 + 영업이익률 15.4% 시그널. 친환경 소재와 고배당 매력 결합."
+      "return_pct": 3.25,
+      "hold_days": 3,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [
-    {
-      "name": "산일전기",
-      "slug": "",
-      "return_pct": -2.5,
-      "lesson": "60일선 하회로 손절 규칙 적용. 진입 타이밍이 반등 초기 신호와 겹쳤지만 거래량 수반 없이 추세 전환 실패. 다음엔 <b>거래량 20일 평균의 1.5배 이상 조건</b>을 추가해 가짜 돌파를 걸러낼 예정."
-    },
-    {
-      "name": "하나머티리얼즈",
-      "slug": "",
-      "return_pct": -2.8,
-      "lesson": "반도체 후공정 모멘텀 약화로 손절. 섹터 전반이 조정 국면에 들어갈 때 후공정 소재·장비는 대형 반도체 대비 베타가 커서 손실폭 확대. <b>섹터 상대강도 하회 시 편입 보류</b> 규칙을 보강 중."
-    },
     {
       "name": "카카오",
       "slug": "kakao",
-      "return_pct": -0.1,
-      "lesson": "4/14 단타 진입 후 변동성 축소 구간에서 손절(-0.1%)로 재진입 타이밍 확보. 4/16에 동일 종목 재편입, 현재까지 보유 지속. 짧은 손절이 오히려 다음 기회 확보로 이어진 케이스."
+      "return_pct": -3.06,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     }
   ],
   "holdings": [
@@ -147,20 +76,14 @@
       "weight_pct": 10
     },
     {
-      "name": "카카오",
-      "slug": "kakao",
+      "name": "현대차",
+      "slug": "hyundai-motor",
       "market": "코스피",
-      "weight_pct": 8
+      "weight_pct": 9
     },
     {
-      "name": "LG에너지솔루션",
-      "slug": "lg-energy-solution",
-      "market": "코스피",
-      "weight_pct": 7
-    },
-    {
-      "name": "LG화학",
-      "slug": "lg-chem",
+      "name": "더블유게임즈",
+      "slug": "",
       "market": "코스피",
       "weight_pct": 6
     },
@@ -169,12 +92,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
-    },
-    {
-      "name": "현대차",
-      "slug": "hyundai-motor",
-      "market": "코스피",
-      "weight_pct": 5
     },
     {
       "name": "현대로템",
@@ -193,12 +110,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
-    },
-    {
-      "name": "매커스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 4
     },
     {
       "name": "SK가스",

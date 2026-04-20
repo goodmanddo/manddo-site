@@ -2,93 +2,72 @@
   "last_holdings": {
     "005380": {
       "name": "현대차",
-      "qty": 2,
-      "avg_price": 539000,
-      "current_price": 538000,
+      "qty": 4,
+      "avg_price": 536000,
+      "current_price": 530000,
       "opened_at": "2026-04-17"
     },
     "018670": {
       "name": "SK가스",
       "qty": 1,
       "avg_price": 245500,
-      "current_price": 243000,
+      "current_price": 244000,
       "opened_at": "2026-04-17"
     },
     "035420": {
       "name": "NAVER",
-      "qty": 10,
-      "avg_price": 210500,
-      "current_price": 216500,
-      "opened_at": "2026-04-17"
-    },
-    "035720": {
-      "name": "카카오",
-      "qty": 35,
-      "avg_price": 50600,
-      "current_price": 50000,
-      "opened_at": "2026-04-17"
-    },
-    "051910": {
-      "name": "LG화학",
-      "qty": 4,
-      "avg_price": 358500,
-      "current_price": 360000,
+      "qty": 11,
+      "avg_price": 213500,
+      "current_price": 213000,
       "opened_at": "2026-04-17"
     },
     "053800": {
       "name": "안랩",
       "qty": 38,
       "avg_price": 64900,
-      "current_price": 67700,
+      "current_price": 66200,
       "opened_at": "2026-04-17"
     },
     "064350": {
       "name": "현대로템",
       "qty": 5,
       "avg_price": 211500,
-      "current_price": 216000,
+      "current_price": 220500,
       "opened_at": "2026-04-17"
     },
-    "093520": {
-      "name": "매커스",
-      "qty": 42,
-      "avg_price": 24700,
-      "current_price": 24150,
-      "opened_at": "2026-04-17"
+    "192080": {
+      "name": "더블유게임즈",
+      "qty": 26,
+      "avg_price": 52300,
+      "current_price": 51900,
+      "opened_at": "2026-04-20"
     },
     "194700": {
       "name": "노바렉스",
       "qty": 21,
       "avg_price": 13930,
-      "current_price": 14160,
+      "current_price": 14500,
       "opened_at": "2026-04-17"
     },
     "259960": {
       "name": "크래프톤",
       "qty": 4,
       "avg_price": 263500,
-      "current_price": 263500,
+      "current_price": 262000,
       "opened_at": "2026-04-17"
     },
     "265520": {
       "name": "AP시스템",
       "qty": 56,
       "avg_price": 22100,
-      "current_price": 22350,
-      "opened_at": "2026-04-17"
-    },
-    "373220": {
-      "name": "LG에너지솔루션",
-      "qty": 4,
-      "avg_price": 415500,
-      "current_price": 418000,
+      "current_price": 22850,
       "opened_at": "2026-04-17"
     },
     "499790": {
       "name": "GS피앤엘",
       "qty": 25,
       "avg_price": 48700,
-      "current_price": 49050,
+      "current_price": 49450,
       "opened_at": "2026-04-17"
     }
   },
@@ -96,7 +75,40 @@
     {
       "date": "2026-04-17",
       "total_eval": 22653494
+    },
+    {
+      "date": "2026-04-20",
+      "total_eval": 22582003
     }
   ],
-  "completed_trades": []
+  "completed_trades": [
+    {
+      "name": "카카오",
+      "code": "035720",
+      "return_pct": -3.06,
+      "date": "2026-04-20",
+      "is_win": false
+    },
+    {
+      "name": "LG화학",
+      "code": "051910",
+      "return_pct": 2.65,
+      "date": "2026-04-20",
+      "is_win": true
+    },
+    {
+      "name": "매커스",
+      "code": "093520",
+      "return_pct": -5.06,
+      "date": "2026-04-20",
+      "is_win": false
+    },
+    {
+      "name": "LG에너지솔루션",
+      "code": "373220",
+      "return_pct": 3.25,
+      "date": "2026-04-20",
+      "is_win": true
+    }
+  ]
 }
