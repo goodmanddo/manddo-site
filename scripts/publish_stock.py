@@ -249,6 +249,7 @@ def git_push(added_count):
 def main():
     rebuild_only = "--rebuild" in sys.argv
     inject_only = "--inject-back" in sys.argv
+    replace_mode = "--replace" in sys.argv
 
     if inject_only:
         changed = 0
@@ -268,8 +269,11 @@ def main():
     existing_slugs = {it["slug"] for it in manifest}
 
     added = []
+    replaced = []
     skipped_no_meta = []
     skipped_dup = []
+
+    manifest_by_slug = {it["slug"]: it for it in manifest}
 
     if not rebuild_only and SOURCE_DIR.exists():
         for src in sorted(SOURCE_DIR.glob("*.html")):
@@ -277,23 +281,32 @@ def main():
             if meta is None:
                 skipped_no_meta.append((src.name, missing))
                 continue
-            if meta["slug"] in existing_slugs:
+            is_dup = meta["slug"] in existing_slugs
+            if is_dup and not replace_mode:
                 skipped_dup.append(src.name)
                 continue
             dest = STOCK_DIR / f"{meta['slug']}.html"
             src_text = src.read_text(encoding="utf-8", errors="ignore")
             dest.write_text(inject_back_button(src_text), encoding="utf-8")
-            manifest.append(meta)
-            existing_slugs.add(meta["slug"])
-            added.append(meta["slug"])
-            print(f"  + {meta['slug']} ({meta['name']}) ← {src.name}")
+            if is_dup:
+                # 기존 added 날짜 유지, 메타 갱신
+                prev = manifest_by_slug[meta["slug"]]
+                prev.update({k: v for k, v in meta.items() if k != "added"})
+                replaced.append(meta["slug"])
+                print(f"  ~ {meta['slug']} ({meta['name']}) ← {src.name}")
+            else:
+                manifest.append(meta)
+                manifest_by_slug[meta["slug"]] = meta
+                existing_slugs.add(meta["slug"])
+                added.append(meta["slug"])
+                print(f"  + {meta['slug']} ({meta['name']}) ← {src.name}")
 
-    if added or rebuild_only:
+    if added or replaced or rebuild_only:
         save_manifest(manifest)
         regenerate_index(manifest)
         regenerate_sitemap(manifest)
 
-    print(f"\n발행: {len(added)}건 / 중복 스킵: {len(skipped_dup)}건 / 메타 누락: {len(skipped_no_meta)}건")
+    print(f"\n신규: {len(added)}건 / 교체: {len(replaced)}건 / 중복 스킵: {len(skipped_dup)}건 / 메타 누락: {len(skipped_no_meta)}건")
     if skipped_no_meta:
         print("\n메타 누락 파일:")
         for name, missing in skipped_no_meta:
@@ -303,8 +316,8 @@ def main():
         for name in skipped_dup:
             print(f"  - {name}")
 
-    if added:
-        git_push(len(added))
+    if added or replaced:
+        git_push(len(added) + len(replaced))
 
 
 if __name__ == "__main__":

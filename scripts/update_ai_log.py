@@ -172,13 +172,20 @@ def main():
         if ref.get("total_eval", 0) > 0:
             week_return = (total_eval - ref["total_eval"]) / ref["total_eval"] * 100
 
-    # 신규 매수: 어제 없던 종목이 오늘 있음
+    # 신규 매수: 최근 7일 내 편입된 보유 종목 (당일 신규 + 최근 며칠 내 편입)
     new_buys = []
     for code, h in holdings.items():
-        if code in prev_holdings:
+        prev = prev_holdings.get(code, {})
+        opened_at_str = prev.get("opened_at") or today
+        try:
+            opened_at = datetime.strptime(opened_at_str, "%Y-%m-%d").date()
+        except Exception:
+            opened_at = market_d
+        days_held = (market_d - opened_at).days
+        if days_held > 7:
             continue
         name = h["name"]
-        slug = to_slug(name, code, slug_map)  # 미등록 시 빈 문자열 — 카드는 표시하되 링크 비활성
+        slug = to_slug(name, code, slug_map)
         if not slug:
             log(f"신규 매수 (slug 미등록, 카드만 표시): {name}/{code}")
         entry = h.get("avg_price") or h.get("current_price") or 0
@@ -193,20 +200,22 @@ def main():
             "market": market_label(code),
             "entry_to_current_pct": round(pct, 2),
             "weight_pct": weight,
+            "hold_days": days_held,
             "reason": override_reasons.get(name) or default_reason("buy", name),
         })
+    new_buys.sort(key=lambda x: x["hold_days"])  # 최근 편입부터
 
-    # 청산: 어제 있던 종목이 오늘 없음
-    exits = []
+    # 청산: 어제 있던 종목이 오늘 없음 → completed에 기록 (동일일+코드 중복 방지)
     completed = state.get("completed_trades", [])
+    completed_keys = {(c.get("code"), c.get("date")) for c in completed}
     for code, prev in prev_holdings.items():
         if code in holdings:
             continue
+        if (code, today) in completed_keys:
+            continue
         name = prev.get("name") or code
-        slug = to_slug(name, code, slug_map)
-        if not slug:
+        if not to_slug(name, code, slug_map):
             log(f"청산 (slug 미등록, 카드만 표시): {name}/{code}")
-        # 실현 손익률: 오늘 현재가 기준 근사
         try:
             cur = api.get_current_price(code).get("price") or 0
         except Exception:
@@ -214,7 +223,6 @@ def main():
         avg = prev.get("avg_price") or 0
         pct = ((cur - avg) / avg * 100) if (avg and cur) else (prev.get("profit_rate") or 0.0)
         pct = round(pct, 2)
-        etype = "win" if pct >= 0 else "loss"
         hold_days = 0
         if prev.get("opened_at"):
             try:
@@ -222,16 +230,32 @@ def main():
                 hold_days = (market_d - opened).days
             except Exception:
                 pass
+        completed.append({
+            "name": name, "code": code, "return_pct": pct, "date": today,
+            "is_win": pct >= 0, "hold_days": hold_days,
+        })
+        completed_keys.add((code, today))
+
+    # 오늘의 매도: completed 중 오늘 날짜 거래, 1% 이상만 노출
+    exits = []
+    for c in completed:
+        if c.get("date") != today:
+            continue
+        pct = c.get("return_pct", 0)
+        if abs(pct) < 1.0:
+            continue
+        etype = "win" if c.get("is_win") else "loss"
+        name = c["name"]
+        code = c.get("code", "")
         exits.append({
             "type": etype,
             "name": name,
-            "slug": slug,
+            "slug": to_slug(name, code, slug_map),
             "market": market_label(code),
             "return_pct": pct,
-            "hold_days": hold_days,
+            "hold_days": c.get("hold_days", 0),
             "reason": override_reasons.get(name) or default_reason(etype, name, pct),
         })
-        completed.append({"name": name, "code": code, "return_pct": pct, "date": today, "is_win": etype == "win"})
 
     # 승률 (완료 거래 기준)
     if completed:
@@ -252,9 +276,9 @@ def main():
             break
         if c.get("is_win"):
             continue
-        slug = to_slug(c["name"], c.get("code", ""), slug_map)
-        if not slug:
+        if abs(c.get("return_pct", 0)) < 3.0:
             continue
+        slug = to_slug(c["name"], c.get("code", ""), slug_map)
         weekly_losses.append({
             "name": c["name"],
             "slug": slug,
