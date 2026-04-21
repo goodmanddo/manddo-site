@@ -1,57 +1,93 @@
 {
-  "date": "2026-04-20",
+  "date": "2026-04-21",
   "start_date": "2026-04-17",
-  "cumulative_return": 5.98,
-  "week_return": -0.32,
-  "win_rate": 50,
-  "total_trades": 4,
-  "ai_commentary": "오늘은 더블유게임즈 등 신규 편입. 2건 익절로 수익 확정. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 +6.0%.",
-  "new_buys": [
-    {
-      "name": "더블유게임즈",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -0.76,
-      "weight_pct": 6,
-      "reason": "더블유게임즈 신규 편입. 포트폴리오 비중 조정."
-    }
-  ],
+  "cumulative_return": 5.92,
+  "week_return": -0.37,
+  "win_rate": 54,
+  "total_trades": 13,
+  "ai_commentary": "5건 익절로 수익 확정. 4건은 손절 규칙에 따라 정리. 시작 이후 누적 +5.9%.",
+  "new_buys": [],
   "exits": [
     {
       "type": "loss",
-      "name": "카카오",
-      "slug": "kakao",
-      "market": "코스피",
-      "return_pct": -3.06,
-      "hold_days": 3,
+      "name": "SK가스",
+      "slug": "",
+      "market": "코스닥",
+      "return_pct": -0.81,
+      "hold_days": 4,
       "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
     },
     {
       "type": "win",
-      "name": "LG화학",
-      "slug": "lg-chem",
+      "name": "NAVER",
+      "slug": "naver",
       "market": "코스피",
-      "return_pct": 2.65,
-      "hold_days": 3,
+      "return_pct": 0.47,
+      "hold_days": 4,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "win",
+      "name": "안랩",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 2.77,
+      "hold_days": 4,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "win",
+      "name": "현대로템",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 4.73,
+      "hold_days": 4,
       "reason": "수익 구간 진입. 분할 익절로 수익 확정."
     },
     {
       "type": "loss",
-      "name": "매커스",
+      "name": "더블유게임즈",
       "slug": "",
       "market": "코스피",
-      "return_pct": -5.06,
-      "hold_days": 3,
+      "return_pct": -1.15,
+      "hold_days": 1,
       "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
     },
     {
       "type": "win",
-      "name": "LG에너지솔루션",
-      "slug": "lg-energy-solution",
+      "name": "노바렉스",
+      "slug": "",
       "market": "코스피",
-      "return_pct": 3.25,
-      "hold_days": 3,
+      "return_pct": 4.38,
+      "hold_days": 4,
       "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "loss",
+      "name": "크래프톤",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -3.42,
+      "hold_days": 4,
+      "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
+    },
+    {
+      "type": "win",
+      "name": "AP시스템",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 4.3,
+      "hold_days": 4,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "loss",
+      "name": "GS피앤엘",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -1.85,
+      "hold_days": 4,
+      "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
     }
   ],
   "weekly_losses": [
@@ -64,64 +100,10 @@
   ],
   "holdings": [
     {
-      "name": "안랩",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 11
-    },
-    {
-      "name": "NAVER",
-      "slug": "naver",
-      "market": "코스피",
-      "weight_pct": 10
-    },
-    {
       "name": "현대차",
       "slug": "hyundai-motor",
       "market": "코스피",
-      "weight_pct": 9
-    },
-    {
-      "name": "더블유게임즈",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 6
-    },
-    {
-      "name": "AP시스템",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 6
-    },
-    {
-      "name": "현대로템",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "크래프톤",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "GS피앤엘",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "SK가스",
-      "slug": "",
-      "market": "코스닥",
-      "weight_pct": 1
-    },
-    {
-      "name": "노바렉스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 1
+      "weight_pct": 10
     }
   ]
 }

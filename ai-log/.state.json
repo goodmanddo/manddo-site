@@ -3,71 +3,8 @@
     "005380": {
       "name": "현대차",
       "qty": 4,
-      "avg_price": 536000,
-      "current_price": 530000,
-      "opened_at": "2026-04-17"
-    },
-    "018670": {
-      "name": "SK가스",
-      "qty": 1,
-      "avg_price": 245500,
-      "current_price": 244000,
-      "opened_at": "2026-04-17"
-    },
-    "035420": {
-      "name": "NAVER",
-      "qty": 11,
-      "avg_price": 213500,
-      "current_price": 213000,
-      "opened_at": "2026-04-17"
-    },
-    "053800": {
-      "name": "안랩",
-      "qty": 38,
-      "avg_price": 64900,
-      "current_price": 66200,
-      "opened_at": "2026-04-17"
-    },
-    "064350": {
-      "name": "현대로템",
-      "qty": 5,
-      "avg_price": 211500,
-      "current_price": 220500,
-      "opened_at": "2026-04-17"
-    },
-    "192080": {
-      "name": "더블유게임즈",
-      "qty": 26,
-      "avg_price": 52300,
-      "current_price": 51900,
-      "opened_at": "2026-04-20"
-    },
-    "194700": {
-      "name": "노바렉스",
-      "qty": 21,
-      "avg_price": 13930,
-      "current_price": 14500,
-      "opened_at": "2026-04-17"
-    },
-    "259960": {
-      "name": "크래프톤",
-      "qty": 4,
-      "avg_price": 263500,
-      "current_price": 262000,
-      "opened_at": "2026-04-17"
-    },
-    "265520": {
-      "name": "AP시스템",
-      "qty": 56,
-      "avg_price": 22100,
-      "current_price": 22850,
-      "opened_at": "2026-04-17"
-    },
-    "499790": {
-      "name": "GS피앤엘",
-      "qty": 25,
-      "avg_price": 48700,
-      "current_price": 49450,
+      "avg_price": 547000,
+      "current_price": 546000,
       "opened_at": "2026-04-17"
     }
   },
@@ -79,6 +16,10 @@
     {
       "date": "2026-04-20",
       "total_eval": 22582003
+    },
+    {
+      "date": "2026-04-21",
+      "total_eval": 22569269
     }
   ],
   "completed_trades": [
@@ -109,6 +50,69 @@
       "return_pct": 3.25,
       "date": "2026-04-20",
       "is_win": true
+    },
+    {
+      "name": "SK가스",
+      "code": "018670",
+      "return_pct": -0.81,
+      "date": "2026-04-21",
+      "is_win": false
+    },
+    {
+      "name": "NAVER",
+      "code": "035420",
+      "return_pct": 0.47,
+      "date": "2026-04-21",
+      "is_win": true
+    },
+    {
+      "name": "안랩",
+      "code": "053800",
+      "return_pct": 2.77,
+      "date": "2026-04-21",
+      "is_win": true
+    },
+    {
+      "name": "현대로템",
+      "code": "064350",
+      "return_pct": 4.73,
+      "date": "2026-04-21",
+      "is_win": true
+    },
+    {
+      "name": "더블유게임즈",
+      "code": "192080",
+      "return_pct": -1.15,
+      "date": "2026-04-21",
+      "is_win": false
+    },
+    {
+      "name": "노바렉스",
+      "code": "194700",
+      "return_pct": 4.38,
+      "date": "2026-04-21",
+      "is_win": true
+    },
+    {
+      "name": "크래프톤",
+      "code": "259960",
+      "return_pct": -3.42,
+      "date": "2026-04-21",
+      "is_win": false
+    },
+    {
+      "name": "AP시스템",
+      "code": "265520",
+      "return_pct": 4.3,
+      "date": "2026-04-21",
+      "is_win": true
+    },
+    {
+      "name": "GS피앤엘",
+      "code": "499790",
+      "return_pct": -1.85,
+      "date": "2026-04-21",
+      "is_win": false
     }
   ]
 }
