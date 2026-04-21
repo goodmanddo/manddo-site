@@ -5,7 +5,7 @@
   "week_return": 8.46,
   "win_rate": 54,
   "total_trades": 13,
-  "ai_commentary": "오늘은 현대차 등 신규 편입. 시작 이후 누적 +15.3%.",
+  "ai_commentary": "오늘은 현대차 등 신규 편입. 4건 익절로 수익 확정. 3건은 손절 규칙에 따라 정리. 시작 이후 누적 +15.3%.",
   "new_buys": [
     {
       "name": "현대차",
@@ -17,7 +17,71 @@
       "reason": "현대차 신규 편입. 포트폴리오 비중 조정."
     }
   ],
-  "exits": [],
+  "exits": [
+    {
+      "type": "win",
+      "name": "안랩",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 2.77,
+      "hold_days": 0,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "win",
+      "name": "현대로템",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 4.73,
+      "hold_days": 0,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "loss",
+      "name": "더블유게임즈",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -1.15,
+      "hold_days": 0,
+      "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
+    },
+    {
+      "type": "win",
+      "name": "노바렉스",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 4.38,
+      "hold_days": 0,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "loss",
+      "name": "크래프톤",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -3.42,
+      "hold_days": 0,
+      "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
+    },
+    {
+      "type": "win",
+      "name": "AP시스템",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 4.3,
+      "hold_days": 0,
+      "reason": "수익 구간 진입. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "loss",
+      "name": "GS피앤엘",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -1.85,
+      "hold_days": 0,
+      "reason": "손절 규칙 적용. 다음 진입 시점까지 관망."
+    }
+  ],
   "weekly_losses": [
     {
       "name": "크래프톤",
