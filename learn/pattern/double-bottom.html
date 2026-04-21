@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>쌍바닥 (W 패턴) — 바닥 반전의 교과서 | 만또 학습</title>
+<meta name="description" content="쌍바닥(더블 바텀) 패턴이 바닥을 확인하는 원리. 두 바닥 사이 거래량의 매집 신호, 중간 저항선 돌파 시 매매 시나리오와 진짜·가짜 쌍바닥 구분법.">
+<meta name="keywords" content="쌍바닥, 더블바텀, W패턴, 바닥반전, 차트패턴, 매집, 저항선돌파">
+<meta property="og:title" content="쌍바닥 (W 패턴) — 바닥 반전의 교과서">
+<meta property="og:description" content="두 번 같은 가격에서 튕긴다는 건 매수 세력이 그 가격을 지키고 있다는 신호.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/learn/pattern/double-bottom.html">
+<link rel="canonical" href="https://manddo.kr/learn/pattern/double-bottom.html">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/" class="active">학습</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <div class="breadcrumb">
+    <a href="/learn/">학습</a><span class="sep">/</span><a href="/learn/pattern/">차트 패턴 도감</a><span class="sep">/</span>쌍바닥
+  </div>
+
+  <section class="learn-hero">
+    <h1>쌍바닥 (Double Bottom · W)</h1>
+    <p class="lead">같은 가격대에서 두 번 튕겨 오르는 W자 모양. 한 번 튕기는 건 우연이지만 두 번째에도 같은 자리를 지킨다는 건, 그 가격에 "반드시 사겠다"는 매수세가 실제로 있다는 뜻입니다. 바닥 패턴 중 가장 자주 나오고, 개인 투자자가 가장 많이 놓치는 모양이기도 합니다.</p>
+    <div class="meta">
+      <span class="chip">유형 · 반전형 (바닥)</span>
+      <span class="chip gray">신뢰도 <span class="stars">★★★★<span class="off">★</span></span></span>
+      <span class="chip green">형성 기간 · 1~4개월</span>
+    </div>
+  </section>
+
+  <div class="tldr">
+    <b>⚡ 30초 요약</b>
+    두 바닥이 비슷한 가격(±3% 이내)이고, 두 바닥 사이의 반등 고점(넥라인/저항선)을 <b>종가 기준 거래량 동반해 상향 돌파</b>할 때가 진입 시점. 목표가는 중간 고점에서 바닥까지의 수직 거리를 돌파 지점 위로 투영. 두 번째 바닥이 첫 바닥보다 <b>거래량이 적게</b> 나오면 진성 쌍바닥, 더 많이 나오면 실패 가능성이 커진다.
+  </div>
+
+  <div class="pattern-svg">
+    <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" aria-label="쌍바닥 W 패턴 도식">
+      <defs>
+        <linearGradient id="dbFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0C8A5A" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#0C8A5A" stop-opacity="0"/>
+        </linearGradient>
+        <marker id="arrUp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#0C8A5A"/>
+        </marker>
+      </defs>
+      <line x1="30" y1="240" x2="580" y2="240" stroke="#e5e8eb" stroke-width="1"/>
+      <!-- 저항선 (넥라인) -->
+      <line x1="100" y1="130" x2="570" y2="130" stroke="#3182F6" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="505" y="125" font-size="11" fill="#3182F6" font-weight="700">저항선</text>
+      <!-- 가격 라인 (area) -->
+      <path d="M 30,75 L 90,130 L 150,215 L 210,170 L 270,130 L 330,175 L 400,215 L 460,170 L 520,110 L 570,70 L 570,240 L 30,240 Z" fill="url(#dbFill)"/>
+      <!-- 가격 라인 -->
+      <path d="M 30,75 L 90,130 L 150,215 L 210,170 L 270,130 L 330,175 L 400,215 L 460,170 L 520,110 L 570,70" fill="none" stroke="#0C8A5A" stroke-width="2.2" stroke-linejoin="round"/>
+      <!-- 라벨 -->
+      <circle cx="150" cy="215" r="4" fill="#0C8A5A"/>
+      <text x="127" y="232" font-size="11" fill="#191f28" font-weight="700">1차 바닥</text>
+      <circle cx="400" cy="215" r="4" fill="#0C8A5A"/>
+      <text x="378" y="232" font-size="11" fill="#191f28" font-weight="700">2차 바닥</text>
+      <circle cx="270" cy="130" r="4" fill="#3182F6"/>
+      <text x="248" y="120" font-size="11" fill="#191f28" font-weight="700">중간 고점</text>
+      <!-- 돌파 화살표 -->
+      <line x1="510" y1="120" x2="540" y2="85" stroke="#0C8A5A" stroke-width="2" marker-end="url(#arrUp)"/>
+      <text x="525" y="108" font-size="11" fill="#0C8A5A" font-weight="700">돌파</text>
+      <!-- 목표 거리 h -->
+      <line x1="50" y1="130" x2="50" y2="215" stroke="#8b95a1" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="55" y="177" font-size="10" fill="#8b95a1">h</text>
+      <line x1="50" y1="130" x2="50" y2="45" stroke="#0C8A5A" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+      <!-- 거래량 바 -->
+      <rect x="140" y="256" width="20" height="18" fill="#0C8A5A" opacity="0.55"/>
+      <rect x="390" y="262" width="20" height="12" fill="#0C8A5A" opacity="0.35"/>
+      <rect x="510" y="255" width="20" height="19" fill="#0C8A5A" opacity="0.6"/>
+      <text x="133" y="275" font-size="9" fill="#8b95a1">고</text>
+      <text x="383" y="275" font-size="9" fill="#8b95a1">저</text>
+      <text x="507" y="275" font-size="9" fill="#8b95a1">폭발</text>
+    </svg>
+    <div class="caption">1차 바닥(매도 투매) → 반등 후 2차 바닥(저거래량 = 매도 소진) → 중간 저항 돌파(고거래량).</div>
+  </div>
+
+  <h2>왜 두 번 같은 자리에서 튕기는가</h2>
+  <p>쌍바닥의 본질은 "매도 물량이 소진되는 과정"입니다. 하락 추세가 이어지면 팔 사람은 결국 다 팔게 되어 있습니다. 첫 번째 바닥에서 튕기는 건 일시적 기술적 반등인 경우도 있지만, 두 번째에도 같은 가격을 지켰다면 그 이상 내려가지 않겠다는 매수 세력의 의지를 가격으로 확인한 셈입니다.</p>
+
+  <p><b>1차 바닥 — 공포 매도의 마지막 구간.</b> 하락 추세에서 "더는 못 참겠다"는 심리가 절정에 달하면서 거래량이 급증합니다. 뉴스에는 악재가 가득하고 개인 투자자의 손절 주문이 쏟아집니다. 이때 빠져나가는 물량을 누군가 받아주면서 바닥이 만들어집니다.</p>
+
+  <p><b>반등 구간 — 기술적 되돌림.</b> 낙폭이 과해서 공매도 숏커버링과 단기 반등 매수가 붙습니다. 하지만 아직 추세 전환 확신이 없어 중간 고점(저항선)에서 다시 꺾입니다.</p>
+
+  <p><b>2차 바닥 — 매도의 진짜 소진.</b> 가격이 다시 1차 바닥 근처로 내려오지만, 이번엔 거래량이 훨씬 적습니다. 팔 사람이 이미 1차에서 많이 털렸기 때문. 여기서 "더 이상 내려가지 않는다"는 바닥 컨센서스가 형성되며, 대규모 매수 세력이 조용히 포지션을 쌓습니다(=매집).</p>
+
+  <p><b>돌파 — 공식적인 추세 전환.</b> 중간 고점(저항선)을 거래량 증가와 함께 상향 돌파하면, 기존 저항이 지지로 뒤바뀌며 상승 추세가 확정됩니다.</p>
+
+  <div class="callout info">
+    <b>거래량의 "감소 → 폭발" 순서가 핵심</b>
+    진성 쌍바닥은 1차 바닥(고거래량) → 2차 바닥(저거래량) → 돌파(거래량 폭발)의 리듬이 지켜집니다. 반대로 2차 바닥 거래량이 1차보다 많으면 "매도가 아직 안 끝났다"는 뜻이고, 그대로 트리플 바텀이나 하락 지속으로 이어지는 경우가 많습니다.
+  </div>
+
+  <h2>매매 시나리오 — 진입·손절·목표</h2>
+  <div class="scenario-grid">
+    <div class="sc entry">
+      <div class="label">🟢 진입</div>
+      <div class="value">저항선 상향 돌파 시점</div>
+      <div class="note">종가 기준 중간 고점(저항선)을 돌파하고, 직전 10일 평균 대비 거래량 150% 이상. 보수적으로는 돌파 후 되돌림에서 2차 진입.</div>
+    </div>
+    <div class="sc stop">
+      <div class="label">🔴 손절</div>
+      <div class="value">2차 바닥 저점</div>
+      <div class="note">돌파 후 가격이 다시 내려와 2차 바닥을 하향 이탈하면 패턴 실패. 이 지점 아래에 손절선 설정.</div>
+    </div>
+    <div class="sc target">
+      <div class="label">🔵 목표가</div>
+      <div class="value">돌파점 + h</div>
+      <div class="note">h = 중간 고점 ~ 바닥까지 수직 거리. 돌파 지점에서 h만큼 위를 1차 목표로. 장기 상승 추세면 분할 익절.</div>
+    </div>
+  </div>
+
+  <h3>목표가 계산 예시</h3>
+  <p>1차·2차 바닥 7,000원, 중간 고점(저항선) 8,000원이라면 h = 1,000원. 저항선을 8,000원에서 돌파하면 1차 목표는 <b>8,000 + 1,000 = 9,000원</b>. 여기서 실제 상승폭은 보통 h의 1.5~2배까지 확장되는 경우도 많지만, 계산식은 최소 기대치로만 봅니다.</p>
+
+  <h2>진짜 쌍바닥과 가짜 쌍바닥 구분법</h2>
+  <table class="pattern-table">
+    <tr><th>체크포인트</th><th>진성 쌍바닥</th><th>가짜 (추가 하락)</th></tr>
+    <tr><td>두 바닥 간격</td><td>최소 3주 이상 (하루·이틀짜리는 무효)</td><td>짧은 간격의 연속 하락</td></tr>
+    <tr><td>두 바닥 가격차</td><td>±3% 이내 동일 가격대</td><td>2차 바닥이 1차보다 뚜렷히 낮음</td></tr>
+    <tr><td>2차 바닥 거래량</td><td>1차보다 확연히 감소</td><td>1차와 비슷하거나 더 많음</td></tr>
+    <tr><td>중간 반등폭</td><td>바닥 대비 10~20% 이상</td><td>바닥 대비 5% 미만 (너무 약한 반등)</td></tr>
+    <tr><td>시장 환경</td><td>전체 지수도 바닥 잡는 중</td><td>전체 지수 하락 지속</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <b>가장 흔한 실수 — 1차 바닥에서 "쌍바닥 같은데?"라며 선진입</b>
+    1차 바닥 이후 반등이 나오면 "여기가 바닥이다"라고 착각하기 쉽습니다. 하지만 진짜 쌍바닥인지 확인하려면 반드시 2차 바닥까지 본 뒤, 중간 저항선 돌파를 기다려야 합니다. 1차 바닥 매수는 통계적으로 실패 확률이 훨씬 높아요.
+  </div>
+
+  <h2>✅ 진입 전 체크리스트</h2>
+  <ul class="checklist">
+    <li>하락 추세 말미에서 나타났는가 (상승 중인 차트의 잠깐 눌림은 쌍바닥 아님)</li>
+    <li>두 바닥 사이 간격이 3주~3개월 사이인가</li>
+    <li>두 바닥 가격이 ±3% 이내로 비슷한가</li>
+    <li>2차 바닥 거래량이 1차보다 적은가</li>
+    <li>중간 고점(저항선)을 종가 기준 확정 돌파했는가</li>
+    <li>돌파 시 거래량이 평균 이상인가</li>
+    <li>종목 펀더멘털이 바닥을 만들 만한 근거가 있는가 (실적 저점 통과, 구조조정 완료 등)</li>
+  </ul>
+
+  <h2>❓ 자주 묻는 질문</h2>
+  <div class="faq-item">
+    <div class="q">2차 바닥이 1차보다 조금 더 낮아도 쌍바닥인가요?</div>
+    <p class="a">가격이 1~3% 정도 더 낮은 건 오히려 긍정적 신호인 경우가 있습니다. 마지막 매도 물량을 털어내는 "스프링 (spring) 움직임"이라 불리며, 2차 바닥이 아주 살짝 더 낮으면서 즉시 반등하면 매수 세력의 흔적으로 해석합니다. 단, 5% 이상 더 낮으면 이미 하락 추세 연속으로 봅니다.</p>
+  </div>
+  <div class="faq-item">
+    <div class="q">돌파 후 되돌림(풀백)은 어떻게 해석해야 하나요?</div>
+    <p class="a">돌파 직후 가격이 저항선이었던 자리까지 되돌아오는 건 자연스러운 현상입니다. 오히려 이 되돌림에서 지지를 받으면 "저항이 지지로 바뀌었다(Resistance-Support Flip)"는 확정 신호로 해석되어, 2차 진입 기회로 활용할 수 있어요.</p>
+  </div>
+  <div class="faq-item">
+    <div class="q">쌍바닥이 완성 됐는데도 안 오르는 경우는?</div>
+    <p class="a">시장 전체가 하락 추세면 개별 쌍바닥도 무력화됩니다. 업종 전체가 구조적 불황이면 같은 결과. 또한 거래대금이 너무 적은 종목(일평균 거래대금 5억 미만)은 패턴 자체가 노이즈일 수 있어요. 쌍바닥은 "개별 종목 기술적 신호 + 거시적 환경 수급"이 함께 맞아야 움직입니다.</p>
+  </div>
+  <div class="faq-item">
+    <div class="q">삼중바닥(Triple Bottom)은 더 강한 신호인가요?</div>
+    <p class="a">일반적으로 그렇다고 알려져 있지만, 한편으론 "세 번이나 같은 자리에서 맴돈다 = 상승 동력이 약하다"로 해석되기도 합니다. 실전에서는 삼중바닥보다 "살짝 더 낮은 2차 바닥 후 빠른 돌파"가 오히려 강한 상승으로 이어지는 경우가 많습니다.</p>
+  </div>
+  <div class="faq-item">
+    <div class="q">쌍바닥에서 매수 후 얼마나 보유해야 하나요?</div>
+    <p class="a">1차 목표(돌파점 + h) 도달까지는 평균 4~12주. 이후 추세가 꺾이지 않으면 이동평균선(20일/60일)을 이탈할 때까지 보유하는 트레일링 전략이 유효합니다. 단기 목표만 달성하고 끝낼지, 중장기로 끌고 갈지는 진입 시점에 미리 정해두는 게 좋아요.</p>
+  </div>
+
+  <h2>다음 학습</h2>
+  <div class="next-row">
+    <a href="/learn/pattern/head-and-shoulders.html" class="nx">
+      <div class="dir">← 반대 방향 패턴</div>
+      <div class="tt">헤드앤숄더 — 고점 반전의 교과서</div>
+    </a>
+    <a href="/learn/pattern/cup-and-handle.html" class="nx">
+      <div class="dir">다음 패턴 →</div>
+      <div class="tt">컵앤핸들 — 신고가 돌파 전의 숨 고르기</div>
+    </a>
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    본 해설은 교육 목적이며 특정 종목의 매매 권유가 아닙니다. 차트 패턴은 확률적 참고일 뿐, 실제 투자 결과는 시장 상황·펀더멘털·개인 자금 관리에 따라 달라집니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+</body>
+</html>
