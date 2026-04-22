@@ -28,7 +28,10 @@ DONE_DIR = BLOG_SRC / "게시완료"
 SITE = HOME / "manddo-site"
 BLOG_DIR = SITE / "blog"
 INDEX_FILE = BLOG_DIR / "index.html"
+HOME_INDEX_FILE = SITE / "index.html"
 SITEMAP_FILE = SITE / "sitemap.xml"
+HOME_BLOG_START = "<!-- HOME_BLOG_START -->"
+HOME_BLOG_END = "<!-- HOME_BLOG_END -->"
 LOG_FILE = SITE / "scripts" / "publish_blog.log"
 
 FRONTMATTER_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n(.*)$", re.DOTALL)
@@ -339,6 +342,34 @@ def update_blog_index(new_posts):
     rebuild_blog_index()
 
 
+def update_home_blog_section():
+    """홈 index.html의 블로그 섹션을 최신 3편으로 갱신."""
+    if not HOME_INDEX_FILE.exists():
+        return
+    posts = scan_all_posts()[:3]
+    if not posts:
+        return
+    items = []
+    for p in posts:
+        d = p["date"]
+        items.append(
+            f'      <a href="/blog/{p["slug"]}.html" class="post-item">'
+            f'<div class="cat">{p["category"]}</div>'
+            f'<div class="title">{p["title"]}</div>'
+            f'<div class="date">{d.year}.{d.month:02d}.{d.day:02d}</div>'
+            f'</a>'
+        )
+    html = HOME_INDEX_FILE.read_text()
+    pattern = re.compile(
+        re.escape(HOME_BLOG_START) + r"[\s\S]*?" + re.escape(HOME_BLOG_END)
+    )
+    new_block = HOME_BLOG_START + "\n" + "\n".join(items) + "\n" + HOME_BLOG_END
+    new_html, n = pattern.subn(new_block, html)
+    if n and new_html != html:
+        HOME_INDEX_FILE.write_text(new_html)
+        log(f"홈 블로그 섹션 갱신 ({len(posts)}편)")
+
+
 def update_sitemap(new_posts):
     if not SITEMAP_FILE.exists():
         return
@@ -370,11 +401,11 @@ def run_git(*args):
 
 
 def git_publish(n):
-    code, out, _ = run_git("status", "--porcelain", "blog/", "sitemap.xml")
+    code, out, _ = run_git("status", "--porcelain", "blog/", "sitemap.xml", "index.html")
     if not out.strip():
         log("변경 없음 — 커밋 스킵")
         return
-    run_git("add", "blog/", "sitemap.xml")
+    run_git("add", "blog/", "sitemap.xml", "index.html")
     msg = f"블로그 자동 게시 {n}건 ({datetime.now().strftime('%Y-%m-%d %H:%M')})"
     code, _, err = run_git("commit", "-m", msg)
     if code != 0:
@@ -439,6 +470,7 @@ def main():
     # 최신이 위로 오도록 역순
     processed.sort(key=lambda p: p["date"], reverse=True)
     update_blog_index(processed)
+    update_home_blog_section()
     update_sitemap(processed)
     git_publish(len(processed))
 
