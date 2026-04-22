@@ -1,11 +1,11 @@
 {
   "last_holdings": {
-    "005380": {
-      "name": "현대차",
-      "qty": 4,
-      "avg_price": 547000,
-      "current_price": 546000,
-      "opened_at": "2026-04-17"
+    "000660": {
+      "name": "SK하이닉스",
+      "qty": 1,
+      "avg_price": 1225000,
+      "current_price": 1222000,
+      "opened_at": "2026-04-22"
     }
   },
   "history": [
@@ -32,6 +32,10 @@
     {
       "date": "2026-04-21",
       "total_eval": 24569269
+    },
+    {
+      "date": "2026-04-22",
+      "total_eval": 24436650
     }
   ],
   "completed_trades": [
@@ -125,6 +129,14 @@
       "return_pct": -1.85,
       "date": "2026-04-21",
       "is_win": false
+    },
+    {
+      "name": "현대차",
+      "code": "005380",
+      "return_pct": -1.1,
+      "date": "2026-04-22",
+      "is_win": false,
+      "hold_days": 5
     }
   ]
 }
