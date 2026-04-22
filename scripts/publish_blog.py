@@ -343,10 +343,10 @@ def update_blog_index(new_posts):
 
 
 def update_home_blog_section():
-    """홈 index.html의 블로그 섹션을 최신 3편으로 갱신."""
+    """홈 index.html의 블로그 섹션을 최신 2편으로 갱신."""
     if not HOME_INDEX_FILE.exists():
         return
-    posts = scan_all_posts()[:3]
+    posts = scan_all_posts()[:2]
     if not posts:
         return
     items = []
