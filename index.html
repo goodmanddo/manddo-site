@@ -79,6 +79,60 @@
 
   <section class="cat-section">
     <div class="cat-head">
+      <h2>🤖 오늘 AI의 선택</h2>
+      <a href="/ai-log/" class="more">전체 일지 →</a>
+    </div>
+    <p class="cat-desc">AI가 오늘 매수·매도한 종목과 판단 근거를 매일 기록합니다. 손실 케이스도 투명하게 공개합니다.</p>
+    <div class="ai-trend" id="ai-trend">
+      <div class="ai-trend-head">
+        <span class="ai-trend-label">누적 수익률 추세</span>
+        <span class="ai-trend-delta" id="ai-trend-delta">—</span>
+      </div>
+      <div class="ai-trend-body" id="ai-trend-body">
+        <div class="ai-trend-empty">불러오는 중…</div>
+      </div>
+    </div>
+    <div class="ai-summary">
+      <div class="sum-box">
+        <div class="sum-label">오늘 손익</div>
+        <div class="sum-value" id="ai-day">—</div>
+        <div class="sum-sub" id="ai-day-sub">—</div>
+      </div>
+      <div class="sum-box">
+        <div class="sum-label">누적 수익률</div>
+        <div class="sum-value" id="ai-cum">—</div>
+        <div class="sum-sub" id="ai-cum-sub">—</div>
+      </div>
+      <div class="sum-box">
+        <div class="sum-label">이번 주</div>
+        <div class="sum-value" id="ai-week">—</div>
+        <div class="sum-sub">W/W 기준</div>
+      </div>
+      <div class="sum-box">
+        <div class="sum-label">승률</div>
+        <div class="sum-value" id="ai-wr">—</div>
+        <div class="sum-sub" id="ai-wr-sub">—</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-head">
+      <h2>📝 블로그 — 투자일기</h2>
+      <a href="/blog/" class="more">전체 보기 →</a>
+    </div>
+    <p class="cat-desc">정제된 리포트 말고, 오늘 본 종목과 시장에서 느낀 것을 가볍게 기록하는 공간.</p>
+    <div class="post-list">
+<!-- HOME_BLOG_START -->
+      <a href="/blog/ai-short-term-mode-reason.html" class="post-item"><div class="cat">시장관찰</div><div class="title">AI가 지금 단타 모드인 이유</div><div class="date">2026.04.23</div></a>
+      <a href="/blog/head-and-shoulders-practice.html" class="post-item"><div class="cat">차트공부</div><div class="title">헤드앤숄더를 100번쯤 그려보고 깨달은 것</div><div class="date">2026.04.22</div></a>
+      <a href="/blog/fire-calculator-my-numbers.html" class="post-item"><div class="cat">투자일기</div><div class="title">FIRE 계산기에 내 숫자 넣어본 날</div><div class="date">2026.04.22</div></a>
+<!-- HOME_BLOG_END -->
+    </div>
+  </section>
+
+  <section class="cat-section">
+    <div class="cat-head">
       <h2>📐 학습 · 차트 패턴과 투자 가이드</h2>
       <a href="/learn/" class="more">전체 보기 →</a>
     </div>
@@ -96,58 +150,6 @@
         <div class="desc">배당 5%, 30년. 받아서 쓰기 vs 재투자. 세금까지 반영한 실제 시뮬레이션 결과.</div>
         <div class="tags"><span class="tag">#배당</span><span class="tag">#복리</span><span class="tag">#재투자</span></div>
       </a>
-    </div>
-  </section>
-
-  <section class="cat-section">
-    <div class="cat-head">
-      <h2>🤖 오늘 AI의 선택</h2>
-      <a href="/ai-log/" class="more">전체 일지 →</a>
-    </div>
-    <p class="cat-desc">AI가 오늘 매수·매도한 종목과 판단 근거를 매일 기록합니다. 손실 케이스도 투명하게 공개합니다.</p>
-    <div class="ai-dash" id="ai-dash">
-      <div class="ai-dash-header">
-        <div class="ai-dash-title">AI 포트폴리오 운용 현황</div>
-        <div class="ai-dash-date" id="ai-date">—</div>
-      </div>
-      <div class="ai-dash-hero">
-        <div class="ai-dash-arrow" id="ai-arrow">▲</div>
-        <div class="ai-dash-big" id="ai-cum">—</div>
-        <div class="ai-dash-hero-label">누적 수익률</div>
-        <div class="ai-dash-meta" id="ai-meta">—</div>
-      </div>
-      <div class="ai-dash-spark">
-        <div id="ai-spark" class="ai-spark-svg"></div>
-        <div class="ai-spark-labels">
-          <span id="ai-spark-from">—</span>
-          <span id="ai-spark-to">—</span>
-        </div>
-      </div>
-      <div class="ai-dash-tiles">
-        <div class="ai-tile"><div class="ai-tile-label">오늘</div><div class="ai-tile-val" id="ai-day">—</div></div>
-        <div class="ai-tile"><div class="ai-tile-label">이번 주</div><div class="ai-tile-val" id="ai-week">—</div></div>
-        <div class="ai-tile"><div class="ai-tile-label">승률</div><div class="ai-tile-val" id="ai-wr">—</div></div>
-      </div>
-      <div class="ai-dash-section-title">오늘의 매매 결정</div>
-      <div class="ai-dash-trades" id="ai-trades">
-        <div class="ai-trade-empty">불러오는 중…</div>
-      </div>
-      <a href="/ai-log/" class="ai-dash-cta">상세 일지 보기 →</a>
-    </div>
-  </section>
-
-  <section class="cat-section">
-    <div class="cat-head">
-      <h2>📝 블로그 — 투자일기</h2>
-      <a href="/blog/" class="more">전체 보기 →</a>
-    </div>
-    <p class="cat-desc">정제된 리포트 말고, 오늘 본 종목과 시장에서 느낀 것을 가볍게 기록하는 공간.</p>
-    <div class="post-list">
-<!-- HOME_BLOG_START -->
-      <a href="/blog/ai-short-term-mode-reason.html" class="post-item"><div class="cat">시장관찰</div><div class="title">AI가 지금 단타 모드인 이유</div><div class="date">2026.04.23</div></a>
-      <a href="/blog/head-and-shoulders-practice.html" class="post-item"><div class="cat">차트공부</div><div class="title">헤드앤숄더를 100번쯤 그려보고 깨달은 것</div><div class="date">2026.04.22</div></a>
-      <a href="/blog/fire-calculator-my-numbers.html" class="post-item"><div class="cat">투자일기</div><div class="title">FIRE 계산기에 내 숫자 넣어본 날</div><div class="date">2026.04.22</div></a>
-<!-- HOME_BLOG_END -->
     </div>
   </section>
 
@@ -214,7 +216,7 @@
   toggle();
 })();
 (function(){
-  const fmtPct = v => { if (v == null || isNaN(v)) return '—'; const s = v > 0 ? '+' : ''; return s + Number(v).toFixed(2) + '%'; };
+  const fmtPct = (v, digits) => { if (v == null || isNaN(v)) return '—'; const s = v > 0 ? '+' : ''; return s + Number(v).toFixed(digits != null ? digits : 1) + '%'; };
   const setPctVal = (id, v) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -223,110 +225,96 @@
     if (v > 0) el.classList.add('pos');
     else if (v < 0) el.classList.add('neg');
   };
-  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function renderTrend(rh) {
+    if (!rh || rh.length < 2) {
+      return '<div class="ai-trend-empty">운용 이력이 2일 이상 쌓이면 추세가 표시됩니다</div>';
+    }
+    const vals = rh.map(p => p.cumulative_return);
+    let lo = Math.min(...vals), hi = Math.max(...vals);
+    const span = hi - lo;
+    const pad = span < 2 ? 1.5 : Math.max(1, span * 0.30);
+    lo -= pad; hi += pad;
+    const w = 600, h = 160;
+    const padX = 44, padTop = 28, padBot = 32;
+    const step = (w - padX * 2) / (rh.length - 1);
+    const pts = rh.map((p, i) => [padX + step * i, padTop + (h - padTop - padBot) * (1 - (p.cumulative_return - lo) / (hi - lo)), p]);
+    const line = 'M ' + pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' L ');
+    const area = line + ' L ' + pts[pts.length-1][0].toFixed(1) + ',' + (h - padBot) + ' L ' + pts[0][0].toFixed(1) + ',' + (h - padBot) + ' Z';
+    const isUp = vals[vals.length-1] >= vals[0];
+    const color = isUp ? '#0C8A5A' : '#D63939';
+    let zeroLine = '';
+    if (lo < 0 && hi > 0) {
+      const zy = padTop + (h - padTop - padBot) * (1 - (0 - lo) / (hi - lo));
+      zeroLine = '<line x1="'+padX+'" y1="'+zy.toFixed(1)+'" x2="'+(w-padX)+'" y2="'+zy.toFixed(1)+'" stroke="#E5E8EB" stroke-width="1" stroke-dasharray="3,3"/>';
+    }
+    const pctLabels = pts.map((p, i) => {
+      const v = vals[i];
+      const sign = v > 0 ? '+' : '';
+      const txt = sign + Number(v).toFixed(1) + '%';
+      const below = p[1] < padTop + 16;
+      const ty = below ? p[1] + 18 : p[1] - 10;
+      const anchor = i === 0 ? 'start' : (i === pts.length - 1 ? 'end' : 'middle');
+      return '<text x="'+p[0].toFixed(1)+'" y="'+ty.toFixed(1)+'" text-anchor="'+anchor+'" fill="'+color+'" font-size="12" font-weight="700" font-family="Pretendard Variable,Pretendard,system-ui,sans-serif">'+txt+'</text>';
+    }).join('');
+    const dateLabels = pts.map((p, i) => {
+      const anchor = i === 0 ? 'start' : (i === pts.length - 1 ? 'end' : 'middle');
+      const dtxt = p[2].date ? p[2].date.slice(5).replace('-', '.') : '';
+      return '<text x="'+p[0].toFixed(1)+'" y="'+(h - 10)+'" text-anchor="'+anchor+'" fill="#8b95a1" font-size="11" font-weight="500" font-family="Pretendard Variable,Pretendard,system-ui,sans-serif">'+dtxt+'</text>';
+    }).join('');
+    const circles = pts.map((p, i) => {
+      const isLast = i === pts.length - 1;
+      return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+(isLast ? 4.5 : 3.5)+'" fill="'+color+'" stroke="#fff" stroke-width="2"/>';
+    }).join('');
+    return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'
+      + '<defs><linearGradient id="ai-trend-grad" x1="0" y1="0" x2="0" y2="1">'
+      + '<stop offset="0%" stop-color="'+color+'" stop-opacity="0.22"/>'
+      + '<stop offset="100%" stop-color="'+color+'" stop-opacity="0"/>'
+      + '</linearGradient></defs>'
+      + zeroLine
+      + '<path d="'+area+'" fill="url(#ai-trend-grad)"/>'
+      + '<path d="'+line+'" fill="none" stroke="'+color+'" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'
+      + circles + pctLabels + dateLabels
+      + '</svg>';
+  }
   fetch('/ai-log/data.json', {cache:'no-store'}).then(r => r.ok ? r.json() : Promise.reject()).then(d => {
-    const dateEl = document.getElementById('ai-date');
-    if (dateEl && d.date) dateEl.textContent = '기준 ' + d.date.replace(/-/g,'.');
-    setPctVal('ai-cum', d.cumulative_return);
-    const arrow = document.getElementById('ai-arrow');
-    if (arrow) {
-      arrow.classList.remove('neg');
-      if (d.cumulative_return < 0) { arrow.textContent = '▼'; arrow.classList.add('neg'); }
-      else arrow.textContent = '▲';
-    }
-    const meta = document.getElementById('ai-meta');
-    if (meta) {
-      let days = 0;
-      if (d.start_date && d.date) {
-        const s = new Date(d.start_date), t = new Date(d.date);
-        days = Math.floor((t - s) / 86400000) + 1;
-      }
-      meta.textContent = (days > 0 ? days + '거래일째 · ' : '') + '누적 ' + (d.total_trades || 0) + '건';
-    }
-    // 스파크라인
-    const spark = document.getElementById('ai-spark');
+    // 추세 차트
+    const body = document.getElementById('ai-trend-body');
     const rh = d.return_history || [];
-    if (spark) {
-      if (rh.length < 2) {
-        spark.innerHTML = '<div class="ai-spark-empty">운용 이력이 2일 이상 쌓이면 추세가 표시됩니다</div>';
-      } else {
-        const vals = rh.map(p => p.cumulative_return);
-        let lo = Math.min(...vals), hi = Math.max(...vals);
-        if (hi - lo < 0.5) { const mid = (hi + lo) / 2; lo = mid - 0.5; hi = mid + 0.5; }
-        const w = 300, h = 56, padX = 8, padY = 8;
-        const step = (w - padX * 2) / (rh.length - 1);
-        const pts = rh.map((p, i) => {
-          const x = padX + step * i;
-          const y = padY + (h - padY * 2) * (1 - (p.cumulative_return - lo) / (hi - lo));
-          return [x, y];
-        });
-        const line = 'M ' + pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' L ');
-        const area = line + ' L ' + pts[pts.length - 1][0].toFixed(1) + ',' + h + ' L ' + pts[0][0].toFixed(1) + ',' + h + ' Z';
-        const first = vals[0], last = vals[vals.length - 1];
-        const isUp = last >= first;
-        const color = isUp ? '#3DD598' : '#FF6B6B';
-        const lastPt = pts[pts.length - 1];
-        spark.innerHTML =
-          '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">' +
-            '<defs><linearGradient id="ai-spark-grad" x1="0" y1="0" x2="0" y2="1">' +
-              '<stop offset="0%" stop-color="' + color + '" stop-opacity="0.32"/>' +
-              '<stop offset="100%" stop-color="' + color + '" stop-opacity="0"/>' +
-            '</linearGradient></defs>' +
-            '<path d="' + area + '" fill="url(#ai-spark-grad)"/>' +
-            '<path d="' + line + '" fill="none" stroke="' + color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
-            '<circle cx="' + lastPt[0].toFixed(1) + '" cy="' + lastPt[1].toFixed(1) + '" r="3" fill="' + color + '" stroke="#0F1724" stroke-width="2"/>' +
-          '</svg>';
-      }
-      const fromEl = document.getElementById('ai-spark-from');
-      const toEl = document.getElementById('ai-spark-to');
-      if (rh.length >= 1) {
-        const first = rh[0], last = rh[rh.length - 1];
-        const fmtDate = s => s ? s.slice(5).replace('-', '.') : '';
-        fromEl.textContent = fmtDate(first.date) + ' ' + fmtPct(first.cumulative_return);
-        toEl.textContent = fmtDate(last.date) + ' ' + fmtPct(last.cumulative_return);
-        fromEl.className = first.cumulative_return > 0 ? 'pos' : (first.cumulative_return < 0 ? 'neg' : '');
-        toEl.className = last.cumulative_return > 0 ? 'pos' : (last.cumulative_return < 0 ? 'neg' : '');
-      }
+    if (body) body.innerHTML = renderTrend(rh);
+    const delta = document.getElementById('ai-trend-delta');
+    if (delta && rh.length >= 2) {
+      const diff = rh[rh.length - 1].cumulative_return - rh[0].cumulative_return;
+      const s = diff > 0 ? '+' : '';
+      delta.textContent = s + diff.toFixed(2) + '%p (' + rh.length + '영업일)';
+      delta.classList.remove('pos','neg');
+      delta.classList.add(diff >= 0 ? 'pos' : 'neg');
+    } else if (delta) {
+      delta.textContent = '—';
     }
+
+    // 요약 카드 4개
     setPctVal('ai-day', d.day_return);
+    setPctVal('ai-cum', d.cumulative_return);
     setPctVal('ai-week', d.week_return);
     const wr = document.getElementById('ai-wr');
     if (wr && d.win_rate != null) wr.textContent = d.win_rate + '%';
-    const trades = document.getElementById('ai-trades');
-    if (trades) {
-      const items = [];
-      (d.new_buys || []).slice(0, 2).forEach(b => {
-        items.push(
-          '<div class="ai-trade buy">' +
-            '<div class="ai-trade-badge">신규</div>' +
-            '<div class="ai-trade-main">' +
-              '<div class="ai-trade-name">' + esc(b.name) + '</div>' +
-              '<div class="ai-trade-sub">' + esc(b.market || '') + ' · 비중 ' + (b.weight_pct || 0) + '%</div>' +
-            '</div>' +
-            '<div class="ai-trade-val">+' + (b.hold_days || 0) + '일</div>' +
-          '</div>'
-        );
-      });
-      (d.exits || []).slice(0, 2).forEach(e => {
-        const k = e.type === 'win' ? 'win' : 'loss';
-        const label = e.type === 'win' ? '익절' : '손절';
-        const sign = e.return_pct > 0 ? '+' : '';
-        items.push(
-          '<div class="ai-trade ' + k + '">' +
-            '<div class="ai-trade-badge">' + label + '</div>' +
-            '<div class="ai-trade-main">' +
-              '<div class="ai-trade-name">' + esc(e.name) + '</div>' +
-              '<div class="ai-trade-sub">' + esc(e.market || '') + ' · ' + (e.hold_days || 0) + '일 보유</div>' +
-            '</div>' +
-            '<div class="ai-trade-val ' + k + '">' + sign + Number(e.return_pct).toFixed(2) + '%</div>' +
-          '</div>'
-        );
-      });
-      trades.innerHTML = items.length ? items.join('') : '<div class="ai-trade-empty">오늘은 매매 없이 관망</div>';
+
+    // sub 라인
+    const daySub = document.getElementById('ai-day-sub');
+    if (daySub) {
+      if (d.today_trade_count) {
+        daySub.textContent = '매도 ' + d.today_trade_count + '건 · 실현 ' + fmtPct(d.today_realized_avg);
+      } else {
+        daySub.textContent = '매도 없음 · 관망';
+      }
     }
+    const cumSub = document.getElementById('ai-cum-sub');
+    if (cumSub && d.start_date) cumSub.textContent = d.start_date + ' 이후';
+    const wrSub = document.getElementById('ai-wr-sub');
+    if (wrSub) wrSub.textContent = '누적 ' + (d.total_trades || 0) + '건';
   }).catch(() => {
-    const t = document.getElementById('ai-trades');
-    if (t) t.innerHTML = '<div class="ai-trade-empty">데이터를 불러올 수 없습니다</div>';
+    const body = document.getElementById('ai-trend-body');
+    if (body) body.innerHTML = '<div class="ai-trend-empty">데이터를 불러올 수 없습니다</div>';
   });
 })();
 </script>

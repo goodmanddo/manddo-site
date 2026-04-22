@@ -296,72 +296,37 @@ body{
 .pattern-table td{padding:10px 12px;border-bottom:1px solid #f2f4f6;color:#4e5968}
 .pattern-table tr:last-child td{border-bottom:none}
 
-/* ===== 홈: AI 인포그래픽 대시보드 ===== */
-.ai-dash{background:linear-gradient(135deg,#0F1724 0%,#161F31 55%,#0F1724 100%);border-radius:20px;padding:24px;color:#fff;position:relative;overflow:hidden;margin-top:8px;border:1px solid rgba(255,255,255,.06)}
-.ai-dash::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 85% 10%,rgba(61,213,152,.16),transparent 50%),radial-gradient(circle at 10% 90%,rgba(49,130,246,.12),transparent 55%)}
-.ai-dash>*{position:relative}
-.ai-dash-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06);flex-wrap:wrap;gap:8px}
-.ai-dash-title{font-size:13px;font-weight:700;color:#c5cad1;letter-spacing:0.02em}
-.ai-dash-date{font-size:11.5px;font-weight:500;color:#8b95a1;font-variant-numeric:tabular-nums;background:rgba(255,255,255,.04);padding:4px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.06)}
-.ai-dash-hero{text-align:center;padding:10px 0 22px}
-.ai-dash-arrow{font-size:16px;line-height:1;margin-bottom:6px;color:#3DD598}
-.ai-dash-arrow.neg{color:#FF6B6B}
-.ai-dash-big{font-size:48px;font-weight:800;color:#fff;letter-spacing:-0.04em;line-height:1;font-variant-numeric:tabular-nums}
-.ai-dash-big.pos{color:#3DD598}
-.ai-dash-big.neg{color:#FF6B6B}
-.ai-dash-hero-label{margin-top:10px;font-size:11.5px;color:#8b95a1;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
-.ai-dash-meta{margin-top:6px;font-size:12px;color:#6b7684;font-weight:500}
-.ai-dash-spark{margin:-4px 0 20px;padding:10px 4px 8px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);border-radius:12px}
-.ai-spark-svg{width:100%;height:56px;position:relative}
-.ai-spark-svg svg{width:100%;height:100%;display:block;overflow:visible}
-.ai-spark-labels{display:flex;justify-content:space-between;font-size:10.5px;color:#6b7684;font-weight:600;font-variant-numeric:tabular-nums;margin-top:4px;padding:0 8px}
-.ai-spark-labels .pos{color:#3DD598}
-.ai-spark-labels .neg{color:#FF6B6B}
-.ai-spark-empty{text-align:center;padding:18px 12px;font-size:11.5px;color:#6b7684}
-.ai-dash-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:22px}
-.ai-tile{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px 10px;text-align:center}
-.ai-tile-label{font-size:10.5px;color:#8b95a1;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:5px}
-.ai-tile-val{font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
-.ai-tile-val.pos{color:#3DD598}
-.ai-tile-val.neg{color:#FF6B6B}
-.ai-dash-section-title{font-size:10.5px;font-weight:700;color:#8b95a1;letter-spacing:0.08em;text-transform:uppercase;margin:0 0 10px;display:flex;align-items:center;gap:10px}
-.ai-dash-section-title::before,.ai-dash-section-title::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.08)}
-.ai-dash-trades{display:flex;flex-direction:column;gap:6px}
-.ai-trade{display:flex;align-items:center;gap:12px;padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);border-radius:10px}
-.ai-trade-badge{font-size:10px;font-weight:700;letter-spacing:0.04em;padding:3px 8px;border-radius:4px;flex-shrink:0}
-.ai-trade.buy .ai-trade-badge{background:rgba(94,186,252,.18);color:#5EBAFC}
-.ai-trade.win .ai-trade-badge{background:rgba(61,213,152,.18);color:#3DD598}
-.ai-trade.loss .ai-trade-badge{background:rgba(255,107,107,.15);color:#FF6B6B}
-.ai-trade-main{flex:1;min-width:0}
-.ai-trade-name{font-size:13.5px;font-weight:700;color:#fff;letter-spacing:-0.01em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ai-trade-sub{font-size:11.5px;color:#8b95a1;margin-top:2px}
-.ai-trade-val{font-size:13.5px;font-weight:700;color:#c5cad1;font-variant-numeric:tabular-nums;flex-shrink:0}
-.ai-trade-val.win{color:#3DD598}
-.ai-trade-val.loss{color:#FF6B6B}
-.ai-trade-empty{text-align:center;padding:18px;font-size:13px;color:#6b7684;background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.08);border-radius:10px}
-.ai-dash-cta{display:block;text-align:center;margin-top:18px;padding:11px;font-size:13px;color:#5EBAFC;font-weight:700;text-decoration:none;border:1px solid rgba(94,186,252,.22);border-radius:10px;transition:all .15s ease}
-.ai-dash-cta:hover{background:rgba(94,186,252,.08);border-color:#5EBAFC;color:#fff}
-@media(max-width:640px){
-  .ai-dash{padding:20px 18px}
-  .ai-dash-big{font-size:38px}
-  .ai-dash-tiles{gap:6px}
-  .ai-tile{padding:12px 8px}
-  .ai-tile-val{font-size:15px}
-  .ai-trade{padding:9px 10px;gap:10px}
-  .ai-trade-name{font-size:13px}
-}
+/* ===== 홈: AI 추세 차트 + 요약 카드 ===== */
+.ai-trend{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:16px 16px 10px;margin-top:8px;margin-bottom:12px}
+.ai-trend-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;padding:0 4px}
+.ai-trend-label{font-size:12px;color:#8b95a1;font-weight:700;letter-spacing:0.02em}
+.ai-trend-delta{font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.ai-trend-delta.pos{color:#0C8A5A}
+.ai-trend-delta.neg{color:#D63939}
+.ai-trend-body{width:100%;overflow:hidden}
+.ai-trend-body svg{width:100%;height:auto;display:block}
+.ai-trend-empty{text-align:center;padding:28px 12px;font-size:12.5px;color:#8b95a1;background:#F7F9FC;border-radius:10px;margin:4px 0}
 
-/* ===== 홈: 블로그 1줄 리스트 (/blog/ 스타일 일치) ===== */
+.ai-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:0}
+.ai-summary .sum-box{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 18px 16px}
+.ai-summary .sum-label{font-size:12px;color:#8b95a1;font-weight:600;margin-bottom:8px;letter-spacing:0.02em}
+.ai-summary .sum-value{font-size:22px;font-weight:800;letter-spacing:-0.03em;color:#191f28;font-family:'SF Mono',ui-monospace,monospace}
+.ai-summary .sum-value.pos{color:#0C8A5A}
+.ai-summary .sum-value.neg{color:#D63939}
+.ai-summary .sum-sub{font-size:11.5px;color:#8b95a1;font-weight:500;margin-top:4px}
+@media(max-width:640px){.ai-summary .sum-value{font-size:19px}}
+
+/* ===== 홈: 블로그 1줄 리스트 (/blog/ 스타일과 동일) ===== */
 .post-list{display:flex;flex-direction:column;margin-top:8px}
-.post-item{display:flex;align-items:center;gap:18px;padding:16px 4px;border-bottom:1px solid #eef0f3;text-decoration:none;color:inherit;transition:background .12s ease}
+.post-item{display:flex;align-items:center;gap:18px;padding:18px 4px;border-bottom:1px solid #eef0f3;text-decoration:none;color:inherit;transition:background .12s ease}
 .post-item:hover{background:#F7F9FC}
 .post-item .cat{font-size:11px;color:#3182F6;font-weight:700;letter-spacing:0.05em;min-width:76px;flex-shrink:0;text-transform:uppercase;background:transparent;padding:0;border-radius:0;margin-bottom:0;display:inline-block}
-.post-item .title{font-size:15.5px;font-weight:700;color:#191f28;letter-spacing:-0.02em;flex:1;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:0;background:transparent;padding:0}
+.post-item .title{font-size:16px;font-weight:700;color:#191f28;letter-spacing:-0.02em;flex:1;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-bottom:0;background:transparent;padding:0}
 .post-item .date{font-size:12.5px;color:#8b95a1;font-weight:500;flex-shrink:0;font-variant-numeric:tabular-nums}
 @media(max-width:640px){
-  .post-item{gap:12px;padding:14px 4px;flex-wrap:wrap}
+  .post-item{gap:12px;padding:16px 4px;flex-wrap:wrap}
   .post-item .cat{min-width:auto;font-size:10.5px}
-  .post-item .title{font-size:14.5px;white-space:normal;flex-basis:100%;order:2}
+  .post-item .title{font-size:15px;white-space:normal;flex-basis:100%;order:2}
   .post-item .date{font-size:12px;order:3;margin-left:auto}
 }
 
