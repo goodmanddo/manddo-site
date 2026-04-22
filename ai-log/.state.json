@@ -4,7 +4,7 @@
       "name": "SK하이닉스",
       "qty": 1,
       "avg_price": 1225000,
-      "current_price": 1222000,
+      "current_price": 1223000,
       "opened_at": "2026-04-22"
     }
   },
@@ -36,6 +36,10 @@
     {
       "date": "2026-04-22",
       "total_eval": 24436650
+    },
+    {
+      "date": "2026-04-22",
+      "total_eval": 24437650
     }
   ],
   "completed_trades": [
