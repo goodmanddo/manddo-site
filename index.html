@@ -116,6 +116,13 @@
         <div class="ai-dash-hero-label">누적 수익률</div>
         <div class="ai-dash-meta" id="ai-meta">—</div>
       </div>
+      <div class="ai-dash-spark">
+        <div id="ai-spark" class="ai-spark-svg"></div>
+        <div class="ai-spark-labels">
+          <span id="ai-spark-from">—</span>
+          <span id="ai-spark-to">—</span>
+        </div>
+      </div>
       <div class="ai-dash-tiles">
         <div class="ai-tile"><div class="ai-tile-label">오늘</div><div class="ai-tile-val" id="ai-day">—</div></div>
         <div class="ai-tile"><div class="ai-tile-label">이번 주</div><div class="ai-tile-val" id="ai-week">—</div></div>
@@ -235,6 +242,51 @@
         days = Math.floor((t - s) / 86400000) + 1;
       }
       meta.textContent = (days > 0 ? days + '거래일째 · ' : '') + '누적 ' + (d.total_trades || 0) + '건';
+    }
+    // 스파크라인
+    const spark = document.getElementById('ai-spark');
+    const rh = d.return_history || [];
+    if (spark) {
+      if (rh.length < 2) {
+        spark.innerHTML = '<div class="ai-spark-empty">운용 이력이 2일 이상 쌓이면 추세가 표시됩니다</div>';
+      } else {
+        const vals = rh.map(p => p.cumulative_return);
+        let lo = Math.min(...vals), hi = Math.max(...vals);
+        if (hi - lo < 0.5) { const mid = (hi + lo) / 2; lo = mid - 0.5; hi = mid + 0.5; }
+        const w = 300, h = 56, padX = 8, padY = 8;
+        const step = (w - padX * 2) / (rh.length - 1);
+        const pts = rh.map((p, i) => {
+          const x = padX + step * i;
+          const y = padY + (h - padY * 2) * (1 - (p.cumulative_return - lo) / (hi - lo));
+          return [x, y];
+        });
+        const line = 'M ' + pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' L ');
+        const area = line + ' L ' + pts[pts.length - 1][0].toFixed(1) + ',' + h + ' L ' + pts[0][0].toFixed(1) + ',' + h + ' Z';
+        const first = vals[0], last = vals[vals.length - 1];
+        const isUp = last >= first;
+        const color = isUp ? '#3DD598' : '#FF6B6B';
+        const lastPt = pts[pts.length - 1];
+        spark.innerHTML =
+          '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">' +
+            '<defs><linearGradient id="ai-spark-grad" x1="0" y1="0" x2="0" y2="1">' +
+              '<stop offset="0%" stop-color="' + color + '" stop-opacity="0.32"/>' +
+              '<stop offset="100%" stop-color="' + color + '" stop-opacity="0"/>' +
+            '</linearGradient></defs>' +
+            '<path d="' + area + '" fill="url(#ai-spark-grad)"/>' +
+            '<path d="' + line + '" fill="none" stroke="' + color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+            '<circle cx="' + lastPt[0].toFixed(1) + '" cy="' + lastPt[1].toFixed(1) + '" r="3" fill="' + color + '" stroke="#0F1724" stroke-width="2"/>' +
+          '</svg>';
+      }
+      const fromEl = document.getElementById('ai-spark-from');
+      const toEl = document.getElementById('ai-spark-to');
+      if (rh.length >= 1) {
+        const first = rh[0], last = rh[rh.length - 1];
+        const fmtDate = s => s ? s.slice(5).replace('-', '.') : '';
+        fromEl.textContent = fmtDate(first.date) + ' ' + fmtPct(first.cumulative_return);
+        toEl.textContent = fmtDate(last.date) + ' ' + fmtPct(last.cumulative_return);
+        fromEl.className = first.cumulative_return > 0 ? 'pos' : (first.cumulative_return < 0 ? 'neg' : '');
+        toEl.className = last.cumulative_return > 0 ? 'pos' : (last.cumulative_return < 0 ? 'neg' : '');
+      }
     }
     setPctVal('ai-day', d.day_return);
     setPctVal('ai-week', d.week_return);

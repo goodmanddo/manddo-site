@@ -328,6 +328,22 @@ def main():
     if override_weekly_losses:
         weekly_losses = override_weekly_losses
 
+    # 누적 수익률 추이 (스파크라인용): 날짜별 마지막 값, 오늘은 현재 total_eval 반영
+    from collections import OrderedDict as _OD
+    dedup = _OD()
+    for h in history:
+        if h.get("date") and h.get("total_eval"):
+            dedup[h["date"]] = h["total_eval"]
+    dedup[today] = total_eval  # 오늘 최신값으로 덮어쓰기
+    return_history = []
+    if initial_capital > 0:
+        for d_, v_ in dedup.items():
+            return_history.append({
+                "date": d_,
+                "cumulative_return": round((v_ - initial_capital) / initial_capital * 100, 2),
+            })
+        return_history = return_history[-30:]  # 최근 30거래일
+
     data = {
         "date": today,
         "start_date": start_date,
@@ -345,6 +361,7 @@ def main():
         "exits": exits,
         "weekly_losses": weekly_losses,
         "holdings": current_holdings,
+        "return_history": return_history,
     }
     save_json(DATA_FILE, data)
     log(f"data.json 저장: 매수 {len(new_buys)}, 청산 {len(exits)}, 누적 {cumulative:.2f}%")

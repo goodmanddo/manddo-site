@@ -60,5 +60,23 @@
       "market": "코스피",
       "weight_pct": 5
     }
+  ],
+  "return_history": [
+    {
+      "date": "2026-04-17",
+      "cumulative_return": 6.32
+    },
+    {
+      "date": "2026-04-20",
+      "cumulative_return": 5.98
+    },
+    {
+      "date": "2026-04-21",
+      "cumulative_return": 15.31
+    },
+    {
+      "date": "2026-04-22",
+      "cumulative_return": 14.69
+    }
   ]
 }
