@@ -172,6 +172,17 @@ def main():
         if ref.get("total_eval", 0) > 0:
             week_return = (total_eval - ref["total_eval"]) / ref["total_eval"] * 100
 
+    # 오늘 포트폴리오 변화율 (직전 기록 대비)
+    day_return = 0.0
+    # 같은 날 기록이 이미 있을 수 있으므로 오늘이 아닌 가장 최근 항목과 비교
+    prev_entry = None
+    for h in reversed(history):
+        if h.get("date") != today:
+            prev_entry = h
+            break
+    if prev_entry and prev_entry.get("total_eval", 0) > 0:
+        day_return = (total_eval - prev_entry["total_eval"]) / prev_entry["total_eval"] * 100
+
     # 신규 매수: 최근 7일 내 편입된 보유 종목 (당일 신규 + 최근 며칠 내 편입)
     new_buys = []
     for code, h in holdings.items():
@@ -257,6 +268,15 @@ def main():
             "reason": override_reasons.get(name) or default_reason(etype, name, pct),
         })
 
+    # 오늘 실현 손익 집계 (완료 거래 중 오늘 날짜 전체, 필터 적용 전)
+    today_trades = [c for c in completed if c.get("date") == today]
+    today_trade_count = len(today_trades)
+    today_win_count = sum(1 for c in today_trades if c.get("is_win"))
+    today_loss_count = today_trade_count - today_win_count
+    today_realized_avg = 0.0
+    if today_trade_count:
+        today_realized_avg = sum(c.get("return_pct", 0) for c in today_trades) / today_trade_count
+
     # 승률 (완료 거래 기준)
     if completed:
         wins = sum(1 for c in completed if c.get("is_win"))
@@ -313,6 +333,11 @@ def main():
         "start_date": start_date,
         "cumulative_return": round(cumulative, 2),
         "week_return": round(week_return, 2),
+        "day_return": round(day_return, 2),
+        "today_realized_avg": round(today_realized_avg, 2),
+        "today_trade_count": today_trade_count,
+        "today_win_count": today_win_count,
+        "today_loss_count": today_loss_count,
         "win_rate": win_rate,
         "total_trades": len(completed),
         "ai_commentary": commentary,

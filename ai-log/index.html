@@ -102,6 +102,11 @@
 
   <div class="summary-grid">
     <div class="summary-box">
+      <div class="label">오늘 손익</div>
+      <div class="value" id="sum-day">—</div>
+      <div class="sub" id="sum-day-sub">—</div>
+    </div>
+    <div class="summary-box">
       <div class="label">누적 수익률</div>
       <div class="value" id="sum-cum">—</div>
       <div class="sub" id="sum-since">—</div>
@@ -126,7 +131,7 @@
 
   <section class="sec" id="sec-exits">
     <h2>🟩 오늘의 매도</h2>
-    <div class="sec-desc">익절·손절로 포지션을 정리한 종목. 최종 수익률.</div>
+    <div class="sec-desc" id="exits-desc">익절·손절로 포지션을 정리한 종목. 최종 수익률.</div>
     <div id="list-exits"></div>
   </section>
 
@@ -200,6 +205,19 @@
   document.getElementById('today-date').textContent = fmtKorDate(data.date);
 
   // 요약
+  const day = document.getElementById('sum-day');
+  const dayVal = (data.day_return ?? 0);
+  day.textContent = fmtPct(dayVal);
+  addCls(day, cls(dayVal));
+  const tradeCnt = data.today_trade_count ?? 0;
+  if(tradeCnt > 0){
+    const avg = data.today_realized_avg ?? 0;
+    document.getElementById('sum-day-sub').textContent =
+      `매도 ${tradeCnt}건 · 실현 ${fmtPct(avg)}`;
+  }else{
+    document.getElementById('sum-day-sub').textContent = '평가 기준 · 매도 없음';
+  }
+
   const cum = document.getElementById('sum-cum');
   cum.textContent = fmtPct(data.cumulative_return);
   addCls(cum, cls(data.cumulative_return));
@@ -211,6 +229,15 @@
 
   document.getElementById('sum-win').textContent = data.win_rate + '%';
   document.getElementById('sum-total').textContent = '누적 ' + data.total_trades + '건';
+
+  // 오늘의 매도 요약 라인
+  if(tradeCnt > 0){
+    const w = data.today_win_count ?? 0;
+    const l = data.today_loss_count ?? 0;
+    const avg = data.today_realized_avg ?? 0;
+    document.getElementById('exits-desc').innerHTML =
+      `오늘 <b>매도 ${tradeCnt}건</b> · 익절 ${w} · 손절 ${l} · 평균 <b class="${cls(avg)==='pos'?'':''}" style="color:${avg>=0?'#0C8A5A':'#D63939'}">${fmtPct(avg)}</b>`;
+  }
 
   // 신규 매수
   const buysEl = document.getElementById('list-buys');
