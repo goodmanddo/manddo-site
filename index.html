@@ -106,13 +106,25 @@
     </div>
     <p class="cat-desc">AI가 오늘 매수·매도한 종목과 판단 근거를 매일 기록합니다. 손실 케이스도 투명하게 공개합니다.</p>
     <div class="ai-dash" id="ai-dash">
-      <div class="ai-dash-top">
-        <div class="ai-stat"><div class="ai-stat-label">누적 수익률</div><div class="ai-stat-val" id="ai-cum">—</div></div>
-        <div class="ai-stat"><div class="ai-stat-label">오늘 변동</div><div class="ai-stat-val" id="ai-day">—</div></div>
-        <div class="ai-stat"><div class="ai-stat-label">누적 승률</div><div class="ai-stat-val" id="ai-wr">—</div></div>
+      <div class="ai-dash-header">
+        <div class="ai-dash-title">AI 포트폴리오 운용 현황</div>
+        <div class="ai-dash-date" id="ai-date">—</div>
       </div>
-      <div class="ai-dash-activity" id="ai-act">데이터 불러오는 중…</div>
-      <div class="ai-dash-note" id="ai-note"></div>
+      <div class="ai-dash-hero">
+        <div class="ai-dash-arrow" id="ai-arrow">▲</div>
+        <div class="ai-dash-big" id="ai-cum">—</div>
+        <div class="ai-dash-hero-label">누적 수익률</div>
+        <div class="ai-dash-meta" id="ai-meta">—</div>
+      </div>
+      <div class="ai-dash-tiles">
+        <div class="ai-tile"><div class="ai-tile-label">오늘</div><div class="ai-tile-val" id="ai-day">—</div></div>
+        <div class="ai-tile"><div class="ai-tile-label">이번 주</div><div class="ai-tile-val" id="ai-week">—</div></div>
+        <div class="ai-tile"><div class="ai-tile-label">승률</div><div class="ai-tile-val" id="ai-wr">—</div></div>
+      </div>
+      <div class="ai-dash-section-title">오늘의 매매 결정</div>
+      <div class="ai-dash-trades" id="ai-trades">
+        <div class="ai-trade-empty">불러오는 중…</div>
+      </div>
       <a href="/ai-log/" class="ai-dash-cta">상세 일지 보기 →</a>
     </div>
   </section>
@@ -195,33 +207,74 @@
   toggle();
 })();
 (function(){
-  const fmt = v => { if (v == null || isNaN(v)) return '—'; const s = v > 0 ? '+' : ''; return s + Number(v).toFixed(2) + '%'; };
-  const setVal = (id, v) => {
+  const fmtPct = v => { if (v == null || isNaN(v)) return '—'; const s = v > 0 ? '+' : ''; return s + Number(v).toFixed(2) + '%'; };
+  const setPctVal = (id, v) => {
     const el = document.getElementById(id);
     if (!el) return;
-    el.textContent = fmt(v);
+    el.textContent = fmtPct(v);
     el.classList.remove('pos','neg');
     if (v > 0) el.classList.add('pos');
     else if (v < 0) el.classList.add('neg');
   };
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   fetch('/ai-log/data.json', {cache:'no-store'}).then(r => r.ok ? r.json() : Promise.reject()).then(d => {
-    setVal('ai-cum', d.cumulative_return);
-    setVal('ai-day', d.day_return);
-    const wr = document.getElementById('ai-wr');
-    if (wr && d.win_rate != null) wr.innerHTML = d.win_rate + '%<span class="ai-stat-sub">(' + (d.total_trades || 0) + '건)</span>';
-    const act = document.getElementById('ai-act');
-    if (act) {
-      if (d.today_trade_count) {
-        act.textContent = '오늘 매도 ' + d.today_trade_count + '건 · 익절 ' + (d.today_win_count || 0) + ' · 손절 ' + (d.today_loss_count || 0) + ' · 평균 ' + fmt(d.today_realized_avg);
-      } else {
-        act.textContent = '오늘 매도 없음 · 관망';
-      }
+    const dateEl = document.getElementById('ai-date');
+    if (dateEl && d.date) dateEl.textContent = '기준 ' + d.date.replace(/-/g,'.');
+    setPctVal('ai-cum', d.cumulative_return);
+    const arrow = document.getElementById('ai-arrow');
+    if (arrow) {
+      arrow.classList.remove('neg');
+      if (d.cumulative_return < 0) { arrow.textContent = '▼'; arrow.classList.add('neg'); }
+      else arrow.textContent = '▲';
     }
-    const note = document.getElementById('ai-note');
-    if (note && d.ai_commentary) note.textContent = d.ai_commentary;
+    const meta = document.getElementById('ai-meta');
+    if (meta) {
+      let days = 0;
+      if (d.start_date && d.date) {
+        const s = new Date(d.start_date), t = new Date(d.date);
+        days = Math.floor((t - s) / 86400000) + 1;
+      }
+      meta.textContent = (days > 0 ? days + '거래일째 · ' : '') + '누적 ' + (d.total_trades || 0) + '건';
+    }
+    setPctVal('ai-day', d.day_return);
+    setPctVal('ai-week', d.week_return);
+    const wr = document.getElementById('ai-wr');
+    if (wr && d.win_rate != null) wr.textContent = d.win_rate + '%';
+    const trades = document.getElementById('ai-trades');
+    if (trades) {
+      const items = [];
+      (d.new_buys || []).slice(0, 2).forEach(b => {
+        items.push(
+          '<div class="ai-trade buy">' +
+            '<div class="ai-trade-badge">신규</div>' +
+            '<div class="ai-trade-main">' +
+              '<div class="ai-trade-name">' + esc(b.name) + '</div>' +
+              '<div class="ai-trade-sub">' + esc(b.market || '') + ' · 비중 ' + (b.weight_pct || 0) + '%</div>' +
+            '</div>' +
+            '<div class="ai-trade-val">+' + (b.hold_days || 0) + '일</div>' +
+          '</div>'
+        );
+      });
+      (d.exits || []).slice(0, 2).forEach(e => {
+        const k = e.type === 'win' ? 'win' : 'loss';
+        const label = e.type === 'win' ? '익절' : '손절';
+        const sign = e.return_pct > 0 ? '+' : '';
+        items.push(
+          '<div class="ai-trade ' + k + '">' +
+            '<div class="ai-trade-badge">' + label + '</div>' +
+            '<div class="ai-trade-main">' +
+              '<div class="ai-trade-name">' + esc(e.name) + '</div>' +
+              '<div class="ai-trade-sub">' + esc(e.market || '') + ' · ' + (e.hold_days || 0) + '일 보유</div>' +
+            '</div>' +
+            '<div class="ai-trade-val ' + k + '">' + sign + Number(e.return_pct).toFixed(2) + '%</div>' +
+          '</div>'
+        );
+      });
+      trades.innerHTML = items.length ? items.join('') : '<div class="ai-trade-empty">오늘은 매매 없이 관망</div>';
+    }
   }).catch(() => {
-    const act = document.getElementById('ai-act');
-    if (act) act.textContent = '오늘 데이터를 불러올 수 없습니다';
+    const t = document.getElementById('ai-trades');
+    if (t) t.innerHTML = '<div class="ai-trade-empty">데이터를 불러올 수 없습니다</div>';
   });
 })();
 </script>
