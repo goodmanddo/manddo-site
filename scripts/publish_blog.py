@@ -208,36 +208,135 @@ def extract_excerpt(body_md, limit=80):
     return ""
 
 
-def update_blog_index(new_posts):
-    if not INDEX_FILE.exists():
-        log("blog/index.html 없음 — 스킵")
-        return
-    html = INDEX_FILE.read_text()
-    existing_slugs = set(re.findall(r'href="/blog/([^"]+)\.html"', html))
-    cards = []
-    for post in new_posts:
-        if post["slug"] in existing_slugs:
+def scan_all_posts():
+    """blog/*.html 에서 모든 포스트 메타를 추출 (index/_template 제외)"""
+    posts = []
+    for f in BLOG_DIR.glob("*.html"):
+        if f.name in ("index.html", "_template.html"):
             continue
-        cards.append(
-            f'''    <a href="/blog/{post["slug"]}.html" class="post-card">
-      <div class="cat">{post["category"]}</div>
-      <h2>{post["title"]}</h2>
-      <div class="excerpt">{post["excerpt"]}</div>
-      <div class="meta">{format_korean_date(post["date"])}</div>
-    </a>
-'''
+        html = f.read_text()
+        slug = f.stem
+        title_m = re.search(r'<h1>([^<]+)</h1>', html)
+        cat_m = re.search(r'<div class="cat">([^<]+)</div>', html)
+        date_m = re.search(r'(\d{4})년\s*(\d+)월\s*(\d+)일', html)
+        if not (title_m and date_m):
+            continue
+        try:
+            d = date(int(date_m.group(1)), int(date_m.group(2)), int(date_m.group(3)))
+        except ValueError:
+            continue
+        posts.append({
+            "slug": slug,
+            "title": title_m.group(1).strip(),
+            "category": (cat_m.group(1).strip() if cat_m else "투자일기"),
+            "date": d,
+        })
+    posts.sort(key=lambda p: p["date"], reverse=True)
+    return posts
+
+
+BLOG_INDEX_TEMPLATE = """<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>블로그 — 투자일기와 시장 관찰 | 만또 인사이트</title>
+<meta name="description" content="만또의 투자일기. 오늘 본 종목, 시장에서 느낀 것, 책 리뷰. 거창한 분석보다 꾸준한 기록 중심.">
+<meta name="keywords" content="투자블로그, 투자일기, 주식일기, 시장관찰, 만또">
+<meta property="og:title" content="만또 블로그 — 투자일기와 시장 관찰">
+<meta property="og:description" content="오늘 본 종목, 시장에서 느낀 것, 책 리뷰.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/blog/">
+<link rel="canonical" href="https://manddo.kr/blog/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.blog-hero{{padding:40px 0 24px;border-bottom:1px solid #eef0f3;margin-bottom:8px}}
+.blog-hero h1{{font-size:28px;font-weight:800;letter-spacing:-0.035em;color:#191f28;margin-bottom:10px}}
+.blog-hero p{{font-size:14.5px;color:#6b7684;line-height:1.7}}
+.post-list{{display:flex;flex-direction:column}}
+.post-item{{display:flex;align-items:center;gap:18px;padding:18px 4px;border-bottom:1px solid #eef0f3;text-decoration:none;color:inherit;transition:background .12s ease}}
+.post-item:hover{{background:#F7F9FC}}
+.post-item .cat{{font-size:11px;color:#3182F6;font-weight:700;letter-spacing:0.05em;min-width:76px;flex-shrink:0;text-transform:uppercase}}
+.post-item .title{{font-size:16px;font-weight:700;color:#191f28;letter-spacing:-0.02em;flex:1;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}}
+.post-item .date{{font-size:12.5px;color:#8b95a1;font-weight:500;flex-shrink:0;font-variant-numeric:tabular-nums}}
+.empty{{background:#F7F9FC;border:1px dashed #cfd8e3;border-radius:12px;padding:28px;text-align:center;color:#8b95a1;font-size:14px}}
+@media(max-width:640px){{
+  .post-item{{gap:12px;padding:16px 4px;flex-wrap:wrap}}
+  .post-item .cat{{min-width:auto;font-size:10.5px}}
+  .post-item .title{{font-size:15px;white-space:normal;flex-basis:100%;order:2}}
+  .post-item .date{{font-size:12px;order:3;margin-left:auto}}
+}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/" class="active">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <section class="blog-hero">
+    <h1>📝 만또 블로그</h1>
+    <p>거창한 분석보다 꾸준한 기록. 오늘 본 종목, 시장에서 느낀 것, 읽은 책의 한 문장.</p>
+  </section>
+
+  <div class="post-list">
+{items}
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+</body>
+</html>
+"""
+
+
+def rebuild_blog_index():
+    """blog/*.html을 스캔해 최신순으로 인덱스 페이지 전체 재생성."""
+    posts = scan_all_posts()
+    if not posts:
+        log("재생성할 포스트 없음")
+        return
+    items = []
+    for p in posts:
+        d = p["date"]
+        items.append(
+            f'    <a href="/blog/{p["slug"]}.html" class="post-item">'
+            f'<div class="cat">{p["category"]}</div>'
+            f'<div class="title">{p["title"]}</div>'
+            f'<div class="date">{d.year}.{d.month:02d}.{d.day:02d}</div>'
+            f'</a>'
         )
-    if not cards:
-        return
-    anchor = '<div class="post-list">\n'
-    idx = html.find(anchor)
-    if idx == -1:
-        log("index.html 카드 삽입 지점 찾기 실패")
-        return
-    insert_at = idx + len(anchor)
-    new_html = html[:insert_at] + "".join(cards) + "\n" + html[insert_at:]
-    INDEX_FILE.write_text(new_html)
-    log(f"blog/index.html에 {len(cards)}개 카드 추가")
+    html = BLOG_INDEX_TEMPLATE.format(items="\n".join(items))
+    INDEX_FILE.write_text(html)
+    log(f"blog/index.html 재생성 ({len(posts)}편, 최신순)")
+
+
+def update_blog_index(new_posts):
+    # 레거시 호환용 — 전체 재생성으로 위임
+    rebuild_blog_index()
 
 
 def update_sitemap(new_posts):

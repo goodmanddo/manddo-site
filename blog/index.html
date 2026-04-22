@@ -13,17 +13,22 @@
 <link rel="canonical" href="https://manddo.kr/blog/">
 <link rel="stylesheet" href="/css/main.css">
 <style>
-.blog-hero{padding:40px 0 28px;border-bottom:1px solid #eef0f3;margin-bottom:28px}
+.blog-hero{padding:40px 0 24px;border-bottom:1px solid #eef0f3;margin-bottom:8px}
 .blog-hero h1{font-size:28px;font-weight:800;letter-spacing:-0.035em;color:#191f28;margin-bottom:10px}
 .blog-hero p{font-size:14.5px;color:#6b7684;line-height:1.7}
-.post-list{display:flex;flex-direction:column;gap:10px}
-.post-card{display:block;background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:20px 22px;text-decoration:none;color:inherit;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
-.post-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px -6px rgba(25,31,40,.08);border-color:#cfd8e3}
-.post-card .cat{font-size:12px;color:#3182F6;font-weight:700;letter-spacing:0.04em;margin-bottom:8px}
-.post-card h2{font-size:17.5px;font-weight:800;letter-spacing:-0.025em;color:#191f28;margin-bottom:6px;line-height:1.4}
-.post-card .excerpt{font-size:13.5px;color:#6b7684;line-height:1.65;margin-bottom:8px}
-.post-card .meta{font-size:12px;color:#8b95a1}
+.post-list{display:flex;flex-direction:column}
+.post-item{display:flex;align-items:center;gap:18px;padding:18px 4px;border-bottom:1px solid #eef0f3;text-decoration:none;color:inherit;transition:background .12s ease}
+.post-item:hover{background:#F7F9FC}
+.post-item .cat{font-size:11px;color:#3182F6;font-weight:700;letter-spacing:0.05em;min-width:76px;flex-shrink:0;text-transform:uppercase}
+.post-item .title{font-size:16px;font-weight:700;color:#191f28;letter-spacing:-0.02em;flex:1;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.post-item .date{font-size:12.5px;color:#8b95a1;font-weight:500;flex-shrink:0;font-variant-numeric:tabular-nums}
 .empty{background:#F7F9FC;border:1px dashed #cfd8e3;border-radius:12px;padding:28px;text-align:center;color:#8b95a1;font-size:14px}
+@media(max-width:640px){
+  .post-item{gap:12px;padding:16px 4px;flex-wrap:wrap}
+  .post-item .cat{min-width:auto;font-size:10.5px}
+  .post-item .title{font-size:15px;white-space:normal;flex-basis:100%;order:2}
+  .post-item .date{font-size:12px;order:3;margin-left:auto}
+}
 </style>
 </head>
 <body>
@@ -50,63 +55,15 @@
     <p>거창한 분석보다 꾸준한 기록. 오늘 본 종목, 시장에서 느낀 것, 읽은 책의 한 문장.</p>
   </section>
 
-  <!-- 🟢 새 글은 위쪽에 추가하세요. 최신순 -->
   <div class="post-list">
-    <a href="/blog/ai-short-term-mode-reason.html" class="post-card">
-      <div class="cat">시장관찰</div>
-      <h2>AI가 지금 단타 모드인 이유</h2>
-      <div class="excerpt">최근 AI 매매 일지를 보면 매도 회전이 빠르다. 짧게 먹고 바로 턴다. AI에게 이유를 물었더니 "지금 시장은 과열 구간"이라는 답이 돌아왔다.</div>
-      <div class="meta">2026년 4월 23일</div>
-    </a>
-
-    <a href="/blog/cup-and-handle-reality.html" class="post-card">
-      <div class="cat">시장관찰</div>
-      <h2>컵앤핸들 패턴 차트는 차트인가?</h2>
-      <div class="excerpt">컵앤핸들 패턴을 실제 차트에 적용해봤을 때 교과서와 달랐던 경험과 그 과정에서 생긴 의문들을 정리했다.</div>
-      <div class="meta">2026년 4월 22일</div>
-    </a>
-
-    <a href="/blog/salary-calculator-afternoon.html" class="post-card">
-      <div class="cat">에세이</div>
-      <h2>월급 실수령액… 느끼는거와 다른 이유</h2>
-      <div class="excerpt">월급 실수령액 계산기를 돌려보다 세금과 공제 항목 앞에서 느낀 감각을 솔직하게 기록한 에세이.</div>
-      <div class="meta">2026년 4월 22일</div>
-    </a>
-
-    <a href="/blog/dividend-compound-reality.html" class="post-card">
-      <div class="cat">학습노트</div>
-      <h2>배당 복리, 숫자로 보면 왜 무서운가</h2>
-      <div class="excerpt">배당 재투자 30년 시뮬레이션을 돌리고 나서야 복리의 진짜 적이 시장이 아니라 내 조바심이라는 걸 깨달았다.</div>
-      <div class="meta">2026년 4월 22일</div>
-    </a>
-    <a href="/blog/fire-calculator-my-numbers.html" class="post-card">
-      <div class="cat">투자일기</div>
-      <h2>FIRE 계산기에 내 숫자 넣어본 날</h2>
-      <div class="excerpt">Lean·Regular·Fat FIRE를 직접 돌려보고 깨달은 것. 수익률보다 지출이 먼저였다.</div>
-      <div class="meta">2026년 4월 22일</div>
-    </a>
-    <a href="/blog/head-and-shoulders-practice.html" class="post-card">
-      <div class="cat">차트공부</div>
-      <h2>헤드앤숄더를 100번쯤 그려보고 깨달은 것</h2>
-      <div class="excerpt">책에선 단순해 보이는 헤드앤숄더, 실제 차트에 대보면 거의 다 애매하다. 실패 케이스를 겪고 나서 만든 나만의 기준.</div>
-      <div class="meta">2026년 4월 22일</div>
-    </a>
-
-    <a href="/blog/스마트-글라스-미래일까.html" class="post-card">
-      <div class="cat">시장관찰</div>
-      <h2>스마트 글라스… 미래일까?</h2>
-      <div class="excerpt">메타에서 시작된 스마트 글라스,</div>
-      <div class="meta">2026년 4월 22일</div>
-    </a>
-
-
-    <a href="/blog/hello.html" class="post-card">
-      <div class="cat">공지</div>
-      <h2>블로그 시작합니다</h2>
-      <div class="excerpt">정제된 리포트 말고 투자하면서 느끼는 생각을 가볍게 기록하려고 합니다.</div>
-      <div class="meta">2026년 4월 21일</div>
-    </a>
-
+    <a href="/blog/ai-short-term-mode-reason.html" class="post-item"><div class="cat">시장관찰</div><div class="title">AI가 지금 단타 모드인 이유</div><div class="date">2026.04.23</div></a>
+    <a href="/blog/head-and-shoulders-practice.html" class="post-item"><div class="cat">차트공부</div><div class="title">헤드앤숄더를 100번쯤 그려보고 깨달은 것</div><div class="date">2026.04.22</div></a>
+    <a href="/blog/fire-calculator-my-numbers.html" class="post-item"><div class="cat">투자일기</div><div class="title">FIRE 계산기에 내 숫자 넣어본 날</div><div class="date">2026.04.22</div></a>
+    <a href="/blog/dividend-compound-reality.html" class="post-item"><div class="cat">학습노트</div><div class="title">배당 복리, 숫자로 보면 왜 무서운가</div><div class="date">2026.04.22</div></a>
+    <a href="/blog/cup-and-handle-reality.html" class="post-item"><div class="cat">시장관찰</div><div class="title">컵앤핸들 패턴 차트는 차트인가?</div><div class="date">2026.04.22</div></a>
+    <a href="/blog/salary-calculator-afternoon.html" class="post-item"><div class="cat">에세이</div><div class="title">월급 실수령액… 느끼는거와 다른 이유</div><div class="date">2026.04.22</div></a>
+    <a href="/blog/스마트-글라스-미래일까.html" class="post-item"><div class="cat">시장관찰</div><div class="title">스마트 글라스… 미래일까?</div><div class="date">2026.04.22</div></a>
+    <a href="/blog/hello.html" class="post-item"><div class="cat">공지</div><div class="title">블로그 시작합니다</div><div class="date">2026.04.21</div></a>
   </div>
 
 </main>
