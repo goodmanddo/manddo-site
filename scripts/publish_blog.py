@@ -116,6 +116,8 @@ POST_TEMPLATE = """<!DOCTYPE html>
 .post-body th{{background:#F7F9FC;font-weight:700}}
 @media(max-width:640px){{.post-head h1{{font-size:24px}}.post-body{{font-size:15px}}}}
 </style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -272,6 +274,8 @@ BLOG_INDEX_TEMPLATE = """<!DOCTYPE html>
   .post-item .date{{font-size:12px;order:3;margin-left:auto}}
 }}
 </style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
 
