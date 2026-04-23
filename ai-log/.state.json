@@ -1,13 +1,5 @@
 {
-  "last_holdings": {
-    "000660": {
-      "name": "SK하이닉스",
-      "qty": 1,
-      "avg_price": 1225000,
-      "current_price": 1223000,
-      "opened_at": "2026-04-22"
-    }
-  },
+  "last_holdings": {},
   "history": [
     {
       "date": "2026-04-17",
@@ -40,6 +32,10 @@
     {
       "date": "2026-04-22",
       "total_eval": 24437650
+    },
+    {
+      "date": "2026-04-23",
+      "total_eval": 24371796
     }
   ],
   "completed_trades": [
@@ -141,6 +137,14 @@
       "date": "2026-04-22",
       "is_win": false,
       "hold_days": 5
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "return_pct": -0.24,
+      "date": "2026-04-23",
+      "is_win": false,
+      "hold_days": 1
     }
   ]
 }
