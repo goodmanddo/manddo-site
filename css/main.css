@@ -222,10 +222,11 @@ body{
 .breadcrumb a:hover{color:#3182F6;text-decoration:underline}
 .breadcrumb .sep{margin:0 6px;color:#c5cad1}
 
-/* 콘텐츠 페이지 공통 뒤로가기 버튼 */
-.back-btn{display:inline-flex;align-items:center;gap:4px;background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#191f28;text-decoration:none;margin-bottom:14px;transition:all .15s}
-.back-btn:hover{background:#f2f4f6;border-color:#d3d1c7;color:#191f28;transform:translateY(-1px)}
+/* 콘텐츠 페이지 공통 뒤로가기 버튼 (플로팅) */
+.back-btn{position:fixed;top:72px;left:16px;z-index:500;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.96);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #e5e8eb;border-radius:12px;padding:10px 16px;font-size:14px;font-weight:700;color:#191f28;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.08);transition:all .15s}
+.back-btn:hover{background:#fff;border-color:#c5cad1;color:#191f28;transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.1)}
 .back-btn:active{transform:translateY(0)}
+@media(max-width:640px){.back-btn{top:64px;left:10px;padding:9px 13px;font-size:13px}}
 
 .learn-hero{
   background:linear-gradient(135deg,#EAF5F1 0%,#F4F9FF 55%,#EBF4FF 100%);
