@@ -222,6 +222,11 @@ body{
 .breadcrumb a:hover{color:#3182F6;text-decoration:underline}
 .breadcrumb .sep{margin:0 6px;color:#c5cad1}
 
+/* 콘텐츠 페이지 공통 뒤로가기 버튼 */
+.back-btn{display:inline-flex;align-items:center;gap:4px;background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#191f28;text-decoration:none;margin-bottom:14px;transition:all .15s}
+.back-btn:hover{background:#f2f4f6;border-color:#d3d1c7;color:#191f28;transform:translateY(-1px)}
+.back-btn:active{transform:translateY(0)}
+
 .learn-hero{
   background:linear-gradient(135deg,#EAF5F1 0%,#F4F9FF 55%,#EBF4FF 100%);
   border-radius:20px;padding:40px 28px;margin-bottom:28px;position:relative;overflow:hidden;

@@ -135,6 +135,8 @@ POST_TEMPLATE = """<!DOCTYPE html>
 </header>
 
 <main class="page">
+  <!-- manddo-back-nav -->
+  <a class="back-btn" href="/blog/" onclick="if(document.referrer&&history.length>1){{event.preventDefault();history.back()}}">← 뒤로</a>
 
   <div class="breadcrumb">
     <a href="/blog/">블로그</a><span class="sep">/</span>{title}
