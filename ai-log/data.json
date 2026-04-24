@@ -1,17 +1,36 @@
 {
-  "date": "2026-04-23",
+  "date": "2026-04-24",
   "start_date": "2026-04-17",
-  "cumulative_return": 14.38,
-  "week_return": -0.8,
-  "day_return": -0.27,
-  "today_realized_avg": -0.24,
-  "today_trade_count": 1,
+  "cumulative_return": 14.1,
+  "week_return": -1.05,
+  "day_return": -0.25,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_loss_count": 0,
   "win_rate": 47,
   "total_trades": 15,
-  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 +14.4%.",
-  "new_buys": [],
+  "ai_commentary": "오늘은 에코아이, 시프트업 등 신규 편입. 시작 이후 누적 +14.1%.",
+  "new_buys": [
+    {
+      "name": "에코아이",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.9,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "에코아이 신규 편입. 포트폴리오 비중 조정."
+    },
+    {
+      "name": "시프트업",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.85,
+      "weight_pct": 4,
+      "hold_days": 0,
+      "reason": "시프트업 신규 편입. 포트폴리오 비중 조정."
+    }
+  ],
   "exits": [],
   "weekly_losses": [
     {
@@ -33,7 +52,20 @@
       "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     }
   ],
-  "holdings": [],
+  "holdings": [
+    {
+      "name": "시프트업",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
+    {
+      "name": "에코아이",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    }
+  ],
   "return_history": [
     {
       "date": "2026-04-17",
@@ -54,6 +86,10 @@
     {
       "date": "2026-04-23",
       "cumulative_return": 14.38
+    },
+    {
+      "date": "2026-04-24",
+      "cumulative_return": 14.1
     }
   ]
 }

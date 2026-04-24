@@ -1,5 +1,20 @@
 {
-  "last_holdings": {},
+  "last_holdings": {
+    "448280": {
+      "name": "에코아이",
+      "qty": 59,
+      "avg_price": 12220,
+      "current_price": 12330,
+      "opened_at": "2026-04-24"
+    },
+    "462870": {
+      "name": "시프트업",
+      "qty": 27,
+      "avg_price": 35100,
+      "current_price": 34800,
+      "opened_at": "2026-04-24"
+    }
+  },
   "history": [
     {
       "date": "2026-04-17",
@@ -36,6 +51,10 @@
     {
       "date": "2026-04-23",
       "total_eval": 24371796
+    },
+    {
+      "date": "2026-04-24",
+      "total_eval": 24311554
     }
   ],
   "completed_trades": [
