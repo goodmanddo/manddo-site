@@ -12,38 +12,40 @@
         .wrap{max-width:740px;margin:0 auto}
         .sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
         .card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
-        .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-        .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-        .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px}
-        .met{text-align:center;padding:10px}
-        .ml{font-size:11px;color:#666;margin-bottom:4px;font-weight:500}
-        .mv{font-size:16px;font-weight:700;color:#2c2c2a}
-        .ms{font-size:10px;color:#999;margin-top:2px}
-        .tag{display:inline-block;padding:3px 6px;border-radius:4px;font-size:11px;font-weight:600;margin:2px}
-        .t-r{background:#ffebee;color:#A32D2D}
-        .t-g{background:#e8f5e8;color:#1D9E75}
-        .t-b{background:#e3f2fd;color:#0C447C}
-        .t-a{background:#fff3e0;color:#EF9F27}
-        .t-navy{background:#e8eaf6;color:#3f51b5}
-        .t-teal{background:#e0f2f1;color:#00695c}
-        .zone{margin:8px 0;padding:8px 0;border-bottom:1px solid #f0f0f0}
-        .zone:last-child{border-bottom:none}
-        .zone::before{content:'•';color:#1D9E75;font-weight:bold;margin-right:8px}
-        .row{display:flex;align-items:center;margin:6px 0;padding:6px 0;border-bottom:1px solid #f8f8f8}
-        .row:last-child{border-bottom:none}
-        .rr,.rn{display:flex;margin:12px 0}
-        .rr .num{background:#A32D2D;color:white;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:bold;margin-right:10px;flex-shrink:0}
-        .rn .num{background:#666;color:white;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:bold;margin-right:10px;flex-shrink:0}
-        .info-box{background:#e8f5e8;border:1px solid #c8e6c9;border-radius:8px;padding:12px;margin:8px 0;border-left:4px solid #1D9E75}
-        .warn-box{background:#fff8e1;border:1px solid #ffcc02;border-radius:8px;padding:12px;margin:8px 0;border-left:4px solid #EF9F27}
-        .danger-box{background:#ffebee;border:1px solid #ffcdd2;border-radius:8px;padding:12px;margin:8px 0;border-left:4px solid #A32D2D}
-        .navy-box{background:#e8eaf6;border:1px solid #c5cae9;border-radius:8px;padding:12px;margin:8px 0;border-left:4px solid #3f51b5}
-        .score-wrap{background:#f5f5f5;height:8px;border-radius:4px;overflow:hidden;margin:6px 0}
-        .score-fill{height:100%;border-radius:4px;transition:width 0.3s ease}
-        .strategy-box{border:1px solid #d3d1c7;border-radius:8px;padding:10px;text-align:center}
-        .sp{font-size:16px;font-weight:bold;color:#A32D2D;margin:4px 0}
-        .chart-area{background:#fff;border-radius:8px;padding:12px;margin:12px 0}
-        .chart-area svg{width:100%;height:auto}
+        .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+        .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+        .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
+        .met{border:1px solid #e5e5e0;border-radius:6px;padding:8px;text-align:center}
+        .ml{font-size:11px;color:#666;margin-bottom:2px}
+        .mv{font-size:16px;font-weight:700}
+        .ms{font-size:10px;color:#888;margin-top:2px}
+        .tag{display:inline-block;padding:2px 6px;border-radius:12px;font-size:11px;font-weight:600;margin:2px}
+        .t-r{background:#FFE8E8;color:#A32D2D}
+        .t-g{background:#E8F5E8;color:#1D9E75}
+        .t-b{background:#E8F0FF;color:#0C447C}
+        .t-a{background:#FFF2E8;color:#EF9F27}
+        .t-navy{background:#E8ECFF;color:#2D3B96}
+        .t-teal{background:#E8F8F8;color:#0F6B6B}
+        .zone{margin:6px 0;display:flex;align-items:flex-start}
+        .zone::before{content:'●';color:#1D9E75;margin-right:8px;font-size:12px;line-height:18px}
+        .row{display:flex;align-items:center;margin:4px 0;font-size:13px}
+        .row::before{content:'▪';color:#888;margin-right:6px}
+        .rr,.rn{display:flex;align-items:flex-start;margin:8px 0;font-size:13px;line-height:1.4}
+        .rr::before,.rn::before{flex-shrink:0;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:700;margin-right:8px}
+        .rr::before{background:#1D9E75;counter-increment:reason;content:counter(reason)}
+        .rn::before{background:#888780;counter-increment:neutral;content:counter(neutral)}
+        .info-box,.warn-box,.danger-box,.navy-box{padding:10px;border-radius:8px;margin:8px 0;font-size:13px}
+        .info-box{background:#EAF3DE;border-left:4px solid #1D9E75}
+        .warn-box{background:#FFF5E6;border-left:4px solid #EF9F27}
+        .danger-box{background:#FFE8E8;border-left:4px solid #A32D2D}
+        .navy-box{background:#E8ECFF;border-left:4px solid #2D3B96}
+        .score-wrap{background:#f0f0f0;height:8px;border-radius:4px;overflow:hidden;margin-top:4px}
+        .score-fill{height:100%;transition:width 0.3s}
+        .strategy-box{border:1px solid #d3d1c7;border-radius:6px;padding:8px;text-align:center}
+        .sp{font-size:14px;font-weight:700;color:#1D9E75}
+        .chart-area{margin:10px 0;text-align:center}
+        .chart-area svg{border-radius:6px;background:#fafafa}
+        counter-reset: reason neutral
     </style>
 </head>
 <body>
@@ -52,15 +54,19 @@
 
     <div class="wrap">
         <div class="navy-box">
-            <div style="font-weight:bold;margin-bottom:8px">🎯 갭상승 이후 조정, 11,240원 MA5 상단에서 지지 확인 중</div>
-            <div class="g2">
+            <strong>📈 에코아이(448280)</strong> - 거래량 급증으로 세력 활동 감지, 현 구간에서 반등 기회 모색
+            <div class="g2" style="margin-top:8px">
                 <div>
-                    <div style="font-weight:600;color:#1D9E75;margin-bottom:4px">구조적 강점</div>
-                    <div style="font-size:12px">• 볼린저밴드 상단 돌파<br>• 이평선 정배열 진행<br>• 기관 순매수 지속</div>
+                    <strong>구조적 강점</strong><br>
+                    • 상승 추세선 접근 중<br>
+                    • MA선 상향 정렬 형성<br>
+                    • RSI 상승 여력 확보
                 </div>
                 <div>
-                    <div style="font-weight:600;color:#A32D2D;margin-bottom:4px">핵심 리스크</div>
-                    <div style="font-size:12px">• 외국인 대량 매도<br>• MACD 음수권 지속<br>• 고점 14,000원 저항</div>
+                    <strong>핵심 리스크</strong><br>
+                    • 외국인 매도세 지속<br>
+                    • 고점 대비 30% 조정<br>
+                    • MACD 다이버전스
                 </div>
             </div>
         </div>
@@ -71,280 +77,208 @@
                 <div class="met">
                     <div class="ml">현재가</div>
                     <div class="mv" style="color:#A32D2D">12,330원</div>
-                    <div class="ms">-8.26% (-1,110원)</div>
+                    <div class="ms">▼8.3% (-1,110)</div>
                 </div>
                 <div class="met">
                     <div class="ml">52주 범위</div>
-                    <div class="mv">7,516~17,400원</div>
-                    <div class="ms">변동폭 9,884원</div>
+                    <div class="mv">7,516 ~ 17,400</div>
+                    <div class="ms">9,884원 밴드</div>
                 </div>
                 <div class="met">
                     <div class="ml">52주 위치</div>
-                    <div class="mv" style="color:#EF9F27">48.7%</div>
-                    <div class="ms">중간 수준</div>
+                    <div class="mv">48.7%</div>
+                    <div class="ms">중위권 진입</div>
                 </div>
             </div>
+            
             <div style="margin:12px 0">
-                <svg width="100%" height="20" style="border-radius:10px;overflow:hidden">
+                <svg width="100%" height="24" style="background:#f8f8f8;border-radius:12px">
                     <defs>
-                        <linearGradient id="positionGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#A32D2D"/>
-                            <stop offset="30%" style="stop-color:#EF9F27"/>
-                            <stop offset="70%" style="stop-color:#1D9E75"/>
-                            <stop offset="100%" style="stop-color:#0C447C"/>
+                        <linearGradient id="priceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#A32D2D;stop-opacity:0.3"/>
+                            <stop offset="48.7%" style="stop-color:#EF9F27;stop-opacity:0.8"/>
+                            <stop offset="100%" style="stop-color:#1D9E75;stop-opacity:0.3"/>
                         </linearGradient>
                     </defs>
-                    <rect width="100%" height="20" fill="#f0f0f0"/>
-                    <rect width="48.7%" height="20" fill="url(#positionGrad)" opacity="0.7"/>
-                    <circle cx="48.7%" cy="10" r="8" fill="#EF9F27"/>
-                    <text x="48.7%" y="14" text-anchor="middle" font-size="8" fill="white" font-weight="bold">48.7%</text>
+                    <rect x="0" y="6" width="100%" height="12" fill="url(#priceGrad)" rx="6"/>
+                    <circle cx="48.7%" cy="12" r="8" fill="#EF9F27"/>
+                    <text x="3%" y="16" font-size="10" fill="#666">저가</text>
+                    <text x="94%" y="16" font-size="10" fill="#666" text-anchor="end">고가</text>
                 </svg>
             </div>
-            <div style="margin-top:12px">
-                <span class="tag t-r">갭상승</span>
-                <span class="tag t-g">이평선상단</span>
-                <span class="tag t-b">RSI 63.4</span>
-                <span class="tag t-a">거래량급증</span>
-                <span class="tag t-navy">기관매수</span>
+
+            <div style="text-align:center">
+                <span class="tag t-r">거래량 폭증</span>
+                <span class="tag t-a">변동성 확대</span>
+                <span class="tag t-b">볼린저 상단 돌파</span>
+                <span class="tag t-g">MA 역전 시도</span>
+                <span class="tag t-navy">세력 유입 감지</span>
             </div>
         </div>
 
         <div class="sec">📈 일봉 차트 모양</div>
         <div class="card">
-            <div class="rr">
-                <span class="num">①</span>
-                <span>11월 말 10,500원대 저점 형성 후 상승추세 전환, MA5/MA20 골든크로스 발생</span>
+            <div style="counter-reset: reason">
+                <div class="rr">강한 갭상승으로 시작해 14,000원 고점 터치 후 급락, 전형적인 세력 테스트 패턴</div>
+                <div class="rr">거래량이 평소 대비 7.9배 급증하며 대량 매매 세력의 개입 신호 명확</div>
+                <div class="rr">11,900~12,330원 구간에서 지지를 확인하며 하락 추세선 돌파 시도</div>
+                <div class="rr">볼린저 상단(11,903원) 돌파 후 재진입으로 상승 모멘텀 지속 가능성</div>
             </div>
-            <div class="rr">
-                <span class="num">②</span>
-                <span>12월 초 11,700원 고점 터치 후 11,000원선에서 지지, 삼각수렴 패턴 형성</span>
-            </div>
-            <div class="rr">
-                <span class="num">③</span>
-                <span>금일 13,440원 갭상승 출발, 14,000원 고점 터치 후 12,330원 마감</span>
-            </div>
-            <div class="rr">
-                <span class="num">④</span>
-                <span>거래량 747,278주로 평균 대비 8배 급증, 볼린저밴드 상단 돌파 시그널</span>
-            </div>
+
             <div class="chart-area">
-                <svg viewBox="0 0 680 225">
-                    <!-- 배경 그리드 -->
-                    <defs>
-                        <pattern id="grid" width="34" height="15" patternUnits="userSpaceOnUse">
-                            <path d="M 34 0 L 0 0 0 15" fill="none" stroke="#f0f0f0" stroke-width="0.5"/>
-                        </pattern>
-                    </defs>
-                    <rect width="680" height="180" fill="url(#grid)"/>
+                <svg viewBox="0 0 680 225" style="width:100%;height:200px">
+                    <!-- 배경 구간 -->
+                    <rect x="0" y="20" width="600" height="30" fill="#FCEBEB" opacity="0.3"/>
+                    <text x="10" y="38" font-size="11" fill="#888">조정 구간</text>
                     
-                    <!-- 가격 레벨 -->
-                    <line x1="0" y1="30" x2="680" y2="30" stroke="#A32D2D" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
-                    <text x="10" y="25" font-size="10" fill="#A32D2D" font-weight="bold">14,000원</text>
+                    <rect x="600" y="20" width="80" height="30" fill="#EAF3DE" opacity="0.3"/>
+                    <text x="610" y="38" font-size="11" fill="#888">반등 구간</text>
+
+                    <!-- 주요 가격선 -->
+                    <line x1="0" y1="60" x2="680" y2="60" stroke="#A32D2D" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+                    <text x="620" y="55" font-size="10" fill="#A32D2D">14,000 (고점)</text>
                     
-                    <line x1="0" y1="90" x2="680" y2="90" stroke="#EF9F27" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
-                    <text x="10" y="85" font-size="10" fill="#EF9F27" font-weight="bold">12,000원</text>
+                    <line x1="0" y1="120" x2="680" y2="120" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+                    <text x="620" y="115" font-size="10" fill="#1D9E75">12,330 (현재)</text>
+
+                    <line x1="0" y1="160" x2="680" y2="160" stroke="#0C447C" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+                    <text x="620" y="155" font-size="10" fill="#0C447C">11,000 (지지)</text>
+
+                    <!-- MA선 -->
+                    <path d="M30,150 Q150,145 300,140 Q450,138 600,135 L650,133" fill="none" stroke="#EF9F27" stroke-width="2" opacity="0.5"/>
+                    <text x="655" y="130" font-size="9" fill="#EF9F27">MA20</text>
                     
-                    <line x1="0" y1="150" x2="680" y2="150" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
-                    <text x="10" y="145" font-size="10" fill="#1D9E75" font-weight="bold">10,500원</text>
+                    <path d="M30,155 Q150,152 300,148 Q450,145 600,142 L650,140" fill="none" stroke="#2D3B96" stroke-width="1" opacity="0.5"/>
+                    <text x="655" y="137" font-size="9" fill="#2D3B96">MA60</text>
+
+                    <!-- 캔들차트 (최근 20일) -->
+                    <!-- 조정 구간 캔들들 -->
+                    <rect x="40" y="140" width="4" height="25" fill="#E24B4A"/>
+                    <line x1="42" y1="135" x2="42" y2="170" stroke="#E24B4A" stroke-width="1"/>
                     
-                    <!-- 구간 표시 -->
-                    <rect x="0" y="30" width="570" height="60" fill="#FCEBEB" opacity="0.3"/>
-                    <text x="285" y="50" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="bold">저항구간</text>
+                    <rect x="70" y="142" width="4" height="22" fill="#E24B4A"/>
+                    <line x1="72" y1="138" x2="72" y2="168" stroke="#E24B4A" stroke-width="1"/>
                     
-                    <rect x="570" y="30" width="110" height="120" fill="#EAF3DE" opacity="0.3"/>
-                    <text x="625" y="80" text-anchor="middle" font-size="10" fill="#1D9E75" font-weight="bold">돌파구간</text>
+                    <rect x="100" y="145" width="4" height="18" fill="#1D9E75"/>
+                    <line x1="102" y1="140" x2="102" y2="165" stroke="#1D9E75" stroke-width="1"/>
                     
-                    <!-- 캔들스틱 (최근 20일) -->
-                    <!-- 20일전 -->
-                    <line x1="34" y1="110" x2="34" y2="160" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="31" y="140" width="6" height="20" fill="#E24B4A"/>
+                    <rect x="130" y="148" width="4" height="20" fill="#E24B4A"/>
+                    <line x1="132" y1="145" x2="132" y2="170" stroke="#E24B4A" stroke-width="1"/>
                     
-                    <!-- 19일전 -->
-                    <line x1="68" y1="115" x2="68" y2="165" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="65" y="145" width="6" height="12" fill="#E24B4A"/>
+                    <rect x="160" y="143" width="4" height="15" fill="#1D9E75"/>
+                    <line x1="162" y1="140" x2="162" y2="160" stroke="#1D9E75" stroke-width="1"/>
+
+                    <!-- 급락 구간 -->
+                    <rect x="200" y="155" width="5" height="35" fill="#E24B4A"/>
+                    <line x1="202" y1="140" x2="202" y2="195" stroke="#E24B4A" stroke-width="2"/>
                     
-                    <!-- 18일전 -->
-                    <line x1="102" y1="120" x2="102" y2="155" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="99" y="142" width="6" height="8" fill="#E24B4A"/>
+                    <rect x="230" y="165" width="4" height="20" fill="#E24B4A"/>
+                    <line x1="232" y1="160" x2="232" y2="188" stroke="#E24B4A" stroke-width="1"/>
                     
-                    <!-- 17일전 -->
-                    <line x1="136" y1="125" x2="136" y2="170" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="133" y="150" width="6" height="15" fill="#E24B4A"/>
+                    <rect x="260" y="170" width="4" height="15" fill="#E24B4A"/>
+                    <line x1="262" y1="168" x2="262" y2="188" stroke="#E24B4A" stroke-width="1"/>
+
+                    <!-- 횡보 구간 -->
+                    <rect x="300" y="168" width="4" height="12" fill="#1D9E75"/>
+                    <line x1="302" y1="165" x2="302" y2="182" stroke="#1D9E75" stroke-width="1"/>
                     
-                    <!-- 16일전 -->
-                    <line x1="170" y1="120" x2="170" y2="145" stroke="#1D9E75" stroke-width="1"/>
-                    <rect x="167" y="120" width="6" height="18" fill="#1D9E75"/>
+                    <rect x="330" y="170" width="4" height="10" fill="#E24B4A"/>
+                    <line x1="332" y1="168" x2="332" y2="180" stroke="#E24B4A" stroke-width="1"/>
+
+                    <!-- 반등 시도 구간 -->
+                    <rect x="550" y="145" width="4" height="25" fill="#1D9E75"/>
+                    <line x1="552" y1="135" x2="552" y2="175" stroke="#1D9E75" stroke-width="1"/>
                     
-                    <!-- 15일전 -->
-                    <line x1="204" y1="125" x2="204" y2="165" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="201" y="140" width="6" height="20" fill="#E24B4A"/>
-                    
-                    <!-- 14일전 -->
-                    <line x1="238" y1="130" x2="238" y2="170" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="235" y="145" width="6" height="15" fill="#E24B4A"/>
-                    
-                    <!-- 13일전 -->
-                    <line x1="272" y1="140" x2="272" y2="180" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="269" y="150" width="6" height="25" fill="#E24B4A"/>
-                    
-                    <!-- 12일전 -->
-                    <line x1="306" y1="148" x2="306" y2="165" stroke="#1D9E75" stroke-width="1"/>
-                    <rect x="303" y="148" width="6" height="10" fill="#1D9E75"/>
-                    
-                    <!-- 11일전 -->
-                    <line x1="340" y1="142" x2="340" y2="175" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="337" y="155" width="6" height="18" fill="#E24B4A"/>
-                    
-                    <!-- 10일전 -->
-                    <line x1="374" y1="152" x2="374" y2="168" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="371" y="158" width="6" height="8" fill="#E24B4A"/>
-                    
-                    <!-- 9일전 -->
-                    <line x1="408" y1="155" x2="408" y2="172" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="405" y="162" width="6" height="8" fill="#E24B4A"/>
-                    
-                    <!-- 8일전 -->
-                    <line x1="442" y1="158" x2="442" y2="178" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="439" y="168" width="6" height="8" fill="#E24B4A"/>
-                    
-                    <!-- 7일전 -->
-                    <line x1="476" y1="160" x2="476" y2="172" stroke="#1D9E75" stroke-width="1"/>
-                    <rect x="473" y="160" width="6" height="8" fill="#1D9E75"/>
-                    
-                    <!-- 6일전 -->
-                    <line x1="510" y1="158" x2="510" y2="170" stroke="#1D9E75" stroke-width="1"/>
-                    <rect x="507" y="158" width="6" height="8" fill="#1D9E75"/>
-                    
-                    <!-- 5일전 -->
-                    <line x1="544" y1="145" x2="544" y2="165" stroke="#1D9E75" stroke-width="1"/>
-                    <rect x="541" y="145" width="6" height="12" fill="#1D9E75"/>
-                    
-                    <!-- 4일전 -->
-                    <line x1="578" y1="152" x2="578" y2="175" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="575" y="165" width="6" height="8" fill="#E24B4A"/>
-                    
-                    <!-- 3일전 -->
-                    <line x1="612" y1="165" x2="612" y2="178" stroke="#E24B4A" stroke-width="1"/>
-                    <rect x="609" y="172" width="6" height="5" fill="#E24B4A"/>
-                    
-                    <!-- 2일전 -->
-                    <line x1="646" y1="120" x2="646" y2="175" stroke="#1D9E75" stroke-width="1"/>
-                    <rect x="643" y="120" width="6" height="40" fill="#1D9E75"/>
-                    
-                    <!-- 금일(큰 캔들) -->
-                    <line x1="672" y1="30" x2="672" y2="160" stroke="#888780" stroke-width="2"/>
-                    <rect x="667" y="65" width="10" height="25" fill="#888780"/>
-                    
-                    <!-- MA선들 -->
-                    <path d="M34,140 Q102,135 170,132 T306,150 T442,160 T578,158 T672,90" stroke="#1D9E75" stroke-width="2" fill="none" opacity="0.5"/>
-                    <text x="620" y="102" font-size="9" fill="#1D9E75" font-weight="bold">MA5</text>
-                    
-                    <path d="M34,145 Q136,142 238,148 T374,155 T510,162 T672,95" stroke="#EF9F27" stroke-width="1.5" fill="none" opacity="0.5"/>
-                    <text x="620" y="107" font-size="9" fill="#EF9F27" font-weight="bold">MA20</text>
+                    <!-- 오늘 급등 캔들 -->
+                    <rect x="620" y="95" width="6" height="50" fill="#888780" stroke="#2D3B96" stroke-width="2"/>
+                    <line x1="623" y1="60" x2="623" y2="160" stroke="#888780" stroke-width="3"/>
                     
                     <!-- 거래량 표시 -->
-                    <rect x="665" y="185" width="14" height="35" fill="#A32D2D" opacity="0.7"/>
-                    <text x="672" y="202" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="bold">급증</text>
-                    
-                    <text x="340" y="210" text-anchor="middle" font-size="11" fill="#2c2c2a" font-weight="bold">갭상승 후 고점 14,000원 터치, MA5 지지 확인 중</text>
+                    <rect x="620" y="190" width="6" height="25" fill="#A32D2D" opacity="0.7"/>
+                    <text x="580" y="205" font-size="10" fill="#A32D2D">거래량 급증</text>
+
+                    <text x="10" y="210" font-size="12" fill="#2c2c2a">갭상승 후 고점 터치, 세력 물량 테스트 완료 → 재상승 준비 단계</text>
                 </svg>
             </div>
         </div>
 
         <div class="sec">📈 주봉 차트 모양</div>
         <div class="card">
-            <div class="rr">
-                <span class="num">①</span>
-                <span>9월 말 9,850원 저점 이후 박스권 횡보, 10,000~11,000원 구간 반복</span>
+            <div style="counter-reset: reason">
+                <div class="rr">9,850원 저점에서 시작된 상승 파동이 13,750원까지 진행 후 조정 국면 진입</div>
+                <div class="rr">엘리어트 파동 관점에서 3파 상승 완료, 현재 4파 조정 중으로 분석</div>
+                <div class="rr">상승 추세선(10,000~11,500원 연결선) 근처에서 지지 확인 시도</div>
+                <div class="rr">주봉 차트상 쌍바닥 패턴 형성 가능성, 12주 이동평균선 회복이 관건</div>
             </div>
-            <div class="rr">
-                <span class="num">②</span>
-                <span>11월 둘째 주 12,200원 고점 돌파 시도, 이후 조정으로 삼각수렴 형성</span>
-            </div>
-            <div class="rr">
-                <span class="num">③</span>
-                <span>12월 첫째 주 13,750원까지 상승, 엘리어트 파동 3파 진행 추정</span>
-            </div>
-            <div class="rr">
-                <span class="num">④</span>
-                <span>금주 14,000원 신고점 경신, 상승추세 지속되나 과열 구간 진입</span>
-            </div>
+
             <div class="chart-area">
-                <svg viewBox="0 0 680 225">
-                    <!-- 배경 그리드 -->
-                    <rect width="680" height="180" fill="url(#grid)"/>
+                <svg viewBox="0 0 680 225" style="width:100%;height:200px">
+                    <!-- 배경 파동 구간 -->
+                    <rect x="0" y="80" width="120" height="40" fill="#FCEBEB" opacity="0.3"/>
+                    <text x="5" y="105" font-size="10" fill="#888">1파 하락</text>
                     
-                    <!-- 가격 레벨 -->
-                    <line x1="0" y1="20" x2="680" y2="20" stroke="#A32D2D" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
-                    <text x="10" y="15" font-size="10" fill="#A32D2D" font-weight="bold">14,000원</text>
+                    <rect x="120" y="60" width="200" height="60" fill="#EAF3DE" opacity="0.3"/>
+                    <text x="125" y="95" font-size="10" fill="#888">2-3파 상승</text>
                     
-                    <line x1="0" y1="70" x2="680" y2="70" stroke="#EF9F27" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
-                    <text x="10" y="65" font-size="10" fill="#EF9F27" font-weight="bold">12,000원</text>
+                    <rect x="320" y="80" width="160" height="40" fill="#FFF5E6" opacity="0.3"/>
+                    <text x="325" y="105" font-size="10" fill="#888">4파 조정</text>
                     
-                    <line x1="0" y1="120" x2="680" y2="120" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
-                    <text x="10" y="115" font-size="10" fill="#1D9E75" font-weight="bold">10,000원</text>
+                    <rect x="480" y="60" width="200" height="60" fill="#E8F8F8" opacity="0.3"/>
+                    <text x="485" y="95" font-size="10" fill="#888">5파 예상</text>
+
+                    <!-- 추세선 -->
+                    <line x1="80" y1="180" x2="450" y2="140" stroke="#1D9E75" stroke-width="2" stroke-dasharray="6 4"/>
+                    <text x="350" y="135" font-size="10" fill="#1D9E75">상승 추세선</text>
+
+                    <!-- 주요 고점/저점 -->
+                    <line x1="0" y1="70" x2="680" y2="70" stroke="#A32D2D" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+                    <text x="600" y="65" font-size="10" fill="#A32D2D">13,750 (고점)</text>
                     
-                    <!-- 엘리어트 파동 표시 -->
-                    <path d="M80,160 L200,130 L300,140 L450,50 L580,80" stroke="#0C447C" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
-                    <circle cx="80" cy="160" r="3" fill="#0C447C"/>
-                    <text x="75" y="175" font-size="9" fill="#0C447C" font-weight="bold">1</text>
-                    <circle cx="200" cy="130" r="3" fill="#0C447C"/>
-                    <text x="195" y="145" font-size="9" fill="#0C447C" font-weight="bold">2</text>
-                    <circle cx="450" cy="50" r="3" fill="#0C447C"/>
-                    <text x="445" y="45" font-size="9" fill="#0C447C" font-weight="bold">3</text>
-                    <circle cx="580" cy="80" r="3" fill="#0C447C"/>
-                    <text x="575" y="95" font-size="9" fill="#0C447C" font-weight="bold">4</text>
+                    <line x1="0" y1="190" x2="680" y2="190" stroke="#0C447C" stroke-width="1" stroke-dasharray="4 3" opacity="0.6"/>
+                    <text x="600" y="185" font-size="10" fill="#0C447C">9,850 (저점)</text>
+
+                    <!-- 주봉 캔들 -->
+                    <rect x="60" y="160" width="12" height="25" fill="#E24B4A"/>
+                    <line x1="66" y1="150" x2="66" y2="190" stroke="#E24B4A" stroke-width="2"/>
                     
-                    <!-- 주봉 캔들 (12주) -->
-                    <!-- 12주전 -->
-                    <line x1="80" y1="125" x2="80" y2="165" stroke="#E24B4A" stroke-width="2"/>
-                    <rect x="75" y="140" width="10" height="20" fill="#E24B4A"/>
+                    <rect x="100" y="145" width="12" height="20" fill="#1D9E75"/>
+                    <line x1="106" y1="140" x2="106" y2="170" stroke="#1D9E75" stroke-width="2"/>
                     
-                    <!-- 11주전 -->
-                    <line x1="140" y1="130" x2="140" y2="140" stroke="#1D9E75" stroke-width="2"/>
-                    <rect x="135" y="130" width="10" height="8" fill="#1D9E75"/>
+                    <rect x="140" y="150" width="12" height="18" fill="#E24B4A"/>
+                    <line x1="146" y1="145" x2="146" y2="170" stroke="#E24B4A" stroke-width="2"/>
                     
-                    <!-- 10주전 -->
-                    <line x1="200" y1="125" x2="200" y2="145" stroke="#E24B4A" stroke-width="2"/>
-                    <rect x="195" y="138" width="10" height="6" fill="#E24B4A"/>
+                    <rect x="180" y="110" width="12" height="45" fill="#1D9E75"/>
+                    <line x1="186" y1="100" x2="186" y2="165" stroke="#1D9E75" stroke-width="2"/>
                     
-                    <!-- 9주전 -->
-                    <line x1="260" y1="110" x2="260" y2="135" stroke="#1D9E75" stroke-width="2"/>
-                    <rect x="255" y="110" width="10" height="20" fill="#1D9E75"/>
+                    <rect x="220" y="125" width="12" height="35" fill="#E24B4A"/>
+                    <line x1="226" y1="115" x2="226" y2="170" stroke="#E24B4A" stroke-width="2"/>
                     
-                    <!-- 8주전 -->
-                    <line x1="320" y1="100" x2="320" y2="155" stroke="#E24B4A" stroke-width="2"/>
-                    <rect x="315" y="135" width="10" height="18" fill="#E24B4A"/>
+                    <rect x="260" y="105" width="12" height="25" fill="#1D9E75"/>
+                    <line x1="266" y1="95" x2="266" y2="135" stroke="#1D9E75" stroke-width="2"/>
                     
-                    <!-- 7주전 -->
-                    <line x1="380" y1="95" x2="380" y2="150" stroke="#1D9E75" stroke-width="2"/>
-                    <rect x="375" y="95" width="10" height="10" fill="#1D9E75"/>
+                    <rect x="300" y="80" width="12" height="35" fill="#1D9E75"/>
+                    <line x1="306" y1="70" x2="306" y2="120" stroke="#1D9E75" stroke-width="2"/>
                     
-                    <!-- 6주전 -->
-                    <line x1="440" y1="40" x2="440" y2="100" stroke="#1D9E75" stroke-width="2"/>
-                    <rect x="435" y="40" width="10" height="25" fill="#1D9E75"/>
+                    <rect x="340" y="115" width="12" height="25" fill="#E24B4A"/>
+                    <line x1="346" y1="105" x2="346" y2="145" stroke="#E24B4A" stroke-width="2"/>
                     
-                    <!-- 5주전 -->
-                    <line x1="500" y1="85" x2="500" y2="105" stroke="#E24B4A" stroke-width="2"/>
-                    <rect x="495" y="95" width="10" height="8" fill="#E24B4A"/>
+                    <rect x="380" y="125" width="12" height="20" fill="#1D9E75"/>
+                    <line x1="386" y1="120" x2="386" y2="150" stroke="#1D9E75" stroke-width="2"/>
                     
-                    <!-- 4주전 -->
-                    <line x1="540" y1="85" x2="540" y2="105" stroke="#E24B4A" stroke-width="2"/>
-                    <rect x="535" y="90" width="10" height="10" fill="#E24B4A"/>
+                    <rect x="420" y="135" width="12" height="25" fill="#E24B4A"/>
+                    <line x1="426" y1="125" x2="426" y2="165" stroke="#E24B4A" stroke-width="2"/>
                     
-                    <!-- 3주전 -->
-                    <line x1="580" y1="100" x2="580" y2="160" stroke="#E24B4A" stroke-width="2"/>
-                    <rect x="575" y="135" width="10" height="20" fill="#E24B4A"/>
+                    <rect x="460" y="130" width="12" height="20" fill="#1D9E75"/>
+                    <line x1="466" y1="125" x2="466" y2="155" stroke="#1D9E75" stroke-width="2"/>
                     
-                    <!-- 2주전 -->
-                    <line x1="620" y1="125" x2="620" y2="155" stroke="#1D9E75" stroke-width="2"/>
-                    <rect x="615" y="125" width="10" height="8" fill="#1D9E75"/>
-                    
-                    <!-- 금주 -->
-                    <line x1="660" y1="20" x2="660" y2="155" stroke="#888780" stroke-width="3"/>
-                    <rect x="655" y="55" width="10" height="25" fill="#888780"/>
-                    
-                    <text x="340" y="210" text-anchor="middle" font-size="11" fill="#2c2c2a" font-weight="bold">엘리어트 파동 3파 완성, 4파 조정 또는 5파 연장 구간</text>
+                    <rect x="500" y="110" width="14" height="40" fill="#888780" stroke="#2D3B96" stroke-width="2"/>
+                    <line x1="507" y1="90" x2="507" y2="165" stroke="#888780" stroke-width="3"/>
+
+                    <!-- 12주 이동평균 -->
+                    <path d="M60,175 Q180,130 300,110 Q420,125 500,135" fill="none" stroke="#EF9F27" stroke-width="2" opacity="0.7"/>
+                    <text x="520" y="130" font-size="10" fill="#EF9F27">12주 MA</text>
+
+                    <text x="10" y="215" font-size="12" fill="#2c2c2a">엘리어트 4파 조정 중, 상승 추세선 지지 확인 시 5파 상승 기대</text>
                 </svg>
             </div>
         </div>
@@ -352,21 +286,88 @@
         <div class="sec">🧲 세력 관점 분석</div>
         <div class="card">
             <div class="zone">
-                <strong>수급 판독</strong><br>
-                거래량 747,278주(평균 대비 794% 급증)로 세력 진입 신호. 기관 5일간 15,027주 순매수하나 외국인 262,112주 대량 매도로 혼재 양상. 갭상승 시점의 물량 소화 과정 진행 중.
+                <div><strong>수급 판독</strong><br>
+                거래량 747K(평균 대비 793% 증가)로 대형 세력 개입 확실. 갭상승 후 고점 터치는 물량 테스트 성격이며, 12,300원대 지지 매수로 추가 상승 의도 확인됨</div>
             </div>
             <div class="zone">
-                <strong>구조적 경쟁력</strong><br>
-                PBR 2.92, 영업이익률 10.64%로 양호한 수익성 유지. 환경기술 기업으로 ESG 트렌드 수혜. MA5/MA20 정배열 완성으로 기술적 상승 모멘텀 확보.
+                <div><strong>구조적 경쟁력</strong><br>
+                환경/에너지 섹터 내 틈새 포지션 확보. PBR 2.92배는 성장주 치고 합리적 수준이며, 영업이익률 10.64%로 수익성 안정화. 기관 매수(+15,027주) 지속</div>
             </div>
             <div class="zone">
-                <strong>실적·펀더멘탈</strong><br>
-                영업이익 9억원으로 흑자 전환. 52주 위치 48.7%로 추가 상승 여력 충분. RSI 63.4로 과매수권 근접하나 아직 건전한 수준.
+                <div><strong>실적·펀더멘탈</strong><br>
+                영업이익 9억원 흑자 기조 유지. 정부 그린뉴딜 정책 수혜주로 중장기 성장 동력 확보. 다만 외국인 매도(-262K) 압력은 단기 변수</div>
             </div>
             <div class="zone">
-                <strong>핵심 리스크</strong><br>
-                MACD -36.3으로 음수권 지속, 외국인 대량 매도 압력. 14,000원 고점에서 강한 저항. 급등 후 차익실현 물량 출현 가능성.
+                <div><strong>핵심 리스크</strong><br>
+                고점 17,400원 대비 29% 조정 상태. MACD(-36.3) 다이버전스 지속으로 기술적 약세 신호. 업종 전반 투자심리 위축 시 추가 조정 가능성</div>
             </div>
         </div>
 
-        <div class="sec">✅
+        <div class="sec">✅ 체크리스트 & 📅 카탈리스트</div>
+        <div class="card">
+            <div class="g2">
+                <div>
+                    <strong>🔥 강점</strong>
+                    <div class="row">거래량 급증으로 세력 유입 <span class="tag t-r">Hot</span></div>
+                    <div class="row">상승 추세선 지지 확인 <span class="tag t-g">기술적</span></div>
+                    <div class="row">MA선 역전 시도 중 <span class="tag t-b">추세</span></div>
+                    <div class="row">볼린저 상단 돌파 <span class="tag t-a">모멘텀</span></div>
+                    <div class="row">기관 순매수 지속 <span class="tag t-navy">수급</span></div>
+                    <div class="row">RSI 63.4 상승 여력 <span class="tag t-teal">오실레이터</span></div>
+                </div>
+                <div>
+                    <strong>⚠️ 약점</strong>
+                    <div class="row">외국인 대량 매도 <span class="tag t-r">수급</span></div>
+                    <div class="row">MACD 다이버전스 <span class="tag t-a">기술적</span></div>
+                    <div class="row">고점 대비 29% 조정 <span class="tag t-b">위치</span></div>
+                    <div class="row">52주 위치 중위권 <span class="tag t-navy">상대적</span></div>
+                    <div class="row">업종 투자심리 부진 <span class="tag t-teal">섹터</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec">🎯 매수 전략 종합</div>
+        <div class="card">
+            <div class="g2" style="margin-bottom:12px">
+                <div class="met">
+                    <div class="ml">단기 매력도</div>
+                    <div class="mv" style="color:#EF9F27">72점</div>
+                    <div class="score-wrap">
+                        <div class="score-fill" style="width:72%;background:#EF9F27"></div>
+                    </div>
+                    <div class="ms">거래량 급증 + 세력 개입</div>
+                </div>
+                <div class="met">
+                    <div class="ml">중장기 매력도</div>
+                    <div class="mv" style="color:#1D9E75">65점</div>
+                    <div class="score-wrap">
+                        <div class="score-fill" style="width:65%;background:#1D9E75"></div>
+                    </div>
+                    <div class="ms">그린뉴딜 테마 + 실적 개선</div>
+                </div>
+            </div>
+
+            <div class="g4" style="margin:12px 0">
+                <div class="strategy-box">
+                    <div style="font-size:12px;color:#666;margin-bottom:4px">조정매수</div>
+                    <div class="sp">11,800원</div>
+                    <div style="font-size:10px;margin-top:2px">지지선 재터치</div>
+                </div>
+                <div class="strategy-box">
+                    <div style="font-size:12px;color:#666;margin-bottom:4px">핵심매수</div>
+                    <div class="sp">12,500원</div>
+                    <div style="font-size:10px;margin-top:2px">MA20 돌파</div>
+                </div>
+                <div class="strategy-box">
+                    <div style="font-size:12px;color:#666;margin-bottom:4px">1차목표</div>
+                    <div class="sp">14,200원</div>
+                    <div style="font-size:10px;margin-top:2px">저항선 돌파</div>
+                </div>
+                <div class="strategy-box">
+                    <div style="font-size:12px;color:#666;margin-bottom:4px">손절라인</div>
+                    <div class="sp" style="color:#A32D2D">11,000원</div>
+                    <div style="font-size:10px;margin-top:2px">추세선 이탈</div>
+                </div>
+            </div>
+
+            <div class="
