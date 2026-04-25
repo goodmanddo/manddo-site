@@ -147,67 +147,180 @@ def has_chart_report(code):
 
 
 def generate_chart_analysis(code, name):
-    """Claude API로 차트분석 HTML 생성"""
+    """Claude API로 금호석유 수준의 고품질 차트분석 HTML 생성"""
     print(f"[차트생성] {name}({code}) 분석 HTML 생성 중...")
 
-    # KIS API로 데이터 수집
+    # KIS API + FinanceDataReader로 데이터 수집
     api = KISApi()
     import FinanceDataReader as fdr
+    from scanner import get_fundamentals, get_institutional_net_buy
 
-    start_date = (datetime.now() - timedelta(days=300)).strftime("%Y-%m-%d")
+    start_date = (datetime.now() - timedelta(days=500)).strftime("%Y-%m-%d")
     df = fdr.DataReader(code, start_date)
 
     if df is None or len(df) < 60:
         print(f"[차트생성] 데이터 부족: {name}")
         return None
 
-    # 최근 60일 데이터 요약
+    close = df["Close"]
     recent = df.tail(60)
+
+    # 기본 시세
     price_data = {
-        "현재가": int(recent["Close"].iloc[-1]),
-        "시가": int(recent["Open"].iloc[-1]),
-        "고가": int(recent["High"].iloc[-1]),
-        "저가": int(recent["Low"].iloc[-1]),
-        "거래량": int(recent["Volume"].iloc[-1]),
-        "60일고가": int(recent["High"].max()),
-        "60일저가": int(recent["Low"].min()),
-        "5일평균": int(recent["Close"].rolling(5).mean().iloc[-1]),
-        "20일평균": int(recent["Close"].rolling(20).mean().iloc[-1]),
-        "60일평균": int(recent["Close"].rolling(60).mean().iloc[-1]),
+        "현재가": int(close.iloc[-1]),
+        "시가": int(df["Open"].iloc[-1]),
+        "고가": int(df["High"].iloc[-1]),
+        "저가": int(df["Low"].iloc[-1]),
+        "거래량": int(df["Volume"].iloc[-1]),
+        "평균거래량_20일": int(recent["Volume"].rolling(20).mean().iloc[-1]),
     }
 
-    if len(df) >= 120:
-        price_data["120일평균"] = int(df["Close"].rolling(120).mean().iloc[-1])
+    # 이동평균
+    for n in [5, 20, 60]:
+        if len(close) >= n:
+            price_data[f"MA{n}"] = int(close.rolling(n).mean().iloc[-1])
+    if len(close) >= 120:
+        price_data["MA120"] = int(close.rolling(120).mean().iloc[-1])
+
+    # 52주 고저
+    y1 = df.tail(252) if len(df) >= 252 else df
+    price_data["52주고가"] = int(y1["High"].max())
+    price_data["52주저가"] = int(y1["Low"].min())
+    price_data["52주위치"] = round(
+        (close.iloc[-1] - y1["Low"].min()) / (y1["High"].max() - y1["Low"].min()) * 100, 1
+    ) if y1["High"].max() != y1["Low"].min() else 50
 
     # RSI
-    delta = recent["Close"].diff()
+    delta = close.diff()
     gain = delta.where(delta > 0, 0).rolling(14).mean()
     loss = (-delta.where(delta < 0, 0)).rolling(14).mean()
     rs = gain / loss
     rsi = 100 - (100 / (1 + rs))
     price_data["RSI"] = round(rsi.iloc[-1], 1)
 
-    # 최근 10일 종가
-    price_data["최근10일종가"] = recent["Close"].tail(10).tolist()
+    # MACD
+    ema12 = close.ewm(span=12).mean()
+    ema26 = close.ewm(span=26).mean()
+    macd = ema12 - ema26
+    signal = macd.ewm(span=9).mean()
+    price_data["MACD"] = round(macd.iloc[-1], 1)
+    price_data["MACD시그널"] = round(signal.iloc[-1], 1)
 
-    prompt = f"""'{name}'({code}) 종목의 세력·차트 분석 HTML을 생성해주세요.
+    # 볼린저밴드
+    ma20 = close.rolling(20).mean()
+    std20 = close.rolling(20).std()
+    price_data["볼린저상단"] = int((ma20 + 2 * std20).iloc[-1])
+    price_data["볼린저하단"] = int((ma20 - 2 * std20).iloc[-1])
+
+    # 피보나치 되돌림 (52주 고저 기준)
+    h, l = price_data["52주고가"], price_data["52주저가"]
+    diff = h - l
+    price_data["피보나치"] = {
+        "23.6%": int(h - diff * 0.236),
+        "38.2%": int(h - diff * 0.382),
+        "50%": int(h - diff * 0.5),
+        "61.8%": int(h - diff * 0.618),
+        "78.6%": int(h - diff * 0.786),
+    }
+
+    # 최근 20일 일봉 (OHLCV)
+    candles = []
+    for _, row in df.tail(20).iterrows():
+        candles.append({
+            "O": int(row["Open"]), "H": int(row["High"]),
+            "L": int(row["Low"]), "C": int(row["Close"]),
+            "V": int(row["Volume"]),
+        })
+    price_data["최근20일봉"] = candles
+
+    # 주봉 (최근 12주)
+    weekly = df.resample("W").agg({"Open": "first", "High": "max", "Low": "min", "Close": "last", "Volume": "sum"}).dropna().tail(12)
+    w_candles = []
+    for _, row in weekly.iterrows():
+        w_candles.append({"O": int(row["Open"]), "H": int(row["High"]), "L": int(row["Low"]), "C": int(row["Close"])})
+    price_data["최근12주봉"] = w_candles
+
+    # 펀더멘탈
+    pbr, opm, op_amount = get_fundamentals(code)
+    price_data["PBR"] = pbr
+    price_data["영업이익률"] = opm
+    price_data["영업이익"] = op_amount
+
+    # 기관/외국인 수급
+    inv = get_institutional_net_buy(code, days=5)
+    price_data["기관순매수_5일"] = inv.get("inst_net", 0)
+    price_data["외국인순매수_5일"] = inv.get("frgn_net", 0)
+
+    prompt = f"""'{name}'({code}) 종목의 세력·차트 종합 분석 HTML을 생성해주세요.
+아래 시세 데이터와 일봉/주봉 캔들 데이터를 기반으로 실제 분석을 해주세요.
 
 시세 데이터:
 {json.dumps(price_data, ensure_ascii=False, indent=2)}
 
-기존 분석 HTML 형식을 반드시 따라주세요:
-- DOCTYPE html, lang="ko"
-- <title>{name} 세력·차트 분석</title>
-- 메타 태그 필수: stock-name="{name}", stock-code="{code}"
-- 스타일은 인라인 <style>로 포함 (외부 CSS 없음)
-- .wrap {{max-width:740px}} 레이아웃
-- 섹션(.sec): 기업 개요, 차트 구조 분석, 세력 흐름 분석, 매물대·지지/저항, 기술적 신호 점수판, 종합 시나리오
-- .card, .g2, .g3, .met (메트릭), .tag (태그) 클래스 사용
-- 색상: 상승 #A32D2D, 하락 #0C447C, 중립 #888780
-- 폰트: -apple-system, 'Noto Sans KR'
-- 실제 데이터 기반으로 분석 (가짜 데이터 X)
+반드시 아래 구조와 스타일을 정확히 따라주세요:
 
-HTML만 출력하세요. 설명이나 마크다운 없이 순수 HTML만."""
+## 필수 HTML 구조
+
+1. DOCTYPE html, lang="ko", <title>{name} 세력·차트 분석</title>
+2. <meta name="stock-name" content="{name}">
+   <meta name="stock-code" content="{code}">
+3. 모든 CSS는 <style> 태그 안에 인라인으로 (외부 CSS 없음)
+4. .wrap{{max-width:740px;margin:0 auto}}
+
+## 필수 CSS 클래스 (그대로 사용)
+
+*{{box-sizing:border-box;margin:0;padding:0}}
+body{{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}}
+.sec{{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}}
+.card{{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}}
+.g2/.g3/.g4 = grid 레이아웃 (2/3/4열)
+.met = 메트릭 박스 (.ml=라벨, .mv=값, .ms=보조텍스트)
+.tag = 인라인 태그 (.t-r=빨강, .t-g=녹색, .t-b=파랑, .t-a=주황, .t-navy=네이비, .t-teal=틸)
+.zone = 세력 분석 항목 (dot + 설명)
+.row = 체크리스트 행
+.rr/.rn = 이유 설명 행 (번호박스 + 설명)
+.info-box(녹색), .warn-box(주황), .danger-box(빨강), .navy-box(네이비) = 강조 박스
+.score-wrap/.score-fill = 점수 프로그레스바
+.strategy-box = 매수전략 박스 (.sp=가격)
+.chart-area = SVG 차트 영역
+
+## 필수 섹션 (순서대로)
+
+1. **navy-box 요약**: 한 줄 핵심 포인트 + 구조적 강점/리스크 2컬럼 그리드
+2. **📊 현재 주가 현황**: .g3 메트릭(현재가, 52주 범위, 52주 위치) + 52주 위치 바 (SVG gradient) + 태그들
+3. **📈 일봉 차트 모양**: .rr/.rn으로 "이유①②③④" 형식. 차트가 왜 이런 모양인지 설명
+   - chart-area에 SVG 캔들차트 (viewBox="0 0 680 225") — 실제 데이터 기반 캔들 + MA선 + 주요 가격선 + 구간 표시
+4. **📈 주봉 차트 모양**: 동일 형식. 엘리어트 파동/추세대 관점 분석 + SVG 주봉 차트
+5. **📈 월봉 차트 모양**: 장기 추세 분석 + SVG 월봉 차트 (데이터 없으면 생략 가능)
+6. **🧲 세력 관점 분석**: .zone으로 수급 판독, 구조적 경쟁력, 실적/펀더멘탈, 핵심 리스크 4개
+7. **✅ 체크리스트 & 📅 카탈리스트**: .row로 강점/약점 각 5개+ 나열 (태그 포함)
+8. **🎯 매수 전략 종합**: .g2로 단기/중장기 매력도 점수 + 전략 → .g4로 조정매수/핵심/목표가/손절 4박스 → info-box 핵심 4포인트 + danger-box 리스크
+
+## SVG 차트 규칙
+
+- 실제 데이터 기반으로 캔들 위치 계산 (가짜 데이터 X)
+- 상승 캔들: fill="#1D9E75", 하락 캔들: fill="#E24B4A", 현재: fill="#888780"
+- 주요 가격선: stroke-dasharray="4 3", 라벨 포함
+- MA선: path로 곡선, opacity=".5"
+- 구간별 배경 rect (상승구간=#EAF3DE, 하락구간=#FCEBEB 등) + 라벨
+- 매수/매도 구간 하이라이트
+- 하단에 한 줄 요약 텍스트
+
+## 핵심 분석 포인트 (PDF 기술적 분석 이론 적용)
+
+- **지지/저항**: 이전 고점이 지지로 전환, 저점이 저항으로 전환 여부
+- **추세선/추세대**: 상승추세 저점 연결, 하락추세 고점 연결
+- **이동평균선 밀집도**: 정배열/역배열/밀집 분석
+- **거래량으로 세력활동 판독**: 거래량 급증=세력 진입/이탈, 급감=관망
+- **피보나치 되돌림**: 주요 되돌림 비율에서 지지/저항 확인
+- **패턴 분석**: 쌍봉/쌍바닥, 삼각수렴, 플래그, 헤드앤숄더 등
+- **엘리어트 파동**: 파동 카운팅, 현재 위치 추정
+- **볼린저밴드**: 밴드폭 수축/확장, 상하단 접근
+- **RSI/MACD**: 과매수/과매도, 다이버전스
+
+색상 규칙: 상승=#A32D2D(빨강계), 하락=#0C447C(파랑계), 중립=#888780, 긍정=#1D9E75(녹색), 경고=#EF9F27(주황)
+
+HTML만 출력하세요. 마크다운 코드블록(```)이나 설명 없이 <!DOCTYPE html>부터 </html>까지만."""
 
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
