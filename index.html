@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://manddo.kr/">
 <meta property="og:locale" content="ko_KR">
 <link rel="canonical" href="https://manddo.kr/">
-<link rel="stylesheet" href="/css/main.css?v=20260423a">
+<link rel="stylesheet" href="/css/main.css?v=20260425a">
   <!-- adsense-script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
@@ -53,6 +53,14 @@
       <a href="/ai-log/" class="more">전체 일지 →</a>
     </div>
     <p class="cat-desc">AI가 오늘 매수·매도한 종목과 판단 근거를 매일 기록합니다. 손실 케이스도 투명하게 공개합니다.</p>
+    <div class="home-signal" id="home-signal">
+      <div class="home-signal-head">
+        <span class="badge">🌙 새벽 시그널</span>
+        <span class="label" id="home-signal-label">오늘 새벽 AI가 본 종목</span>
+        <a href="/ai-log/#sec-signal" class="more-link">전체 보기 →</a>
+      </div>
+      <div class="home-signal-list" id="home-signal-list"></div>
+    </div>
     <div class="ai-trend" id="ai-trend">
       <div class="ai-trend-head">
         <span class="ai-trend-label">누적 수익률 추세</span>
@@ -277,6 +285,26 @@
       + circles + pctLabels + dateLabels
       + '</svg>';
   }
+  // AI 야간 시그널 미리보기 (3종목 chip)
+  fetch('/ai-log/signal.json', {cache:'no-store'}).then(r => r.ok ? r.json() : Promise.reject()).then(s => {
+    const wrap = document.getElementById('home-signal');
+    const list = document.getElementById('home-signal-list');
+    const stanceLabel = {avoid:'회피', watch:'관망', small_entry:'소액'};
+    const picks = [];
+    if (s.us_market && s.us_market.impacted_kr_stocks) {
+      s.us_market.impacted_kr_stocks.slice(0,2).forEach(x => picks.push(x));
+    }
+    if (s.volume_surge) {
+      s.volume_surge.slice(0,1).forEach(x => picks.push(x));
+    }
+    if (!picks.length) return;
+    picks.forEach(p => {
+      const href = p.slug ? `/stock/${p.slug}.html` : '/ai-log/#sec-signal';
+      list.insertAdjacentHTML('beforeend',
+        `<a href="${href}" class="home-sig-chip">${p.name}<span class="stance ${p.stance}">${stanceLabel[p.stance]||'관망'}</span></a>`);
+    });
+    wrap.classList.add('has-data');
+  }).catch(() => {});
   fetch('/ai-log/data.json', {cache:'no-store'}).then(r => r.ok ? r.json() : Promise.reject()).then(d => {
     // 추세 차트
     const body = document.getElementById('ai-trend-body');

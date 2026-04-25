@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://manddo.kr/ai-log/">
 <link rel="canonical" href="https://manddo.kr/ai-log/">
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/main.css?v=20260425a">
 <style>
 .ai-hero{background:linear-gradient(135deg,#EBF4FF 0%,#F4F9FF 50%,#F0F4FF 100%);border-radius:20px;padding:44px 28px;margin-bottom:28px;position:relative;overflow:hidden;text-align:center}
 .ai-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 15% 25%,rgba(49,130,246,.10),transparent 55%),radial-gradient(circle at 85% 75%,rgba(107,89,255,.08),transparent 55%);pointer-events:none}
@@ -65,6 +65,39 @@
 .hold-item:hover{border-color:#3182F6;transform:translateY(-1px)}
 .hold-item .hname{font-size:14px;font-weight:700;color:#191f28;letter-spacing:-0.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .hold-item .hpct{font-size:14px;font-weight:800;color:#1B64DA;font-family:'SF Mono',ui-monospace,monospace;flex-shrink:0}
+
+/* AI 야간 시그널 */
+.signal-block{background:linear-gradient(135deg,#F4F2FF 0%,#EEF1FF 60%,#F4F8FF 100%);border:1px solid #E2DEFB;border-radius:18px;padding:24px 22px;margin-bottom:36px;position:relative;overflow:hidden}
+.signal-block::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(107,89,255,.10),transparent 55%);pointer-events:none}
+.signal-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;position:relative}
+.signal-head .badge{font-size:11px;font-weight:700;color:#6B59FF;background:rgba(107,89,255,.12);padding:4px 10px;border-radius:999px;letter-spacing:0.04em}
+.signal-head h2{font-size:19px;font-weight:800;letter-spacing:-0.03em;color:#191f28;margin:0}
+.signal-head .gen-time{font-size:12px;color:#6b7684;margin-left:auto;font-weight:500}
+.signal-us{background:#fff;border:1px solid #e8e6f8;border-radius:14px;padding:16px 18px;margin-bottom:14px;position:relative}
+.signal-us .us-summary{font-size:14px;color:#333d4b;line-height:1.65;margin-bottom:10px}
+.signal-us .us-indices{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#4e5968;font-weight:600;font-family:'SF Mono',ui-monospace,monospace}
+.signal-us .us-idx .pos{color:#0C8A5A}
+.signal-us .us-idx .neg{color:#D63939}
+.signal-list{display:flex;flex-direction:column;gap:10px;position:relative}
+.sig-card{background:#fff;border:1px solid #e8e6f8;border-radius:12px;padding:14px 16px;display:block;color:inherit;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.sig-card:hover{transform:translateY(-1px);box-shadow:0 6px 16px -6px rgba(107,89,255,.15)}
+.sig-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.sig-name{font-size:15px;font-weight:800;color:#191f28;letter-spacing:-0.02em}
+.sig-meta{font-size:11.5px;color:#8b95a1;font-weight:500;margin-left:6px}
+.sig-pct{font-size:14px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.01em}
+.sig-pct.pos{color:#0C8A5A}
+.sig-pct.neg{color:#D63939}
+.sig-vol{font-size:11.5px;color:#6B59FF;font-weight:700;background:rgba(107,89,255,.10);padding:2px 8px;border-radius:6px;margin-left:6px}
+.sig-trigger{font-size:12.5px;color:#6b7684;line-height:1.55;margin-bottom:6px}
+.sig-view{font-size:13px;color:#4e5968;line-height:1.6}
+.sig-stance{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-right:6px;letter-spacing:0.02em;vertical-align:middle}
+.sig-stance.avoid{background:#FFE8E8;color:#B33939}
+.sig-stance.watch{background:#EEF0F3;color:#4e5968}
+.sig-stance.small_entry{background:#E2EEFF;color:#1B64DA}
+.signal-subhead{font-size:13px;font-weight:700;color:#4e5968;margin:14px 0 8px;letter-spacing:-0.01em;display:flex;align-items:center;gap:6px;position:relative}
+.signal-summary{background:rgba(255,255,255,.7);border-left:3px solid #6B59FF;border-radius:6px;padding:12px 14px;font-size:13px;color:#4e5968;line-height:1.7;margin-top:14px;position:relative}
+.signal-summary b{color:#6B59FF;font-weight:700}
+.signal-disc{font-size:11.5px;color:#8b95a1;margin-top:10px;line-height:1.5;position:relative}
 
 @media(max-width:640px){
   .ai-hero{padding:32px 20px;border-radius:16px}
@@ -126,6 +159,29 @@
       <div class="sub" id="sum-total">—</div>
     </div>
   </div>
+
+  <!-- AI 야간 시그널 -->
+  <section class="signal-block" id="sec-signal">
+    <div class="signal-head">
+      <span class="badge">🌙 AI 야간 시그널</span>
+      <h2>오늘 새벽의 AI 분석</h2>
+      <span class="gen-time" id="signal-time">—</span>
+    </div>
+
+    <div class="signal-us" id="signal-us-block">
+      <div class="us-summary" id="us-summary">—</div>
+      <div class="us-indices" id="us-indices"></div>
+    </div>
+
+    <div class="signal-subhead">📈 미국 증시 영향 종목</div>
+    <div class="signal-list" id="signal-impacted"></div>
+
+    <div class="signal-subhead" style="margin-top:18px">🔥 거래량 폭증 TOP 5</div>
+    <div class="signal-list" id="signal-volume"></div>
+
+    <div class="signal-summary" id="signal-summary">—</div>
+    <div class="signal-disc">⚠ AI 분석 의견이며 매수·매도 권유가 아닙니다. 모든 투자 판단은 본인의 책임입니다.</div>
+  </section>
 
   <section class="sec" id="sec-buys">
     <h2>🟦 최근 신규 매수</h2>
@@ -196,6 +252,67 @@
     const days = ['일','월','화','수','목','금','토'];
     return `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일 (${days[d.getDay()]})`;
   };
+  const stanceLabel = s => ({avoid:'회피', watch:'관망', small_entry:'소액 진입'}[s] || '관망');
+
+  // AI 야간 시그널 (별도 fetch — 실패해도 매매 일지는 보임)
+  try{
+    const sres = await fetch('/ai-log/signal.json?v='+Date.now());
+    const sig = await sres.json();
+    document.getElementById('signal-time').textContent = `${sig.date} · ${sig.generated_at} 발행`;
+    document.getElementById('us-summary').textContent = sig.us_market.summary;
+    const idxEl = document.getElementById('us-indices');
+    sig.us_market.indices.forEach(i => {
+      const c = i.change_pct > 0 ? 'pos' : i.change_pct < 0 ? 'neg' : '';
+      idxEl.insertAdjacentHTML('beforeend',
+        `<span class="us-idx">${i.name} <span class="${c}">${fmtPct(i.change_pct)}</span></span>`);
+    });
+    if(sig.us_market.fx_usd_krw){
+      const fxC = sig.us_market.fx_change_pct > 0 ? 'pos' : 'neg';
+      idxEl.insertAdjacentHTML('beforeend',
+        `<span class="us-idx">USD/KRW ${sig.us_market.fx_usd_krw.toFixed(1)} <span class="${fxC}">${fmtPct(sig.us_market.fx_change_pct)}</span></span>`);
+    }
+    const impEl = document.getElementById('signal-impacted');
+    sig.us_market.impacted_kr_stocks.forEach(s => {
+      const tag = s.slug ? 'a' : 'div';
+      const href = s.slug ? ` href="/stock/${s.slug}.html"` : '';
+      impEl.insertAdjacentHTML('beforeend', `
+        <${tag} class="sig-card"${href}>
+          <div class="sig-row">
+            <div><span class="sig-name">${s.name}</span><span class="sig-meta">${s.code}</span></div>
+            <div><span class="sig-stance ${s.stance}">${stanceLabel(s.stance)}</span></div>
+          </div>
+          <div class="sig-trigger">📡 ${s.trigger}</div>
+          <div class="sig-view">${s.ai_view}</div>
+        </${tag}>
+      `);
+    });
+    const volEl = document.getElementById('signal-volume');
+    sig.volume_surge.forEach(s => {
+      const tag = s.slug ? 'a' : 'div';
+      const href = s.slug ? ` href="/stock/${s.slug}.html"` : '';
+      const c = cls(s.price_change_pct);
+      volEl.insertAdjacentHTML('beforeend', `
+        <${tag} class="sig-card"${href}>
+          <div class="sig-row">
+            <div>
+              <span class="sig-name">${s.name}</span>
+              <span class="sig-meta">${s.code}</span>
+              <span class="sig-vol">거래량 ×${s.volume_ratio.toFixed(1)}</span>
+            </div>
+            <div>
+              <span class="sig-pct ${c}">${fmtPct(s.price_change_pct)}</span>
+              <span class="sig-stance ${s.stance}" style="margin-left:6px">${stanceLabel(s.stance)}</span>
+            </div>
+          </div>
+          <div class="sig-trigger">📡 ${s.context}</div>
+          <div class="sig-view">${s.ai_view}</div>
+        </${tag}>
+      `);
+    });
+    document.getElementById('signal-summary').innerHTML = `<b>오늘의 AI 종합 ·</b> ${sig.ai_summary}`;
+  }catch(e){
+    document.getElementById('sec-signal').style.display = 'none';
+  }
 
   let data;
   try{

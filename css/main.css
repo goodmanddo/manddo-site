@@ -302,6 +302,21 @@ body{
 .pattern-table td{padding:10px 12px;border-bottom:1px solid #f2f4f6;color:#4e5968}
 .pattern-table tr:last-child td{border-bottom:none}
 
+/* ===== 홈: AI 야간 시그널 미리보기 ===== */
+.home-signal{background:linear-gradient(135deg,#F4F2FF 0%,#EEF1FF 100%);border:1px solid #E2DEFB;border-radius:14px;padding:14px 16px;margin:10px 0 12px;display:none}
+.home-signal.has-data{display:block}
+.home-signal-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.home-signal-head .badge{font-size:11px;font-weight:700;color:#6B59FF;background:rgba(107,89,255,.14);padding:3px 9px;border-radius:999px;letter-spacing:0.04em}
+.home-signal-head .label{font-size:12.5px;font-weight:700;color:#4e5968}
+.home-signal-head .more-link{margin-left:auto;font-size:12px;color:#6B59FF;font-weight:700;text-decoration:none}
+.home-signal-list{display:flex;flex-wrap:wrap;gap:8px}
+.home-sig-chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #e8e6f8;border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700;color:#191f28;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.home-sig-chip:hover{transform:translateY(-1px);box-shadow:0 4px 10px -4px rgba(107,89,255,.25)}
+.home-sig-chip .stance{font-size:10.5px;font-weight:700;padding:1px 6px;border-radius:5px;letter-spacing:0.02em}
+.home-sig-chip .stance.avoid{background:#FFE8E8;color:#B33939}
+.home-sig-chip .stance.watch{background:#EEF0F3;color:#4e5968}
+.home-sig-chip .stance.small_entry{background:#E2EEFF;color:#1B64DA}
+
 /* ===== 홈: AI 추세 차트 + 요약 카드 ===== */
 .ai-trend{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:16px 16px 10px;margin-top:8px;margin-bottom:12px}
 .ai-trend-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;padding:0 4px}
