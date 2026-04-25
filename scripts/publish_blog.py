@@ -247,7 +247,7 @@ BLOG_INDEX_TEMPLATE = """<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>블로그 — 투자일기와 시장 관찰 | 만또 인사이트</title>
+<title>블로그 — 투자일기와 시장 관찰 | 만또 투자 인사이트</title>
 <meta name="description" content="만또의 투자일기. 오늘 본 종목, 시장에서 느낀 것, 책 리뷰. 거창한 분석보다 꾸준한 기록 중심.">
 <meta name="keywords" content="투자블로그, 투자일기, 주식일기, 시장관찰, 만또">
 <meta property="og:title" content="만또 블로그 — 투자일기와 시장 관찰">
