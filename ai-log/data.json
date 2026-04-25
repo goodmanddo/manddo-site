@@ -19,7 +19,7 @@
       "entry_to_current_pct": 0.9,
       "weight_pct": 3,
       "hold_days": 0,
-      "reason": "에코아이 신규 편입. 포트폴리오 비중 조정."
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "시프트업",
@@ -28,7 +28,7 @@
       "entry_to_current_pct": -0.85,
       "weight_pct": 4,
       "hold_days": 0,
-      "reason": "시프트업 신규 편입. 포트폴리오 비중 조정."
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     }
   ],
   "exits": [],

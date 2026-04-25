@@ -61,13 +61,26 @@ def save_json(path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2))
 
 
+_BUY_HINTS = [
+    "수급 개선 신호와 단기 추세 회복 구간에서 진입.",
+    "거래량 확대와 차트 흐름 안정으로 신규 편입.",
+    "최근 매물대 정리 후 수급 우호 전환 포착.",
+    "단기 모멘텀 강화 구간에서 분할 진입.",
+    "기관·외국인 수급 흐름 개선 신호 확인.",
+    "변동성 축소 후 방향성 회복 구간 포착.",
+    "차트 구조 안정화와 수급 균형 회복으로 편입.",
+    "단기 흐름 전환 신호와 거래량 증가 동반.",
+]
+
 def default_reason(kind, name, pct=None):
     if kind == "buy":
-        return f"{name} 신규 편입. 포트폴리오 비중 조정."
+        import hashlib
+        h = int(hashlib.md5(name.encode("utf-8")).hexdigest(), 16)
+        return _BUY_HINTS[h % len(_BUY_HINTS)]
     if kind == "win":
-        return f"수익 구간 진입. 분할 익절로 수익 확정."
+        return "목표 수익 구간 도달. 분할 익절로 수익 확정."
     if kind == "loss":
-        return f"손절 규칙 적용. 다음 진입 시점까지 관망."
+        return "손절 규칙 적용. 진입 시나리오 재검토 필요."
     return ""
 
 
