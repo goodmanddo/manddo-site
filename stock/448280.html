@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에코아이 세력·차트 분석</title>
+    <meta name="stock-name" content="에코아이">
+    <meta name="stock-code" content="448280">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif; line-height: 1.6; background: #f8f9fa; color: #333; }
+        .wrap { max-width: 740px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { font-size: 28px; font-weight: 700; color: #333; margin-bottom: 10px; }
+        .header .sub { font-size: 16px; color: #666; }
+        .sec { margin-bottom: 40px; }
+        .sec h2 { font-size: 20px; font-weight: 600; margin-bottom: 20px; color: #333; border-left: 4px solid #A32D2D; padding-left: 16px; }
+        .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+        .g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .met { text-align: center; padding: 16px; background: #f8f9fa; border-radius: 8px; }
+        .met .label { font-size: 14px; color: #666; margin-bottom: 8px; }
+        .met .value { font-size: 20px; font-weight: 600; }
+        .met .value.up { color: #A32D2D; }
+        .met .value.down { color: #0C447C; }
+        .met .value.neutral { color: #888780; }
+        .tag { display: inline-block; padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 4px 4px 0; }
+        .tag.bull { background: #A32D2D; color: white; }
+        .tag.bear { background: #0C447C; color: white; }
+        .tag.neutral { background: #888780; color: white; }
+        .tag.light { background: #f0f0f0; color: #333; }
+        .progress { width: 100%; height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden; margin: 8px 0; }
+        .progress-bar { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
+        .progress-bar.up { background: #A32D2D; }
+        .progress-bar.down { background: #0C447C; }
+        .analysis-text { font-size: 15px; line-height: 1.7; color: #444; margin: 16px 0; }
+        .highlight { background: #fff3cd; padding: 12px 16px; border-radius: 8px; border-left: 4px solid #ffc107; margin: 16px 0; }
+        .price-chart { display: flex; align-items: end; gap: 4px; height: 60px; margin: 16px 0; }
+        .price-bar { flex: 1; background: #ddd; border-radius: 2px 2px 0 0; position: relative; }
+        .price-bar.up { background: #A32D2D; }
+        .price-bar.down { background: #0C447C; }
+        .score-board { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+        .score-item { text-align: center; padding: 16px 8px; background: #f8f9fa; border-radius: 8px; }
+        .score-value { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .scenario { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 12px; padding: 24px; }
+        .scenario h3 { font-size: 18px; margin-bottom: 16px; }
+        .scenario-item { background: rgba(255,255,255,0.1); padding: 16px; border-radius: 8px; margin-bottom: 12px; }
+        .scenario-item:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+<!-- manddo-back-button -->
+<style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+    <div class="wrap">
+        <div class="header">
+            <h1>에코아이 (448280)</h1>
+            <div class="sub">세력 & 차트 심층 분석</div>
+        </div>
+
+        <div class="sec">
+            <h2>기업 개요</h2>
+            <div class="card">
+                <div class="g3">
+                    <div class="met">
+                        <div class="label">현재가</div>
+                        <div class="value up">12,330원</div>
+                    </div>
+                    <div class="met">
+                        <div class="label">등락률</div>
+                        <div class="value down">-8.26%</div>
+                    </div>
+                    <div class="met">
+                        <div class="label">거래량</div>
+                        <div class="value neutral">747,278주</div>
+                    </div>
+                </div>
+                <div class="g2">
+                    <div class="met">
+                        <div class="label">60일 고가</div>
+                        <div class="value up">14,000원</div>
+                    </div>
+                    <div class="met">
+                        <div class="label">60일 저가</div>
+                        <div class="value down">9,720원</div>
+                    </div>
+                </div>
+                <div class="analysis-text">
+                    에코아이는 환경·바이오 전문기업으로 폐기물 처리 및 재활용 사업을 영위하고 있습니다. 최근 ESG 경영과 친환경 정책 강화로 주목받고 있는 섹터입니다.
+                </div>
+                <div class="tag light">환경</div>
+                <div class="tag light">폐기물처리</div>
+                <div class="tag light">ESG</div>
+                <div class="tag light">재활용</div>
+            </div>
+        </div>
+
+        <div class="sec">
+            <h2>차트 구조 분석</h2>
+            <div class="card">
+                <div class="analysis-text">
+                    <strong>10일간 주가 흐름</strong>
+                </div>
+                <div class="price-chart">
+                    <div class="price-bar down" style="height: 45%;"></div>
+                    <div class="price-bar down" style="height: 42%;"></div>
+                    <div class="price-bar down" style="height: 38%;"></div>
+                    <div class="price-bar up" style="height: 44%;"></div>
+                    <div class="price-bar up" style="height: 47%;"></div>
+                    <div class="price-bar up" style="height: 49%;"></div>
+                    <div class="price-bar down" style="height: 46%;"></div>
+                    <div class="price-bar down" style="height: 40%;"></div>
+                    <div class="price-bar up" style="height: 55%;"></div>
+                    <div class="price-bar up" style="height: 100%;"></div>
+                </div>
+                
+                <div class="g2">
+                    <div class="met">
+                        <div class="label">5일 평균선</div>
+                        <div class="value up">11,240원</div>
+                        <div class="tag bull">현재가 상회</div>
+                    </div>
+                    <div class="met">
+                        <div class="label">20일 평균선</div>
+                        <div class="value up">11,176원</div>
+                        <div class="tag bull">현재가 상회</div>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <strong>패턴 분석:</strong> 최근 10일간 박스권 횡보 후 급등 패턴을 보이고 있습니다. 14,000원 고점 터치 후 조정을 받고 있으나 주요 이동평균선 상회를 유지하고 있습니다.
+                </div>
+
+                <div class="analysis-text">
+                    <div class="tag bull">상승 돌파</div>
+                    <div class="tag neutral">고점 조정</div>
+                    <div class="tag bull">평균선 지지</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec">
+            <h2>세력 흐름 분석</h2>
+            <div class="card">
+                <div class="g2">
+                    <div class="met">
+                        <div class="label">세력 유입도</div>
+                        <div class="value up">73%</div>
+                        <div class="progress">
+                            <div class="progress-bar up" style="width: 73%;"></div>
+                        </div>
+                    </div>
+                    <div class="met">
+                        <div class="label">거래 집중도</div>
+                        <div class="value up">높음</div>
+                        <div class="progress">
+                            <div class="progress-bar up" style="width: 82%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-text">
+                    <strong>세력 동향:</strong><br>
+                    • 고가 터치 시점에서 대량 거래량 폭증 (747,278주)<br>
+                    • 10,600원~10,900원 구간에서 지속적인 매집 흔적<br>
+                    • 14,000원 고점 돌파 시도 후 일시적 차익실현 나타남<br>
+                    • 12,000원대에서 재매집 세력 유입 징후
+                </div>
+
+                <div class="tag bull">매집 완료</div>
+                <div class="tag neutral">부분 차익실현</div>
+                <div class="tag bull">재진입 관찰</div>
+            </div>
+        </div>
+
+        <div class="sec">
+            <h2>매물대·지지/저항</h2>
+            <div class="card">
+                <div class="g2">
+                    <div class="met">
+                        <div class="label">핵심 저항선</div>
+                        <div class="value up">14,000원</div>
+                    </div>
+                    <div class="met">
+                        <div class="label">주요 지지선</div>
+                        <div class="value down">11,000원</div>
+                    </div>
+                </div>
+
+                <div class="analysis-text">
+                    <strong>주요 매물대 분석:</strong><br>
+                    • <span style="color: #A32D2D;">14,000원</span>: 60일 고가, 강력 저항선<br>
+                    • <span style="color: #A32D2D;">13,500원</span>: 단기 저항 구간<br>
+                    • <span style="color: #0C447C;">11,200원</span>: 이동평균선 밀집 지지<br>
+                    • <span style="color: #0C447C;">10,800원</span>: 최근 매집 구간<br>
+                    • <span style="color: #0C447C;">10,000원</span>: 심리적 지지선
+                </div>
+
+                <div class="g3">
+                    <div class="tag bear">14,000원 돌파시</div>
+                    <div class="tag neutral">12,000원 중심</div>
+                    <div class="tag bull">11,000원 지지</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec">
+            <h2>기술적 신호 점수판</h2>
+            <div class="card">
+                <div class="score-board">
+                    <div class="score-item">
+                        <div class="score-value up">7.2</div>
+                        <div class="label">추세강도</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value up">6.8</div>
+                        <div class="label">모멘텀</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value neutral">6.3</div>
+                        <div class="label">RSI</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value up">8.1</div>
+                        <div class="label">거래량</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-value up">7.0</div>
+                        <div class="label">종합점수</div>
+                    </div>
+                </div>
+
+                <div class="analysis-text">
+                    RSI 63.4로 과열 구간 진입 직전 상태입니다. 거래량 지표가 매우 양호하며, 전반적인 기술적 신호는 긍정적입니다.
+                </div>
+            </div>
+        </div>
+
+        <div class="sec">
+            <h2>종합 시나리오</h2>
+            <div class="scenario">
+                <h3>🎯 핵심 시나리오</h3>
+                
+                <div class="scenario-item">
+                    <strong>📈 강세 시나리오 (확률 45%)</strong><br>
+                    12,000원 지지선 확인 후 14,000원 재돌파 시도<br>
+                    목표: 14,500원 → 15,200원
+                </div>
+
+                <div class="scenario-item">
+                    <strong>📊 중립 시나리오 (확률 35%)</strong><br>
+                    11,500원~13,500원 박스권 횡보 지속<br>
+                    추가 재료 대기하며 구간 매매
+                </div>
+
+                <div class="scenario-item">
+                    <strong>📉 약세 시나리오 (확률 20%)</strong><br>
+                    11,000원 지지선 이탈 시 조정 심화<br>
+                    목표: 10,500원 → 10,000원
+                </div>
+
+                <div class="scenario-item">
+                    <strong>⚡ 핵심 변수</strong><br>
+                    • ESG 정책 수혜주 재부각<br>
+                    • 14,000원 저항선 돌파 여부<br>
+                    • 대량 거래량 지속성
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
