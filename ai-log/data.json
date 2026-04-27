@@ -1,33 +1,60 @@
 {
-  "date": "2026-04-24",
+  "date": "2026-04-27",
   "start_date": "2026-04-17",
-  "cumulative_return": 14.1,
-  "week_return": -1.05,
-  "day_return": -0.25,
+  "cumulative_return": 13.94,
+  "week_return": -1.19,
+  "day_return": -0.14,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 47,
   "total_trades": 15,
-  "ai_commentary": "오늘은 에코아이, 시프트업 등 신규 편입. 시작 이후 누적 +14.1%.",
+  "ai_commentary": "오늘은 삼성SDI, 펄어비스, 씨어스 등 신규 편입. 시작 이후 누적 +13.9%.",
   "new_buys": [
+    {
+      "name": "삼성SDI",
+      "slug": "samsung-sdi",
+      "market": "코스피",
+      "entry_to_current_pct": -0.16,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "펄어비스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.66,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+    },
+    {
+      "name": "씨어스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 1.75,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    },
     {
       "name": "에코아이",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.9,
+      "entry_to_current_pct": 2.54,
       "weight_pct": 3,
-      "hold_days": 0,
+      "hold_days": 3,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "시프트업",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.85,
+      "entry_to_current_pct": -0.71,
       "weight_pct": 4,
-      "hold_days": 0,
+      "hold_days": 3,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     }
   ],
@@ -60,7 +87,25 @@
       "weight_pct": 4
     },
     {
+      "name": "삼성SDI",
+      "slug": "samsung-sdi",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
+      "name": "펄어비스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
       "name": "에코아이",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
+      "name": "씨어스",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -90,6 +135,10 @@
     {
       "date": "2026-04-24",
       "cumulative_return": 14.1
+    },
+    {
+      "date": "2026-04-27",
+      "cumulative_return": 13.94
     }
   ]
 }
