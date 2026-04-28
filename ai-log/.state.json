@@ -1,31 +1,31 @@
 {
   "last_holdings": {
-    "006400": {
-      "name": "삼성SDI",
-      "qty": 1,
-      "avg_price": 636000,
-      "current_price": 635000,
-      "opened_at": "2026-04-27"
+    "003670": {
+      "name": "포스코퓨처엠",
+      "qty": 4,
+      "avg_price": 261000,
+      "current_price": 263000,
+      "opened_at": "2026-04-28"
     },
     "263750": {
       "name": "펄어비스",
       "qty": 12,
       "avg_price": 60600,
-      "current_price": 60200,
+      "current_price": 60800,
       "opened_at": "2026-04-27"
     },
     "448280": {
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12530,
+      "current_price": 12160,
       "opened_at": "2026-04-24"
     },
     "458870": {
       "name": "씨어스",
       "qty": 14,
       "avg_price": 51500,
-      "current_price": 52400,
+      "current_price": 52100,
       "opened_at": "2026-04-27"
     },
     "462870": {
@@ -80,6 +80,10 @@
     {
       "date": "2026-04-27",
       "total_eval": 24277860
+    },
+    {
+      "date": "2026-04-28",
+      "total_eval": 24269795
     }
   ],
   "completed_trades": [
@@ -188,6 +192,14 @@
       "return_pct": -0.24,
       "date": "2026-04-23",
       "is_win": false,
+      "hold_days": 1
+    },
+    {
+      "name": "삼성SDI",
+      "code": "006400",
+      "return_pct": 6.92,
+      "date": "2026-04-28",
+      "is_win": true,
       "hold_days": 1
     }
   ]
