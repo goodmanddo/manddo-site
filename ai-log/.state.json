@@ -3,36 +3,43 @@
     "003670": {
       "name": "포스코퓨처엠",
       "qty": 4,
-      "avg_price": 261000,
-      "current_price": 263000,
+      "avg_price": 259500,
+      "current_price": 260500,
       "opened_at": "2026-04-28"
+    },
+    "010780": {
+      "name": "아이에스동서",
+      "qty": 20,
+      "avg_price": 29700,
+      "current_price": 29700,
+      "opened_at": "2026-04-29"
+    },
+    "215200": {
+      "name": "메가스터디교육",
+      "qty": 5,
+      "avg_price": 48350,
+      "current_price": 48150,
+      "opened_at": "2026-04-29"
     },
     "263750": {
       "name": "펄어비스",
       "qty": 12,
       "avg_price": 60600,
-      "current_price": 60800,
+      "current_price": 59800,
       "opened_at": "2026-04-27"
     },
     "448280": {
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12160,
+      "current_price": 12220,
       "opened_at": "2026-04-24"
-    },
-    "458870": {
-      "name": "씨어스",
-      "qty": 14,
-      "avg_price": 51500,
-      "current_price": 52100,
-      "opened_at": "2026-04-27"
     },
     "462870": {
       "name": "시프트업",
       "qty": 27,
       "avg_price": 35100,
-      "current_price": 34850,
+      "current_price": 34350,
       "opened_at": "2026-04-24"
     }
   },
@@ -84,6 +91,10 @@
     {
       "date": "2026-04-28",
       "total_eval": 24269795
+    },
+    {
+      "date": "2026-04-29",
+      "total_eval": 24168824
     }
   ],
   "completed_trades": [
@@ -201,6 +212,14 @@
       "date": "2026-04-28",
       "is_win": true,
       "hold_days": 1
+    },
+    {
+      "name": "씨어스",
+      "code": "458870",
+      "return_pct": -4.85,
+      "date": "2026-04-29",
+      "is_win": false,
+      "hold_days": 2
     }
   ]
 }
