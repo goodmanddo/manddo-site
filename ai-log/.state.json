@@ -3,44 +3,44 @@
     "003670": {
       "name": "포스코퓨처엠",
       "qty": 4,
-      "avg_price": 259500,
-      "current_price": 260500,
+      "avg_price": 253000,
+      "current_price": 252000,
       "opened_at": "2026-04-28"
     },
-    "010780": {
-      "name": "아이에스동서",
+    "079940": {
+      "name": "가비아",
       "qty": 20,
-      "avg_price": 29700,
-      "current_price": 29700,
-      "opened_at": "2026-04-29"
+      "avg_price": 30100,
+      "current_price": 30050,
+      "opened_at": "2026-04-30"
     },
     "215200": {
       "name": "메가스터디교육",
       "qty": 5,
       "avg_price": 48350,
-      "current_price": 48150,
+      "current_price": 47350,
       "opened_at": "2026-04-29"
     },
     "263750": {
       "name": "펄어비스",
       "qty": 12,
       "avg_price": 60600,
-      "current_price": 59800,
+      "current_price": 58900,
       "opened_at": "2026-04-27"
     },
     "448280": {
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12220,
+      "current_price": 12580,
       "opened_at": "2026-04-24"
     },
-    "462870": {
-      "name": "시프트업",
-      "qty": 27,
-      "avg_price": 35100,
-      "current_price": 34350,
-      "opened_at": "2026-04-24"
+    "448900": {
+      "name": "한국피아이엠",
+      "qty": 5,
+      "avg_price": 107800,
+      "current_price": 107100,
+      "opened_at": "2026-04-30"
     }
   },
   "history": [
@@ -95,6 +95,10 @@
     {
       "date": "2026-04-29",
       "total_eval": 24168824
+    },
+    {
+      "date": "2026-04-30",
+      "total_eval": 24032450
     }
   ],
   "completed_trades": [
@@ -220,6 +224,22 @@
       "date": "2026-04-29",
       "is_win": false,
       "hold_days": 2
+    },
+    {
+      "name": "아이에스동서",
+      "code": "010780",
+      "return_pct": -10.1,
+      "date": "2026-04-30",
+      "is_win": false,
+      "hold_days": 1
+    },
+    {
+      "name": "시프트업",
+      "code": "462870",
+      "return_pct": -7.26,
+      "date": "2026-04-30",
+      "is_win": false,
+      "hold_days": 6
     }
   ]
 }

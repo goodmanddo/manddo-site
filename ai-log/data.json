@@ -1,84 +1,105 @@
 {
-  "date": "2026-04-29",
+  "date": "2026-04-30",
   "start_date": "2026-04-17",
-  "cumulative_return": 13.43,
-  "week_return": -1.1,
-  "day_return": -0.42,
-  "today_realized_avg": -4.85,
-  "today_trade_count": 1,
+  "cumulative_return": 12.79,
+  "week_return": -1.39,
+  "day_return": -0.56,
+  "today_realized_avg": -8.68,
+  "today_trade_count": 2,
   "today_win_count": 0,
-  "today_loss_count": 1,
-  "win_rate": 47,
-  "total_trades": 17,
-  "ai_commentary": "오늘은 아이에스동서, 메가스터디교육, 포스코퓨처엠 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 +13.4%.",
+  "today_loss_count": 2,
+  "win_rate": 42,
+  "total_trades": 19,
+  "ai_commentary": "오늘은 가비아, 한국피아이엠, 메가스터디교육 등 신규 편입. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 +12.8%.",
   "new_buys": [
     {
-      "name": "아이에스동서",
+      "name": "가비아",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.0,
+      "entry_to_current_pct": -0.17,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
+    {
+      "name": "한국피아이엠",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.65,
       "weight_pct": 2,
       "hold_days": 0,
-      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "메가스터디교육",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.41,
+      "entry_to_current_pct": -2.07,
       "weight_pct": 1,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "포스코퓨처엠",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.39,
+      "entry_to_current_pct": -0.4,
       "weight_pct": 4,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
       "name": "펄어비스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.32,
+      "entry_to_current_pct": -2.81,
       "weight_pct": 3,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "에코아이",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.0,
+      "entry_to_current_pct": 2.95,
       "weight_pct": 3,
-      "hold_days": 5,
+      "hold_days": 6,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
-    },
-    {
-      "name": "시프트업",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -2.14,
-      "weight_pct": 4,
-      "hold_days": 5,
-      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     }
   ],
   "exits": [
     {
       "type": "loss",
-      "name": "씨어스",
+      "name": "아이에스동서",
       "slug": "",
       "market": "코스피",
-      "return_pct": -4.85,
-      "hold_days": 2,
+      "return_pct": -10.1,
+      "hold_days": 1,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    },
+    {
+      "type": "loss",
+      "name": "시프트업",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -7.26,
+      "hold_days": 6,
       "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     }
   ],
   "weekly_losses": [
+    {
+      "name": "시프트업",
+      "slug": "",
+      "return_pct": -7.26,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    },
+    {
+      "name": "아이에스동서",
+      "slug": "",
+      "return_pct": -10.1,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    },
     {
       "name": "씨어스",
       "slug": "",
@@ -94,10 +115,10 @@
       "weight_pct": 4
     },
     {
-      "name": "시프트업",
+      "name": "가비아",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 4
+      "weight_pct": 3
     },
     {
       "name": "펄어비스",
@@ -112,7 +133,7 @@
       "weight_pct": 3
     },
     {
-      "name": "아이에스동서",
+      "name": "한국피아이엠",
       "slug": "",
       "market": "코스피",
       "weight_pct": 2
@@ -160,6 +181,10 @@
     {
       "date": "2026-04-29",
       "cumulative_return": 13.43
+    },
+    {
+      "date": "2026-04-30",
+      "cumulative_return": 12.79
     }
   ]
 }
