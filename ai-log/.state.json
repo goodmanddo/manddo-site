@@ -18,7 +18,7 @@
       "name": "메가스터디교육",
       "qty": 5,
       "avg_price": 48350,
-      "current_price": 47350,
+      "current_price": 47400,
       "opened_at": "2026-04-29"
     },
     "263750": {
@@ -32,14 +32,14 @@
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12580,
+      "current_price": 12540,
       "opened_at": "2026-04-24"
     },
     "448900": {
       "name": "한국피아이엠",
       "qty": 5,
       "avg_price": 107800,
-      "current_price": 107100,
+      "current_price": 107700,
       "opened_at": "2026-04-30"
     }
   },
@@ -99,6 +99,10 @@
     {
       "date": "2026-04-30",
       "total_eval": 24032450
+    },
+    {
+      "date": "2026-05-01",
+      "total_eval": 24033340
     }
   ],
   "completed_trades": [
