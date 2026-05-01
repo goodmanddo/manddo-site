@@ -342,13 +342,32 @@
     const items = (cl.items || []).slice().sort((a,b)=>b.date.localeCompare(a.date));
     const wrap = document.getElementById('devlog');
     if(!items.length){ wrap.parentElement.style.display='none'; }
-    items.forEach((it) => {
+    const SHOW = 10;
+    items.forEach((it, i) => {
+      const cls = i < SHOW ? '' : ' hidden';
       wrap.insertAdjacentHTML('beforeend', `
-        <div class="devlog-item">
+        <div class="devlog-item${cls}">
           <div class="devlog-row"><span class="devlog-date">${it.date}</span><span class="devlog-title">${it.title}</span></div>
           <div class="devlog-body">${it.body}</div>
         </div>`);
     });
+    if(items.length > SHOW){
+      const rest = items.length - SHOW;
+      wrap.insertAdjacentHTML('beforeend',
+        `<button class="devlog-toggle" id="devlog-toggle">더 보기 (${rest}건)</button>`);
+      const btn = document.getElementById('devlog-toggle');
+      btn.addEventListener('click', () => {
+        const hidden = wrap.querySelectorAll('.devlog-item.hidden');
+        if(hidden.length){
+          hidden.forEach(el => el.classList.remove('hidden'));
+          btn.textContent = '접기';
+        }else{
+          const all = wrap.querySelectorAll('.devlog-item');
+          all.forEach((el, idx) => { if(idx >= SHOW) el.classList.add('hidden'); });
+          btn.textContent = `더 보기 (${rest}건)`;
+        }
+      });
+    }
   }catch(e){
     const dl = document.getElementById('devlog');
     if(dl) dl.parentElement.style.display = 'none';
