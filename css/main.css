@@ -328,14 +328,25 @@ body{
 .ai-trend-body svg{width:100%;height:auto;display:block}
 .ai-trend-empty{text-align:center;padding:28px 12px;font-size:12.5px;color:#8b95a1;background:#F7F9FC;border-radius:10px;margin:4px 0}
 
-/* ===== 홈: 시스템 변경 한 줄 주석 ===== */
-.home-changelog{display:none;align-items:center;gap:8px;padding:6px 4px;margin:4px 0 24px;font-size:11.5px;color:#8b95a1;text-decoration:none;letter-spacing:-0.01em;line-height:1.5;transition:color .12s}
+/* ===== 홈: 시스템 변경 한 줄 주석 (터미널 스타일) ===== */
+.home-changelog{display:none;align-items:center;justify-content:center;gap:7px;padding:10px 12px 4px;margin:4px 0 0;font-family:'SF Mono',ui-monospace,Menlo,monospace;font-size:11px;color:#8b95a1;text-decoration:none;letter-spacing:0;line-height:1.5;transition:color .15s}
 .home-changelog.has-data{display:flex;flex-wrap:wrap}
-.home-changelog:hover{color:#4e5968}
-.home-changelog .hc-tag{font-weight:700;color:#6b7684;flex-shrink:0}
-.home-changelog .hc-date{font-family:'SF Mono',ui-monospace,monospace;color:#a8b1bd;flex-shrink:0}
-.home-changelog .hc-text{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.home-changelog .hc-arrow{color:#cfd8e3;flex-shrink:0}
+.home-changelog:hover{color:#3182F6}
+.home-changelog:hover .hc-cmd{color:#3182F6}
+.home-changelog .hc-dot{width:6px;height:6px;background:#0C8A5A;border-radius:50%;box-shadow:0 0 0 3px rgba(12,138,90,.15);animation:hc-pulse 2s ease-in-out infinite;flex-shrink:0}
+@keyframes hc-pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.home-changelog .hc-prompt{color:#3182F6;font-weight:700;flex-shrink:0}
+.home-changelog .hc-cmd{color:#6B59FF;font-weight:600;flex-shrink:0;transition:color .15s}
+.home-changelog .hc-sep{color:#cfd8e3;flex-shrink:0}
+.home-changelog .hc-date{color:#8b95a1;font-weight:600;flex-shrink:0}
+.home-changelog .hc-text{color:#4e5968;font-weight:500;max-width:48ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.home-changelog .hc-arrow{color:#a8b1bd;font-size:10px;flex-shrink:0}
+@media(max-width:640px){
+  .home-changelog{font-size:10.5px;gap:6px;padding:8px 6px 2px}
+  .home-changelog .hc-cmd{display:none}
+  .home-changelog .hc-sep:first-of-type{display:none}
+  .home-changelog .hc-text{max-width:24ch}
+}
 
 .ai-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:0}
 .ai-summary .sum-box{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 18px 16px}
