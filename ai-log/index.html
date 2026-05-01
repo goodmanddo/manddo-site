@@ -342,43 +342,13 @@
     const items = (cl.items || []).slice().sort((a,b)=>b.date.localeCompare(a.date));
     const wrap = document.getElementById('devlog');
     if(!items.length){ wrap.parentElement.style.display='none'; }
-    const SHOW = 2;
-    items.forEach((it, i) => {
-      const cls = i < SHOW ? '' : ' hidden';
+    items.forEach((it) => {
       wrap.insertAdjacentHTML('beforeend', `
-        <div class="devlog-item${cls}">
+        <div class="devlog-item">
           <div class="devlog-row"><span class="devlog-date">${it.date}</span><span class="devlog-title">${it.title}</span></div>
           <div class="devlog-body">${it.body}</div>
         </div>`);
     });
-    if(items.length > SHOW){
-      const rest = items.length - SHOW;
-      wrap.insertAdjacentHTML('beforeend',
-        `<button class="devlog-toggle" id="devlog-toggle">더 보기 (${rest}건)</button>`);
-      const btn = document.getElementById('devlog-toggle');
-      btn.addEventListener('click', () => {
-        const hidden = wrap.querySelectorAll('.devlog-item.hidden');
-        if(hidden.length){
-          hidden.forEach(el => el.classList.remove('hidden'));
-          btn.textContent = '접기';
-        }else{
-          const all = wrap.querySelectorAll('.devlog-item');
-          all.forEach((el, idx) => { if(idx >= SHOW) el.classList.add('hidden'); });
-          btn.textContent = `더 보기 (${rest}건)`;
-        }
-      });
-    }
-    // hash가 #sec-changelog면 비동기 렌더 후 정확한 위치로 스크롤 + 강조
-    if (location.hash === '#sec-changelog') {
-      requestAnimationFrame(() => {
-        const sec = document.getElementById('sec-changelog');
-        if (sec) {
-          sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          sec.classList.add('flash-target');
-          setTimeout(() => sec.classList.remove('flash-target'), 1800);
-        }
-      });
-    }
   }catch(e){
     const dl = document.getElementById('devlog');
     if(dl) dl.parentElement.style.display = 'none';
@@ -512,6 +482,20 @@
           <div class="lesson"><b>배운 점 ·</b> ${l.lesson}</div>
         </div>
       `);
+    });
+  }
+
+  // 모든 비동기 렌더 완료 후 hash 점프 보정 + 강조 효과
+  if (location.hash === '#sec-changelog') {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const sec = document.getElementById('sec-changelog');
+        if (sec) {
+          sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          sec.classList.add('flash-target');
+          setTimeout(() => sec.classList.remove('flash-target'), 1800);
+        }
+      });
     });
   }
 })();
