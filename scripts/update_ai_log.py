@@ -151,6 +151,25 @@ def main():
     slug_map = config.get("slug_map", {})
     start_date = config.get("start_date") or today
     initial_capital = int(config.get("initial_capital") or 0)
+    cash_flows = config.get("cash_flows", []) or []
+
+    def cf_sum_until(d):
+        s = 0
+        for cf in cash_flows:
+            if cf.get("date") and cf["date"] <= d:
+                s += int(cf.get("amount") or 0)
+        return s
+
+    def cf_sum_between(start_excl, end_incl):
+        s = 0
+        for cf in cash_flows:
+            d_ = cf.get("date")
+            if not d_:
+                continue
+            if d_ > start_excl and d_ <= end_incl:
+                s += int(cf.get("amount") or 0)
+        return s
+
     overrides = config.get("overrides", {}).get(today, {})
     override_reasons = overrides.get("reasons", {})
     override_commentary = overrides.get("commentary")
@@ -172,29 +191,39 @@ def main():
         save_json(CONFIG_FILE, config)
         log(f"초기 자본 설정: {initial_capital:,}")
 
-    # 누적 수익률
+    # 누적 수익률 (입금/출금 보정: net_invested 기준)
+    net_invested = initial_capital + cf_sum_until(today)
     cumulative = 0.0
-    if initial_capital > 0:
-        cumulative = (total_eval - initial_capital) / initial_capital * 100
+    if net_invested > 0:
+        cumulative = (total_eval - net_invested) / net_invested * 100
 
-    # 주간 수익률 (5영업일 전 대비)
+    # 주간 수익률 (5영업일 전 대비, 그 사이 입금분 제거)
     history = state.get("history", [])
     week_return = 0.0
     if history:
         ref = history[-min(5, len(history))]
-        if ref.get("total_eval", 0) > 0:
-            week_return = (total_eval - ref["total_eval"]) / ref["total_eval"] * 100
+        ref_eval = ref.get("total_eval", 0)
+        ref_date = ref.get("date") or today
+        if ref_eval > 0:
+            cf_recent = cf_sum_between(ref_date, today)
+            denom = ref_eval + cf_recent
+            if denom > 0:
+                week_return = (total_eval - ref_eval - cf_recent) / denom * 100
 
-    # 오늘 포트폴리오 변화율 (직전 기록 대비)
+    # 일간 수익률 (직전 기록 대비, 오늘 입금분 제거)
     day_return = 0.0
-    # 같은 날 기록이 이미 있을 수 있으므로 오늘이 아닌 가장 최근 항목과 비교
     prev_entry = None
     for h in reversed(history):
         if h.get("date") != today:
             prev_entry = h
             break
     if prev_entry and prev_entry.get("total_eval", 0) > 0:
-        day_return = (total_eval - prev_entry["total_eval"]) / prev_entry["total_eval"] * 100
+        prev_eval = prev_entry["total_eval"]
+        prev_date = prev_entry.get("date") or today
+        cf_today = cf_sum_between(prev_date, today)
+        denom = prev_eval + cf_today
+        if denom > 0:
+            day_return = (total_eval - prev_eval - cf_today) / denom * 100
 
     # 신규 매수: 최근 7일 내 편입된 보유 종목 (당일 신규 + 최근 며칠 내 편입)
     new_buys = []
@@ -351,9 +380,12 @@ def main():
     return_history = []
     if initial_capital > 0:
         for d_, v_ in dedup.items():
+            ni = initial_capital + cf_sum_until(d_)
+            if ni <= 0:
+                continue
             return_history.append({
                 "date": d_,
-                "cumulative_return": round((v_ - initial_capital) / initial_capital * 100, 2),
+                "cumulative_return": round((v_ - ni) / ni * 100, 2),
             })
         return_history = return_history[-30:]  # 최근 30거래일
 

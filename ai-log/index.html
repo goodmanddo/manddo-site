@@ -342,7 +342,7 @@
   const cum = document.getElementById('sum-cum');
   cum.textContent = fmtPct(data.cumulative_return);
   addCls(cum, cls(data.cumulative_return));
-  document.getElementById('sum-since').textContent = data.start_date + ' 이후';
+  document.getElementById('sum-since').textContent = data.start_date + ' 이후 · 입금 보정';
 
   const wk = document.getElementById('sum-week');
   wk.textContent = fmtPct(data.week_return);

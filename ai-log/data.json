@@ -1,8 +1,8 @@
 {
   "date": "2026-04-30",
   "start_date": "2026-04-17",
-  "cumulative_return": 12.79,
-  "week_return": -1.39,
+  "cumulative_return": -2.52,
+  "week_return": -1.15,
   "day_return": -0.56,
   "today_realized_avg": -8.68,
   "today_trade_count": 2,
@@ -10,7 +10,7 @@
   "today_loss_count": 2,
   "win_rate": 42,
   "total_trades": 19,
-  "ai_commentary": "오늘은 가비아, 한국피아이엠, 메가스터디교육 등 신규 편입. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 +12.8%.",
+  "ai_commentary": "오늘은 가비아, 한국피아이엠, 메가스터디교육 등 신규 편입. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 -2.5%.",
   "new_buys": [
     {
       "name": "가비아",
@@ -148,43 +148,43 @@
   "return_history": [
     {
       "date": "2026-04-17",
-      "cumulative_return": 6.32
+      "cumulative_return": 0.0
     },
     {
       "date": "2026-04-20",
-      "cumulative_return": 5.98
+      "cumulative_return": -0.32
     },
     {
       "date": "2026-04-21",
-      "cumulative_return": 15.31
+      "cumulative_return": -0.34
     },
     {
       "date": "2026-04-22",
-      "cumulative_return": 14.69
+      "cumulative_return": -0.88
     },
     {
       "date": "2026-04-23",
-      "cumulative_return": 14.38
+      "cumulative_return": -1.14
     },
     {
       "date": "2026-04-24",
-      "cumulative_return": 14.1
+      "cumulative_return": -1.39
     },
     {
       "date": "2026-04-27",
-      "cumulative_return": 13.94
+      "cumulative_return": -1.52
     },
     {
       "date": "2026-04-28",
-      "cumulative_return": 13.9
+      "cumulative_return": -1.56
     },
     {
       "date": "2026-04-29",
-      "cumulative_return": 13.43
+      "cumulative_return": -1.97
     },
     {
       "date": "2026-04-30",
-      "cumulative_return": 12.79
+      "cumulative_return": -2.52
     }
   ]
 }

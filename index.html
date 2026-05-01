@@ -338,7 +338,7 @@
       }
     }
     const cumSub = document.getElementById('ai-cum-sub');
-    if (cumSub && d.start_date) cumSub.textContent = d.start_date + ' 이후';
+    if (cumSub && d.start_date) cumSub.textContent = d.start_date + ' 이후 · 입금 보정';
     const wrSub = document.getElementById('ai-wr-sub');
     if (wrSub) wrSub.textContent = '누적 ' + (d.total_trades || 0) + '건';
   }).catch(() => {
