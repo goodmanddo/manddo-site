@@ -60,6 +60,18 @@
 .rules{background:#F7F9FC;border-radius:12px;padding:16px 20px;font-size:13px;color:#6b7684;line-height:1.8}
 .rules b{color:#4e5968}
 
+/* 시스템 변경 이력 */
+.devlog{background:#F7F9FC;border:1px solid #eef0f3;border-radius:12px;padding:6px 0;overflow:hidden}
+.devlog-item{padding:14px 18px;border-bottom:1px solid #eef0f3}
+.devlog-item:last-child{border-bottom:none}
+.devlog-item.hidden{display:none}
+.devlog-row{display:flex;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.devlog-date{font-size:11.5px;color:#8b95a1;font-weight:600;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:0.02em;flex-shrink:0}
+.devlog-title{font-size:14px;font-weight:700;color:#191f28;letter-spacing:-0.02em}
+.devlog-body{font-size:13px;color:#4e5968;line-height:1.65}
+.devlog-toggle{display:block;width:100%;background:transparent;border:none;border-top:1px solid #eef0f3;padding:12px 18px;font-size:12.5px;font-weight:600;color:#3182F6;cursor:pointer;text-align:center;letter-spacing:-0.01em}
+.devlog-toggle:hover{background:#EEF4FF}
+
 .hold-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:8px}
 .hold-item{background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px;text-decoration:none;color:inherit;transition:border-color .15s ease,transform .15s ease}
 .hold-item:hover{border-color:#3182F6;transform:translateY(-1px)}
@@ -216,6 +228,12 @@
   </section>
 
   <section class="sec">
+    <h2>🛠 시스템 변경 이력</h2>
+    <div class="sec-desc">AI 매매 시스템이 어떻게 진화해왔는지의 기록. 오류 수정, 전략 전환, 새 기능 추가 등.</div>
+    <div class="devlog" id="devlog"></div>
+  </section>
+
+  <section class="sec">
     <h2>📏 운영 규칙</h2>
     <div class="rules">
       · <b>실시간 공개가 아닙니다.</b> 매매 체결 당일 장 마감 후 정리된 기록만 게시합니다.<br>
@@ -312,6 +330,44 @@
     document.getElementById('signal-summary').innerHTML = `<b>오늘의 AI 종합 ·</b> ${sig.ai_summary}`;
   }catch(e){
     document.getElementById('sec-signal').style.display = 'none';
+  }
+
+  // 시스템 변경 이력 (별도 fetch, 실패해도 무시)
+  try{
+    const cres = await fetch('/ai-log/changelog.json?v='+Date.now());
+    const cl = await cres.json();
+    const items = (cl.items || []).slice().sort((a,b)=>b.date.localeCompare(a.date));
+    const wrap = document.getElementById('devlog');
+    if(!items.length){ wrap.parentElement.style.display='none'; }
+    const SHOW = 2;
+    items.forEach((it, i) => {
+      const cls = i < SHOW ? '' : ' hidden';
+      wrap.insertAdjacentHTML('beforeend', `
+        <div class="devlog-item${cls}">
+          <div class="devlog-row"><span class="devlog-date">${it.date}</span><span class="devlog-title">${it.title}</span></div>
+          <div class="devlog-body">${it.body}</div>
+        </div>`);
+    });
+    if(items.length > SHOW){
+      const rest = items.length - SHOW;
+      wrap.insertAdjacentHTML('beforeend',
+        `<button class="devlog-toggle" id="devlog-toggle">더 보기 (${rest}건)</button>`);
+      const btn = document.getElementById('devlog-toggle');
+      btn.addEventListener('click', () => {
+        const hidden = wrap.querySelectorAll('.devlog-item.hidden');
+        if(hidden.length){
+          hidden.forEach(el => el.classList.remove('hidden'));
+          btn.textContent = '접기';
+        }else{
+          const all = wrap.querySelectorAll('.devlog-item');
+          all.forEach((el, idx) => { if(idx >= SHOW) el.classList.add('hidden'); });
+          btn.textContent = `더 보기 (${rest}건)`;
+        }
+      });
+    }
+  }catch(e){
+    const dl = document.getElementById('devlog');
+    if(dl) dl.parentElement.style.display = 'none';
   }
 
   let data;
