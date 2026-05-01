@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 수익률 오류와 정정 - 프로그램상 오류로 정정 중이며 베타버전이라 계속해서 수정 중입니다 | 만또 블로그</title>
+<meta name="description" content="AI 자동매매 수익률 15%는 추가 입금이 반영된 오류였습니다. 실제 실현손익과 보유종목 평가손익을 정정합니다.">
+<meta name="keywords" content="만또블로그,투자일기">
+<meta property="og:title" content="AI 수익률 오류와 정정 - 프로그램상 오류로 정정 중이며 베타버전이라 계속해서 수정 중입니다">
+<meta property="og:description" content="AI 자동매매 수익률 15%는 추가 입금이 반영된 오류였습니다. 실제 실현손익과 보유종목 평가손익을 정정합니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/blog/ai-profit-correction-beta.html">
+<link rel="canonical" href="https://manddo.kr/blog/ai-profit-correction-beta.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.post-head{padding:32px 0 20px;border-bottom:1px solid #eef0f3;margin-bottom:28px}
+.post-head .cat{font-size:12px;color:#3182F6;font-weight:700;letter-spacing:0.04em;margin-bottom:10px}
+.post-head h1{font-size:30px;font-weight:800;letter-spacing:-0.035em;color:#191f28;line-height:1.3;margin-bottom:12px}
+.post-head .meta{font-size:13px;color:#8b95a1}
+.post-body{font-size:15.5px;line-height:1.85;color:#333d4b;max-width:720px}
+.post-body h2{font-size:21px;font-weight:800;letter-spacing:-0.03em;color:#191f28;margin:36px 0 14px;padding-top:8px}
+.post-body h3{font-size:17px;font-weight:700;color:#191f28;margin:24px 0 10px}
+.post-body p{margin:0 0 16px}
+.post-body ul,.post-body ol{margin:0 0 16px 20px;padding:0}
+.post-body li{margin-bottom:6px}
+.post-body blockquote{border-left:3px solid #3182F6;padding:4px 14px;margin:16px 0;color:#4e5968;background:#F7F9FC;border-radius:4px}
+.post-body img{max-width:100%;border-radius:10px;margin:16px 0;display:block}
+.post-body b,.post-body strong{color:#191f28}
+.post-body code{background:#F2F4F6;padding:2px 6px;border-radius:4px;font-size:14px}
+.post-body pre{background:#F2F4F6;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:13.5px;line-height:1.6;margin:16px 0}
+.post-body pre code{background:none;padding:0}
+.post-body a{color:#1B64DA}
+.post-body table{border-collapse:collapse;margin:16px 0;font-size:14px}
+.post-body th,.post-body td{border:1px solid #e5e8eb;padding:8px 12px}
+.post-body th{background:#F7F9FC;font-weight:700}
+@media(max-width:640px){.post-head h1{font-size:24px}.post-body{font-size:15px}}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/" class="active">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <!-- manddo-back-nav -->
+  <a class="back-btn" href="/blog/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="breadcrumb">
+    <a href="/blog/">블로그</a><span class="sep">/</span>AI 수익률 오류와 정정 - 프로그램상 오류로 정정 중이며 베타버전이라 계속해서 수정 중입니다
+  </div>
+
+  <header class="post-head">
+    <div class="cat">운영일지</div>
+    <h1>AI 수익률 오류와 정정 - 프로그램상 오류로 정정 중이며 베타버전이라 계속해서 수정 중입니다</h1>
+    <div class="meta">2026년 5월 1일 · 읽는 시간 약 1분</div>
+  </header>
+
+  <article class="post-body">
+    <p>AI 자동매매 수익률이 15%로 표시되던 것을 정정합니다.</p>
+    <p>기존에 사이트에 표시되던 수익률 15%는 실제 매매 수익이 아니었습니다. 계좌에 추가 입금한 금액이 총 평가금액에 반영되면서, 마치 주식 매매로 수익이 난 것처럼 수익률이 계산된 것이었습니다.</p>
+    <p>쉽게 말하면:<br />
+    - 1,000만원으로 시작<br />
+    - 중간에 500만원 추가 입금<br />
+    - 총 평가금액 1,500만원 -&gt; 50% 수익이라고 표시됨<br />
+    - 실제 매매 수익은 거의 없었음</p>
+    <p>이 문제를 인지하고, 수익률 계산 로직을 수정했습니다. 이제는 한국투자증권 API에서 제공하는 실현손익(매수가 대비 매도가 차이, 수수료/세금 반영)만을 기준으로 수익률을 표시합니다.</p>
+    <p>현재 정확한 실적 (4월 13일~30일):<br />
+    - 실현손익(매도 완료): +32,980원<br />
+    - 보유종목 평가손익: 약 -160,000원<br />
+    - 종합하면 현재 총 손실 상태입니다.</p>
+    <p>전략별로 보면:<br />
+    - 스윙 전략: +408,506원<br />
+    - 단타 전략: -355,468원</p>
+    <p>실현손익만 보면 소폭 플러스지만, 아직 팔지 않은 보유 종목들이 마이너스이기 때문에 전체적으로는 손해인 상태입니다.</p>
+    <p>화려한 숫자는 아니지만, 이게 진짜 실적입니다. 현재 베타버전으로 운영 중이며, 계속해서 로직을 수정하고 개선하고 있습니다. 앞으로는 정확한 수치만 공개하겠습니다. 신뢰할 수 있는 데이터가 더 중요하다고 생각합니다.</p>
+  </article>
+
+  <div class="disclaimer" style="margin-top:40px">
+    <b>⚠ 투자 유의사항</b><br>
+    본 글은 개인의 투자 기록·의견이며, 특정 종목의 매수·매도 권유가 아닙니다. 모든 투자 판단과 그 결과는 본인의 책임입니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+</body>
+</html>

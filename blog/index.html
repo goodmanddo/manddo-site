@@ -23,10 +23,6 @@
 .post-item .title{font-size:16px;font-weight:700;color:#191f28;letter-spacing:-0.02em;flex:1;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .post-item .date{font-size:12.5px;color:#8b95a1;font-weight:500;flex-shrink:0;font-variant-numeric:tabular-nums}
 .empty{background:#F7F9FC;border:1px dashed #cfd8e3;border-radius:12px;padding:28px;text-align:center;color:#8b95a1;font-size:14px}
-.more-btn{display:block;width:100%;padding:14px;margin:24px 0;background:#F7F9FC;border:1px solid #e5e8eb;border-radius:8px;color:#4e5968;font-size:14px;font-weight:600;cursor:pointer;text-align:center;transition:background .15s}
-.more-btn:hover{background:#eef0f3}
-.old-posts{display:none}
-.old-posts.show{display:block}
 @media(max-width:640px){
   .post-item{gap:12px;padding:16px 4px;flex-wrap:wrap}
   .post-item .cat{min-width:auto;font-size:10.5px}
@@ -62,6 +58,8 @@
   </section>
 
   <div class="post-list">
+    <a href="/blog/ai-profit-correction-beta.html" class="post-item"><div class="cat">운영일지</div><div class="title">AI 수익률 오류와 정정 - 프로그램상 오류로 정정 중이며 베타버전이라 계속해서 수정 중입니다</div><div class="date">2026.05.01</div></a>
+    <a href="/blog/ai-daytrading-to-swing.html" class="post-item"><div class="cat">운영일지</div><div class="title">현재 AI 수익률이 낮은 이유 - 단타를 접고 스윙으로</div><div class="date">2026.05.01</div></a>
     <a href="/blog/openai-related-stocks-risk-observation.html" class="post-item"><div class="cat">시장관찰</div><div class="title">오픈AI 관련주, 나는 왜 선뜻 손이 안 가는가</div><div class="date">2026.04.29</div></a>
     <a href="/blog/why-we-need-financial-planning.html" class="post-item"><div class="cat">에세이</div><div class="title">재테크를 안 하면 나는 매년 손해를 보고 있다</div><div class="date">2026.04.28</div></a>
     <a href="/blog/cybersecurity-stocks-korea-us-watchlist.html" class="post-item"><div class="cat">시장관찰</div><div class="title">보안주도 슬슬 눈길이 가는데 — 안랩부터 미국 빅플레이어까지</div><div class="date">2026.04.26</div></a>
@@ -80,36 +78,6 @@
     <a href="/blog/salary-calculator-afternoon.html" class="post-item"><div class="cat">에세이</div><div class="title">월급 실수령액… 느끼는거와 다른 이유</div><div class="date">2026.04.22</div></a>
     <a href="/blog/hello.html" class="post-item"><div class="cat">공지</div><div class="title">블로그 시작합니다</div><div class="date">2026.04.21</div></a>
   </div>
-
-<script>
-(function(){
-  var cutoff = new Date();
-  cutoff.setDate(cutoff.getDate() - 30);
-  var items = document.querySelectorAll('.post-item');
-  var old = [];
-  items.forEach(function(el){
-    var dateText = el.querySelector('.date');
-    if(!dateText) return;
-    var parts = dateText.textContent.trim().replace(/\./g,'-').replace(/-$/,'').split('-');
-    var d = new Date(parts[0], parts[1]-1, parts[2]);
-    if(d < cutoff) old.push(el);
-  });
-  if(old.length === 0) return;
-  var list = document.querySelector('.post-list');
-  var wrapper = document.createElement('div');
-  wrapper.className = 'old-posts';
-  old.forEach(function(el){ wrapper.appendChild(el); });
-  var btn = document.createElement('button');
-  btn.className = 'more-btn';
-  btn.textContent = '이전 글 더보기 (' + old.length + '건)';
-  btn.onclick = function(){
-    wrapper.classList.add('show');
-    btn.style.display = 'none';
-  };
-  list.appendChild(btn);
-  list.appendChild(wrapper);
-})();
-</script>
 
 </main>
 
