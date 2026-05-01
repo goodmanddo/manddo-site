@@ -62,6 +62,9 @@
 
 /* 시스템 변경 이력 */
 .devlog{background:#F7F9FC;border:1px solid #eef0f3;border-radius:12px;padding:6px 0;overflow:hidden}
+.flash-target{animation:flashTarget 1.8s ease-out}
+@keyframes flashTarget{0%{background:rgba(49,130,246,.10);box-shadow:0 0 0 6px rgba(49,130,246,.10);border-radius:14px}100%{background:transparent;box-shadow:none}}
+.flash-target h2{color:#3182F6;transition:color .6s}
 .devlog-item{padding:14px 18px;border-bottom:1px solid #eef0f3}
 .devlog-item:last-child{border-bottom:none}
 .devlog-item.hidden{display:none}
@@ -227,7 +230,7 @@
     <div id="list-losses"></div>
   </section>
 
-  <section class="sec">
+  <section class="sec" id="sec-changelog">
     <h2>🛠 시스템 변경 이력</h2>
     <div class="sec-desc">AI 매매 시스템이 어떻게 진화해왔는지의 기록. 오류 수정, 전략 전환, 새 기능 추가 등.</div>
     <div class="devlog" id="devlog"></div>
@@ -362,6 +365,17 @@
           const all = wrap.querySelectorAll('.devlog-item');
           all.forEach((el, idx) => { if(idx >= SHOW) el.classList.add('hidden'); });
           btn.textContent = `더 보기 (${rest}건)`;
+        }
+      });
+    }
+    // hash가 #sec-changelog면 비동기 렌더 후 정확한 위치로 스크롤 + 강조
+    if (location.hash === '#sec-changelog') {
+      requestAnimationFrame(() => {
+        const sec = document.getElementById('sec-changelog');
+        if (sec) {
+          sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          sec.classList.add('flash-target');
+          setTimeout(() => sec.classList.remove('flash-target'), 1800);
         }
       });
     }
