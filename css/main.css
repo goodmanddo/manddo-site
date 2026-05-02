@@ -124,6 +124,22 @@ body{
 }
 .disclaimer b{color:#4a3300;display:inline-block;margin-bottom:2px}
 
+/* ===== 종목 보기 모드 토글 (핵심/전체) ===== */
+.stock-mode{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 4px}
+.stock-mode .sm-btn{
+  background:#fff;border:1px solid #d3d1c7;color:#4e5968;
+  padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;
+  cursor:pointer;transition:all .15s;
+}
+.stock-mode .sm-btn:hover{border-color:#3182F6;color:#3182F6}
+.stock-mode .sm-btn.active{background:#3182F6;border-color:#3182F6;color:#fff}
+.stock-mode .sm-hint{font-size:12px;color:#8b95a1;margin-left:4px}
+.grid.mode-core .card[data-core="1"]{display:block}
+.grid.mode-core .card:not([data-core="1"]){display:none !important}
+@media (max-width:540px){
+  .stock-mode .sm-hint{flex-basis:100%;margin-left:0;margin-top:4px}
+}
+
 .site-footer{border-top:1px solid #eef0f3;margin-top:64px;padding:32px 20px;background:#fff}
 .site-footer-inner{max-width:1040px;margin:0 auto;font-size:13px;color:#8b95a1;text-align:center;line-height:1.9}
 .site-footer a{color:#4e5968;text-decoration:none;margin:0 8px;font-weight:500}

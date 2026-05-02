@@ -54,6 +54,12 @@
     모든 분석은 공개 정보 기반의 참고용 자료이며, 매수·매도 권유가 아닙니다. 분석 시점 이후 시장 상황은 변할 수 있으니, 투자 판단 전 최신 정보를 확인하세요.
   </div>
 
+  <div class="stock-mode" id="stock-mode" role="tablist" aria-label="종목 보기 모드">
+    <button type="button" class="sm-btn active" data-mode="core" aria-pressed="true">핵심 종목</button>
+    <button type="button" class="sm-btn" data-mode="all" aria-pressed="false">전체 종목</button>
+    <span class="sm-hint" id="sm-hint">대표 종목을 먼저 보여드립니다. 전체 보기로 전환 가능.</span>
+  </div>
+
 <!-- TODAY_PICK_START -->
   <div class="today-pick" style="background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:16px;padding:28px 24px;margin-bottom:32px;color:#fff;position:relative;overflow:hidden">
     <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(255,255,255,0.08);border-radius:50%"></div>
@@ -136,14 +142,14 @@
       <div class="desc">KB금융 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/lg-energy-solution.html" class="card" data-name="LG에너지솔루션 lg-energy-solution" data-code="373220" data-tags="">
+    <a href="/stock/lg-energy-solution.html" class="card" data-core="1" data-name="LG에너지솔루션 lg-energy-solution" data-code="373220" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">LG에너지솔루션</div>
       <div class="code">373220</div>
       <div class="desc">LG에너지솔루션 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/lg-chem.html" class="card" data-name="LG화학 lg-chem" data-code="051910" data-tags="">
+    <a href="/stock/lg-chem.html" class="card" data-core="1" data-name="LG화학 lg-chem" data-code="051910" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">LG화학</div>
       <div class="code">051910</div>
@@ -157,7 +163,7 @@
       <div class="desc">POSCO홀딩스 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/sk-hynix.html" class="card" data-name="SK하이닉스 sk-hynix" data-code="000660" data-tags="">
+    <a href="/stock/sk-hynix.html" class="card" data-core="1" data-name="SK하이닉스 sk-hynix" data-code="000660" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">SK하이닉스</div>
       <div class="code">000660</div>
@@ -171,7 +177,7 @@
       <div class="desc">기아 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/naver.html" class="card" data-name="네이버 naver" data-code="035420" data-tags="">
+    <a href="/stock/naver.html" class="card" data-core="1" data-name="네이버 naver" data-code="035420" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">네이버</div>
       <div class="code">035420</div>
@@ -192,7 +198,7 @@
       <div class="desc">삼성바이오로직스 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/samsung-electronics.html" class="card" data-name="삼성전자 samsung-electronics" data-code="005930" data-tags="">
+    <a href="/stock/samsung-electronics.html" class="card" data-core="1" data-name="삼성전자 samsung-electronics" data-code="005930" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">삼성전자</div>
       <div class="code">005930</div>
@@ -227,7 +233,7 @@
       <div class="desc">우리금융지주 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/kakao.html" class="card" data-name="카카오 kakao" data-code="035720" data-tags="">
+    <a href="/stock/kakao.html" class="card" data-core="1" data-name="카카오 kakao" data-code="035720" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">카카오</div>
       <div class="code">035720</div>
@@ -248,7 +254,7 @@
       <div class="desc">현대모비스 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/hyundai-motor.html" class="card" data-name="현대차 hyundai-motor" data-code="005380" data-tags="">
+    <a href="/stock/hyundai-motor.html" class="card" data-core="1" data-name="현대차 hyundai-motor" data-code="005380" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">현대차</div>
       <div class="code">005380</div>
@@ -1130,56 +1136,56 @@
       <div class="desc">현대오토에버 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/samsung-sdi.html" class="card" data-name="삼성SDI samsung-sdi" data-code="006400" data-tags="">
+    <a href="/stock/samsung-sdi.html" class="card" data-core="1" data-name="삼성SDI samsung-sdi" data-code="006400" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">삼성SDI</div>
       <div class="code">006400</div>
       <div class="desc">삼성SDI 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/ncsoft.html" class="card" data-name="엔씨소프트 ncsoft" data-code="036570" data-tags="">
+    <a href="/stock/ncsoft.html" class="card" data-core="1" data-name="엔씨소프트 ncsoft" data-code="036570" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">엔씨소프트</div>
       <div class="code">036570</div>
       <div class="desc">엔씨소프트 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/alteogen.html" class="card" data-name="알테오젠 alteogen" data-code="196170" data-tags="">
+    <a href="/stock/alteogen.html" class="card" data-core="1" data-name="알테오젠 alteogen" data-code="196170" data-tags="">
       <div class="cat">코스닥</div>
       <div class="title">알테오젠</div>
       <div class="code">196170</div>
       <div class="desc">알테오젠 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/ananti.html" class="card" data-name="아난티 ananti" data-code="025980" data-tags="레저 리조트">
+    <a href="/stock/ananti.html" class="card" data-core="1" data-name="아난티 ananti" data-code="025980" data-tags="레저 리조트">
       <div class="cat">코스닥 · 레저</div>
       <div class="title">아난티</div>
       <div class="code">025980</div>
       <div class="desc">레저·리조트 테마주의 세력 움직임과 매물대 분석.</div>
       <div class="tags"><span class="tag">#레저</span><span class="tag">#리조트</span></div>
     </a>
-    <a href="/stock/sdn.html" class="card" data-name="SDN sdn" data-code="099220" data-tags="코스닥">
+    <a href="/stock/sdn.html" class="card" data-core="1" data-name="SDN sdn" data-code="099220" data-tags="코스닥">
       <div class="cat">코스닥 · 중소형</div>
       <div class="title">SDN</div>
       <div class="code">099220</div>
       <div class="desc">중소형 성장주 차트 구조 및 매물대 분석.</div>
       <div class="tags"><span class="tag">#코스닥</span></div>
     </a>
-    <a href="/stock/tym.html" class="card" data-name="TYM tym" data-code="002900" data-tags="농기계">
+    <a href="/stock/tym.html" class="card" data-core="1" data-name="TYM tym" data-code="002900" data-tags="농기계">
       <div class="cat">코스피 · 농기계</div>
       <div class="title">TYM</div>
       <div class="code">002900</div>
       <div class="desc">농기계 업체의 실적 구조와 차트 포지션 분석.</div>
       <div class="tags"><span class="tag">#농기계</span></div>
     </a>
-    <a href="/stock/hanwha-solutions.html" class="card" data-name="한화솔루션 hanwha-solutions" data-code="009830" data-tags="">
+    <a href="/stock/hanwha-solutions.html" class="card" data-core="1" data-name="한화솔루션 hanwha-solutions" data-code="009830" data-tags="">
       <div class="cat">코스피</div>
       <div class="title">한화솔루션</div>
       <div class="code">009830</div>
       <div class="desc">한화솔루션 세력 흐름·차트 구조·수급 종합 분석.</div>
       <div class="tags"></div>
     </a>
-    <a href="/stock/oci-holdings.html" class="card" data-name="OCI홀딩스 oci-holdings" data-code="010060" data-tags="폴리실리콘 지주사">
+    <a href="/stock/oci-holdings.html" class="card" data-core="1" data-name="OCI홀딩스 oci-holdings" data-code="010060" data-tags="폴리실리콘 지주사">
       <div class="cat">코스피 · 지주사</div>
       <div class="title">OCI홀딩스</div>
       <div class="code">010060</div>
@@ -1217,9 +1223,14 @@
   const empty = document.getElementById('empty');
   const pager = document.getElementById('pagination');
   const cards = Array.from(grid.querySelectorAll('.card'));
+  const modeBox = document.getElementById('stock-mode');
+  const modeHint = document.getElementById('sm-hint');
+  const coreCount = cards.filter(c => c.dataset.core === '1').length;
 
+  let mode = 'core';
   let currentPage = 1;
   let matched = cards;
+  grid.classList.add('mode-core');
 
   function norm(s){ return (s||'').toLowerCase().replace(/\s+/g,''); }
 
@@ -1257,13 +1268,18 @@
     buildPager(totalPages);
   }
 
+  function pool(){
+    return mode === 'core' ? cards.filter(c => c.dataset.core === '1') : cards;
+  }
+
   function filter(resetPage){
     const q = norm(input.value);
     form.classList.toggle('has-text', !!input.value);
+    const base = pool();
     if(!q){
-      matched = cards;
+      matched = base;
     }else{
-      matched = cards.filter(c => {
+      matched = base.filter(c => {
         const hay = norm([c.dataset.name, c.dataset.code, c.dataset.tags, c.querySelector('.title')?.textContent].join(' '));
         return hay.includes(q);
       });
@@ -1271,6 +1287,28 @@
     if(resetPage) currentPage = 1;
     render();
   }
+
+  function setMode(next){
+    if(next === mode) return;
+    mode = next;
+    grid.classList.toggle('mode-core', mode === 'core');
+    modeBox.querySelectorAll('.sm-btn').forEach(b => {
+      const active = b.dataset.mode === mode;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    if(modeHint){
+      modeHint.textContent = mode === 'core'
+        ? `대표 ${coreCount}종목 우선 노출. 전체 보기로 전환 가능.`
+        : `전체 ${cards.length}종목 표시 중.`;
+    }
+    filter(true);
+  }
+
+  modeBox.addEventListener('click', e => {
+    const btn = e.target.closest('.sm-btn[data-mode]');
+    if(btn) setMode(btn.dataset.mode);
+  });
 
   pager.addEventListener('click', e => {
     const btn = e.target.closest('button[data-pg]');
@@ -1290,9 +1328,14 @@
   if(q0){ input.value = q0; }
   filter(true);
 
-  input.addEventListener('input', () => filter(true));
+  input.addEventListener('input', () => {
+    if(input.value && mode === 'core') setMode('all');
+    else filter(true);
+  });
   clearBtn.addEventListener('click', () => { input.value=''; filter(true); input.focus(); });
   form.addEventListener('submit', e => { e.preventDefault(); filter(true); input.blur(); });
+
+  if(modeHint) modeHint.textContent = `대표 ${coreCount}종목 우선 노출. 전체 보기로 전환 가능.`;
 })();
 </script>
 
