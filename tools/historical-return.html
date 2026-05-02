@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10년 전 그 주식 샀으면 지금 얼마? — 과거 수익률 계산기 | 만또 머니 툴</title>
+<meta name="description" content="삼성전자·SK하이닉스·LG에너지솔루션·에코프로 등 인기 30종목을 1년/3년/5년/10년 전에 샀다면 지금 얼마인지 한 번에 계산. 수정주가 기준, 한국투자증권 실시간 데이터.">
+<meta name="keywords" content="과거수익률계산기, 주식수익률계산, 10년수익률, 5년수익률, 삼성전자10년수익률, 주식과거가격, 수정주가">
+<meta property="og:title" content="10년 전 그 주식 샀으면 지금 얼마? | 만또 머니 툴">
+<meta property="og:description" content="인기 30종목의 10년치 수정주가로 과거 매수 시점 대비 현재 수익률을 한 번에 계산합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/tools/historical-return.html">
+<link rel="canonical" href="https://manddo.kr/tools/historical-return.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .hr-hero { background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%); border-radius:16px; padding:28px 24px; margin:24px 0 28px; color:#fff; position:relative; overflow:hidden; }
+  .hr-hero::before { content:''; position:absolute; top:-20px; right:-20px; width:120px; height:120px; background:rgba(255,255,255,0.08); border-radius:50%; pointer-events:none; }
+  .hr-hero-inner { position:relative; z-index:1; }
+  .hr-hero h1 { font-size:26px; margin:0 0 6px; color:#fff; letter-spacing:-0.02em; }
+  .hr-hero p { font-size:14px; color:#fff; opacity:0.92; margin:0; max-width:560px; line-height:1.6; }
+
+  .hr-form { background:#fff; border:1px solid #eef0f3; border-radius:14px; padding:20px 20px 16px; margin-bottom:18px; }
+  .hr-row { margin-bottom:14px; }
+  .hr-row:last-child { margin-bottom:0; }
+  .hr-label { display:block; font-size:12.5px; color:#6b7280; font-weight:600; margin-bottom:6px; letter-spacing:0.02em; }
+  .hr-search-wrap { position:relative; }
+  .hr-search { width:100%; padding:11px 14px; font-size:15px; border:1.5px solid #e2e5ed; border-radius:10px; background:#fff; box-sizing:border-box; }
+  .hr-search:focus { outline:none; border-color:#1B64DA; }
+  .hr-suggest { position:absolute; left:0; right:0; top:100%; background:#fff; border:1px solid #e2e5ed; border-radius:10px; margin-top:4px; max-height:240px; overflow-y:auto; z-index:5; box-shadow:0 4px 12px rgba(0,0,0,0.06); display:none; }
+  .hr-suggest.open { display:block; }
+  .hr-suggest-item { padding:10px 14px; cursor:pointer; font-size:14px; display:flex; justify-content:space-between; align-items:center; }
+  .hr-suggest-item:hover, .hr-suggest-item.active { background:#f3f6ff; }
+  .hr-suggest-item .hsi-name { font-weight:600; color:#191f28; }
+  .hr-suggest-item .hsi-code { font-size:12px; color:#8b95a1; font-family:'SF Mono',monospace; }
+  .hr-period { display:flex; flex-wrap:wrap; gap:8px; }
+  .hr-period button { padding:8px 14px; border:1.5px solid #e2e5ed; background:#fff; border-radius:8px; font-size:13.5px; font-weight:600; color:#374151; cursor:pointer; transition:all .12s; }
+  .hr-period button:hover { border-color:#1B64DA; color:#1B64DA; }
+  .hr-period button.active { background:#1B64DA; border-color:#1B64DA; color:#fff; }
+  .hr-amount { width:100%; padding:11px 14px; font-size:15px; border:1.5px solid #e2e5ed; border-radius:10px; background:#fff; box-sizing:border-box; font-family:'SF Mono',monospace; }
+  .hr-amount:focus { outline:none; border-color:#1B64DA; }
+  .hr-amount-hint { font-size:11.5px; color:#8b95a1; margin-top:4px; }
+
+  .hr-popular { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .hr-popular-chip { padding:5px 11px; background:#f3f6ff; border:1px solid #d6e1ff; color:#1B64DA; border-radius:14px; font-size:12.5px; font-weight:600; cursor:pointer; transition:all .12s; }
+  .hr-popular-chip:hover { background:#1B64DA; color:#fff; border-color:#1B64DA; }
+
+  .hr-result { background:linear-gradient(135deg,#f7f9ff 0%,#fff 100%); border:1px solid #e2e5ed; border-radius:14px; padding:24px 22px; margin-bottom:20px; display:none; }
+  .hr-result.show { display:block; }
+  .hr-result-narrative { font-size:15.5px; line-height:1.7; color:#374151; margin-bottom:18px; }
+  .hr-result-narrative b { color:#191f28; }
+  .hr-stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-bottom:16px; }
+  .hr-stat { background:#fff; border:1px solid #eef0f3; border-radius:10px; padding:14px; }
+  .hr-stat .hs-label { font-size:11.5px; color:#8b95a1; font-weight:600; margin-bottom:4px; }
+  .hr-stat .hs-value { font-size:18px; font-weight:800; font-family:'SF Mono',monospace; letter-spacing:-0.02em; color:#191f28; }
+  .hr-stat .hs-value.pos { color:#0C8A5A; }
+  .hr-stat .hs-value.neg { color:#D63939; }
+  .hr-stat .hs-sub { font-size:11px; color:#8b95a1; margin-top:3px; }
+
+  .hr-chart { background:#fff; border:1px solid #eef0f3; border-radius:10px; padding:16px; margin-top:8px; }
+  .hr-chart-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px; }
+  .hr-chart-title { font-size:12.5px; color:#6b7280; font-weight:600; }
+  .hr-chart-range { font-size:11px; color:#8b95a1; font-family:'SF Mono',monospace; }
+  .hr-chart svg { width:100%; height:auto; display:block; }
+
+  .hr-empty { text-align:center; padding:40px 20px; color:#8b95a1; font-size:14px; background:#f7f8fb; border-radius:12px; }
+
+  .hr-callout { background:#fff8e6; border-left:3px solid #f59e0b; padding:12px 14px; border-radius:6px; font-size:13px; color:#78350f; line-height:1.6; margin-top:14px; }
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/" class="active">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="breadcrumb">
+    <a href="/tools/">머니 툴</a><span class="sep">/</span>과거 수익률 계산기
+  </div>
+
+  <section class="hr-hero">
+    <div class="hr-hero-inner">
+      <h1>📈 10년 전 그 주식, 지금 얼마?</h1>
+      <p>인기 30종목의 10년치 수정주가를 한국투자증권 실시간 데이터로 가져와, 과거에 샀다면 지금 얼마가 됐을지 한 번에 계산합니다.</p>
+    </div>
+  </section>
+
+  <div class="hr-form">
+    <div class="hr-row">
+      <label class="hr-label" for="hr-q">종목 선택</label>
+      <div class="hr-search-wrap">
+        <input class="hr-search" id="hr-q" type="text" placeholder="삼성전자 / 005930 검색…" autocomplete="off">
+        <div class="hr-suggest" id="hr-suggest"></div>
+      </div>
+      <div class="hr-popular" id="hr-popular"></div>
+    </div>
+    <div class="hr-row">
+      <label class="hr-label">기간</label>
+      <div class="hr-period" id="hr-period">
+        <button data-y="1">1년 전</button>
+        <button data-y="3">3년 전</button>
+        <button data-y="5" class="active">5년 전</button>
+        <button data-y="10">10년 전</button>
+        <button data-y="0">상장 이후</button>
+      </div>
+    </div>
+    <div class="hr-row">
+      <label class="hr-label" for="hr-amt">투자금 (원)</label>
+      <input class="hr-amount" id="hr-amt" type="text" inputmode="numeric" value="1,000,000">
+      <div class="hr-amount-hint">기본값 100만원. 콤마는 자동.</div>
+    </div>
+  </div>
+
+  <div class="hr-result" id="hr-result"></div>
+
+  <div class="hr-empty" id="hr-empty">위에서 종목과 기간을 선택하면 결과가 여기 표시됩니다.</div>
+
+  <div class="hr-callout">
+    ⚠ <b>주의</b> · 과거 수익률은 미래 수익을 보장하지 않습니다. 현재 시세는 한국투자증권 OpenAPI에서 매주 갱신되며, 액면분할·무상증자가 반영된 수정주가 기준입니다. 배당 재투자는 포함되지 않은 단순 주가 비교입니다.
+  </div>
+
+  <div class="callout tip" style="margin-top:18px">
+    <b>💡 같이 보면 좋은 것</b>
+    <ul style="margin:8px 0 0 18px;padding:0;font-size:13.5px;line-height:1.7">
+      <li>🧪 <a href="/ai-project/" style="color:#1B64DA">AI 1년 투자 프로젝트</a> — 만또가 시드 2,000만원으로 1년간 진행 중인 자동매매 실험</li>
+      <li>📚 <a href="/learn/glossary.html" style="color:#1B64DA">투자 용어 사전</a> — CAGR·수정주가·MDD 같은 50개 용어</li>
+      <li>📝 <a href="/learn/guide/dividend-compound.html" style="color:#1B64DA">배당 재투자의 복리</a> — 단순 주가 비교를 넘어선 진짜 장기 수익률</li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    본 계산기는 교육·참고용 자료이며 특정 종목의 매수·매도를 권유하지 않습니다. 데이터에 오류가 있을 수 있으니 매매 판단 전 별도 확인 부탁드립니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const POPULAR_CODES = ['005930','000660','373220','068270','035420','005380','086520','196170','015760','105560'];
+  const $ = id => document.getElementById(id);
+  let DATA = null;
+  let selected = null;
+  let years = 5;
+
+  // amount comma formatter
+  const amtEl = $('hr-amt');
+  amtEl.addEventListener('input', e => {
+    const raw = e.target.value.replace(/[^0-9]/g,'');
+    e.target.value = raw ? Number(raw).toLocaleString('ko-KR') : '';
+    schedule();
+  });
+  function getAmount(){ return Number((amtEl.value||'').replace(/[^0-9]/g,''))||0; }
+
+  // period buttons
+  document.querySelectorAll('#hr-period button').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      document.querySelectorAll('#hr-period button').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      years = Number(b.dataset.y);
+      schedule();
+    });
+  });
+
+  // search + autocomplete
+  const qEl = $('hr-q');
+  const sugEl = $('hr-suggest');
+  let activeIdx = -1;
+
+  qEl.addEventListener('focus', renderSuggest);
+  qEl.addEventListener('input', renderSuggest);
+  qEl.addEventListener('keydown', e => {
+    const items = sugEl.querySelectorAll('.hr-suggest-item');
+    if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx+1, items.length-1); updateActive(items); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx-1, 0); updateActive(items); }
+    else if (e.key === 'Enter' && activeIdx >= 0 && items[activeIdx]) { e.preventDefault(); items[activeIdx].click(); }
+    else if (e.key === 'Escape') { sugEl.classList.remove('open'); }
+  });
+  document.addEventListener('click', e => {
+    if (!sugEl.contains(e.target) && e.target !== qEl) sugEl.classList.remove('open');
+  });
+  function updateActive(items){ items.forEach((it,i)=>it.classList.toggle('active', i===activeIdx)); }
+  function renderSuggest(){
+    if (!DATA) { sugEl.innerHTML='<div class="hr-suggest-item">데이터 불러오는 중…</div>'; sugEl.classList.add('open'); return; }
+    const q = qEl.value.trim().toLowerCase();
+    const entries = Object.entries(DATA.stocks);
+    const filtered = q ? entries.filter(([code,s])=> s.name.toLowerCase().includes(q) || code.includes(q)) : entries.slice(0,12);
+    if (filtered.length === 0) { sugEl.innerHTML='<div class="hr-suggest-item" style="color:#8b95a1">매칭 종목 없음</div>'; sugEl.classList.add('open'); return; }
+    sugEl.innerHTML = filtered.map(([code,s])=>`<div class="hr-suggest-item" data-code="${code}"><span class="hsi-name">${s.name}</span><span class="hsi-code">${code}</span></div>`).join('');
+    sugEl.querySelectorAll('.hr-suggest-item').forEach(it=>{
+      it.addEventListener('click', ()=>{
+        const code = it.dataset.code;
+        if (!code) return;
+        selected = code;
+        qEl.value = DATA.stocks[code].name;
+        sugEl.classList.remove('open');
+        compute();
+      });
+    });
+    activeIdx = -1;
+    sugEl.classList.add('open');
+  }
+
+  // popular chips
+  function renderPopular(){
+    if (!DATA) return;
+    $('hr-popular').innerHTML = POPULAR_CODES.filter(c=>DATA.stocks[c]).map(c=>`<span class="hr-popular-chip" data-code="${c}">${DATA.stocks[c].name}</span>`).join('');
+    $('hr-popular').querySelectorAll('.hr-popular-chip').forEach(ch=>{
+      ch.addEventListener('click', ()=>{
+        selected = ch.dataset.code;
+        qEl.value = DATA.stocks[selected].name;
+        compute();
+      });
+    });
+  }
+
+  // helpers
+  function ymd(s){ return s.slice(0,4)+'-'+s.slice(4,6)+'-'+s.slice(6,8); }
+  function fmtKRW(n){ return Math.round(n).toLocaleString('ko-KR'); }
+  function fmtPct(n){ return (n>=0?'+':'')+n.toFixed(2)+'%'; }
+
+  // find closest candle on/after given date string YYYYMMDD
+  function findCandle(candles, targetYmd){
+    let lo=0, hi=candles.length-1;
+    while (lo < hi) {
+      const mid = (lo+hi)>>1;
+      if (candles[mid].d < targetYmd) lo = mid+1; else hi = mid;
+    }
+    return candles[lo];
+  }
+
+  let timer = null;
+  function schedule(){ clearTimeout(timer); timer = setTimeout(compute, 120); }
+
+  function compute(){
+    if (!DATA || !selected) return;
+    const stock = DATA.stocks[selected]; if (!stock) return;
+    const candles = stock.candles;
+    if (!candles || candles.length < 2) return;
+    const last = candles[candles.length-1];
+    let buy;
+    if (years === 0) buy = candles[0];
+    else {
+      const today = new Date();
+      const target = new Date(today.getFullYear()-years, today.getMonth(), today.getDate());
+      const targetYmd = target.getFullYear().toString() + String(target.getMonth()+1).padStart(2,'0') + String(target.getDate()).padStart(2,'0');
+      buy = findCandle(candles, targetYmd);
+    }
+    if (!buy || buy.d >= last.d) {
+      $('hr-empty').style.display='block';
+      $('hr-empty').textContent = `${stock.name}은(는) 해당 기간 데이터가 부족해요. 다른 기간을 선택해 보세요.`;
+      $('hr-result').classList.remove('show');
+      return;
+    }
+    $('hr-empty').style.display='none';
+
+    const amt = getAmount();
+    const shares = amt / buy.c;
+    const valueNow = shares * last.c;
+    const pnl = valueNow - amt;
+    const ret = (last.c / buy.c - 1) * 100;
+    const days = (Date.parse(ymd(last.d)) - Date.parse(ymd(buy.d))) / 86400000;
+    const yrs = days / 365.25;
+    const cagr = yrs > 0.1 ? (Math.pow(last.c / buy.c, 1/yrs) - 1) * 100 : null;
+
+    const periodLabel = years === 0 ? `상장(또는 데이터 시작) 이후 ${yrs.toFixed(1)}년` : `${yrs.toFixed(1)}년 전`;
+    const direction = ret >= 0 ? '늘었어요' : '줄었어요';
+    const multiX = (last.c / buy.c).toFixed(2);
+
+    const r = $('hr-result');
+    r.innerHTML = `
+      <div class="hr-result-narrative">
+        <b>${stock.name}</b>을(를) <b>${periodLabel}</b>(${ymd(buy.d)}) 에 <b>${fmtKRW(amt)}원</b>어치 사뒀다면, 오늘(${ymd(last.d)}) 기준 <b class="${ret>=0?'pos':'neg'}" style="color:${ret>=0?'#0C8A5A':'#D63939'}">${fmtKRW(valueNow)}원</b>이 되어 ${fmtKRW(Math.abs(pnl))}원이 ${direction}.
+      </div>
+      <div class="hr-stats-grid">
+        <div class="hr-stat">
+          <div class="hs-label">매수 단가 / 현재가</div>
+          <div class="hs-value">${fmtKRW(buy.c)} → ${fmtKRW(last.c)}</div>
+          <div class="hs-sub">${multiX}배</div>
+        </div>
+        <div class="hr-stat">
+          <div class="hs-label">총 수익률</div>
+          <div class="hs-value ${ret>=0?'pos':'neg'}">${fmtPct(ret)}</div>
+          <div class="hs-sub">${yrs.toFixed(1)}년 누적</div>
+        </div>
+        <div class="hr-stat">
+          <div class="hs-label">연환산 (CAGR)</div>
+          <div class="hs-value ${cagr!=null && cagr>=0?'pos':'neg'}">${cagr==null?'—':fmtPct(cagr)}</div>
+          <div class="hs-sub">매년 평균</div>
+        </div>
+        <div class="hr-stat">
+          <div class="hs-label">평가손익</div>
+          <div class="hs-value ${pnl>=0?'pos':'neg'}">${pnl>=0?'+':''}${fmtKRW(pnl)}</div>
+          <div class="hs-sub">원 기준</div>
+        </div>
+      </div>
+      <div class="hr-chart">
+        <div class="hr-chart-head">
+          <div class="hr-chart-title">📊 ${stock.name} 가격 추이</div>
+          <div class="hr-chart-range">${ymd(buy.d)} ~ ${ymd(last.d)}</div>
+        </div>
+        ${renderChart(candles, buy.d, last.d)}
+      </div>
+    `;
+    r.classList.add('show');
+  }
+
+  function renderChart(candles, fromYmd, toYmd){
+    const slice = candles.filter(c => c.d >= fromYmd && c.d <= toYmd);
+    if (slice.length < 2) return '';
+    const W = 600, H = 160, P = 8;
+    const closes = slice.map(c => c.c);
+    const min = Math.min(...closes), max = Math.max(...closes);
+    const range = (max - min) || 1;
+    const step = (W - P*2) / (slice.length - 1);
+    const points = slice.map((c,i)=>{
+      const x = P + i*step;
+      const y = H - P - ((c.c - min)/range) * (H - P*2);
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
+    const startY = H - P - ((closes[0] - min)/range) * (H - P*2);
+    const endY = H - P - ((closes[closes.length-1] - min)/range) * (H - P*2);
+    const isUp = closes[closes.length-1] >= closes[0];
+    const color = isUp ? '#0C8A5A' : '#D63939';
+    const fill = isUp ? 'rgba(12,138,90,0.08)' : 'rgba(214,57,57,0.08)';
+    const areaPoints = `${P},${H-P} ${points} ${(W-P).toFixed(1)},${H-P}`;
+    return `
+      <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+        <polygon points="${areaPoints}" fill="${fill}" />
+        <polyline points="${points}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+        <circle cx="${P}" cy="${startY}" r="3" fill="${color}" />
+        <circle cx="${(W-P).toFixed(1)}" cy="${endY}" r="3" fill="${color}" />
+      </svg>
+    `;
+  }
+
+  // load data
+  fetch('/tools/data/history.json').then(r=>r.json()).then(d=>{
+    DATA = d;
+    renderPopular();
+    // pre-select 삼성전자
+    if (DATA.stocks['005930']) {
+      selected = '005930';
+      qEl.value = DATA.stocks['005930'].name;
+      compute();
+    }
+  }).catch(()=>{
+    $('hr-empty').textContent = '데이터를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.';
+  });
+})();
+</script>
+
+</body>
+</html>
