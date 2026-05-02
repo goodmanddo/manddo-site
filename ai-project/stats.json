@@ -1,0 +1,18 @@
+{
+  "season": 1,
+  "season_name": "시즌1: AI에게 2,000만원을 맡기는 1년",
+  "start_date": "2026-05-03",
+  "end_date": "2027-05-03",
+  "seed_krw": 20000000,
+  "current_value_krw": 20000000,
+  "cumulative_return_pct": 0.00,
+  "realized_pnl_krw": 0,
+  "trade_count": 0,
+  "win_count": 0,
+  "loss_count": 0,
+  "win_rate_pct": null,
+  "max_drawdown_pct": 0.00,
+  "last_updated": "2026-05-03",
+  "operation_account": "한국투자증권 실전투자",
+  "automation_status": "운영중"
+}

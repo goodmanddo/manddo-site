@@ -25,6 +25,7 @@
     <a href="/" class="logo">만또<span>.kr</span></a>
     <nav class="nav">
       <a href="/" class="active">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
@@ -46,6 +47,50 @@
       <a href="/stock/" class="hero-btn ghost">종목 리포트 전체</a>
     </div>
   </section>
+
+  <a href="/ai-project/" class="home-proj-card" id="home-proj-card">
+    <div class="hpc-left">
+      <div class="hpc-badge">🧪 진행 중인 1년 실험</div>
+      <div class="hpc-title">AI에게 2,000만원을 맡기는 1년</div>
+      <div class="hpc-desc">수익을 추구하는 게 아니라, AI가 인간보다 잘하는 것 / 못하는 것을 1년간 기록합니다.</div>
+    </div>
+    <div class="hpc-right">
+      <div class="hpc-stat"><span>D+</span><strong id="hpc-day">1</strong></div>
+      <div class="hpc-stat"><span>시드</span><strong>2,000만</strong></div>
+      <div class="hpc-stat"><span>누적</span><strong id="hpc-cum">+0.00%</strong></div>
+      <div class="hpc-cta">전체 실험 보기 →</div>
+    </div>
+  </a>
+  <style>
+    .home-proj-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(135deg,#0d1f3c 0%,#1B64DA 100%);border-radius:16px;padding:22px 24px;margin:0 0 28px;color:#fff;text-decoration:none;position:relative;overflow:hidden;transition:transform .15s ease, box-shadow .15s ease}
+    .home-proj-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.05);border-radius:50%}
+    .home-proj-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,31,60,0.2)}
+    .hpc-left{flex:1 1 320px;position:relative;z-index:1}
+    .hpc-badge{display:inline-block;background:rgba(255,255,255,0.18);padding:4px 10px;border-radius:14px;font-size:11.5px;font-weight:700;letter-spacing:0.3px;margin-bottom:8px}
+    .hpc-title{font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px}
+    .hpc-desc{font-size:13px;line-height:1.5;opacity:0.88;max-width:520px}
+    .hpc-right{display:flex;flex-wrap:wrap;align-items:center;gap:14px;position:relative;z-index:1}
+    .hpc-stat{text-align:right}
+    .hpc-stat span{display:block;font-size:11px;opacity:0.7;margin-bottom:2px}
+    .hpc-stat strong{font-size:17px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.02em}
+    .hpc-cta{background:rgba(255,255,255,0.95);color:#0d1f3c;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap}
+    @media(max-width:640px){.home-proj-card{flex-direction:column;align-items:flex-start}.hpc-right{width:100%;justify-content:space-between;gap:8px}.hpc-cta{width:100%;text-align:center;margin-top:6px}}
+  </style>
+  <script>
+  (function(){
+    const start=new Date('2026-05-03T00:00:00+09:00');
+    const dayN=Math.max(1,Math.floor((new Date()-start)/86400000)+1);
+    document.getElementById('hpc-day').textContent=dayN;
+    fetch('/ai-project/stats.json?t='+Date.now()).then(r=>r.ok?r.json():null).then(s=>{
+      if(!s)return;
+      const v=s.cumulative_return_pct;
+      const el=document.getElementById('hpc-cum');
+      el.textContent=(v>=0?'+':'')+v.toFixed(2)+'%';
+      if(v>0)el.style.color='#90EE90';
+      else if(v<0)el.style.color='#FFB3B3';
+    }).catch(()=>{});
+  })();
+  </script>
 
   <section class="cat-section">
     <div class="cat-head">

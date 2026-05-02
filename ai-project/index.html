@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 1년 투자 프로젝트 — 시드 2,000만원으로 실험하는 1년 | 만또 투자 인사이트</title>
+<meta name="description" content="시드 2,000만원으로 시작한 AI 자동매매 1년 실험. 수익을 추구하는 게 아니라 AI가 인간보다 잘하는 것 / 못하는 것을 1년간 기록합니다. 누적 수익률·거래 횟수·승률 라이브 대시보드 + 일일·주간·월간 리포트 허브.">
+<meta name="keywords" content="AI자동매매, AI투자, 주식자동매매, AI투자실험, 2000만원AI매매, AI투자후기, AI매매일지">
+<meta property="og:title" content="AI 1년 투자 프로젝트 — 시드 2,000만원 실험 | 만또">
+<meta property="og:description" content="수익률 추구가 아닌 학습이 목적인 AI 자동매매 1년 프로젝트. 라이브 대시보드와 모든 리포트를 한 페이지에.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/ai-project/">
+<link rel="canonical" href="https://manddo.kr/ai-project/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .proj-hero { background:linear-gradient(135deg,#0d1f3c 0%,#1B64DA 100%); border-radius:20px; padding:36px 28px; margin:24px 0 32px; color:#fff; position:relative; overflow:hidden; }
+  .proj-hero::before { content:''; position:absolute; top:-60px; right:-60px; width:240px; height:240px; background:rgba(255,255,255,0.05); border-radius:50%; }
+  .proj-hero::after { content:''; position:absolute; bottom:-40px; left:-40px; width:160px; height:160px; background:rgba(255,255,255,0.04); border-radius:50%; }
+  .proj-hero-inner { position:relative; z-index:1; }
+  .proj-badge { display:inline-block; background:rgba(255,255,255,0.15); padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:0.5px; margin-bottom:12px; }
+  .proj-hero h1 { margin:0 0 8px; font-size:32px; font-weight:800; letter-spacing:-0.02em; }
+  .proj-hero .lead { font-size:16px; line-height:1.6; opacity:0.92; margin:0 0 18px; max-width:640px; }
+  .proj-hero .concept { display:inline-block; background:rgba(255,255,255,0.1); padding:10px 14px; border-radius:10px; font-size:13.5px; line-height:1.6; max-width:640px; }
+  .proj-progress { margin-top:20px; }
+  .proj-progress-bar { height:8px; background:rgba(255,255,255,0.15); border-radius:4px; overflow:hidden; margin-bottom:8px; }
+  .proj-progress-fill { height:100%; background:linear-gradient(90deg,#90EE90,#FFD700); border-radius:4px; transition:width 0.6s ease; }
+  .proj-progress-meta { display:flex; justify-content:space-between; font-size:12px; opacity:0.85; }
+  .proj-dash { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:24px 0 32px; }
+  .proj-stat { background:#fff; border:1px solid #eef0f3; border-radius:14px; padding:16px 16px 14px; }
+  .proj-stat .ps-label { font-size:11.5px; color:#8b95a1; font-weight:600; letter-spacing:0.02em; margin-bottom:6px; }
+  .proj-stat .ps-value { font-size:20px; font-weight:800; color:#191f28; font-family:'SF Mono',ui-monospace,monospace; letter-spacing:-0.02em; }
+  .proj-stat .ps-value.pos { color:#0C8A5A; }
+  .proj-stat .ps-value.neg { color:#D63939; }
+  .proj-stat .ps-sub { font-size:11px; color:#8b95a1; margin-top:3px; }
+  .proj-section { margin:40px 0; }
+  .proj-section h2 { font-size:22px; margin:0 0 12px; }
+  .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:14px; }
+  .why-card { background:#f8fafc; border-left:3px solid #1B64DA; padding:14px 16px; border-radius:8px; }
+  .why-card h3 { font-size:14px; margin:0 0 6px; color:#0d1f3c; }
+  .why-card p { font-size:13px; line-height:1.6; color:#374151; margin:0; }
+  .rules-list { list-style:none; padding:0; margin:14px 0 0; }
+  .rules-list li { padding:12px 14px; background:#fff; border:1px solid #eef0f3; border-radius:10px; margin-bottom:8px; font-size:14px; line-height:1.6; }
+  .rules-list b { color:#1B64DA; }
+  .rules-list .private { color:#9ca3af; font-style:italic; }
+  .timeline { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin-top:14px; }
+  .timeline-item { background:#fff; border:1px solid #eef0f3; border-radius:10px; padding:14px; }
+  .timeline-item .tl-when { font-size:11.5px; color:#1B64DA; font-weight:700; margin-bottom:4px; letter-spacing:0.5px; }
+  .timeline-item .tl-what { font-size:14px; font-weight:600; margin-bottom:4px; }
+  .timeline-item .tl-desc { font-size:12.5px; color:#6b7280; line-height:1.5; }
+  .hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-top:14px; }
+  .hub-card { display:block; padding:16px 18px; background:#fff; border:1px solid #e5e7eb; border-radius:12px; text-decoration:none; color:#191f28; transition:all .15s ease; }
+  .hub-card:hover { border-color:#1B64DA; box-shadow:0 2px 12px rgba(27,100,218,0.1); transform:translateY(-1px); }
+  .hub-card .hub-cat { font-size:11.5px; color:#1B64DA; font-weight:700; margin-bottom:4px; letter-spacing:0.5px; }
+  .hub-card .hub-title { font-size:15px; font-weight:700; margin-bottom:4px; }
+  .hub-card .hub-desc { font-size:12.5px; color:#6b7280; line-height:1.5; }
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <a class="back-btn" href="/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <section class="proj-hero">
+    <div class="proj-hero-inner">
+      <div class="proj-badge">🧪 진행 중인 실험 · 시즌 1</div>
+      <h1>AI에게 2,000만원을 맡기는 1년</h1>
+      <p class="lead">한국투자증권 실전 계좌에 시드 <b>2,000만원</b>을 넣고, AI가 1년간 자동매매하는 모습을 매일 기록하는 공개 실험입니다.</p>
+      <div class="concept">
+        💡 <b>이 프로젝트의 목적은 수익이 아닙니다.</b> 1년 후 누적 수익률이 +20%든 −20%든, 이 사이트가 답하려는 질문은 따로 있어요 — <i>"AI는 인간보다 무엇을 잘하고, 무엇을 못하는가?"</i>
+      </div>
+      <div class="proj-progress">
+        <div class="proj-progress-bar"><div class="proj-progress-fill" id="progress-fill" style="width:0%"></div></div>
+        <div class="proj-progress-meta">
+          <span><b id="day-counter">D+1</b> · <span id="progress-pct">0.3%</span> 진행</span>
+          <span>2026-05-03 → 2027-05-03</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj-section">
+    <h2>📊 라이브 대시보드</h2>
+    <div class="proj-dash">
+      <div class="proj-stat">
+        <div class="ps-label">시드</div>
+        <div class="ps-value">2,000만</div>
+        <div class="ps-sub">시즌1 시작 자본</div>
+      </div>
+      <div class="proj-stat">
+        <div class="ps-label">현재 평가액</div>
+        <div class="ps-value" id="current-value">2,000만</div>
+        <div class="ps-sub" id="current-sub">시드 그대로</div>
+      </div>
+      <div class="proj-stat">
+        <div class="ps-label">누적 수익률</div>
+        <div class="ps-value" id="cum-return">+0.00%</div>
+        <div class="ps-sub" id="cum-sub">시즌 시작</div>
+      </div>
+      <div class="proj-stat">
+        <div class="ps-label">평가손익</div>
+        <div class="ps-value" id="pnl-krw">0</div>
+        <div class="ps-sub">원 단위</div>
+      </div>
+      <div class="proj-stat">
+        <div class="ps-label">거래 횟수</div>
+        <div class="ps-value" id="trade-count">0</div>
+        <div class="ps-sub" id="trade-sub">매수·매도 합산</div>
+      </div>
+      <div class="proj-stat">
+        <div class="ps-label">승률</div>
+        <div class="ps-value" id="win-rate">—</div>
+        <div class="ps-sub">청산 기준</div>
+      </div>
+      <div class="proj-stat">
+        <div class="ps-label">최대 낙폭 (MDD)</div>
+        <div class="ps-value" id="mdd">0.00%</div>
+        <div class="ps-sub">시즌 누적</div>
+      </div>
+      <div class="proj-stat">
+        <div class="ps-label">자동화 상태</div>
+        <div class="ps-value" style="font-size:15px;color:#0C8A5A">● 운영중</div>
+        <div class="ps-sub">한투 실전</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#8b95a1;margin-top:6px">마지막 업데이트: <span id="last-updated">2026-05-03</span> · 한국투자증권 실전 계좌의 실 잔고 기준</p>
+  </section>
+
+  <section class="proj-section">
+    <h2>🎯 왜 이걸 1년이나 하는가</h2>
+    <p style="font-size:14.5px;line-height:1.7;color:#374151">"AI 추천 종목 보고 따라사면 돈 번다"는 자극적 콘텐츠가 흔합니다. 만또는 그 반대로 갑니다. 수익률만 추구하면 사이트의 신뢰가 시장 변동에 종속돼버려요. 그래서 만또는 <b>실험 그 자체</b>를 콘텐츠로 만들기로 했습니다. 1년간 관찰하려는 4가지:</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>1. AI가 인간보다 잘하는 것</h3>
+        <p>새벽에 깨어있고, 감정 없이 손절하고, 수십 종목을 동시에 본다. 사람이 부러워할 만한 부분.</p>
+      </div>
+      <div class="why-card">
+        <h3>2. AI가 인간보다 못하는 것</h3>
+        <p>맥락 없는 매매, 정성 변수(공시·뉴스·테마) 무시, 학습 데이터 밖의 사건에 약함.</p>
+      </div>
+      <div class="why-card">
+        <h3>3. 같은 데이터, 다른 결정</h3>
+        <p>AI가 매수했지만 사람은 안 사는 종목 / 사람은 사고 싶은데 AI는 패스하는 종목 — 그 갭이 가장 흥미로움.</p>
+      </div>
+      <div class="why-card">
+        <h3>4. 1년 후 시즌 회고</h3>
+        <p>마이너스로 끝나도 OK. "왜 졌는지" 자체가 콘텐츠. 시즌2를 위한 가설 정리.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj-section">
+    <h2>📋 실험 규칙</h2>
+    <ul class="rules-list">
+      <li><b>시드</b> · 2,000만원 (한국투자증권 실전투자 계좌, 모의투자 아님)</li>
+      <li><b>운영 방식</b> · 한투 OpenAPI 자동매매 + 사람이 큰 흐름·시장 이벤트만 검토</li>
+      <li><b>거래 종목</b> · 코스피·코스닥 (해외주식·파생·암호화폐 제외)</li>
+      <li><b>보유 기간</b> · 단기 스윙 (보통 며칠~수주)</li>
+      <li><b>리스크 관리</b> · 종목당 최대 비중 제한, 시장 급변 시 현금 비중 상향</li>
+      <li class="private"><b>비공개 항목</b> · 진입·손절 시그널의 구체 수치, 사용 중인 지표 조합 (운영 보안상 비공개. 결과만 공개)</li>
+      <li><b>중도 입출금</b> · 1년 동안 추가 입금 없음. 시즌1은 처음 들어간 2,000만원으로만 운영</li>
+    </ul>
+  </section>
+
+  <section class="proj-section">
+    <h2>📅 공개 일정</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-when">매일</div>
+        <div class="tl-what">AI 매매 일지</div>
+        <div class="tl-desc">신규 매수·청산·홀딩 종목과 그 근거를 매일 공개</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-when">매주 금요일</div>
+        <div class="tl-what">주간 결산</div>
+        <div class="tl-desc">한 주 누적 수익률 + 잘한 거래 / 못한 거래 회고</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-when">매월 말</div>
+        <div class="tl-what">월간 회고</div>
+        <div class="tl-desc">"AI가 잘한 결정 TOP3 / 못한 결정 TOP3"</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-when">2027-05-03</div>
+        <div class="tl-what">시즌1 결산</div>
+        <div class="tl-desc">365일 후 누적 결과 + 시즌2 시작 여부 결정</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj-section">
+    <h2>🔗 모든 리포트 보기</h2>
+    <p style="font-size:14px;color:#374151;line-height:1.6">이 프로젝트와 연결된 모든 콘텐츠는 아래에서 볼 수 있어요.</p>
+    <div class="hub-grid">
+      <a href="/ai-log/" class="hub-card">
+        <div class="hub-cat">AI 매매 일지</div>
+        <div class="hub-title">오늘 AI의 선택</div>
+        <div class="hub-desc">매일 갱신되는 AI 매매 로그. 신규 매수, 청산, 잘못 산 종목까지.</div>
+      </a>
+      <a href="/stock/" class="hub-card">
+        <div class="hub-cat">차트분석</div>
+        <div class="hub-title">종목 리포트</div>
+        <div class="hub-desc">코스피·코스닥 종목의 세력·차트·수급 분석 리포트.</div>
+      </a>
+      <a href="/stock/sector/" class="hub-card">
+        <div class="hub-cat">큐레이션</div>
+        <div class="hub-title">업종별 종목</div>
+        <div class="hub-desc">반도체·2차전지·바이오·금융 등 8개 섹터로 묶은 종목 큐레이션.</div>
+      </a>
+      <a href="/learn/" class="hub-card">
+        <div class="hub-cat">학습</div>
+        <div class="hub-title">차트 패턴·투자 가이드</div>
+        <div class="hub-desc">AI도 사람도 알아야 하는 차트 패턴과 밸류에이션 원리.</div>
+      </a>
+      <a href="/learn/glossary.html" class="hub-card">
+        <div class="hub-cat">학습 · 사전</div>
+        <div class="hub-title">투자 용어 사전</div>
+        <div class="hub-desc">PBR·EV/EBITDA·MDD 같은 50개 핵심 용어 한 페이지 사전.</div>
+      </a>
+      <a href="/blog/" class="hub-card">
+        <div class="hub-cat">블로그</div>
+        <div class="hub-title">에디토리얼</div>
+        <div class="hub-desc">시장 이벤트·도구·책 리뷰까지 만또가 직접 쓰는 글.</div>
+      </a>
+    </div>
+  </section>
+
+  <div class="callout tip">
+    <b>💡 같이 실험해보고 싶다면</b>
+    이 사이트는 누구도 가입할 필요 없고, 광고 외에는 비용도 받지 않습니다. AI 매매 결과가 매일 공개되니, 본인 매매 판단의 비교 잣대로만 활용해주세요. 본 프로젝트의 결과를 따라 매매하다 손실이 나도 책임지지 않습니다.
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠ 투자 자문업자가 아닙니다</b><br>
+    본 프로젝트는 만또 운영자의 자기 자본으로 진행하는 공개 실험이며, 특정 종목의 매수·매도를 권유하지 않습니다. 모든 거래 결과는 실 잔고 기준으로 공개되지만, 동일 결과를 보장하지 않습니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // D+ counter & progress bar
+  const start = new Date('2026-05-03T00:00:00+09:00');
+  const end = new Date('2027-05-03T00:00:00+09:00');
+  const now = new Date();
+  const totalDays = Math.round((end - start) / 86400000);
+  const dayN = Math.max(1, Math.floor((now - start) / 86400000) + 1);
+  const pct = Math.min(100, (dayN / totalDays) * 100);
+  document.getElementById('day-counter').textContent = 'D+' + dayN;
+  document.getElementById('progress-pct').textContent = pct.toFixed(1) + '%';
+  document.getElementById('progress-fill').style.width = pct.toFixed(2) + '%';
+
+  // Stats from stats.json
+  fetch('/ai-project/stats.json?t=' + Date.now())
+    .then(r => r.ok ? r.json() : null)
+    .then(s => {
+      if (!s) return;
+      const fmtKRW = n => (n/10000).toFixed(0) + '만';
+      const fmtPct = n => (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
+      const fmtPnl = n => (n >= 0 ? '+' : '') + n.toLocaleString('ko-KR');
+
+      document.getElementById('current-value').textContent = fmtKRW(s.current_value_krw);
+      const pnl = s.current_value_krw - s.seed_krw;
+      document.getElementById('current-sub').textContent = pnl === 0 ? '시드 그대로' : fmtPnl(pnl) + '원';
+      const cumEl = document.getElementById('cum-return');
+      cumEl.textContent = fmtPct(s.cumulative_return_pct);
+      cumEl.classList.toggle('pos', s.cumulative_return_pct > 0);
+      cumEl.classList.toggle('neg', s.cumulative_return_pct < 0);
+      document.getElementById('cum-sub').textContent = pnl === 0 ? '시즌 시작' : '시드 대비';
+      const pnlEl = document.getElementById('pnl-krw');
+      pnlEl.textContent = fmtPnl(pnl);
+      pnlEl.classList.toggle('pos', pnl > 0);
+      pnlEl.classList.toggle('neg', pnl < 0);
+      document.getElementById('trade-count').textContent = s.trade_count;
+      if (s.trade_count > 0) {
+        document.getElementById('trade-sub').textContent = '승 ' + s.win_count + ' · 패 ' + s.loss_count;
+      }
+      document.getElementById('win-rate').textContent = s.win_rate_pct == null ? '—' : s.win_rate_pct + '%';
+      document.getElementById('mdd').textContent = (s.max_drawdown_pct).toFixed(2) + '%';
+      document.getElementById('last-updated').textContent = s.last_updated;
+    })
+    .catch(()=>{});
+})();
+</script>
+
+</body>
+</html>
