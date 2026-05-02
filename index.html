@@ -53,28 +53,29 @@
       <div class="hpc-badge">🧪 진행 중인 1년 실험</div>
       <div class="hpc-title">AI에게 2,000만원을 맡기는 1년</div>
       <div class="hpc-desc">수익을 추구하는 게 아니라, AI가 인간보다 잘하는 것 / 못하는 것을 1년간 기록합니다.</div>
+      <div class="hpc-stats-row">
+        <div class="hpc-stat"><span>D+</span><strong id="hpc-day">1</strong></div>
+        <div class="hpc-stat"><span>시드</span><strong>2,000만</strong></div>
+        <div class="hpc-stat"><span>누적</span><strong id="hpc-cum">+0.00%</strong></div>
+      </div>
+      <div class="hpc-cta">📊 1년 실험 전체 보기 →</div>
     </div>
-    <div class="hpc-right">
-      <div class="hpc-stat"><span>D+</span><strong id="hpc-day">1</strong></div>
-      <div class="hpc-stat"><span>시드</span><strong>2,000만</strong></div>
-      <div class="hpc-stat"><span>누적</span><strong id="hpc-cum">+0.00%</strong></div>
-      <div class="hpc-cta">전체 실험 보기 →</div>
-    </div>
+    <div class="hpc-deco"></div>
   </a>
   <style>
-    .home-proj-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(135deg,#0d1f3c 0%,#1B64DA 100%);border-radius:16px;padding:22px 24px;margin:0 0 28px;color:#fff;text-decoration:none;position:relative;overflow:hidden;transition:transform .15s ease, box-shadow .15s ease}
-    .home-proj-card::before{content:'';position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:rgba(255,255,255,0.05);border-radius:50%}
-    .home-proj-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,31,60,0.2)}
-    .hpc-left{flex:1 1 320px;position:relative;z-index:1}
-    .hpc-badge{display:inline-block;background:rgba(255,255,255,0.18);padding:4px 10px;border-radius:14px;font-size:11.5px;font-weight:700;letter-spacing:0.3px;margin-bottom:8px}
-    .hpc-title{font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px}
-    .hpc-desc{font-size:13px;line-height:1.5;opacity:0.88;max-width:520px}
-    .hpc-right{display:flex;flex-wrap:wrap;align-items:center;gap:14px;position:relative;z-index:1}
-    .hpc-stat{text-align:right}
-    .hpc-stat span{display:block;font-size:11px;opacity:0.7;margin-bottom:2px}
-    .hpc-stat strong{font-size:17px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.02em}
-    .hpc-cta{background:rgba(255,255,255,0.95);color:#0d1f3c;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap}
-    @media(max-width:640px){.home-proj-card{flex-direction:column;align-items:flex-start}.hpc-right{width:100%;justify-content:space-between;gap:8px}.hpc-cta{width:100%;text-align:center;margin-top:6px}}
+    .home-proj-card{display:block;background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:16px;padding:28px 24px;margin:0 0 32px;color:#fff;text-decoration:none;position:relative;overflow:hidden;transition:transform .15s ease, box-shadow .15s ease}
+    .home-proj-card::before{content:'';position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(255,255,255,0.08);border-radius:50%;pointer-events:none}
+    .home-proj-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,71,161,0.25)}
+    .home-proj-card .hpc-left{position:relative;z-index:1}
+    .home-proj-card .hpc-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;opacity:0.85;margin-bottom:10px;color:#fff}
+    .home-proj-card .hpc-title{font-size:24px;font-weight:800;letter-spacing:-0.02em;margin-bottom:6px;color:#fff}
+    .home-proj-card .hpc-desc{font-size:13.5px;line-height:1.6;opacity:0.85;margin-bottom:18px;max-width:600px;color:#fff}
+    .home-proj-card .hpc-stats-row{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px}
+    .home-proj-card .hpc-stat{color:#fff}
+    .home-proj-card .hpc-stat span{display:block;font-size:11px;opacity:0.65;margin-bottom:3px;font-weight:500;color:#fff}
+    .home-proj-card .hpc-stat strong{font-size:20px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.02em;color:#fff}
+    .home-proj-card .hpc-cta{display:inline-block;font-size:13.5px;opacity:0.92;color:#fff;font-weight:600}
+    @media(max-width:640px){.home-proj-card{padding:22px 18px}.home-proj-card .hpc-title{font-size:20px}.home-proj-card .hpc-stats-row{gap:16px}.home-proj-card .hpc-stat strong{font-size:17px}}
   </style>
   <script>
   (function(){

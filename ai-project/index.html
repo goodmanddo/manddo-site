@@ -13,18 +13,20 @@
 <link rel="canonical" href="https://manddo.kr/ai-project/">
 <link rel="stylesheet" href="/css/main.css">
 <style>
-  .proj-hero { background:linear-gradient(135deg,#0d1f3c 0%,#1B64DA 100%); border-radius:20px; padding:36px 28px; margin:24px 0 32px; color:#fff; position:relative; overflow:hidden; }
-  .proj-hero::before { content:''; position:absolute; top:-60px; right:-60px; width:240px; height:240px; background:rgba(255,255,255,0.05); border-radius:50%; }
-  .proj-hero::after { content:''; position:absolute; bottom:-40px; left:-40px; width:160px; height:160px; background:rgba(255,255,255,0.04); border-radius:50%; }
+  .proj-hero { background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%); border-radius:16px; padding:28px 24px; margin:24px 0 32px; color:#fff; position:relative; overflow:hidden; }
+  .proj-hero::before { content:''; position:absolute; top:-20px; right:-20px; width:120px; height:120px; background:rgba(255,255,255,0.08); border-radius:50%; pointer-events:none; }
   .proj-hero-inner { position:relative; z-index:1; }
-  .proj-badge { display:inline-block; background:rgba(255,255,255,0.15); padding:5px 12px; border-radius:20px; font-size:12px; font-weight:700; letter-spacing:0.5px; margin-bottom:12px; }
-  .proj-hero h1 { margin:0 0 8px; font-size:32px; font-weight:800; letter-spacing:-0.02em; }
-  .proj-hero .lead { font-size:16px; line-height:1.6; opacity:0.92; margin:0 0 18px; max-width:640px; }
-  .proj-hero .concept { display:inline-block; background:rgba(255,255,255,0.1); padding:10px 14px; border-radius:10px; font-size:13.5px; line-height:1.6; max-width:640px; }
-  .proj-progress { margin-top:20px; }
-  .proj-progress-bar { height:8px; background:rgba(255,255,255,0.15); border-radius:4px; overflow:hidden; margin-bottom:8px; }
-  .proj-progress-fill { height:100%; background:linear-gradient(90deg,#90EE90,#FFD700); border-radius:4px; transition:width 0.6s ease; }
-  .proj-progress-meta { display:flex; justify-content:space-between; font-size:12px; opacity:0.85; }
+  .proj-badge { display:inline-block; font-size:12px; font-weight:600; letter-spacing:1px; text-transform:uppercase; opacity:0.85; margin-bottom:10px; color:#fff; }
+  .proj-hero h1 { margin:0 0 8px; font-size:28px; font-weight:800; letter-spacing:-0.02em; color:#fff; }
+  .proj-hero .lead { font-size:15px; line-height:1.6; opacity:0.92; margin:0 0 16px; max-width:640px; color:#fff; }
+  .proj-hero .lead b { color:#fff; }
+  .proj-hero .concept { display:block; background:rgba(255,255,255,0.12); padding:12px 14px; border-radius:10px; font-size:13.5px; line-height:1.6; max-width:640px; color:#fff; }
+  .proj-hero .concept b, .proj-hero .concept i { color:#fff; }
+  .proj-progress { margin-top:18px; }
+  .proj-progress-bar { height:8px; background:rgba(255,255,255,0.2); border-radius:4px; overflow:hidden; margin-bottom:8px; }
+  .proj-progress-fill { height:100%; background:#fff; border-radius:4px; transition:width 0.6s ease; opacity:0.95; }
+  .proj-progress-meta { display:flex; justify-content:space-between; font-size:12px; opacity:0.9; color:#fff; }
+  .proj-progress-meta b { color:#fff; }
   .proj-dash { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:24px 0 32px; }
   .proj-stat { background:#fff; border:1px solid #eef0f3; border-radius:14px; padding:16px 16px 14px; }
   .proj-stat .ps-label { font-size:11.5px; color:#8b95a1; font-weight:600; letter-spacing:0.02em; margin-bottom:6px; }
