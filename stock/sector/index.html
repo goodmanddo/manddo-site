@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>업종별 종목 큐레이션 — 반도체·2차전지·바이오·금융 | 만또 차트분석</title>
+<meta name="description" content="만또에서 분석 중인 코스피·코스닥 종목을 반도체·2차전지·바이오·자동차·금융·방산·인터넷·유통 8개 업종으로 묶어 한 눈에 보는 큐레이션. 각 업종별 차트 분석 리포트로 바로 이동.">
+<meta name="keywords" content="업종별주식, 섹터분석, 반도체주, 2차전지주, 바이오주, 방산주, 금융주, 종목추천">
+<meta property="og:title" content="업종별 종목 큐레이션 — 만또 차트분석">
+<meta property="og:description" content="반도체·2차전지·바이오·자동차·금융·방산·인터넷·유통 8개 업종 대표 종목을 한 페이지에.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/stock/sector/">
+<link rel="canonical" href="https://manddo.kr/stock/sector/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .sector-toc { display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 32px; padding:16px; background:#f7f8fb; border-radius:12px; }
+  .sector-toc a { display:inline-block; padding:6px 12px; background:#fff; border:1px solid #e2e5ed; border-radius:20px; font-size:13px; color:#1B64DA; text-decoration:none; font-weight:600; }
+  .sector-toc a:hover { background:#1B64DA; color:#fff; border-color:#1B64DA; }
+  .sector-block { margin:48px 0; padding-top:24px; border-top:1px solid #eef0f5; }
+  .sector-head { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:8px; }
+  .sector-head h2 { margin:0; font-size:24px; }
+  .sector-meta { font-size:12px; color:#6b7280; }
+  .sector-intro { color:#374151; line-height:1.7; margin:0 0 20px; }
+  .stock-row { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:12px; }
+  .stock-pill { display:block; padding:14px 16px; background:#fff; border:1px solid #e5e7eb; border-radius:10px; text-decoration:none; color:#111827; transition:all .15s ease; }
+  .stock-pill:hover { border-color:#1B64DA; box-shadow:0 2px 8px rgba(27,100,218,0.08); transform:translateY(-1px); }
+  .stock-pill .pill-name { font-weight:700; font-size:15px; margin-bottom:2px; }
+  .stock-pill .pill-code { font-size:12px; color:#6b7280; font-family:'SF Mono', Menlo, monospace; }
+  .sector-takeaway { margin-top:16px; padding:12px 14px; background:#fff8e6; border-left:3px solid #f59e0b; border-radius:6px; font-size:13px; color:#78350f; line-height:1.6; }
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/" class="active">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <a class="back-btn" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="breadcrumb">
+    <a href="/stock/">차트분석 리포트</a><span class="sep">/</span>업종별 큐레이션
+  </div>
+
+  <h1>🗂️ 업종별 종목 큐레이션</h1>
+  <p class="sub">만또에서 차트분석을 발행한 종목을 8개 핵심 업종으로 묶었습니다. 같은 업종이라도 사이클·실적·정책 변수에 따라 흐름이 갈리는 시점이 있어요.</p>
+
+  <div class="callout info">
+    <b>이 페이지를 읽는 법</b>
+    각 섹션은 "이 업종이 지금 왜 흥미로운지" 짧은 코멘트 + 대표 종목 리스트로 구성됩니다. 종목 이름을 누르면 만또에서 작성한 세력·차트 구조·수급 종합 리포트로 이동해요.
+  </div>
+
+  <nav class="sector-toc" aria-label="업종 목차">
+    <a href="#semi">🔬 반도체</a>
+    <a href="#battery">🔋 2차전지</a>
+    <a href="#bio">💊 바이오/제약</a>
+    <a href="#auto">🚗 자동차</a>
+    <a href="#finance">🏦 금융</a>
+    <a href="#defense">✈️ 방산/조선</a>
+    <a href="#internet">🎮 인터넷/엔터</a>
+    <a href="#consumer">🛒 유통/소비재</a>
+  </nav>
+
+  <!-- 반도체 -->
+  <section class="sector-block" id="semi">
+    <div class="sector-head">
+      <h2>🔬 반도체</h2>
+      <span class="sector-meta">코스피·코스닥 · 18종목</span>
+    </div>
+    <p class="sector-intro">메모리(D램·낸드)는 사이클 산업, 비메모리·장비는 고객사 캐파에 후행. 만또에서는 메모리 양강(삼성전자·SK하이닉스)부터 후공정 장비(한미반도체·HPSP), 소부장(동진쎄미켐·이오테크닉스·원익IPS), 측정장비(파크시스템스·넥스틴), 기판(이수페타시스·LG이노텍·삼성전기)까지 밸류체인 전체를 다룹니다.</p>
+    <div class="stock-row">
+      <a href="/stock/005930.html" class="stock-pill"><div class="pill-name">삼성전자</div><div class="pill-code">005930</div></a>
+      <a href="/stock/000660.html" class="stock-pill"><div class="pill-name">SK하이닉스</div><div class="pill-code">000660</div></a>
+      <a href="/stock/042700.html" class="stock-pill"><div class="pill-name">한미반도체</div><div class="pill-code">042700</div></a>
+      <a href="/stock/403870.html" class="stock-pill"><div class="pill-name">HPSP</div><div class="pill-code">403870</div></a>
+      <a href="/stock/058470.html" class="stock-pill"><div class="pill-name">리노공업</div><div class="pill-code">058470</div></a>
+      <a href="/stock/005290.html" class="stock-pill"><div class="pill-name">동진쎄미켐</div><div class="pill-code">005290</div></a>
+      <a href="/stock/039030.html" class="stock-pill"><div class="pill-name">이오테크닉스</div><div class="pill-code">039030</div></a>
+      <a href="/stock/240810.html" class="stock-pill"><div class="pill-name">원익IPS</div><div class="pill-code">240810</div></a>
+      <a href="/stock/036930.html" class="stock-pill"><div class="pill-name">주성엔지니어링</div><div class="pill-code">036930</div></a>
+      <a href="/stock/031980.html" class="stock-pill"><div class="pill-name">피에스케이</div><div class="pill-code">031980</div></a>
+      <a href="/stock/084370.html" class="stock-pill"><div class="pill-name">유진테크</div><div class="pill-code">084370</div></a>
+      <a href="/stock/095610.html" class="stock-pill"><div class="pill-name">테스</div><div class="pill-code">095610</div></a>
+      <a href="/stock/348210.html" class="stock-pill"><div class="pill-name">넥스틴</div><div class="pill-code">348210</div></a>
+      <a href="/stock/140860.html" class="stock-pill"><div class="pill-name">파크시스템스</div><div class="pill-code">140860</div></a>
+      <a href="/stock/131290.html" class="stock-pill"><div class="pill-name">티에스이</div><div class="pill-code">131290</div></a>
+      <a href="/stock/067310.html" class="stock-pill"><div class="pill-name">하나마이크론</div><div class="pill-code">067310</div></a>
+      <a href="/stock/007660.html" class="stock-pill"><div class="pill-name">이수페타시스</div><div class="pill-code">007660</div></a>
+      <a href="/stock/011070.html" class="stock-pill"><div class="pill-name">LG이노텍</div><div class="pill-code">011070</div></a>
+      <a href="/stock/009150.html" class="stock-pill"><div class="pill-name">삼성전기</div><div class="pill-code">009150</div></a>
+      <a href="/stock/394280.html" class="stock-pill"><div class="pill-name">오픈엣지테크놀로지</div><div class="pill-code">394280</div></a>
+    </div>
+    <div class="sector-takeaway">⚠ 반도체는 "고객사 캐파 발표 → 장비 수주 → 매출 인식"까지 6~12개월 시차가 있어요. 차트 신고가만 보고 따라붙으면 사이클 꼭지에 잡히기 쉽습니다.</div>
+  </section>
+
+  <!-- 2차전지 -->
+  <section class="sector-block" id="battery">
+    <div class="sector-head">
+      <h2>🔋 2차전지</h2>
+      <span class="sector-meta">코스피 · 9종목</span>
+    </div>
+    <p class="sector-intro">셀 3사(LG에너지솔루션·삼성SDI·SK온/SK이노베이션) + 양극재(에코프로비엠·엘앤에프·포스코퓨처엠) + 지주/소재(LG화학·POSCO홀딩스). 미국 IRA·중국 CATL 점유율·전기차 수요 둔화 같은 매크로 변수 한 줄에 섹터 전체가 출렁이는 경향이 있습니다.</p>
+    <div class="stock-row">
+      <a href="/stock/373220.html" class="stock-pill"><div class="pill-name">LG에너지솔루션</div><div class="pill-code">373220</div></a>
+      <a href="/stock/006400.html" class="stock-pill"><div class="pill-name">삼성SDI</div><div class="pill-code">006400</div></a>
+      <a href="/stock/096770.html" class="stock-pill"><div class="pill-name">SK이노베이션</div><div class="pill-code">096770</div></a>
+      <a href="/stock/051910.html" class="stock-pill"><div class="pill-name">LG화학</div><div class="pill-code">051910</div></a>
+      <a href="/stock/247540.html" class="stock-pill"><div class="pill-name">에코프로비엠</div><div class="pill-code">247540</div></a>
+      <a href="/stock/086520.html" class="stock-pill"><div class="pill-name">에코프로</div><div class="pill-code">086520</div></a>
+      <a href="/stock/066970.html" class="stock-pill"><div class="pill-name">엘앤에프</div><div class="pill-code">066970</div></a>
+      <a href="/stock/003670.html" class="stock-pill"><div class="pill-name">포스코퓨처엠</div><div class="pill-code">003670</div></a>
+      <a href="/stock/005490.html" class="stock-pill"><div class="pill-name">POSCO홀딩스</div><div class="pill-code">005490</div></a>
+    </div>
+    <div class="sector-takeaway">⚠ 2차전지는 2023년 고점 대비 큰 폭으로 조정받은 뒤 횡보·재차 하락 흐름이 길어졌습니다. 바닥 잡는 신호로 쓰려면 단순 일봉 반등보다 주봉 매물대 돌파를 같이 봐야 해요.</div>
+  </section>
+
+  <!-- 바이오 -->
+  <section class="sector-block" id="bio">
+    <div class="sector-head">
+      <h2>💊 바이오/제약</h2>
+      <span class="sector-meta">코스피·코스닥 · 22종목</span>
+    </div>
+    <p class="sector-intro">CMO·CDMO 대형주(삼성바이오로직스·셀트리온)부터 항체·플랫폼(알테오젠·레고켐바이오·에이비엘바이오), 톡신·미용(휴젤·메디톡스·클래시스·파마리서치), 전통 제약(유한양행·녹십자·한미약품·대웅제약), AI 진단(루닛·뷰노)까지 만또에서 가장 종목 수가 많은 업종.</p>
+    <div class="stock-row">
+      <a href="/stock/207940.html" class="stock-pill"><div class="pill-name">삼성바이오로직스</div><div class="pill-code">207940</div></a>
+      <a href="/stock/068270.html" class="stock-pill"><div class="pill-name">셀트리온</div><div class="pill-code">068270</div></a>
+      <a href="/stock/196170.html" class="stock-pill"><div class="pill-name">알테오젠</div><div class="pill-code">196170</div></a>
+      <a href="/stock/000100.html" class="stock-pill"><div class="pill-name">유한양행</div><div class="pill-code">000100</div></a>
+      <a href="/stock/006280.html" class="stock-pill"><div class="pill-name">녹십자</div><div class="pill-code">006280</div></a>
+      <a href="/stock/128940.html" class="stock-pill"><div class="pill-name">한미약품</div><div class="pill-code">128940</div></a>
+      <a href="/stock/069620.html" class="stock-pill"><div class="pill-name">대웅제약</div><div class="pill-code">069620</div></a>
+      <a href="/stock/000250.html" class="stock-pill"><div class="pill-name">삼천당제약</div><div class="pill-code">000250</div></a>
+      <a href="/stock/086900.html" class="stock-pill"><div class="pill-name">메디톡스</div><div class="pill-code">086900</div></a>
+      <a href="/stock/145020.html" class="stock-pill"><div class="pill-name">휴젤</div><div class="pill-code">145020</div></a>
+      <a href="/stock/214150.html" class="stock-pill"><div class="pill-name">클래시스</div><div class="pill-code">214150</div></a>
+      <a href="/stock/214450.html" class="stock-pill"><div class="pill-name">파마리서치</div><div class="pill-code">214450</div></a>
+      <a href="/stock/028300.html" class="stock-pill"><div class="pill-name">HLB</div><div class="pill-code">028300</div></a>
+      <a href="/stock/067630.html" class="stock-pill"><div class="pill-name">HLB생명과학</div><div class="pill-code">067630</div></a>
+      <a href="/stock/087010.html" class="stock-pill"><div class="pill-name">펩트론</div><div class="pill-code">087010</div></a>
+      <a href="/stock/298380.html" class="stock-pill"><div class="pill-name">에이비엘바이오</div><div class="pill-code">298380</div></a>
+      <a href="/stock/141080.html" class="stock-pill"><div class="pill-name">레고켐바이오</div><div class="pill-code">141080</div></a>
+      <a href="/stock/144510.html" class="stock-pill"><div class="pill-name">지씨셀</div><div class="pill-code">144510</div></a>
+      <a href="/stock/290650.html" class="stock-pill"><div class="pill-name">엘앤씨바이오</div><div class="pill-code">290650</div></a>
+      <a href="/stock/302440.html" class="stock-pill"><div class="pill-name">SK바이오사이언스</div><div class="pill-code">302440</div></a>
+      <a href="/stock/326030.html" class="stock-pill"><div class="pill-name">SK바이오팜</div><div class="pill-code">326030</div></a>
+      <a href="/stock/064550.html" class="stock-pill"><div class="pill-name">바이오니아</div><div class="pill-code">064550</div></a>
+      <a href="/stock/338220.html" class="stock-pill"><div class="pill-name">뷰노</div><div class="pill-code">338220</div></a>
+      <a href="/stock/328130.html" class="stock-pill"><div class="pill-name">루닛</div><div class="pill-code">328130</div></a>
+    </div>
+    <div class="sector-takeaway">⚠ 바이오는 임상 결과·기술이전·규제 한 줄에 ±20% 갭이 흔합니다. 차트 패턴만으로 진입하지 말고, 만또 리포트의 "이벤트 일정·매물대" 부분을 같이 보세요.</div>
+  </section>
+
+  <!-- 자동차 -->
+  <section class="sector-block" id="auto">
+    <div class="sector-head">
+      <h2>🚗 자동차</h2>
+      <span class="sector-meta">코스피 · 7종목</span>
+    </div>
+    <p class="sector-intro">완성차(현대차·기아) + 부품 핵심(현대모비스·만도·한온시스템·현대위아) + 물류(현대글로비스). 환율·미국 관세·전기차 전환 속도에 민감하고, 배당성향 상향 정책 이후 밸류 리레이팅 후보로 자주 꼽힙니다.</p>
+    <div class="stock-row">
+      <a href="/stock/005380.html" class="stock-pill"><div class="pill-name">현대차</div><div class="pill-code">005380</div></a>
+      <a href="/stock/000270.html" class="stock-pill"><div class="pill-name">기아</div><div class="pill-code">000270</div></a>
+      <a href="/stock/012330.html" class="stock-pill"><div class="pill-name">현대모비스</div><div class="pill-code">012330</div></a>
+      <a href="/stock/204320.html" class="stock-pill"><div class="pill-name">만도</div><div class="pill-code">204320</div></a>
+      <a href="/stock/018880.html" class="stock-pill"><div class="pill-name">한온시스템</div><div class="pill-code">018880</div></a>
+      <a href="/stock/011210.html" class="stock-pill"><div class="pill-name">현대위아</div><div class="pill-code">011210</div></a>
+      <a href="/stock/086280.html" class="stock-pill"><div class="pill-name">현대글로비스</div><div class="pill-code">086280</div></a>
+    </div>
+    <div class="sector-takeaway">⚠ 자동차주는 "원달러 강세 = 호재" 공식이 늘 통하진 않아요. 미국 IRA·관세 변수가 환율을 덮을 수 있습니다.</div>
+  </section>
+
+  <!-- 금융 -->
+  <section class="sector-block" id="finance">
+    <div class="sector-head">
+      <h2>🏦 금융 (은행·증권·보험)</h2>
+      <span class="sector-meta">코스피 · 15종목</span>
+    </div>
+    <p class="sector-intro">4대 금융지주(KB·신한·하나·우리) + 인터넷은행(카카오뱅크) + 증권(키움·미래에셋·삼성·NH) + 생보·손보(삼성생명·삼성화재·DB손해보험). 정부의 밸류업 프로그램으로 PBR 1배 미만 종목 다수가 재평가 후보로 거론되는 영역.</p>
+    <div class="stock-row">
+      <a href="/stock/105560.html" class="stock-pill"><div class="pill-name">KB금융</div><div class="pill-code">105560</div></a>
+      <a href="/stock/055550.html" class="stock-pill"><div class="pill-name">신한지주</div><div class="pill-code">055550</div></a>
+      <a href="/stock/086790.html" class="stock-pill"><div class="pill-name">하나금융지주</div><div class="pill-code">086790</div></a>
+      <a href="/stock/316140.html" class="stock-pill"><div class="pill-name">우리금융지주</div><div class="pill-code">316140</div></a>
+      <a href="/stock/138040.html" class="stock-pill"><div class="pill-name">메리츠금융지주</div><div class="pill-code">138040</div></a>
+      <a href="/stock/323410.html" class="stock-pill"><div class="pill-name">카카오뱅크</div><div class="pill-code">323410</div></a>
+      <a href="/stock/024110.html" class="stock-pill"><div class="pill-name">기업은행</div><div class="pill-code">024110</div></a>
+      <a href="/stock/071050.html" class="stock-pill"><div class="pill-name">한국금융지주</div><div class="pill-code">071050</div></a>
+      <a href="/stock/039490.html" class="stock-pill"><div class="pill-name">키움증권</div><div class="pill-code">039490</div></a>
+      <a href="/stock/006800.html" class="stock-pill"><div class="pill-name">미래에셋증권</div><div class="pill-code">006800</div></a>
+      <a href="/stock/016360.html" class="stock-pill"><div class="pill-name">삼성증권</div><div class="pill-code">016360</div></a>
+      <a href="/stock/005940.html" class="stock-pill"><div class="pill-name">NH투자증권</div><div class="pill-code">005940</div></a>
+      <a href="/stock/032830.html" class="stock-pill"><div class="pill-name">삼성생명</div><div class="pill-code">032830</div></a>
+      <a href="/stock/000810.html" class="stock-pill"><div class="pill-name">삼성화재</div><div class="pill-code">000810</div></a>
+      <a href="/stock/005830.html" class="stock-pill"><div class="pill-name">DB손해보험</div><div class="pill-code">005830</div></a>
+    </div>
+    <div class="sector-takeaway">💡 PBR 0.5배 미만 금융주는 "낮은 PBR=저평가"가 항상 성립하지 않아요. <a href="/learn/guide/pbr-value-trap.html" style="color:#1B64DA">PBR 가치 함정 가이드</a>를 함께 읽어보세요.</div>
+  </section>
+
+  <!-- 방산/조선 -->
+  <section class="sector-block" id="defense">
+    <div class="sector-head">
+      <h2>✈️ 방산·조선·중공업</h2>
+      <span class="sector-meta">코스피 · 13종목</span>
+    </div>
+    <p class="sector-intro">방산(한화에어로스페이스·한국항공우주·LIG넥스원·한화시스템·현대로템) + 조선(HD한국조선해양·삼성중공업·HD현대중공업·한화오션·HD현대마린솔루션) + 발전·중공업(두산에너빌리티·두산밥캣·LS_ELECTRIC·효성중공업). 글로벌 지정학 긴장과 친환경 선박 수요가 복합 모멘텀으로 작용.</p>
+    <div class="stock-row">
+      <a href="/stock/012450.html" class="stock-pill"><div class="pill-name">한화에어로스페이스</div><div class="pill-code">012450</div></a>
+      <a href="/stock/047810.html" class="stock-pill"><div class="pill-name">한국항공우주</div><div class="pill-code">047810</div></a>
+      <a href="/stock/079550.html" class="stock-pill"><div class="pill-name">LIG넥스원</div><div class="pill-code">079550</div></a>
+      <a href="/stock/272210.html" class="stock-pill"><div class="pill-name">한화시스템</div><div class="pill-code">272210</div></a>
+      <a href="/stock/064350.html" class="stock-pill"><div class="pill-name">현대로템</div><div class="pill-code">064350</div></a>
+      <a href="/stock/277810.html" class="stock-pill"><div class="pill-name">레인보우로보틱스</div><div class="pill-code">277810</div></a>
+      <a href="/stock/009540.html" class="stock-pill"><div class="pill-name">HD한국조선해양</div><div class="pill-code">009540</div></a>
+      <a href="/stock/010140.html" class="stock-pill"><div class="pill-name">삼성중공업</div><div class="pill-code">010140</div></a>
+      <a href="/stock/329180.html" class="stock-pill"><div class="pill-name">HD현대중공업</div><div class="pill-code">329180</div></a>
+      <a href="/stock/042660.html" class="stock-pill"><div class="pill-name">한화오션</div><div class="pill-code">042660</div></a>
+      <a href="/stock/443060.html" class="stock-pill"><div class="pill-name">HD현대마린솔루션</div><div class="pill-code">443060</div></a>
+      <a href="/stock/267260.html" class="stock-pill"><div class="pill-name">HD현대일렉트릭</div><div class="pill-code">267260</div></a>
+      <a href="/stock/267250.html" class="stock-pill"><div class="pill-name">HD현대</div><div class="pill-code">267250</div></a>
+      <a href="/stock/034020.html" class="stock-pill"><div class="pill-name">두산에너빌리티</div><div class="pill-code">034020</div></a>
+      <a href="/stock/241560.html" class="stock-pill"><div class="pill-name">두산밥캣</div><div class="pill-code">241560</div></a>
+      <a href="/stock/010120.html" class="stock-pill"><div class="pill-name">LS_ELECTRIC</div><div class="pill-code">010120</div></a>
+      <a href="/stock/298040.html" class="stock-pill"><div class="pill-name">효성중공업</div><div class="pill-code">298040</div></a>
+    </div>
+    <div class="sector-takeaway">⚠ 방산·조선은 수주잔고가 핵심. 단기 차트 조정 구간에서도 수주 모멘텀이 살아있으면 매물대 위에서 다시 정렬되는 패턴을 자주 보입니다.</div>
+  </section>
+
+  <!-- 인터넷/엔터 -->
+  <section class="sector-block" id="internet">
+    <div class="sector-head">
+      <h2>🎮 인터넷·게임·엔터</h2>
+      <span class="sector-meta">코스피·코스닥 · 9종목</span>
+    </div>
+    <p class="sector-intro">플랫폼(네이버·카카오) + 게임(엔씨소프트·크래프톤·넷마블) + 엔터·콘텐츠(하이브·스튜디오드래곤·CJ_ENM) + 호스팅·도메인(가비아). 광고시장·신작 IP·중국 판호·K팝 구조변화 같은 정성 변수가 차트보다 먼저 움직이는 영역.</p>
+    <div class="stock-row">
+      <a href="/stock/035420.html" class="stock-pill"><div class="pill-name">네이버</div><div class="pill-code">035420</div></a>
+      <a href="/stock/035720.html" class="stock-pill"><div class="pill-name">카카오</div><div class="pill-code">035720</div></a>
+      <a href="/stock/036570.html" class="stock-pill"><div class="pill-name">엔씨소프트</div><div class="pill-code">036570</div></a>
+      <a href="/stock/259960.html" class="stock-pill"><div class="pill-name">크래프톤</div><div class="pill-code">259960</div></a>
+      <a href="/stock/251270.html" class="stock-pill"><div class="pill-name">넷마블</div><div class="pill-code">251270</div></a>
+      <a href="/stock/352820.html" class="stock-pill"><div class="pill-name">하이브</div><div class="pill-code">352820</div></a>
+      <a href="/stock/253450.html" class="stock-pill"><div class="pill-name">스튜디오드래곤</div><div class="pill-code">253450</div></a>
+      <a href="/stock/035760.html" class="stock-pill"><div class="pill-name">CJ_ENM</div><div class="pill-code">035760</div></a>
+      <a href="/stock/079940.html" class="stock-pill"><div class="pill-name">가비아</div><div class="pill-code">079940</div></a>
+    </div>
+    <div class="sector-takeaway">⚠ 게임주는 신작 출시일 ±2주 변동성이 가장 큽니다. "기대감 매수 → 실제 출시일 차익실현" 패턴이 반복됩니다.</div>
+  </section>
+
+  <!-- 유통/소비재 -->
+  <section class="sector-block" id="consumer">
+    <div class="sector-head">
+      <h2>🛒 유통·소비재·필수재</h2>
+      <span class="sector-meta">코스피·코스닥 · 21종목</span>
+    </div>
+    <p class="sector-intro">대형마트(이마트·롯데쇼핑·신세계·현대백화점) + 편의점(BGF리테일·GS리테일) + 식품(CJ제일제당·농심·오리온·삼양식품·롯데칠성·하이트진로) + 화장품·미용(LG생활건강·아모레퍼시픽) + 카지노·여행(강원랜드·파라다이스·아난티·호텔신라) + 기타(KT_G·코웨이·메가스터디교육). 내수 경기 + 중국향 매출이 두 축.</p>
+    <div class="stock-row">
+      <a href="/stock/139480.html" class="stock-pill"><div class="pill-name">이마트</div><div class="pill-code">139480</div></a>
+      <a href="/stock/023530.html" class="stock-pill"><div class="pill-name">롯데쇼핑</div><div class="pill-code">023530</div></a>
+      <a href="/stock/004170.html" class="stock-pill"><div class="pill-name">신세계</div><div class="pill-code">004170</div></a>
+      <a href="/stock/069960.html" class="stock-pill"><div class="pill-name">현대백화점</div><div class="pill-code">069960</div></a>
+      <a href="/stock/282330.html" class="stock-pill"><div class="pill-name">BGF리테일</div><div class="pill-code">282330</div></a>
+      <a href="/stock/007070.html" class="stock-pill"><div class="pill-name">GS리테일</div><div class="pill-code">007070</div></a>
+      <a href="/stock/097950.html" class="stock-pill"><div class="pill-name">CJ제일제당</div><div class="pill-code">097950</div></a>
+      <a href="/stock/004370.html" class="stock-pill"><div class="pill-name">농심</div><div class="pill-code">004370</div></a>
+      <a href="/stock/271560.html" class="stock-pill"><div class="pill-name">오리온</div><div class="pill-code">271560</div></a>
+      <a href="/stock/003230.html" class="stock-pill"><div class="pill-name">삼양식품</div><div class="pill-code">003230</div></a>
+      <a href="/stock/005300.html" class="stock-pill"><div class="pill-name">롯데칠성</div><div class="pill-code">005300</div></a>
+      <a href="/stock/000080.html" class="stock-pill"><div class="pill-name">하이트진로</div><div class="pill-code">000080</div></a>
+      <a href="/stock/051900.html" class="stock-pill"><div class="pill-name">LG생활건강</div><div class="pill-code">051900</div></a>
+      <a href="/stock/090430.html" class="stock-pill"><div class="pill-name">아모레퍼시픽</div><div class="pill-code">090430</div></a>
+      <a href="/stock/035250.html" class="stock-pill"><div class="pill-name">강원랜드</div><div class="pill-code">035250</div></a>
+      <a href="/stock/034230.html" class="stock-pill"><div class="pill-name">파라다이스</div><div class="pill-code">034230</div></a>
+      <a href="/stock/025980.html" class="stock-pill"><div class="pill-name">아난티</div><div class="pill-code">025980</div></a>
+      <a href="/stock/008770.html" class="stock-pill"><div class="pill-name">호텔신라</div><div class="pill-code">008770</div></a>
+      <a href="/stock/033780.html" class="stock-pill"><div class="pill-name">KT_G</div><div class="pill-code">033780</div></a>
+      <a href="/stock/021240.html" class="stock-pill"><div class="pill-name">코웨이</div><div class="pill-code">021240</div></a>
+      <a href="/stock/215200.html" class="stock-pill"><div class="pill-name">메가스터디교육</div><div class="pill-code">215200</div></a>
+    </div>
+    <div class="sector-takeaway">💡 식품·필수소비재는 배당 안정성이 매력. <a href="/learn/guide/dividend-compound.html" style="color:#1B64DA">배당 재투자 복리 가이드</a>와 같이 보면 장기 보유 관점이 잡힙니다.</div>
+  </section>
+
+  <div class="callout tip" style="margin-top:48px">
+    <b>💡 업종 큐레이션 활용법</b>
+    같은 업종 안에서도 "메모리 vs 비메모리", "셀 vs 양극재", "은행 vs 보험"처럼 사이클이 다르게 흐릅니다. 한 업종을 통째로 사기보다 만또 차트분석 리포트의 매물대·세력 흐름을 보고 종목 안에서 우열을 가리는 쪽을 권합니다.
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    위 큐레이션은 만또에서 차트분석 리포트를 발행한 종목을 업종별로 분류한 자료이며, 매수·매도 추천이 아닙니다. 종목별 실제 산업 분류와 다소 차이가 있을 수 있습니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+</body>
+</html>
