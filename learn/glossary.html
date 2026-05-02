@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주식 용어 사전 — PER·PBR·ROE부터 골든크로스까지 | 만또 학습</title>
+<meta name="description" content="주식 투자에서 자주 쓰는 용어 50개를 카테고리별로 짧게 정리. 가치 평가 지표, 배당, 차트, 재무, 시장, 매매 전략까지 한 페이지에서.">
+<meta name="keywords" content="주식용어, 주식사전, PER, PBR, ROE, EPS, 배당률, 골든크로스, RSI, MACD, 시가총액, 분할매수">
+<meta property="og:title" content="만또 주식 용어 사전 — 50개 핵심 용어">
+<meta property="og:description" content="투자에 자주 쓰이는 용어 50개를 카테고리별로 짧게. 각 용어는 가이드 글로 deep link.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/learn/glossary.html">
+<link rel="canonical" href="https://manddo.kr/learn/glossary.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.glossary-toc{background:#F7F9FC;border:1px solid #eef0f3;border-radius:12px;padding:20px;margin:24px 0}
+.glossary-toc h3{font-size:14px;color:#8b95a1;margin:0 0 12px;letter-spacing:0.04em;text-transform:uppercase}
+.glossary-toc ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.glossary-toc li a{display:inline-block;padding:6px 12px;background:#fff;border:1px solid #d1d6db;border-radius:6px;font-size:14px;color:#333d4b;text-decoration:none}
+.glossary-toc li a:hover{background:#3182F6;color:#fff;border-color:#3182F6}
+.gloss-section{margin:48px 0}
+.gloss-section h2{font-size:22px;font-weight:800;color:#191f28;letter-spacing:-0.03em;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid #3182F6;display:inline-block}
+.gloss-list{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:720px){.gloss-list{grid-template-columns:1fr 1fr}}
+.gloss-item{background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:16px 18px}
+.gloss-item dt{font-size:16px;font-weight:800;color:#191f28;margin-bottom:6px;letter-spacing:-0.02em}
+.gloss-item dt .en{font-weight:600;color:#8b95a1;font-size:13px;margin-left:6px}
+.gloss-item dd{font-size:14.5px;line-height:1.7;color:#4e5968;margin:0}
+.gloss-item dd a{color:#1B64DA;font-weight:600}
+.gloss-item dd a:hover{text-decoration:underline}
+.gloss-search{margin:24px 0;position:relative}
+.gloss-search input{width:100%;padding:12px 16px;font-size:15px;border:1px solid #d1d6db;border-radius:10px;background:#fff;box-sizing:border-box}
+.gloss-search input:focus{outline:none;border-color:#3182F6;box-shadow:0 0 0 3px rgba(49,130,246,.12)}
+.gloss-empty{text-align:center;padding:40px;color:#8b95a1;font-size:14px;display:none}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/" class="active">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/mind/">마인드 랩</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <a class="back-btn" href="/learn/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="breadcrumb">
+    <a href="/learn/">학습</a><span class="sep">/</span>주식 용어 사전
+  </div>
+
+  <section class="learn-hero">
+    <h1>📖 주식 용어 사전</h1>
+    <p class="lead">투자에 자주 등장하는 50개 핵심 용어를 카테고리별로 한 줄씩. 차트나 리포트를 읽다가 막힐 때 빠르게 찾아보는 용도. 더 깊이 보고 싶은 항목은 가이드 글로 바로 연결됩니다.</p>
+    <div class="meta">
+      <span class="chip">총 50개 용어</span>
+      <span class="chip green">7개 카테고리</span>
+      <span class="chip gray">무료 · 회원가입 없음</span>
+    </div>
+  </section>
+
+  <div class="gloss-search">
+    <input type="text" id="glossSearch" placeholder="🔍 용어 검색 (예: PER, 골든크로스, 분할매수)" autocomplete="off">
+  </div>
+
+  <nav class="glossary-toc">
+    <h3>카테고리 바로가기</h3>
+    <ul>
+      <li><a href="#valuation">가치 평가</a></li>
+      <li><a href="#dividend">배당</a></li>
+      <li><a href="#chart">차트·기술적 분석</a></li>
+      <li><a href="#financial">재무 지표</a></li>
+      <li><a href="#market">시장·거시</a></li>
+      <li><a href="#strategy">매매 전략</a></li>
+      <li><a href="#category">종목 분류</a></li>
+    </ul>
+  </nav>
+
+  <section class="gloss-section" id="valuation">
+    <h2>📊 가치 평가 지표</h2>
+    <dl class="gloss-list">
+      <div class="gloss-item">
+        <dt>PER<span class="en">Price Earnings Ratio</span></dt>
+        <dd>주가 ÷ 주당순이익. 1년에 버는 돈의 몇 배 가격에 거래되는지. PER 10이면 이 가격으로 10년 만에 회수. 업종마다 적정 수준이 다르다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>PBR<span class="en">Price Book-value Ratio</span></dt>
+        <dd>주가 ÷ 주당순자산. 회사가 청산해도 받을 수 있는 장부가 대비 주가. PBR 1 미만은 "장부가보다 싸다". <a href="/learn/guide/pbr-value-trap.html">PBR 가치함정 →</a></dd>
+      </div>
+      <div class="gloss-item">
+        <dt>PSR<span class="en">Price Sales Ratio</span></dt>
+        <dd>시가총액 ÷ 매출액. 적자 기업이나 성장주에서 PER 대신 쓴다. 적자 단계의 SaaS/바이오 기업 평가에 자주 등장.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>EPS<span class="en">Earnings Per Share</span></dt>
+        <dd>당기순이익 ÷ 발행주식수. 주식 한 주당 회사가 번 돈. EPS가 꾸준히 올라가는 회사가 좋은 회사.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>BPS<span class="en">Book-value Per Share</span></dt>
+        <dd>자본총계 ÷ 발행주식수. 주식 한 주당 장부가. PBR = 주가 / BPS.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>ROE<span class="en">Return on Equity</span></dt>
+        <dd>순이익 ÷ 자본총계. 자본을 굴려서 얼마나 버는지. 워런 버핏이 가장 중요시하는 지표 중 하나. 보통 15% 이상이면 우수.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>ROA<span class="en">Return on Assets</span></dt>
+        <dd>순이익 ÷ 총자산. 부채까지 포함한 모든 자산 대비 이익률. ROE보다 보수적인 지표.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>EV/EBITDA</dt>
+        <dd>기업가치 ÷ 영업이익+감가상각비. 부채를 감안한 PER 같은 개념. M&A 시 자주 쓴다.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="gloss-section" id="dividend">
+    <h2>💰 배당</h2>
+    <dl class="gloss-list">
+      <div class="gloss-item">
+        <dt>시가배당률</dt>
+        <dd>1주당 배당금 ÷ 현재 주가. 지금 사면 1년에 몇 % 받는지. 5% 이상이면 고배당주로 분류. <a href="/learn/guide/dividend-compound.html">배당 복리 가이드 →</a></dd>
+      </div>
+      <div class="gloss-item">
+        <dt>배당성향</dt>
+        <dd>총 배당금 ÷ 당기순이익. 회사가 번 돈 중 얼마를 주주에게 나눠주는지. 한국 평균 약 25%, 미국 평균 약 40%.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>배당락일</dt>
+        <dd>이날까지 주식을 보유해야 다음 배당을 받을 수 있는 마지막 날의 다음 날. 배당락일에는 보통 배당금만큼 주가가 빠진다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>DRIP<span class="en">Dividend Reinvestment Plan</span></dt>
+        <dd>배당금을 자동으로 같은 종목에 재투자하는 제도. 한국 일반 계좌에는 없고 일부 ETF·해외 증권사에서 지원.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>분기배당</dt>
+        <dd>1년에 4번(분기마다) 배당하는 방식. 한국에서는 삼성전자·POSCO홀딩스 등 일부만. 대부분은 연배당.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>배당소득세</dt>
+        <dd>한국 기준 15.4%(소득세 14% + 지방세 1.4%) 원천징수. 연 2,000만원 초과 배당은 종합과세 합산.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="gloss-section" id="chart">
+    <h2>📈 차트·기술적 분석</h2>
+    <dl class="gloss-list">
+      <div class="gloss-item">
+        <dt>이동평균선<span class="en">MA, Moving Average</span></dt>
+        <dd>일정 기간 종가의 평균을 이은 선. 5일/20일/60일/120일선이 자주 쓰임. 주가가 평균보다 위면 상승세, 아래면 하락세.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>골든크로스</dt>
+        <dd>단기 이동평균선이 장기 이동평균선을 아래에서 위로 뚫는 시점. 상승 전환 신호로 해석. 보통 5일선이 20일선을 돌파할 때.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>데드크로스</dt>
+        <dd>골든크로스의 반대. 단기선이 장기선을 위에서 아래로 뚫음. 하락 전환 신호로 해석.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>RSI<span class="en">Relative Strength Index</span></dt>
+        <dd>0~100 범위의 모멘텀 지표. 70 이상이면 과매수, 30 이하면 과매도로 본다. 단독으론 약하고 추세와 같이 봐야 함.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>MACD</dt>
+        <dd>두 이동평균선의 차이를 본 추세 지표. 시그널선과 교차하면 매매 신호. 횡보장에선 신호가 자주 어긋남.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>볼린저밴드<span class="en">Bollinger Bands</span></dt>
+        <dd>이동평균선 ± 표준편차로 만든 띠. 주가가 상단 밴드 닿으면 과열, 하단 밴드 닿으면 과매도로 해석.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>거래량</dt>
+        <dd>해당 기간 동안 매매된 주식 수. 가격이 오를 때 거래량도 같이 늘어야 진짜 추세. 가격만 오르고 거래량 없으면 의심.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>캔들차트</dt>
+        <dd>시가·고가·저가·종가를 한 막대로 표현. 양봉(빨강)은 시가<종가, 음봉(파랑)은 시가>종가. 한국 차트는 색깔이 미국과 반대.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>지지선·저항선</dt>
+        <dd>주가가 자주 멈추는 가격대. 아래에서 받쳐주면 지지선, 위에서 막으면 저항선. 한 번 뚫리면 역할이 바뀐다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>갭<span class="en">Gap</span></dt>
+        <dd>전일 종가와 당일 시가 사이 빈 구간. 갭상승(시가가 전일 종가보다 위)·갭하락(아래) 모두 강한 모멘텀 신호.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>차트 패턴</dt>
+        <dd>반복적으로 나타나는 가격 모양. <a href="/learn/pattern/head-and-shoulders.html">헤드앤숄더</a>, <a href="/learn/pattern/double-bottom.html">쌍바닥</a>, <a href="/learn/pattern/cup-and-handle.html">컵앤핸들</a> 등.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="gloss-section" id="financial">
+    <h2>💼 재무 지표</h2>
+    <dl class="gloss-list">
+      <div class="gloss-item">
+        <dt>매출액</dt>
+        <dd>회사가 1년에 판 돈의 총합. 영업이익보다 변동성이 작아서 사업의 크기를 가늠할 때 좋다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>영업이익</dt>
+        <dd>매출에서 직접 비용을 뺀 본업 이익. 영업외수익·금융이자 빼고 본업만으로 얼마 버는지.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>영업이익률</dt>
+        <dd>영업이익 ÷ 매출액 × 100. 매출 100원으로 본업에서 몇 원 남는지. 같은 업종끼리 비교해야 의미 있음.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>당기순이익</dt>
+        <dd>모든 비용·세금 다 빼고 남은 최종 이익. EPS 계산의 분자.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>부채비율</dt>
+        <dd>총부채 ÷ 자기자본 × 100. 100% 미만이면 양호, 200% 넘으면 주의. 업종 따라 정상 수준이 다름(은행은 1,000% 이상).</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>유보율</dt>
+        <dd>잉여금 ÷ 자본금 × 100. 회사가 그동안 쌓아둔 돈의 규모. 높으면 재무 안정적, 너무 높으면 주주환원 부족 의심.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>시가총액</dt>
+        <dd>주가 × 발행주식수. 회사 전체의 시장 가치. 코스피는 보통 5천억 이상이 대형주, 1조 이상이 초대형.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>자본총계</dt>
+        <dd>자산 - 부채. 회사가 청산할 때 주주에게 돌아가는 몫. PBR 계산의 분모.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="gloss-section" id="market">
+    <h2>🌍 시장·거시</h2>
+    <dl class="gloss-list">
+      <div class="gloss-item">
+        <dt>코스피<span class="en">KOSPI</span></dt>
+        <dd>한국 종합 주가지수. 유가증권시장(대형 주류) 전체 평균 흐름. 1980년 1월 4일 = 100 기준.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>코스닥<span class="en">KOSDAQ</span></dt>
+        <dd>중소·벤처기업 중심 시장. 변동성이 코스피보다 큼. 바이오·IT 비중이 높다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>FOMC</dt>
+        <dd>미국 연방공개시장위원회. 1년에 8번 금리를 결정. FOMC 발표 직후 글로벌 증시 변동성 큼.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>CPI<span class="en">Consumer Price Index</span></dt>
+        <dd>소비자물가지수. 인플레이션 측정 핵심 지표. CPI 상승 → 금리 인상 압력 → 주식 부담.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>PMI</dt>
+        <dd>구매관리자지수. 50 위면 경기 확장, 아래면 위축 신호. 제조업 PMI가 더 자주 인용됨.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>공매도</dt>
+        <dd>주식을 빌려서 먼저 팔고, 나중에 싸게 사서 갚는 매매. 하락 베팅. 한국은 2024~2025 일부 종목 한정 재개.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>외국인 순매수</dt>
+        <dd>외국인이 매수한 금액 - 매도한 금액. 외국인 비중이 높은 종목은 외국인 흐름이 단기 주가에 큰 영향.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="gloss-section" id="strategy">
+    <h2>🎯 매매 전략</h2>
+    <dl class="gloss-list">
+      <div class="gloss-item">
+        <dt>장투<span class="en">장기 투자</span></dt>
+        <dd>3년 이상 보유하는 매매. 펀더멘털 중심. 단기 변동에 흔들리지 않는 게 핵심.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>스윙</dt>
+        <dd>며칠~몇 주 단위 매매. 추세를 잡아서 일부 구간만 먹는다. 차트와 펀더멘털 둘 다 본다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>단타<span class="en">데이트레이딩</span></dt>
+        <dd>당일 매수·매도 끝내는 매매. 수수료·세금 누적이 큼. 진입 빈도 높아 멘탈 소모도 크다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>스캘핑</dt>
+        <dd>분~초 단위 초단기 매매. 작은 가격 차이를 자주 잡는다. 사실상 전업이 아니면 어려움.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>손절</dt>
+        <dd>손실이 일정 수준 넘으면 매도. 더 큰 손실 막는 안전장치. 손절선을 진입 전에 정해두는 게 원칙.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>익절</dt>
+        <dd>수익이 목표선에 닿으면 매도. 욕심 부려서 놓치는 것을 방지.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>분할매수</dt>
+        <dd>한 번에 다 사지 않고 가격대별로 나눠서 매수. 평단가가 평균화되어 변동성 부담 ↓.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>분할매도</dt>
+        <dd>분할매수의 반대. 한 번에 다 팔지 않고 단계별로 매도해서 추가 상승 여지를 남긴다.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>평단가</dt>
+        <dd>여러 번 매수했을 때의 평균 매수가. (총 매수금액) ÷ (총 매수수량).</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>물타기</dt>
+        <dd>주가 하락 시 추가 매수해서 평단가를 낮추는 매매. 펀더멘털이 망가졌으면 손실 키우는 함정.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="gloss-section" id="category">
+    <h2>🏷️ 종목 분류</h2>
+    <dl class="gloss-list">
+      <div class="gloss-item">
+        <dt>대형주·중형주·소형주</dt>
+        <dd>시가총액 기준 분류. 한국에서는 대형(시총 상위 100), 중형(101~300), 소형(나머지)이 일반적.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>우선주</dt>
+        <dd>의결권 없는 대신 배당 우선권 있는 주식. 보통주보다 거래량·유동성 ↓, 배당수익률 ↑. "삼성전자우" 같은 형태.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>지주사</dt>
+        <dd>다른 회사 주식을 보유해서 지배하는 회사. 자체 사업보단 자회사 가치의 합. PBR 1 미만이 흔함.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>테마주</dt>
+        <dd>특정 이슈로 묶여서 같이 움직이는 종목군. AI주·전기차주·정치테마주 등. 변동성 ↑↑.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>가치주<span class="en">Value Stock</span></dt>
+        <dd>지표 대비 저평가된 종목. 낮은 PER·PBR, 높은 배당률. 성장 속도는 느림.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>성장주<span class="en">Growth Stock</span></dt>
+        <dd>매출·이익이 빠르게 늘어나는 종목. 보통 PER이 높음. 성장이 멈추면 주가 급락 위험.</dd>
+      </div>
+      <div class="gloss-item">
+        <dt>경기민감주·경기방어주</dt>
+        <dd>민감주는 경기 따라 실적 크게 변함(반도체·자동차). 방어주는 경기 영향 적음(필수소비재·통신·유틸).</dd>
+      </div>
+    </dl>
+  </section>
+
+  <div class="callout tip">
+    <b>💡 사전 활용 팁</b>
+    검색창에 단어를 입력하면 매칭되는 항목만 표시됩니다. 더 깊이 보고 싶은 항목은 <a href="/learn/guide/">투자 가이드</a>나 <a href="/learn/pattern/">차트 패턴 도감</a>으로 연결됩니다. 만또 차트분석 리포트를 읽다가 막히는 단어가 있으면 이 페이지에서 찾아보세요.
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    본 사전은 투자 학습을 위한 일반적인 정의이며, 종목 매수·매도 권유가 아닙니다. 세부 회계 처리·세제는 회계법인·세무당국 자료를 따로 확인하세요.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const input = document.getElementById('glossSearch');
+  const items = document.querySelectorAll('.gloss-item');
+  const sections = document.querySelectorAll('.gloss-section');
+  input.addEventListener('input', function(){
+    const q = this.value.trim().toLowerCase();
+    if (!q) {
+      items.forEach(i => i.style.display = '');
+      sections.forEach(s => s.style.display = '');
+      return;
+    }
+    sections.forEach(section => {
+      let anyVisible = false;
+      section.querySelectorAll('.gloss-item').forEach(item => {
+        const txt = item.textContent.toLowerCase();
+        if (txt.includes(q)) { item.style.display = ''; anyVisible = true; }
+        else { item.style.display = 'none'; }
+      });
+      section.style.display = anyVisible ? '' : 'none';
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
