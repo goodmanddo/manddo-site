@@ -41,7 +41,29 @@
   .wp-card .pick-stat .ps-value.neg { color:#dc2626; }
   .wp-card .pick-stat .ps-price { font-size:11px; color:#6b7280; text-align:right; line-height:1.4; }
   .wp-card .pick-empty { padding:18px 4px; text-align:center; color:#9ca3af; font-size:13px; line-height:1.6; }
-  .wp-card .winner-crown { position:absolute; top:-10px; right:12px; padding:3px 10px; background:#fbbf24; color:#78350f; font-size:11px; font-weight:700; border-radius:10px; box-shadow:0 2px 6px rgba(251,191,36,0.4); }
+  .wp-card .rank-badge { position:absolute; top:-10px; left:12px; padding:3px 10px; font-size:11px; font-weight:700; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.12); }
+  .wp-card .rank-badge.r1 { background:#fbbf24; color:#78350f; }
+  .wp-card .rank-badge.r2 { background:#cbd5e1; color:#1e293b; }
+  .wp-card .rank-badge.r3 { background:#fdba74; color:#7c2d12; }
+  .wp-card.leading { box-shadow:0 4px 16px rgba(251,191,36,0.25); border-color:#fbbf24; }
+
+  .wp-leaderboard { background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%); border:1px solid #fbbf24; border-radius:14px; padding:14px 18px; margin:0 0 16px; }
+  .wp-leaderboard.tied { background:linear-gradient(135deg,#e0f2fe 0%,#bae6fd 100%); border-color:#38bdf8; }
+  .wp-leaderboard.empty { background:#f9fafb; border-color:#e5e7eb; color:#6b7280; }
+  .wp-lb-head { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; color:#78350f; margin-bottom:6px; }
+  .wp-leaderboard.tied .wp-lb-head { color:#075985; }
+  .wp-leaderboard.empty .wp-lb-head { color:#6b7280; }
+  .wp-lb-rows { display:flex; flex-wrap:wrap; gap:8px; }
+  .wp-lb-row { display:flex; align-items:center; gap:6px; padding:5px 10px; background:rgba(255,255,255,0.65); border-radius:20px; font-size:13px; }
+  .wp-lb-row .lb-rank { font-weight:700; color:#78350f; }
+  .wp-lb-row.r1 .lb-rank { color:#b45309; }
+  .wp-lb-row.r2 .lb-rank { color:#475569; }
+  .wp-lb-row.r3 .lb-rank { color:#9a3412; }
+  .wp-lb-row .lb-name { font-weight:600; color:#1f2937; }
+  .wp-lb-row .lb-ret { font-weight:700; }
+  .wp-lb-row .lb-ret.pos { color:#059669; }
+  .wp-lb-row .lb-ret.neg { color:#dc2626; }
+  .wp-lb-row .lb-diff { font-size:11px; color:#6b7280; }
 
   .wp-pick-form { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:14px; padding:16px; margin:16px 0 22px; }
   .wp-pick-form h3 { margin:0 0 10px; font-size:15px; color:#065f46; }
@@ -114,6 +136,13 @@
       <div class="wp-status" id="wp-status">상태 불러오는 중…</div>
     </div>
   </section>
+
+  <div class="wp-leaderboard empty" id="wp-leaderboard">
+    <div class="wp-lb-head">🏆 현재 순위</div>
+    <div class="wp-lb-rows" id="wp-lb-rows">
+      <div style="font-size:13px;color:#6b7280">월요일 09:00에 첫 가격이 기록되면 순위가 표시됩니다.</div>
+    </div>
+  </div>
 
   <div class="wp-rules">
     <b>🎮 게임 규칙</b>
@@ -302,30 +331,75 @@
     `;
   }
 
+  const ROLE_LABEL = { manddo:'만또', ai:'AI', visitor:'너' };
+
   function renderBoard(){
     const visitorPick = loadVisitorPick();
     renderCard('manddo', DATA.picks.manddo, '만또', '사람', '🧑');
     renderCard('ai', DATA.picks.ai, 'AI', '에이전트', '🤖');
     renderCard('visitor', visitorPick ? { code: visitorPick.code, name: getStockName(visitorPick.code) } : null, '너의 픽', '방문자', '🎯');
 
-    // crown the leader if all 3 have prices
-    document.querySelectorAll('.winner-crown').forEach(el => el.remove());
+    // clear previous rank decorations
+    document.querySelectorAll('.rank-badge').forEach(el => el.remove());
+    document.querySelectorAll('.wp-card.leading').forEach(el => el.classList.remove('leading'));
+
     const all = [
       { role:'manddo', pick: DATA.picks.manddo },
       { role:'ai', pick: DATA.picks.ai },
       { role:'visitor', pick: visitorPick }
     ];
-    const withRet = all.map(x => x.pick && x.pick.code ? { ...x, r: returnFor(x.pick.code) } : null).filter(x => x && x.r);
-    if (withRet.length >= 2) {
-      const max = Math.max(...withRet.map(x => x.r.ret));
-      withRet.filter(x => x.r.ret === max).forEach(x => {
-        const card = document.querySelector(`.wp-card.${x.role}`);
-        const crown = document.createElement('div');
-        crown.className = 'winner-crown';
-        crown.textContent = '👑 1위';
-        card.appendChild(crown);
-      });
+    const withRet = all
+      .map(x => x.pick && x.pick.code ? { ...x, r: returnFor(x.pick.code) } : null)
+      .filter(x => x && x.r);
+    withRet.sort((a,b) => b.r.ret - a.r.ret);
+
+    // rank badges (handle ties: same rank for same return)
+    let rank = 0, prev = null;
+    withRet.forEach((x, i) => {
+      if (prev === null || x.r.ret !== prev) { rank = i + 1; prev = x.r.ret; }
+      const card = document.querySelector(`.wp-card.${x.role}`);
+      const badge = document.createElement('div');
+      badge.className = `rank-badge r${rank}`;
+      badge.textContent = rank === 1 ? '🥇 1위' : rank === 2 ? '🥈 2위' : '🥉 3위';
+      card.appendChild(badge);
+      x.rank = rank;
+      if (rank === 1) card.classList.add('leading');
+    });
+
+    renderLeaderboard(withRet, all);
+  }
+
+  function renderLeaderboard(withRet, all){
+    const lb = $('wp-leaderboard');
+    const rows = $('wp-lb-rows');
+
+    if (withRet.length === 0) {
+      lb.className = 'wp-leaderboard empty';
+      const has_picks = all.some(x => x.pick && x.pick.code);
+      rows.innerHTML = `<div style="font-size:13px;color:#6b7280">${has_picks ? '월요일 09:00에 첫 가격이 기록되면 순위가 표시됩니다.' : '픽이 등록되면 순위가 여기 표시됩니다.'}</div>`;
+      return;
     }
+
+    const top = withRet[0];
+    const tied = withRet.filter(x => x.r.ret === top.r.ret).length > 1;
+    lb.className = 'wp-leaderboard' + (tied ? ' tied' : '');
+
+    let head = '';
+    if (tied) {
+      const names = withRet.filter(x => x.r.ret === top.r.ret).map(x => ROLE_LABEL[x.role]).join(' · ');
+      head = `🤝 공동 1위: <b style="margin-left:4px">${names}</b> ${fmtPct(top.r.ret)}`;
+    } else {
+      const second = withRet[1];
+      const diff = second ? top.r.ret - second.r.ret : null;
+      head = `🏆 현재 1위: <b style="margin-left:4px">${ROLE_LABEL[top.role]}</b> (${getStockName(top.pick.code)}) ${fmtPct(top.r.ret)}`;
+      if (diff != null) head += ` <span style="font-size:11px;color:#78350f;font-weight:500">· ${ROLE_LABEL[second.role]}와 ${diff.toFixed(2)}%p 차</span>`;
+    }
+    document.querySelector('.wp-lb-head').innerHTML = head;
+
+    rows.innerHTML = withRet.map(x => {
+      const cls = x.r.ret >= 0 ? 'pos' : 'neg';
+      return `<div class="wp-lb-row r${x.rank}"><span class="lb-rank">${x.rank}위</span><span class="lb-name">${ROLE_LABEL[x.role]}</span><span class="lb-name" style="color:#6b7280;font-weight:500">${getStockName(x.pick.code)}</span><span class="lb-ret ${cls}">${fmtPct(x.r.ret)}</span></div>`;
+    }).join('');
   }
 
   function renderTimeline(){
