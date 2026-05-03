@@ -22,13 +22,11 @@
 .zodiac-btn .z-emoji{font-size:32px;line-height:1;margin-bottom:6px}
 .zodiac-btn .z-name{font-size:13px;font-weight:700;color:#191f28;letter-spacing:-0.02em}
 .zodiac-btn .z-years{font-size:10.5px;color:#8b95a1;margin-top:2px;font-weight:500;line-height:1.3}
-
 .result-card{background:#fff;border:1px solid #eef0f3;border-radius:20px;padding:28px 24px;margin-top:8px}
 .r-head{display:flex;align-items:center;gap:14px;margin-bottom:4px}
 .r-head .emoji{font-size:48px}
 .r-head .title{font-size:22px;font-weight:800;color:#191f28;letter-spacing:-0.035em}
 .r-head .sub{font-size:13px;color:#8b95a1;font-weight:500;margin-top:2px}
-
 .score-box{background:linear-gradient(135deg,#EBF4FF,#F4F9FF);border-radius:16px;padding:24px;text-align:center;margin:18px 0 22px;position:relative;overflow:hidden}
 .score-box::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 40%,rgba(49,130,246,.12),transparent 60%);pointer-events:none}
 .score-label{font-size:12px;font-weight:700;color:#1B64DA;letter-spacing:0.1em;position:relative}
@@ -37,7 +35,6 @@
 .score-grade{font-size:14px;font-weight:700;color:#4e5968;position:relative}
 .score-bar{background:#fff;border-radius:999px;height:8px;overflow:hidden;margin-top:14px;position:relative}
 .score-fill{background:linear-gradient(90deg,#3182F6,#1B64DA);height:100%;border-radius:999px;transition:width .6s ease}
-
 .r-section{margin-top:22px;padding-top:22px;border-top:1px solid #eef0f3}
 .r-section:first-of-type{border-top:none;padding-top:0;margin-top:0}
 .r-section h3{font-size:13px;font-weight:800;color:#3182F6;margin-bottom:10px;letter-spacing:0.05em;text-transform:uppercase}
@@ -45,7 +42,6 @@
 .sector-chip{display:inline-block;background:#EBF4FF;color:#1B64DA;padding:8px 14px;border-radius:999px;font-size:14px;font-weight:700;letter-spacing:-0.02em}
 .avoid-box{background:#FFF5F5;border:1px solid #FED7D7;border-radius:12px;padding:14px 16px;font-size:14px;color:#9B2C2C;line-height:1.7;font-weight:500}
 .lucky-box{background:#F0FFF4;border:1px solid #C6F6D5;border-radius:12px;padding:14px 16px;font-size:14px;color:#22543D;line-height:1.7;font-weight:500}
-
 .share-row{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
 .share-btn{flex:1;min-width:100px;background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:#4e5968;transition:all .15s}
 .share-btn:hover{background:#f2f4f6;color:#191f28}
@@ -54,9 +50,7 @@
 .cta-btn:hover{background:#1B64DA}
 .cta-btn.ghost{background:#fff;color:#4e5968;border:1px solid #eef0f3}
 .cta-btn.ghost:hover{background:#f2f4f6;color:#191f28}
-
 .hidden{display:none}
-
 @media(max-width:540px){
   .zodiac-grid{grid-template-columns:repeat(3,1fr);gap:8px}
   .zodiac-btn{padding:14px 4px}
@@ -70,7 +64,6 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="logo">만또<span>.kr</span></a>
@@ -78,32 +71,26 @@
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
-      <a href="/tools/">머니 툴</a>
-      <a href="/mind/" class="active">마인드 랩</a>
+      <a href="/tools/" class="active">머니 툴</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
-
 <main class="page">
   <!-- manddo-back-nav -->
-  <a class="back-btn" href="/mind/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-
-
+  <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
   <div class="today" id="today"></div>
   <h1>🔮 오늘의 투자 운세</h1>
   <p class="sub">당신의 띠를 선택하면 오늘의 재물운을 알려드립니다 · 매일 달라집니다</p>
-
   <div class="disclaimer">
     <b>⚠ 엔터테인먼트 안내</b><br>
     본 운세는 <b>재미로 보는 엔터테인먼트 콘텐츠</b>이며, 점성학·통계적 근거가 없는 오락용입니다. 투자 권유가 아닙니다.
   </div>
-
   <div class="zodiac-grid" id="zodiac-grid"></div>
-
   <section id="result" class="hidden">
     <div class="result-card">
       <div class="r-head">
@@ -113,54 +100,44 @@
           <div class="sub" id="r-sub"></div>
         </div>
       </div>
-
       <div class="score-box">
         <div class="score-label">오늘의 재물운</div>
         <div class="score-num"><span id="r-score"></span><span class="unit">점</span></div>
         <div class="score-grade" id="r-grade"></div>
         <div class="score-bar"><div class="score-fill" id="r-fill"></div></div>
       </div>
-
       <div class="r-section">
         <h3>💫 오늘의 메시지</h3>
         <div class="r-body" id="r-msg"></div>
       </div>
-
       <div class="r-section">
         <h3>🎯 오늘과 잘 맞는 섹터</h3>
         <div><span class="sector-chip" id="r-sector"></span></div>
       </div>
-
       <div class="r-section">
         <h3>⚠️ 오늘 피해야 할 투자 행동</h3>
         <div class="avoid-box" id="r-avoid"></div>
       </div>
-
       <div class="r-section">
         <h3>🍀 오늘의 행운 키워드</h3>
         <div class="lucky-box" id="r-lucky"></div>
       </div>
     </div>
-
     <div class="share-row">
       <button class="share-btn" onclick="shareKakao()">📨 카카오톡</button>
       <button class="share-btn" onclick="shareX()">𝕏 공유</button>
       <button class="share-btn" onclick="copyLink()">🔗 링크복사</button>
     </div>
-
     <div class="cta-row">
       <a href="/mind/investor-type.html" class="cta-btn">🎯 나의 투자 성향 알아보기</a>
       <a href="/stock/" class="cta-btn ghost">📊 스톡 리서치 보기</a>
     </div>
-
     <div class="disclaimer" style="margin-top:28px">
       <b>⚠ 면책</b><br>
       본 운세는 재미로 보는 콘텐츠입니다. 투자 판단과 그 결과는 전적으로 본인 책임이며, 만또 투자 인사이트는 투자 자문업자가 아닙니다.
     </div>
   </section>
-
 </main>
-
 <footer class="site-footer">
   <div class="site-footer-inner">
     <a href="/about.html">소개</a>·
@@ -170,7 +147,6 @@
     <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
   </div>
 </footer>
-
 <script>
 const ZODIACS = [
   { k:'rat',    e:'🐀', n:'쥐띠',   y:'72·84·96·08·20' },
@@ -186,7 +162,6 @@ const ZODIACS = [
   { k:'dog',    e:'🐶', n:'개띠',   y:'82·94·06·18' },
   { k:'pig',    e:'🐷', n:'돼지띠', y:'83·95·07·19' }
 ];
-
 const MESSAGES = [
   '오늘은 큰 움직임보다 관망이 이로운 날. 포지션을 줄이고 시장의 숨소리를 듣기에 좋습니다.',
   '평소 눈여겨보던 종목의 리포트를 다시 읽어보세요. 숫자 속에 답이 있습니다.',
@@ -209,13 +184,11 @@ const MESSAGES = [
   '시장의 소음에 휘둘리지 마세요. 오늘 당신의 귀는 예민합니다.',
   '매수보다 매도 계획이 더 중요한 하루. 익절 기준을 정리해두세요.'
 ];
-
 const SECTORS = [
   '반도체·AI','2차전지·전기차','바이오·헬스케어','조선·방산','자동차·부품',
   '금융·은행','게임·엔터','통신·유틸리티','화학·철강','건설·부동산',
   '식품·생활소비재','로봇·자동화','태양광·신재생','리츠·배당주','ETF·인덱스'
 ];
-
 const AVOIDS = [
   '단톡방·커뮤니티발 단기 급등주 추격 매수',
   '근거 없는 "느낌만으로" 하는 추매',
@@ -233,29 +206,24 @@ const AVOIDS = [
   '상장폐지 위험 있는 초저가주 베팅',
   '오늘 사서 오늘 파는 데이트레이딩 과열'
 ];
-
 const LUCKIES = [
   '침착함','절제','인내','루틴','관망','분산','현금','기록','복기','계획',
   '느림','관찰','질문','대기','원칙','여유','독서','산책','확인','점검'
 ];
-
 function hash(str){
   let h = 2166136261;
   for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
   return h >>> 0;
 }
-
 function todayKey(){
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 }
-
 function todayText(){
   const d = new Date();
   const wk = ['일','월','화','수','목','금','토'][d.getDay()];
   return `${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일 (${wk}요일) 운세`;
 }
-
 function gradeFor(score){
   if (score >= 85) return '대길(大吉) — 오늘은 행운이 함께합니다';
   if (score >= 70) return '길(吉) — 좋은 흐름이 느껴집니다';
@@ -263,9 +231,7 @@ function gradeFor(score){
   if (score >= 40) return '소흉(小凶) — 신중함이 필요한 날';
   return '흉(凶) — 섣부른 행동은 금물';
 }
-
 function pick(arr, h){ return arr[h % arr.length]; }
-
 function renderResult(zKey){
   const z = ZODIACS.find(x=>x.k===zKey);
   const day = todayKey();
@@ -275,7 +241,6 @@ function renderResult(zKey){
   const sector = pick(SECTORS, Math.floor(h/13));
   const avoid = pick(AVOIDS, Math.floor(h/23));
   const lucky = pick(LUCKIES, Math.floor(h/31));
-
   document.getElementById('r-emoji').textContent = z.e;
   document.getElementById('r-title').textContent = z.n + ' 오늘의 투자 운세';
   document.getElementById('r-sub').textContent = `출생년도 끝자리 ${z.y}`;
@@ -286,17 +251,14 @@ function renderResult(zKey){
   document.getElementById('r-sector').textContent = '#' + sector;
   document.getElementById('r-avoid').textContent = avoid;
   document.getElementById('r-lucky').textContent = lucky + ' — 오늘 당신의 투자에 힘을 주는 키워드입니다.';
-
   document.querySelectorAll('.zodiac-btn').forEach(b => b.classList.toggle('active', b.dataset.k === zKey));
   document.getElementById('result').classList.remove('hidden');
-
   try {
     const u = new URL(location.href);
     u.searchParams.set('z', zKey);
     history.replaceState(null,'',u);
   } catch(e) {}
 }
-
 (function(){
   document.getElementById('today').textContent = todayText();
   const grid = document.getElementById('zodiac-grid');
@@ -308,12 +270,10 @@ function renderResult(zKey){
     b.onclick = () => { renderResult(z.k); window.scrollTo({ top: document.getElementById('result').offsetTop - 80, behavior: 'smooth' }); };
     grid.appendChild(b);
   });
-
   const params = new URLSearchParams(location.search);
   const z = params.get('z');
   if (z && ZODIACS.find(x=>x.k===z)) renderResult(z);
 })();
-
 function shareKakao(){
   const txt = `${document.getElementById('r-title').textContent} - ${document.getElementById('r-score').textContent}점!\n${location.href}`;
   if (navigator.share) navigator.share({ title:'오늘의 투자 운세', text:txt, url:location.href }).catch(()=>{});
@@ -327,6 +287,5 @@ function copyLink(){
   navigator.clipboard.writeText(location.href).then(()=>alert('링크가 복사되었습니다')).catch(()=>{});
 }
 </script>
-
 </body>
 </html>

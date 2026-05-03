@@ -60,7 +60,6 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="logo">만또<span>.kr</span></a>
@@ -68,19 +67,17 @@
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
       <a href="/tools/">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
-
 <main class="page">
   <a class="back-btn" href="/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-
   <section class="proj-hero">
     <div class="proj-hero-inner">
       <div class="proj-badge">🧪 진행 중인 실험 · 시즌 1</div>
@@ -98,7 +95,6 @@
       </div>
     </div>
   </section>
-
   <section class="proj-section">
     <h2>📊 라이브 대시보드</h2>
     <div class="proj-dash">
@@ -145,7 +141,6 @@
     </div>
     <p style="font-size:12px;color:#8b95a1;margin-top:6px">마지막 업데이트: <span id="last-updated">2026-05-03</span> · 한국투자증권 실전 계좌의 실 잔고 기준</p>
   </section>
-
   <section class="proj-section">
     <h2>🎯 왜 이걸 1년이나 하는가</h2>
     <p style="font-size:14.5px;line-height:1.7;color:#374151">"AI 추천 종목 보고 따라사면 돈 번다"는 자극적 콘텐츠가 흔합니다. 만또는 그 반대로 갑니다. 수익률만 추구하면 사이트의 신뢰가 시장 변동에 종속돼버려요. 그래서 만또는 <b>실험 그 자체</b>를 콘텐츠로 만들기로 했습니다. 1년간 관찰하려는 4가지:</p>
@@ -168,7 +163,6 @@
       </div>
     </div>
   </section>
-
   <section class="proj-section">
     <h2>📋 실험 규칙</h2>
     <ul class="rules-list">
@@ -181,7 +175,6 @@
       <li><b>중도 입출금</b> · 1년 동안 추가 입금 없음. 시즌1은 처음 들어간 2,000만원으로만 운영</li>
     </ul>
   </section>
-
   <section class="proj-section">
     <h2>📅 공개 일정</h2>
     <div class="timeline">
@@ -207,7 +200,6 @@
       </div>
     </div>
   </section>
-
   <section class="proj-section">
     <h2>🔗 모든 리포트 보기</h2>
     <p style="font-size:14px;color:#374151;line-height:1.6">이 프로젝트와 연결된 모든 콘텐츠는 아래에서 볼 수 있어요.</p>
@@ -244,19 +236,15 @@
       </a>
     </div>
   </section>
-
   <div class="callout tip">
     <b>💡 같이 실험해보고 싶다면</b>
     이 사이트는 누구도 가입할 필요 없고, 광고 외에는 비용도 받지 않습니다. AI 매매 결과가 매일 공개되니, 본인 매매 판단의 비교 잣대로만 활용해주세요. 본 프로젝트의 결과를 따라 매매하다 손실이 나도 책임지지 않습니다.
   </div>
-
   <div class="disclaimer">
     <b>⚠ 투자 자문업자가 아닙니다</b><br>
     본 프로젝트는 만또 운영자의 자기 자본으로 진행하는 공개 실험이며, 특정 종목의 매수·매도를 권유하지 않습니다. 모든 거래 결과는 실 잔고 기준으로 공개되지만, 동일 결과를 보장하지 않습니다.
   </div>
-
 </main>
-
 <footer class="site-footer">
   <div class="site-footer-inner">
     <a href="/about.html">소개</a>·
@@ -266,7 +254,6 @@
     <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
   </div>
 </footer>
-
 <script>
 (function(){
   // D+ counter & progress bar
@@ -279,7 +266,6 @@
   document.getElementById('day-counter').textContent = 'D+' + dayN;
   document.getElementById('progress-pct').textContent = pct.toFixed(1) + '%';
   document.getElementById('progress-fill').style.width = pct.toFixed(2) + '%';
-
   // Stats from stats.json
   fetch('/ai-project/stats.json?t=' + Date.now())
     .then(r => r.ok ? r.json() : null)
@@ -288,7 +274,6 @@
       const fmtKRW = n => (n/10000).toFixed(0) + '만';
       const fmtPct = n => (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
       const fmtPnl = n => (n >= 0 ? '+' : '') + n.toLocaleString('ko-KR');
-
       document.getElementById('current-value').textContent = fmtKRW(s.current_value_krw);
       const pnl = s.current_value_krw - s.seed_krw;
       document.getElementById('current-sub').textContent = pnl === 0 ? '시드 그대로' : fmtPnl(pnl) + '원';
@@ -312,6 +297,5 @@
     .catch(()=>{});
 })();
 </script>
-
 </body>
 </html>

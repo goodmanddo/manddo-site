@@ -30,7 +30,6 @@
 .input-row .unit{font-size:15px;font-weight:700;color:#4e5968;white-space:nowrap}
 .range{width:100%;margin-top:12px;accent-color:#3182F6}
 .range-label{display:flex;justify-content:space-between;font-size:11.5px;color:#8b95a1;margin-top:4px;font-weight:500}
-
 .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .chip{
   background:#fff;border:1px solid #eef0f3;border-radius:999px;
@@ -39,11 +38,9 @@
 }
 .chip:hover{background:#f2f4f6}
 .chip.active{background:#EBF4FF;border-color:#3182F6;color:#1B64DA}
-
 .toggle-row{display:flex;align-items:center;gap:10px;margin-top:10px}
 .toggle-row input{width:16px;height:16px;accent-color:#3182F6;cursor:pointer}
 .toggle-row label{font-size:13.5px;color:#4e5968;font-weight:600;cursor:pointer;margin:0}
-
 .hero-result{
   background:linear-gradient(135deg,#0C8A5A 0%,#1DAF7B 50%,#3182F6 130%);
   border-radius:24px;padding:36px 28px;margin:24px 0;
@@ -64,7 +61,6 @@
 .hr-cell .t{font-size:11px;font-weight:700;opacity:.78;letter-spacing:0.04em;margin-bottom:2px}
 .hr-cell .v{font-size:18px;font-weight:800;letter-spacing:-0.02em;font-family:'SF Mono',ui-monospace,monospace}
 .hr-cell .v .u{font-size:13px;font-weight:700;opacity:.85;margin-left:2px}
-
 .chart-wrap{
   background:#fff;border:1px solid #eef0f3;border-radius:20px;
   padding:22px 20px 12px;margin:20px 0;
@@ -80,14 +76,12 @@
 .legend-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
 .dot-principal{background:#3182F6}
 .dot-profit{background:#0C8A5A}
-
 .breakdown{background:#fff;border:1px solid #eef0f3;border-radius:16px;padding:6px 20px;margin:16px 0}
 .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #eef0f3;font-size:14px}
 .row:last-child{border-bottom:none}
 .row .name{color:#4e5968;font-weight:600}
 .row .name .pct{font-size:12px;color:#8b95a1;margin-left:4px;font-weight:500}
 .row .amt{color:#191f28;font-weight:700;font-family:'SF Mono',ui-monospace,monospace}
-
 .rule72{
   background:linear-gradient(135deg,#FFF8E6 0%,#FFF2CF 100%);
   border:1px solid #FDE9A8;border-radius:14px;
@@ -98,10 +92,8 @@
 .rule72 .title{font-size:13.5px;font-weight:800;color:#4a3300;margin-bottom:3px}
 .rule72 .desc{font-size:13px;color:#6b4a00;line-height:1.55}
 .rule72 .desc b{color:#4a3300;font-weight:800}
-
 .info-card{background:#FFF8E6;border:1px solid #FDE9A8;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:13px;color:#6b4a00;line-height:1.7}
 .info-card b{color:#4a3300}
-
 details.faq{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:4px 16px;margin-bottom:10px}
 details.faq summary{padding:14px 0;font-size:14.5px;font-weight:700;color:#191f28;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
 details.faq summary::-webkit-details-marker{display:none}
@@ -112,13 +104,11 @@ details.faq .answer p{margin-bottom:8px}
 details.faq .answer ul{margin:6px 0 6px 18px}
 details.faq .answer li{margin-bottom:4px;font-size:13.5px}
 details.faq .answer b{color:#191f28;font-weight:700}
-
 .cta-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
 .cta-btn{flex:1;min-width:140px;background:#3182F6;color:#fff;border:none;border-radius:12px;padding:14px;cursor:pointer;font-family:inherit;font-size:14px;font-weight:700;text-decoration:none;text-align:center;transition:all .15s}
 .cta-btn:hover{background:#1B64DA}
 .cta-btn.ghost{background:#fff;color:#4e5968;border:1px solid #eef0f3}
 .cta-btn.ghost:hover{background:#f2f4f6;color:#191f28}
-
 @media(max-width:540px){
   .hr-amount{font-size:32px}
   .hr-amount .u{font-size:15px}
@@ -130,7 +120,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="logo">만또<span>.kr</span></a>
@@ -138,24 +127,20 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
       <a href="/tools/" class="active">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
-
 <main class="page">
   <!-- manddo-back-nav -->
   <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-
-
   <h1>📈 복리 계산기</h1>
   <p class="sub">스노우볼 효과로 내 자산이 얼마나 불어날까? — 초기 투자금·월 적립·수익률·기간으로 미래 자산 시뮬레이션</p>
-
   <div class="calc-form">
     <div class="field">
       <label for="initial">초기 투자금 (만원)</label>
@@ -165,7 +150,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       </div>
       <div class="hint">처음 한 번에 투입하는 씨앗 자금</div>
     </div>
-
     <div class="field">
       <label for="monthly">월 추가 투자금 (만원)</label>
       <div class="input-row">
@@ -181,20 +165,17 @@ details.faq .answer b{color:#191f28;font-weight:700}
       </div>
       <div class="hint">매월 자동이체·적립식 매수로 추가하는 금액</div>
     </div>
-
     <div class="field">
       <label for="rate">연 수익률 <span id="rate-val" style="color:#3182F6;font-weight:800;font-family:'SF Mono',ui-monospace,monospace">7.0%</span></label>
       <input type="range" id="rate" class="range" min="2" max="15" step="0.5" value="7">
       <div class="range-label"><span>2%</span><span>7% (S&P500 평균)</span><span>15%</span></div>
       <div class="hint">인플레이션 반영 전 명목 수익률. S&P500 100년 평균 약 10%, 실질 7% 수준</div>
     </div>
-
     <div class="field">
       <label for="years">투자 기간 <span id="years-val" style="color:#3182F6;font-weight:800;font-family:'SF Mono',ui-monospace,monospace">20년</span></label>
       <input type="range" id="years" class="range" min="1" max="50" step="1" value="20">
       <div class="range-label"><span>1년</span><span>20년</span><span>50년</span></div>
     </div>
-
     <div class="field">
       <label>인플레이션 반영</label>
       <div class="toggle-row">
@@ -208,14 +189,11 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <div class="hint">과거 한국 장기 평균 인플레이션 ~2.5%. ON하면 "미래 돈 → 지금 돈" 실질 가치로 보여줍니다</div>
     </div>
   </div>
-
   <div class="hero-result">
     <div class="hr-label" id="r-label">● 20년 뒤 최종 자산</div>
     <div class="hr-amount"><span id="r-final">0</span><span class="u">만원</span></div>
     <div class="hr-sub" id="r-sub">복리 효과로 자산이 얼마나 커질까요?</div>
-
     <div class="hr-divider"></div>
-
     <div class="hr-grid">
       <div class="hr-cell">
         <div class="t">총 투입 원금</div>
@@ -227,7 +205,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       </div>
     </div>
   </div>
-
   <div class="rule72" id="rule72">
     <div class="emoji">⚡</div>
     <div class="body">
@@ -235,7 +212,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <div class="desc" id="r-rule72">연 <b>7%</b> 수익률에선 약 <b>10.3년</b>마다 자산이 2배가 됩니다.</div>
     </div>
   </div>
-
   <div class="chart-wrap">
     <h3>📊 연도별 자산 성장</h3>
     <div class="ch-sub">쌓인 원금과 수익을 연단위로 누적해서 표시합니다</div>
@@ -245,17 +221,13 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <span class="legend-item"><span class="legend-dot dot-profit"></span>누적 수익</span>
     </div>
   </div>
-
   <h2>📋 10년 간격 자산 변화</h2>
   <div class="breakdown" id="milestones"></div>
-
   <div class="info-card">
     <b>ℹ️ 복리란?</b><br>
     단리가 원금에만 이자가 붙는 방식이라면, 복리는 <b>이전에 붙은 이자에도 다시 이자가 붙는</b> 방식입니다. 장기로 갈수록 지수함수적으로 자산이 증가하며, 이를 "스노우볼 효과"라고 부릅니다. 본 계산기는 월 복리(월별 재투자)를 가정합니다.
   </div>
-
   <h2>❓ 자주 묻는 질문</h2>
-
   <details class="faq">
     <summary>복리 효과는 왜 장기투자에서 강력한가요?</summary>
     <div class="answer">
@@ -269,7 +241,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <p>20년 차를 넘어가면 수익이 원금을 추월하는 "황금 교차점"이 찾아옵니다.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>72의 법칙이 뭔가요?</summary>
     <div class="answer">
@@ -282,7 +253,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <p>역산도 가능합니다. 10년 안에 자산을 2배로 만들고 싶다면 → 72 ÷ 10 = <b>연 7.2%</b> 수익률이 필요합니다. 단순하지만 장기 투자 직감을 기르는 데 유용한 공식입니다.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>연 7% 수익률이 현실적인가요?</summary>
     <div class="answer">
@@ -295,7 +265,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <p>단, 이는 <b>평균</b>이고 연도별로는 -30%~+40% 변동폭이 큽니다. 단기 예측이 아니라 장기(10년+) 누적 기대치로 이해하세요.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>인플레이션을 고려하면 얼마나 달라지나요?</summary>
     <div class="answer">
@@ -307,7 +276,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <p>계산기 상단의 "인플레이션 반영" 체크박스를 켜면, 최종 자산을 현재 구매력 기준으로 환산해서 보여줍니다. 목표 금액을 현실적으로 잡는 데 도움이 됩니다.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>월 적립식 vs 일시금, 어떤 게 나은가요?</summary>
     <div class="answer">
@@ -319,7 +287,6 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <p>가장 강력한 조합은 <b>초기 목돈 + 월 적립 병행</b>입니다. 본 계산기가 이 시나리오를 지원합니다.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>세금은 왜 반영 안 되나요?</summary>
     <div class="answer">
@@ -333,19 +300,15 @@ details.faq .answer b{color:#191f28;font-weight:700}
       <p>세후 수익률을 보고 싶다면 입력 수익률에서 약 1~2%p 낮춰서 넣으세요. (예: 기대 7% → 세후 5.5%로 입력)</p>
     </div>
   </details>
-
   <div class="cta-row">
     <a href="/tools/" class="cta-btn ghost">🧮 다른 계산기 보기</a>
     <a href="/tools/fire.html" class="cta-btn">🔥 내 FIRE D-Day는?</a>
   </div>
-
   <div class="disclaimer">
     <b>⚠ 참고용 안내</b><br>
     본 계산기는 단순 복리 공식 기반 시뮬레이션이며, 실제 투자 수익은 시장 변동성·세금·수수료·환율·운용 실패 등으로 크게 달라질 수 있습니다. 과거 수익률이 미래 수익을 보장하지 않으며, 모든 투자 판단과 그 결과는 이용자 본인의 책임입니다.
   </div>
-
 </main>
-
 <footer class="site-footer">
   <div class="site-footer-inner">
     <a href="/about.html">소개</a>·
@@ -355,11 +318,9 @@ details.faq .answer b{color:#191f28;font-weight:700}
     <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
   </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
 const MAN = 10000;
-
 function simulate(initial, monthly, annualRate, years){
   const r = Math.pow(1 + annualRate, 1/12) - 1;
   const series = [{ year:0, principal:initial, total:initial }];
@@ -374,7 +335,6 @@ function simulate(initial, monthly, annualRate, years){
   }
   return series;
 }
-
 function fmt(n){
   if(!isFinite(n)) return '—';
   return Math.round(n).toLocaleString('ko-KR');
@@ -387,15 +347,12 @@ function fmtAsset(manWon){
   if(eok >= 1) return `${eok}억 ${man.toLocaleString('ko-KR')}만원`;
   return `${Math.round(manWon).toLocaleString('ko-KR')}만원`;
 }
-
 let chart;
-
 function renderChart(series){
   const ctx = document.getElementById('chart').getContext('2d');
   const labels = series.map(s => s.year + '년');
   const principals = series.map(s => Math.round(s.principal));
   const profits = series.map(s => Math.max(Math.round(s.total - s.principal), 0));
-
   const cfg = {
     type:'bar',
     data:{
@@ -426,7 +383,6 @@ function renderChart(series){
   if(chart){ chart.data = cfg.data; chart.options = cfg.options; chart.update(); }
   else chart = new Chart(ctx, cfg);
 }
-
 function renderMilestones(series, years, inflOn, inflRate){
   const container = document.getElementById('milestones');
   const marks = new Set();
@@ -448,7 +404,6 @@ function renderMilestones(series, years, inflOn, inflRate){
   });
   container.innerHTML = rows.join('');
 }
-
 function run(){
   const initial = (parseFloat(document.getElementById('initial').value) || 0);
   const monthly = (parseFloat(document.getElementById('monthly').value) || 0);
@@ -456,16 +411,13 @@ function run(){
   const years = parseInt(document.getElementById('years').value) || 0;
   const inflOn = document.getElementById('inflOn').checked;
   const inflRate = (parseFloat(document.getElementById('infl').value) || 0) / 100;
-
   document.getElementById('rate-val').textContent = (rate*100).toFixed(1) + '%';
   document.getElementById('years-val').textContent = years + '년';
   document.getElementById('infl').disabled = !inflOn;
-
   const series = simulate(initial, monthly, rate, years);
   const last = series[years];
   const principal = last.principal;
   const profit = last.total - principal;
-
   // 인플레이션 조정
   let shownTotal = last.total;
   let sub = '복리 효과로 자산이 이렇게 커집니다';
@@ -473,28 +425,23 @@ function run(){
     shownTotal = last.total / Math.pow(1 + inflRate, years);
     sub = `명목 ${fmtAsset(last.total)} → 현재 구매력 기준 환산`;
   }
-
   document.getElementById('r-label').textContent = `● ${years}년 뒤 최종 자산`;
   document.getElementById('r-final').textContent = fmt(shownTotal);
   document.getElementById('r-sub').textContent = sub;
   document.getElementById('r-principal').textContent = fmt(principal);
   document.getElementById('r-profit').textContent = fmt(profit);
-
   // 72의 법칙
   const r72 = rate > 0 ? (72 / (rate*100)).toFixed(1) : '∞';
   document.getElementById('r-rule72').innerHTML =
     `연 <b>${(rate*100).toFixed(1)}%</b> 수익률에선 약 <b>${r72}${rate>0?'년':''}</b>마다 자산이 2배가 됩니다.`;
-
   renderChart(series);
   renderMilestones(series, years, inflOn, inflRate);
 }
-
 // === 이벤트 바인딩 ===
 ['initial','monthly','infl'].forEach(id => document.getElementById(id).addEventListener('input', run));
 document.getElementById('rate').addEventListener('input', run);
 document.getElementById('years').addEventListener('input', run);
 document.getElementById('inflOn').addEventListener('change', run);
-
 document.querySelectorAll('.chip[data-monthly]').forEach(c => {
   c.addEventListener('click', () => {
     document.querySelectorAll('.chip[data-monthly]').forEach(x => x.classList.remove('active'));
@@ -503,16 +450,13 @@ document.querySelectorAll('.chip[data-monthly]').forEach(c => {
     run();
   });
 });
-
 document.getElementById('monthly').addEventListener('input', () => {
   const v = document.getElementById('monthly').value;
   document.querySelectorAll('.chip[data-monthly]').forEach(x => {
     x.classList.toggle('active', x.dataset.monthly === v);
   });
 });
-
 run();
 </script>
-
 </body>
 </html>

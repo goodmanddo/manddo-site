@@ -29,7 +29,6 @@
 .input-row input[type=number]:focus{outline:none;border-color:#3182F6;background:#fff;box-shadow:0 0 0 3px rgba(49,130,246,.1)}
 .input-row .unit{font-size:15px;font-weight:700;color:#4e5968;white-space:nowrap}
 .range{width:100%;margin-top:12px;accent-color:#3182F6}
-
 .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .chip{
   background:#fff;border:1px solid #eef0f3;border-radius:999px;
@@ -38,7 +37,6 @@
 }
 .chip:hover{background:#f2f4f6}
 .chip.active{background:#EBF4FF;border-color:#3182F6;color:#1B64DA}
-
 .result-box{
   background:linear-gradient(135deg,#EBF4FF,#F4F9FF);
   border-radius:20px;padding:28px 24px;margin:20px 0;
@@ -59,7 +57,6 @@
   font-size:13.5px;color:#4e5968;font-weight:600;position:relative;
 }
 .annual-line .val{color:#191f28;font-weight:800;font-size:16px}
-
 .breakdown{background:#fff;border:1px solid #eef0f3;border-radius:16px;padding:6px 20px;margin:16px 0}
 .row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #eef0f3;font-size:14px}
 .row:last-child{border-bottom:none}
@@ -69,10 +66,8 @@
 .row.total{padding:16px 0;border-top:2px solid #eef0f3;border-bottom:none;margin-top:2px}
 .row.total .name{color:#191f28;font-weight:800;font-size:15px}
 .row.total .amt{color:#3182F6;font-size:16px;font-weight:800}
-
 .info-card{background:#FFF8E6;border:1px solid #FDE9A8;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:13px;color:#6b4a00;line-height:1.7}
 .info-card b{color:#4a3300}
-
 details.faq{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:4px 16px;margin-bottom:10px}
 details.faq summary{padding:14px 0;font-size:14.5px;font-weight:700;color:#191f28;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
 details.faq summary::after{content:'+';color:#8b95a1;font-size:20px;font-weight:400}
@@ -81,13 +76,11 @@ details.faq .answer{padding:0 0 16px;font-size:13.5px;color:#4e5968;line-height:
 details.faq .answer p{margin-bottom:8px}
 details.faq .answer ul{margin:6px 0 6px 18px}
 details.faq .answer li{margin-bottom:4px;font-size:13.5px}
-
 .cta-row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
 .cta-btn{flex:1;min-width:140px;background:#3182F6;color:#fff;border:none;border-radius:12px;padding:14px;cursor:pointer;font-family:inherit;font-size:14px;font-weight:700;text-decoration:none;text-align:center;transition:all .15s}
 .cta-btn:hover{background:#1B64DA}
 .cta-btn.ghost{background:#fff;color:#4e5968;border:1px solid #eef0f3}
 .cta-btn.ghost:hover{background:#f2f4f6;color:#191f28}
-
 @media(max-width:540px){
   .result-amount{font-size:32px}
   .result-amount .unit{font-size:17px}
@@ -97,7 +90,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="logo">만또<span>.kr</span></a>
@@ -105,24 +97,20 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
       <a href="/tools/" class="active">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
-
 <main class="page">
   <!-- manddo-back-nav -->
   <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-
-
   <h1>💰 연봉 실수령액 계산기</h1>
   <p class="sub">2025년 기준 · 4대보험·소득세·지방세 공제 후 월 실수령액</p>
-
   <div class="calc-form">
     <div class="field">
       <label for="salary">연봉 (세전, 만원 단위)</label>
@@ -140,7 +128,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
         <button class="chip" data-salary="10000">1억</button>
       </div>
     </div>
-
     <div class="field">
       <label>부양가족 수 (본인 포함)</label>
       <div class="chip-row" id="family-chips">
@@ -152,7 +139,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       </div>
       <div class="hint">배우자·부모·자녀 등 세법상 부양가족을 포함한 수</div>
     </div>
-
     <div class="field">
       <label>20세 이하 자녀 수</label>
       <div class="chip-row" id="child-chips">
@@ -163,7 +149,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       </div>
       <div class="hint">자녀세액공제 반영 (8세 이상 20세 이하 기준 단순화)</div>
     </div>
-
     <div class="field">
       <label>비과세액 (월, 만원)</label>
       <div class="input-row">
@@ -173,7 +158,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <div class="hint">식대 월 20만원(2023년 개정)이 일반적인 비과세 항목. 회사마다 다를 수 있어요.</div>
     </div>
   </div>
-
   <div class="result-box">
     <div class="result-label">월 실수령액</div>
     <div class="result-amount"><span id="r-monthly">0</span><span class="unit">원</span></div>
@@ -183,7 +167,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <span class="val"><span id="r-annual">0</span>원</span>
     </div>
   </div>
-
   <h2>📋 공제 내역 (월 기준)</h2>
   <div class="breakdown">
     <div class="row">
@@ -215,14 +198,11 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <div class="amt"><span id="r-total">0</span>원</div>
     </div>
   </div>
-
   <div class="info-card">
     <b>ℹ️ 계산 기준</b><br>
     국민연금 상한(월 소득 637만원, 2025.7~), 건강보험·장기요양·고용보험·근로소득 간이세액표를 반영했습니다. 실제 회사 급여명세서와는 회사 지원금·상여 구조·세액공제 항목에 따라 ±5만원 내외로 차이가 날 수 있습니다.
   </div>
-
   <h2>❓ 자주 묻는 질문</h2>
-
   <details class="faq">
     <summary>실수령액이 회사 급여명세서와 다르게 나오는데요?</summary>
     <div class="answer">
@@ -235,7 +215,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       </ul>
     </div>
   </details>
-
   <details class="faq">
     <summary>부양가족 수는 어떻게 정해지나요?</summary>
     <div class="answer">
@@ -250,7 +229,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <p>자녀 중 8세~20세는 추가로 <b>자녀세액공제</b>(첫째 15만원, 둘째 20만원, 셋째 이상 30만원)가 적용됩니다.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>연봉 5,000만원의 월 실수령액은 대략 얼마인가요?</summary>
     <div class="answer">
@@ -258,7 +236,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <p>부양가족이 늘어나거나 자녀가 있을수록 소득세가 감소해 실수령액이 늘어나는 구조입니다.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>비과세액은 무엇이고 얼마로 잡으면 되나요?</summary>
     <div class="answer">
@@ -266,7 +243,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <p>그 외 자가운전보조금(월 20만원 한도), 육아휴직 급여, 출산·보육수당 월 20만원 등이 있습니다. 본 계산기는 기본값으로 식대 20만원만 반영하며, 회사마다 다르므로 실제 명세서를 확인하세요.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>국민연금은 왜 연봉이 높아도 무한정 오르지 않나요?</summary>
     <div class="answer">
@@ -274,7 +250,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <p>따라서 국민연금 월 최대 공제액은 약 <b>286,650원</b>입니다. 연봉이 이 수준(연 7,644만원)을 넘으면 국민연금 부담이 정체됩니다.</p>
     </div>
   </details>
-
   <details class="faq">
     <summary>4대보험과 소득세는 각각 언제 공제되나요?</summary>
     <div class="answer">
@@ -282,19 +257,15 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
       <p>4대보험은 정산 없이 매월 확정 공제입니다(건강보험은 다음해 4월 정산 있음).</p>
     </div>
   </details>
-
   <div class="cta-row">
     <a href="/tools/" class="cta-btn ghost">🧮 다른 계산기 보기</a>
     <a href="/mind/investor-type.html" class="cta-btn">🎯 나와 어울리는 주식은?</a>
   </div>
-
   <div class="disclaimer">
     <b>⚠ 참고용 안내</b><br>
     본 계산기는 2025년 기준 공제율을 바탕으로 한 <b>참고용 계산 도구</b>이며, 실제 급여·세금과는 차이가 있을 수 있습니다. 법령 개정, 회사별 복리후생, 개인 공제 항목에 따라 결과가 달라집니다. 정확한 금액은 급여명세서 또는 국세청·국민연금공단 공식 자료를 참고하세요.
   </div>
-
 </main>
-
 <footer class="site-footer">
   <div class="site-footer-inner">
     <a href="/about.html">소개</a>·
@@ -304,7 +275,6 @@ details.faq .answer li{margin-bottom:4px;font-size:13.5px}
     <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
   </div>
 </footer>
-
 <script>
 // ===== 2025 기준 공제 계산 =====
 const PENSION_RATE = 0.045;
@@ -319,7 +289,6 @@ const STD_CREDIT = 130000;
 const CHILD_CREDIT_1 = 150000;
 const CHILD_CREDIT_2 = 200000;
 const CHILD_CREDIT_3PLUS = 300000;
-
 function earnedDeduction(annual){
   let d;
   if (annual <= 5000000) d = annual * 0.7;
@@ -329,7 +298,6 @@ function earnedDeduction(annual){
   else d = 14750000 + (annual - 100000000) * 0.02;
   return Math.min(d, 20000000);
 }
-
 function calcProgTax(base){
   if (base <= 14000000) return base * 0.06;
   if (base <= 50000000) return 840000 + (base - 14000000) * 0.15;
@@ -340,39 +308,33 @@ function calcProgTax(base){
   if (base <= 1000000000) return 174060000 + (base - 500000000) * 0.42;
   return 384060000 + (base - 1000000000) * 0.45;
 }
-
 function earnedCreditLimit(annual){
   if (annual <= 33000000) return 740000;
   if (annual <= 70000000) return Math.max(740000 - (annual - 33000000) * 0.008, 660000);
   return 500000;
 }
-
 function childCredit(n){
   if (n <= 0) return 0;
   if (n === 1) return CHILD_CREDIT_1;
   if (n === 2) return CHILD_CREDIT_1 + CHILD_CREDIT_2;
   return CHILD_CREDIT_1 + CHILD_CREDIT_2 + CHILD_CREDIT_3PLUS * (n - 2);
 }
-
 function calculate(annualWon, family, children, monthNonTax){
   const nonTaxAnnual = monthNonTax * 12;
   const taxableAnnual = Math.max(annualWon - nonTaxAnnual, 0);
   const monthly = annualWon / 12;
   const taxableMonthly = taxableAnnual / 12;
-
   const pensionBase = Math.max(Math.min(taxableMonthly, PENSION_MAX_BASE), PENSION_MIN_BASE);
   const pension = Math.floor(pensionBase * PENSION_RATE);
   const health = Math.floor(taxableMonthly * HEALTH_RATE);
   const longterm = Math.floor(health * LONGTERM_RATE);
   const employ = Math.floor(taxableMonthly * EMPLOY_RATE);
-
   const earnedDed = earnedDeduction(taxableAnnual);
   const earnedIncome = Math.max(taxableAnnual - earnedDed, 0);
   const personalTotal = PERSONAL_DED * family;
   const pensionDed = pension * 12;
   const healthDed = (health + longterm) * 12;
   const taxBase = Math.max(earnedIncome - personalTotal - pensionDed - healthDed, 0);
-
   const grossTax = calcProgTax(taxBase);
   const rawEarnedCredit = grossTax <= 1300000 ? grossTax * 0.55 : 715000 + (grossTax - 1300000) * 0.3;
   const earnedCredit = Math.min(rawEarnedCredit, earnedCreditLimit(taxableAnnual));
@@ -380,24 +342,18 @@ function calculate(annualWon, family, children, monthNonTax){
   const decidedTax = Math.max(grossTax - earnedCredit - STD_CREDIT - cCredit, 0);
   const monthIncomeTax = Math.floor(decidedTax / 12 / 10) * 10;
   const localTax = Math.floor(monthIncomeTax * LOCAL_RATE / 10) * 10;
-
   const totalDeduct = pension + health + longterm + employ + monthIncomeTax + localTax;
   const takehome = Math.round(monthly) - totalDeduct;
-
   return { monthly:Math.round(monthly), takehome, pension, health, longterm, employ,
            incomeTax:monthIncomeTax, localTax, totalDeduct };
 }
-
 function fmt(n){ return n.toLocaleString('ko-KR'); }
-
 function run(){
   const salaryMan = parseInt(document.getElementById('salary').value) || 0;
   const family = parseInt(document.querySelector('#family-chips .active').dataset.family) || 1;
   const children = parseInt(document.querySelector('#child-chips .active').dataset.child) || 0;
   const nonTaxMan = parseInt(document.getElementById('nontax').value) || 0;
-
   const r = calculate(salaryMan * 10000, family, children, nonTaxMan * 10000);
-
   document.getElementById('r-monthly').textContent = fmt(r.takehome);
   document.getElementById('r-annual').textContent = fmt(r.takehome * 12);
   const pct = r.monthly > 0 ? Math.round(r.takehome / r.monthly * 1000) / 10 : 0;
@@ -410,7 +366,6 @@ function run(){
   document.getElementById('r-local').textContent = fmt(r.localTax);
   document.getElementById('r-total').textContent = fmt(r.totalDeduct);
 }
-
 document.getElementById('salary').addEventListener('input', e => {
   document.getElementById('salary-range').value = Math.min(Math.max(e.target.value, 2000), 20000);
   run();
@@ -420,7 +375,6 @@ document.getElementById('salary-range').addEventListener('input', e => {
   run();
 });
 document.getElementById('nontax').addEventListener('input', run);
-
 document.querySelectorAll('.chip[data-salary]').forEach(c => c.addEventListener('click', () => {
   document.getElementById('salary').value = c.dataset.salary;
   document.getElementById('salary-range').value = Math.min(Math.max(parseInt(c.dataset.salary), 2000), 20000);
@@ -433,9 +387,7 @@ document.querySelectorAll('.chip[data-salary]').forEach(c => c.addEventListener(
     run();
   }));
 });
-
 run();
 </script>
-
 </body>
 </html>

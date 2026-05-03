@@ -15,7 +15,6 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="logo">만또<span>.kr</span></a>
@@ -23,20 +22,18 @@
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/" class="active">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
       <a href="/tools/">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
-
 <main class="page">
   <!-- manddo-back-nav -->
   <a class="back-btn" href="/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-
   <form class="stock-search" id="search-form" role="search" onsubmit="return false">
     <div class="s-input">
       <input type="search" id="q" placeholder="종목명 또는 코드 검색 (예: 삼성SDI, 006400)" aria-label="종목 검색" autocomplete="off">
@@ -46,25 +43,20 @@
       </button>
     </div>
   </form>
-
   <h1>📊 주식 차트분석 리포트</h1>
   <p class="sub">코스피·코스닥 종목의 세력 흐름, 차트 구조, 수급 상황을 한 장에 정리한 리포트 모음</p>
-
   <div style="margin:16px 0 24px;padding:14px 16px;background:#eff4ff;border-left:3px solid #1B64DA;border-radius:6px;font-size:14px">
     🗂️ <b>업종별로 보고 싶다면?</b> <a href="/stock/sector/" style="color:#1B64DA;font-weight:600">업종별 종목 큐레이션 →</a> 반도체·2차전지·바이오·금융 등 8개 섹터로 묶어둔 페이지가 있어요.
   </div>
-
   <div class="disclaimer">
     <b>⚠ 읽기 전 안내</b><br>
     모든 분석은 공개 정보 기반의 참고용 자료이며, 매수·매도 권유가 아닙니다. 분석 시점 이후 시장 상황은 변할 수 있으니, 투자 판단 전 최신 정보를 확인하세요.
   </div>
-
   <div class="stock-mode" id="stock-mode" role="tablist" aria-label="종목 보기 모드">
     <button type="button" class="sm-btn active" data-mode="core" aria-pressed="true">핵심 종목</button>
     <button type="button" class="sm-btn" data-mode="all" aria-pressed="false">전체 종목</button>
     <span class="sm-hint" id="sm-hint">대표 종목을 먼저 보여드립니다. 전체 보기로 전환 가능.</span>
   </div>
-
 <!-- TODAY_PICK_START -->
   <div class="today-pick" style="background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:16px;padding:28px 24px;margin-bottom:32px;color:#fff;position:relative;overflow:hidden">
     <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(255,255,255,0.08);border-radius:50%"></div>
@@ -81,7 +73,6 @@
     </a>
   </div>
   <!-- TODAY_PICK_END -->
-
   <div class="grid" id="stock-grid">
     <!-- STOCK_CARDS_START -->
     <a href="/stock/079940.html" class="card" data-name="가비아 079940" data-code="079940" data-tags="">
@@ -1199,15 +1190,11 @@
     </a>
     <!-- STOCK_CARDS_END -->
   </div>
-
   <div class="stock-empty" id="empty" style="display:none;margin-top:16px">
     검색 결과가 없어요. 다른 키워드로 시도해보세요.
   </div>
-
   <nav class="pagination" id="pagination" aria-label="페이지 이동"></nav>
-
 </main>
-
 <footer class="site-footer">
   <div class="site-footer-inner">
     <a href="/about.html">소개</a>·
@@ -1217,7 +1204,6 @@
     <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
   </div>
 </footer>
-
 <script>
 (function(){
   const PAGE_SIZE = 20;
@@ -1231,19 +1217,15 @@
   const modeBox = document.getElementById('stock-mode');
   const modeHint = document.getElementById('sm-hint');
   const coreCount = cards.filter(c => c.dataset.core === '1').length;
-
   let mode = 'core';
   let currentPage = 1;
   let matched = cards;
   grid.classList.add('mode-core');
-
   function norm(s){ return (s||'').toLowerCase().replace(/\s+/g,''); }
-
   function buildPager(totalPages){
     if(totalPages <= 1){ pager.innerHTML=''; return; }
     const parts = [];
     parts.push(`<button type="button" data-pg="prev" ${currentPage===1?'disabled':''} aria-label="이전 페이지">‹</button>`);
-
     const pages = new Set([1, totalPages, currentPage, currentPage-1, currentPage+1]);
     const shown = Array.from(pages).filter(p => p>=1 && p<=totalPages).sort((a,b)=>a-b);
     let last = 0;
@@ -1252,12 +1234,10 @@
       parts.push(`<button type="button" data-pg="${p}" class="${p===currentPage?'active':''}" aria-label="${p}페이지"${p===currentPage?' aria-current="page"':''}>${p}</button>`);
       last = p;
     }
-
     parts.push(`<button type="button" data-pg="next" ${currentPage===totalPages?'disabled':''} aria-label="다음 페이지">›</button>`);
     parts.push(`<span class="pg-info">${matched.length}개 중 ${(currentPage-1)*PAGE_SIZE+1}-${Math.min(currentPage*PAGE_SIZE, matched.length)}</span>`);
     pager.innerHTML = parts.join('');
   }
-
   function render(){
     cards.forEach(c => c.style.display='none');
     if(matched.length === 0){
@@ -1272,11 +1252,9 @@
     matched.slice(start, start + PAGE_SIZE).forEach(c => c.style.display='');
     buildPager(totalPages);
   }
-
   function pool(){
     return mode === 'core' ? cards.filter(c => c.dataset.core === '1') : cards;
   }
-
   function filter(resetPage){
     const q = norm(input.value);
     form.classList.toggle('has-text', !!input.value);
@@ -1292,7 +1270,6 @@
     if(resetPage) currentPage = 1;
     render();
   }
-
   function setMode(next){
     if(next === mode) return;
     mode = next;
@@ -1309,12 +1286,10 @@
     }
     filter(true);
   }
-
   modeBox.addEventListener('click', e => {
     const btn = e.target.closest('.sm-btn[data-mode]');
     if(btn) setMode(btn.dataset.mode);
   });
-
   pager.addEventListener('click', e => {
     const btn = e.target.closest('button[data-pg]');
     if(!btn) return;
@@ -1327,22 +1302,18 @@
     render();
     window.scrollTo({top:0, behavior:'smooth'});
   });
-
   const params = new URLSearchParams(location.search);
   const q0 = params.get('q');
   if(q0){ input.value = q0; }
   filter(true);
-
   input.addEventListener('input', () => {
     if(input.value && mode === 'core') setMode('all');
     else filter(true);
   });
   clearBtn.addEventListener('click', () => { input.value=''; filter(true); input.focus(); });
   form.addEventListener('submit', e => { e.preventDefault(); filter(true); input.blur(); });
-
   if(modeHint) modeHint.textContent = `대표 ${coreCount}종목 우선 노출. 전체 보기로 전환 가능.`;
 })();
 </script>
-
 </body>
 </html>

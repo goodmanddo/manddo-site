@@ -126,12 +126,14 @@ POST_TEMPLATE = """<!DOCTYPE html>
     <a href="/" class="logo">만또<span>.kr</span></a>
     <nav class="nav">
       <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/" class="active">블로그</a>
       <a href="/tools/">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
@@ -284,12 +286,14 @@ BLOG_INDEX_TEMPLATE = """<!DOCTYPE html>
     <a href="/" class="logo">만또<span>.kr</span></a>
     <nav class="nav">
       <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/" class="active">블로그</a>
       <a href="/tools/">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
+      <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>

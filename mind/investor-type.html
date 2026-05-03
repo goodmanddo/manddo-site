@@ -20,7 +20,6 @@
 .mode-btn .icon{font-size:32px;margin-bottom:8px}
 .mode-btn .label{font-size:15px;font-weight:700;color:#191f28;letter-spacing:-0.02em}
 .mode-btn .sub{font-size:12px;color:#8b95a1;margin-top:4px;font-weight:500}
-
 .progress-wrap{background:#eef0f3;border-radius:999px;height:6px;overflow:hidden;margin-bottom:24px}
 .progress-bar{background:linear-gradient(90deg,#3182F6,#1B64DA);height:100%;border-radius:999px;transition:width .3s ease}
 .q-num{font-size:12px;font-weight:700;color:#3182F6;letter-spacing:0.05em;margin-bottom:6px}
@@ -28,11 +27,9 @@
 .opt-list{display:flex;flex-direction:column;gap:10px}
 .opt-btn{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:16px 18px;text-align:left;cursor:pointer;font-family:inherit;font-size:14.5px;color:#191f28;transition:all .15s;font-weight:500}
 .opt-btn:hover{border-color:#3182F6;background:#F4F9FF}
-
 .mbti-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:20px 0}
 .mbti-btn{background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:14px 8px;text-align:center;cursor:pointer;font-family:inherit;font-weight:700;font-size:14px;color:#191f28;letter-spacing:0.02em;transition:all .15s}
 .mbti-btn:hover{background:#EBF4FF;border-color:#3182F6;color:#1B64DA}
-
 .result-card{background:#fff;border:1px solid #eef0f3;border-radius:20px;padding:28px 24px;margin:20px 0}
 .result-emoji{font-size:52px;text-align:center;margin-bottom:8px}
 .result-type{font-size:28px;font-weight:800;color:#191f28;text-align:center;letter-spacing:-0.04em;margin-bottom:6px}
@@ -47,7 +44,6 @@
 .stock-link .arrow{color:#3182F6;font-weight:700}
 .avoid-list{background:#FFF5F5;border:1px solid #FED7D7;border-radius:12px;padding:14px 16px;font-size:13.5px;color:#9B2C2C;line-height:1.7}
 .model-tag{display:inline-block;background:#F7F0FF;color:#6B46C1;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600;margin-top:4px}
-
 .share-row{display:flex;gap:8px;margin-top:24px;flex-wrap:wrap}
 .share-btn{flex:1;min-width:100px;background:#fff;border:1px solid #eef0f3;border-radius:10px;padding:12px;cursor:pointer;font-family:inherit;font-size:13px;font-weight:600;color:#4e5968;transition:all .15s}
 .share-btn:hover{background:#f2f4f6;color:#191f28}
@@ -56,9 +52,7 @@
 .cta-btn:hover{background:#1B64DA}
 .cta-btn.ghost{background:#fff;color:#4e5968;border:1px solid #eef0f3}
 .cta-btn.ghost:hover{background:#f2f4f6;color:#191f28}
-
 .hidden{display:none}
-
 @media(max-width:480px){
   .mode-select{grid-template-columns:1fr}
   .mbti-grid{grid-template-columns:repeat(4,1fr);gap:6px}
@@ -72,7 +66,6 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="logo">만또<span>.kr</span></a>
@@ -80,31 +73,26 @@
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
-      <a href="/tools/">머니 툴</a>
-      <a href="/mind/" class="active">마인드 랩</a>
+      <a href="/tools/" class="active">머니 툴</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
-
 <main class="page">
   <!-- manddo-back-nav -->
-  <a class="back-btn" href="/mind/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-
-
+  <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
   <!-- 시작 화면 -->
   <section id="intro">
     <h1>🎯 나와 어울리는 주식 종목은?</h1>
     <p class="sub">10문항으로 알아보는 나의 투자 유형 · 약 2분 소요</p>
-
     <div class="disclaimer">
       <b>⚠ 엔터테인먼트 안내</b><br>
       본 테스트는 재미로 보는 콘텐츠이며, 투자 권유가 아닙니다. 결과로 안내되는 종목은 만또 분석표로 연결되는 참고용 링크입니다.
     </div>
-
     <div class="mode-select">
       <button class="mode-btn" onclick="showTest()">
         <div class="icon">📝</div>
@@ -118,7 +106,6 @@
       </button>
     </div>
   </section>
-
   <!-- MBTI 선택 -->
   <section id="mbti-screen" class="hidden">
     <h1>⚡ MBTI 선택</h1>
@@ -126,7 +113,6 @@
     <div class="mbti-grid" id="mbti-grid"></div>
     <button class="cta-btn ghost" onclick="backToIntro()">← 돌아가기</button>
   </section>
-
   <!-- 테스트 화면 -->
   <section id="test-screen" class="hidden">
     <div class="progress-wrap"><div class="progress-bar" id="progress"></div></div>
@@ -134,7 +120,6 @@
     <div class="q-text" id="qtext"></div>
     <div class="opt-list" id="opts"></div>
   </section>
-
   <!-- 결과 화면 -->
   <section id="result-screen" class="hidden">
     <div class="q-num">당신의 투자 유형</div>
@@ -143,42 +128,34 @@
       <div class="result-type" id="r-type"></div>
       <div class="result-subtitle" id="r-subtitle"></div>
       <div class="result-desc" id="r-desc"></div>
-
       <div class="result-section">
         <h3>🎯 어울리는 종목 (만또 분석)</h3>
         <div id="r-stocks"></div>
       </div>
-
       <div class="result-section">
         <h3>⚠️ 피해야 할 투자 스타일</h3>
         <div class="avoid-list" id="r-avoid"></div>
       </div>
-
       <div class="result-section">
         <h3>👤 같은 유형의 유명 투자자</h3>
         <div class="model-tag" id="r-model"></div>
       </div>
     </div>
-
     <div class="share-row">
       <button class="share-btn" onclick="shareKakao()">📨 카카오톡</button>
       <button class="share-btn" onclick="shareX()">𝕏 공유</button>
       <button class="share-btn" onclick="copyLink()">🔗 링크복사</button>
     </div>
-
     <div class="cta-row">
       <a href="/mind/today-fortune.html" class="cta-btn">🔮 오늘의 투자 운세 보기</a>
       <button class="cta-btn ghost" onclick="restart()">다시 테스트</button>
     </div>
-
     <div class="disclaimer" style="margin-top:28px">
       <b>⚠ 면책</b><br>
       본 테스트 결과는 재미로 보는 콘텐츠입니다. 투자 판단과 그 결과는 전적으로 본인 책임이며, 만또 투자 인사이트는 투자 자문업자가 아닙니다.
     </div>
   </section>
-
 </main>
-
 <footer class="site-footer">
   <div class="site-footer-inner">
     <a href="/about.html">소개</a>·
@@ -188,7 +165,6 @@
     <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
   </div>
 </footer>
-
 <script>
 const TYPES = {
   value: {
@@ -262,7 +238,6 @@ const TYPES = {
     model: '존 보글 · 유진 파마'
   }
 };
-
 const QUESTIONS = [
   { q: '주가가 하루에 10% 떨어졌다. 당신의 반응은?',
     opts: [
@@ -333,21 +308,17 @@ const QUESTIONS = [
       { t: '연 50% 이상 (공격적)', w: { momentum: 2, theme: 1 } },
       { t: '정해두지 않음', w: { theme: 1, index: 1 } } ] }
 ];
-
 const MBTI_MAP = {
   INTJ: 'growth', INTP: 'index', ENTJ: 'value',  ENTP: 'momentum',
   INFJ: 'growth', INFP: 'dividend', ENFJ: 'theme', ENFP: 'momentum',
   ISTJ: 'dividend', ISFJ: 'dividend', ESTJ: 'value', ESFJ: 'theme',
   ISTP: 'momentum', ISFP: 'index', ESTP: 'momentum', ESFP: 'theme'
 };
-
 let qIdx = 0;
 let scores = { value:0, momentum:0, growth:0, dividend:0, theme:0, index:0 };
-
 function $(id){ return document.getElementById(id); }
 function hide(id){ $(id).classList.add('hidden'); }
 function show(id){ $(id).classList.remove('hidden'); }
-
 function showTest(){
   qIdx = 0;
   scores = { value:0, momentum:0, growth:0, dividend:0, theme:0, index:0 };
@@ -355,7 +326,6 @@ function showTest(){
   renderQ();
   window.scrollTo(0,0);
 }
-
 function showMbti(){
   hide('intro'); hide('test-screen'); hide('result-screen'); show('mbti-screen');
   const grid = $('mbti-grid');
@@ -369,12 +339,10 @@ function showMbti(){
   });
   window.scrollTo(0,0);
 }
-
 function backToIntro(){
   hide('mbti-screen'); hide('test-screen'); hide('result-screen'); show('intro');
   window.scrollTo(0,0);
 }
-
 function renderQ(){
   const q = QUESTIONS[qIdx];
   $('qnum').textContent = `Q${qIdx+1} / ${QUESTIONS.length}`;
@@ -400,7 +368,6 @@ function renderQ(){
     opts.appendChild(b);
   });
 }
-
 function showResult(typeKey){
   const t = TYPES[typeKey];
   $('r-emoji').textContent = t.emoji;
@@ -420,16 +387,13 @@ function showResult(typeKey){
   $('r-model').textContent = t.model;
   hide('intro'); hide('test-screen'); hide('mbti-screen'); show('result-screen');
   window.scrollTo(0,0);
-
   try {
     const u = new URL(location.href);
     u.searchParams.set('r', typeKey);
     history.replaceState(null,'',u);
   } catch(e) {}
 }
-
 function restart(){ backToIntro(); }
-
 function shareKakao(){
   const txt = `나의 투자 유형은 "${$('r-type').textContent}"! 당신은?\n${location.href}`;
   if (navigator.share) { navigator.share({ title: '나와 어울리는 주식 종목은?', text: txt, url: location.href }).catch(()=>{}); }
@@ -442,13 +406,11 @@ function shareX(){
 function copyLink(){
   navigator.clipboard.writeText(location.href).then(()=>alert('링크가 복사되었습니다')).catch(()=>{});
 }
-
 (function(){
   const params = new URLSearchParams(location.search);
   const r = params.get('r');
   if (r && TYPES[r]) showResult(r);
 })();
 </script>
-
 </body>
 </html>

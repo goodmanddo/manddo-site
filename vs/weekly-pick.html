@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이번 주 픽 — 만또 vs AI vs 너의 1주일 수익률 대결 | 만또 머니 툴</title>
-<meta name="description" content="매주 월요일 9시 만또와 AI가 한 종목씩 픽, 방문자도 자기 픽으로 참전. 금요일 마감까지 4시간마다 갱신되는 1주일 수익률 게임.">
-<meta name="keywords" content="이번주픽, 주식수익률대결, AI주식픽, 만또픽, 주식게임, 1주일수익률">
-<meta property="og:title" content="이번 주 픽 — 만또 vs AI vs 너의 1주일 대결">
-<meta property="og:description" content="매주 월요일 시작, 금요일 마감. 만또·AI·너의 픽이 1주일간 누가 더 잘하는지 겨루는 게임.">
+<title>휴먼 vs AI 주식 픽 대결 — 사람이 이길까, AI가 이길까? | 만또</title>
+<meta name="description" content="휴먼(만또)과 AI 자동매매 봇이 매주 월요일 한 종목씩 픽. 방문자도 자기 픽으로 참전해서 1주일 수익률로 승부합니다. AI가 정말 사람보다 잘 고르는지 매주 검증.">
+<meta name="keywords" content="휴먼vsAI, 사람vsAI, AI주식픽, AI주식추천, AI vs 인간 주식, 주식픽대결, 이번주픽, AI투자, 주식수익률게임, 1주일수익률, 인공지능투자">
+<meta property="og:title" content="🏁 휴먼 vs AI — 1주일 주식 픽 대결">
+<meta property="og:description" content="사람과 AI가 매주 한 종목씩 픽. 너도 참전해서 1주일 수익률로 누가 1위인지 가려보세요.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://manddo.kr/tools/weekly-pick.html">
-<link rel="canonical" href="https://manddo.kr/tools/weekly-pick.html">
+<meta property="og:url" content="https://manddo.kr/vs/weekly-pick.html">
+<link rel="canonical" href="https://manddo.kr/vs/weekly-pick.html">
 <link rel="stylesheet" href="/css/main.css">
 <style>
   .wp-hero { background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%); border-radius:16px; padding:28px 24px; margin:24px 0 24px; color:#fff; position:relative; overflow:hidden; }
@@ -19,7 +19,6 @@
   .wp-hero h1 { font-size:26px; margin:0 0 6px; color:#fff; letter-spacing:-0.02em; }
   .wp-hero p { font-size:14px; color:#fff; opacity:0.92; margin:0; max-width:580px; line-height:1.6; }
   .wp-status { display:inline-block; margin-top:14px; padding:5px 12px; background:rgba(255,255,255,0.18); border-radius:14px; font-size:12px; font-weight:600; letter-spacing:0.02em; }
-
   .wp-board { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:0 0 18px; }
   @media (max-width:680px){ .wp-board{ grid-template-columns:1fr; } }
   .wp-card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:18px 16px; position:relative; }
@@ -46,7 +45,6 @@
   .wp-card .rank-badge.r2 { background:#cbd5e1; color:#1e293b; }
   .wp-card .rank-badge.r3 { background:#fdba74; color:#7c2d12; }
   .wp-card.leading { box-shadow:0 4px 16px rgba(251,191,36,0.25); border-color:#fbbf24; }
-
   .wp-leaderboard { background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%); border:1px solid #fbbf24; border-radius:14px; padding:14px 18px; margin:0 0 16px; }
   .wp-leaderboard.tied { background:linear-gradient(135deg,#e0f2fe 0%,#bae6fd 100%); border-color:#38bdf8; }
   .wp-leaderboard.empty { background:#f9fafb; border-color:#e5e7eb; color:#6b7280; }
@@ -64,7 +62,6 @@
   .wp-lb-row .lb-ret.pos { color:#059669; }
   .wp-lb-row .lb-ret.neg { color:#dc2626; }
   .wp-lb-row .lb-diff { font-size:11px; color:#6b7280; }
-
   .wp-pick-form { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:14px; padding:16px; margin:16px 0 22px; }
   .wp-pick-form h3 { margin:0 0 10px; font-size:15px; color:#065f46; }
   .wp-pick-form .wpf-row { display:flex; gap:8px; }
@@ -80,7 +77,6 @@
   .wp-pick-form button:hover { background:#047857; }
   .wp-pick-form button:disabled { background:#9ca3af; cursor:not-allowed; }
   .wp-pick-form .wpf-hint { margin-top:10px; font-size:12px; color:#047857; line-height:1.5; }
-
   .wp-timeline { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:18px; margin-bottom:22px; }
   .wp-timeline h3 { margin:0 0 12px; font-size:15px; color:#111827; }
   .wp-tl-table { width:100%; border-collapse:collapse; font-size:12px; }
@@ -90,12 +86,10 @@
   .wp-tl-table td.pos { color:#059669; font-weight:600; }
   .wp-tl-table td.neg { color:#dc2626; font-weight:600; }
   .wp-tl-empty { padding:24px; text-align:center; color:#9ca3af; font-size:13px; }
-
   .wp-rules { background:#fffbeb; border-left:3px solid #f59e0b; padding:14px 16px; border-radius:8px; margin-bottom:18px; font-size:13px; line-height:1.7; color:#78350f; }
   .wp-rules b { color:#451a03; }
   .wp-rules ul { margin:6px 0 0 18px; padding:0; }
   .wp-rules li { margin:2px 0; }
-
   .wp-archive { margin-top:28px; padding-top:20px; border-top:1px solid #e5e7eb; }
   .wp-archive h3 { margin:0 0 12px; font-size:16px; color:#111827; }
   .wp-archive-empty { padding:18px; background:#f9fafb; border-radius:10px; text-align:center; color:#9ca3af; font-size:13px; }
@@ -104,7 +98,6 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="logo">만또<span>.kr</span></a>
@@ -112,56 +105,50 @@
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/" class="active">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
-      <a href="/tools/" class="active">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
+      <a href="/tools/">머니 툴</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
 </header>
-
 <main class="page">
-  <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-
+  <a class="back-btn" href="/vs/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
   <div class="breadcrumb">
-    <a href="/tools/">머니 툴</a><span class="sep">/</span>이번 주 픽
+    <a href="/vs/">🏁 휴먼 vs AI</a><span class="sep">/</span>이번 주 픽
   </div>
-
   <section class="wp-hero">
     <div class="wp-hero-inner">
-      <h1>🏁 이번 주 픽 — 만또 vs AI vs 너</h1>
-      <p>월요일 9시, 만또와 AI가 한 종목씩 픽합니다. 방문자도 자기 픽으로 참전. 금요일 15:30 마감까지 매일 4번(09:00·12:00·15:00·15:30) 가격을 갱신해서 누가 더 잘 골랐는지 비교해요.</p>
+      <h1>🏁 휴먼 vs AI — 이번 주 픽 대결</h1>
+      <p>사람(만또)과 AI 자동매매 봇이 월요일 9시 전에 한 종목씩 픽. 방문자도 참전. 금요일 15:30까지 매일 4번(09·12·15·15:30) 가격 갱신해서 1주일 수익률로 승부 — AI가 정말 사람보다 잘 고를까?</p>
       <div class="wp-status" id="wp-status">상태 불러오는 중…</div>
     </div>
   </section>
-
   <div class="wp-leaderboard empty" id="wp-leaderboard">
     <div class="wp-lb-head">🏆 현재 순위</div>
     <div class="wp-lb-rows" id="wp-lb-rows">
       <div style="font-size:13px;color:#6b7280">월요일 09:00에 첫 가격이 기록되면 순위가 표시됩니다.</div>
     </div>
   </div>
-
   <div class="wp-rules">
     <b>🎮 게임 규칙</b>
     <ul>
-      <li>매주 <b>월요일 09:00 시가</b>가 모두의 매수 단가 (만또·AI·너 모두 동일 시점 기준)</li>
-      <li>만또와 AI는 <b>월요일 09:00 전</b>에 한 종목씩 미리 픽 — 변경 불가</li>
+      <li>매주 <b>월요일 09:00 시가</b>가 모두의 매수 단가 (휴먼·AI·너 모두 동일 시점 기준)</li>
+      <li>휴먼(만또)과 AI(자동매매 봇)는 <b>월요일 09:00 전</b>에 한 종목씩 미리 픽 — 변경 불가</li>
       <li>너의 픽은 <b>주중 언제든 등록·변경</b> 가능. 단 매수가는 항상 월요일 09:00 시가</li>
       <li>금요일 <b>15:30 종가</b> 기준으로 1주일 승부 마감</li>
       <li>실제 매매 아닌 가상 게임. 결과는 다음 주 월요일에 아카이브로 보관</li>
     </ul>
   </div>
-
   <div class="wp-board" id="wp-board">
     <div class="wp-card manddo">
-      <div class="who">🧑 만또 <span class="badge">사람</span></div>
+      <div class="who">🧑 휴먼 <span class="badge">만또</span></div>
       <div class="pick-empty">월요일 9시 픽 공개 예정</div>
     </div>
     <div class="wp-card ai">
-      <div class="who">🤖 AI <span class="badge">에이전트</span></div>
+      <div class="who">🤖 AI <span class="badge">자동매매봇</span></div>
       <div class="pick-empty">월요일 9시 픽 공개 예정</div>
     </div>
     <div class="wp-card visitor">
@@ -169,7 +156,6 @@
       <div class="pick-empty">아래에서 종목을 선택하세요</div>
     </div>
   </div>
-
   <div class="wp-pick-form">
     <h3>🎯 너의 이번 주 픽 선택</h3>
     <div class="wpf-row">
@@ -181,37 +167,31 @@
     </div>
     <div class="wpf-hint" id="wp-hint">선택 가능 종목: 한투 OpenAPI로 매주 가격 갱신되는 30종목. 매수 단가는 자동으로 월요일 09:00 시가가 적용돼요.</div>
   </div>
-
   <div class="wp-timeline">
     <h3>📊 일별·시간대별 가격 변화</h3>
     <div id="wp-timeline-body">
       <div class="wp-tl-empty">월요일 09:00에 첫 가격이 기록됩니다.</div>
     </div>
   </div>
-
   <div class="wp-archive">
     <h3>🗂️ 지난 주 결과</h3>
     <div id="wp-archive-body">
       <div class="wp-archive-empty">시즌 1 첫 번째 라운드입니다 — 다음 주부터 지난 주 결과가 여기 표시돼요.</div>
     </div>
   </div>
-
   <div class="callout tip" style="margin-top:22px">
     <b>💡 같이 보면 좋은 것</b>
     <ul style="margin:8px 0 0 18px;padding:0;font-size:13.5px;line-height:1.7">
       <li>🧪 <a href="/ai-project/" style="color:#1B64DA">AI 1년 투자 프로젝트</a> — 만또가 시드 2,000만원으로 진행 중인 자동매매 실험 (1주일 게임의 형/언니격)</li>
-      <li>📈 <a href="/tools/historical-return.html" style="color:#1B64DA">10년 전 그 주식 샀으면?</a> — 과거 수익률 계산기</li>
+      <li>🕰️ <a href="/vs/historical.html" style="color:#1B64DA">과거의 나 vs 현재</a> — 10년 전 그 주식 샀으면 지금 얼마?</li>
       <li>📚 <a href="/learn/glossary.html" style="color:#1B64DA">투자 용어 사전</a> — 시가·종가·수익률 같은 기본 개념</li>
     </ul>
   </div>
-
   <div class="disclaimer">
     <b>⚠ 참고용 안내</b><br>
     본 게임은 교육·재미용 가상 시뮬레이션이며, 실제 매수·매도가 일어나지 않습니다. 픽 결과는 특정 종목의 매수·매도 권유가 아닙니다. 가격은 한국투자증권 OpenAPI 기준이며 갱신 지연이 있을 수 있어요.
   </div>
-
 </main>
-
 <footer class="site-footer">
   <div class="site-footer-inner">
     <a href="/about.html">소개</a>·
@@ -221,14 +201,12 @@
     <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
   </div>
 </footer>
-
 <script>
 (function(){
   const LS_KEY = 'manddo_weekly_pick_v1';
   const $ = id => document.getElementById(id);
   let DATA = null, HISTORY = null;
   let universe = [];
-
   // ---- helpers ----
   function fmtKRW(n){ return Math.round(n).toLocaleString('ko-KR'); }
   function fmtPct(n){ return (n>=0?'+':'')+n.toFixed(2)+'%'; }
@@ -238,7 +216,6 @@
     const u = universe.find(x => x.code === code);
     return u ? u.name : code;
   }
-
   // ---- localStorage ----
   function loadVisitorPick(){
     try {
@@ -259,7 +236,6 @@
     return pick;
   }
   function clearVisitorPick(){ localStorage.removeItem(LS_KEY); }
-
   // ---- snapshots/return calc ----
   function buyPriceFor(code){
     if (!DATA.snapshots || DATA.snapshots.length === 0) return null;
@@ -280,7 +256,6 @@
     if (buy == null || last == null || buy === 0) return null;
     return { buy, last: last.price, t: last.t, ret: (last.price/buy - 1) * 100 };
   }
-
   // ---- rendering ----
   function renderStatus(){
     const el = $('wp-status');
@@ -291,7 +266,6 @@
     else if (s === 'closed') el.textContent = `🏁 마감 · ${DATA.week_start} ~ ${DATA.week_end}`;
     else el.textContent = `상태: ${s}`;
   }
-
   function renderCard(role, pick, title, badge, emoji){
     const card = document.querySelector(`.wp-card.${role}`);
     if (!pick || !pick.code) {
@@ -330,19 +304,15 @@
       ${statHtml}
     `;
   }
-
-  const ROLE_LABEL = { manddo:'만또', ai:'AI', visitor:'너' };
-
+  const ROLE_LABEL = { manddo:'휴먼', ai:'AI', visitor:'너' };
   function renderBoard(){
     const visitorPick = loadVisitorPick();
-    renderCard('manddo', DATA.picks.manddo, '만또', '사람', '🧑');
-    renderCard('ai', DATA.picks.ai, 'AI', '에이전트', '🤖');
+    renderCard('manddo', DATA.picks.manddo, '휴먼', '만또', '🧑');
+    renderCard('ai', DATA.picks.ai, 'AI', '자동매매봇', '🤖');
     renderCard('visitor', visitorPick ? { code: visitorPick.code, name: getStockName(visitorPick.code) } : null, '너의 픽', '방문자', '🎯');
-
     // clear previous rank decorations
     document.querySelectorAll('.rank-badge').forEach(el => el.remove());
     document.querySelectorAll('.wp-card.leading').forEach(el => el.classList.remove('leading'));
-
     const all = [
       { role:'manddo', pick: DATA.picks.manddo },
       { role:'ai', pick: DATA.picks.ai },
@@ -352,7 +322,6 @@
       .map(x => x.pick && x.pick.code ? { ...x, r: returnFor(x.pick.code) } : null)
       .filter(x => x && x.r);
     withRet.sort((a,b) => b.r.ret - a.r.ret);
-
     // rank badges (handle ties: same rank for same return)
     let rank = 0, prev = null;
     withRet.forEach((x, i) => {
@@ -365,25 +334,20 @@
       x.rank = rank;
       if (rank === 1) card.classList.add('leading');
     });
-
     renderLeaderboard(withRet, all);
   }
-
   function renderLeaderboard(withRet, all){
     const lb = $('wp-leaderboard');
     const rows = $('wp-lb-rows');
-
     if (withRet.length === 0) {
       lb.className = 'wp-leaderboard empty';
       const has_picks = all.some(x => x.pick && x.pick.code);
       rows.innerHTML = `<div style="font-size:13px;color:#6b7280">${has_picks ? '월요일 09:00에 첫 가격이 기록되면 순위가 표시됩니다.' : '픽이 등록되면 순위가 여기 표시됩니다.'}</div>`;
       return;
     }
-
     const top = withRet[0];
     const tied = withRet.filter(x => x.r.ret === top.r.ret).length > 1;
     lb.className = 'wp-leaderboard' + (tied ? ' tied' : '');
-
     let head = '';
     if (tied) {
       const names = withRet.filter(x => x.r.ret === top.r.ret).map(x => ROLE_LABEL[x.role]).join(' · ');
@@ -395,13 +359,11 @@
       if (diff != null) head += ` <span style="font-size:11px;color:#78350f;font-weight:500">· ${ROLE_LABEL[second.role]}와 ${diff.toFixed(2)}%p 차</span>`;
     }
     document.querySelector('.wp-lb-head').innerHTML = head;
-
     rows.innerHTML = withRet.map(x => {
       const cls = x.r.ret >= 0 ? 'pos' : 'neg';
       return `<div class="wp-lb-row r${x.rank}"><span class="lb-rank">${x.rank}위</span><span class="lb-name">${ROLE_LABEL[x.role]}</span><span class="lb-name" style="color:#6b7280;font-weight:500">${getStockName(x.pick.code)}</span><span class="lb-ret ${cls}">${fmtPct(x.r.ret)}</span></div>`;
     }).join('');
   }
-
   function renderTimeline(){
     const body = $('wp-timeline-body');
     if (!DATA.snapshots || DATA.snapshots.length === 0) {
@@ -413,15 +375,12 @@
     if (DATA.picks.manddo) cols.push({ key:'manddo', label:'만또', code: DATA.picks.manddo.code });
     if (DATA.picks.ai) cols.push({ key:'ai', label:'AI', code: DATA.picks.ai.code });
     if (visitorPick) cols.push({ key:'visitor', label:'너', code: visitorPick.code });
-
     if (cols.length === 0) {
       body.innerHTML = '<div class="wp-tl-empty">픽이 등록되면 시간대별 수익률이 표시됩니다.</div>';
       return;
     }
-
     const buys = {};
     cols.forEach(c => buys[c.code] = buyPriceFor(c.code));
-
     let html = '<table class="wp-tl-table"><thead><tr><th>시각</th>';
     cols.forEach(c => { html += `<th>${c.label} (${c.code})</th>`; });
     html += '</tr></thead><tbody>';
@@ -439,7 +398,6 @@
     html += '</tbody></table>';
     body.innerHTML = html;
   }
-
   function renderArchive(){
     const body = $('wp-archive-body');
     if (!DATA.last_round) {
@@ -469,12 +427,10 @@
     html += '</div>';
     body.innerHTML = html;
   }
-
   // ---- search/picker ----
   const qEl = $('wp-search');
   const sugEl = $('wp-suggest');
   let activeIdx = -1;
-
   qEl.addEventListener('focus', renderSuggest);
   qEl.addEventListener('input', renderSuggest);
   qEl.addEventListener('keydown', e => {
@@ -513,14 +469,12 @@
     activeIdx = -1;
     sugEl.classList.add('open');
   }
-
   $('wp-clear').addEventListener('click', () => {
     clearVisitorPick();
     qEl.value = '';
     renderBoard();
     renderTimeline();
   });
-
   // ---- bootstrap ----
   Promise.all([
     fetch('/tools/data/weekly-pick.json').then(r=>r.json()),
@@ -542,6 +496,5 @@
   });
 })();
 </script>
-
 </body>
 </html>

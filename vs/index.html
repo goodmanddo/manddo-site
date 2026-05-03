@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>휴먼 vs AI — 사람과 AI의 주식 픽 대결 게임 | 만또</title>
+<meta name="description" content="휴먼(만또) vs AI 자동매매 봇이 매주 한 종목씩 픽해서 수익률로 승부. 과거의 나 vs 현재 시뮬레이션까지 — 직접 참여하는 주식 게임 모음.">
+<meta name="keywords" content="휴먼vsAI, 사람vsAI, AI주식픽, AI주식추천, AI vs 인간, AI투자, 주식게임, 1주일픽대결, 과거수익률, 인공지능투자">
+<meta property="og:title" content="🏁 휴먼 vs AI — 사람과 AI의 주식 픽 대결">
+<meta property="og:description" content="매주 휴먼과 AI가 픽 대결, 너도 참전. 과거의 나 vs 현재 시뮬까지. 직접 선택하고 결과 보는 주식 게임.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/vs/">
+<link rel="canonical" href="https://manddo.kr/vs/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .vs-hero { background:linear-gradient(135deg,#1B64DA 0%,#7c3aed 100%); border-radius:16px; padding:32px 26px; margin:20px 0 24px; color:#fff; position:relative; overflow:hidden; }
+  .vs-hero::before { content:''; position:absolute; top:-30px; right:-40px; width:200px; height:200px; background:rgba(255,255,255,0.07); border-radius:50%; }
+  .vs-hero::after { content:''; position:absolute; bottom:-40px; left:-30px; width:160px; height:160px; background:rgba(255,255,255,0.05); border-radius:50%; }
+  .vs-hero-inner { position:relative; z-index:1; }
+  .vs-hero h1 { font-size:28px; margin:0 0 8px; color:#fff; letter-spacing:-0.02em; }
+  .vs-hero .vs-tagline { font-size:15px; color:#fff; opacity:0.95; margin:0 0 4px; line-height:1.6; max-width:620px; }
+  .vs-hero .vs-sub { font-size:13px; color:#fff; opacity:0.78; margin-top:6px; }
+
+  .vs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin:0 0 24px; }
+  .vs-card { display:block; background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:22px 20px; text-decoration:none; color:inherit; transition:all .15s; position:relative; overflow:hidden; }
+  .vs-card:hover { border-color:#1B64DA; box-shadow:0 6px 20px rgba(27,100,218,0.12); transform:translateY(-2px); }
+  .vs-card .vs-cat { font-size:11.5px; font-weight:700; color:#7c3aed; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:8px; }
+  .vs-card .vs-title { font-size:18px; font-weight:800; color:#111827; margin-bottom:6px; letter-spacing:-0.01em; }
+  .vs-card .vs-desc { font-size:13.5px; color:#4b5563; line-height:1.6; margin-bottom:12px; }
+  .vs-card .vs-tags { display:flex; flex-wrap:wrap; gap:5px; }
+  .vs-card .vs-tag { padding:3px 9px; background:#f3f4f6; color:#6b7280; border-radius:10px; font-size:11.5px; }
+  .vs-card.live::before { content:'LIVE'; position:absolute; top:14px; right:14px; padding:3px 10px; background:#ef4444; color:#fff; font-size:10.5px; font-weight:700; border-radius:10px; letter-spacing:0.05em; box-shadow:0 2px 6px rgba(239,68,68,0.25); }
+
+  .vs-faq { background:#fafafa; border:1px solid #e5e7eb; border-radius:12px; padding:18px 20px; margin-top:24px; }
+  .vs-faq h2 { font-size:16px; margin:0 0 10px; color:#111827; }
+  .vs-faq dl { margin:0; }
+  .vs-faq dt { font-size:14px; font-weight:700; color:#374151; margin-top:10px; }
+  .vs-faq dt:first-child { margin-top:0; }
+  .vs-faq dd { font-size:13.5px; color:#6b7280; line-height:1.65; margin:4px 0 0; padding:0; }
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/" class="active">🏁 VS</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <a class="back-btn" href="/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <section class="vs-hero">
+    <div class="vs-hero-inner">
+      <h1>🏁 휴먼 vs AI</h1>
+      <p class="vs-tagline">사람이 더 잘 고를까, AI가 더 잘 고를까? 직접 픽하고 1주일 뒤·10년 뒤 결과로 승부 보는 주식 게임 모음.</p>
+      <div class="vs-sub">실시간 픽 대결 + 과거 시뮬레이션 + 자동매매 봇 실험까지</div>
+    </div>
+  </section>
+
+  <div class="vs-grid">
+    <a href="/vs/weekly-pick.html" class="vs-card live">
+      <div class="vs-cat">🏁 이번 주 픽 대결</div>
+      <div class="vs-title">휴먼 vs AI vs 너 — 1주일 수익률</div>
+      <div class="vs-desc">월요일 9시, 만또(휴먼)와 AI 자동매매 봇이 한 종목씩 픽. 너도 자기 픽 등록해서 금요일까지 수익률 1등을 가린다. 평일 4번 가격 자동 갱신.</div>
+      <div class="vs-tags"><span class="vs-tag">#매주월요일</span><span class="vs-tag">#실시간</span><span class="vs-tag">#AI주식픽</span></div>
+    </a>
+    <a href="/vs/historical.html" class="vs-card">
+      <div class="vs-cat">🕰️ 과거 vs 현재</div>
+      <div class="vs-title">10년 전 그 주식 샀으면 지금 얼마?</div>
+      <div class="vs-desc">삼성전자·SK하이닉스·LG에너지솔루션 등 인기 30종목을 1·3·5·10년 전에 샀다면 지금 얼마인지 한 번에. 수정주가 기준, 과거의 나 vs 현재 시뮬레이션.</div>
+      <div class="vs-tags"><span class="vs-tag">#과거수익률</span><span class="vs-tag">#10년수익률</span><span class="vs-tag">#수정주가</span></div>
+    </a>
+    <a href="/ai-project/" class="vs-card">
+      <div class="vs-cat">🧪 AI 1년 실험</div>
+      <div class="vs-title">AI 자동매매 봇 시드 2,000만원 실험</div>
+      <div class="vs-desc">2026-05-03 시작 1년 공개 실험. AI가 직접 매매하는 실계좌 결과를 매일 기록. 1주일 픽 대결의 형/언니격.</div>
+      <div class="vs-tags"><span class="vs-tag">#AI투자</span><span class="vs-tag">#실계좌</span><span class="vs-tag">#1년실험</span></div>
+    </a>
+  </div>
+
+  <div class="vs-faq">
+    <h2>❓ 휴먼 vs AI, 뭘 비교하는 건가요?</h2>
+    <dl>
+      <dt>왜 휴먼 vs AI인가요?</dt>
+      <dd>요즘 AI가 주식까지 잘 고른다는 얘기가 많아요. 진짜 그런지 매주 검증하려고 만든 카테고리예요. 사람(만또)과 AI 자동매매 봇이 같은 시점에 픽한 종목으로 1주일 수익률을 비교합니다.</dd>
+      <dt>AI 픽은 어떻게 정해지나요?</dt>
+      <dd>실제로 운영 중인 자동매매 봇이 swing 전략으로 보유 중인 종목 중 신호가 가장 강한 1개를 자동 추출해요. 임의로 고르는 게 아니라 봇이 실제 매수한 종목입니다.</dd>
+      <dt>방문자도 참여 가능한가요?</dt>
+      <dd>네, 이번 주 픽 페이지에서 자기 픽을 직접 등록할 수 있어요. 매수가는 모두 동일한 월요일 09:00 시가로 맞춰지고, 너의 결과도 함께 순위에 표시됩니다.</dd>
+    </dl>
+  </div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    본 페이지의 모든 게임은 <b>가상 시뮬레이션</b>이며, 실제 매수·매도가 아닙니다. 픽 결과는 특정 종목의 매수·매도 권유가 아니에요. 가격 데이터는 한국투자증권 OpenAPI 기준이며 갱신 지연이 있을 수 있습니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+</body>
+</html>

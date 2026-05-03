@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>머니 툴 — 연봉 실수령액·금융 계산기 | 만또 투자 인사이트</title>
-<meta name="description" content="연봉 실수령액, 적금·대출 이자, 양도세 등 돈과 관련된 실용 계산기를 무료로 이용하세요.">
-<meta name="keywords" content="연봉실수령액, 월급계산기, 실수령액계산기, 4대보험계산기, 머니툴">
-<meta property="og:title" content="머니 툴 — 연봉 실수령액·금융 계산기">
-<meta property="og:description" content="연봉 실수령액부터 이자 계산까지. 무료 웹 계산기 모음.">
+<title>머니 툴 — 연봉 실수령액·복리·투자 성향 테스트 | 만또</title>
+<meta name="description" content="연봉 실수령액, 복리, FIRE 계산기에 투자 성향 테스트와 오늘의 투자 운세까지. 돈·투자 관련 계산기와 가벼운 콘텐츠를 한 페이지에서.">
+<meta name="keywords" content="연봉실수령액, 월급계산기, 실수령액계산기, 4대보험계산기, 복리계산기, 투자성향테스트, 투자MBTI, 오늘의투자운세, 머니툴">
+<meta property="og:title" content="머니 툴 — 계산기 + 투자 성향·운세">
+<meta property="og:description" content="연봉·복리·FIRE 계산기 + 투자 성향 테스트·오늘의 운세. 무료 웹 도구 모음.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://manddo.kr/tools/">
 <link rel="canonical" href="https://manddo.kr/tools/">
@@ -24,11 +24,11 @@
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
       <a href="/tools/" class="active">머니 툴</a>
-      <a href="/mind/">마인드 랩</a>
       <a href="/about.html">소개</a>
     </nav>
   </div>
@@ -39,26 +39,15 @@
   <a class="back-btn" href="/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
 
   <h1>🧮 머니 툴</h1>
-  <p class="sub">돈과 관련된 실용 계산기 — 회원가입 없이, 브라우저에서 바로</p>
+  <p class="sub">돈·투자 관련 실용 계산기 + 가벼운 성향·운세 — 회원가입 없이 바로</p>
 
+  <h2 style="font-size:18px;margin:18px 0 10px;color:#374151">💰 계산기</h2>
   <div class="grid">
-    <a href="/tools/historical-return.html" class="card">
-      <div class="cat">TOOL · 과거 수익률 · NEW</div>
-      <div class="title">📈 10년 전 그 주식, 지금 얼마?</div>
-      <div class="desc">삼성전자·SK하이닉스·LG에너지솔루션 등 인기 30종목을 1·3·5·10년 전에 샀다면 지금 얼마인지 한 번에. 수정주가 기준, 한투 OpenAPI 데이터.</div>
-      <div class="tags"><span class="tag">#과거수익률</span><span class="tag">#10년수익률</span><span class="tag">#수정주가</span></div>
-    </a>
     <a href="/tools/fire.html" class="card">
       <div class="cat">TOOL · 자산·은퇴</div>
       <div class="title">경제적 자유 D-Day</div>
       <div class="desc">현재 자산·월 저축·수익률로 FIRE 달성 날짜를 계산합니다. Lean·Regular·Fat 3단계 시나리오 비교.</div>
       <div class="tags"><span class="tag">#FIRE</span><span class="tag">#경제적자유</span><span class="tag">#조기은퇴</span></div>
-    </a>
-    <a href="/tools/weekly-pick.html" class="card">
-      <div class="cat">GAME · 이번 주 픽 · NEW</div>
-      <div class="title">🏁 만또 vs AI vs 너 — 1주일 픽 대결</div>
-      <div class="desc">매주 월요일 9시, 만또와 AI가 한 종목씩 픽. 너도 자기 픽을 등록해서 누가 1주일 수익률 1등인지 겨뤄보세요. 평일 4번씩 가격 자동 갱신.</div>
-      <div class="tags"><span class="tag">#이번주픽</span><span class="tag">#수익률대결</span><span class="tag">#게임</span></div>
     </a>
     <a href="/tools/salary.html" class="card">
       <div class="cat">TOOL · 세금·급여</div>
@@ -74,9 +63,30 @@
     </a>
   </div>
 
+  <h2 style="font-size:18px;margin:24px 0 10px;color:#374151">🧠 마인드 랩 <span style="font-size:12px;font-weight:500;color:#9ca3af">— 재미로 보는 투자자 콘텐츠</span></h2>
+  <div class="grid">
+    <a href="/mind/investor-type.html" class="card">
+      <div class="cat">MIND · 성향 테스트</div>
+      <div class="title">나와 어울리는 주식 종목은?</div>
+      <div class="desc">10문항으로 알아보는 나의 투자 유형. 가치 수집가·모멘텀 사냥꾼·성장 관측가 등 6가지.</div>
+      <div class="tags"><span class="tag">#투자MBTI</span><span class="tag">#성향테스트</span><span class="tag">#10문항</span></div>
+    </a>
+    <a href="/mind/today-fortune.html" class="card">
+      <div class="cat">MIND · 오늘의 운세</div>
+      <div class="title">오늘의 투자 운세</div>
+      <div class="desc">띠별로 보는 오늘의 재물운 점수와 피해야 할 투자 행동. 매일 달라집니다.</div>
+      <div class="tags"><span class="tag">#재물운</span><span class="tag">#띠별운세</span><span class="tag">#매일업데이트</span></div>
+    </a>
+  </div>
+
+  <div class="callout tip" style="margin-top:18px">
+    <b>🏁 휴먼 vs AI 게임도 있어요</b><br>
+    <span style="font-size:13.5px">과거 10년 수익률 시뮬레이션과 매주 픽 대결은 <a href="/vs/" style="color:#1B64DA">VS 카테고리</a>로 이동했습니다.</span>
+  </div>
+
   <div class="disclaimer">
     <b>⚠ 참고용 안내</b><br>
-    본 페이지의 모든 계산기는 참고용이며, 실제 급여·세금·금융상품은 회사 급여명세서, 은행·세무당국의 공식 자료를 기준으로 하시기 바랍니다.
+    계산기는 참고용이며 실제 급여·세금·금융상품은 회사 급여명세서, 은행·세무당국 공식 자료를 기준으로 하세요. 마인드 랩 콘텐츠(성향 테스트·운세)는 <b>재미로 보는 오락용</b>이며 투자 자문이 아닙니다.
   </div>
 
 </main>
