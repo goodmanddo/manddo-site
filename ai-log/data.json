@@ -1,22 +1,22 @@
 {
   "date": "2026-05-04",
-  "start_date": "2026-04-17",
-  "cumulative_return": -18.68,
-  "week_return": -17.42,
-  "day_return": -16.58,
+  "start_date": "2026-05-03",
+  "cumulative_return": 0.25,
+  "week_return": 0.0,
+  "day_return": 0.0,
   "today_realized_avg": 10.58,
   "today_trade_count": 1,
   "today_win_count": 1,
   "today_loss_count": 0,
   "win_rate": 45,
   "total_trades": 20,
-  "ai_commentary": "오늘은 가비아, 메가스터디교육, 포스코퓨처엠 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -18.7%.",
+  "ai_commentary": "오늘은 가비아, 메가스터디교육, 포스코퓨처엠 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 +0.2%.",
   "new_buys": [
     {
       "name": "가비아",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 3.49,
+      "entry_to_current_pct": 3.32,
       "weight_pct": 3,
       "hold_days": 4,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
@@ -25,7 +25,7 @@
       "name": "메가스터디교육",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -3.1,
+      "entry_to_current_pct": -3.21,
       "weight_pct": 1,
       "hold_days": 5,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
@@ -43,8 +43,8 @@
       "name": "펄어비스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -3.63,
-      "weight_pct": 3,
+      "entry_to_current_pct": -3.47,
+      "weight_pct": 4,
       "hold_days": 7,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
@@ -88,6 +88,12 @@
       "weight_pct": 5
     },
     {
+      "name": "펄어비스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
+    {
       "name": "에코아이",
       "slug": "",
       "market": "코스피",
@@ -95,12 +101,6 @@
     },
     {
       "name": "가비아",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
-    },
-    {
-      "name": "펄어비스",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -114,52 +114,8 @@
   ],
   "return_history": [
     {
-      "date": "2026-04-17",
-      "cumulative_return": 0.0
-    },
-    {
-      "date": "2026-04-20",
-      "cumulative_return": -0.32
-    },
-    {
-      "date": "2026-04-21",
-      "cumulative_return": -0.34
-    },
-    {
-      "date": "2026-04-22",
-      "cumulative_return": -0.88
-    },
-    {
-      "date": "2026-04-23",
-      "cumulative_return": -1.14
-    },
-    {
-      "date": "2026-04-24",
-      "cumulative_return": -1.39
-    },
-    {
-      "date": "2026-04-27",
-      "cumulative_return": -1.52
-    },
-    {
-      "date": "2026-04-28",
-      "cumulative_return": -1.56
-    },
-    {
-      "date": "2026-04-29",
-      "cumulative_return": -1.97
-    },
-    {
-      "date": "2026-04-30",
-      "cumulative_return": -2.52
-    },
-    {
-      "date": "2026-05-01",
-      "cumulative_return": -2.52
-    },
-    {
       "date": "2026-05-04",
-      "cumulative_return": -18.68
+      "cumulative_return": 0.25
     }
   ]
 }

@@ -11,95 +11,39 @@
       "name": "가비아",
       "qty": 20,
       "avg_price": 30100,
-      "current_price": 31150,
+      "current_price": 31100,
       "opened_at": "2026-04-30"
     },
     "215200": {
       "name": "메가스터디교육",
       "qty": 5,
       "avg_price": 48350,
-      "current_price": 46850,
+      "current_price": 46800,
       "opened_at": "2026-04-29"
     },
     "263750": {
       "name": "펄어비스",
       "qty": 12,
       "avg_price": 60600,
-      "current_price": 58400,
+      "current_price": 58500,
       "opened_at": "2026-04-27"
     },
     "448280": {
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12380,
+      "current_price": 12390,
       "opened_at": "2026-04-24"
     }
   },
   "history": [
     {
-      "date": "2026-04-17",
-      "total_eval": 22653494
-    },
-    {
-      "date": "2026-04-20",
-      "total_eval": 22582003
-    },
-    {
-      "date": "2026-04-21",
-      "total_eval": 22569269
-    },
-    {
-      "date": "2026-04-21",
-      "total_eval": 24569269
-    },
-    {
-      "date": "2026-04-21",
-      "total_eval": 24569269
-    },
-    {
-      "date": "2026-04-21",
-      "total_eval": 24569269
-    },
-    {
-      "date": "2026-04-22",
-      "total_eval": 24436650
-    },
-    {
-      "date": "2026-04-22",
-      "total_eval": 24437650
-    },
-    {
-      "date": "2026-04-23",
-      "total_eval": 24371796
-    },
-    {
-      "date": "2026-04-24",
-      "total_eval": 24311554
-    },
-    {
-      "date": "2026-04-27",
-      "total_eval": 24277860
-    },
-    {
-      "date": "2026-04-28",
-      "total_eval": 24269795
-    },
-    {
-      "date": "2026-04-29",
-      "total_eval": 24168824
-    },
-    {
-      "date": "2026-04-30",
-      "total_eval": 24032450
-    },
-    {
-      "date": "2026-05-01",
-      "total_eval": 24033340
+      "date": "2026-05-04",
+      "total_eval": 20049095
     },
     {
       "date": "2026-05-04",
-      "total_eval": 20049095
+      "total_eval": 20049635
     }
   ],
   "completed_trades": [
