@@ -37,6 +37,33 @@ DATA_FILE = AI_LOG_DIR / "data.json"
 CONFIG_FILE = AI_LOG_DIR / "config.json"
 STATE_FILE = AI_LOG_DIR / ".state.json"
 LOG_FILE = Path.home() / "manddo-site" / "scripts" / "update_ai_log.log"
+TRADE_LOG_FILE = Path.home() / "stock_auto_trade" / "trade_log.jsonl"
+
+
+def last_sell_price(code, on_date):
+    """trade_log.jsonl에서 해당 종목의 on_date 또는 그 이전 마지막 SELL 체결가."""
+    if not TRADE_LOG_FILE.exists():
+        return 0
+    last = 0
+    last_ts = ""
+    with TRADE_LOG_FILE.open() as f:
+        for ln in f:
+            try:
+                t = json.loads(ln)
+            except Exception:
+                continue
+            if t.get("code") != code or t.get("action") != "SELL":
+                continue
+            if t.get("result") != "success":
+                continue
+            ts = t.get("timestamp", "")
+            d = ts[:10]
+            if d > on_date:
+                continue
+            if ts > last_ts:
+                last_ts = ts
+                last = int(t.get("price") or 0)
+    return last
 
 
 def log(msg):
@@ -269,12 +296,15 @@ def main():
         name = prev.get("name") or code
         if not to_slug(name, code, slug_map):
             log(f"청산 (slug 미등록, 카드만 표시): {name}/{code}")
-        try:
-            cur = api.get_current_price(code).get("price") or 0
-        except Exception:
-            cur = 0
+        # 실현 수익률은 실제 매도 체결가 기준 (현재가 X — 매도 후 시세 변동에 영향 안 받음)
+        sell_price = last_sell_price(code, today)
+        if sell_price <= 0:
+            try:
+                sell_price = api.get_current_price(code).get("price") or 0
+            except Exception:
+                sell_price = 0
         avg = prev.get("avg_price") or 0
-        pct = ((cur - avg) / avg * 100) if (avg and cur) else (prev.get("profit_rate") or 0.0)
+        pct = ((sell_price - avg) / avg * 100) if (avg and sell_price) else (prev.get("profit_rate") or 0.0)
         pct = round(pct, 2)
         hold_days = 0
         if prev.get("opened_at"):

@@ -4,7 +4,7 @@
   "cumulative_return": -18.68,
   "week_return": -17.42,
   "day_return": -16.58,
-  "today_realized_avg": 18.65,
+  "today_realized_avg": 10.58,
   "today_trade_count": 1,
   "today_win_count": 1,
   "today_loss_count": 0,
@@ -55,7 +55,7 @@
       "name": "한국피아이엠",
       "slug": "",
       "market": "코스피",
-      "return_pct": 18.65,
+      "return_pct": 10.58,
       "hold_days": 4,
       "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
