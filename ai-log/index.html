@@ -105,12 +105,6 @@
 .signal-summary .ai-summary-label{font-size:12px;font-weight:800;color:#6B59FF;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:6px}
 .signal-summary .ai-summary-text{font-size:15.5px;color:#2c3038;line-height:1.7;font-weight:600;letter-spacing:-0.01em}
 .signal-disc{font-size:11.5px;color:#8b95a1;margin-top:10px;line-height:1.5;position:relative}
-/* 시장 무드 한 줄 */
-.market-mood{display:flex;align-items:flex-start;gap:12px;background:linear-gradient(135deg,#FFF7ED 0%,#FEF3C7 100%);border:1px solid #FDE68A;border-radius:12px;padding:14px 18px;margin:24px 0 28px}
-.market-mood .mood-icon{font-size:22px;line-height:1.2;flex-shrink:0}
-.market-mood .mood-body{flex:1;min-width:0}
-.market-mood .mood-label{font-size:11.5px;font-weight:700;color:#92400e;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:3px}
-.market-mood .mood-text{font-size:13.5px;color:#78350f;line-height:1.6;font-weight:500}
 /* ⭐ 오늘의 픽 (미국 시장 인사이트) */
 .today-pick-block{background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:18px;padding:26px 26px 22px;color:#fff;margin-bottom:14px;position:relative;overflow:hidden}
 .today-pick-block::before{content:'';position:absolute;top:-30px;right:-30px;width:160px;height:160px;background:rgba(255,255,255,0.07);border-radius:50%;pointer-events:none}
@@ -284,14 +278,6 @@ a.tp-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(0,0,0,
       <div class="by">— 만또 AI, 매매 시나리오 요약</div>
     </div>
   </section>
-  <!-- 🌡️ 오늘의 시장 무드 한 줄 (장 마감 후 정리) -->
-  <div class="market-mood" id="market-mood-block" style="display:none">
-    <div class="mood-icon">🌡️</div>
-    <div class="mood-body">
-      <div class="mood-label">오늘의 시장 무드</div>
-      <div class="mood-text" id="market-mood-text">—</div>
-    </div>
-  </div>
   <section class="sec">
     <h2>📉 이번 주 손실 공개</h2>
     <div class="sec-desc">수익만 보여주지 않습니다. 손실 케이스와 다음에 어떻게 개선할지 함께 기록합니다.</div>
@@ -369,12 +355,6 @@ a.tp-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(0,0,0,
       `);
     });
     document.getElementById('signal-summary').innerHTML = `<div class="ai-summary-label">🧠 오늘의 AI 종합</div><div class="ai-summary-text">${sig.ai_summary}</div>`;
-    // 시장 무드 한 줄 (ai_summary 첫 문장)
-    if(sig.ai_summary){
-      const firstSentence = sig.ai_summary.split(/(?<=[.!?])\s+/)[0] || sig.ai_summary;
-      document.getElementById('market-mood-text').textContent = firstSentence;
-      document.getElementById('market-mood-block').style.display = 'flex';
-    }
   }catch(e){
     document.getElementById('sec-signal').style.display = 'none';
   }
