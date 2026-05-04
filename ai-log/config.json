@@ -1,9 +1,7 @@
 {
-  "start_date": "2026-04-17",
-  "initial_capital": 22653494,
-  "cash_flows": [
-    {"date": "2026-04-21", "amount": 2000000, "note": "추가 입금"}
-  ],
+  "start_date": "2026-05-03",
+  "initial_capital": 20000000,
+  "cash_flows": [],
   "slug_map": {
     "삼성SDI": "samsung-sdi",
     "006400": "samsung-sdi",
