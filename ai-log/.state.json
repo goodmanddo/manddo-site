@@ -4,43 +4,36 @@
       "name": "포스코퓨처엠",
       "qty": 4,
       "avg_price": 253000,
-      "current_price": 252000,
+      "current_price": 267000,
       "opened_at": "2026-04-28"
     },
     "079940": {
       "name": "가비아",
       "qty": 20,
       "avg_price": 30100,
-      "current_price": 30050,
+      "current_price": 31150,
       "opened_at": "2026-04-30"
     },
     "215200": {
       "name": "메가스터디교육",
       "qty": 5,
       "avg_price": 48350,
-      "current_price": 47400,
+      "current_price": 46850,
       "opened_at": "2026-04-29"
     },
     "263750": {
       "name": "펄어비스",
       "qty": 12,
       "avg_price": 60600,
-      "current_price": 58900,
+      "current_price": 58400,
       "opened_at": "2026-04-27"
     },
     "448280": {
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12540,
+      "current_price": 12380,
       "opened_at": "2026-04-24"
-    },
-    "448900": {
-      "name": "한국피아이엠",
-      "qty": 5,
-      "avg_price": 107800,
-      "current_price": 107700,
-      "opened_at": "2026-04-30"
     }
   },
   "history": [
@@ -103,6 +96,10 @@
     {
       "date": "2026-05-01",
       "total_eval": 24033340
+    },
+    {
+      "date": "2026-05-04",
+      "total_eval": 20049095
     }
   ],
   "completed_trades": [
@@ -244,6 +241,14 @@
       "date": "2026-04-30",
       "is_win": false,
       "hold_days": 6
+    },
+    {
+      "name": "한국피아이엠",
+      "code": "448900",
+      "return_pct": 18.65,
+      "date": "2026-05-04",
+      "is_win": true,
+      "hold_days": 4
     }
   ]
 }

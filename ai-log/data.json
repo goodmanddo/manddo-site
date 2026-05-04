@@ -1,73 +1,65 @@
 {
-  "date": "2026-05-01",
+  "date": "2026-05-04",
   "start_date": "2026-04-17",
-  "cumulative_return": -2.52,
-  "week_return": -1.14,
-  "day_return": 0.0,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -18.68,
+  "week_return": -17.42,
+  "day_return": -16.58,
+  "today_realized_avg": 18.65,
+  "today_trade_count": 1,
+  "today_win_count": 1,
   "today_loss_count": 0,
-  "win_rate": 42,
-  "total_trades": 19,
-  "ai_commentary": "오늘은 가비아, 한국피아이엠, 메가스터디교육 등 신규 편입. 시작 이후 누적 -2.5%.",
+  "win_rate": 45,
+  "total_trades": 20,
+  "ai_commentary": "오늘은 가비아, 메가스터디교육, 포스코퓨처엠 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -18.7%.",
   "new_buys": [
     {
       "name": "가비아",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.17,
+      "entry_to_current_pct": 3.49,
       "weight_pct": 3,
-      "hold_days": 1,
+      "hold_days": 4,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
-    },
-    {
-      "name": "한국피아이엠",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -0.09,
-      "weight_pct": 2,
-      "hold_days": 1,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "메가스터디교육",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.96,
+      "entry_to_current_pct": -3.1,
       "weight_pct": 1,
-      "hold_days": 2,
+      "hold_days": 5,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "포스코퓨처엠",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.4,
-      "weight_pct": 4,
-      "hold_days": 3,
+      "entry_to_current_pct": 5.53,
+      "weight_pct": 5,
+      "hold_days": 6,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
       "name": "펄어비스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -2.81,
-      "weight_pct": 3,
-      "hold_days": 4,
-      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
-    },
-    {
-      "name": "에코아이",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 2.62,
+      "entry_to_current_pct": -3.63,
       "weight_pct": 3,
       "hold_days": 7,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
   ],
-  "exits": [],
+  "exits": [
+    {
+      "type": "win",
+      "name": "한국피아이엠",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 18.65,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+    }
+  ],
   "weekly_losses": [
     {
       "name": "시프트업",
@@ -93,6 +85,12 @@
       "name": "포스코퓨처엠",
       "slug": "",
       "market": "코스피",
+      "weight_pct": 5
+    },
+    {
+      "name": "에코아이",
+      "slug": "",
+      "market": "코스피",
       "weight_pct": 4
     },
     {
@@ -106,18 +104,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
-    },
-    {
-      "name": "에코아이",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
-    },
-    {
-      "name": "한국피아이엠",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 2
     },
     {
       "name": "메가스터디교육",
@@ -170,6 +156,10 @@
     {
       "date": "2026-05-01",
       "cumulative_return": -2.52
+    },
+    {
+      "date": "2026-05-04",
+      "cumulative_return": -18.68
     }
   ]
 }
