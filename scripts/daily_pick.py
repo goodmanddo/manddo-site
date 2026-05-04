@@ -26,6 +26,7 @@ TRADE_LOG = Path.home() / "stock_auto_trade" / "trade_log.jsonl"
 CHART_SOURCE = Path.home() / "주식차트"
 SIGNAL_JSON = ROOT / "ai-log" / "signal.json"
 TODAY_PICK_JSON = ROOT / "ai-log" / "today_pick.json"
+CHART_GUIDE = Path.home() / "Desktop" / "클로드 운영노트" / "차트분석가이드.md"
 
 # Claude API (키는 환경변수 또는 stock_auto_trade/config에서)
 import anthropic
@@ -315,10 +316,24 @@ def generate_chart_analysis(code, name):
     price_data["기관순매수_5일"] = inv.get("inst_net", 0)
     price_data["외국인순매수_5일"] = inv.get("frgn_net", 0)
 
+    # 차트 분석 가이드 로드 (단일 진실의 소스)
+    guide_text = ""
+    if CHART_GUIDE.exists():
+        guide_text = CHART_GUIDE.read_text(encoding="utf-8")
+
     prompt = f"""'{name}'({code}) 종목의 세력·차트 종합 분석 HTML을 생성해주세요.
 아래 시세 데이터와 일봉/주봉 캔들 데이터를 기반으로 실제 분석을 해주세요.
 
-시세 데이터:
+# 단일 진실의 소스: 차트 분석 가이드
+
+아래 가이드를 반드시 따르세요. 모든 분석 용어·구조·체크리스트·금지사항이 이 가이드를 따라야 합니다.
+
+```markdown
+{guide_text}
+```
+
+# 종목 시세 데이터
+
 {json.dumps(price_data, ensure_ascii=False, indent=2)}
 
 반드시 아래 구조와 스타일을 정확히 따라주세요:
@@ -387,8 +402,8 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;bac
 HTML만 출력하세요. 마크다운 코드블록(```)이나 설명 없이 <!DOCTYPE html>부터 </html>까지만."""
 
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=8000,
+        model="claude-opus-4-7",
+        max_tokens=12000,
         messages=[{"role": "user", "content": prompt}],
     )
 
