@@ -104,6 +104,35 @@
 .signal-summary{background:rgba(255,255,255,.7);border-left:3px solid #6B59FF;border-radius:6px;padding:12px 14px;font-size:13px;color:#4e5968;line-height:1.7;margin-top:14px;position:relative}
 .signal-summary b{color:#6B59FF;font-weight:700}
 .signal-disc{font-size:11.5px;color:#8b95a1;margin-top:10px;line-height:1.5;position:relative}
+/* 시장 무드 한 줄 */
+.market-mood{display:flex;align-items:flex-start;gap:12px;background:linear-gradient(135deg,#FFF7ED 0%,#FEF3C7 100%);border:1px solid #FDE68A;border-radius:12px;padding:14px 18px;margin-bottom:18px}
+.market-mood .mood-icon{font-size:22px;line-height:1.2;flex-shrink:0}
+.market-mood .mood-body{flex:1;min-width:0}
+.market-mood .mood-label{font-size:11.5px;font-weight:700;color:#92400e;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:3px}
+.market-mood .mood-text{font-size:13.5px;color:#78350f;line-height:1.6;font-weight:500}
+/* ⭐ 오늘의 픽 (미국 시장 인사이트) */
+.today-pick-block{background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:18px;padding:26px 26px 22px;color:#fff;margin-bottom:14px;position:relative;overflow:hidden}
+.today-pick-block::before{content:'';position:absolute;top:-30px;right:-30px;width:160px;height:160px;background:rgba(255,255,255,0.07);border-radius:50%;pointer-events:none}
+.today-pick-block::after{content:'';position:absolute;bottom:-40px;left:-30px;width:140px;height:140px;background:rgba(255,255,255,0.05);border-radius:50%;pointer-events:none}
+.today-pick-inner{position:relative;z-index:1}
+.tp-cat{font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:0.88;margin-bottom:8px}
+.tp-name{font-size:26px;font-weight:800;letter-spacing:-0.02em;margin:0 0 4px}
+.tp-meta{font-size:13px;opacity:0.78;margin-bottom:12px}
+.tp-trigger{background:rgba(255,255,255,0.13);padding:11px 13px;border-radius:9px;font-size:13.5px;line-height:1.6;margin-bottom:12px}
+.tp-aiview{font-size:13px;line-height:1.65;opacity:0.92;margin-bottom:14px}
+.tp-prices{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:4px}
+.tp-prices > div{min-width:0}
+.tp-prices .ptag{font-size:11px;opacity:0.65}
+.tp-prices .pval{font-size:18px;font-weight:700;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.01em}
+.tp-prices .pval.pos{color:#90EE90}
+.tp-prices .pval.neg{color:#FFB4B4}
+a.tp-cta,a.tp-cta:link,a.tp-cta:visited,a.tp-cta:hover,a.tp-cta:active{display:block;margin-top:14px;padding:13px 16px;background:#fff;color:#1B64DA !important;text-decoration:none;border-radius:11px;text-align:center;font-weight:800;font-size:14px;letter-spacing:-0.01em}
+a.tp-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(0,0,0,0.25)}
+.tp-disc{font-size:11px;opacity:0.65;margin-top:10px;line-height:1.5}
+/* 따라 사면 안 되는 종목 (단기 과열 경고) */
+.signal-subhead.warn{color:#B33939}
+.sig-card.warn{border-color:#FAD4D4;background:#FFFBFB}
+.sig-card.warn .sig-name{color:#B33939}
 @media(max-width:640px){
   .ai-hero{padding:32px 20px;border-radius:16px}
   .ai-hero h1{font-size:24px}
@@ -161,6 +190,30 @@
       <div class="sub" id="sum-total">—</div>
     </div>
   </div>
+  <!-- 🌡️ 오늘의 시장 무드 한 줄 -->
+  <div class="market-mood" id="market-mood-block" style="display:none">
+    <div class="mood-icon">🌡️</div>
+    <div class="mood-body">
+      <div class="mood-label">오늘의 시장 무드</div>
+      <div class="mood-text" id="market-mood-text">—</div>
+    </div>
+  </div>
+  <!-- ⭐ 오늘의 픽 (미국 시장 인사이트) -->
+  <section class="today-pick-block" id="today-pick-block" style="display:none">
+    <div class="today-pick-inner">
+      <div class="tp-cat">🏆 오늘의 픽 · 미국 시장 인사이트</div>
+      <h2 class="tp-name" id="tp-name">—</h2>
+      <div class="tp-meta" id="tp-meta">—</div>
+      <div class="tp-trigger" id="tp-trigger">—</div>
+      <div class="tp-aiview" id="tp-aiview">—</div>
+      <div class="tp-prices">
+        <div><div class="ptag">현재가</div><div class="pval" id="tp-price">—</div></div>
+        <div><div class="ptag">전일 대비</div><div class="pval" id="tp-change">—</div></div>
+      </div>
+      <a class="tp-cta" id="tp-cta" href="/stock/">📊 차트 분석 리포트 보기 →</a>
+      <div class="tp-disc">매수·매도 권유가 아닙니다. AI가 미국 시장을 본 인사이트일 뿐, 진입은 본인 판단.</div>
+    </div>
+  </section>
   <!-- AI 야간 시그널 -->
   <section class="signal-block" id="sec-signal">
     <div class="signal-head">
@@ -174,7 +227,7 @@
     </div>
     <div class="signal-subhead">📈 미국 증시 영향 종목</div>
     <div class="signal-list" id="signal-impacted"></div>
-    <div class="signal-subhead" style="margin-top:18px">🔥 거래량 폭증 TOP 5</div>
+    <div class="signal-subhead warn" style="margin-top:18px">⚠️ 따라 사면 안 되는 종목 · 단기 과열 경고</div>
     <div class="signal-list" id="signal-volume"></div>
     <div class="signal-summary" id="signal-summary">—</div>
     <div class="signal-disc">⚠ AI 분석 의견이며 매수·매도 권유가 아닙니다. 모든 투자 판단은 본인의 책임입니다.</div>
@@ -283,7 +336,7 @@
       const href = s.slug ? ` href="/stock/${s.slug}.html"` : '';
       const c = cls(s.price_change_pct);
       volEl.insertAdjacentHTML('beforeend', `
-        <${tag} class="sig-card"${href}>
+        <${tag} class="sig-card warn"${href}>
           <div class="sig-row">
             <div>
               <span class="sig-name">${s.name}</span>
@@ -295,15 +348,44 @@
               <span class="sig-stance ${s.stance}" style="margin-left:6px">${stanceLabel(s.stance)}</span>
             </div>
           </div>
-          <div class="sig-trigger">📡 ${s.context}</div>
+          <div class="sig-trigger">⚠️ ${s.context}</div>
           <div class="sig-view">${s.ai_view}</div>
         </${tag}>
       `);
     });
     document.getElementById('signal-summary').innerHTML = `<b>오늘의 AI 종합 ·</b> ${sig.ai_summary}`;
+    // 시장 무드 한 줄 (ai_summary 첫 문장)
+    if(sig.ai_summary){
+      const firstSentence = sig.ai_summary.split(/(?<=[.!?])\s+/)[0] || sig.ai_summary;
+      document.getElementById('market-mood-text').textContent = firstSentence;
+      document.getElementById('market-mood-block').style.display = 'flex';
+    }
   }catch(e){
     document.getElementById('sec-signal').style.display = 'none';
   }
+  // ⭐ 오늘의 픽 (미국 시장 인사이트)
+  try{
+    const tres = await fetch('/ai-log/today_pick.json?v='+Date.now());
+    if(!tres.ok) throw new Error('no today_pick');
+    const tp = await tres.json();
+    const stanceMap = {small_entry:'🟢 소액 진입 권장', buy:'🟢 매수 검토', watch:'🟡 관망', avoid:'🔴 진입 주의'};
+    document.getElementById('tp-name').textContent = tp.name;
+    document.getElementById('tp-meta').textContent = `${tp.code} · ${stanceMap[tp.stance] || '🟡 관망'}`;
+    document.getElementById('tp-trigger').textContent = '💡 ' + (tp.trigger || '');
+    document.getElementById('tp-aiview').textContent = tp.ai_view || '';
+    document.getElementById('tp-price').textContent = tp.current_price ? tp.current_price.toLocaleString('ko-KR') + '원' : '—';
+    const chgEl = document.getElementById('tp-change');
+    if(tp.change_pct){
+      chgEl.textContent = (tp.change_pct >= 0 ? '+' : '') + tp.change_pct.toFixed(2) + '%';
+      chgEl.classList.toggle('pos', tp.change_pct > 0);
+      chgEl.classList.toggle('neg', tp.change_pct < 0);
+    }
+    if(tp.slug || tp.code){
+      document.getElementById('tp-cta').href = '/stock/' + (tp.slug || tp.code) + '.html';
+      document.getElementById('tp-cta').textContent = `📊 ${tp.name} 차트 분석 리포트 보기 →`;
+    }
+    document.getElementById('today-pick-block').style.display = 'block';
+  }catch(e){ /* today_pick 없으면 섹션 숨김 (default) */ }
   // 시스템 변경 이력 (별도 fetch, 실패해도 무시)
   try{
     const cres = await fetch('/ai-log/changelog.json?v='+Date.now());

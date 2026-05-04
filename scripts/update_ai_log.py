@@ -356,15 +356,16 @@ def main():
     else:
         win_rate = 0
 
-    # 주간 손실 공개: 기준일로부터 최근 7일 내 손절 거래
+    # 주간 손실 공개: 이번 주 월요일 ~ 오늘 (월요일 00시 자동 초기화)
     today_d = market_d
+    week_monday = today_d - timedelta(days=today_d.weekday())
     weekly_losses = []
     for c in reversed(completed):
         try:
             d = datetime.strptime(c["date"], "%Y-%m-%d").date()
         except Exception:
             continue
-        if (today_d - d).days > 7:
+        if d < week_monday:
             break
         if c.get("is_win"):
             continue
