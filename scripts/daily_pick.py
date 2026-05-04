@@ -24,6 +24,8 @@ MANIFEST = STOCK_DIR / "_manifest.json"
 INDEX_HTML = STOCK_DIR / "index.html"
 TRADE_LOG = Path.home() / "stock_auto_trade" / "trade_log.jsonl"
 CHART_SOURCE = Path.home() / "주식차트"
+SIGNAL_JSON = ROOT / "ai-log" / "signal.json"
+TODAY_PICK_JSON = ROOT / "ai-log" / "today_pick.json"
 
 # Claude API (키는 환경변수 또는 stock_auto_trade/config에서)
 import anthropic
@@ -41,6 +43,68 @@ def load_manifest():
     if MANIFEST.exists():
         return json.loads(MANIFEST.read_text())
     return []
+
+
+def get_pick_from_signal():
+    """야간 시그널(미증시 영향 종목) 1순위를 오늘의 픽으로 선정.
+
+    선정 기준:
+      1. small_entry / 진입 권장 stance 우선
+      2. 동일 stance면 impacted_kr_stocks 배열 첫 번째
+    """
+    if not SIGNAL_JSON.exists():
+        print("[오늘의 픽] signal.json 없음")
+        return None
+    try:
+        sig = json.loads(SIGNAL_JSON.read_text())
+    except Exception as e:
+        print(f"[오늘의 픽] signal.json 파싱 실패: {e}")
+        return None
+
+    impacted = (sig.get("us_market") or {}).get("impacted_kr_stocks") or []
+    if not impacted:
+        print("[오늘의 픽] 미증시 영향 종목 없음")
+        return None
+
+    priority = {"small_entry": 0, "buy": 0, "watch": 1, "avoid": 2}
+    sorted_list = sorted(
+        enumerate(impacted),
+        key=lambda x: (priority.get(x[1].get("stance", "watch"), 1), x[0]),
+    )
+    chosen = sorted_list[0][1]
+    code = chosen.get("code", "")
+    name = chosen.get("name", "")
+    if not code or not name:
+        return None
+
+    api = KISApi()
+    cur_price = 0
+    change_pct = 0.0
+    try:
+        cur = api.get_current_price(code)
+        cur_price = int(cur.get("price") or 0)
+        change_pct = float(cur.get("change_rate") or 0)
+    except Exception as e:
+        print(f"[오늘의 픽] 현재가 조회 실패: {e}")
+
+    return {
+        "code": code,
+        "name": name,
+        "slug": chosen.get("slug", "") or code,
+        "trigger": chosen.get("trigger", ""),
+        "ai_view": chosen.get("ai_view", ""),
+        "stance": chosen.get("stance", "watch"),
+        "current_price": cur_price,
+        "change_pct": round(change_pct, 2),
+        "us_summary": (sig.get("us_market") or {}).get("summary", ""),
+        "generated_at": sig.get("generated_at") or date.today().isoformat(),
+    }
+
+
+def save_today_pick_meta(pick):
+    """/ai-log/today_pick.json 으로 메타 dump (페이지에서 fetch)."""
+    TODAY_PICK_JSON.write_text(json.dumps(pick, ensure_ascii=False, indent=2))
+    print(f"[오늘의 픽] today_pick.json 저장: {pick['name']}({pick['code']})")
 
 
 def get_best_pick_from_trades():
@@ -357,25 +421,38 @@ def publish_new_report():
 
 
 def update_today_pick(pick, slug):
-    """stock/index.html에 '오늘의 차트 분석' 하이라이트 섹션 삽입/갱신"""
+    """stock/index.html에 '오늘의 차트 분석' 하이라이트 섹션 삽입/갱신.
+
+    시그널 기반 픽: 미국 시장 인사이트로 도출된 종목을 강조.
+    """
     text = INDEX_HTML.read_text(encoding="utf-8")
 
-    profit_color = "#A32D2D" if pick["profit_rate"] > 0 else "#0C447C"
-    strategy_label = "스윙" if pick["strategy"] == "swing" else "단타"
+    stance_label = {
+        "small_entry": "🟢 소액 진입 권장",
+        "buy": "🟢 매수 검토",
+        "watch": "🟡 관망",
+        "avoid": "🔴 진입 주의",
+    }.get(pick.get("stance", "watch"), "🟡 관망")
+
+    cur_price_html = f"{pick['current_price']:,}원" if pick.get("current_price") else "—"
+    change_pct = pick.get("change_pct", 0)
+    change_color = "#90EE90" if change_pct > 0 else ("#FFB4B4" if change_pct < 0 else "#cbd5e1")
+    change_html = f"{change_pct:+.2f}%" if change_pct else "—"
+    trigger = (pick.get("trigger") or "").replace("\n", " ")
 
     highlight_html = f"""<!-- TODAY_PICK_START -->
   <div class="today-pick" style="background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:16px;padding:28px 24px;margin-bottom:32px;color:#fff;position:relative;overflow:hidden">
     <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(255,255,255,0.08);border-radius:50%"></div>
-    <div style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;opacity:0.8;margin-bottom:8px">🏆 오늘의 차트 분석</div>
-    <a href="/stock/{slug}.html" style="color:#fff;text-decoration:none">
+    <div style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;opacity:0.85;margin-bottom:8px">🏆 오늘의 픽 · 미국 시장 인사이트</div>
+    <a href="/stock/{slug}.html" style="color:#fff;text-decoration:none;display:block">
       <div style="font-size:24px;font-weight:800;margin-bottom:4px">{pick['name']}</div>
-      <div style="font-size:13px;opacity:0.7;margin-bottom:16px">{pick['code']} · AI {strategy_label} 매수 종목</div>
-      <div style="display:flex;gap:16px;flex-wrap:wrap">
-        <div><div style="font-size:11px;opacity:0.6">매수가</div><div style="font-size:18px;font-weight:700">{pick['buy_price']:,}원</div></div>
-        <div><div style="font-size:11px;opacity:0.6">현재가</div><div style="font-size:18px;font-weight:700">{pick['current_price']:,}원</div></div>
-        <div><div style="font-size:11px;opacity:0.6">수익률</div><div style="font-size:18px;font-weight:700;color:{'#90EE90' if pick['profit_rate'] > 0 else '#FFB4B4'}">{pick['profit_rate']:+.2f}%</div></div>
+      <div style="font-size:13px;opacity:0.75;margin-bottom:14px">{pick['code']} · {stance_label}</div>
+      <div style="font-size:13.5px;line-height:1.6;opacity:0.95;margin-bottom:14px;background:rgba(255,255,255,0.10);padding:10px 12px;border-radius:8px">💡 {trigger}</div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div><div style="font-size:11px;opacity:0.6">현재가</div><div style="font-size:18px;font-weight:700">{cur_price_html}</div></div>
+        <div><div style="font-size:11px;opacity:0.6">전일 대비</div><div style="font-size:18px;font-weight:700;color:{change_color}">{change_html}</div></div>
       </div>
-      <div style="margin-top:16px;font-size:13px;opacity:0.7">📊 세력·차트 구조 종합 분석 보기 →</div>
+      <div style="margin-top:16px;font-size:13px;opacity:0.85">📊 세력·차트 구조 종합 분석 보기 →</div>
     </a>
   </div>
   <!-- TODAY_PICK_END -->"""
@@ -426,11 +503,28 @@ def main():
     print(f"오늘의 차트 분석 자동화 — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print(f"{'='*50}\n")
 
-    # 1. 전날 매수 종목 중 best 선정
-    pick = get_best_pick_from_trades()
+    # 1. 야간 시그널(미증시 영향 종목)에서 오늘의 픽 선정
+    pick = get_pick_from_signal()
     if not pick:
-        print("선정할 종목이 없습니다. 종료.")
-        return
+        print("[fallback] signal 기반 픽 실패 — trade_log fallback 시도")
+        legacy = get_best_pick_from_trades()
+        if not legacy:
+            print("선정할 종목이 없습니다. 종료.")
+            return
+        # legacy 포맷을 시그널 포맷으로 변환
+        pick = {
+            "code": legacy["code"], "name": legacy["name"],
+            "slug": legacy["code"],
+            "trigger": legacy.get("reason", ""),
+            "ai_view": "AI 매매 종목 (시그널 미생성으로 fallback).",
+            "stance": "watch",
+            "current_price": legacy["current_price"],
+            "change_pct": legacy["profit_rate"],
+            "us_summary": "",
+            "generated_at": date.today().isoformat(),
+        }
+
+    save_today_pick_meta(pick)
 
     code = pick["code"]
     name = pick["name"]
