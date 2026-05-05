@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">오늘의 한 마디 — 만또 투자 인사이트</title>
+<meta name="description" id="page-desc" content="AI가 오늘 픽한 종목의 이유와 반대 의견까지. 쉽게 읽고 판단은 신중하게.">
+<meta name="keywords" content="오늘의 AI 픽, AI 종목 의견, AI 판단, 한국 주식 AI">
+<meta property="og:title" content="오늘의 한 마디 — 만또 투자 인사이트">
+<meta property="og:description" content="AI가 오늘 픽한 종목의 이유와 반대 의견까지. 쉽게 읽고 판단은 신중하게.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/ai-voice/">
+<link rel="canonical" href="https://manddo.kr/ai-voice/">
+<link rel="stylesheet" href="/css/main.css?v=20260505b">
+<style>
+.av-hero{background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:18px;padding:30px 28px 24px;color:#fff;margin-bottom:22px;position:relative;overflow:hidden}
+.av-hero::before{content:'';position:absolute;top:-30px;right:-30px;width:170px;height:170px;background:rgba(255,255,255,0.07);border-radius:50%;pointer-events:none}
+.av-hero::after{content:'';position:absolute;bottom:-50px;left:-30px;width:160px;height:160px;background:rgba(255,255,255,0.05);border-radius:50%;pointer-events:none}
+.av-inner{position:relative;z-index:1}
+.av-cat{font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff !important;opacity:0.92;margin-bottom:8px}
+.av-name{font-size:30px;font-weight:900;letter-spacing:-0.025em;margin:0 0 4px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.18)}
+.av-meta{font-size:13px;opacity:0.78;margin-bottom:14px}
+.av-trigger-hero{background:rgba(255,255,255,0.13);padding:11px 13px;border-radius:9px;font-size:13.5px;line-height:1.6;margin-bottom:14px}
+.av-prices{display:flex;gap:18px;flex-wrap:wrap}
+.av-prices > div{min-width:0}
+.av-prices .ptag{font-size:11px;opacity:0.65}
+.av-prices .pval{font-size:19px;font-weight:700;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.01em}
+.av-prices .pval.pos{color:#90EE90}
+.av-prices .pval.neg{color:#FFB4B4}
+.av-stock-link{display:inline-block;margin-top:14px;padding:10px 14px;background:rgba(255,255,255,0.15);color:#fff !important;text-decoration:none;border-radius:9px;font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,0.2)}
+.av-stock-link:hover{background:rgba(255,255,255,0.22)}
+.av-stock-link.hidden{display:none}
+
+.av-rating-card{background:#fff;border:1px solid #EEF0F3;border-radius:14px;padding:18px 20px;margin-bottom:14px}
+.av-rating-section{margin-bottom:14px}
+.av-rating-section:last-child{margin-bottom:0}
+.av-rating-label{font-size:12px;font-weight:800;color:#191f28;letter-spacing:-0.01em;margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline}
+.av-rating-label .av-pos-tag{font-size:11px;font-weight:700;color:#6b7684}
+.av-bar{background:#f0f0ed;height:18px;border-radius:9px;overflow:hidden;position:relative}
+.av-bar-fill{height:100%;border-radius:9px;transition:width .4s ease}
+.av-bar.position .av-bar-fill{background:linear-gradient(90deg,#0C447C 0%,#1D9E75 50%,#A32D2D 100%)}
+.av-bar.position{position:relative}
+.av-bar-marker{position:absolute;top:-3px;width:4px;height:24px;background:#191f28;border-radius:2px;box-shadow:0 0 0 2px #fff;transition:left .4s ease}
+.av-bar-ends{display:flex;justify-content:space-between;font-size:10.5px;color:#8b95a1;margin-top:4px;font-family:'SF Mono',ui-monospace,monospace}
+.av-score-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.av-score-row .av-score-name{font-size:13px;font-weight:700;color:#2c3038}
+.av-score-row .av-score-value{font-size:16px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.01em}
+.av-bar-fill.score-low{background:#A32D2D}
+.av-bar-fill.score-mid{background:#EF9F27}
+.av-bar-fill.score-high{background:#1D9E75}
+.av-card{background:#fff;border:1px solid #EEF0F3;border-radius:16px;padding:24px 24px 22px;margin-bottom:18px;box-shadow:0 4px 18px -10px rgba(25,31,40,0.08)}
+.av-block{margin-bottom:18px}
+.av-block:last-child{margin-bottom:0}
+.av-label{font-size:12px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.av-text{font-size:15px;line-height:1.78;color:#1c1f26;letter-spacing:-0.01em}
+
+.av-block.reason{background:linear-gradient(135deg,#EFF8F1 0%,#fff 100%);border:1px solid #D2EAD8;border-left:4px solid #0C8A5A;border-radius:13px;padding:18px 20px}
+.av-block.reason .av-label{color:#0C8A5A}
+.av-block.reason .av-text{font-size:15.5px;font-weight:500;line-height:1.85}
+
+.av-block.counter{background:linear-gradient(135deg,#FFF8F8 0%,#fff 100%);border:1px solid #FAD4D4;border-left:4px solid #B33939;border-radius:13px;padding:16px 20px}
+.av-block.counter .av-label{color:#B33939}
+.av-block.counter .av-text{font-size:14.5px;line-height:1.78;color:#4a2a2a}
+
+.av-disc-bottom{font-size:11.5px;color:#8b95a1;line-height:1.6;background:#FBFCFD;border:1px solid #EEF0F3;border-radius:11px;padding:14px 16px;margin-bottom:24px}
+.av-loading{padding:42px 24px;text-align:center;color:#6b7684;font-size:14px}
+.av-empty{padding:42px 24px;text-align:center;background:#FBFCFD;border:1px dashed #E5E8EC;border-radius:14px;color:#6b7684;font-size:14px;line-height:1.65}
+.av-empty .emj{font-size:32px;display:block;margin-bottom:10px}
+@media(max-width:640px){
+  .av-hero{padding:26px 22px}
+  .av-name{font-size:25px}
+  .av-prices .pval{font-size:17px}
+  .av-card{padding:20px 18px 18px}
+  .av-block.reason,.av-block.counter{padding:16px 16px}
+}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/" class="active">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <a class="back-btn" href="/ai-log/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+  <section class="av-hero">
+    <div class="av-inner">
+      <div class="av-cat">💬 오늘의 AI 픽</div>
+      <h1 class="av-name" id="av-name">—</h1>
+      <div class="av-meta" id="av-meta">—</div>
+      <div class="av-trigger-hero" id="av-trigger" style="display:none"></div>
+      <div class="av-prices" id="av-prices" style="display:none">
+        <div><div class="ptag">현재가</div><div class="pval" id="av-price">—</div></div>
+        <div><div class="ptag">전일 대비</div><div class="pval" id="av-change">—</div></div>
+      </div>
+      <a class="av-stock-link hidden" id="av-stock-link" href="#">📊 만또의 차트 분석 리포트 보기 →</a>
+    </div>
+  </section>
+
+  <div id="av-card-wrap"><div class="av-loading">불러오는 중…</div></div>
+
+  <div class="av-disc-bottom">
+    ⚠ 본 페이지의 AI 의견은 매수·매도 권유가 아닙니다. 한쪽 의견만 보고 결정하지 말고, 반대 의견까지 같이 읽은 뒤 본인의 판단으로 진입 여부를 결정하세요.
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <span>© manddo.kr</span>
+  </div>
+</footer>
+<script>
+(async function(){
+  const params = new URLSearchParams(location.search);
+  const slug = (params.get('slug') || '').trim();
+  const stanceMap = {avoid:'🔴 진입 주의', watch:'🟡 관망', small_entry:'🟢 소액 진입 권장', buy:'🟢 매수 검토'};
+  const wrap = document.getElementById('av-card-wrap');
+  const esc = s => String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  let tp = null;
+  try{
+    const tres = await fetch('/ai-log/today_pick.json?v='+Date.now());
+    if(tres.ok) tp = await tres.json();
+  }catch(e){ /* skip */ }
+
+  if(!tp){
+    document.getElementById('av-name').textContent = '오늘의 AI 픽이 없습니다';
+    document.getElementById('av-meta').textContent = '매일 새벽 갱신됩니다';
+    wrap.innerHTML = '<div class="av-empty"><span class="emj">💬</span>오늘 AI 픽이 아직 발행되지 않았어요.<br>매일 새벽 미국 시장을 본 후 갱신됩니다.</div>';
+    return;
+  }
+
+  const tpSlug = tp.slug || tp.code || '';
+  if(slug && slug !== tpSlug && slug !== tp.code){
+    document.getElementById('av-name').textContent = tp.name + ' (오늘의 픽 아님)';
+    document.getElementById('av-meta').textContent = `요청한 종목: ${slug}`;
+    wrap.innerHTML = `<div class="av-empty"><span class="emj">💬</span>오늘 AI가 픽한 종목은 <b>${esc(tp.name)}</b>입니다.<br><a href="/ai-voice/?slug=${esc(tpSlug)}" style="color:#1B64DA;font-weight:600">→ 오늘의 픽 보기</a></div>`;
+    return;
+  }
+
+  // 헤더
+  document.getElementById('av-name').textContent = tp.name || '—';
+  document.getElementById('av-meta').textContent = `${tp.code || '—'} · ${stanceMap[tp.stance] || '🟡 관망'}`;
+  document.title = `${tp.name} 오늘의 AI 픽 — 만또 투자 인사이트`;
+  document.getElementById('page-desc').setAttribute('content', `${tp.name}을(를) AI가 오늘 픽한 이유와 반대 의견. 쉽게 읽고 판단은 신중하게.`);
+
+  if(tp.trigger){
+    const t = document.getElementById('av-trigger');
+    t.textContent = '💡 ' + tp.trigger;
+    t.style.display = 'block';
+  }
+  if(tp.current_price){
+    document.getElementById('av-prices').style.display = 'flex';
+    document.getElementById('av-price').textContent = tp.current_price.toLocaleString('ko-KR') + '원';
+    if(typeof tp.change_pct === 'number'){
+      const chg = document.getElementById('av-change');
+      chg.textContent = (tp.change_pct >= 0 ? '+' : '') + tp.change_pct.toFixed(2) + '%';
+      chg.classList.toggle('pos', tp.change_pct > 0);
+      chg.classList.toggle('neg', tp.change_pct < 0);
+    }
+  }
+
+  // 만또 차트 분석본 링크 (있으면)
+  try{
+    const sres = await fetch('/stock/' + tpSlug + '.html', {method:'HEAD'});
+    if(sres.ok){
+      const link = document.getElementById('av-stock-link');
+      link.href = '/stock/' + tpSlug + '.html';
+      link.classList.remove('hidden');
+    }
+  }catch(e){ /* skip */ }
+
+  // 평점 카드 (52주 위치 + 단기/중기 매력도)
+  let ratingHtml = '';
+  const yLow = tp.year_low, yHigh = tp.year_high, cur = tp.current_price;
+  let posPct = null;
+  if(typeof yLow === 'number' && typeof yHigh === 'number' && typeof cur === 'number' && yHigh > yLow){
+    posPct = Math.max(0, Math.min(100, ((cur - yLow) / (yHigh - yLow)) * 100));
+  }
+  const scoreCls = v => v >= 70 ? 'score-high' : v >= 50 ? 'score-mid' : 'score-low';
+  const sShort = typeof tp.score_short === 'number' ? tp.score_short : null;
+  const sMid = typeof tp.score_mid === 'number' ? tp.score_mid : null;
+  if(posPct !== null || sShort !== null || sMid !== null){
+    ratingHtml = `
+      <div class="av-rating-card">
+        ${posPct !== null ? `
+          <div class="av-rating-section">
+            <div class="av-rating-label">
+              <span>📍 현재 주가 위치 (52주 기준)</span>
+              <span class="av-pos-tag">${posPct.toFixed(0)}% 위치</span>
+            </div>
+            <div class="av-bar position">
+              <div class="av-bar-fill" style="width:100%"></div>
+              <div class="av-bar-marker" style="left:calc(${posPct}% - 2px)"></div>
+            </div>
+            <div class="av-bar-ends">
+              <span>52주 저가 ${yLow.toLocaleString('ko-KR')}원</span>
+              <span>52주 고가 ${yHigh.toLocaleString('ko-KR')}원</span>
+            </div>
+          </div>` : ''}
+        ${sShort !== null ? `
+          <div class="av-rating-section">
+            <div class="av-score-row">
+              <span class="av-score-name">⭐ 단기 매력도 (1개월)</span>
+              <span class="av-score-value" style="color:${sShort>=70?'#0C8A5A':sShort>=50?'#EF9F27':'#A32D2D'}">${sShort}점</span>
+            </div>
+            <div class="av-bar"><div class="av-bar-fill ${scoreCls(sShort)}" style="width:${sShort}%"></div></div>
+          </div>` : ''}
+        ${sMid !== null ? `
+          <div class="av-rating-section">
+            <div class="av-score-row">
+              <span class="av-score-name">⭐ 중기 매력도 (3개월)</span>
+              <span class="av-score-value" style="color:${sMid>=70?'#0C8A5A':sMid>=50?'#EF9F27':'#A32D2D'}">${sMid}점</span>
+            </div>
+            <div class="av-bar"><div class="av-bar-fill ${scoreCls(sMid)}" style="width:${sMid}%"></div></div>
+          </div>` : ''}
+      </div>
+    `;
+  }
+
+  // 본문 카드
+  const reason = tp.ai_pick_reason || tp.ai_view || '';
+  const counter = tp.counter_view || '';
+  wrap.innerHTML = ratingHtml + `
+    <div class="av-card">
+      ${reason ? `
+        <div class="av-block reason">
+          <div class="av-label">✅ AI가 오늘 이 종목을 픽한 이유</div>
+          <div class="av-text">${esc(reason)}</div>
+        </div>` : ''}
+      ${counter ? `
+        <div class="av-block counter">
+          <div class="av-label">🤔 그래도 의심해볼 점</div>
+          <div class="av-text">${esc(counter)}</div>
+        </div>` : ''}
+    </div>
+  `;
+})();
+</script>
+</body>
+</html>

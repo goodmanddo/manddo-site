@@ -61,7 +61,7 @@
   <div class="today-pick" style="background:linear-gradient(135deg,#1B64DA 0%,#0d47a1 100%);border-radius:16px;padding:28px 24px;margin-bottom:32px;color:#fff;position:relative;overflow:hidden">
     <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(255,255,255,0.08);border-radius:50%"></div>
     <div style="font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;opacity:0.85;margin-bottom:8px">🏆 오늘의 픽 · 미국 시장 인사이트</div>
-    <a href="/stock/samsung-electronics.html" style="color:#fff;text-decoration:none;display:block">
+    <a href="/ai-voice/?slug=samsung-electronics" style="color:#fff;text-decoration:none;display:block">
       <div style="font-size:24px;font-weight:800;margin-bottom:4px">삼성전자</div>
       <div style="font-size:13px;opacity:0.75;margin-bottom:14px">005930 · 🟡 관망</div>
       <div style="font-size:13.5px;line-height:1.6;opacity:0.95;margin-bottom:14px;background:rgba(255,255,255,0.10);padding:10px 12px;border-radius:8px">💡 나스닥 약세 → 글로벌 반도체 수요 부진 신호</div>
@@ -69,10 +69,188 @@
         <div><div style="font-size:11px;opacity:0.6">현재가</div><div style="font-size:18px;font-weight:700">232,500원</div></div>
         <div><div style="font-size:11px;opacity:0.6">전일 대비</div><div style="font-size:18px;font-weight:700;color:#90EE90">+5.44%</div></div>
       </div>
-      <div style="margin-top:16px;font-size:13px;opacity:0.85">📊 세력·차트 구조 종합 분석 보기 →</div>
+      <div style="margin-top:16px;font-size:13px;opacity:0.85">💬 오늘의 한 마디 보기 →</div>
     </a>
   </div>
   <!-- TODAY_PICK_END -->
+
+  <!-- HISTORICAL_WIDGET_START -->
+  <div id="hr-widget-mount" style="margin-bottom:32px"></div>
+  <style>
+    #hr-widget-mount{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif}
+    .hrw-card{background:#fff;border:1px solid #e2e5ed;border-radius:14px;padding:20px 22px;color:#191f28}
+    .hrw-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+    .hrw-title{font-size:17px;font-weight:800;letter-spacing:-0.01em}
+    .hrw-sub{font-size:12.5px;color:#6b7280;margin-bottom:14px;line-height:1.55}
+    .hrw-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:12px}
+    .hrw-label{font-size:11.5px;color:#6b7280;font-weight:700;flex-shrink:0;width:54px}
+    .hrw-pick-wrap{position:relative;flex:1;min-width:200px}
+    .hrw-pick{width:100%;padding:9px 12px;font-size:14px;border:1.5px solid #e2e5ed;border-radius:9px;background:#fff;cursor:pointer;text-align:left;font-family:inherit}
+    .hrw-pick:focus{outline:none;border-color:#1B64DA}
+    .hrw-suggest{position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #e2e5ed;border-radius:9px;margin-top:4px;max-height:240px;overflow-y:auto;z-index:5;box-shadow:0 4px 12px rgba(0,0,0,0.06);display:none}
+    .hrw-suggest.open{display:block}
+    .hrw-suggest-item{padding:9px 12px;cursor:pointer;font-size:13.5px;display:flex;justify-content:space-between;align-items:center}
+    .hrw-suggest-item:hover{background:#f3f6ff}
+    .hrw-suggest-item .n{font-weight:600;color:#191f28}
+    .hrw-suggest-item .c{font-size:11.5px;color:#8b95a1;font-family:'SF Mono',monospace}
+    .hrw-period{display:flex;flex-wrap:wrap;gap:6px;flex:1}
+    .hrw-period button{padding:7px 14px;border:1.5px solid #e2e5ed;background:#fff;border-radius:8px;font-size:12.5px;font-weight:700;color:#374151;cursor:pointer;font-family:inherit}
+    .hrw-period button.active{background:#1B64DA;border-color:#1B64DA;color:#fff}
+    .hrw-amt{flex:1;min-width:120px;padding:9px 12px;font-size:14px;border:1.5px solid #e2e5ed;border-radius:9px;background:#fff;font-family:'SF Mono',monospace}
+    .hrw-amt:focus{outline:none;border-color:#1B64DA}
+    .hrw-narr{font-size:14px;line-height:1.7;color:#374151;background:#f7f9ff;border:1px solid #dde7f3;border-radius:9px;padding:12px 14px;margin-top:8px}
+    .hrw-narr b{color:#191f28}
+    .hrw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:10px}
+    .hrw-stat{background:#f7f8fb;border:1px solid #eef0f3;border-radius:8px;padding:10px 12px}
+    .hrw-stat .l{font-size:11px;color:#8b95a1;font-weight:600;margin-bottom:3px}
+    .hrw-stat .v{font-size:15px;font-weight:800;font-family:'SF Mono',monospace;color:#191f28}
+    .hrw-stat .v.pos{color:#0C8A5A}
+    .hrw-stat .v.neg{color:#D63939}
+    .hrw-stat .s{font-size:10.5px;color:#8b95a1;margin-top:2px}
+    .hrw-foot{margin-top:12px;font-size:11.5px;color:#8b95a1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+    .hrw-foot a{color:#1B64DA;font-weight:700;text-decoration:none}
+    .hrw-foot a:hover{text-decoration:underline}
+  </style>
+  <script>
+  (function(){
+    const POPULAR = ['005930','000660','373220','068270','035420','005380','086520','196170','015760','105560'];
+    const fmt = n => Math.round(n).toLocaleString('ko-KR');
+    const pct = n => (n>=0?'+':'') + n.toFixed(2) + '%';
+    const ymd = s => s.slice(0,4)+'-'+s.slice(4,6)+'-'+s.slice(6,8);
+    function findCandle(c, t){let lo=0,hi=c.length-1;while(lo<hi){const m=(lo+hi)>>1;if(c[m].d<t)lo=m+1;else hi=m;}return c[lo];}
+
+    const mount = document.getElementById('hr-widget-mount');
+    if (!mount) return;
+
+    let DATA=null, selected=null, years=5;
+    Promise.all([
+      fetch('/tools/data/history.json').then(r=>r.json()).catch(()=>null),
+      fetch('/ai-log/today_pick.json').then(r=>r.json()).catch(()=>null)
+    ]).then(([data, pick])=>{
+      if (!data || !data.stocks) return;
+      DATA = data;
+      // Default: today's pick if available in history, else 삼성전자
+      if (pick && pick.code && DATA.stocks[pick.code]) selected = pick.code;
+      else selected = DATA.stocks['005930'] ? '005930' : Object.keys(DATA.stocks)[0];
+      build();
+    });
+
+    function build(){
+      const stock = DATA.stocks[selected];
+      mount.innerHTML = `
+        <div class="hrw-card">
+          <div class="hrw-head"><div class="hrw-title">🕰️ 10년 전 그 주식 샀으면 지금 얼마?</div></div>
+          <div class="hrw-sub">한국투자증권 수정주가 기준. 과거 시점에 샀다면 지금 평가금액은 얼마인지 단순 계산해 봅니다.</div>
+          <div class="hrw-row">
+            <div class="hrw-label">종목</div>
+            <div class="hrw-pick-wrap">
+              <button type="button" class="hrw-pick" id="hrw-pick">${stock.name} <span style="color:#8b95a1;font-family:'SF Mono',monospace;font-size:12px">${selected}</span></button>
+              <div class="hrw-suggest" id="hrw-suggest"></div>
+            </div>
+          </div>
+          <div class="hrw-row">
+            <div class="hrw-label">기간</div>
+            <div class="hrw-period" id="hrw-period">
+              <button data-y="1">1년 전</button>
+              <button data-y="3">3년 전</button>
+              <button data-y="5" class="active">5년 전</button>
+              <button data-y="10">10년 전</button>
+            </div>
+          </div>
+          <div class="hrw-row">
+            <div class="hrw-label">투자금</div>
+            <input type="text" inputmode="numeric" class="hrw-amt" id="hrw-amt" value="1,000,000">
+            <span style="font-size:12px;color:#8b95a1">원</span>
+          </div>
+          <div id="hrw-result"></div>
+          <div class="hrw-foot">
+            <span>※ 배당 재투자 미포함 · 단순 주가 비교</span>
+            <a href="/vs/historical.html">전체 보기 →</a>
+          </div>
+        </div>
+      `;
+
+      const pickBtn = document.getElementById('hrw-pick');
+      const sug = document.getElementById('hrw-suggest');
+      pickBtn.addEventListener('click', e=>{
+        e.stopPropagation();
+        if (sug.classList.contains('open')) { sug.classList.remove('open'); return; }
+        const codes = POPULAR.filter(c=>DATA.stocks[c]).concat(Object.keys(DATA.stocks).filter(c=>!POPULAR.includes(c))).slice(0,30);
+        sug.innerHTML = codes.map(c=>`<div class="hrw-suggest-item" data-c="${c}"><span class="n">${DATA.stocks[c].name}</span><span class="c">${c}</span></div>`).join('');
+        sug.querySelectorAll('.hrw-suggest-item').forEach(it=>{
+          it.addEventListener('click', ()=>{
+            selected = it.dataset.c;
+            sug.classList.remove('open');
+            pickBtn.innerHTML = `${DATA.stocks[selected].name} <span style="color:#8b95a1;font-family:'SF Mono',monospace;font-size:12px">${selected}</span>`;
+            update();
+          });
+        });
+        sug.classList.add('open');
+      });
+      document.addEventListener('click', e=>{ if (!sug.contains(e.target) && e.target!==pickBtn) sug.classList.remove('open'); });
+
+      document.querySelectorAll('#hrw-period button').forEach(b=>{
+        b.addEventListener('click', ()=>{
+          document.querySelectorAll('#hrw-period button').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active');
+          years = Number(b.dataset.y);
+          update();
+        });
+      });
+      const amtEl = document.getElementById('hrw-amt');
+      amtEl.addEventListener('input', e=>{
+        const raw = e.target.value.replace(/[^0-9]/g,'');
+        e.target.value = raw ? Number(raw).toLocaleString('ko-KR') : '';
+        update();
+      });
+      update();
+    }
+
+    function update(){
+      const stock = DATA.stocks[selected];
+      const candles = stock.candles;
+      if (!candles || candles.length<2) return;
+      const last = candles[candles.length-1];
+      let buy;
+      if (years === 0) buy = candles[0];
+      else {
+        const t = new Date();
+        const target = new Date(t.getFullYear()-years, t.getMonth(), t.getDate());
+        const ts = target.getFullYear().toString() + String(target.getMonth()+1).padStart(2,'0') + String(target.getDate()).padStart(2,'0');
+        buy = findCandle(candles, ts);
+      }
+      const resEl = document.getElementById('hrw-result');
+      const amt = Number((document.getElementById('hrw-amt').value||'').replace(/[^0-9]/g,''))||0;
+      if (!buy || buy.d >= last.d || !amt) {
+        resEl.innerHTML = !amt ? '' : `<div style="padding:14px;background:#f7f8fb;border-radius:8px;font-size:13px;color:#8b95a1;text-align:center;margin-top:8px">${stock.name}은(는) 해당 기간 데이터가 부족해요. 다른 기간을 선택해 보세요.</div>`;
+        return;
+      }
+      const shares = amt / buy.c;
+      const valueNow = shares * last.c;
+      const pnl = valueNow - amt;
+      const ret = (last.c/buy.c - 1) * 100;
+      const days = (Date.parse(ymd(last.d)) - Date.parse(ymd(buy.d))) / 86400000;
+      const yrs = days / 365.25;
+      const cagr = yrs > 0.1 ? (Math.pow(last.c/buy.c, 1/yrs) - 1) * 100 : null;
+      const dir = ret >= 0 ? '늘었어요' : '줄었어요';
+      const cls = ret >= 0 ? 'pos' : 'neg';
+      const multi = (last.c/buy.c).toFixed(2);
+      resEl.innerHTML = `
+        <div class="hrw-narr">
+          <b>${stock.name}</b>을(를) <b>${yrs.toFixed(1)}년 전</b>(${ymd(buy.d)}) 에 <b>${fmt(amt)}원</b>어치 사뒀다면, 오늘(${ymd(last.d)}) 기준 <b style="color:${ret>=0?'#0C8A5A':'#D63939'}">${fmt(valueNow)}원</b> — ${fmt(Math.abs(pnl))}원 ${dir}.
+        </div>
+        <div class="hrw-grid">
+          <div class="hrw-stat"><div class="l">매수가 → 현재가</div><div class="v">${fmt(buy.c)} → ${fmt(last.c)}</div><div class="s">${multi}배</div></div>
+          <div class="hrw-stat"><div class="l">총 수익률</div><div class="v ${cls}">${pct(ret)}</div><div class="s">${yrs.toFixed(1)}년 누적</div></div>
+          <div class="hrw-stat"><div class="l">연환산(CAGR)</div><div class="v ${cagr!=null && cagr>=0?'pos':'neg'}">${cagr==null?'—':pct(cagr)}</div><div class="s">매년 평균</div></div>
+          <div class="hrw-stat"><div class="l">평가손익</div><div class="v ${cls}">${pnl>=0?'+':''}${fmt(pnl)}</div><div class="s">원</div></div>
+        </div>
+      `;
+    }
+  })();
+  </script>
+  <!-- HISTORICAL_WIDGET_END -->
+
   <div class="grid" id="stock-grid">
     <!-- STOCK_CARDS_START -->
     <a href="/stock/079940.html" class="card" data-name="가비아 079940" data-code="079940" data-tags="">
