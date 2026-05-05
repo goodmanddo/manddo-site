@@ -27,6 +27,7 @@ CHART_SOURCE = Path.home() / "주식차트"
 SIGNAL_JSON = ROOT / "ai-log" / "signal.json"
 TODAY_PICK_JSON = ROOT / "ai-log" / "today_pick.json"
 CHART_GUIDE = Path.home() / "Desktop" / "클로드 운영노트" / "차트분석가이드.md"
+CHART_FILES = ROOT / "scripts" / ".chart_files.json"  # Files API file_id 매니페스트
 
 # Claude API (키는 환경변수 또는 stock_auto_trade/config에서)
 import anthropic
@@ -102,10 +103,143 @@ def get_pick_from_signal():
     }
 
 
+def compute_pick_extras(pick):
+    """today_pick.json에 들어갈 보조 필드 계산.
+
+    /ai-voice/ 페이지가 의존하는 필드:
+      - year_high, year_low: 52주 고저 (FinanceDataReader)
+      - score_short, score_mid: 단기·중장기 매력도 0~100 (휴리스틱)
+      - ai_pick_reason, counter_view: 한 마디 + 반론 (Claude Haiku)
+
+    실패 시 None 반환 → save_today_pick_meta가 누락 필드 없이 dump.
+    """
+    code = pick.get("code", "")
+    if not code:
+        return None
+    try:
+        import FinanceDataReader as fdr
+    except Exception as e:
+        print(f"[오늘의 픽] FinanceDataReader 임포트 실패: {e}")
+        return None
+
+    try:
+        start = (datetime.now() - timedelta(days=420)).strftime("%Y-%m-%d")
+        df = fdr.DataReader(code, start)
+        if df is None or len(df) < 60:
+            return None
+        y1 = df.tail(252) if len(df) >= 252 else df
+        year_high = int(y1["High"].max())
+        year_low = int(y1["Low"].min())
+        cur = int(df["Close"].iloc[-1])
+        pos52 = (
+            (cur - year_low) / (year_high - year_low) * 100
+            if year_high != year_low else 50
+        )
+
+        # 추세·모멘텀 보조 지표 (점수 산정용)
+        close = df["Close"]
+        delta = close.diff()
+        gain = delta.where(delta > 0, 0).rolling(14).mean()
+        loss = (-delta.where(delta < 0, 0)).rolling(14).mean()
+        rsi = float((100 - 100 / (1 + gain / loss)).iloc[-1])
+        ma5 = float(close.rolling(5).mean().iloc[-1])
+        ma20 = float(close.rolling(20).mean().iloc[-1])
+        ma60 = float(close.rolling(60).mean().iloc[-1]) if len(close) >= 60 else ma20
+        bullish_align = ma5 > ma20 > ma60  # 정배열
+
+        # 단기 매력도: RSI + 52주 위치 + 정배열 (0~100)
+        score_short = 50
+        if rsi < 30: score_short += 25
+        elif rsi < 50: score_short += 12
+        elif rsi > 75: score_short -= 20
+        elif rsi > 65: score_short -= 8
+        if pos52 < 30: score_short += 15
+        elif pos52 > 80: score_short -= 12
+        if bullish_align: score_short += 8
+        score_short = max(0, min(100, score_short))
+
+        # 중장기 매력도: 정배열 가중 + 추세 + 52주 위치
+        score_mid = 55
+        if bullish_align: score_mid += 18
+        if cur > ma20: score_mid += 8
+        if cur > ma60: score_mid += 8
+        if pos52 < 40: score_mid += 8  # 저점 매력
+        elif pos52 > 90: score_mid -= 5
+        score_mid = max(0, min(100, score_mid))
+    except Exception as e:
+        print(f"[오늘의 픽] 가격 메타 계산 실패: {e}")
+        return None
+
+    # ai_pick_reason / counter_view: Claude Haiku로 짧게 생성
+    ai_pick_reason = ""
+    counter_view = ""
+    try:
+        prompt = (
+            f"종목: {pick['name']}({code})\n"
+            f"현재가 {cur:,}원, 52주 위치 {pos52:.1f}% (저가 {year_low:,} ~ 고가 {year_high:,})\n"
+            f"RSI {rsi:.1f}, 정배열 {'O' if bullish_align else 'X'}\n"
+            f"오늘 트리거: {pick.get('trigger', '')}\n"
+            f"미증시 요약: {pick.get('us_summary', '')}\n"
+            f"AI 시그널 코멘트: {pick.get('ai_view', '')}\n"
+            f"stance: {pick.get('stance', 'watch')}\n\n"
+            "위 종목에 대해 manddo.kr '오늘의 한 마디' 페이지에 보낼 두 단락을 한국어 JSON으로:\n"
+            '{"ai_pick_reason": "<왜 이 종목을 보는가, 3~4문장, 친근한 ~요체>",'
+            ' "counter_view": "<주의해야 할 반대 시각, 2~3문장, ~요체>"}\n'
+            "JSON만 출력. 종목 매수 권유는 금지, 관찰·검토 톤 유지."
+        )
+        msg = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=600,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = msg.content[0].text.strip()
+        m = re.search(r"\{[\s\S]*\}", raw)
+        if m:
+            obj = json.loads(m.group(0))
+            ai_pick_reason = obj.get("ai_pick_reason", "")
+            counter_view = obj.get("counter_view", "")
+    except Exception as e:
+        print(f"[오늘의 픽] 한 마디 생성 실패: {e}")
+
+    return {
+        "year_high": year_high,
+        "year_low": year_low,
+        "score_short": score_short,
+        "score_mid": score_mid,
+        "ai_pick_reason": ai_pick_reason,
+        "counter_view": counter_view,
+    }
+
+
 def save_today_pick_meta(pick):
-    """/ai-log/today_pick.json 으로 메타 dump (페이지에서 fetch)."""
-    TODAY_PICK_JSON.write_text(json.dumps(pick, ensure_ascii=False, indent=2))
-    print(f"[오늘의 픽] today_pick.json 저장: {pick['name']}({pick['code']})")
+    """/ai-log/today_pick.json 으로 메타 dump (페이지에서 fetch).
+
+    /ai-voice/ 가 기대하는 추가 필드(year_high/year_low/score_*/ai_pick_reason/counter_view)는
+    compute_pick_extras로 채워서 합침. ai_view는 내부용이라 출력에서 제거.
+    """
+    extras = compute_pick_extras(pick) or {}
+    out = {"date": date.today().isoformat()}
+    # 기본 메타
+    for key in ("code", "name", "slug", "stance", "trigger",
+                "current_price", "change_pct"):
+        if key in pick:
+            out[key] = pick[key]
+    # 보조 메타 (실패 시 빈 값 대신 키 자체를 누락시키지 않음)
+    out["year_low"] = extras.get("year_low")
+    out["year_high"] = extras.get("year_high")
+    out["score_short"] = extras.get("score_short")
+    out["score_mid"] = extras.get("score_mid")
+    out["ai_pick_reason"] = extras.get("ai_pick_reason", "")
+    out["counter_view"] = extras.get("counter_view", "")
+    out["us_summary"] = pick.get("us_summary", "")
+    out["generated_at"] = pick.get("generated_at", date.today().isoformat())
+
+    TODAY_PICK_JSON.write_text(json.dumps(out, ensure_ascii=False, indent=2))
+    print(
+        f"[오늘의 픽] today_pick.json 저장: {pick['name']}({pick['code']}) "
+        f"52주 {out.get('year_low')}~{out.get('year_high')} "
+        f"단기/중장기 {out.get('score_short')}/{out.get('score_mid')}"
+    )
 
 
 def get_best_pick_from_trades():
@@ -401,10 +535,38 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;bac
 
 HTML만 출력하세요. 마크다운 코드블록(```)이나 설명 없이 <!DOCTYPE html>부터 </html>까지만."""
 
+    # PDF document 블록 (Files API + 캐시) — 웹 프로젝트 동급 컨텍스트
+    content_blocks = []
+    if CHART_FILES.exists():
+        try:
+            files_manifest = json.loads(CHART_FILES.read_text())
+            file_ids = [v["id"] for v in files_manifest.values() if v.get("id")]
+            for i, fid in enumerate(file_ids):
+                block = {
+                    "type": "document",
+                    "source": {"type": "file", "file_id": fid},
+                }
+                # 마지막 document에만 cache_control 부여 → 이전 document까지 묶어 캐싱
+                if i == len(file_ids) - 1:
+                    block["cache_control"] = {"type": "ephemeral"}
+                content_blocks.append(block)
+        except Exception as e:
+            print(f"[차트생성] PDF 매니페스트 로드 실패(무시): {e}")
+    content_blocks.append({"type": "text", "text": prompt})
+
     response = client.messages.create(
         model="claude-opus-4-7",
         max_tokens=12000,
-        messages=[{"role": "user", "content": prompt}],
+        extra_headers={"anthropic-beta": "files-api-2025-04-14"},
+        messages=[{"role": "user", "content": content_blocks}],
+    )
+    # 캐시 효과 로깅
+    u = response.usage
+    print(
+        f"[차트생성] 토큰 — input:{u.input_tokens} "
+        f"cache_create:{getattr(u, 'cache_creation_input_tokens', 0)} "
+        f"cache_read:{getattr(u, 'cache_read_input_tokens', 0)} "
+        f"output:{u.output_tokens}"
     )
 
     html = response.content[0].text.strip()
