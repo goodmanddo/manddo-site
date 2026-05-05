@@ -62,6 +62,26 @@ def inject_back_button(html_text):
     idx = m.end()
     return html_text[:idx] + BACK_BUTTON_HTML + html_text[idx:]
 
+
+NOINDEX_TAG = '<meta name="robots" content="noindex,follow">'
+
+
+def inject_noindex(html_text):
+    if 'name="robots"' in html_text:
+        return html_text
+    new_text, n = re.subn(
+        r'(<meta charset="[^"]*"[^>]*>)',
+        r'\1\n' + NOINDEX_TAG,
+        html_text, count=1
+    )
+    if n == 0:
+        new_text, n = re.subn(r'(<head[^>]*>)', r'\1\n' + NOINDEX_TAG, html_text, count=1)
+    return new_text if n > 0 else html_text
+
+
+def remove_noindex(html_text):
+    return re.sub(r'\s*<meta name="robots" content="noindex[^"]*">\n?', '', html_text)
+
 # 종목명(한글/영문) → SEO 슬러그
 NAME_TO_SLUG = {
     "삼성전자": "samsung-electronics",
@@ -210,10 +230,11 @@ def regenerate_index(items):
 
 def regenerate_sitemap(items):
     today = date.today().isoformat()
+    core_items = [it for it in items if it.get("core")]
     lines = [
         f'  <url><loc>https://manddo.kr/stock/{it["slug"]}.html</loc>'
         f'<lastmod>{it.get("added", today)}</lastmod><priority>0.8</priority></url>'
-        for it in sorted(items, key=lambda x: x.get("added", ""), reverse=True)
+        for it in sorted(core_items, key=lambda x: x.get("added", ""), reverse=True)
     ]
     block = "\n".join(lines)
     text = SITEMAP.read_text(encoding="utf-8")
@@ -287,7 +308,13 @@ def main():
                 continue
             dest = STOCK_DIR / f"{meta['slug']}.html"
             src_text = src.read_text(encoding="utf-8", errors="ignore")
-            dest.write_text(inject_back_button(src_text), encoding="utf-8")
+            out_text = inject_back_button(src_text)
+            is_core = manifest_by_slug.get(meta["slug"], {}).get("core", False)
+            if not is_core:
+                out_text = inject_noindex(out_text)
+            else:
+                out_text = remove_noindex(out_text)
+            dest.write_text(out_text, encoding="utf-8")
             if is_dup:
                 # 기존 added 날짜 유지, 메타 갱신
                 prev = manifest_by_slug[meta["slug"]]
