@@ -1,59 +1,79 @@
 {
-  "date": "2026-05-05",
+  "date": "2026-05-06",
   "start_date": "2026-05-03",
-  "cumulative_return": 0.25,
-  "week_return": 0.0,
-  "day_return": 0.0,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
-  "today_loss_count": 0,
+  "cumulative_return": 0.42,
+  "week_return": 0.17,
+  "day_return": 0.17,
+  "today_realized_avg": 3.13,
+  "today_trade_count": 2,
+  "today_win_count": 1,
+  "today_loss_count": 1,
   "win_rate": 45,
-  "total_trades": 20,
-  "ai_commentary": "오늘은 가비아, 메가스터디교육, 포스코퓨처엠 등 신규 편입. 시작 이후 누적 +0.2%.",
+  "total_trades": 22,
+  "ai_commentary": "오늘은 카카오, 가비아, 메가스터디교육 등 신규 편입. 1건 익절로 수익 확정. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 +0.4%.",
   "new_buys": [
+    {
+      "name": "카카오",
+      "slug": "kakao",
+      "market": "코스피",
+      "entry_to_current_pct": -0.43,
+      "weight_pct": 24,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
+    },
     {
       "name": "가비아",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 3.32,
+      "entry_to_current_pct": 3.49,
       "weight_pct": 3,
-      "hold_days": 5,
+      "hold_days": 6,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "메가스터디교육",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -3.21,
+      "entry_to_current_pct": -6.93,
       "weight_pct": 1,
-      "hold_days": 6,
-      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
-    },
-    {
-      "name": "포스코퓨처엠",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 5.53,
-      "weight_pct": 5,
       "hold_days": 7,
-      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
+      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
-  "holdings": [
+  "exits": [
     {
+      "type": "win",
       "name": "포스코퓨처엠",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
+      "return_pct": 13.44,
+      "hold_days": 8,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     },
     {
+      "type": "loss",
       "name": "펄어비스",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 4
+      "return_pct": -7.18,
+      "hold_days": 9,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "펄어비스",
+      "slug": "",
+      "return_pct": -7.18,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
+  "holdings": [
+    {
+      "name": "카카오",
+      "slug": "kakao",
+      "market": "코스피",
+      "weight_pct": 24
     },
     {
       "name": "에코아이",
@@ -82,6 +102,10 @@
     {
       "date": "2026-05-05",
       "cumulative_return": 0.25
+    },
+    {
+      "date": "2026-05-06",
+      "cumulative_return": 0.42
     }
   ]
 }

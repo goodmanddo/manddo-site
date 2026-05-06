@@ -1,38 +1,31 @@
 {
   "last_holdings": {
-    "003670": {
-      "name": "포스코퓨처엠",
-      "qty": 4,
-      "avg_price": 253000,
-      "current_price": 267000,
-      "opened_at": "2026-04-28"
+    "035720": {
+      "name": "카카오",
+      "qty": 102,
+      "avg_price": 46500,
+      "current_price": 46300,
+      "opened_at": "2026-05-06"
     },
     "079940": {
       "name": "가비아",
       "qty": 20,
       "avg_price": 30100,
-      "current_price": 31100,
+      "current_price": 31150,
       "opened_at": "2026-04-30"
     },
     "215200": {
       "name": "메가스터디교육",
       "qty": 5,
       "avg_price": 48350,
-      "current_price": 46800,
+      "current_price": 45000,
       "opened_at": "2026-04-29"
-    },
-    "263750": {
-      "name": "펄어비스",
-      "qty": 12,
-      "avg_price": 60600,
-      "current_price": 58500,
-      "opened_at": "2026-04-27"
     },
     "448280": {
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12390,
+      "current_price": 12660,
       "opened_at": "2026-04-24"
     }
   },
@@ -52,6 +45,10 @@
     {
       "date": "2026-05-05",
       "total_eval": 20049635
+    },
+    {
+      "date": "2026-05-06",
+      "total_eval": 20083015
     }
   ],
   "completed_trades": [
@@ -201,6 +198,22 @@
       "date": "2026-05-04",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "포스코퓨처엠",
+      "code": "003670",
+      "return_pct": 13.44,
+      "date": "2026-05-06",
+      "is_win": true,
+      "hold_days": 8
+    },
+    {
+      "name": "펄어비스",
+      "code": "263750",
+      "return_pct": -7.18,
+      "date": "2026-05-06",
+      "is_win": false,
+      "hold_days": 9
     }
   ]
 }
