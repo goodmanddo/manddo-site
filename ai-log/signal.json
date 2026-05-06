@@ -1,102 +1,102 @@
 {
   "us_market": {
-    "summary": "미 증시 소폭 상승세 지속 — 나스닥 1% 이상 상승하며 기술주 선호 지속, 유가 하락이 긍정 요인으로 작용.",
+    "summary": "미 증시 전반적 상승세 지속(다우 +1.24%, 나스닥 +2.02%, S&P500 +1.46%)으로 기술주 중심 강세. 원화 강세(USD/KRW -1.97%)는 수출주에 긍정적.",
     "indices": [
       {
         "name": "다우",
-        "change_pct": 0.73
+        "change_pct": 1.24
       },
       {
         "name": "나스닥",
-        "change_pct": 1.03
+        "change_pct": 2.02
       },
       {
-        "name": "S&P 500",
-        "change_pct": 0.81
+        "name": "S&P500",
+        "change_pct": 1.46
       }
     ],
-    "fx_usd_krw": 1468.6,
-    "fx_change_pct": -0.5,
+    "fx_usd_krw": 1444.9,
+    "fx_change_pct": -1.97,
     "impacted_kr_stocks": [
       {
-        "name": "삼성전자",
-        "code": "005930",
-        "slug": "samsung-electronics",
-        "trigger": "나스닥 기술주 강세로 반도체 주도권 재평가, 미국 수급 개선 신호",
-        "ai_view": "나스닥 1% 이상 상승은 반도체·AI칩 선호 심화를 의미. 메모리 강세장 진입 신호로 해석 가능.",
-        "stance": "watch"
-      },
-      {
-        "name": "SK하이닉스",
-        "code": "000660",
-        "slug": "sk-hynix",
-        "trigger": "미국 기술주 상승으로 메모리 수급 개선 기대, 유가 하락은 원가 절감",
-        "ai_view": "반도체 사이클 회복 국면에서 메모리 공급자들의 이익 개선이 예상되며, 원화 약세도 수출 경쟁력 강화.",
+        "name": "삼성전기",
+        "code": "009150",
+        "slug": "samsung-electro-mechanics",
+        "trigger": "나스닥 기술주 랠리로 반도체·전장 부품 수요 증가 기대",
+        "ai_view": "미국 기술주 상승장에서 전자부품 수출 업체로서 긍정적 모멘텀. 원화 강세도 경쟁력 강화.",
         "stance": "small_entry"
       },
       {
-        "name": "LG화학",
-        "code": "051910",
-        "slug": "lg-chem",
-        "trigger": "유가 하락으로 화학·배터리 소재 원가 절감, 2차전지 수급 정상화",
-        "ai_view": "유가 하락은 배터리·화학 제조사의 수익성 개선에 긍정적. 다만 글로벌 전기차 시장 둔화 리스크는 지속 관찰.",
+        "name": "한화에어로스페이스",
+        "code": "012450",
+        "slug": "hanwha-aerospace",
+        "trigger": "미국 경기 강세로 방위사업·우주산업 투자 심화 가능성",
+        "ai_view": "방위산업 사이클 상승기에 글로벌 우주산업 성장 수혜주로 포지셔닝. 미 증시 강세는 우호적.",
+        "stance": "watch"
+      },
+      {
+        "name": "SK텔레콤",
+        "code": "017670",
+        "slug": "sk-telecom",
+        "trigger": "글로벌 통신 인프라 투자 심화, 원화 강세로 해외사업 수익성 개선",
+        "ai_view": "통신 섹터의 장기 성장성과 배당 수익률로 방어적 포지션 가능. 원화 강세 시 실적 개선 기대.",
         "stance": "watch"
       }
     ]
   },
   "volume_surge": [
     {
-      "name": "서희건설",
-      "code": "035890",
-      "slug": "seohee-construction",
-      "volume_ratio": 20.0,
-      "price_change_pct": 106.4,
-      "context": "건설·부동산 섹터 상승장 중 저평가 종목 급부상, 대량거래 또는 특수 공시 예상",
-      "ai_view": "106% 등락은 극단적 변동성 신호. 공시 확인 필수, 기술적 반발 또는 보도 자료 영향 가능성 높음.",
-      "stance": "avoid"
-    },
-    {
-      "name": "삼성증권",
-      "code": "016360",
-      "slug": "samsung-securities",
-      "volume_ratio": 8.0,
-      "price_change_pct": 28.3,
-      "context": "증권주 일괄 상승 (미 증시 호조 + 유가 하락으로 시장 심리 개선), 거래량 활성화",
-      "ai_view": "증권사들의 거래량 수수료 수익 증가 기대 + 마진거래 수익 개선. 시장 심리 개선의 수혜주.",
-      "stance": "watch"
-    },
-    {
-      "name": "아진엑스텍",
-      "code": "059120",
-      "slug": "ajin-extech",
-      "volume_ratio": 7.5,
-      "price_change_pct": 30.0,
-      "context": "반도체·자동차 부품 공급사로 기술주 상승장 수혜, 또는 실적 개선 공시",
-      "ai_view": "30% 등락 + 7.5배 거래량은 공시 또는 대량 거래 신호. 나스닥 기술주 강세 영향도 있으나 회사 특정 뉴스 확인 필요.",
-      "stance": "watch"
-    },
-    {
-      "name": "한온시스템",
-      "code": "018880",
-      "slug": "hanon-systems",
-      "volume_ratio": 7.1,
-      "price_change_pct": 14.7,
-      "context": "자동차 부품사로 유가 하락 + 글로벌 자동차 수급 정상화 기대감",
-      "ai_view": "유가 하락은 자동차 원가 절감 신호. 다만 글로벌 전기차 부진이 오프셋될 수 있으니 업황 확인 중요.",
+      "name": "유안타증권",
+      "code": "003470",
+      "slug": "yuanta-securities",
+      "volume_ratio": 9.9,
+      "price_change_pct": 29.9,
+      "context": "증권사 업황 개선 기대로 금융주 동반 상승, 미 증시 상승으로 IPO·자본시장 활황 신호",
+      "ai_view": "금융 섹터 사이클 상승기 진입 신호. 거래량과 가격 동반 상승으로 모멘텀 강함. 단기 과열 위험도 점검 필요.",
       "stance": "small_entry"
     },
     {
-      "name": "유니퀘스트",
-      "code": "077500",
-      "slug": "uniquest",
-      "volume_ratio": 11.8,
-      "price_change_pct": 16.0,
-      "context": "IT·소프트웨어 기업으로 나스닥 1% 상승의 기술주 선호 파급, 혹은 신규 프로젝트 수주",
-      "ai_view": "미국 기술주 강세가 IT 솔루션·소프트웨어 수출 기업들에 긍정적. 다만 성장성 재평가 필요.",
+      "name": "와이씨켐",
+      "code": "112290",
+      "slug": "ycchem",
+      "volume_ratio": 10.4,
+      "price_change_pct": 17.6,
+      "context": "기초화학·배터리 소재 업체로서 에너지 전환 투자 재개 기대, 2차전지 산업 회복 신호",
+      "ai_view": "2차전지 밸류체인 중 소재 업체. 거래량 증가는 기관의 관심 회복 신호. 하지만 수급 확인 필요.",
+      "stance": "watch"
+    },
+    {
+      "name": "필옵틱스",
+      "code": "161580",
+      "slug": "phooptics",
+      "volume_ratio": 8.2,
+      "price_change_pct": 29.5,
+      "context": "광통신·반도체 검사 장비 업체로서 나스닥 기술주 랠리로 부품 수요 증대, 고가격대 모멘텀주",
+      "ai_view": "나스닥 상승과 동조하는 기술부품주. 거래량 8배, 가격 +29.5%는 강한 상승 모멘텀이지만 이미 고점 가능성 높음.",
+      "stance": "avoid"
+    },
+    {
+      "name": "카카오페이",
+      "code": "377300",
+      "slug": "kakao-pay",
+      "volume_ratio": 6.9,
+      "price_change_pct": 13.0,
+      "context": "카카오 플랫폼 생태계 강화 전망, 핀테크·결제 산업 성장세 가속화",
+      "ai_view": "플랫폼 경제 호황 시 수혜주. 거래량 증가는 기관 리포지셔닝 신호로 보임. 다만 단기 기술적 과매수 점검 필요.",
+      "stance": "watch"
+    },
+    {
+      "name": "범한퓨얼셀",
+      "code": "382900",
+      "slug": "vanhee-fuelcell",
+      "volume_ratio": 9.7,
+      "price_change_pct": 13.4,
+      "context": "수소·연료전지 산업 재조명, 친환경 에너지 투자 사이클 회복",
+      "ai_view": "녹색에너지 섹터 사이클 상승 신호. 거래량 급증은 테마주 특성상 수급에 민감. 실적 뒷받침 없으면 변동성 주의.",
       "stance": "watch"
     }
   ],
-  "ai_summary": "미 증시 소폭 상승(나스닥 1% 이상)과 유가 하락이 한국 반도체·자동차·화학주에 긍정 신호를 제시하나, 거래량 급증 종목들의 극단적 등락은 공시·특수 거래 영향이 크므로 개별 확인 필수. 단기 기술적 반발 위험도 주의.",
-  "date": "2026-05-06",
+  "ai_summary": "미 증시 전반적 상승과 원화 강세로 수출주 및 기술부품주 긍정적, 2차전지·금융·에너지 섹터 사이클 상승 신호. 거래량 급증 종목들은 테마 모멘텀 강하나 단기 과열 위험으로 선별적 진입 권장.",
+  "date": "2026-05-07",
   "generated_at": "06:00"
 }
