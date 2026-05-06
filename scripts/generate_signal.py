@@ -22,6 +22,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path.home() / "manddo-site"
 SIGNAL_FILE = ROOT / "ai-log" / "signal.json"
+HISTORY_FILE = ROOT / "tools" / "data" / "history.json"
 LOG_FILE = ROOT / "scripts" / "generate_signal.log"
 
 _KEY_FILE = Path.home() / "stock_auto_trade" / ".anthropic_key"
@@ -31,6 +32,58 @@ else:
     ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+# US 섹터 ETF → 섹터명 매핑
+US_SECTOR_ETFS = [
+    ("SOXX", "반도체"),
+    ("XLK", "기술/테크"),
+    ("XLF", "금융"),
+    ("XLE", "에너지"),
+    ("XLV", "헬스케어"),
+    ("XBI", "바이오테크"),
+    ("XLI", "산업/방산"),
+    ("XLU", "유틸리티"),
+    ("XLY", "임의소비"),
+    ("XLP", "필수소비"),
+    ("ITA", "방산/항공우주"),
+    ("TAN", "태양광/친환경"),
+    ("LIT", "2차전지/리튬"),
+    ("XME", "메탈/철강"),
+]
+
+# KR 핵심 30종목 → 섹터 매핑 (history.json 기준)
+KR_SECTOR_MAP = {
+    "005930": ("삼성전자", "반도체"),
+    "000660": ("SK하이닉스", "반도체"),
+    "009150": ("삼성전기", "반도체"),
+    "035420": ("NAVER", "기술/테크"),
+    "035720": ("카카오", "기술/테크"),
+    "005380": ("현대차", "임의소비"),
+    "000270": ("기아", "임의소비"),
+    "012330": ("현대모비스", "임의소비"),
+    "373220": ("LG에너지솔루션", "2차전지/리튬"),
+    "006400": ("삼성SDI", "2차전지/리튬"),
+    "086520": ("에코프로", "2차전지/리튬"),
+    "247540": ("에코프로비엠", "2차전지/리튬"),
+    "068270": ("셀트리온", "바이오테크"),
+    "207940": ("삼성바이오로직스", "바이오테크"),
+    "196170": ("알테오젠", "바이오테크"),
+    "005490": ("POSCO홀딩스", "메탈/철강"),
+    "105560": ("KB금융", "금융"),
+    "055550": ("신한지주", "금융"),
+    "086790": ("하나금융지주", "금융"),
+    "316140": ("우리금융지주", "금융"),
+    "323410": ("카카오뱅크", "금융"),
+    "012450": ("한화에어로스페이스", "방산/항공우주"),
+    "034020": ("두산에너빌리티", "산업/방산"),
+    "329180": ("HD현대중공업", "산업/방산"),
+    "036570": ("엔씨소프트", "기술/테크"),
+    "259960": ("크래프톤", "기술/테크"),
+    "352820": ("하이브", "임의소비"),
+    "015760": ("한국전력", "유틸리티"),
+    "017670": ("SK텔레콤", "유틸리티"),
+    "030200": ("KT", "유틸리티"),
+}
 
 
 def log(msg):
@@ -78,6 +131,26 @@ def fetch_us_market():
         pass
 
     return indices, fx_rate, fx_change
+
+
+def fetch_us_sector_strength():
+    """전일 US 섹터 ETF 등락률 → 강한 섹터 식별"""
+    import FinanceDataReader as fdr
+
+    start = (date.today() - timedelta(days=10)).isoformat()
+    sectors = []
+    for etf, sector_name in US_SECTOR_ETFS:
+        try:
+            df = fdr.DataReader(etf, start)
+            if df is not None and len(df) >= 2:
+                c = float(df["Close"].iloc[-1])
+                p = float(df["Close"].iloc[-2])
+                pct = round((c / p - 1) * 100, 2)
+                sectors.append({"etf": etf, "sector": sector_name, "change_pct": pct})
+        except Exception as e:
+            log(f"섹터 ETF {etf} 수집 실패: {e}")
+    sectors.sort(key=lambda x: -x["change_pct"])
+    return sectors
 
 
 def fetch_volume_surge_stocks():
@@ -159,7 +232,29 @@ def fetch_top_news():
 
 # ── 2. Claude API로 분석 생성 ──
 
-def generate_signal_with_ai(us_indices, fx_rate, fx_change, volume_stocks, news):
+def load_yesterday_picks():
+    """전일 signal.json에서 impacted_kr_stocks 종목 추출 (다양성 위해 제외용)"""
+    if not SIGNAL_FILE.exists():
+        return []
+    try:
+        prev = json.loads(SIGNAL_FILE.read_text(encoding="utf-8"))
+        return [s.get("name", "") for s in prev.get("us_market", {}).get("impacted_kr_stocks", []) if s.get("name")]
+    except Exception:
+        return []
+
+
+def load_core_stock_pool():
+    """history.json 30개 핵심 종목 후보 풀"""
+    if not HISTORY_FILE.exists():
+        return []
+    try:
+        d = json.loads(HISTORY_FILE.read_text(encoding="utf-8"))
+        return [{"name": v["name"], "code": k} for k, v in d.get("stocks", {}).items()]
+    except Exception:
+        return []
+
+
+def generate_signal_with_ai(us_indices, fx_rate, fx_change, volume_stocks, news, yesterday_picks, core_pool, us_sectors):
     """Claude API로 signal.json 내용 생성"""
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
 
@@ -178,6 +273,29 @@ def generate_signal_with_ai(us_indices, fx_rate, fx_change, volume_stocks, news)
     for v in volume_stocks:
         vol_text += f"- {v['name']}({v['code']}): 거래량 {v['volume_ratio']}배, 등락 {v['price_change_pct']:+.1f}%\n"
 
+    # 미국 섹터 강도 (정렬됨, 강한 순)
+    sector_text = ""
+    if us_sectors:
+        for s in us_sectors:
+            sector_text += f"- {s['sector']}({s['etf']}): {s['change_pct']:+.2f}%\n"
+    else:
+        sector_text = "(섹터 데이터 없음)"
+
+    # 강한 섹터 후보 (상위 2개)
+    top_sectors = [s["sector"] for s in us_sectors[:2]] if us_sectors else []
+    top_sectors_text = " / ".join(top_sectors) if top_sectors else "(없음)"
+
+    # KR 후보 풀 — 섹터별 그룹핑
+    sector_groups = {}
+    for code, (name, sector) in KR_SECTOR_MAP.items():
+        sector_groups.setdefault(sector, []).append(f"{name}({code})")
+    pool_text = ""
+    for sector, names in sector_groups.items():
+        pool_text += f"- [{sector}] {', '.join(names)}\n"
+
+    # 어제 픽
+    yesterday_text = ", ".join(yesterday_picks) if yesterday_picks else "(없음)"
+
     # 뉴스
     news_text = "\n".join(f"- {n}" for n in news) if news else "뉴스 수집 실패"
 
@@ -187,18 +305,35 @@ def generate_signal_with_ai(us_indices, fx_rate, fx_change, volume_stocks, news)
 ## 전일 미국 시장
 {us_text}
 
+## 전일 미국 섹터 ETF 강도 (강한 순)
+{sector_text}
+
 ## 전일 한국 거래량 급증 종목 (거래대금 상위 중)
 {vol_text}
 
 ## 최신 증권 뉴스 헤드라인
 {news_text}
 
+## 한국 종목 후보 풀 (섹터별)
+{pool_text}
+
+## 어제 선정된 종목 (참고용)
+{yesterday_text}
+
 ## 요청
 아래 JSON 구조로 정확히 응답해주세요. 다른 텍스트 없이 JSON만.
 
-1. **us_market**: 미 증시 요약 + 한국에 영향줄 종목 3개 선별
-   - impacted_kr_stocks: 미국 시장 흐름이 직접 영향을 줄 한국 종목 (반도체, 2차전지, 플랫폼 등)
+### 핵심 원칙 (반드시 따라줘)
+- **섹터 깊이 우선**: 어제 미국에서 가장 강했던 섹터 1~2개("{top_sectors_text}") 중심으로, 한국 동일 섹터에서 종목 3개를 1안/2안/3안으로 골라.
+- **같은 섹터 깊이 파기**: 예) 반도체 섹터가 강하면 → 삼성전자(1안), SK하이닉스(2안), 삼성전기(3안) 식으로 같은 섹터에서 깊게.
+- **섹터 분산은 예외**: 상위 섹터 등락이 모두 ±0.5% 이내로 애매하거나, 강한 섹터에 한국 매핑 종목이 부족할 때만 다른 섹터로 분산.
+- **어제와 같은 종목 OK**: 미국에서 같은 섹터가 계속 강세면 같은 종목 다시 고르는 것이 자연스러움. 억지로 바꾸지 마.
+- **인사이트 연결**: 각 종목 trigger·ai_view에 **반드시 미국 섹터 강도와의 연결고리** 명시 (예: "미국 SOXX +2.3%로 반도체 강세 → 삼성전자 동조").
+
+1. **us_market**: 미 증시 요약 + impacted_kr_stocks 3개 (1안/2안/3안)
+   - 반드시 위 "한국 종목 후보 풀"에서만 선택 (거래량 급증 종목도 가능)
    - 각 종목에 stance: "watch"(관망), "small_entry"(소액진입), "avoid"(회피) 중 하나
+   - 각 종목에 sector(섹터명), rank(1/2/3) 필드 추가
 
 2. **volume_surge**: 위 거래량 급증 종목 중 의미 있는 5개 선별
    - 각각 context(왜 거래량이 터졌는지), ai_view(AI 판단), stance 포함
@@ -212,12 +347,15 @@ JSON 형식:
     "indices": [{{"name": "다우", "change_pct": 0.0}}, ...],
     "fx_usd_krw": 0.0,
     "fx_change_pct": 0.0,
+    "sector_focus": "오늘 집중 섹터 (예: 반도체)",
     "impacted_kr_stocks": [
       {{
         "name": "종목명",
         "code": "000000",
         "slug": "종목코드또는영문슬러그",
-        "trigger": "미국 시장 영향 요인",
+        "sector": "섹터명",
+        "rank": 1,
+        "trigger": "미국 섹터 ETF 변동률 등 구체 인사이트와 연결한 영향 요인",
         "ai_view": "AI 판단 1~2문장",
         "stance": "watch"
       }}
@@ -318,9 +456,23 @@ def main():
     log("뉴스 수집...")
     news = fetch_top_news()
 
+    log("미국 섹터 ETF 강도 수집...")
+    us_sectors = fetch_us_sector_strength()
+    if us_sectors:
+        top3 = us_sectors[:3]
+        log(f"강한 섹터 TOP3: {[(s['sector'], s['change_pct']) for s in top3]}")
+
+    log("어제 픽 + 후보 풀 로드...")
+    yesterday_picks = load_yesterday_picks()
+    core_pool = load_core_stock_pool()
+    log(f"어제 픽: {yesterday_picks} / 후보 풀: {len(core_pool)}종목")
+
     # 2. AI 분석
     log("Claude AI 분석 생성 중...")
-    signal_data = generate_signal_with_ai(us_indices, fx_rate, fx_change, volume_stocks, news)
+    signal_data = generate_signal_with_ai(
+        us_indices, fx_rate, fx_change, volume_stocks, news,
+        yesterday_picks, core_pool, us_sectors
+    )
 
     # 3. 저장 & 배포
     save_and_push(signal_data)

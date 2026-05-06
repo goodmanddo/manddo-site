@@ -1,0 +1,341 @@
+{
+  "generated_at": "2026-05-05T09:11:36",
+  "source": "Naver Finance + FinanceDataReader",
+  "criteria": "KOSPI 시총 상위 80, 배당수익률 ≥ 1.0%",
+  "count": 37,
+  "stocks": [
+    {
+      "code": "024110",
+      "name": "기업은행",
+      "marcap_eok": 176231.0,
+      "close": 22100,
+      "dividend_yield": 4.74,
+      "per": 6.5,
+      "pbr": 0.48
+    },
+    {
+      "code": "005830",
+      "name": "DB손해보험",
+      "marcap_eok": 109255.0,
+      "close": 166800,
+      "dividend_yield": 4.56,
+      "per": 6.6,
+      "pbr": 0.93
+    },
+    {
+      "code": "000270",
+      "name": "기아",
+      "marcap_eok": 601236.0,
+      "close": 154000,
+      "dividend_yield": 4.42,
+      "per": 8.06,
+      "pbr": 0.98
+    },
+    {
+      "code": "000810",
+      "name": "삼성화재",
+      "marcap_eok": 211406.0,
+      "close": 473500,
+      "dividend_yield": 4.12,
+      "per": 11.63,
+      "pbr": 0.95
+    },
+    {
+      "code": "316140",
+      "name": "우리금융지주",
+      "marcap_eok": 244447.0,
+      "close": 33300,
+      "dividend_yield": 4.08,
+      "per": 7.89,
+      "pbr": 0.68
+    },
+    {
+      "code": "030200",
+      "name": "KT",
+      "marcap_eok": 152725.0,
+      "close": 60600,
+      "dividend_yield": 3.96,
+      "per": 8.82,
+      "pbr": 0.83
+    },
+    {
+      "code": "005940",
+      "name": "NH투자증권",
+      "marcap_eok": 129888.0,
+      "close": 36450,
+      "dividend_yield": 3.57,
+      "per": 12.62,
+      "pbr": 1.45
+    },
+    {
+      "code": "015760",
+      "name": "한국전력",
+      "marcap_eok": 285674.0,
+      "close": 44500,
+      "dividend_yield": 3.46,
+      "per": 3.34,
+      "pbr": 0.59
+    },
+    {
+      "code": "033780",
+      "name": "KT&G",
+      "marcap_eok": 205959.0,
+      "close": 179600,
+      "dividend_yield": 3.34,
+      "per": 20.02,
+      "pbr": 2.01
+    },
+    {
+      "code": "071050",
+      "name": "한국금융지주",
+      "marcap_eok": 146002.0,
+      "close": 262000,
+      "dividend_yield": 3.32,
+      "per": 7.99,
+      "pbr": 1.27
+    },
+    {
+      "code": "011200",
+      "name": "HMM",
+      "marcap_eok": 199495.0,
+      "close": 21150,
+      "dividend_yield": 3.31,
+      "per": 10.82,
+      "pbr": 0.75
+    },
+    {
+      "code": "086790",
+      "name": "하나금융지주",
+      "marcap_eok": 347350.0,
+      "close": 126600,
+      "dividend_yield": 3.24,
+      "per": 8.97,
+      "pbr": 0.77
+    },
+    {
+      "code": "003550",
+      "name": "LG",
+      "marcap_eok": 157769.0,
+      "close": 102300,
+      "dividend_yield": 3.03,
+      "per": 22.1,
+      "pbr": 0.55
+    },
+    {
+      "code": "016360",
+      "name": "삼성증권",
+      "marcap_eok": 123145.0,
+      "close": 137900,
+      "dividend_yield": 2.9,
+      "per": 12.23,
+      "pbr": 1.53
+    },
+    {
+      "code": "105560",
+      "name": "KB금융",
+      "marcap_eok": 588358.0,
+      "close": 157800,
+      "dividend_yield": 2.77,
+      "per": 10.44,
+      "pbr": 0.96
+    },
+    {
+      "code": "039490",
+      "name": "키움증권",
+      "marcap_eok": 110815.0,
+      "close": 422500,
+      "dividend_yield": 2.72,
+      "per": 10.43,
+      "pbr": 1.66
+    },
+    {
+      "code": "055550",
+      "name": "신한지주",
+      "marcap_eok": 465161.0,
+      "close": 98000,
+      "dividend_yield": 2.64,
+      "per": 9.72,
+      "pbr": 0.81
+    },
+    {
+      "code": "009540",
+      "name": "HD한국조선해양",
+      "marcap_eok": 332280.0,
+      "close": 469500,
+      "dividend_yield": 2.62,
+      "per": 15.32,
+      "pbr": 2.5
+    },
+    {
+      "code": "086280",
+      "name": "현대글로비스",
+      "marcap_eok": 169125.0,
+      "close": 225500,
+      "dividend_yield": 2.57,
+      "per": 9.75,
+      "pbr": 1.63
+    },
+    {
+      "code": "047050",
+      "name": "포스코인터내셔널",
+      "marcap_eok": 153581.0,
+      "close": 87300,
+      "dividend_yield": 2.12,
+      "per": 25.01,
+      "pbr": 2.22
+    },
+    {
+      "code": "032830",
+      "name": "삼성생명",
+      "marcap_eok": 530000.0,
+      "close": 265000,
+      "dividend_yield": 2.0,
+      "per": 23.02,
+      "pbr": 0.76
+    },
+    {
+      "code": "005490",
+      "name": "POSCO홀딩스",
+      "marcap_eok": 397792.0,
+      "close": 502000,
+      "dividend_yield": 1.99,
+      "per": 62.09,
+      "pbr": 0.68
+    },
+    {
+      "code": "018260",
+      "name": "삼성에스디에스",
+      "marcap_eok": 129144.0,
+      "close": 166900,
+      "dividend_yield": 1.91,
+      "per": 17.0,
+      "pbr": 1.3
+    },
+    {
+      "code": "323410",
+      "name": "카카오뱅크",
+      "marcap_eok": 116417.0,
+      "close": 24400,
+      "dividend_yield": 1.88,
+      "per": 24.23,
+      "pbr": 1.72
+    },
+    {
+      "code": "005380",
+      "name": "현대차",
+      "marcap_eok": 1103644.0,
+      "close": 539000,
+      "dividend_yield": 1.86,
+      "per": 15.26,
+      "pbr": 1.23
+    },
+    {
+      "code": "017670",
+      "name": "SK텔레콤",
+      "marcap_eok": 209206.0,
+      "close": 97400,
+      "dividend_yield": 1.7,
+      "per": 51.24,
+      "pbr": 1.61
+    },
+    {
+      "code": "034730",
+      "name": "SK",
+      "marcap_eok": 344750.0,
+      "close": 475500,
+      "dividend_yield": 1.68,
+      "per": 21.75,
+      "pbr": 1.04
+    },
+    {
+      "code": "012330",
+      "name": "현대모비스",
+      "marcap_eok": 391511.0,
+      "close": 431500,
+      "dividend_yield": 1.51,
+      "per": 10.87,
+      "pbr": 0.78
+    },
+    {
+      "code": "443060",
+      "name": "HD현대마린솔루션",
+      "marcap_eok": 120826.0,
+      "close": 269500,
+      "dividend_yield": 1.47,
+      "per": 44.82,
+      "pbr": 14.65
+    },
+    {
+      "code": "028050",
+      "name": "삼성E&A",
+      "marcap_eok": 107800.0,
+      "close": 55000,
+      "dividend_yield": 1.44,
+      "per": 17.46,
+      "pbr": 2.27
+    },
+    {
+      "code": "096770",
+      "name": "SK이노베이션",
+      "marcap_eok": 246310.0,
+      "close": 145700,
+      "dividend_yield": 1.37,
+      "per": -21.0,
+      "pbr": 1.12
+    },
+    {
+      "code": "267250",
+      "name": "HD현대",
+      "marcap_eok": 238954.0,
+      "close": 302500,
+      "dividend_yield": 1.32,
+      "per": 24.82,
+      "pbr": 2.11
+    },
+    {
+      "code": "035420",
+      "name": "NAVER",
+      "marcap_eok": 327822.0,
+      "close": 209000,
+      "dividend_yield": 1.26,
+      "per": 16.89,
+      "pbr": 1.13
+    },
+    {
+      "code": "010130",
+      "name": "고려아연",
+      "marcap_eok": 340021.0,
+      "close": 1629000,
+      "dividend_yield": 1.23,
+      "per": 42.3,
+      "pbr": 3.04
+    },
+    {
+      "code": "138040",
+      "name": "메리츠금융지주",
+      "marcap_eok": 189772.0,
+      "close": 113400,
+      "dividend_yield": 1.19,
+      "per": 8.93,
+      "pbr": 1.85
+    },
+    {
+      "code": "278470",
+      "name": "에이피알",
+      "marcap_eok": 160422.0,
+      "close": 428500,
+      "dividend_yield": 1.19,
+      "per": 55.62,
+      "pbr": 35.98
+    },
+    {
+      "code": "010120",
+      "name": "LS ELECTRIC",
+      "marcap_eok": 441000.0,
+      "close": 294000,
+      "dividend_yield": 1.02,
+      "per": 153.85,
+      "pbr": 21.12
+    }
+  ]
+}

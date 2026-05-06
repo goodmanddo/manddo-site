@@ -409,7 +409,8 @@ a.tp-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(0,0,0,
     const wres = await fetch('/ai-log/weekly_calendar.json?v='+Date.now());
     if(!wres.ok) throw new Error('no weekly_calendar');
     const wc = await wres.json();
-    const events = wc.events || [];
+    const today = new Date().toISOString().slice(0,10);
+    const events = (wc.events || []).filter(ev => ev.date >= today);
     if(!events.length) throw new Error('empty');
     const fmtMd = s => {
       const d = new Date(s+'T00:00:00');

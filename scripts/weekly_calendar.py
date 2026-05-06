@@ -78,7 +78,7 @@ def call_claude(week_monday: date, week_sunday: date) -> list:
     )
     client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
     msg = client.messages.create(
-        model="claude-opus-4-7",
+        model="claude-sonnet-4-6",
         max_tokens=2000,
         system=SYSTEM,
         messages=[{"role": "user", "content": user}],
