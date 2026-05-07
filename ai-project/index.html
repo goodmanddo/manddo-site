@@ -73,6 +73,9 @@
   a.today-cta .arrow { margin-left:6px; color:#ffffff !important; }
   .notice-banner { background:#fff7ed; border:1px solid #fed7aa; border-radius:10px; padding:12px 14px; font-size:13px; color:#9a3412; line-height:1.55; margin:0 0 16px; }
   .notice-banner b { color:#7c2d12; }
+  .return-chart-box{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 18px 14px;margin:16px 0 0}
+  .return-chart-box .chart-title{font-size:14px;font-weight:800;color:#191f28;letter-spacing:-0.02em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+  .return-chart-box canvas{width:100%;height:180px;display:block}
 </style>
   <!-- adsense-script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
@@ -162,6 +165,10 @@
       </div>
     </div>
     <p style="font-size:12px;color:#8b95a1;margin-top:6px">마지막 업데이트: <span id="last-updated">2026-05-03</span> · 한국투자증권 실전 계좌의 실 잔고 기준</p>
+    <div class="return-chart-box" id="return-chart-box" style="display:none">
+      <div class="chart-title">📈 누적 수익률 추이</div>
+      <canvas id="return-chart"></canvas>
+    </div>
   </section>
   <section class="proj-section">
     <h2>📌 오늘 AI는 뭘 했나</h2>
@@ -376,6 +383,54 @@
             <span class="nm">${h.name}<span class="mt">${h.market || ''}</span></span>
             <span class="vl">${h.weight_pct || 0}%</span>
           </div>`).join('');
+      }
+
+      // 누적 수익률 차트
+      const pts = d.return_history || [];
+      if (pts.length >= 2) {
+        const box = document.getElementById('return-chart-box');
+        box.style.display = '';
+        const canvas = document.getElementById('return-chart');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = 180 * dpr;
+        const ctx = canvas.getContext('2d');
+        ctx.scale(dpr, dpr);
+        const W = rect.width, H = 180;
+        const vals = pts.map(p => p.cumulative_return);
+        const minV = Math.min(0, ...vals);
+        const maxV = Math.max(0, ...vals);
+        const range = (maxV - minV) || 1;
+        const padT = 28, padB = 30, padL = 44, padR = 16;
+        const cW = W - padL - padR, cH = H - padT - padB;
+        const toX = i => padL + (i / (pts.length - 1)) * cW;
+        const toY = v => padT + (1 - (v - minV) / range) * cH;
+        const zeroY = toY(0);
+        ctx.strokeStyle = '#E5E8EC'; ctx.lineWidth = 1; ctx.setLineDash([4, 3]);
+        ctx.beginPath(); ctx.moveTo(padL, zeroY); ctx.lineTo(W - padR, zeroY); ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.font = '11px -apple-system, sans-serif'; ctx.fillStyle = '#8b95a1'; ctx.textAlign = 'right';
+        ctx.fillText('0%', padL - 6, zeroY + 4);
+        if (maxV > 0) { ctx.fillText('+' + maxV.toFixed(1) + '%', padL - 6, padT + 4); ctx.strokeStyle = '#E5E8EC'; ctx.lineWidth = 0.5; ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(W - padR, padT); ctx.stroke(); }
+        if (minV < 0) { ctx.fillText(minV.toFixed(1) + '%', padL - 6, H - padB + 4); ctx.strokeStyle = '#E5E8EC'; ctx.lineWidth = 0.5; ctx.beginPath(); ctx.moveTo(padL, H - padB); ctx.lineTo(W - padR, H - padB); ctx.stroke(); }
+        const lastVal = vals[vals.length - 1];
+        ctx.beginPath(); ctx.moveTo(toX(0), zeroY);
+        pts.forEach((p, i) => ctx.lineTo(toX(i), toY(p.cumulative_return)));
+        ctx.lineTo(toX(pts.length - 1), zeroY); ctx.closePath();
+        ctx.fillStyle = lastVal >= 0 ? 'rgba(12,138,90,0.08)' : 'rgba(214,57,57,0.08)'; ctx.fill();
+        const lineColor = lastVal >= 0 ? '#0C8A5A' : '#D63939';
+        ctx.strokeStyle = lineColor; ctx.lineWidth = 2.5; ctx.lineJoin = 'round';
+        ctx.beginPath();
+        pts.forEach((p, i) => { const x = toX(i), y = toY(p.cumulative_return); i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); });
+        ctx.stroke();
+        pts.forEach((p, i) => { const x = toX(i), y = toY(p.cumulative_return); ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill(); ctx.strokeStyle = lineColor; ctx.lineWidth = 2; ctx.stroke(); });
+        const lx = toX(pts.length - 1), ly = toY(lastVal);
+        ctx.font = 'bold 12px -apple-system, sans-serif'; ctx.fillStyle = lineColor; ctx.textAlign = 'center';
+        ctx.fillText((lastVal >= 0 ? '+' : '') + lastVal.toFixed(2) + '%', lx, ly - 10);
+        ctx.font = '10px -apple-system, sans-serif'; ctx.fillStyle = '#8b95a1'; ctx.textAlign = 'center';
+        const step = Math.max(1, Math.floor(pts.length / 6));
+        pts.forEach((p, i) => { if (i === 0 || i === pts.length - 1 || i % step === 0) ctx.fillText(p.date.slice(5), toX(i), H - padB + 16); });
       }
     })
     .catch(()=>{});
