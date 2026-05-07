@@ -180,6 +180,10 @@ a.tp-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(0,0,0,
   .cal-item{grid-template-columns:46px 1fr;gap:10px}
   .cal-impact{grid-column:2;justify-self:start;margin-top:2px}
 }
+/* 누적 수익률 차트 */
+.return-chart-box{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 18px 14px;margin-bottom:28px}
+.return-chart-box .chart-title{font-size:14px;font-weight:800;color:#191f28;letter-spacing:-0.02em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.return-chart-box canvas{width:100%;height:180px;display:block}
 @media(max-width:640px){
   .ai-hero{padding:32px 20px;border-radius:16px}
   .ai-hero h1{font-size:24px}
@@ -236,6 +240,11 @@ a.tp-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(0,0,0,
       <div class="value" id="sum-win">—</div>
       <div class="sub" id="sum-total">—</div>
     </div>
+  </div>
+  <!-- 📈 누적 수익률 차트 -->
+  <div class="return-chart-box" id="return-chart-box" style="display:none">
+    <div class="chart-title">📈 누적 수익률 추이</div>
+    <canvas id="return-chart"></canvas>
   </div>
   <!-- ⭐ 오늘의 픽 (미국 시장 인사이트) -->
   <section class="today-pick-block" id="today-pick-block" style="display:none">
@@ -508,6 +517,94 @@ a.tp-cta:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(0,0,0,
   addCls(wk, cls(data.week_return));
   document.getElementById('sum-win').textContent = data.win_rate + '%';
   document.getElementById('sum-total').textContent = '누적 ' + data.total_trades + '건';
+  // 누적 수익률 차트
+  if(data.return_history && data.return_history.length >= 2){
+    const box = document.getElementById('return-chart-box');
+    box.style.display = '';
+    const canvas = document.getElementById('return-chart');
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = 180 * dpr;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    const W = rect.width, H = 180;
+    const pts = data.return_history;
+    const vals = pts.map(p => p.cumulative_return);
+    const minV = Math.min(0, ...vals);
+    const maxV = Math.max(0, ...vals);
+    const range = (maxV - minV) || 1;
+    const padT = 28, padB = 30, padL = 44, padR = 16;
+    const cW = W - padL - padR, cH = H - padT - padB;
+    const toX = i => padL + (i / (pts.length - 1)) * cW;
+    const toY = v => padT + (1 - (v - minV) / range) * cH;
+    // 0% 기준선
+    const zeroY = toY(0);
+    ctx.strokeStyle = '#E5E8EC';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(padL, zeroY); ctx.lineTo(W - padR, zeroY); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.font = '11px -apple-system, sans-serif';
+    ctx.fillStyle = '#8b95a1';
+    ctx.textAlign = 'right';
+    ctx.fillText('0%', padL - 6, zeroY + 4);
+    // 최고/최저 가이드
+    if(maxV > 0){
+      ctx.fillText('+' + maxV.toFixed(1) + '%', padL - 6, padT + 4);
+      ctx.strokeStyle = '#E5E8EC'; ctx.lineWidth = 0.5;
+      ctx.beginPath(); ctx.moveTo(padL, padT); ctx.lineTo(W - padR, padT); ctx.stroke();
+    }
+    if(minV < 0){
+      ctx.fillText(minV.toFixed(1) + '%', padL - 6, H - padB + 4);
+      ctx.strokeStyle = '#E5E8EC'; ctx.lineWidth = 0.5;
+      ctx.beginPath(); ctx.moveTo(padL, H - padB); ctx.lineTo(W - padR, H - padB); ctx.stroke();
+    }
+    // 영역 채우기
+    const lastVal = vals[vals.length - 1];
+    const areaColor = lastVal >= 0 ? 'rgba(12,138,90,0.08)' : 'rgba(214,57,57,0.08)';
+    ctx.beginPath();
+    ctx.moveTo(toX(0), zeroY);
+    pts.forEach((p, i) => ctx.lineTo(toX(i), toY(p.cumulative_return)));
+    ctx.lineTo(toX(pts.length - 1), zeroY);
+    ctx.closePath();
+    ctx.fillStyle = areaColor;
+    ctx.fill();
+    // 라인
+    const lineColor = lastVal >= 0 ? '#0C8A5A' : '#D63939';
+    ctx.strokeStyle = lineColor;
+    ctx.lineWidth = 2.5;
+    ctx.lineJoin = 'round';
+    ctx.beginPath();
+    pts.forEach((p, i) => {
+      const x = toX(i), y = toY(p.cumulative_return);
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+    // 포인트
+    pts.forEach((p, i) => {
+      const x = toX(i), y = toY(p.cumulative_return);
+      ctx.beginPath(); ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#fff'; ctx.fill();
+      ctx.strokeStyle = lineColor; ctx.lineWidth = 2; ctx.stroke();
+    });
+    // 마지막 값 라벨
+    const lx = toX(pts.length - 1), ly = toY(lastVal);
+    ctx.font = 'bold 12px -apple-system, sans-serif';
+    ctx.fillStyle = lineColor;
+    ctx.textAlign = 'center';
+    ctx.fillText((lastVal >= 0 ? '+' : '') + lastVal.toFixed(2) + '%', lx, ly - 10);
+    // x축 날짜
+    ctx.font = '10px -apple-system, sans-serif';
+    ctx.fillStyle = '#8b95a1';
+    ctx.textAlign = 'center';
+    const step = Math.max(1, Math.floor(pts.length / 6));
+    pts.forEach((p, i) => {
+      if(i === 0 || i === pts.length - 1 || i % step === 0){
+        ctx.fillText(p.date.slice(5), toX(i), H - padB + 16);
+      }
+    });
+  }
   // 오늘의 매도 요약 라인
   if(tradeCnt > 0){
     const w = data.today_win_count ?? 0;
