@@ -4,28 +4,21 @@
       "name": "카카오",
       "qty": 102,
       "avg_price": 46500,
-      "current_price": 46300,
+      "current_price": 45200,
       "opened_at": "2026-05-06"
     },
     "079940": {
       "name": "가비아",
       "qty": 20,
       "avg_price": 30100,
-      "current_price": 31150,
+      "current_price": 32250,
       "opened_at": "2026-04-30"
-    },
-    "215200": {
-      "name": "메가스터디교육",
-      "qty": 5,
-      "avg_price": 48350,
-      "current_price": 45000,
-      "opened_at": "2026-04-29"
     },
     "448280": {
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12660,
+      "current_price": 12310,
       "opened_at": "2026-04-24"
     }
   },
@@ -49,6 +42,10 @@
     {
       "date": "2026-05-06",
       "total_eval": 20083015
+    },
+    {
+      "date": "2026-05-07",
+      "total_eval": 19973670
     }
   ],
   "completed_trades": [
@@ -214,6 +211,14 @@
       "date": "2026-05-06",
       "is_win": false,
       "hold_days": 9
+    },
+    {
+      "name": "메가스터디교육",
+      "code": "215200",
+      "return_pct": -7.34,
+      "date": "2026-05-07",
+      "is_win": false,
+      "hold_days": 8
     }
   ]
 }
