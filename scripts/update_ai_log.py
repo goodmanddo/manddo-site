@@ -208,8 +208,8 @@ def main():
     api = KISApi()
     bal = api.get_balance()
     holdings = {h["code"]: h for h in bal["holdings"]}
-    # KIS tot_evlu_amt는 이미 주식+현금 합계(총자산)
-    total_eval = bal["total_eval"] or (sum(h["current_price"] * h["qty"] for h in bal["holdings"]) + bal["cash"])
+    # KIS tot_evlu_amt 사용 (15:40 조회 시 종가 반영, 증권사 앱과 가장 근사)
+    total_eval = bal["total_eval"]
 
     # 초기 자본: 최초 실행 시 세팅
     if initial_capital <= 0:
