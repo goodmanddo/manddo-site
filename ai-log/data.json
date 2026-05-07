@@ -1,23 +1,23 @@
 {
   "date": "2026-05-07",
   "start_date": "2026-05-03",
-  "cumulative_return": -0.1,
-  "week_return": -0.35,
-  "day_return": -0.52,
+  "cumulative_return": 13.42,
+  "week_return": 13.14,
+  "day_return": 12.95,
   "today_realized_avg": -7.34,
   "today_trade_count": 1,
   "today_win_count": 0,
   "today_loss_count": 1,
   "win_rate": 43,
   "total_trades": 23,
-  "ai_commentary": "오늘은 카카오, 가비아 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -0.1%.",
+  "ai_commentary": "오늘은 카카오, 가비아 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 +13.4%.",
   "new_buys": [
     {
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
       "entry_to_current_pct": -2.69,
-      "weight_pct": 23,
+      "weight_pct": 20,
       "hold_days": 1,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
@@ -61,16 +61,16 @@
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "weight_pct": 23
-    },
-    {
-      "name": "에코아이",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 4
+      "weight_pct": 20
     },
     {
       "name": "가비아",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
+      "name": "에코아이",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -91,7 +91,7 @@
     },
     {
       "date": "2026-05-07",
-      "cumulative_return": -0.1
+      "cumulative_return": 13.42
     }
   ]
 }
