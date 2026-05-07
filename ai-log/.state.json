@@ -4,7 +4,7 @@
       "name": "카카오",
       "qty": 102,
       "avg_price": 46500,
-      "current_price": 45200,
+      "current_price": 45250,
       "opened_at": "2026-05-06"
     },
     "079940": {
@@ -18,7 +18,7 @@
       "name": "에코아이",
       "qty": 59,
       "avg_price": 12220,
-      "current_price": 12310,
+      "current_price": 12320,
       "opened_at": "2026-04-24"
     }
   },
@@ -46,6 +46,10 @@
     {
       "date": "2026-05-07",
       "total_eval": 19973670
+    },
+    {
+      "date": "2026-05-07",
+      "total_eval": 19979360
     }
   ],
   "completed_trades": [

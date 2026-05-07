@@ -1,9 +1,9 @@
 {
   "date": "2026-05-07",
   "start_date": "2026-05-03",
-  "cumulative_return": -0.13,
-  "week_return": -0.38,
-  "day_return": -0.54,
+  "cumulative_return": -0.1,
+  "week_return": -0.35,
+  "day_return": -0.52,
   "today_realized_avg": -7.34,
   "today_trade_count": 1,
   "today_win_count": 0,
@@ -16,7 +16,7 @@
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "entry_to_current_pct": -2.8,
+      "entry_to_current_pct": -2.69,
       "weight_pct": 23,
       "hold_days": 1,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
@@ -91,7 +91,7 @@
     },
     {
       "date": "2026-05-07",
-      "cumulative_return": -0.13
+      "cumulative_return": -0.1
     }
   ]
 }
