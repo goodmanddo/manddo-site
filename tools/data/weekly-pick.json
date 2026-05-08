@@ -3,19 +3,21 @@
   "round": 1,
   "week_start": "2026-05-04",
   "week_end": "2026-05-08",
-  "status": "active",
+  "status": "closed",
   "picks": {
     "manddo": {
       "code": "049070",
       "name": "인탑스",
-      "reason": "지난 주 로봇 관련 주 반응 체크, 저평가 주여서 상승 여력 충분"
+      "reason": "지난 주 로봇 관련 주 반응 체크, 저평가 주여서 상승 여력 충분",
+      "final_return": 0.0
     },
     "ai": {
       "code": "263750",
       "name": "펄어비스",
       "reason": "자동매매 봇이 지난주 매수해서 현재 보유 중인 종목 (swing 전략 신호 가장 강함)",
       "bot_buy_price": 60600,
-      "bot_buy_date": "2026-04-27"
+      "bot_buy_date": "2026-04-27",
+      "final_return": -12.353923205342232
     }
   },
   "snapshots": [
@@ -279,5 +281,5 @@
     }
   ],
   "last_round": null,
-  "updated_at": "2026-05-08 15:30:03"
+  "updated_at": "2026-05-08 15:35:01"
 }
