@@ -1,47 +1,28 @@
 {
-  "date": "2026-05-07",
+  "date": "2026-05-08",
   "start_date": "2026-05-03",
-  "cumulative_return": -0.1,
-  "week_return": -0.52,
-  "day_return": -0.52,
-  "today_realized_avg": -7.34,
-  "today_trade_count": 1,
+  "cumulative_return": 0.09,
+  "week_return": 0.22,
+  "day_return": 0.2,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_loss_count": 0,
   "win_rate": 43,
   "total_trades": 23,
-  "ai_commentary": "오늘은 카카오, 가비아 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -0.1%.",
+  "ai_commentary": "오늘은 카카오 등 신규 편입. 시작 이후 누적 +0.1%.",
   "new_buys": [
     {
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "entry_to_current_pct": -2.69,
+      "entry_to_current_pct": -1.08,
       "weight_pct": 23,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
-    },
-    {
-      "name": "가비아",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 7.14,
-      "weight_pct": 3,
-      "hold_days": 7,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "메가스터디교육",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -7.34,
-      "hold_days": 8,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "메가스터디교육",
@@ -64,13 +45,13 @@
       "weight_pct": 23
     },
     {
-      "name": "에코아이",
+      "name": "가비아",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 4
+      "weight_pct": 3
     },
     {
-      "name": "가비아",
+      "name": "에코아이",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -92,6 +73,10 @@
     {
       "date": "2026-05-07",
       "cumulative_return": -0.1
+    },
+    {
+      "date": "2026-05-08",
+      "cumulative_return": 0.09
     }
   ]
 }
