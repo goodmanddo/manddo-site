@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="stock-name" content="삼성전자">
 <meta name="stock-code" content="005930">
 <title>삼성전자 세력·차트 분석</title>
@@ -10,56 +10,61 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px;line-height:1.55}
 .wrap{max-width:740px;margin:0 auto}
-h1{font-size:20px;font-weight:800;margin-bottom:4px}
-.sub{font-size:12px;color:#7a786e;margin-bottom:14px}
+h1{font-size:20px;font-weight:800;margin-bottom:4px;letter-spacing:-.5px}
+.sub{font-size:12px;color:#7a786f;margin-bottom:14px}
 .sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
 .card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
 .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px}
-.met{background:#fafaf5;border:1px solid #e2e0d5;border-radius:8px;padding:8px 10px}
-.ml{font-size:11px;color:#7a786e;margin-bottom:2px}
-.mv{font-size:15px;font-weight:700;color:#2c2c2a}
-.ms{font-size:11px;color:#888780;margin-top:1px}
-.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;margin:2px 3px 2px 0;font-weight:600}
-.t-r{background:#fde8e8;color:#A32D2D}
-.t-g{background:#e3f1d9;color:#1D9E75}
-.t-b{background:#dee9f5;color:#0C447C}
-.t-a{background:#fdf0d9;color:#EF9F27}
-.t-navy{background:#dde3ee;color:#1f3a64}
-.t-teal{background:#d6ecea;color:#0e6b66}
-.zone{display:flex;gap:8px;padding:8px 0;border-bottom:1px dashed #e2e0d5}
-.zone:last-child{border-bottom:none}
-.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px}
-.zt{font-weight:700;font-size:13px;margin-bottom:2px}
-.zd{font-size:12px;color:#5a5852}
-.row{display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;border-bottom:1px dashed #e2e0d5;font-size:12.5px}
-.row:last-child{border-bottom:none}
-.row .rl{flex:1;padding-right:8px}
-.rr,.rn{display:flex;gap:10px;padding:8px 0;border-bottom:1px dashed #e2e0d5}
-.rr:last-child,.rn:last-child{border-bottom:none}
-.rnum{width:24px;height:24px;flex-shrink:0;border-radius:6px;background:#2c2c2a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
-.rt{font-weight:700;font-size:12.5px;margin-bottom:2px}
-.rd{font-size:12px;color:#5a5852;line-height:1.5}
-.info-box{background:#e8f4ec;border-left:3px solid #1D9E75;padding:10px 12px;border-radius:6px;margin:8px 0;font-size:12.5px}
-.warn-box{background:#fdf3df;border-left:3px solid #EF9F27;padding:10px 12px;border-radius:6px;margin:8px 0;font-size:12.5px}
-.danger-box{background:#fce8e7;border-left:3px solid #A32D2D;padding:10px 12px;border-radius:6px;margin:8px 0;font-size:12.5px}
-.navy-box{background:#e3eaf3;border-left:3px solid #1f3a64;padding:12px 14px;border-radius:6px;margin:8px 0;font-size:13px}
-.score-wrap{background:#e2e0d5;border-radius:10px;height:8px;overflow:hidden;margin:6px 0}
+.met{background:#faf9f4;border:1px solid #e5e3d8;border-radius:8px;padding:9px 10px}
+.ml{font-size:10.5px;color:#7a786f;margin-bottom:3px;font-weight:600}
+.mv{font-size:15px;font-weight:800;color:#2c2c2a}
+.ms{font-size:10.5px;color:#888780;margin-top:2px}
+.tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10.5px;font-weight:700;margin:2px 3px 2px 0}
+.t-r{background:#fbe4e3;color:#A32D2D}
+.t-g{background:#dff0e2;color:#1D6E45}
+.t-b{background:#dde7f3;color:#0C447C}
+.t-a{background:#fcefd9;color:#B57000}
+.t-navy{background:#dde2ec;color:#1a2745}
+.t-teal{background:#d5ebe8;color:#0a5e57}
+.zone{display:flex;gap:9px;padding:9px 0;border-bottom:1px dashed #e5e3d8}
+.zone:last-child{border-bottom:0}
+.dot{width:7px;height:7px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.zone-body{flex:1}
+.zone-t{font-size:12.5px;font-weight:700;margin-bottom:3px}
+.zone-d{font-size:12px;color:#4a4a45;line-height:1.55}
+.row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:12.5px;line-height:1.5}
+.chk{flex-shrink:0;width:16px;font-weight:800}
+.rr,.rn{display:flex;gap:9px;margin-bottom:9px}
+.rbox{flex-shrink:0;width:26px;height:26px;border-radius:6px;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;color:#fff}
+.rb-r{background:#A32D2D}
+.rb-g{background:#1D6E45}
+.rb-b{background:#0C447C}
+.rb-n{background:#1a2745}
+.rd{flex:1;font-size:12.5px;line-height:1.55}
+.rd b{font-weight:700}
+.info-box{background:#eef7ee;border-left:3px solid #1D6E45;padding:9px 11px;border-radius:6px;margin:6px 0;font-size:12px;line-height:1.6}
+.warn-box{background:#fcefd9;border-left:3px solid #B57000;padding:9px 11px;border-radius:6px;margin:6px 0;font-size:12px;line-height:1.6}
+.danger-box{background:#fbe4e3;border-left:3px solid #A32D2D;padding:9px 11px;border-radius:6px;margin:6px 0;font-size:12px;line-height:1.6}
+.navy-box{background:#1a2745;color:#f0eee5;padding:13px 14px;border-radius:8px;margin-bottom:14px;font-size:12.5px;line-height:1.65}
+.navy-box .nt{font-size:13px;font-weight:800;margin-bottom:7px;color:#fff}
+.navy-box .ng{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.navy-box .ng-c{background:rgba(255,255,255,.06);padding:8px 10px;border-radius:6px;font-size:11.5px}
+.navy-box .ng-c b{display:block;color:#f5d97a;margin-bottom:3px;font-size:11px}
+.score-wrap{background:#e5e3d8;border-radius:10px;height:8px;margin:6px 0;overflow:hidden}
 .score-fill{height:100%;border-radius:10px}
-.strategy-box{background:#fafaf5;border:1px solid #e2e0d5;border-radius:8px;padding:8px;text-align:center}
-.sp{font-size:14px;font-weight:800;color:#2c2c2a;margin:2px 0}
-.spl{font-size:10.5px;color:#7a786e}
-.sps{font-size:10px;color:#888780}
-.chart-area{background:#fafaf5;border:1px solid #e2e0d5;border-radius:8px;padding:8px;margin:8px 0}
-.chart-cap{font-size:11px;color:#7a786e;text-align:center;margin-top:4px}
-b{font-weight:700}
-ul{list-style:none;padding-left:0}
-ul li{padding:3px 0;font-size:12.5px}
-ul li:before{content:"▸ ";color:#7a786e}
-.bar52{height:14px;background:linear-gradient(to right,#0C447C 0%,#888780 50%,#A32D2D 100%);border-radius:8px;position:relative;margin:8px 0 4px}
-.bar52 .marker{position:absolute;top:-3px;width:4px;height:20px;background:#2c2c2a;border-radius:2px}
-.bar52-lab{display:flex;justify-content:space-between;font-size:10.5px;color:#7a786e}
+.strategy-box{background:#faf9f4;border:1px solid #d3d1c7;border-radius:8px;padding:10px;text-align:center}
+.sp-t{font-size:10.5px;color:#7a786f;font-weight:600;margin-bottom:3px}
+.sp{font-size:14px;font-weight:800;color:#2c2c2a}
+.sp-s{font-size:10px;color:#888780;margin-top:2px}
+.chart-area{background:#fafaf6;border:1px solid #d3d1c7;border-radius:8px;padding:10px;margin:8px 0}
+.ct-cap{font-size:11px;color:#7a786f;text-align:center;margin-top:6px;font-style:italic}
+.bar-pos{position:relative;height:30px;margin:10px 0 6px}
+.bar-line{position:absolute;top:13px;left:0;right:0;height:6px;border-radius:3px;background:linear-gradient(to right,#0C447C 0%,#1D6E45 50%,#A32D2D 100%)}
+.bar-mk{position:absolute;top:5px;width:2px;height:22px;background:#2c2c2a}
+.bar-lbl{position:absolute;top:-2px;font-size:10px;font-weight:700;transform:translateX(-50%);white-space:nowrap}
+.bar-ends{display:flex;justify-content:space-between;font-size:10px;color:#7a786f;margin-top:2px}
 </style>
 </head>
 <body>
@@ -69,257 +74,203 @@ ul li:before{content:"▸ ";color:#7a786e}
 <div class="wrap">
 
 <h1>삼성전자 (005930)</h1>
-<div class="sub">세력·차트 종합 분석 · 현재가 266,000원 (+14.4% 추정)</div>
+<div class="sub">세력·차트 종합 분석 · 현재가 268,500원 · 52주 위치 96.2%</div>
 
 <div class="navy-box">
-<b>📌 핵심 한 줄</b><br>
-역대 최고가 268,000원 부근에서 거래량 5천만주 동반한 강력한 신고가 돌파 진행 중. 외국인·기관 5일 누적 1,940만주 매수 우위로 <b>본격 분산 직전의 마지막 마크업 구간</b>으로 추정. RSI 81.5 과열·52주 위치 98.2%에서 추격매수는 위험.
-<div class="g2" style="margin-top:10px;gap:6px">
-<div>
-<div style="font-size:11px;color:#1f3a64;font-weight:700;margin-bottom:3px">✅ 구조적 강점</div>
-<div style="font-size:11.5px;line-height:1.6">
-• 이평선 완전 정배열 (5>20>60>120)<br>
-• 외국인+기관 동반 순매수 (1,942만주)<br>
-• 60일선 196k 대비 +35% 강세<br>
-• HBM·메모리 사이클 펀더멘털
-</div>
-</div>
-<div>
-<div style="font-size:11px;color:#A32D2D;font-weight:700;margin-bottom:3px">⚠️ 리스크</div>
-<div style="font-size:11.5px;line-height:1.6">
-• RSI 81.5 극도 과열권<br>
-• 52주 고가 0.7% 이격 (천장권)<br>
-• 볼밴 상단 246k 7% 상방 이탈<br>
-• 분산 슈팅 가능성 (윗꼬리 확인 필요)
-</div>
-</div>
+<div class="nt">🎯 한 줄 요약</div>
+17K 박스권을 3개월 매집 후 23만원대를 거래량 동반 돌파, 직전 거래일 53M 폭증 장대양봉으로 52주 신고가 부근(96.2%)에 도달. <b>강한 상승추세 진행 중이나 RSI 77.7 과열·볼린저 상단 이탈로 단기 분산 신호 경계 구간.</b>
+<div class="ng">
+<div class="ng-c"><b>📈 강점</b>완벽 정배열(5>20>60>120) · 거래량 동반 돌파 · 외인 매도에도 상승 · 신고가 갱신</div>
+<div class="ng-c"><b>⚠️ 리스크</b>RSI 77.7 과열 · 볼밴 상단 워킹 · 직전 음봉 거래량 38% 감소 · 277K 윗꼬리</div>
 </div>
 </div>
 
 <div class="sec">📊 현재 주가 현황</div>
 <div class="card">
 <div class="g3">
-<div class="met"><div class="ml">현재가</div><div class="mv">266,000</div><div class="ms">시 254k / 고 270k / 저 251k</div></div>
-<div class="met"><div class="ml">52주 범위</div><div class="mv">53.7k~270k</div><div class="ms">변동폭 +402%</div></div>
-<div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#A32D2D">98.2%</div><div class="ms">최고가권 진입</div></div>
+<div class="met"><div class="ml">현재가</div><div class="mv">268,500원</div><div class="ms">전일 대비 -1.1%</div></div>
+<div class="met"><div class="ml">52주 범위</div><div class="mv">53.7K~277K</div><div class="ms">5.16배 변동폭</div></div>
+<div class="met"><div class="ml">52주 위치</div><div class="mv">96.2%</div><div class="ms">신고가 부근</div></div>
 </div>
-<div class="bar52">
-<div class="marker" style="left:98.2%"></div>
+<div class="bar-pos">
+<div class="bar-line"></div>
+<div class="bar-mk" style="left:96.2%"></div>
+<div class="bar-lbl" style="left:96.2%;color:#A32D2D">268,500</div>
 </div>
-<div class="bar52-lab"><span>저가 53,700</span><span>중간 161,850</span><span>고가 270,000</span></div>
+<div class="bar-ends"><span>52주 저점 53,700</span><span>52주 고점 277,000</span></div>
 <div style="margin-top:8px">
-<span class="tag t-r">RSI 81.5 극과열</span>
-<span class="tag t-g">거래량 5,011만 (평균 2배)</span>
-<span class="tag t-navy">정배열</span>
-<span class="tag t-teal">외인·기관 매수 1,942만주</span>
-<span class="tag t-a">볼밴 상단 +7% 이탈</span>
+<span class="tag t-r">신고가 진입권</span>
+<span class="tag t-g">정배열 완성</span>
+<span class="tag t-a">RSI 77.7 과열</span>
+<span class="tag t-b">볼밴 상단 워킹</span>
+<span class="tag t-navy">PBR 4.2배</span>
+<span class="tag t-teal">영업이익률 32.5%</span>
 </div>
 </div>
 
-<div class="sec">📈 일봉 차트 모양 — 왜 이렇게 움직이나</div>
+<div class="sec">📈 일봉 차트 모양 (최근 20일)</div>
 <div class="card">
+<div class="rr"><div class="rbox rb-g">①</div><div class="rd"><b>17K → 22K 박스권 매집 후 폭발적 상방 돌파.</b> 1~10일차(204K~222K)는 21만원 횡보, 평균 거래량 19M으로 매집 단계 특성. 17일차(232.5K)부터 거래량이 32.9M→53.1M→41.4M으로 연속 폭증하며 23만원대를 강하게 돌파, 17.5% 단기 급등.</div></div>
+<div class="rr"><div class="rbox rb-r">②</div><div class="rd"><b>277K 윗꼬리는 단기 차익실현 신호.</b> 19일차 고가 277K 후 종가 271.5K로 5.5K 윗꼬리, 직전 거래일은 시가 260K·종가 268.5K로 거래량 25.7M(직전 41.4M 대비 -38%). 거래량 감소형 음봉은 추격 매수세 둔화 가능성.</div></div>
+<div class="rr"><div class="rbox rb-b">③</div><div class="rd"><b>이동평균선 완벽 정배열.</b> 현재가 268.5K > MA5 251.8K > MA20 224.4K > MA60 200K > MA120 161.7K. 단기·중기·장기 모두 정배열 + 이격도 확대(MA120 대비 +66%). PDF 가이드상 강한 상승추세이나 이격도 과대는 조정 위험 시그널.</div></div>
+<div class="rr"><div class="rbox rb-n">④</div><div class="rd"><b>볼린저밴드 상단 돌파 + 밴드워킹.</b> 볼밴 상단 265.7K를 종가가 상회, RSI 77.7 과열권. MACD 16,633 > 시그널 11,774로 강세 유지되나 골든크로스 후 격차 확대형 = 과열 단계 진입.</div></div>
+
 <div class="chart-area">
-<svg viewBox="0 0 680 225" width="100%" preserveAspectRatio="xMidYMid meet">
-<rect x="0" y="0" width="240" height="225" fill="#FCEBEB" opacity=".3"/>
-<rect x="240" y="0" width="320" height="225" fill="#EAF3DE" opacity=".4"/>
-<rect x="560" y="0" width="120" height="225" fill="#fdf0d9" opacity=".5"/>
-<text x="120" y="18" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">초기 변동성 (~204k)</text>
-<text x="400" y="18" text-anchor="middle" font-size="10" fill="#1D9E75" font-weight="700">매집·우상향 채널 (204k→230k)</text>
-<text x="620" y="18" text-anchor="middle" font-size="10" fill="#EF9F27" font-weight="700">슈팅 폭발</text>
-
-<line x1="40" y1="40" x2="660" y2="40" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<line x1="40" y1="80" x2="660" y2="80" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<line x1="40" y1="120" x2="660" y2="120" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<line x1="40" y1="160" x2="660" y2="160" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<text x="35" y="44" text-anchor="end" font-size="9" fill="#7a786e">270k</text>
-<text x="35" y="84" text-anchor="end" font-size="9" fill="#7a786e">240k</text>
-<text x="35" y="124" text-anchor="end" font-size="9" fill="#7a786e">210k</text>
-<text x="35" y="164" text-anchor="end" font-size="9" fill="#7a786e">180k</text>
-
-<line x1="40" y1="98" x2="660" y2="98" stroke="#0C447C" stroke-dasharray="4 3" stroke-width="1"/>
-<text x="655" y="95" text-anchor="end" font-size="9" fill="#0C447C" font-weight="700">MA20 217,775</text>
-<line x1="40" y1="123" x2="660" y2="123" stroke="#1D9E75" stroke-dasharray="4 3" stroke-width="1"/>
-<text x="655" y="120" text-anchor="end" font-size="9" fill="#1D9E75" font-weight="700">MA60 196,498</text>
-<line x1="40" y1="63" x2="660" y2="63" stroke="#EF9F27" stroke-dasharray="4 3" stroke-width="1"/>
-<text x="655" y="60" text-anchor="end" font-size="9" fill="#EF9F27" font-weight="700">볼밴上 246,912</text>
-
-<g>
-<line x1="60" y1="100" x2="60" y2="113" stroke="#0C447C"/><rect x="56" y="103" width="8" height="8" fill="#0C447C"/>
-<line x1="90" y1="80" x2="90" y2="89" stroke="#1D9E75"/><rect x="86" y="80" width="8" height="9" fill="#1D9E75"/>
-<line x1="120" y1="89" x2="120" y2="96" stroke="#0C447C"/><rect x="116" y="93" width="8" height="3" fill="#0C447C"/>
-<line x1="150" y1="86" x2="150" y2="93" stroke="#0C447C"/><rect x="146" y="89" width="8" height="4" fill="#0C447C"/>
-<line x1="180" y1="93" x2="180" y2="103" stroke="#0C447C"/><rect x="176" y="100" width="8" height="3" fill="#0C447C"/>
-<line x1="210" y1="86" x2="210" y2="93" stroke="#1D9E75"/><rect x="206" y="89" width="8" height="4" fill="#1D9E75"/>
-<line x1="240" y1="79" x2="240" y2="86" stroke="#1D9E75"/><rect x="236" y="79" width="8" height="7" fill="#1D9E75"/>
-<line x1="270" y1="73" x2="270" y2="80" stroke="#0C447C"/><rect x="266" y="74" width="8" height="3" fill="#0C447C"/>
-<line x1="300" y1="69" x2="300" y2="79" stroke="#0C447C"/><rect x="296" y="73" width="8" height="3" fill="#0C447C"/>
-<line x1="330" y1="68" x2="330" y2="73" stroke="#1D9E75"/><rect x="326" y="68" width="8" height="5" fill="#1D9E75"/>
-<line x1="360" y1="64" x2="360" y2="74" stroke="#0C447C"/><rect x="356" y="69" width="8" height="3" fill="#0C447C"/>
-<line x1="390" y1="55" x2="390" y2="73" stroke="#1D9E75"/><rect x="386" y="64" width="8" height="9" fill="#1D9E75"/>
-<line x1="420" y1="63" x2="420" y2="74" stroke="#0C447C"/><rect x="416" y="68" width="8" height="6" fill="#0C447C"/>
-<line x1="450" y1="59" x2="450" y2="71" stroke="#1D9E75"/><rect x="446" y="63" width="8" height="6" fill="#1D9E75"/>
-<line x1="480" y1="60" x2="480" y2="65" stroke="#0C447C"/><rect x="476" y="62" width="8" height="3" fill="#0C447C"/>
-<line x1="510" y1="55" x2="510" y2="63" stroke="#1D9E75"/><rect x="506" y="56" width="8" height="6" fill="#1D9E75"/>
-<line x1="540" y1="55" x2="540" y2="68" stroke="#0C447C"/><rect x="536" y="63" width="8" height="5" fill="#0C447C"/>
-<line x1="570" y1="50" x2="570" y2="63" stroke="#1D9E75"/><rect x="566" y="50" width="8" height="13" fill="#1D9E75"/>
-<line x1="610" y1="32" x2="610" y2="51" stroke="#A32D2D" stroke-width="1.5"/><rect x="604" y="35" width="12" height="13" fill="#A32D2D"/>
-<text x="610" y="28" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="700">270,000 신고가</text>
+<svg viewBox="0 0 680 225" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<rect x="0" y="0" width="340" height="225" fill="#F3F2E9"/>
+<rect x="340" y="0" width="340" height="225" fill="#FCEEEE" opacity=".6"/>
+<text x="20" y="20" font-size="10" fill="#7a786f" font-weight="700">매집 구간 (210K~220K)</text>
+<text x="360" y="20" font-size="10" fill="#A32D2D" font-weight="700">돌파 급등 (52주 신고가 갱신)</text>
+<line x1="0" y1="80" x2="680" y2="80" stroke="#d3d1c7" stroke-dasharray="3 2"/>
+<text x="5" y="78" font-size="9" fill="#7a786f">277K</text>
+<line x1="0" y1="115" x2="680" y2="115" stroke="#d3d1c7" stroke-dasharray="3 2"/>
+<text x="5" y="113" font-size="9" fill="#7a786f">230K(돌파선)</text>
+<line x1="0" y1="155" x2="680" y2="155" stroke="#d3d1c7" stroke-dasharray="3 2"/>
+<text x="5" y="153" font-size="9" fill="#7a786f">210K(지지)</text>
+<line x1="0" y1="195" x2="680" y2="195" stroke="#d3d1c7" stroke-dasharray="3 2"/>
+<text x="5" y="193" font-size="9" fill="#7a786f">190K</text>
+<!-- 20일 캔들 -->
+<g stroke-width="1">
+<line x1="40" y1="167" x2="40" y2="187" stroke="#0C447C"/><rect x="36" y="174" width="8" height="11" fill="#0C447C"/>
+<line x1="70" y1="158" x2="70" y2="183" stroke="#0C447C"/><rect x="66" y="166" width="8" height="14" fill="#0C447C"/>
+<line x1="100" y1="174" x2="100" y2="192" stroke="#1D9E75"/><rect x="96" y="180" width="8" height="12" fill="#1D9E75"/>
+<line x1="130" y1="159" x2="130" y2="178" stroke="#0C447C"/><rect x="126" y="167" width="8" height="11" fill="#0C447C"/>
+<line x1="160" y1="142" x2="160" y2="158" stroke="#0C447C"/><rect x="156" y="149" width="8" height="9" fill="#0C447C"/>
+<line x1="190" y1="138" x2="190" y2="160" stroke="#1D9E75"/><rect x="186" y="138" width="8" height="20" fill="#1D9E75"/>
+<line x1="220" y1="139" x2="220" y2="149" stroke="#0C447C"/><rect x="216" y="142" width="8" height="5" fill="#0C447C"/>
+<line x1="250" y1="135" x2="250" y2="156" stroke="#0C447C"/><rect x="246" y="146" width="8" height="9" fill="#0C447C"/>
+<line x1="280" y1="131" x2="280" y2="145" stroke="#1D9E75"/><rect x="276" y="131" width="8" height="10" fill="#1D9E75"/>
+<line x1="310" y1="125" x2="310" y2="148" stroke="#0C447C"/><rect x="306" y="133" width="8" height="11" fill="#0C447C"/>
+<line x1="340" y1="106" x2="340" y2="151" stroke="#1D9E75"/><rect x="336" y="109" width="8" height="36" fill="#1D9E75"/>
+<line x1="370" y1="123" x2="370" y2="150" stroke="#0C447C"/><rect x="366" y="125" width="8" height="20" fill="#0C447C"/>
+<line x1="400" y1="106" x2="400" y2="139" stroke="#1D9E75"/><rect x="396" y="109" width="8" height="25" fill="#1D9E75"/>
+<line x1="430" y1="106" x2="430" y2="125" stroke="#0C447C"/><rect x="426" y="115" width="8" height="9" fill="#0C447C"/>
+<line x1="460" y1="93" x2="460" y2="123" stroke="#1D9E75"/><rect x="456" y="93" width="8" height="22" fill="#1D9E75"/>
+<line x1="490" y1="86" x2="490" y2="129" stroke="#0C447C"/><rect x="486" y="86" width="8" height="36" fill="#0C447C"/>
+<line x1="520" y1="79" x2="520" y2="116" stroke="#1D9E75"/><rect x="516" y="79" width="8" height="22" fill="#1D9E75"/>
+<line x1="555" y1="22" x2="555" y2="64" stroke="#1D9E75"/><rect x="551" y="22" width="8" height="42" fill="#1D9E75"/>
+<line x1="600" y1="0" x2="600" y2="42" stroke="#0C447C"/><rect x="596" y="6" width="8" height="22" fill="#0C447C"/>
+<line x1="640" y1="35" x2="640" y2="64" stroke="#888780"/><rect x="636" y="36" width="8" height="22" fill="#888780"/>
 </g>
-
-<path d="M60 105 Q 200 95 300 80 T 480 65 T 610 42" stroke="#EF9F27" stroke-width="1.5" fill="none" opacity=".7"/>
-<text x="640" y="38" font-size="8" fill="#EF9F27" font-weight="700">MA5</text>
-
-<text x="60" y="218" font-size="9" fill="#7a786e">D-19</text>
-<text x="340" y="218" font-size="9" fill="#7a786e" text-anchor="middle">D-10</text>
-<text x="610" y="218" font-size="9" fill="#7a786e" text-anchor="middle">오늘</text>
+<!-- MA20 -->
+<path d="M40,177 Q150,162 280,142 T520,108 L640,55" fill="none" stroke="#EF9F27" stroke-width="1.5" opacity=".6"/>
+<text x="650" y="58" font-size="9" fill="#EF9F27" font-weight="700">MA5</text>
+<path d="M40,182 Q200,170 400,140 L640,80" fill="none" stroke="#0C447C" stroke-width="1.5" opacity=".5"/>
+<text x="650" y="83" font-size="9" fill="#0C447C" font-weight="700">MA20</text>
+<text x="540" y="14" font-size="11" font-weight="800" fill="#A32D2D">📈 277K 신고가</text>
+<text x="635" y="78" font-size="9" font-weight="700" fill="#888780">현재</text>
 </svg>
-<div class="chart-cap">196k→266k 19일간 +35.6% 폭등 · 마지막날 거래량 폭발(5,011만주) · 볼밴 상단 강력 이탈</div>
-</div>
-
-<div class="rr">
-<div class="rnum">1</div>
-<div><div class="rt">거래량 폭증의 의미 — 세력 활동 핵심 시그널</div>
-<div class="rd">최근일 거래량 5,011만주는 20일 평균(2,529만주)의 <b>1.98배</b>. 신고가 돌파 + 거래량 폭증 = 정상적 마크업 (<span class="tag t-g" style="font-size:10px">매수세 진정성</span>). 단, 윗꼬리 길이가 4,000원(고가270k - 종가266k) 으로 종가 대비 약 1.5%로 <b>분산 신호는 아직 약함</b>. 다음날 거래량이 오늘의 50% 이상 유지되면 매집 지속, 30% 미만 급감하면 분산 의심.</div></div>
-</div>
-
-<div class="rr">
-<div class="rnum">2</div>
-<div><div class="rt">이평선 완전 정배열 — 강한 추세 가속</div>
-<div class="rd">5일선(233.4k) > 20일선(217.8k) > 60일선(196.5k) > 120일선(158.9k) <b>완벽 정배열</b>. 이격도 측면에서 현재가는 60일선 대비 +35.4% 이격으로 PDF 가이드의 강세장 매도신호 +106% 기준은 미달이나 <b>단기 평균 회귀 압력 누적</b>. 5일선이 20일선 대비 7.2% 위에 있는 것은 단기 과열의 객관적 증거.</div></div>
-</div>
-
-<div class="rr">
-<div class="rnum">3</div>
-<div><div class="rt">패턴 분석 — 어센딩 트라이앵글 → 상방 돌파</div>
-<div class="rd">19일 차트에서 저점은 196.5k → 201k → 206.5k → 213k로 <b>지속 상승</b>, 고점은 218k 부근에서 6회 저항 후 → 230k → 270k로 <b>강력 돌파</b>. 전형적인 <span class="tag t-g" style="font-size:10px">상승 삼각수렴 + 깃발 패턴 상방 이탈</span>. 패턴 목표가 = 218k (저항) + (218k - 196k) × 1 = <b>약 240~250k</b>는 이미 초과 달성, 초과 슈팅 국면.</div></div>
-</div>
-
-<div class="rr">
-<div class="rnum">4</div>
-<div><div class="rt">매물대 관점 — 미답의 신영역 진입</div>
-<div class="rd">최근 19일간 누적 매물대 핵심 구간은 <b>206k~225k (HVN)</b>로 강한 지지 매물. 230k 이상은 LVN(매물 공백) 영역으로 <b>저항이 약해 빠른 슈팅이 가능했음</b>. 그러나 270k는 52주·역사적 신고가권으로 위쪽 매물대 자체가 없는 미답 영역. 하락 시 1차 지지는 <b>233k(5일선)</b>, 2차는 <b>225k(매물대 상단)</b>, 핵심은 <b>217k(20일선)</b>.</div></div>
+<div class="ct-cap">17K 박스 매집 → 23K 돌파 → 27K 신고가 → 단기 조정. 53M 거래량 폭증일이 분기점.</div>
 </div>
 </div>
 
-<div class="sec">📈 주봉 차트 모양 — 중기 추세 관점</div>
+<div class="sec">📈 주봉 차트 모양 (최근 12주)</div>
 <div class="card">
+<div class="rr"><div class="rbox rb-g">①</div><div class="rd"><b>3주차 폭락 후 'W자' 더블바텀 완성.</b> 3주차 저가 171.9K → 4주차 167.3K(저점 갱신 후 회복) → 7주차 167K 재시험 후 반등. PDF 가이드의 전형적 더블바텀 패턴, 넥라인 200K 돌파 후 가속.</div></div>
+<div class="rr"><div class="rbox rb-r">②</div><div class="rd"><b>최근 5주 연속 양봉 + 거래량 동반.</b> 8주차(190K→206K) 이후 매주 종가 상승, 12주차 종가 268.5K로 28주 만에 시가 대비 +17.8%. 거래량 동반 적삼병 패턴 = PDF 가이드의 강한 상승 지속 신호.</div></div>
+<div class="rr"><div class="rbox rb-b">③</div><div class="rd"><b>피보나치 확장 261.8% 도달.</b> 167K 저점→230K 박스 상단 폭(63K)의 1.618배 확장 시 270K, 현재 268.5K로 거의 도달. 1차 목표가 충족, 차익실현 압력 구간.</div></div>
+<div class="rr"><div class="rbox rb-n">④</div><div class="rd"><b>주봉 RSI 추정 75+, 과열 진입.</b> 12주 연속 변동성 확대형 상승은 엘리어트 3파 후반~5파 진행 가능성. 다음 주 음봉 출현 시 단기 ABC 조정(목표 240K~245K) 대비 필요.</div></div>
+
 <div class="chart-area">
-<svg viewBox="0 0 680 200" width="100%" preserveAspectRatio="xMidYMid meet">
-<rect x="0" y="0" width="200" height="200" fill="#fdf0d9" opacity=".4"/>
-<rect x="200" y="0" width="280" height="200" fill="#FCEBEB" opacity=".3"/>
-<rect x="480" y="0" width="200" height="200" fill="#EAF3DE" opacity=".5"/>
-<text x="100" y="16" text-anchor="middle" font-size="10" fill="#EF9F27" font-weight="700">횡보 매집 (188k)</text>
-<text x="340" y="16" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">조정 (167k 저점)</text>
-<text x="580" y="16" text-anchor="middle" font-size="10" fill="#1D9E75" font-weight="700">파동5 신고가 슈팅</text>
-
-<line x1="40" y1="40" x2="660" y2="40" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<line x1="40" y1="100" x2="660" y2="100" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<line x1="40" y1="160" x2="660" y2="160" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<text x="35" y="44" text-anchor="end" font-size="9" fill="#7a786e">270k</text>
-<text x="35" y="104" text-anchor="end" font-size="9" fill="#7a786e">210k</text>
-<text x="35" y="164" text-anchor="end" font-size="9" fill="#7a786e">150k</text>
-
-<line x1="40" y1="138" x2="660" y2="138" stroke="#0C447C" stroke-dasharray="4 3" stroke-width="1"/>
-<text x="655" y="135" text-anchor="end" font-size="9" fill="#0C447C" font-weight="700">파동A 167k</text>
-<line x1="40" y1="120" x2="660" y2="120" stroke="#1D9E75" stroke-dasharray="4 3" stroke-width="1"/>
-<text x="655" y="117" text-anchor="end" font-size="9" fill="#1D9E75" font-weight="700">중기 지지 188k</text>
-
-<g>
-<line x1="80" y1="121" x2="80" y2="124" stroke="#1D9E75"/><rect x="74" y="121" width="12" height="3" fill="#1D9E75"/>
-<line x1="130" y1="95" x2="130" y2="124" stroke="#1D9E75"/><rect x="124" y="98" width="12" height="22" fill="#1D9E75"/>
-<line x1="180" y1="100" x2="180" y2="138" stroke="#0C447C"/><rect x="174" y="123" width="12" height="13" fill="#0C447C"/>
-<line x1="230" y1="113" x2="230" y2="143" stroke="#1D9E75"/><rect x="224" y="118" width="12" height="22" fill="#1D9E75"/>
-<line x1="280" y1="100" x2="280" y2="123" stroke="#1D9E75"/><rect x="274" y="105" width="12" height="15" fill="#1D9E75"/>
-<line x1="330" y1="115" x2="330" y2="135" stroke="#0C447C"/><rect x="324" y="115" width="12" height="18" fill="#0C447C"/>
-<line x1="380" y1="116" x2="380" y2="143" stroke="#1D9E75"/><rect x="374" y="121" width="12" height="20" fill="#1D9E75"/>
-<line x1="430" y1="106" x2="430" y2="124" stroke="#1D9E75"/><rect x="424" y="108" width="12" height="13" fill="#1D9E75"/>
-<line x1="480" y1="98" x2="480" y2="124" stroke="#1D9E75"/><rect x="474" y="100" width="12" height="20" fill="#1D9E75"/>
-<line x1="530" y1="83" x2="530" y2="103" stroke="#1D9E75"/><rect x="524" y="91" width="12" height="11" fill="#1D9E75"/>
-<line x1="580" y1="82" x2="580" y2="98" stroke="#1D9E75"/><rect x="574" y="91" width="12" height="6" fill="#1D9E75"/>
-<line x1="630" y1="40" x2="630" y2="86" stroke="#A32D2D" stroke-width="1.5"/><rect x="623" y="46" width="14" height="40" fill="#A32D2D"/>
-<text x="630" y="36" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="700">+39k</text>
+<svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+<rect x="0" y="0" width="240" height="200" fill="#FCEEEE" opacity=".5"/>
+<rect x="240" y="0" width="440" height="200" fill="#EAF3DE" opacity=".5"/>
+<text x="60" y="20" font-size="10" fill="#A32D2D" font-weight="700">더블바텀 형성</text>
+<text x="430" y="20" font-size="10" fill="#1D6E45" font-weight="700">5주 연속 양봉 상승 (적삼병+)</text>
+<line x1="0" y1="50" x2="680" y2="50" stroke="#d3d1c7" stroke-dasharray="3 2"/>
+<text x="5" y="48" font-size="9" fill="#7a786f">270K (피보 161.8%)</text>
+<line x1="0" y1="110" x2="680" y2="110" stroke="#d3d1c7" stroke-dasharray="3 2"/>
+<text x="5" y="108" font-size="9" fill="#7a786f">220K (돌파선)</text>
+<line x1="0" y1="155" x2="680" y2="155" stroke="#A32D2D" stroke-dasharray="4 3"/>
+<text x="5" y="153" font-size="9" fill="#A32D2D" font-weight="700">175K (W바닥 넥라인)</text>
+<!-- 12주 캔들 -->
+<g stroke-width="1.2">
+<line x1="50" y1="135" x2="50" y2="139" stroke="#1D9E75"/><rect x="44" y="136" width="12" height="3" fill="#1D9E75"/>
+<line x1="100" y1="105" x2="100" y2="139" stroke="#1D9E75"/><rect x="94" y="111" width="12" height="22" fill="#1D9E75"/>
+<line x1="150" y1="113" x2="150" y2="170" stroke="#0C447C"/><rect x="144" y="138" width="12" height="20" fill="#0C447C"/>
+<line x1="200" y1="125" x2="200" y2="172" stroke="#1D9E75"/><rect x="194" y="142" width="12" height="16" fill="#1D9E75"/>
+<line x1="250" y1="107" x2="250" y2="142" stroke="#1D9E75"/><rect x="244" y="125" width="12" height="14" fill="#1D9E75"/>
+<line x1="300" y1="118" x2="300" y2="165" stroke="#0C447C"/><rect x="294" y="138" width="12" height="22" fill="#0C447C"/>
+<line x1="350" y1="120" x2="350" y2="172" stroke="#1D9E75"/><rect x="344" y="135" width="12" height="25" fill="#1D9E75"/>
+<line x1="400" y1="98" x2="400" y2="123" stroke="#1D9E75"/><rect x="394" y="100" width="12" height="20" fill="#1D9E75"/>
+<line x1="450" y1="88" x2="450" y2="118" stroke="#1D9E75"/><rect x="444" y="88" width="12" height="22" fill="#1D9E75"/>
+<line x1="500" y1="74" x2="500" y2="106" stroke="#1D9E75"/><rect x="494" y="86" width="12" height="14" fill="#1D9E75"/>
+<line x1="555" y1="68" x2="555" y2="105" stroke="#0C447C"/><rect x="549" y="85" width="12" height="14" fill="#0C447C"/>
+<line x1="615" y1="14" x2="615" y2="80" stroke="#1D9E75"/><rect x="609" y="20" width="12" height="56" fill="#1D9E75"/>
 </g>
-
-<path d="M80 122 Q 200 110 300 130 T 480 110 T 630 70" stroke="#EF9F27" stroke-width="1.5" fill="none" opacity=".5"/>
-<line x1="80" y1="125" x2="630" y2="60" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 3" opacity=".7"/>
-<text x="640" y="58" font-size="8" fill="#1D9E75" font-weight="700">상승추세선</text>
-
-<text x="80" y="195" font-size="9" fill="#7a786e">12주전</text>
-<text x="350" y="195" font-size="9" fill="#7a786e" text-anchor="middle">6주전</text>
-<text x="630" y="195" font-size="9" fill="#7a786e" text-anchor="middle">이번주</text>
+<path d="M50,138 Q150,160 250,135 T400,110 L615,40" fill="none" stroke="#0C447C" stroke-width="1.5" opacity=".5"/>
+<text x="625" y="42" font-size="9" fill="#0C447C" font-weight="700">추세선</text>
+<text x="135" y="178" font-size="10" fill="#A32D2D" font-weight="800">W바닥</text>
+<text x="585" y="14" font-size="10" font-weight="800" fill="#1D6E45">📈 +22%</text>
 </svg>
-<div class="chart-cap">12주 동안 167k→270k 약 +62% 상승 · 중기 상승 추세대 유효 · 마지막 주봉 장대양봉 +39k</div>
-</div>
-
-<div class="rr">
-<div class="rnum">1</div>
-<div><div class="rt">엘리어트 파동 카운팅 — 5파 신고가 진행 중</div>
-<div class="rd">12주 데이터로 보면: ①188k→216k(1파) → ②216k→167k(2파, -22.7% 조정) → ③167k→219k(3파) → ④219k→179k(4파) → <b>⑤179k→270k(5파 추정, 진행 중)</b>. PDF 가이드 기준 <span class="tag t-r" style="font-size:10px">5파는 마지막 동인파로 추세전환 임박 단계</span>. 5파 종료 후 ABC 조정 시 38.2% 되돌림 예상가는 <b>약 230k</b>.</div></div>
-</div>
-
-<div class="rr">
-<div class="rnum">2</div>
-<div><div class="rt">상승 추세대 유효 — 채널 상단 진입</div>
-<div class="rd">167k(2파 저점)과 179k(4파 저점) 연결한 상승추세선 위에서 등락. 현재가 266k는 추세대 <b>상단 근접·이탈 시도</b>. 주봉상 종가가 추세대 상단을 명확히 돌파하면 새로운 상승 채널 시작이지만, 가짜 돌파 후 이탈 시 추세대 중간선(<b>약 220k</b>)까지 조정 가능.</div></div>
-</div>
-
-<div class="rr">
-<div class="rnum">3</div>
-<div><div class="rt">피보나치 확장 활용 — 상방 목표가</div>
-<div class="rd">12주 저점 167k → 4파 고점 219k 기준 피보나치 확장: 161.8% = <b>251k</b>(초과달성), 261.8% = <b>302k</b>. 5파 = 1파(28k) × 1.618 = 약 45k → 179k + 45k = <b>224k</b>는 이미 초과. 5파가 1파의 2.618배까지 연장 시 <b>252~280k</b>가 5파 종착지로 현 가격대가 정확히 그 영역.</div></div>
+<div class="ct-cap">3주차 W바닥 → 넥라인 220K 돌파 → 피보 161.8% 도달. 중기 상승추세 강력하나 과열권 진입.</div>
 </div>
 </div>
 
-<div class="sec">📈 월봉 관점 — 장기 사이클</div>
+<div class="sec">📈 월봉/장기 관점</div>
 <div class="card">
-<div class="chart-area">
-<svg viewBox="0 0 680 160" width="100%" preserveAspectRatio="xMidYMid meet">
-<rect x="0" y="0" width="240" height="160" fill="#FCEBEB" opacity=".25"/>
-<rect x="240" y="0" width="240" height="160" fill="#fdf0d9" opacity=".3"/>
-<rect x="480" y="0" width="200" height="160" fill="#EAF3DE" opacity=".5"/>
-<text x="120" y="14" text-anchor="middle" font-size="10" fill="#A32D2D" font-weight="700">52주 저점 53.7k 베이스</text>
-<text x="360" y="14" text-anchor="middle" font-size="10" fill="#EF9F27" font-weight="700">중기 회복 100~180k</text>
-<text x="580" y="14" text-anchor="middle" font-size="10" fill="#1D9E75" font-weight="700">신고가 돌파 270k</text>
-
-<line x1="40" y1="40" x2="660" y2="40" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<line x1="40" y1="80" x2="660" y2="80" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<line x1="40" y1="120" x2="660" y2="120" stroke="#888780" stroke-dasharray="2 2" stroke-width=".5"/>
-<text x="35" y="44" text-anchor="end" font-size="9" fill="#7a786e">270k</text>
-<text x="35" y="84" text-anchor="end" font-size="9" fill="#7a786e">160k</text>
-<text x="35" y="124" text-anchor="end" font-size="9" fill="#7a786e">54k</text>
-
-<path d="M70 130 L 110 135 L 150 132 L 190 138 L 230 128 L 270 110 L 310 95 L 350 88 L 390 75 L 430 80 L 470 65 L 510 58 L 550 50 L 590 45 L 640 42" stroke="#0C447C" stroke-width="2" fill="none" opacity=".7"/>
-<circle cx="640" cy="42" r="4" fill="#A32D2D"/>
-<text x="650" y="40" font-size="9" fill="#A32D2D" font-weight="700">현재 266k</text>
-<circle cx="110" cy="135" r="3" fill="#0C447C"/>
-<text x="110" y="148" font-size="8" fill="#0C447C" text-anchor="middle">53.7k</text>
-</svg>
-<div class="chart-cap">52주간 53.7k → 266k · +395% 폭등 · 신고가 영역 진입 · 월봉상 장기 상승 사이클 진행</div>
-</div>
-<div class="rr">
-<div class="rnum">1</div>
-<div><div class="rt">월봉 관점 핵심 시사점</div>
-<div class="rd">52주 저점 대비 +395% 상승은 메모리 슈퍼사이클 + HBM 수혜를 반영한 펀더멘털 기반의 정당한 상승. 다만 월봉 RSI 과열·52주 위치 98.2%는 <b>역사적으로 단기 조정 빈출 구간</b>. 월봉 차원에서는 매집 → 마크업 → <b>분산 임박 단계</b>로 판단. 중장기(6~12개월) 보유자라면 분할 익절을 시작할 시점.</div></div>
-</div>
+<div class="rr"><div class="rbox rb-g">①</div><div class="rd"><b>장기 박스권(5~7만원) 탈출.</b> 작년 53.7K 저점에서 현재 268.5K로 5배(+400%) 급등. 메모리 슈퍼사이클·HBM 모멘텀 결합. 월봉상 다년간 박스권 → 신고가 영역 진입한 구조적 변곡 국면.</div></div>
+<div class="rr"><div class="rbox rb-r">②</div><div class="rd"><b>역사적 매물대 빈약.</b> 277K 위는 신고가 영역으로 상방 저항(매물대)이 거의 없음 = LVN 구간. PDF 가이드상 LVN은 가격이 빠르게 통과하나 변동성도 큼. 30만원대 단기 오버슈팅 가능성.</div></div>
+<div class="rr"><div class="rbox rb-b">③</div><div class="rd"><b>월봉 RSI 추정 80+, 1999년·2017년급 과열.</b> 과거 비슷한 패턴(2017년 슈퍼사이클)에선 추가 30~50% 더 갔으나, 2018년 1월 53K → 4월 47K 30% 조정 경험. 장기 보유 시 변동성 감내 필수.</div></div>
 </div>
 
 <div class="sec">🧲 세력 관점 분석</div>
 <div class="card">
-<div class="zone">
-<div class="dot" style="background:#1D9E75"></div>
-<div><div class="zt">1. 수급 판독 — 외국인·기관 동반 매수</div>
-<div class="zd">5일 누적: 외국인 +1,517만주, 기관 +424만주, 합계 <b>+1,942만주</b>. 양대 메이저 수급이 <b>같은 방향</b>으로 가는 것은 가장 강력한 매집 신호. 다만 마지막날 거래량 5,011만주 중 양대 비중을 따져봐야 진짜 매집인지 분산을 위한 거래량 펌핑인지 판별 가능. <span class="tag t-g" style="font-size:10px">기관·외국인 양수 동행</span></div></div>
+<div class="zone"><div class="dot" style="background:#1D6E45"></div><div class="zone-body"><div class="zone-t">💰 수급 판독 (기관 vs 외국인)</div><div class="zone-d">5일 기관 순매수 +398만주, 외국인 순매도 -372만주로 <b>완전 반대 포지션</b>. 외인이 던지는 물량을 기관이 받아 신고가 갱신 = 국내 기관 주도 상승. PDF 가이드의 '세력 매집→분산' 중 매집 후반~분산 초입 단계 의심. 외인 매도 지속에도 가격 상승은 강한 매수세 증거.</div></div></div>
+<div class="zone"><div class="dot" style="background:#0C447C"></div><div class="zone-body"><div class="zone-t">🏗️ 구조적 경쟁력</div><div class="zone-d">HBM3E 12단 양산·CXL·파운드리 2nm 진입으로 AI 메모리 사이클 핵심 수혜주. 영업이익률 32.5%·영업이익 3.8조원 분기 회복. PBR 4.2배는 역사적 평균(1.3배) 대비 3배 이상으로 <b>밸류에이션 부담 명확</b>하나 EPS 성장률이 이를 정당화하는 국면.</div></div></div>
+<div class="zone"><div class="dot" style="background:#EF9F27"></div><div class="zone-body"><div class="zone-t">📊 거래량으로 본 세력 활동</div><div class="zone-d">17~19일차 거래량 32.9M→53.1M→41.4M의 폭증 후 직전 25.7M로 -38% 감소 = <b>전형적 분산 의심 시그널</b>. 다만 5일선(251.8K) 사수 시 추가 매집 가능. 277K 윗꼬리 거래량 41.4M은 PDF 가이드의 '세력 진입 윗꼬리'가 아닌 '단기 차익실현' 해석이 우세.</div></div></div>
+<div class="zone"><div class="dot" style="background:#A32D2D"></div><div class="zone-body"><div class="zone-t">⚠️ 핵심 리스크</div><div class="zone-d">①RSI 77.7 + 볼밴 상단 워킹 = 단기 과열 ②외인 5일 연속 순매도 ③PBR 4.2 역사적 고점 부근 ④직전 거래량 -38% 감소 ⑤HBM 경쟁사(SK하이닉스) 추격 가시화. 230K~240K 지지선 이탈 시 200K(MA60)까지 -25% 조정 가능.</div></div></div>
 </div>
-<div class="zone">
-<div class="dot" style="background:#0C447C"></div>
-<div><div class="zt">2. 구조적 경쟁력 — HBM·메모리 사이클</div>
-<div class="zd">영업이익률 32.54% 기록 (영업이익 38.1조원). PBR 4.16배는 역사적 평균(1.5~2.0배) 대비 <b>2배 이상 프리미엄</b> 부여 상태. 시장이 메모리 슈퍼사이클·AI HBM 점유율 확대를 가격에 적극 반영. 펀더멘털 자체는 강세지만 밸류 부담 누적.</div></div>
+
+<div class="sec">✅ 체크리스트</div>
+<div class="card">
+<div class="row"><span class="chk" style="color:#1D6E45">✓</span><div>완벽 정배열 (5>20>60>120) <span class="tag t-g">매우 강함</span></div></div>
+<div class="row"><span class="chk" style="color:#1D6E45">✓</span><div>17일차 23만원 매물대 거래량 동반 돌파 <span class="tag t-g">유효</span></div></div>
+<div class="row"><span class="chk" style="color:#1D6E45">✓</span><div>주봉 더블바텀 완성 + 적삼병 출현 <span class="tag t-g">강세 패턴</span></div></div>
+<div class="row"><span class="chk" style="color:#1D6E45">✓</span><div>MACD 골든크로스 유지 (16,633 > 11,774) <span class="tag t-g">우상향</span></div></div>
+<div class="row"><span class="chk" style="color:#1D6E45">✓</span><div>기관 5일 순매수 398만주 <span class="tag t-g">수급 양호</span></div></div>
+<div class="row"><span class="chk" style="color:#A32D2D">✗</span><div>RSI 77.7 과매수권 진입 <span class="tag t-r">과열</span></div></div>
+<div class="row"><span class="chk" style="color:#A32D2D">✗</span><div>볼린저 상단 265.7K 돌파, 밴드워킹 위험 <span class="tag t-r">변동성</span></div></div>
+<div class="row"><span class="chk" style="color:#A32D2D">✗</span><div>277K 윗꼬리 + 직전 거래량 -38% <span class="tag t-r">분산 의심</span></div></div>
+<div class="row"><span class="chk" style="color:#A32D2D">✗</span><div>외국인 5일 순매도 372만주 <span class="tag t-r">수급 이탈</span></div></div>
+<div class="row"><span class="chk" style="color:#A32D2D">✗</span><div>MA120 대비 이격도 +66% <span class="tag t-r">과대 이격</span></div></div>
 </div>
-<div class="zone">
-<div class="dot" style="background:#EF9F27"></div>
-<div><div class="zt">3. 세력 활동 단계 판정 — 마크업 후반</div>
-<div class="zd">PDF 가이드 4단계 매트릭스 적용: ①매집(완료, 188k 횡보) → ②마크업(진행 중, 188→266k) → ③분산(<b>진입 임박</b>) → ④마크다운. 윗꼬리 4,000원, 거래량 폭증, 신고가 돌파는 마크업 후반의 전형. 다음 1~2주 내 분산 슈팅(긴 윗꼬리 장대양봉) 출현 시 분산 단계 확정.</div></div>
+
+<div class="sec">📅 임박 카탈리스트</div>
+<div class="card">
+<div class="row"><span class="chk">📌</span><div>4분기 실적 발표 (HBM 매출 비중 + AI 메모리 가이던스) <span class="tag t-navy">+/-</span></div></div>
+<div class="row"><span class="chk">📌</span><div>NVIDIA HBM4 채택 발표 (1Q26 예상) <span class="tag t-g">상방</span></div></div>
+<div class="row"><span class="chk">📌</span><div>D램 현물가 추이 (FBI/DRAMeXchange) <span class="tag t-teal">중립</span></div></div>
+<div class="row"><span class="chk">📌</span><div>FOMC 금리 결정 + 환율 (외국인 수급) <span class="tag t-a">매크로</span></div></div>
+<div class="row"><span class="chk">📌</span><div>SK하이닉스 HBM3E 16단 양산 시점 <span class="tag t-r">경쟁</span></div></div>
 </div>
-<div class="zone">
-<div class="dot" style="background:#A32D2D"></div>
-<div><div class="zt">4. 핵심 리스크 — RSI/볼밴 극단 과열
+
+<div class="sec">🎯 매수 전략 종합</div>
+<div class="card">
+<div class="g2">
+<div>
+<div style="font-size:11.5px;font-weight:700;margin-bottom:4px">단기 매력도 (1개월)</div>
+<div class="score-wrap"><div class="score-fill" style="width:45%;background:#EF9F27"></div></div>
+<div style="font-size:11px;color:#7a786f">45/100 · 과열·분산 의심으로 중립</div>
+</div>
+<div>
+<div style="font-size:11.5px;font-weight:700;margin-bottom:4px">중장기 매력도 (6~12개월)</div>
+<div class="score-wrap"><div class="score-fill" style="width:72%;background:#1D6E45"></div></div>
+<div style="font-size:11px;color:#7a786f">72/100 · HBM 사이클 + 추세 유효</div>
+</div>
+</div>
+
+<div class="g4" style="margin-top:10px">
+<div class="strategy-box"><div class="sp-t">조정매수 1차</div><div class="sp" style="color:#1D6E45">245,000</div><div class="sp-s">MA5 + 피보 23.6%</div></div>
+<div class="strategy-box"><div class="sp-t">핵심 진입</div><div class="sp" style="color:#0C447C">225,000</div><div class="sp-s">MA20 + 돌파 재시험</div></div>
+<div class="strategy-box"><div class="sp-t">1차 목표</div><div class="sp" style="color:#A32D2D">300,000</div><div class="sp-s">신고가 + 라운드</div></div>
+<div class="strategy-box"><div class="sp-t">손절가</div><div class="sp" style="color:#888780">208,000</div><div class="sp-s">MA60 이탈 -23%</div></div>
+</div>
+</div>
+
+<div class="info-box">
+<b>💡 핵심 4포인트</b><br>
+①추세는 명확히 살아있으나 단기 RSI 77.7·볼밴 워킹·외인 매도로 1~2주 조정 가능성 우위.<br>
+②신규 진입은 245K 이하 분할매수, 핵심 매수는 225K(MA20) 되돌림 확인 후.<br>
+③HBM 사이클·정배열·기관 매수세 등 중장기 펀더는 견고, 보유자는 245K~230K 지지 시 홀딩.<br>
+④손절은 MA60(200K) 종가 이탈 시 -23%, 분할 익절은 290K~
