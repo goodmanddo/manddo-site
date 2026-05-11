@@ -115,6 +115,21 @@ def main():
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2))
     print(f"\n✓ {len(rows)}개 종목 저장 → {OUT.relative_to(ROOT)}")
 
+    # git commit + push
+    import subprocess
+    try:
+        subprocess.run(["git", "-C", str(ROOT), "add", str(OUT.relative_to(ROOT))], check=True)
+        subprocess.run(
+            ["git", "-C", str(ROOT), "commit", "-m", f"chore(dividend): refresh ranking ({len(rows)}종목)"],
+            check=True,
+        )
+        subprocess.run(["git", "-C", str(ROOT), "push"], check=True, timeout=30)
+        print("✓ git push 완료")
+    except subprocess.CalledProcessError as e:
+        print(f"! git 작업 실패 (변경 없음일 수도): {e}")
+    except Exception as e:
+        print(f"! git 에러: {e}")
+
 
 if __name__ == "__main__":
     main()

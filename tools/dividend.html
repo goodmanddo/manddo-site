@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>주간 배당주 랭킹 — KOSPI 고배당 TOP 리스트 | 만또 투자 인사이트</title>
+<meta name="description" content="KOSPI 시총 상위 80종목 중 배당수익률 1% 이상 종목을 배당률 높은 순으로 정렬. 매주 자동 갱신, PER·PBR·시가총액 함께 확인.">
+<meta name="keywords" content="배당주, 고배당, 배당수익률, KOSPI배당, 배당랭킹, 배당주리스트, 인컴투자">
+<meta property="og:title" content="주간 배당주 랭킹 — KOSPI 고배당 TOP 리스트">
+<meta property="og:description" content="KOSPI 시총 상위 배당주를 배당률 순으로 정렬. PER·PBR·시총까지 한눈에.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/tools/dividend.html">
+<link rel="canonical" href="https://manddo.kr/tools/dividend.html">
+<link rel="stylesheet" href="/css/main.css?v=20260425a">
+<style>
+.lead{background:linear-gradient(135deg,#FFF6E0 0%,#FFEEC2 60%,#FFE4DE 100%);border-radius:20px;padding:28px 24px;margin-bottom:24px;position:relative;overflow:hidden}
+.lead::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(255,180,0,.15),transparent 55%),radial-gradient(circle at 15% 90%,rgba(255,120,80,.10),transparent 55%);pointer-events:none}
+.lead h1{font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.3;color:#4a3300;margin:0 0 8px;position:relative}
+.lead .sub{font-size:14px;color:#6b4a00;line-height:1.65;position:relative;font-weight:500}
+.lead .meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:#6b4a00;font-weight:700;position:relative}
+.lead .meta .pill{background:rgba(255,255,255,.55);padding:5px 12px;border-radius:999px;letter-spacing:0.02em;border:1px solid rgba(255,180,0,.25)}
+.lead .meta .pill b{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;color:#4a3300}
+.sort-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.sort-chip{background:#fff;border:1px solid #eef0f3;border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:700;color:#4e5968;cursor:pointer;font-family:inherit;transition:all .15s}
+.sort-chip:hover{background:#f2f4f6}
+.sort-chip.active{background:#191f28;border-color:#191f28;color:#fff}
+.tbl-wrap{background:#fff;border:1px solid #eef0f3;border-radius:18px;overflow:hidden}
+.tbl-head{display:grid;grid-template-columns:42px 1.6fr 0.9fr 0.7fr 0.7fr 1fr;gap:10px;padding:14px 18px;background:#f7f9fc;border-bottom:1px solid #eef0f3;font-size:11px;color:#8b95a1;font-weight:800;letter-spacing:0.04em}
+.tbl-head .n{text-align:right}
+.tbl-row{display:grid;grid-template-columns:42px 1.6fr 0.9fr 0.7fr 0.7fr 1fr;gap:10px;padding:14px 18px;border-bottom:1px solid #eef0f3;align-items:center;font-size:13.5px;cursor:pointer;text-decoration:none;color:inherit;transition:background .12s}
+.tbl-row:last-child{border-bottom:none}
+.tbl-row:hover{background:#f7f9fc}
+.tbl-row.top3{background:linear-gradient(90deg,#FFF8E6 0%,#fff 60%)}
+.tbl-row.top3:hover{background:linear-gradient(90deg,#FFF1D0 0%,#f7f9fc 60%)}
+.rk{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;font-size:13px;color:#8b95a1;letter-spacing:-0.02em}
+.tbl-row.top3 .rk{color:#D63939}
+.tbl-row .rk-medal{font-size:16px}
+.nm{font-weight:800;color:#191f28;letter-spacing:-0.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nm .cd{font-size:11px;color:#8b95a1;font-family:'SF Mono',ui-monospace,monospace;margin-left:5px;font-weight:600}
+.nm .arrow{color:#3182F6;font-size:11px;margin-left:6px;opacity:0;transition:opacity .15s}
+.tbl-row:hover .nm .arrow{opacity:1}
+.n{font-family:'SF Mono',ui-monospace,monospace;font-weight:700;color:#191f28;text-align:right;letter-spacing:-0.02em}
+.n.yield{color:#D63939;font-weight:800;font-size:14.5px}
+.n.muted{color:#8b95a1;font-weight:600}
+.tbl-foot{padding:12px 18px;background:#f7f9fc;font-size:11.5px;color:#8b95a1;line-height:1.65}
+.info-card{background:#FFF8E6;border:1px solid #FDE9A8;border-radius:12px;padding:14px 16px;margin:20px 0;font-size:13px;color:#6b4a00;line-height:1.7}
+.info-card b{color:#4a3300}
+details.faq{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:4px 16px;margin-bottom:10px}
+details.faq summary{padding:14px 0;font-size:14.5px;font-weight:700;color:#191f28;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:'+';color:#8b95a1;font-size:20px;font-weight:400}
+details.faq[open] summary::after{content:'−'}
+details.faq .answer{padding:0 0 16px;font-size:13.5px;color:#4e5968;line-height:1.75}
+details.faq .answer p{margin-bottom:8px}
+@media(max-width:600px){
+  .tbl-head,.tbl-row{grid-template-columns:32px 1.5fr 0.7fr 0.55fr 0.55fr;gap:6px;padding:12px 12px;font-size:12.5px}
+  .tbl-head .market,.tbl-row .market{display:none}
+  .lead h1{font-size:22px}
+}
+</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/tools/dividend.html" class="active">💰 배당주</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="lead">
+    <h1>💰 주간 배당주 랭킹</h1>
+    <p class="sub">KOSPI 시총 상위 80종목 중 <b>배당수익률 1% 이상</b>만 추려 <b>높은 순</b>으로 정렬. 매주 한 번 자동 갱신.</p>
+    <div class="meta">
+      <span class="pill">갱신: <b id="updated">—</b></span>
+      <span class="pill">종목: <b id="count">—</b>개</span>
+      <span class="pill">기준: <b>KOSPI 시총 TOP 80</b></span>
+    </div>
+  </div>
+
+  <div class="sort-bar">
+    <button class="sort-chip active" data-sort="yield">배당률 ↓</button>
+    <button class="sort-chip" data-sort="per">PER ↑ (저평가)</button>
+    <button class="sort-chip" data-sort="pbr">PBR ↑ (저평가)</button>
+    <button class="sort-chip" data-sort="marcap">시가총액 ↓</button>
+  </div>
+
+  <div class="tbl-wrap">
+    <div class="tbl-head">
+      <div class="n">#</div>
+      <div>종목</div>
+      <div class="n">배당률</div>
+      <div class="n">PER</div>
+      <div class="n">PBR</div>
+      <div class="n market">시가총액</div>
+    </div>
+    <div id="rows"></div>
+    <div class="tbl-foot">
+      종가·배당률은 네이버금융 기준, 시가총액은 KOSPI 종가 기준. 작년 결산 배당 기준이라 올해 실적·정책에 따라 변동 가능.
+    </div>
+  </div>
+
+  <div class="info-card">
+    <b>ℹ️ 데이터 출처 & 한계</b><br>
+    KOSPI 시총 상위 80종목을 매주 한 번 스캔하여 배당수익률 1% 이상만 정렬합니다. 표시되는 배당률은 <b>전년도 결산 1주당 배당금 ÷ 현재 주가</b>입니다. 실제 올해 배당과 다를 수 있고, 분기 배당 종목은 연 환산 기준. <b>매수·매도 권유가 아닙니다.</b>
+  </div>
+
+  <h2>❓ 자주 묻는 질문</h2>
+  <details class="faq">
+    <summary>배당률이 높으면 무조건 좋은 종목인가요?</summary>
+    <div class="answer">
+      <p>아니에요. 배당률 = 배당금 ÷ 주가이므로 <b>주가가 폭락하면 배당률은 자동으로 올라가</b>는 함정이 있어요. 실적이 악화 중인데 배당만 유지하는 경우도 있고요. PER·PBR·실적 추세를 함께 봐야 진짜 우량 배당주를 가려낼 수 있어요.</p>
+    </div>
+  </details>
+  <details class="faq">
+    <summary>배당락은 무엇인가요?</summary>
+    <div class="answer">
+      <p>배당받을 권리가 사라지는 날입니다. 보통 결산일 직전 영업일이 배당락일이고, 이날 주가는 배당금만큼 자동으로 떨어져요. 배당받으려면 배당기준일 <b>2영업일 전</b>까지 매수 보유해야 합니다 (T+2 결제).</p>
+    </div>
+  </details>
+  <details class="faq">
+    <summary>배당소득세는 얼마나 떼나요?</summary>
+    <div class="answer">
+      <p>한국 상장주 배당은 <b>15.4%</b> (소득세 14% + 지방세 1.4%) 원천징수. 연 금융소득(배당+이자) 2,000만 원 초과 시 종합소득과세 대상이라 누진세율 적용됩니다.</p>
+    </div>
+  </details>
+  <details class="faq">
+    <summary>매주 언제 갱신되나요?</summary>
+    <div class="answer">
+      <p>매주 일요일에 한 번 자동 스캔합니다. 페이지 상단의 "갱신" 날짜에서 마지막 갱신 시점 확인 가능.</p>
+    </div>
+  </details>
+</main>
+
+<script>
+let DATA = [];
+let CURRENT_SORT = 'yield';
+
+const MEDALS = ['🥇','🥈','🥉'];
+
+async function load(){
+  const res = await fetch('/tools/data/dividend.json?v='+Date.now());
+  const json = await res.json();
+  DATA = json.stocks || [];
+  document.getElementById('updated').textContent = fmtDate(json.generated_at);
+  document.getElementById('count').textContent = DATA.length;
+  render();
+}
+
+function fmtDate(iso){
+  if(!iso) return '—';
+  const d = new Date(iso);
+  if(isNaN(d)) return iso.slice(0,10);
+  const M = ['1','2','3','4','5','6','7','8','9','10','11','12'][d.getMonth()];
+  return `${d.getFullYear()}.${M}.${d.getDate()}`;
+}
+
+function sortedData(){
+  const arr = DATA.slice();
+  if(CURRENT_SORT === 'yield')  arr.sort((a,b) => b.dividend_yield - a.dividend_yield);
+  if(CURRENT_SORT === 'per')    arr.sort((a,b) => a.per - b.per);
+  if(CURRENT_SORT === 'pbr')    arr.sort((a,b) => a.pbr - b.pbr);
+  if(CURRENT_SORT === 'marcap') arr.sort((a,b) => b.marcap_eok - a.marcap_eok);
+  return arr;
+}
+
+function fmtMarcap(eok){
+  if(eok >= 10000) return (eok/10000).toFixed(1) + '조';
+  return Math.round(eok).toLocaleString() + '억';
+}
+
+function render(){
+  const arr = sortedData();
+  const wrap = document.getElementById('rows');
+  wrap.innerHTML = arr.map((s, i) => {
+    const rank = i + 1;
+    const medal = MEDALS[i] || '';
+    const top = i < 3 ? 'top3' : '';
+    const rk = medal ? `<span class="rk-medal">${medal}</span>` : rank;
+    return `
+      <a class="tbl-row ${top}" href="/stock/${s.code}.html" target="_blank" rel="noopener">
+        <div class="rk">${rk}</div>
+        <div class="nm">${s.name}<span class="cd">${s.code}</span><span class="arrow">→</span></div>
+        <div class="n yield">${s.dividend_yield.toFixed(2)}%</div>
+        <div class="n">${s.per.toFixed(1)}</div>
+        <div class="n">${s.pbr.toFixed(2)}</div>
+        <div class="n muted market">${fmtMarcap(s.marcap_eok)}</div>
+      </a>`;
+  }).join('');
+}
+
+document.querySelectorAll('.sort-chip').forEach(c => {
+  c.addEventListener('click', () => {
+    document.querySelectorAll('.sort-chip').forEach(x => x.classList.remove('active'));
+    c.classList.add('active');
+    CURRENT_SORT = c.dataset.sort;
+    render();
+  });
+});
+
+load();
+</script>
+</body>
+</html>
