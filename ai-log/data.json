@@ -1,39 +1,79 @@
 {
-  "date": "2026-05-08",
+  "date": "2026-05-11",
   "start_date": "2026-05-03",
-  "cumulative_return": 0.09,
-  "week_return": 0.22,
-  "day_return": 0.2,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -0.61,
+  "week_return": -0.5,
+  "day_return": -0.7,
+  "today_realized_avg": -7.45,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 43,
-  "total_trades": 23,
-  "ai_commentary": "오늘은 카카오 등 신규 편입. 시작 이후 누적 +0.1%.",
+  "today_loss_count": 1,
+  "win_rate": 42,
+  "total_trades": 24,
+  "ai_commentary": "오늘은 삼성화재, 현대글로비스, 휴젤 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -0.6%.",
   "new_buys": [
+    {
+      "name": "삼성화재",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.2,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "현대글로비스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 4,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "휴젤",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.17,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "에이치브이엠",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 3.31,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
+    },
     {
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "entry_to_current_pct": -1.08,
+      "entry_to_current_pct": -3.87,
       "weight_pct": 23,
-      "hold_days": 2,
+      "hold_days": 5,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     }
   ],
-  "exits": [],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "에코아이",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -7.45,
+      "hold_days": 17,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
   "weekly_losses": [
     {
-      "name": "메가스터디교육",
+      "name": "에코아이",
       "slug": "",
-      "return_pct": -7.34,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    },
-    {
-      "name": "펄어비스",
-      "slug": "",
-      "return_pct": -7.18,
+      "return_pct": -7.45,
       "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     }
   ],
@@ -45,13 +85,31 @@
       "weight_pct": 23
     },
     {
+      "name": "현대글로비스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
+    {
+      "name": "삼성화재",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
       "name": "가비아",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
     },
     {
-      "name": "에코아이",
+      "name": "휴젤",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
+      "name": "에이치브이엠",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -77,6 +135,10 @@
     {
       "date": "2026-05-08",
       "cumulative_return": 0.09
+    },
+    {
+      "date": "2026-05-11",
+      "cumulative_return": -0.61
     }
   ]
 }

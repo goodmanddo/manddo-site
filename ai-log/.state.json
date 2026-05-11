@@ -1,25 +1,46 @@
 {
   "last_holdings": {
+    "000810": {
+      "name": "삼성화재",
+      "qty": 1,
+      "avg_price": 504000,
+      "current_price": 505000,
+      "opened_at": "2026-05-11"
+    },
     "035720": {
       "name": "카카오",
       "qty": 102,
       "avg_price": 46500,
-      "current_price": 46000,
+      "current_price": 44700,
       "opened_at": "2026-05-06"
     },
     "079940": {
       "name": "가비아",
       "qty": 20,
       "avg_price": 30100,
-      "current_price": 32150,
+      "current_price": 32200,
       "opened_at": "2026-04-30"
     },
-    "448280": {
-      "name": "에코아이",
-      "qty": 59,
-      "avg_price": 12220,
-      "current_price": 11720,
-      "opened_at": "2026-04-24"
+    "086280": {
+      "name": "현대글로비스",
+      "qty": 3,
+      "avg_price": 251000,
+      "current_price": 251000,
+      "opened_at": "2026-05-11"
+    },
+    "145020": {
+      "name": "휴젤",
+      "qty": 2,
+      "avg_price": 294500,
+      "current_price": 295000,
+      "opened_at": "2026-05-11"
+    },
+    "295310": {
+      "name": "에이치브이엠",
+      "qty": 5,
+      "avg_price": 102700,
+      "current_price": 106100,
+      "opened_at": "2026-05-11"
     }
   },
   "history": [
@@ -66,6 +87,10 @@
     {
       "date": "2026-05-08",
       "total_eval": 20018460
+    },
+    {
+      "date": "2026-05-11",
+      "total_eval": 19878848
     }
   ],
   "completed_trades": [
@@ -239,6 +264,14 @@
       "date": "2026-05-07",
       "is_win": false,
       "hold_days": 8
+    },
+    {
+      "name": "에코아이",
+      "code": "448280",
+      "return_pct": -7.45,
+      "date": "2026-05-11",
+      "is_win": false,
+      "hold_days": 17
     }
   ]
 }
