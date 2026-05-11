@@ -14,6 +14,7 @@ from datetime import datetime
 from pathlib import Path
 
 import FinanceDataReader as fdr
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
@@ -21,8 +22,8 @@ ROOT = Path.home() / "manddo-site"
 OUT = ROOT / "tools" / "data" / "dividend.json"
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
-N_TARGETS = 80  # KOSPI 시총 상위 N개 스캔
-MIN_YIELD = 1.0  # 1% 이상만 게임에 포함
+MIN_MARCAP = 1_000 * 1e8  # 시총 1,000억원 이상만 (코스닥 소형주 노이즈 컷)
+MIN_YIELD = 1.0  # 배당수익률 1% 이상만 포함
 
 
 def parse_naver(code: str):
@@ -69,45 +70,51 @@ def parse_naver(code: str):
 
 
 def main():
-    print(f"[배당] 수집 시작 — 시총 상위 {N_TARGETS}개")
-    listing = fdr.StockListing("KOSPI")
-    listing = listing.sort_values("Marcap", ascending=False).head(N_TARGETS)
+    kospi = fdr.StockListing("KOSPI")
+    kospi["Market"] = "KOSPI"
+    kosdaq = fdr.StockListing("KOSDAQ")
+    kosdaq["Market"] = "KOSDAQ"
+    listing = pd.concat([kospi, kosdaq], ignore_index=True)
+    listing = listing[listing["Marcap"].fillna(0) >= MIN_MARCAP]
+    listing = listing.sort_values("Marcap", ascending=False).reset_index(drop=True)
+    total = len(listing)
+    print(f"[배당] 수집 시작 — 시총 1,000억 이상 {total}종목 (KOSPI+KOSDAQ)")
 
     rows = []
     for i, row in enumerate(listing.itertuples(), 1):
         code = row.Code
         name = row.Name
+        market = row.Market
         marcap = int(row.Marcap)
         close = int(row.Close) if row.Close else 0
         try:
             info = parse_naver(code)
         except Exception as e:
-            print(f"  [{i:2d}/{N_TARGETS}] {name}({code}) 오류: {e}")
+            print(f"  [{i:4d}/{total}] {name}({code}) 오류: {e}")
             continue
         time.sleep(0.4)
         if not info or info.get("yield") is None:
-            print(f"  [{i:2d}/{N_TARGETS}] {name}({code}) 배당정보 없음")
             continue
         yld = info["yield"]
         if yld < MIN_YIELD:
-            print(f"  [{i:2d}/{N_TARGETS}] {name}({code}) 배당 {yld:.2f}% < {MIN_YIELD}% 스킵")
             continue
         rows.append({
             "code": code,
             "name": name,
+            "market": market,
             "marcap_eok": round(marcap / 1e8, 0),
             "close": close,
             "dividend_yield": yld,
             "per": info.get("per"),
             "pbr": info.get("pbr"),
         })
-        print(f"  [{i:2d}/{N_TARGETS}] {name}({code}) 배당 {yld:.2f}%, PER {info.get('per')}, PBR {info.get('pbr')}")
+        print(f"  [{i:4d}/{total}] {name}({code}, {market}) 배당 {yld:.2f}%, PER {info.get('per')}, PBR {info.get('pbr')}")
 
     rows.sort(key=lambda r: r["dividend_yield"], reverse=True)
     out = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "source": "Naver Finance + FinanceDataReader",
-        "criteria": f"KOSPI 시총 상위 {N_TARGETS}, 배당수익률 ≥ {MIN_YIELD}%",
+        "criteria": f"KOSPI+KOSDAQ 시총 ≥ 1,000억, 배당수익률 ≥ {MIN_YIELD}%",
         "count": len(rows),
         "stocks": rows,
     }

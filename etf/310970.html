@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TIGER MSCI Korea TR (310970) — 구성종목·비중·수익률 | 만또 ETF 도감</title>
+<meta name="description" content="TIGER MSCI Korea TR ETF의 TOP 10 보유종목, 비중, 섹터 분포, 기간별 수익률. 1위 삼성전자 33.5%. 운용사 미래에셋자산운용, AUM 5.8조, 보수 0.12%.">
+<meta name="keywords" content="TIGER MSCI Korea TR,310970,글로벌,ETF,ETF구성종목,ETF비중">
+<meta property="og:title" content="TIGER MSCI Korea TR (310970) 구성종목·비중">
+<meta property="og:description" content="TIGER MSCI Korea TR ETF의 TOP 10 보유종목, 비중, 섹터 분포, 기간별 수익률. 1위 삼성전자 33.5%. 운용사 미래에셋자산운용, AUM 5.8조, 보수 0.12%.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/etf/310970.html">
+<link rel="canonical" href="https://manddo.kr/etf/310970.html">
+<link rel="stylesheet" href="/css/main.css?v=20260425a">
+<style>
+.hero{background:linear-gradient(135deg,#E8F1FF 0%,#D6E5FF 60%,#E0DBFF 100%);border-radius:20px;padding:24px 22px;margin-bottom:18px}
+.hero .theme{font-size:11px;font-weight:800;color:#1B64DA;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px}
+.hero h1{font-size:24px;font-weight:800;letter-spacing:-0.03em;line-height:1.3;color:#1a2540;margin:0 0 4px}
+.hero h1 .cd{font-size:13px;color:#5b6480;font-family:'SF Mono',ui-monospace,monospace;font-weight:700;margin-left:8px}
+.hero .updated{font-size:11.5px;color:#5b6480;margin-top:8px}
+
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0;background:#fff;border:1px solid #eef0f3;border-radius:14px;overflow:hidden;margin-bottom:18px}
+.meta-row{padding:11px 14px;border-right:1px solid #eef0f3;border-bottom:1px solid #eef0f3;display:flex;flex-direction:column;gap:2px}
+.meta-row:last-child{border-right:none}
+.meta-k{font-size:10.5px;color:#8b95a1;font-weight:700;letter-spacing:0.04em;text-transform:uppercase}
+.meta-v{font-size:14px;color:#191f28;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;letter-spacing:-0.01em}
+
+.block{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 20px;margin-bottom:14px}
+.block h2{font-size:15px;font-weight:800;color:#191f28;margin:0 0 14px;letter-spacing:-0.02em}
+.ctry-bar{display:flex;gap:6px;flex-wrap:wrap;margin:-6px 0 12px}
+.ctry-pill{background:#f7f9fc;color:#4e5968;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:999px}
+.ctry-pill b{color:#191f28;margin-left:3px}
+
+.holds{display:flex;flex-direction:column;gap:8px}
+.hold-row{display:grid;grid-template-columns:30px 1.2fr 1.6fr 70px;gap:10px;align-items:center;padding:8px 10px;border-radius:8px;transition:background .12s}
+.hold-row:hover{background:#f7f9fc}
+.hold-rk{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;color:#8b95a1;font-size:12px;text-align:center}
+.hold-info{display:flex;flex-direction:column;gap:1px;overflow:hidden}
+.hold-name{font-weight:800;color:#191f28;text-decoration:none;font-size:13.5px;letter-spacing:-0.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hold-name:hover{color:#3182F6}
+.hold-code{font-family:'SF Mono',ui-monospace,monospace;font-size:10.5px;color:#8b95a1;font-weight:600}
+.hold-bar{height:8px;background:#f2f4f6;border-radius:4px;overflow:hidden}
+.hold-bar-fill{height:100%;background:linear-gradient(90deg,#3182F6,#1B64DA);border-radius:4px;transition:width .3s}
+.hold-weight{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;color:#191f28;text-align:right;font-size:13px;letter-spacing:-0.02em}
+.hold-foot{padding:12px 10px 4px;font-size:12px;color:#4e5968;border-top:1px dashed #eef0f3;margin-top:6px}
+.hold-foot b{color:#191f28;font-family:'SF Mono',ui-monospace,monospace}
+.empty-block{padding:16px;background:#f7f9fc;border-radius:10px;color:#8b95a1;font-size:13px;text-align:center;line-height:1.55}
+
+.secs{display:flex;flex-direction:column;gap:7px}
+.sec-row{display:grid;grid-template-columns:90px 1fr 60px;gap:10px;align-items:center;font-size:13px}
+.sec-name{color:#4e5968;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sec-bar{height:8px;background:#f2f4f6;border-radius:4px;overflow:hidden}
+.sec-bar-fill{height:100%;background:linear-gradient(90deg,#7B61FF,#3182F6);border-radius:4px}
+.sec-w{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;color:#191f28;text-align:right;font-size:12.5px}
+
+.rets{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px}
+.ret-cell{background:#f7f9fc;border-radius:10px;padding:11px 8px;text-align:center}
+.ret-label{font-size:10.5px;color:#8b95a1;font-weight:700;letter-spacing:0.04em;margin-bottom:4px}
+.ret-val{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;font-size:14.5px;letter-spacing:-0.02em}
+.ret-val.up{color:#D63939}
+.ret-val.down{color:#1B64DA}
+
+.rels{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.rel-card{background:#f7f9fc;border:1px solid transparent;border-radius:10px;padding:11px 13px;text-decoration:none;color:inherit;transition:all .12s}
+.rel-card:hover{background:#fff;border-color:#3182F6}
+.rel-name{font-size:13px;font-weight:800;color:#191f28;letter-spacing:-0.02em;margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rel-meta{font-size:11px;color:#8b95a1;font-weight:600}
+
+.summary{padding:14px 16px;background:#FFF8E6;border:1px solid #FDE9A8;border-radius:12px;font-size:13px;color:#6b4a00;line-height:1.7;margin-bottom:14px}
+.summary b{color:#4a3300}
+
+@media(max-width:600px){
+  .hero h1{font-size:20px}
+  .meta-row{padding:9px 12px}
+  .meta-v{font-size:13px}
+  .hold-row{grid-template-columns:24px 1.1fr 1fr 60px;gap:6px;padding:6px 4px}
+  .hold-bar{height:6px}
+  .sec-row{grid-template-columns:70px 1fr 50px}
+}
+</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/etf/" class="active">📊 ETF</a>
+      <a href="/tools/dividend.html">💰 배당주</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <a class="back-btn" href="/etf/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="hero">
+    <div class="theme">글로벌</div>
+    <h1>TIGER MSCI Korea TR<span class="cd">310970</span></h1>
+    <div class="updated">기초지수 MSCI Korea TR Index · 갱신 2026-05-11</div>
+  </div>
+
+  <div class="summary"><b>상위 3종목:</b> 삼성전자 33.5% · SK하이닉스 24.2% · 삼성전자우 3.9% · <b>총보수 0.120%</b> · AUM <b>5.8조</b></div>
+
+  <div class="meta-grid">
+    <div class="meta-row"><span class="meta-k">운용사</span><span class="meta-v">미래에셋자산운용</span></div><div class="meta-row"><span class="meta-k">기초지수</span><span class="meta-v">MSCI Korea TR Index</span></div><div class="meta-row"><span class="meta-k">상장일</span><span class="meta-v">2018.11.20</span></div><div class="meta-row"><span class="meta-k">AUM</span><span class="meta-v">5.8조</span></div><div class="meta-row"><span class="meta-k">총보수</span><span class="meta-v">0.120%</span></div><div class="meta-row"><span class="meta-k">NAV</span><span class="meta-v">51,086.23</span></div>
+  </div>
+
+  <div class="ctry-bar"><span class="ctry-pill">한국 <b>99.5%</b></span></div>
+
+  <div class="block">
+    <h2>TOP 10 보유종목</h2>
+    <div class="holds">
+      
+      <div class="hold-row">
+        <div class="hold-rk">1</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/005930.html">삼성전자</a>
+          <span class="hold-code">005930</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:100.0%"></div></div>
+        <div class="hold-weight">33.48%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">2</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/000660.html">SK하이닉스</a>
+          <span class="hold-code">000660</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:72.3%"></div></div>
+        <div class="hold-weight">24.22%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">3</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/005935.html">삼성전자우</a>
+          <span class="hold-code">005935</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:11.7%"></div></div>
+        <div class="hold-weight">3.92%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">4</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/402340.html">SK스퀘어</a>
+          <span class="hold-code">402340</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:8.0%"></div></div>
+        <div class="hold-weight">2.67%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">5</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/005380.html">현대차</a>
+          <span class="hold-code">005380</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:6.4%"></div></div>
+        <div class="hold-weight">2.15%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">6</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/105560.html">KB금융</a>
+          <span class="hold-code">105560</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:4.6%"></div></div>
+        <div class="hold-weight">1.54%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">7</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/034020.html">두산에너빌리티</a>
+          <span class="hold-code">034020</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:4.6%"></div></div>
+        <div class="hold-weight">1.53%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">8</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/009150.html">삼성전기</a>
+          <span class="hold-code">009150</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:4.0%"></div></div>
+        <div class="hold-weight">1.34%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">9</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/012450.html">한화에어로스페이스</a>
+          <span class="hold-code">012450</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:3.4%"></div></div>
+        <div class="hold-weight">1.15%</div>
+      </div>
+      <div class="hold-row">
+        <div class="hold-rk">10</div>
+        <div class="hold-info">
+          <a class="hold-name" href="/stock/055550.html">신한지주</a>
+          <span class="hold-code">055550</span>
+        </div>
+        <div class="hold-bar"><div class="hold-bar-fill" style="width:3.4%"></div></div>
+        <div class="hold-weight">1.13%</div>
+      </div>
+      <div class="hold-foot">TOP 10 합계 비중: <b>73.13%</b></div>
+    </div>
+  </div>
+
+  <div class="block">
+      <h2>섹터 분포</h2>
+      <div class="secs">
+      <div class="sec-row">
+        <div class="sec-name">IT</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:100.0%"></div></div>
+        <div class="sec-w">64.7%</div>
+      </div>
+      <div class="sec-row">
+        <div class="sec-name">산업재</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:24.0%"></div></div>
+        <div class="sec-w">15.5%</div>
+      </div>
+      <div class="sec-row">
+        <div class="sec-name">금융</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:10.3%"></div></div>
+        <div class="sec-w">6.7%</div>
+      </div>
+      <div class="sec-row">
+        <div class="sec-name">경기소비재</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:7.6%"></div></div>
+        <div class="sec-w">4.9%</div>
+      </div>
+      <div class="sec-row">
+        <div class="sec-name">헬스케어</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:3.0%"></div></div>
+        <div class="sec-w">2.0%</div>
+      </div>
+      <div class="sec-row">
+        <div class="sec-name">COMMUNICATION</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:2.8%"></div></div>
+        <div class="sec-w">1.8%</div>
+      </div>
+      <div class="sec-row">
+        <div class="sec-name">소재</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:2.4%"></div></div>
+        <div class="sec-w">1.6%</div>
+      </div>
+      <div class="sec-row">
+        <div class="sec-name">필수소비재</div>
+        <div class="sec-bar"><div class="sec-bar-fill" style="width:1.5%"></div></div>
+        <div class="sec-w">1.0%</div>
+      </div></div>
+    </div>
+
+  <div class="block">
+      <h2>기간별 수익률</h2>
+      <div class="rets">
+      <div class="ret-cell">
+        <div class="ret-label">1개월</div>
+        <div class="ret-val up">+30.64%</div>
+      </div>
+      <div class="ret-cell">
+        <div class="ret-label">3개월</div>
+        <div class="ret-val up">+56.96%</div>
+      </div>
+      <div class="ret-cell">
+        <div class="ret-label">6개월</div>
+        <div class="ret-val up">+111.62%</div>
+      </div>
+      <div class="ret-cell">
+        <div class="ret-label">YTD</div>
+        <div class="ret-val up">+93.64%</div>
+      </div>
+      <div class="ret-cell">
+        <div class="ret-label">1년</div>
+        <div class="ret-val up">+257.26%</div>
+      </div>
+      <div class="ret-cell">
+        <div class="ret-label">3년</div>
+        <div class="ret-val up">+53.96%</div>
+      </div></div>
+    </div>
+
+  <div class="block">
+      <h2>같은 테마 ETF</h2>
+      <div class="rels">
+      <a class="rel-card" href="/etf/278540.html">
+        <div class="rel-name">KODEX MSCI Korea TR</div>
+        <div class="rel-meta">AUM 2.9조 · TOP1 삼성전자 33.6%</div>
+      </a></div>
+    </div>
+
+  <div style="margin:18px 0 12px;font-size:11px;color:#8b95a1;line-height:1.7;padding:12px 14px;background:#f7f9fc;border-radius:10px">
+    <b>⚠ 참고용 안내</b><br>
+    본 페이지는 정보 제공용이며 매수·매도 권유가 아닙니다. 비중·수익률·NAV는 매일 변동하며 운용사 공시가 우선합니다. 데이터: Naver Finance 모바일 API (매주 일요일 자동 갱신).
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+</body>
+</html>

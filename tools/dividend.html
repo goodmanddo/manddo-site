@@ -69,6 +69,7 @@ details.faq .answer p{margin-bottom:8px}
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/ai-log/">오늘 AI의 선택</a>
       <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/etf/">📊 ETF</a>
       <a href="/tools/dividend.html" class="active">💰 배당주</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
@@ -193,7 +194,7 @@ function render(){
     return `
       <a class="tbl-row ${top}" href="/stock/${s.code}.html" target="_blank" rel="noopener">
         <div class="rk">${rk}</div>
-        <div class="nm">${s.name}<span class="cd">${s.code}</span><span class="arrow">→</span></div>
+        <div class="nm">${s.name}<span class="cd">${s.code}</span>${s.market ? `<span class="mkt mkt-${s.market}">${s.market === 'KOSDAQ' ? 'Q' : 'P'}</span>` : ''}<span class="arrow">→</span></div>
         <div class="n yield">${s.dividend_yield.toFixed(2)}%</div>
         <div class="n">${s.per.toFixed(1)}</div>
         <div class="n">${s.pbr.toFixed(2)}</div>

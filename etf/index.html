@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETF 도감 — 종목 들어간 ETF 역검색·테마별 분류 | 만또</title>
+<meta name="description" content="KR 상장 ETF 시총 상위 100개를 테마별로 분류. 삼성전자·SK하이닉스 등 종목 검색하면 해당 종목이 들어간 ETF와 비중을 한눈에. 매주 자동 갱신.">
+<meta name="keywords" content="ETF, ETF구성종목, ETF비중, KODEX, TIGER, ETF추천, 테마ETF, 반도체ETF, AIETF, 배당ETF">
+<meta property="og:title" content="ETF 도감 — 종목 역검색·테마별 분류">
+<meta property="og:description" content="100개 KR ETF의 구성종목·비중·테마. 종목 검색으로 해당 종목이 들어간 ETF 즉시 확인.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/etf/">
+<link rel="canonical" href="https://manddo.kr/etf/">
+<link rel="stylesheet" href="/css/main.css?v=20260425a">
+<style>
+.lead{background:linear-gradient(135deg,#E8F1FF 0%,#D6E5FF 60%,#E0DBFF 100%);border-radius:20px;padding:28px 24px;margin-bottom:20px;position:relative;overflow:hidden}
+.lead::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(49,130,246,.18),transparent 55%),radial-gradient(circle at 15% 90%,rgba(120,80,255,.12),transparent 55%);pointer-events:none}
+.lead h1{font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.3;color:#1a2540;margin:0 0 8px;position:relative}
+.lead .sub{font-size:14px;color:#3a4670;line-height:1.65;position:relative;font-weight:500}
+.lead .meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:#3a4670;font-weight:700;position:relative}
+.lead .meta .pill{background:rgba(255,255,255,.6);padding:5px 12px;border-radius:999px;letter-spacing:0.02em;border:1px solid rgba(49,130,246,.25)}
+.lead .meta .pill b{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;color:#1a2540}
+
+.search-bar{margin-bottom:14px;position:relative}
+.search-bar input{width:100%;padding:14px 16px 14px 44px;font-size:15px;border:1.5px solid #eef0f3;border-radius:14px;background:#fff;font-family:inherit;outline:none;transition:border-color .15s, box-shadow .15s;-webkit-appearance:none}
+.search-bar input:focus{border-color:#3182F6;box-shadow:0 0 0 4px rgba(49,130,246,.1)}
+.search-bar::before{content:'🔎';position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.6;pointer-events:none}
+.search-bar .hint{font-size:11.5px;color:#8b95a1;margin-top:6px;padding-left:4px;line-height:1.5}
+
+.chip-bar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}
+.chip{background:#fff;border:1px solid #eef0f3;border-radius:999px;padding:7px 13px;font-size:12px;font-weight:700;color:#4e5968;cursor:pointer;font-family:inherit;transition:all .15s;white-space:nowrap}
+.chip:hover{background:#f2f4f6}
+.chip.active{background:#191f28;border-color:#191f28;color:#fff}
+.chip .cnt{font-size:10.5px;color:#8b95a1;margin-left:4px;font-weight:600}
+.chip.active .cnt{color:#9ca3af}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.card{background:#fff;border:1px solid #eef0f3;border-radius:16px;padding:16px 18px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;transition:transform .12s, box-shadow .12s, border-color .12s;cursor:pointer}
+.card:hover{transform:translateY(-1px);border-color:#3182F6;box-shadow:0 6px 20px rgba(49,130,246,.08)}
+.card .theme{font-size:10.5px;font-weight:800;color:#3182F6;letter-spacing:0.06em;text-transform:uppercase}
+.card .name{font-size:15px;font-weight:800;color:#191f28;letter-spacing:-0.02em;line-height:1.35}
+.card .name .cd{font-size:11px;color:#8b95a1;font-family:'SF Mono',ui-monospace,monospace;font-weight:600;margin-left:6px}
+.card .holds{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#4e5968;line-height:1.45}
+.card .holds .row{display:flex;justify-content:space-between;gap:8px}
+.card .holds .row .stk{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.card .holds .row .w{font-family:'SF Mono',ui-monospace,monospace;font-weight:700;color:#191f28;flex-shrink:0}
+.card .holds .row .stk.match{color:#3182F6;font-weight:800}
+.card .meta{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#8b95a1;font-weight:700;padding-top:8px;border-top:1px dashed #eef0f3}
+.card .meta .aum{font-family:'SF Mono',ui-monospace,monospace}
+.card .meta .ret{font-family:'SF Mono',ui-monospace,monospace;color:#D63939}
+.card .meta .ret.neg{color:#1B64DA}
+.card.no-holds .holds{opacity:.45;font-style:italic;font-size:11.5px}
+
+.empty{padding:60px 20px;text-align:center;color:#8b95a1;font-size:14px}
+.empty .em{font-size:36px;display:block;margin-bottom:10px;opacity:.5}
+
+.info-card{background:#EFF6FF;border:1px solid #DBEAFE;border-radius:12px;padding:14px 16px;margin:20px 0;font-size:13px;color:#1a2540;line-height:1.7}
+.info-card b{color:#1B64DA}
+
+details.faq{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:4px 16px;margin-bottom:10px}
+details.faq summary{padding:14px 0;font-size:14.5px;font-weight:700;color:#191f28;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:'+';color:#8b95a1;font-size:20px;font-weight:400}
+details.faq[open] summary::after{content:'−'}
+details.faq .answer{padding:0 0 16px;font-size:13.5px;color:#4e5968;line-height:1.75}
+details.faq .answer p{margin-bottom:8px}
+
+@media(max-width:600px){
+  .lead h1{font-size:22px}
+  .cards{grid-template-columns:1fr}
+  .chip{padding:6px 11px;font-size:11.5px}
+}
+</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/etf/" class="active">📊 ETF</a>
+      <a href="/tools/dividend.html">💰 배당주</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <a class="back-btn" href="/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="lead">
+    <h1>📊 ETF 도감</h1>
+    <p class="sub">KR 상장 ETF 시총 상위 100개의 <b>구성종목·비중·테마</b>를 한 곳에. 종목 이름으로 검색하면 <b>그 종목이 들어간 ETF</b>가 비중과 함께 표시됩니다. 매주 일요일 자동 갱신.</p>
+    <div class="meta">
+      <span class="pill">갱신: <b id="updated">—</b></span>
+      <span class="pill">ETF: <b id="count">—</b>개</span>
+      <span class="pill">데이터: <b>Naver Finance</b></span>
+    </div>
+  </div>
+
+  <div class="search-bar">
+    <input id="q" type="search" placeholder="종목명 또는 ETF명 검색 — 예: 삼성전자, KODEX 200, 반도체" autocomplete="off">
+    <div class="hint">💡 종목을 입력하면 해당 종목을 보유한 ETF만 표시됩니다. 카드 위에 비중이 강조돼요.</div>
+  </div>
+
+  <div id="chips" class="chip-bar"></div>
+
+  <div id="cards" class="cards"></div>
+  <div id="empty" class="empty" style="display:none"><span class="em">🔍</span>검색 결과 없음 — 다른 종목명으로 시도해보세요.</div>
+
+  <div class="info-card">
+    <b>📌 이렇게 활용하세요</b><br>
+    <span style="font-size:12.5px">① 보유 중인 종목 검색 → 같은 종목 노출 ETF 발견<br>
+    ② 테마 클릭 → 같은 테마 ETF끼리 비중·수익률 비교<br>
+    ③ 카드 클릭 → 개별 ETF 상세 페이지로 이동 (TOP 10 보유·섹터 분포)</span>
+  </div>
+
+  <h2 style="font-size:17px;margin:24px 0 10px;color:#374151">자주 묻는 질문</h2>
+
+  <details class="faq">
+    <summary>왜 일부 ETF는 보유종목이 비어있나요?</summary>
+    <div class="answer">
+      <p>미국·중국 등 <b>해외 자산 ETF</b>와 <b>채권·원자재 ETF</b>는 Naver Finance API에서 한국 종목 보유 정보를 제공하지 않습니다. 종목 역검색의 핵심은 KR 종목 노출이므로, 이런 ETF는 검색 결과에 영향이 없습니다.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>TOP 10만 표시되는 이유?</summary>
+    <div class="answer">
+      <p>ETF의 보유종목은 보통 30~200개로 많지만, <b>상위 10개가 전체 비중의 60~90%</b>를 차지합니다. TOP 10을 벗어난 종목은 비중이 1% 미만으로 의미 있는 노출이 아닙니다.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>테마 분류는 어떻게 결정되나요?</summary>
+    <div class="answer">
+      <p>ETF 이름의 키워드(미국·반도체·2차전지 등)와 섹터 분포 1순위를 조합해 자동 분류합니다. 룰 기반이라 일부 ETF는 사람 직관과 다를 수 있습니다.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>이 데이터로 매매 결정해도 되나요?</summary>
+    <div class="answer">
+      <p>참고용입니다. 비중·수익률은 매일 변동하며 운용사 공시가 우선입니다. 본 데이터는 매주 일요일 자동 갱신되므로 평일 중에는 시점 차이가 있을 수 있습니다.</p>
+    </div>
+  </details>
+
+  <div style="margin:24px 0 12px;font-size:11px;color:#8b95a1;line-height:1.7;padding:12px 14px;background:#f7f9fc;border-radius:10px">
+    <b>⚠ 참고용 안내</b><br>
+    본 페이지는 정보 제공용이며 매수·매도 권유가 아닙니다. ETF 투자 시 운용보수·추적오차·세금을 반드시 확인하세요. 데이터: Naver Finance 모바일 API.
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+let DATA = null;
+let THEME = 'all';
+let Q = '';
+
+async function load(){
+  const r = await fetch('/tools/data/etf-holdings.json');
+  DATA = await r.json();
+  $('updated').textContent = (DATA.generated_at || '').slice(0,10);
+  $('count').textContent = DATA.count;
+  renderChips();
+  render();
+}
+
+function themeCount(){
+  const m = {};
+  DATA.etfs.forEach(e => { m[e.theme] = (m[e.theme]||0) + 1; });
+  return m;
+}
+
+function renderChips(){
+  const counts = themeCount();
+  const themes = Object.keys(counts).sort((a,b) => counts[b] - counts[a]);
+  const all = `<button class="chip ${THEME==='all'?'active':''}" data-theme="all">전체 <span class="cnt">${DATA.count}</span></button>`;
+  $('chips').innerHTML = all + themes.map(t => `
+    <button class="chip ${THEME===t?'active':''}" data-theme="${t}">${t} <span class="cnt">${counts[t]}</span></button>
+  `).join('');
+  $('chips').querySelectorAll('.chip').forEach(c => {
+    c.addEventListener('click', () => {
+      THEME = c.dataset.theme;
+      renderChips();
+      render();
+    });
+  });
+}
+
+function matchScore(etf, q){
+  if(!q) return 1;
+  q = q.toLowerCase();
+  // ETF name match
+  if(etf.name.toLowerCase().includes(q)) return 2;
+  // Holding match
+  if(etf.holdings.some(h => h.name && h.name.toLowerCase().includes(q))) return 3;
+  // Theme match
+  if(etf.theme.toLowerCase().includes(q)) return 1;
+  return 0;
+}
+
+function fmtAum(eok){
+  if(!eok) return '—';
+  if(eok >= 10000) return (eok/10000).toFixed(1) + '조';
+  return Math.round(eok).toLocaleString() + '억';
+}
+
+function render(){
+  let arr = DATA.etfs.slice();
+  if(THEME !== 'all') arr = arr.filter(e => e.theme === THEME);
+  if(Q){
+    arr = arr.map(e => ({e, s: matchScore(e, Q)})).filter(x => x.s > 0)
+      .sort((a,b) => b.s - a.s || (b.e.aum_eok||0) - (a.e.aum_eok||0))
+      .map(x => x.e);
+  }
+  $('empty').style.display = arr.length ? 'none' : 'block';
+  $('cards').innerHTML = arr.map(e => {
+    const qLow = Q.toLowerCase();
+    const top3 = e.holdings.slice(0, 3);
+    const holds = e.holdings.length ? top3.map(h => {
+      const match = qLow && h.name && h.name.toLowerCase().includes(qLow);
+      return `<div class="row"><span class="stk ${match?'match':''}">${h.name||'—'}</span><span class="w">${h.weight.toFixed(1)}%</span></div>`;
+    }).join('') : '<div class="row"><span class="stk">보유 비중 데이터 없음</span></div>';
+    const ret = (e.returns && (e.returns['M3'] != null ? e.returns['M3'] : e.returns['YTD']));
+    const retStr = ret != null ? `${ret>=0?'+':''}${ret.toFixed(1)}%` : '';
+    const retCls = ret != null && ret < 0 ? 'neg' : '';
+    return `
+      <a class="card ${e.holdings.length?'':'no-holds'}" href="/etf/${e.code}.html">
+        <div class="theme">${e.theme}</div>
+        <div class="name">${e.name}<span class="cd">${e.code}</span></div>
+        <div class="holds">${holds}</div>
+        <div class="meta">
+          <span class="aum">AUM ${fmtAum(e.aum_eok)}</span>
+          <span class="ret ${retCls}">${retStr}</span>
+        </div>
+      </a>`;
+  }).join('');
+}
+
+$('q').addEventListener('input', e => {
+  Q = e.target.value.trim();
+  render();
+});
+
+load();
+</script>
+</body>
+</html>
