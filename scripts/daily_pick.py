@@ -52,7 +52,9 @@ def get_pick_from_signal():
 
     선정 기준:
       1. small_entry / 진입 권장 stance 우선
-      2. 동일 stance면 impacted_kr_stocks 배열 첫 번째
+      2. 동일 stance면 impacted_kr_stocks 배열 순서 (1안→2안→3안)
+      3. 어제 픽과 동일 종목은 건너뛰고 같은 섹터 다음 후보로 회전
+         (사용자 노출 다양성 + 섹터 깊이 의도 유지)
     """
     if not SIGNAL_JSON.exists():
         print("[오늘의 픽] signal.json 없음")
@@ -73,7 +75,27 @@ def get_pick_from_signal():
         enumerate(impacted),
         key=lambda x: (priority.get(x[1].get("stance", "watch"), 1), x[0]),
     )
-    chosen = sorted_list[0][1]
+
+    # 어제 픽 회전 — today_pick.json 에서 어제 코드 읽어서 제외 후보로
+    yesterday_code = None
+    if TODAY_PICK_JSON.exists():
+        try:
+            prev = json.loads(TODAY_PICK_JSON.read_text())
+            if prev.get("date") != date.today().isoformat():
+                yesterday_code = prev.get("code")
+        except Exception:
+            pass
+
+    chosen = None
+    for _, cand in sorted_list:
+        if yesterday_code and cand.get("code") == yesterday_code:
+            print(f"[오늘의 픽] 어제와 동일 종목 {cand.get('name')}({yesterday_code}) 건너뜀")
+            continue
+        chosen = cand
+        break
+    if chosen is None:
+        # 후보 전부 어제와 동일 (드묾) — 그래도 1순위 사용
+        chosen = sorted_list[0][1]
     code = chosen.get("code", "")
     name = chosen.get("name", "")
     if not code or not name:
