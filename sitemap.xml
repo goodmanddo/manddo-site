@@ -82,4 +82,10 @@
   <url><loc>https://manddo.kr/privacy.html</loc><lastmod>2026-04-25</lastmod><priority>0.3</priority></url>
   <url><loc>https://manddo.kr/terms.html</loc><lastmod>2026-04-25</lastmod><priority>0.3</priority></url>
   <url><loc>https://manddo.kr/contact.html</loc><lastmod>2026-04-25</lastmod><priority>0.4</priority></url>
+  <url>
+    <loc>https://manddo.kr/learn/pattern/triple-bottom.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
