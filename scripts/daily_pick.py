@@ -76,26 +76,43 @@ def get_pick_from_signal():
         key=lambda x: (priority.get(x[1].get("stance", "watch"), 1), x[0]),
     )
 
-    # 어제 픽 회전 — today_pick.json 에서 어제 코드 읽어서 제외 후보로
+    # 어제 픽 회전 — pick_history.jsonl 에서 today 이전 최근 코드 조회
+    history_file = ROOT / "ai-log" / ".pick_history.jsonl"
+    today_iso = date.today().isoformat()
     yesterday_code = None
-    if TODAY_PICK_JSON.exists():
+    if history_file.exists():
         try:
-            prev = json.loads(TODAY_PICK_JSON.read_text())
-            if prev.get("date") != date.today().isoformat():
-                yesterday_code = prev.get("code")
-        except Exception:
-            pass
+            for line in reversed(history_file.read_text().strip().split("\n")):
+                if not line:
+                    continue
+                entry = json.loads(line)
+                if entry.get("date") and entry.get("date") < today_iso:
+                    yesterday_code = entry.get("code")
+                    break
+        except Exception as e:
+            print(f"[오늘의 픽] 히스토리 파싱 실패: {e}")
 
     chosen = None
     for _, cand in sorted_list:
         if yesterday_code and cand.get("code") == yesterday_code:
-            print(f"[오늘의 픽] 어제와 동일 종목 {cand.get('name')}({yesterday_code}) 건너뜀")
+            print(f"[오늘의 픽] 어제 픽 {cand.get('name')}({yesterday_code}) 회전 — 건너뜀")
             continue
         chosen = cand
         break
     if chosen is None:
         # 후보 전부 어제와 동일 (드묾) — 그래도 1순위 사용
         chosen = sorted_list[0][1]
+
+    # 히스토리 append (오늘 이미 있으면 마지막 줄을 갈음하기 위해 append만)
+    try:
+        with history_file.open("a", encoding="utf-8") as f:
+            f.write(json.dumps({
+                "date": today_iso,
+                "code": chosen.get("code"),
+                "name": chosen.get("name"),
+            }, ensure_ascii=False) + "\n")
+    except Exception as e:
+        print(f"[오늘의 픽] 히스토리 기록 실패: {e}")
     code = chosen.get("code", "")
     name = chosen.get("name", "")
     if not code or not name:
