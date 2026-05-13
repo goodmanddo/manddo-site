@@ -4,22 +4,29 @@
       "name": "삼성화재",
       "qty": 1,
       "avg_price": 504000,
-      "current_price": 505000,
+      "current_price": 498000,
       "opened_at": "2026-05-11"
     },
-    "079940": {
-      "name": "가비아",
-      "qty": 20,
-      "avg_price": 30100,
-      "current_price": 32500,
-      "opened_at": "2026-04-30"
+    "005850": {
+      "name": "에스엘",
+      "qty": 17,
+      "avg_price": 68000,
+      "current_price": 68700,
+      "opened_at": "2026-05-13"
     },
-    "295310": {
-      "name": "에이치브이엠",
+    "093320": {
+      "name": "케이아이엔엑스",
       "qty": 5,
-      "avg_price": 102700,
-      "current_price": 98200,
-      "opened_at": "2026-05-11"
+      "avg_price": 120500,
+      "current_price": 121900,
+      "opened_at": "2026-05-13"
+    },
+    "192080": {
+      "name": "더블유게임즈",
+      "qty": 12,
+      "avg_price": 57400,
+      "current_price": 57100,
+      "opened_at": "2026-05-13"
     }
   },
   "history": [
@@ -74,6 +81,10 @@
     {
       "date": "2026-05-12",
       "total_eval": 19720381
+    },
+    {
+      "date": "2026-05-13",
+      "total_eval": 19715241
     }
   ],
   "completed_trades": [
@@ -279,6 +290,22 @@
       "date": "2026-05-12",
       "is_win": false,
       "hold_days": 1
+    },
+    {
+      "name": "가비아",
+      "code": "079940",
+      "return_pct": 10.13,
+      "date": "2026-05-13",
+      "is_win": true,
+      "hold_days": 13
+    },
+    {
+      "name": "에이치브이엠",
+      "code": "295310",
+      "return_pct": -8.67,
+      "date": "2026-05-13",
+      "is_win": false,
+      "hold_days": 2
     }
   ]
 }
