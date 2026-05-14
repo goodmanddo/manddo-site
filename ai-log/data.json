@@ -1,74 +1,55 @@
 {
-  "date": "2026-05-13",
+  "date": "2026-05-14",
   "start_date": "2026-05-03",
-  "cumulative_return": -1.42,
-  "week_return": -1.32,
-  "day_return": -0.03,
-  "today_realized_avg": 0.73,
-  "today_trade_count": 2,
-  "today_win_count": 1,
-  "today_loss_count": 1,
+  "cumulative_return": -1.22,
+  "week_return": -1.12,
+  "day_return": 0.21,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
+  "today_loss_count": 0,
   "win_rate": 41,
   "total_trades": 29,
-  "ai_commentary": "오늘은 에스엘, 케이아이엔엑스, 더블유게임즈 등 신규 편입. 1건 익절로 수익 확정. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -1.4%.",
+  "ai_commentary": "오늘은 에스엘, 케이아이엔엑스, 더블유게임즈 등 신규 편입. 시작 이후 누적 -1.2%.",
   "new_buys": [
     {
       "name": "에스엘",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.03,
+      "entry_to_current_pct": -0.15,
       "weight_pct": 6,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "케이아이엔엑스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.16,
+      "entry_to_current_pct": -1.58,
       "weight_pct": 3,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "더블유게임즈",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.52,
-      "weight_pct": 3,
-      "hold_days": 0,
+      "entry_to_current_pct": 4.01,
+      "weight_pct": 4,
+      "hold_days": 1,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
       "name": "삼성화재",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.19,
+      "entry_to_current_pct": 6.75,
       "weight_pct": 3,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     }
   ],
-  "exits": [
-    {
-      "type": "win",
-      "name": "가비아",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 10.13,
-      "hold_days": 13,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    },
-    {
-      "type": "loss",
-      "name": "에이치브이엠",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -8.67,
-      "hold_days": 2,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "에이치브이엠",
@@ -103,6 +84,12 @@
       "weight_pct": 6
     },
     {
+      "name": "더블유게임즈",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
+    {
       "name": "삼성화재",
       "slug": "",
       "market": "코스피",
@@ -110,12 +97,6 @@
     },
     {
       "name": "케이아이엔엑스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
-    },
-    {
-      "name": "더블유게임즈",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -153,6 +134,10 @@
     {
       "date": "2026-05-13",
       "cumulative_return": -1.42
+    },
+    {
+      "date": "2026-05-14",
+      "cumulative_return": -1.22
     }
   ]
 }

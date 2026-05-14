@@ -4,28 +4,28 @@
       "name": "삼성화재",
       "qty": 1,
       "avg_price": 504000,
-      "current_price": 498000,
+      "current_price": 538000,
       "opened_at": "2026-05-11"
     },
     "005850": {
       "name": "에스엘",
       "qty": 17,
       "avg_price": 68000,
-      "current_price": 68700,
+      "current_price": 67900,
       "opened_at": "2026-05-13"
     },
     "093320": {
       "name": "케이아이엔엑스",
       "qty": 5,
       "avg_price": 120500,
-      "current_price": 121900,
+      "current_price": 118600,
       "opened_at": "2026-05-13"
     },
     "192080": {
       "name": "더블유게임즈",
       "qty": 12,
       "avg_price": 57400,
-      "current_price": 57100,
+      "current_price": 59700,
       "opened_at": "2026-05-13"
     }
   },
@@ -85,6 +85,10 @@
     {
       "date": "2026-05-13",
       "total_eval": 19715241
+    },
+    {
+      "date": "2026-05-14",
+      "total_eval": 19756341
     }
   ],
   "completed_trades": [
