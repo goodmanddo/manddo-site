@@ -3,19 +3,21 @@
   "round": 2,
   "week_start": "2026-05-11",
   "week_end": "2026-05-15",
-  "status": "active",
+  "status": "closed",
   "picks": {
     "manddo": {
       "code": "040160",
       "name": "매커스",
-      "reason": "AMD 수혜주"
+      "reason": "AMD 수혜주",
+      "final_return": -11.304836895388082
     },
     "ai": {
       "code": "145020",
       "name": "휴젤",
       "reason": "자동매매 봇이 지난주 매수해서 현재 보유 중인 종목 (swing 전략 신호 가장 강함)",
       "bot_buy_price": 294000,
-      "bot_buy_date": "2026-05-11"
+      "bot_buy_date": "2026-05-11",
+      "final_return": -3.9451114922813058
     }
   },
   "snapshots": [
@@ -632,5 +634,5 @@
       }
     }
   },
-  "updated_at": "2026-05-15 15:30:06"
+  "updated_at": "2026-05-15 15:35:01"
 }
