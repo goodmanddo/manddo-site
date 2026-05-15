@@ -1,55 +1,65 @@
 {
-  "date": "2026-05-14",
+  "date": "2026-05-15",
   "start_date": "2026-05-03",
-  "cumulative_return": -1.22,
-  "week_return": -1.12,
-  "day_return": 0.21,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -0.61,
+  "week_return": -0.7,
+  "day_return": 0.62,
+  "today_realized_avg": 9.13,
+  "today_trade_count": 1,
+  "today_win_count": 1,
   "today_loss_count": 0,
-  "win_rate": 41,
-  "total_trades": 29,
-  "ai_commentary": "오늘은 에스엘, 케이아이엔엑스, 더블유게임즈 등 신규 편입. 시작 이후 누적 -1.2%.",
+  "win_rate": 43,
+  "total_trades": 30,
+  "ai_commentary": "오늘은 아이에스동서, 에스엘, 케이아이엔엑스 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -0.6%.",
   "new_buys": [
+    {
+      "name": "아이에스동서",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.66,
+      "weight_pct": 2,
+      "hold_days": 0,
+      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
+    },
     {
       "name": "에스엘",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.15,
+      "entry_to_current_pct": 5.74,
       "weight_pct": 6,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "케이아이엔엑스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.58,
+      "entry_to_current_pct": -4.81,
       "weight_pct": 3,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "더블유게임즈",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 4.01,
+      "entry_to_current_pct": 2.96,
       "weight_pct": 4,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
-    },
+    }
+  ],
+  "exits": [
     {
+      "type": "win",
       "name": "삼성화재",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 6.75,
-      "weight_pct": 3,
-      "hold_days": 3,
-      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+      "return_pct": 9.13,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [
     {
       "name": "에이치브이엠",
@@ -90,16 +100,16 @@
       "weight_pct": 4
     },
     {
-      "name": "삼성화재",
+      "name": "케이아이엔엑스",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
     },
     {
-      "name": "케이아이엔엑스",
+      "name": "아이에스동서",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 3
+      "weight_pct": 2
     }
   ],
   "return_history": [
@@ -138,6 +148,10 @@
     {
       "date": "2026-05-14",
       "cumulative_return": -1.22
+    },
+    {
+      "date": "2026-05-15",
+      "cumulative_return": -0.61
     }
   ]
 }
