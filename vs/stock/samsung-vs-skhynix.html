@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>삼성전자 vs SK하이닉스 — 어느 쪽이 나에게 맞을까 | 만또 종목 비교</title>
+<meta name="description" content="한국 증시를 대표하는 반도체 양대 산맥, 삼성전자와 SK하이닉스. 같은 메모리 반도체를 다루지만 사업 포트폴리오와 수익 구조, 그리고 주가의 결이 사뭇 다르다. 두 종목을 나란히 놓고 보면 한국 반도체 산업의 두 얼굴이 보인다.">
+<meta name="keywords" content="삼성전자,SK하이닉스,삼성전자 vs SK하이닉스,주식비교,종목비교,반도체 양대 산맥">
+<meta property="og:title" content="삼성전자 vs SK하이닉스">
+<meta property="og:description" content="한국 증시를 대표하는 반도체 양대 산맥, 삼성전자와 SK하이닉스. 같은 메모리 반도체를 다루지만 사업 포트폴리오와 수익 구조, 그리고 주가의 결이 사뭇 다르다. 두 종목을 나란히 놓고 보면 한국 반도체 산업의 두 얼굴이 보인다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/vs/stock/samsung-vs-skhynix.html">
+<link rel="canonical" href="https://manddo.kr/vs/stock/samsung-vs-skhynix.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .vsx-hero { background:linear-gradient(135deg,#1B64DA 0%,#7c3aed 100%); border-radius:16px; padding:32px 24px 28px; margin:20px 0 24px; color:#fff; }
+  .vsx-hero .theme-badge { display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:1px; opacity:0.85; margin-bottom:10px; }
+  .vsx-hero h1 { font-size:28px; margin:0 0 8px; color:#fff; font-weight:800; letter-spacing:-0.02em; }
+  .vsx-hero .lead { font-size:14.5px; opacity:0.95; line-height:1.6; margin:0; max-width:640px; }
+  .vsx-tldr { background:linear-gradient(135deg,#fff7ed 0%,#fef3c7 100%); border-radius:12px; padding:16px 20px; font-size:14px; line-height:1.7; color:#7c2d12; margin-bottom:28px; }
+  .vsx-tldr b { color:#7c2d12; }
+  .vs-vs { text-align:center; font-size:24px; font-weight:900; color:#7c3aed; margin:12px 0; letter-spacing:0.1em; }
+  .stock-cards { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:28px; }
+  @media (max-width:560px) { .stock-cards { grid-template-columns:1fr; } }
+  .stock-card { background:#fff; border:1px solid #eef0f3; border-radius:14px; padding:18px 20px; }
+  .stock-card h3 { font-size:18px; font-weight:800; margin:0 0 4px; color:#111827; }
+  .stock-card .code { font-size:12px; color:#9ca3af; font-family:'SF Mono',ui-monospace,monospace; margin-bottom:10px; }
+  .stock-card p { font-size:13.5px; line-height:1.7; color:#374151; margin:0; }
+  .compare-table { width:100%; border-collapse:collapse; background:#fff; border:1px solid #eef0f3; border-radius:12px; overflow:hidden; }
+  .compare-table th { background:#f8fafc; font-size:12px; color:#6b7280; padding:11px 12px; text-align:left; font-weight:700; }
+  .compare-table th.col-a, .compare-table th.col-b { text-align:center; font-size:13.5px; color:#111827; }
+  .compare-table th.col-a { background:#dbeafe; color:#1e40af; }
+  .compare-table th.col-b { background:#ede9fe; color:#6b21a8; }
+  .compare-table td { padding:12px; border-top:1px solid #f1f5f9; font-size:13.5px; line-height:1.6; color:#374151; }
+  .compare-table td.lbl { font-weight:700; color:#111827; width:130px; background:#fafbfc; }
+  .section-block { background:#fff; border:1px solid #eef0f3; border-radius:12px; padding:20px 22px; margin-bottom:16px; }
+  .section-block h2 { font-size:18px; margin:0 0 10px; }
+  .section-block p { font-size:14px; line-height:1.75; color:#374151; }
+  .risks-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:28px; }
+  @media (max-width:560px) { .risks-grid { grid-template-columns:1fr; } }
+  .risk-box { background:#fff; border:1px solid #fecaca; border-radius:12px; padding:16px 18px; }
+  .risk-box.b { border-color:#ddd6fe; }
+  .risk-box h3 { font-size:14px; margin:0 0 8px; color:#b91c1c; }
+  .risk-box.b h3 { color:#6b21a8; }
+  .risk-box ul { margin:0; padding-left:20px; font-size:13.5px; line-height:1.7; color:#374151; }
+  .verdict { background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%); border-radius:14px; padding:22px 24px; margin-bottom:28px; }
+  .verdict h2 { font-size:18px; margin:0 0 10px; color:#14532d; }
+  .verdict .v-summary { font-size:14.5px; line-height:1.75; color:#14532d; margin-bottom:14px; }
+  .verdict .v-rec { display:grid; gap:8px; margin-top:14px; }
+  .verdict .vr-item { background:rgba(255,255,255,0.7); padding:12px 14px; border-radius:8px; font-size:13.5px; line-height:1.6; color:#14532d; }
+  .verdict .vr-item b { display:inline-block; min-width:140px; color:#15803d; }
+  .faq-item { background:#fff; border:1px solid #eef0f3; border-radius:10px; padding:14px 16px; margin-bottom:8px; }
+  .faq-item .q { font-weight:700; font-size:14px; margin-bottom:6px; color:#111827; }
+  .faq-item .a { font-size:13.5px; line-height:1.65; color:#4b5563; margin:0; }
+  .breadcrumb { font-size:12px; color:#8b95a1; margin:12px 0; }
+  .breadcrumb a { color:#1B64DA; text-decoration:none; }
+  .breadcrumb .sep { margin:0 6px; color:#cbd5e1; }
+  .disclaimer { background:#f8fafc; border:1px solid #e2e8f0; padding:14px 16px; border-radius:8px; font-size:12.5px; color:#64748b; line-height:1.6; margin-top:32px; }
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/" class="active">🏁 휴먼 vs AI</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="breadcrumb">
+    <a href="/vs/">휴먼 vs AI</a><span class="sep">/</span>
+    <a href="/vs/stock/">종목 비교</a><span class="sep">/</span>삼성전자 vs SK하이닉스
+  </div>
+  <section class="vsx-hero">
+    <div class="theme-badge">VS · 반도체 양대 산맥</div>
+    <h1>삼성전자 vs SK하이닉스</h1>
+    <p class="lead">한국 증시를 대표하는 반도체 양대 산맥, 삼성전자와 SK하이닉스. 같은 메모리 반도체를 다루지만 사업 포트폴리오와 수익 구조, 그리고 주가의 결이 사뭇 다르다. 두 종목을 나란히 놓고 보면 한국 반도체 산업의 두 얼굴이 보인다.</p>
+  </section>
+
+  <div class="vsx-tldr"><b>⚡ 한 줄 요약</b><br>삼성전자는 종합 반도체·세트 사업을 아우르는 안정형 대장주, SK하이닉스는 메모리·HBM에 집중한 사이클 베타가 높은 성장형 플레이. 안정·배당은 삼성전자, 메모리 업사이클 베팅은 SK하이닉스 쪽이 맞다.</div>
+
+  <div class="stock-cards">
+    <div class="stock-card">
+      <h3>🅰 삼성전자</h3>
+      <div class="code">005930</div>
+      <p>삼성전자는 반도체(DS)와 세트(DX)를 모두 거느린 종합 전자 기업이다. 메모리에서는 글로벌 최상위권 점유율을 유지하면서 동시에 파운드리, 시스템LSI, 디스플레이, 스마트폰, TV·가전까지 폭넓은 포트폴리오를 갖고 있다. 이런 구조 덕분에 특정 사업의 부진을 다른 부문이 어느 정도 상쇄하는 자연 헤지가 가능하다. 다만 사업이 다각화된 만큼 어떤 한 모멘텀에 주가가 가파르게 반응하기는 어렵다.</p>
+    </div>
+    <div class="stock-card">
+      <h3>🅱 SK하이닉스</h3>
+      <div class="code">000660</div>
+      <p>SK하이닉스는 사실상 메모리 반도체에 집중한 전업 회사다. DRAM 매출 비중이 절대적이며, 최근에는 AI 가속기에 들어가는 HBM(고대역폭 메모리) 분야에서 글로벌 선두 지위를 굳혀 가고 있다. 그만큼 메모리 가격 사이클과 AI 투자 사이클에 실적이 직결되는 구조다. 사업 폭은 좁지만 메모리 업황이 좋을 때 이익 레버리지가 매우 크게 작동한다.</p>
+    </div>
+  </div>
+
+  <h2>📊 항목별 비교</h2>
+  <table class="compare-table">
+    <thead><tr><th></th><th class="col-a">삼성전자</th><th class="col-b">SK하이닉스</th></tr></thead>
+    <tbody>
+      <tr><td class="lbl">사업 영역</td><td>메모리·파운드리·시스템LSI·디스플레이·스마트폰·가전 등 종합 전자</td><td>DRAM·NAND 중심 메모리 반도체 전업</td></tr>
+      <tr><td class="lbl">주력 매출원</td><td>DS(반도체)와 DX(모바일·가전) 양대 축, 모바일 비중 큼</td><td>DRAM이 절대 다수, HBM 비중 빠르게 확대</td></tr>
+      <tr><td class="lbl">재무 특징</td><td>압도적 현금성 자산, 무차입 경영 기조, 이익 변동 폭 상대적 완화</td><td>메모리 사이클에 따라 흑자·적자 폭이 크고 차입 의존도 더 높음</td></tr>
+      <tr><td class="lbl">배당 성향</td><td>분기 배당 정착, 안정적이고 예측 가능한 배당 정책</td><td>배당은 있으나 규모·성향이 상대적으로 보수적, 성장 재투자 우선</td></tr>
+      <tr><td class="lbl">주가 변동성</td><td>코스피 대장주로서 변동성 상대적으로 완만</td><td>메모리 가격·HBM 모멘텀에 따라 변동성 크게 확대</td></tr>
+      <tr><td class="lbl">성장 동력</td><td>파운드리 추격, 온디바이스 AI, 모바일·가전 프리미엄화</td><td>HBM 시장 선점, AI 가속기 수요, 고부가 D램·NAND</td></tr>
+    </tbody>
+  </table>
+
+  <h2 style="margin-top:32px">💰 재무·실적 성격</h2>
+  <div class="section-block"><p>두 회사 모두 거대한 설비투자가 필요한 자본집약 산업에 속하지만 재무 체질은 결이 다르다. 삼성전자는 오랫동안 쌓아온 순현금 포지션과 다각화된 사업 덕분에 메모리 다운사이클에서도 전사 적자로 가는 일이 드물다. 반면 SK하이닉스는 메모리 전업 특성상 업황이 꺾이면 영업이익이 빠르게 감소하거나 적자로 전환되는 모습을 과거에도 보여왔다. 대신 업사이클에 진입하면 매출과 이익이 동시에 폭발적으로 늘어나는 전형적인 사이클리컬 패턴이 나타난다. 부채 비율과 차입금 의존도 면에서는 SK하이닉스가 상대적으로 높은 편이며, 대규모 HBM·NAND 투자로 자금 소요도 크다. 잉여현금흐름의 안정성은 삼성전자가, 호황기 이익 모멘텀의 폭발력은 SK하이닉스가 우위라고 평가할 수 있다. 결국 ‘이익의 절대 규모와 안정성’ vs ‘이익 변동성과 업사이클 베타’의 트레이드오프 구도다.</p></div>
+
+  <h2>📈 주가·수급 성격</h2>
+  <div class="section-block"><p>코스피 시가총액 1위인 삼성전자는 외국인 보유 비중이 매우 높고, 시장 전체 흐름을 좌우하는 지수 대표주 성격이 강하다. 그만큼 일중 변동성은 비교적 완만하고 패시브·연기금 매매가 가격을 떠받치는 경향이 있다. SK하이닉스는 HBM 모멘텀이 부각된 이후 외국인·기관의 매매 강도가 매우 커졌고, 메모리 가격이나 엔비디아·AI 관련 뉴스에 민감하게 반응한다. 거래 회전율과 변동성 모두 삼성전자보다 높은 편이라 단기 트레이딩 관점에서는 더 매력적인 종목으로 분류된다.</p></div>
+
+  <h2>⚠ 각 종목의 리스크</h2>
+  <div class="risks-grid">
+    <div class="risk-box">
+      <h3>🅰 삼성전자 리스크</h3>
+      <ul>
+    <li>파운드리 부문의 수율·고객 확보 지연 시 시스템 반도체 경쟁력 약화</li>
+    <li>스마트폰·가전 등 세트 사업의 수요 둔화와 경쟁 심화</li>
+    <li>HBM 등 고부가 메모리에서 경쟁사 대비 후발 이미지 고착화 우려</li>
+      </ul>
+    </div>
+    <div class="risk-box b">
+      <h3>🅱 SK하이닉스 리스크</h3>
+      <ul>
+    <li>메모리 가격 하락 사이클 진입 시 이익이 급격히 훼손될 수 있음</li>
+    <li>HBM 시장에 경쟁사 진입이 본격화되면 점유율·마진 동시 압박</li>
+    <li>대규모 시설투자로 인한 차입금 증가와 금리 민감도</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>🎯 만또의 결론</h2>
+  <div class="verdict">
+    <p class="v-summary">삼성전자는 ‘한국 반도체의 안정판’, SK하이닉스는 ‘메모리 사이클과 AI의 순수 베팅’이다. 두 종목은 경쟁자라기보다 서로 다른 투자 성격을 가진 보완재에 가깝다. 포트폴리오를 짤 때도 어느 한 쪽만 담기보다 비중 조절로 접근하는 편이 합리적이다.</p>
+    <div class="v-rec">
+      <div class="vr-item"><b>📈 성장주 선호</b>SK하이닉스. HBM·AI 메모리 모멘텀이 이익에 가장 직접적으로 반영되는 구조이기 때문이다.</div>
+      <div class="vr-item"><b>💰 배당·안정 선호</b>삼성전자. 분기 배당 체계와 안정적인 현금흐름, 다각화된 사업 구조가 배당 지속성을 뒷받침한다.</div>
+      <div class="vr-item"><b>⚡ 단기 트레이딩</b>SK하이닉스. 메모리 가격·AI 뉴스 흐름에 따라 변동성과 거래량이 크게 확대돼 단기 매매 환경이 더 활발하다.</div>
+    </div>
+  </div>
+
+  <h2>❓ 자주 묻는 질문</h2>
+  <div class="faq-item"><div class="q">두 종목 중 시가총액이 더 큰 쪽은?</div><p class="a">삼성전자가 한국 증시 시총 1위이며, SK하이닉스는 통상 그 다음 자리를 두고 다투는 위치에 있다.</p></div>
+  <div class="faq-item"><div class="q">AI 수혜를 가장 직접적으로 받는 쪽은?</div><p class="a">HBM 매출 비중이 빠르게 늘고 있는 SK하이닉스가 단기적인 AI 수혜 강도는 더 강한 편이다. 삼성전자는 HBM과 파운드리, 온디바이스 AI를 합쳐 다각도로 수혜를 노린다.</p></div>
+  <div class="faq-item"><div class="q">둘 다 같이 보유해도 되나?</div><p class="a">사업 영역이 겹치는 부분이 크기 때문에 분산 효과는 제한적이다. 다만 ‘안정+사이클 베타’를 동시에 담는다는 관점에서 비중을 다르게 가져가는 전략은 충분히 유효하다.</p></div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    본 비교는 일반적으로 알려진 사업 구조·재무 성격 기준의 분석이며 특정 종목의 매수·매도 권유가 아닙니다. 실제 투자 결정은 최신 재무제표·공시·시장 환경을 직접 확인한 후 본인이 판단해야 합니다.
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+</body>
+</html>
