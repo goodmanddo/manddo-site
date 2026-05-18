@@ -141,6 +141,11 @@
         <div class="ps-sub" id="cum-sub">시즌 시작</div>
       </div>
       <div class="proj-stat">
+        <div class="ps-label">코스피 대비</div>
+        <div class="ps-value" id="excess-return">—</div>
+        <div class="ps-sub" id="excess-sub">시장중립 초과수익</div>
+      </div>
+      <div class="proj-stat">
         <div class="ps-label">평가손익</div>
         <div class="ps-value" id="pnl-krw">0</div>
         <div class="ps-sub">원 단위</div>
@@ -337,6 +342,18 @@
       cumEl.classList.toggle('pos', s.cumulative_return_pct > 0);
       cumEl.classList.toggle('neg', s.cumulative_return_pct < 0);
       document.getElementById('cum-sub').textContent = pnl === 0 ? '시즌 시작' : '시드 대비';
+      const exEl = document.getElementById('excess-return');
+      if (s.excess_return_pct == null) {
+        exEl.textContent = '—';
+      } else {
+        exEl.textContent = (s.excess_return_pct >= 0 ? '+' : '') + s.excess_return_pct.toFixed(2) + '%p';
+        exEl.classList.toggle('pos', s.excess_return_pct > 0);
+        exEl.classList.toggle('neg', s.excess_return_pct < 0);
+        if (s.benchmark_return_pct != null) {
+          document.getElementById('excess-sub').textContent =
+            '코스피 ' + (s.benchmark_return_pct >= 0 ? '+' : '') + s.benchmark_return_pct.toFixed(2) + '% 대비';
+        }
+      }
       const pnlEl = document.getElementById('pnl-krw');
       pnlEl.textContent = fmtPnl(pnl);
       pnlEl.classList.toggle('pos', pnl > 0);
