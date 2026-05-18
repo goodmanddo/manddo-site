@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바닥종목 스캐너 — 쌍바닥·3바닥 + 거래량 상승 종목 | 만또 투자 인사이트</title>
+<meta name="description" content="KOSPI·KOSDAQ 시총 1,000억 이상 중 쌍바닥·3바닥 패턴이 잡히고 거래량이 살아난 종목을 매일 자동 스캔. 바닥 대비 상승률·넥라인 거리·거래량비 한 표로.">
+<meta name="keywords" content="바닥종목, 쌍바닥, 3바닥, 삼중바닥, 거래량돌파, 바닥잡기, 기술적분석, 차트패턴">
+<meta property="og:title" content="바닥종목 스캐너 — 쌍바닥·3바닥 + 거래량 상승">
+<meta property="og:description" content="바닥 패턴 + 거래량 살아난 종목을 매일 자동 스캔. 매수권유 아님.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/tools/bottom.html">
+<link rel="canonical" href="https://manddo.kr/tools/bottom.html">
+<link rel="stylesheet" href="/css/main.css?v=20260425a">
+<style>
+.lead{background:linear-gradient(135deg,#E3F0FF 0%,#D6E8FF 60%,#E8E0FF 100%);border-radius:20px;padding:28px 24px;margin-bottom:24px;position:relative;overflow:hidden}
+.lead::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(50,130,246,.15),transparent 55%),radial-gradient(circle at 15% 90%,rgba(120,80,255,.10),transparent 55%);pointer-events:none}
+.lead h1{font-size:26px;font-weight:800;letter-spacing:-0.035em;line-height:1.3;color:#0d2a52;margin:0 0 8px;position:relative}
+.lead .sub{font-size:14px;color:#1b4570;line-height:1.65;position:relative;font-weight:500}
+.lead .meta{display:flex;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:#1b4570;font-weight:700;position:relative}
+.lead .meta .pill{background:rgba(255,255,255,.6);padding:5px 12px;border-radius:999px;letter-spacing:0.02em;border:1px solid rgba(50,130,246,.25)}
+.lead .meta .pill b{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;color:#0d2a52}
+.sort-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.sort-chip{background:#fff;border:1px solid #eef0f3;border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:700;color:#4e5968;cursor:pointer;font-family:inherit;transition:all .15s}
+.sort-chip:hover{background:#f2f4f6}
+.sort-chip.active{background:#191f28;border-color:#191f28;color:#fff}
+.tbl-wrap{background:#fff;border:1px solid #eef0f3;border-radius:18px;overflow:hidden}
+.tbl-head{display:grid;grid-template-columns:42px 1.5fr 0.75fr 0.75fr 0.85fr 0.8fr 1fr;gap:10px;padding:14px 18px;background:#f7f9fc;border-bottom:1px solid #eef0f3;font-size:11px;color:#8b95a1;font-weight:800;letter-spacing:0.04em}
+.tbl-head .n{text-align:right}
+.tbl-row{display:grid;grid-template-columns:42px 1.5fr 0.75fr 0.75fr 0.85fr 0.8fr 1fr;gap:10px;padding:14px 18px;border-bottom:1px solid #eef0f3;align-items:center;font-size:13.5px;cursor:pointer;text-decoration:none;color:inherit;transition:background .12s}
+.tbl-row:last-child{border-bottom:none}
+.tbl-row:hover{background:#f7f9fc}
+.tbl-row.top3{background:linear-gradient(90deg,#E8F2FF 0%,#fff 60%)}
+.tbl-row.top3:hover{background:linear-gradient(90deg,#D6E8FF 0%,#f7f9fc 60%)}
+.rk{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;font-size:13px;color:#8b95a1;letter-spacing:-0.02em}
+.tbl-row.top3 .rk{color:#1B64DA}
+.tbl-row .rk-medal{font-size:16px}
+.nm{font-weight:800;color:#191f28;letter-spacing:-0.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.nm .cd{font-size:11px;color:#8b95a1;font-family:'SF Mono',ui-monospace,monospace;margin-left:5px;font-weight:600}
+.nm .arrow{color:#3182F6;font-size:11px;margin-left:6px;opacity:0;transition:opacity .15s}
+.tbl-row:hover .nm .arrow{opacity:1}
+.pat{display:inline-block;font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:999px;letter-spacing:-0.01em}
+.pat.p2{background:#E8F2FF;color:#1B64DA}
+.pat.p3{background:#EDE6FF;color:#6B3FD6}
+.n{font-family:'SF Mono',ui-monospace,monospace;font-weight:700;color:#191f28;text-align:right;letter-spacing:-0.02em}
+.n.up{color:#D63939;font-weight:800}
+.n.vol{color:#1B64DA;font-weight:800;font-size:14.5px}
+.n.muted{color:#8b95a1;font-weight:600}
+.tbl-foot{padding:12px 18px;background:#f7f9fc;font-size:11.5px;color:#8b95a1;line-height:1.65}
+.info-card{background:#EEF5FF;border:1px solid #C9DEFF;border-radius:12px;padding:14px 16px;margin:20px 0;font-size:13px;color:#1b4570;line-height:1.7}
+.info-card b{color:#0d2a52}
+details.faq{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:4px 16px;margin-bottom:10px}
+details.faq summary{padding:14px 0;font-size:14.5px;font-weight:700;color:#191f28;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:'+';color:#8b95a1;font-size:20px;font-weight:400}
+details.faq[open] summary::after{content:'−'}
+details.faq .answer{padding:0 0 16px;font-size:13.5px;color:#4e5968;line-height:1.75}
+details.faq .answer p{margin-bottom:8px}
+details.faq .answer a{color:#1B64DA;font-weight:700}
+@media(max-width:600px){
+  .tbl-head,.tbl-row{grid-template-columns:32px 1.4fr 0.7fr 0.7fr 0.8fr;gap:6px;padding:12px 12px;font-size:12.5px}
+  .tbl-head .neck,.tbl-row .neck,.tbl-head .market,.tbl-row .market{display:none}
+  .lead h1{font-size:22px}
+}
+</style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/etf/">📊 ETF</a>
+      <a href="/tools/dividend.html">💰 배당주</a>
+      <a href="/tools/bottom.html" class="active">🔻 바닥종목</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="lead">
+    <h1>🔻 바닥종목 스캐너</h1>
+    <p class="sub">KOSPI·KOSDAQ 시총 1,000억 이상 중 <b>쌍바닥·3바닥</b> 패턴이 잡히고 <b>거래량이 살아난</b> 종목만 추립니다. 매일 장마감 후 자동 갱신.</p>
+    <div class="meta">
+      <span class="pill">갱신: <b id="updated">—</b></span>
+      <span class="pill">종목: <b id="count">—</b>개</span>
+      <span class="pill">기준: <b>바닥 + 거래량 ×1.3↑</b></span>
+    </div>
+  </div>
+
+  <div class="sort-bar">
+    <button class="sort-chip active" data-sort="vol">거래량비 ↓</button>
+    <button class="sort-chip" data-sort="neck">넥라인 근접 ↑</button>
+    <button class="sort-chip" data-sort="low">바닥 대비 ↑ (초입)</button>
+    <button class="sort-chip" data-sort="marcap">시가총액 ↓</button>
+  </div>
+
+  <div class="tbl-wrap">
+    <div class="tbl-head">
+      <div class="n">#</div>
+      <div>종목</div>
+      <div>패턴</div>
+      <div class="n">바닥대비</div>
+      <div class="n neck">넥라인까지</div>
+      <div class="n">거래량비</div>
+      <div class="n market">시가총액</div>
+    </div>
+    <div id="rows"></div>
+    <div class="tbl-foot">
+      바닥 대비 = 현재가가 패턴 최저점 대비 몇 % 올랐는지. 넥라인까지 = 바닥 사이 고점(저항선)까지 남은 상승폭(−면 이미 돌파). 거래량비 = 최근 7거래일 평균 ÷ 바닥 구간 평균. 일봉 기준 휴리스틱 판정.
+    </div>
+  </div>
+
+  <div class="info-card">
+    <b>ℹ️ 어떻게 골라내나 & 한계</b><br>
+    최근 7개월 일봉에서 비슷한 가격대의 저점이 2개(쌍바닥)·3개(3바닥) 잡히고, 저점 사이 반등이 +7% 이상이며, 최근 거래량이 바닥 구간 평균보다 1.3배 이상 살아난 종목을 매일 스캔합니다. 패턴 인식은 <b>기계적 휴리스틱</b>이라 오탐이 있습니다 — 관심종목 1차 필터로만 쓰고 실제 차트는 직접 확인하세요. <b>매수·매도 권유가 아닙니다.</b>
+  </div>
+
+  <h2>❓ 자주 묻는 질문</h2>
+  <details class="faq">
+    <summary>쌍바닥·3바닥이 뭔가요?</summary>
+    <div class="answer">
+      <p>주가가 바닥을 찍고 반등했다가 다시 비슷한 가격까지 내려와 한 번 더(또는 두 번 더) 같은 자리를 지킨 모양입니다. 그 자리가 강한 지지선이라는 뜻이고, 사이 고점(<b>넥라인</b>)을 거래량 동반해 뚫으면 추세 전환 신호로 봅니다. 자세히는 <a href="/learn/pattern/double-bottom.html">쌍바닥 패턴</a>·<a href="/learn/pattern/triple-bottom.html">3중바닥 패턴</a> 학습글 참고.</p>
+    </div>
+  </details>
+  <details class="faq">
+    <summary>거래량 조건을 왜 따지나요?</summary>
+    <div class="answer">
+      <p>바닥 패턴만으로는 그냥 횡보일 수 있어요. 바닥을 다지는 동안엔 거래량이 줄다가, 매집·돌파 구간에서 거래량이 살아나는 게 핵심입니다. 그래서 최근 거래량이 바닥 구간 평균보다 <b>1.3배 이상</b>일 때만 추립니다.</p>
+    </div>
+  </details>
+  <details class="faq">
+    <summary>"넥라인까지"가 마이너스면요?</summary>
+    <div class="answer">
+      <p>현재가가 이미 넥라인(저항선)을 넘었다는 뜻입니다. 갓 돌파한 종목도 포함하되, 넥라인 +5%를 넘게 멀리 간 종목은 추격이 부담스러워 제외합니다.</p>
+    </div>
+  </details>
+  <details class="faq">
+    <summary>언제 갱신되나요?</summary>
+    <div class="answer">
+      <p>평일 장마감 후 하루 한 번 자동 스캔합니다. 상단 "갱신" 날짜에서 마지막 시점 확인 가능.</p>
+    </div>
+  </details>
+</main>
+
+<script>
+let DATA = [];
+let CURRENT_SORT = 'vol';
+const MEDALS = ['🥇','🥈','🥉'];
+
+async function load(){
+  const res = await fetch('/tools/data/bottom.json?v='+Date.now());
+  const json = await res.json();
+  DATA = json.stocks || [];
+  document.getElementById('updated').textContent = fmtDate(json.generated_at);
+  document.getElementById('count').textContent = DATA.length;
+  render();
+}
+
+function fmtDate(iso){
+  if(!iso) return '—';
+  const d = new Date(iso);
+  if(isNaN(d)) return iso.slice(0,10);
+  return `${d.getFullYear()}.${d.getMonth()+1}.${d.getDate()}`;
+}
+
+function sortedData(){
+  const arr = DATA.slice();
+  if(CURRENT_SORT === 'vol')    arr.sort((a,b) => b.vol_ratio - a.vol_ratio);
+  if(CURRENT_SORT === 'neck')   arr.sort((a,b) => a.to_neck_pct - b.to_neck_pct);
+  if(CURRENT_SORT === 'low')    arr.sort((a,b) => a.from_low_pct - b.from_low_pct);
+  if(CURRENT_SORT === 'marcap') arr.sort((a,b) => b.marcap_eok - a.marcap_eok);
+  return arr;
+}
+
+function fmtMarcap(eok){
+  if(eok >= 10000) return (eok/10000).toFixed(1) + '조';
+  return Math.round(eok).toLocaleString() + '억';
+}
+
+function render(){
+  const arr = sortedData();
+  const wrap = document.getElementById('rows');
+  if(!arr.length){
+    wrap.innerHTML = '<div class="tbl-foot" style="text-align:center;padding:32px">조건에 맞는 바닥종목이 아직 없습니다. 장마감 후 갱신됩니다.</div>';
+    return;
+  }
+  wrap.innerHTML = arr.map((s, i) => {
+    const rank = i + 1;
+    const medal = MEDALS[i] || '';
+    const top = i < 3 ? 'top3' : '';
+    const rk = medal ? `<span class="rk-medal">${medal}</span>` : rank;
+    const isP3 = s.pattern === '3바닥';
+    const neck = s.to_neck_pct > 0
+      ? `<span class="n">+${s.to_neck_pct.toFixed(1)}%</span>`
+      : `<span class="n up">돌파 ${s.to_neck_pct.toFixed(1)}%</span>`;
+    return `
+      <a class="tbl-row ${top}" href="/stock/${s.code}.html" target="_blank" rel="noopener">
+        <div class="rk">${rk}</div>
+        <div class="nm">${s.name}<span class="cd">${s.code}</span><span class="arrow">→</span></div>
+        <div><span class="pat ${isP3?'p3':'p2'}">${s.pattern}</span></div>
+        <div class="n up">+${s.from_low_pct.toFixed(1)}%</div>
+        <div class="neck">${neck}</div>
+        <div class="n vol">${s.vol_ratio.toFixed(2)}배</div>
+        <div class="n muted market">${fmtMarcap(s.marcap_eok)}</div>
+      </a>`;
+  }).join('');
+}
+
+document.querySelectorAll('.sort-chip').forEach(c => {
+  c.addEventListener('click', () => {
+    document.querySelectorAll('.sort-chip').forEach(x => x.classList.remove('active'));
+    c.classList.add('active');
+    CURRENT_SORT = c.dataset.sort;
+    render();
+  });
+});
+
+load();
+</script>
+</body>
+</html>
