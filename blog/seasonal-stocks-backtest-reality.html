@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>계절 테마주, 진짜 통할까 — 1만 2천 조합을 백테스트한 결과 | 만또 블로그</title>
+<meta name="description" content="‘여름엔 빙과주’ 같은 계절 테마를 코스피·코스닥 12,192개 조합으로 검증했더니, 통과 종목 83개가 우연 기대치 301개에도 못 미쳤다. 데이터마이닝의 함정.">
+<meta name="keywords" content="만또블로그,투자일기">
+<meta property="og:title" content="계절 테마주, 진짜 통할까 — 1만 2천 조합을 백테스트한 결과">
+<meta property="og:description" content="‘여름엔 빙과주’ 같은 계절 테마를 코스피·코스닥 12,192개 조합으로 검증했더니, 통과 종목 83개가 우연 기대치 301개에도 못 미쳤다. 데이터마이닝의 함정.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/blog/seasonal-stocks-backtest-reality.html">
+<link rel="canonical" href="https://manddo.kr/blog/seasonal-stocks-backtest-reality.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.post-head{padding:32px 0 20px;border-bottom:1px solid #eef0f3;margin-bottom:28px}
+.post-head .cat{font-size:12px;color:#3182F6;font-weight:700;letter-spacing:0.04em;margin-bottom:10px}
+.post-head h1{font-size:30px;font-weight:800;letter-spacing:-0.035em;color:#191f28;line-height:1.3;margin-bottom:12px}
+.post-head .meta{font-size:13px;color:#8b95a1}
+.post-body{font-size:15.5px;line-height:1.85;color:#333d4b;max-width:720px}
+.post-body h2{font-size:21px;font-weight:800;letter-spacing:-0.03em;color:#191f28;margin:36px 0 14px;padding-top:8px}
+.post-body h3{font-size:17px;font-weight:700;color:#191f28;margin:24px 0 10px}
+.post-body p{margin:0 0 16px}
+.post-body ul,.post-body ol{margin:0 0 16px 20px;padding:0}
+.post-body li{margin-bottom:6px}
+.post-body blockquote{border-left:3px solid #3182F6;padding:4px 14px;margin:16px 0;color:#4e5968;background:#F7F9FC;border-radius:4px}
+.post-body img{max-width:100%;border-radius:10px;margin:16px 0;display:block}
+.post-body b,.post-body strong{color:#191f28}
+.post-body code{background:#F2F4F6;padding:2px 6px;border-radius:4px;font-size:14px}
+.post-body pre{background:#F2F4F6;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:13.5px;line-height:1.6;margin:16px 0}
+.post-body pre code{background:none;padding:0}
+.post-body a{color:#1B64DA}
+.post-body table{border-collapse:collapse;margin:16px 0;font-size:14px}
+.post-body th,.post-body td{border:1px solid #e5e8eb;padding:8px 12px}
+.post-body th{background:#F7F9FC;font-weight:700}
+@media(max-width:640px){.post-head h1{font-size:24px}.post-body{font-size:15px}}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/" class="active">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <!-- manddo-back-nav -->
+  <a class="back-btn" href="/blog/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="breadcrumb">
+    <a href="/blog/">블로그</a><span class="sep">/</span>계절 테마주, 진짜 통할까 — 1만 2천 조합을 백테스트한 결과
+  </div>
+
+  <header class="post-head">
+    <div class="cat">시장관찰</div>
+    <h1>계절 테마주, 진짜 통할까 — 1만 2천 조합을 백테스트한 결과</h1>
+    <div class="meta">2026년 5월 19일 · 읽는 시간 약 3분</div>
+  </header>
+
+  <article class="post-body">
+    <p>계절 테마주라는 말이 있다. 날이 더워지면 빙과·음료주, 추워지면 난방주, 4월이면 어떤 종목… 직관적으로 그럴듯하다. 그래서 직접 데이터로 검증해봤다. 결과만 먼저 말하면 <strong>"흔히 말하는 계절 강세는 우연과 구분되지 않는다."</strong></p>
+    <h2>어떻게 검증했나</h2>
+    <ul>
+    <li>
+    <p>대상: 코스피·코스닥 시총 1,000억 이상, 2010년~현재</p>
+    </li>
+    <li>
+    <p>종목별로 <strong>달(月)마다</strong> 수익률에서 코스피 같은 달 수익률을 뺀 '시장 초과수익'을 계산</p>
+    </li>
+    <li>
+    <p>평균이 아니라 <strong>적중 연수</strong>를 봤다 — "그 달에 시장을 이긴 해가 10년 중 몇 번인가". 평균은 한 해 폭등에 휘둘리기 때문이다</p>
+    </li>
+    <li>
+    <p>그 달 데이터 10년 이상 &amp; 적중 8년 이상 &amp; 적중률 80% 이상 &amp; 중앙값·평균 초과수익 양수인 조합만 '계절 강세'로 통과시켰다</p>
+    </li>
+    </ul>
+    <h2>데이터 마이닝의 함정</h2>
+    <p>핵심은 여기다. 종목 수천 개 × 12개월을 다 뒤지면, <strong>아무 패턴이 없어도</strong> 순전히 운으로 "13년 중 12년 4월에 올랐다" 같은 종목이 무더기로 나온다. 동전을 1만 번 던지면 앞면이 8연속 나오는 구간이 반드시 생기는 것과 같다.</p>
+    <p>그래서 같이 계산한 게 <strong>우연 기대치</strong>다. 진짜 계절성이 있다면 실제 통과 종목 수가 우연 기대치를 크게 웃돌아야 한다.</p>
+    <h2>숫자가 말하는 것</h2>
+    <ul>
+    <li>
+    <p>랜덤 종목이 한 달에 코스피를 이길 기저 확률: <strong>44.3%</strong> (절반이 안 된다 — 소수 대박이 시장 평균을 끌어올리기 때문)</p>
+    </li>
+    <li>
+    <p>검정한 (종목×달) 조합: <strong>12,192개</strong></p>
+    </li>
+    <li>
+    <p>기준 통과: <strong>83개</strong></p>
+    </li>
+    <li>
+    <p>순수 우연으로 기대되는 통과 수: <strong>약 301개</strong></p>
+    </li>
+    <li>
+    <p>신호 대 노이즈 비율: <strong>0.28</strong></p>
+    </li>
+    </ul>
+    <p>실제 통과(83)가 우연 기대치(301)보다 <strong>오히려 적다.</strong> 즉 화면을 가득 채운 "12년 중 11년 시장 초과" 종목들은, 1만 2천 개를 뒤지면 우연만으로도 그보다 더 많이 나오는 잔재였다. 통계적으로 운과 구별이 안 된다.</p>
+    <h2>왜 이런 결과가 나올까</h2>
+    <p>계절성이 정말 있다 해도 시장은 그걸 이미 안다. 모두가 아는 패턴은 미리 반영돼 가격이 먼저 움직이고, 막상 그 계절이 오면 효과가 사라진다. 알려진 아노말리가 공개되면 소멸하는 건 금융시장의 일반적 현상이다.</p>
+    <p>생존편향도 있다. 지금 시총 1,000억이 넘는 '살아남은' 종목만 봤으니 결과는 오히려 <strong>위로</strong> 부풀려져 있다. 그런데도 우연 수준이라는 건, 결론이 그만큼 견고하다는 뜻이다.</p>
+    <h2>그래서 개미는</h2>
+    <ul>
+    <li>
+    <p>"○월엔 ○○주" 같은 계절 테마는 <strong>매매 근거로 삼을 만한 통계적 우위가 없다.</strong> 내러티브가 직관적일수록 더 의심하자</p>
+    </li>
+    <li>
+    <p>누군가 "과거 N년 중 M년 올랐다"고 하면, 반드시 물어야 한다 — <em>몇 개의 후보를 뒤져서 찾은 숫자인가?</em> 검정 횟수를 빼놓은 적중률은 마술이 아니라 착시다</p>
+    </li>
+    <li>
+    <p>검증되지 않은 패턴을 따라가느니, 비용 낮은 분산투자가 대부분의 개인에게 더 낫다는 결론은 지루하지만 데이터가 반복해서 가리키는 방향이다</p>
+    </li>
+    </ul>
+    <p>이 글은 특정 종목의 매수·매도 권유가 아니며, 과거 데이터 분석일 뿐 미래 수익을 보장하지 않는다. 우리는 <a href="https://manddo.kr/ai-project/">AI 1년 투자 실험</a>에서도 이렇게 '안 통한 것'을 안 통했다고 그대로 공개한다. 틀린 가설을 정직하게 버리는 것도 기록이다.</p>
+  </article>
+
+  <div class="disclaimer" style="margin-top:40px">
+    <b>⚠ 투자 유의사항</b><br>
+    본 글은 개인의 투자 기록·의견이며, 특정 종목의 매수·매도 권유가 아닙니다. 모든 투자 판단과 그 결과는 본인의 책임입니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+</body>
+</html>
