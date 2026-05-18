@@ -4,15 +4,15 @@
   "start_date": "2026-05-03",
   "end_date": "2027-05-03",
   "seed_krw": 20000000,
-  "current_value_krw": 19878492,
-  "cumulative_return_pct": -0.61,
+  "current_value_krw": 19776892,
+  "cumulative_return_pct": -1.12,
   "realized_pnl_krw": -215900,
   "trade_count": 6,
   "win_count": 3,
   "loss_count": 3,
   "win_rate_pct": 50.0,
   "max_drawdown_pct": -1.83,
-  "last_updated": "2026-05-15",
+  "last_updated": "2026-05-18",
   "operation_account": "한국투자증권 실전투자",
   "automation_status": "운영중"
 }
