@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-05-19T08:54:57",
+  "period_start": "2022-10-13",
+  "universe": "KOSPI+KOSDAQ 시총 ≥ 1,000억 (1528종목, 현재기준·생존편향)",
+  "params": {
+    "TOPN": 10,
+    "sector_top": 0.2,
+    "cost_per_trade": 0.0035,
+    "momentum": "12-1개월"
+  },
+  "benchmark": "KOSPI(KS11) 매수후보유",
+  "results": {
+    "A": {
+      "exit": "월재랭킹",
+      "months": 43,
+      "total_return_pct": 106.7,
+      "cagr_pct": 22.48,
+      "bench_cagr_pct": 41.6,
+      "mdd_pct": -39.8,
+      "beat_market_monthly_pct": 44.2,
+      "excess_monthly_mean_pct": -0.95,
+      "pass": false
+    },
+    "B": {
+      "exit": "50일선이탈",
+      "months": 43,
+      "total_return_pct": 170.1,
+      "cagr_pct": 31.97,
+      "bench_cagr_pct": 41.6,
+      "mdd_pct": -21.9,
+      "beat_market_monthly_pct": 51.2,
+      "excess_monthly_mean_pct": -0.56,
+      "pass": false
+    },
+    "C": {
+      "exit": "20%트레일",
+      "months": 43,
+      "total_return_pct": 109.2,
+      "cagr_pct": 22.89,
+      "bench_cagr_pct": 41.6,
+      "mdd_pct": -34.6,
+      "beat_market_monthly_pct": 41.9,
+      "excess_monthly_mean_pct": -1.04,
+      "pass": false
+    }
+  },
+  "publish_rule": "월간 beat-market%>52 AND 월간 순초과>0"
+}

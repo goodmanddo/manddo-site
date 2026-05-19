@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-05-19T22:51:33",
+  "period_start": "2022-10-13",
+  "universe_n": 1514,
+  "note": "비중효과 분리용 진단. 시총가중은 주식수불변 프록시. 단일국면 한계.",
+  "result": {
+    "rebalance_months": 32,
+    "samsung_held_pct": 0.0,
+    "hynix_held_pct": 0.0,
+    "equal_weight": {
+      "total_return_pct": 63.5,
+      "cagr_pct": 14.64,
+      "mdd_pct": -31.5,
+      "beat_market_monthly_pct": 39.5
+    },
+    "cap_weight": {
+      "total_return_pct": 59.3,
+      "cagr_pct": 13.81,
+      "mdd_pct": -27.9,
+      "beat_market_monthly_pct": 44.2
+    },
+    "kospi_buyhold": {
+      "total_return_pct": 236.2,
+      "cagr_pct": 40.08
+    },
+    "samsung_hynix_5050": {
+      "total_return_pct": 1068.9,
+      "cagr_pct": 98.07,
+      "mdd_pct": -35.9,
+      "beat_market_monthly_pct": 62.8
+    }
+  }
+}

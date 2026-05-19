@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-05-19T21:48:24",
+  "period_start": "2022-10-13",
+  "universe": "KOSPI+KOSDAQ 시총 ≥ 1,000억 (1514종목, 생존편향)",
+  "entry": "주도 섹터(실업종 상위20%) 대장주 TOPN 동일비중·월말, 12-1모멘텀",
+  "benchmark_cagr_pct": 40.08,
+  "results": {
+    "20일선": {
+      "months": 43,
+      "total_return_pct": 49.0,
+      "cagr_pct": 11.71,
+      "mdd_pct": -28.7,
+      "beat_market_monthly_pct": 46.5,
+      "excess_monthly_mean_pct": -2.03,
+      "pass": false
+    },
+    "50일선": {
+      "months": 43,
+      "total_return_pct": 111.3,
+      "cagr_pct": 23.12,
+      "mdd_pct": -26.4,
+      "beat_market_monthly_pct": 46.5,
+      "excess_monthly_mean_pct": -1.05,
+      "pass": false
+    },
+    "60일선": {
+      "months": 43,
+      "total_return_pct": 102.7,
+      "cagr_pct": 21.7,
+      "mdd_pct": -26.8,
+      "beat_market_monthly_pct": 51.2,
+      "excess_monthly_mean_pct": -1.15,
+      "pass": false
+    },
+    "120일선": {
+      "months": 43,
+      "total_return_pct": 83.3,
+      "cagr_pct": 18.34,
+      "mdd_pct": -32.9,
+      "beat_market_monthly_pct": 46.5,
+      "excess_monthly_mean_pct": -1.32,
+      "pass": false
+    }
+  },
+  "publish_rule": "월간 beat-market%>52 AND 월간 순초과>0",
+  "note": "출구 실험 최종. 1등 선택은 과최적화 — 트레이드오프 관찰용."
+}
