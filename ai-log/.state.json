@@ -1,38 +1,38 @@
 {
   "last_holdings": {
-    "005850": {
-      "name": "에스엘",
-      "qty": 17,
-      "avg_price": 68000,
-      "current_price": 64800,
-      "opened_at": "2026-05-13"
-    },
     "010780": {
       "name": "아이에스동서",
       "qty": 11,
       "avg_price": 30200,
-      "current_price": 30200,
+      "current_price": 28800,
       "opened_at": "2026-05-15"
     },
     "015360": {
       "name": "INVENI",
       "qty": 18,
       "avg_price": 16950,
-      "current_price": 16880,
+      "current_price": 16530,
       "opened_at": "2026-05-18"
+    },
+    "081660": {
+      "name": "미스토홀딩스",
+      "qty": 4,
+      "avg_price": 41350,
+      "current_price": 40300,
+      "opened_at": "2026-05-19"
     },
     "093320": {
       "name": "케이아이엔엑스",
       "qty": 5,
       "avg_price": 120500,
-      "current_price": 116100,
+      "current_price": 115000,
       "opened_at": "2026-05-13"
     },
     "192080": {
       "name": "더블유게임즈",
       "qty": 12,
       "avg_price": 57400,
-      "current_price": 60400,
+      "current_price": 61300,
       "opened_at": "2026-05-13"
     }
   },
@@ -104,6 +104,10 @@
     {
       "date": "2026-05-18",
       "total_eval": 19776892
+    },
+    {
+      "date": "2026-05-19",
+      "total_eval": 19691155
     }
   ],
   "completed_trades": [
@@ -333,6 +337,14 @@
       "date": "2026-05-15",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "에스엘",
+      "code": "005850",
+      "return_pct": -10.0,
+      "date": "2026-05-19",
+      "is_win": false,
+      "hold_days": 6
     }
   ]
 }
