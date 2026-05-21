@@ -1,63 +1,45 @@
 {
-  "date": "2026-05-20",
+  "date": "2026-05-21",
   "start_date": "2026-05-03",
-  "cumulative_return": -1.81,
-  "week_return": -0.4,
-  "day_return": -0.27,
-  "today_realized_avg": -10.1,
+  "cumulative_return": -1.68,
+  "week_return": -0.47,
+  "day_return": 0.13,
+  "today_realized_avg": 10.28,
   "today_trade_count": 1,
-  "today_win_count": 0,
-  "today_loss_count": 1,
-  "win_rate": 41,
-  "total_trades": 32,
-  "ai_commentary": "오늘은 미스토홀딩스, INVENI, 케이아이엔엑스 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -1.8%.",
+  "today_win_count": 1,
+  "today_loss_count": 0,
+  "win_rate": 42,
+  "total_trades": 33,
+  "ai_commentary": "오늘은 미스토홀딩스, INVENI 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -1.7%.",
   "new_buys": [
     {
       "name": "미스토홀딩스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -5.32,
+      "entry_to_current_pct": -5.56,
       "weight_pct": 1,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "INVENI",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": -4.9,
+      "entry_to_current_pct": -5.01,
       "weight_pct": 1,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
-    },
-    {
-      "name": "케이아이엔엑스",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -7.63,
-      "weight_pct": 3,
-      "hold_days": 7,
-      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
-    },
-    {
-      "name": "더블유게임즈",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 6.1,
-      "weight_pct": 4,
-      "hold_days": 7,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
   "exits": [
     {
-      "type": "loss",
-      "name": "아이에스동서",
+      "type": "win",
+      "name": "더블유게임즈",
       "slug": "",
       "market": "코스피",
-      "return_pct": -10.1,
-      "hold_days": 5,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+      "return_pct": 10.28,
+      "hold_days": 8,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
   "weekly_losses": [
@@ -75,12 +57,6 @@
     }
   ],
   "holdings": [
-    {
-      "name": "더블유게임즈",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 4
-    },
     {
       "name": "케이아이엔엑스",
       "slug": "",
@@ -152,6 +128,10 @@
     {
       "date": "2026-05-20",
       "cumulative_return": -1.81
+    },
+    {
+      "date": "2026-05-21",
+      "cumulative_return": -1.68
     }
   ]
 }
