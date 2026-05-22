@@ -3,19 +3,21 @@
   "round": 3,
   "week_start": "2026-05-18",
   "week_end": "2026-05-22",
-  "status": "active",
+  "status": "closed",
   "picks": {
     "manddo": {
       "code": "005180",
       "name": "빙그레",
-      "reason": "무더위 시작"
+      "reason": "무더위 시작",
+      "final_return": -5.290322580645157
     },
     "ai": {
       "code": "192080",
       "name": "더블유게임즈",
       "reason": "자동매매 봇이 지난주 매수해서 현재 보유 중인 종목 (swing 전략 신호 가장 강함)",
       "bot_buy_price": 57400,
-      "bot_buy_date": "2026-05-13"
+      "bot_buy_date": "2026-05-13",
+      "final_return": 16.75126903553299
     }
   },
   "snapshots": [
@@ -778,5 +780,5 @@
       }
     }
   },
-  "updated_at": "2026-05-22 15:30:08"
+  "updated_at": "2026-05-22 15:35:06"
 }
