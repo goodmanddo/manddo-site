@@ -4,21 +4,21 @@
       "name": "INVENI",
       "qty": 18,
       "avg_price": 16950,
-      "current_price": 16100,
+      "current_price": 16490,
       "opened_at": "2026-05-18"
     },
     "081660": {
       "name": "미스토홀딩스",
       "qty": 4,
       "avg_price": 41350,
-      "current_price": 39050,
+      "current_price": 38900,
       "opened_at": "2026-05-19"
     },
     "093320": {
       "name": "케이아이엔엑스",
       "qty": 5,
       "avg_price": 120500,
-      "current_price": 111300,
+      "current_price": 116300,
       "opened_at": "2026-05-13"
     }
   },
@@ -102,6 +102,10 @@
     {
       "date": "2026-05-21",
       "total_eval": 19663511
+    },
+    {
+      "date": "2026-05-22",
+      "total_eval": 19694931
     }
   ],
   "completed_trades": [

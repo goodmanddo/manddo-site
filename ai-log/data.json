@@ -1,47 +1,37 @@
 {
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "start_date": "2026-05-03",
-  "cumulative_return": -1.68,
-  "week_return": -0.47,
-  "day_return": 0.13,
-  "today_realized_avg": 10.28,
-  "today_trade_count": 1,
-  "today_win_count": 1,
+  "cumulative_return": -1.53,
+  "week_return": -0.92,
+  "day_return": 0.16,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 42,
   "total_trades": 33,
-  "ai_commentary": "오늘은 미스토홀딩스, INVENI 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -1.7%.",
+  "ai_commentary": "오늘은 미스토홀딩스, INVENI 등 신규 편입. 시작 이후 누적 -1.5%.",
   "new_buys": [
     {
       "name": "미스토홀딩스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -5.56,
+      "entry_to_current_pct": -5.93,
       "weight_pct": 1,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "INVENI",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": -5.01,
-      "weight_pct": 1,
-      "hold_days": 3,
+      "entry_to_current_pct": -2.71,
+      "weight_pct": 2,
+      "hold_days": 4,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
   ],
-  "exits": [
-    {
-      "type": "win",
-      "name": "더블유게임즈",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 10.28,
-      "hold_days": 8,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "아이에스동서",
@@ -67,7 +57,7 @@
       "name": "INVENI",
       "slug": "",
       "market": "코스닥",
-      "weight_pct": 1
+      "weight_pct": 2
     },
     {
       "name": "미스토홀딩스",
@@ -132,6 +122,10 @@
     {
       "date": "2026-05-21",
       "cumulative_return": -1.68
+    },
+    {
+      "date": "2026-05-22",
+      "cumulative_return": -1.53
     }
   ]
 }
