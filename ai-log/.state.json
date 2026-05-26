@@ -4,22 +4,57 @@
       "name": "INVENI",
       "qty": 18,
       "avg_price": 16950,
-      "current_price": 16490,
+      "current_price": 15960,
       "opened_at": "2026-05-18"
+    },
+    "069500": {
+      "name": "KODEX 200",
+      "qty": 2,
+      "avg_price": 128080,
+      "current_price": 126755,
+      "opened_at": "2026-05-26"
     },
     "081660": {
       "name": "미스토홀딩스",
       "qty": 4,
       "avg_price": 41350,
-      "current_price": 38900,
+      "current_price": 39350,
       "opened_at": "2026-05-19"
     },
     "093320": {
       "name": "케이아이엔엑스",
       "qty": 5,
       "avg_price": 120500,
-      "current_price": 116300,
+      "current_price": 113400,
       "opened_at": "2026-05-13"
+    },
+    "229200": {
+      "name": "KODEX 코스닥150",
+      "qty": 16,
+      "avg_price": 20315,
+      "current_price": 19995,
+      "opened_at": "2026-05-26"
+    },
+    "360750": {
+      "name": "TIGER 미국S&P500",
+      "qty": 3,
+      "avg_price": 28155,
+      "current_price": 28085,
+      "opened_at": "2026-05-26"
+    },
+    "411060": {
+      "name": "ACE KRX금현물",
+      "qty": 3,
+      "avg_price": 30295,
+      "current_price": 30160,
+      "opened_at": "2026-05-26"
+    },
+    "464470": {
+      "name": "PLUS 미국채30년액티브",
+      "qty": 2,
+      "avg_price": 53860,
+      "current_price": 53665,
+      "opened_at": "2026-05-26"
     }
   },
   "history": [
@@ -110,6 +145,10 @@
     {
       "date": "2026-05-25",
       "total_eval": 19694931
+    },
+    {
+      "date": "2026-05-26",
+      "total_eval": 19663816
     }
   ],
   "completed_trades": [
