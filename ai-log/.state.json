@@ -1,59 +1,45 @@
 {
   "last_holdings": {
-    "015360": {
-      "name": "INVENI",
-      "qty": 18,
-      "avg_price": 16950,
-      "current_price": 15580,
-      "opened_at": "2026-05-18"
-    },
-    "081660": {
-      "name": "미스토홀딩스",
-      "qty": 4,
-      "avg_price": 41350,
-      "current_price": 38000,
-      "opened_at": "2026-05-19"
-    },
     "093320": {
       "name": "케이아이엔엑스",
       "qty": 5,
       "avg_price": 120500,
-      "current_price": 110600,
+      "current_price": 112000,
       "opened_at": "2026-05-13"
     },
     "161390": {
       "name": "한국타이어앤테크놀로지",
       "qty": 18,
       "avg_price": 63800,
-      "current_price": 62500,
+      "current_price": 63000,
       "opened_at": "2026-05-27"
     },
     "229200": {
       "name": "KODEX 코스닥150",
       "qty": 16,
       "avg_price": 20315,
-      "current_price": 19465,
+      "current_price": 19120,
       "opened_at": "2026-05-26"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 3,
       "avg_price": 28155,
-      "current_price": 28020,
+      "current_price": 28000,
       "opened_at": "2026-05-26"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 3,
       "avg_price": 30295,
-      "current_price": 29675,
+      "current_price": 29300,
       "opened_at": "2026-05-26"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 2,
       "avg_price": 53860,
-      "current_price": 53730,
+      "current_price": 53515,
       "opened_at": "2026-05-26"
     }
   },
@@ -153,6 +139,10 @@
     {
       "date": "2026-05-27",
       "total_eval": 19617686
+    },
+    {
+      "date": "2026-05-28",
+      "total_eval": 19615579
     }
   ],
   "completed_trades": [
@@ -414,6 +404,22 @@
       "date": "2026-05-27",
       "is_win": true,
       "hold_days": 1
+    },
+    {
+      "name": "INVENI",
+      "code": "015360",
+      "return_pct": -10.15,
+      "date": "2026-05-28",
+      "is_win": false,
+      "hold_days": 10
+    },
+    {
+      "name": "미스토홀딩스",
+      "code": "081660",
+      "return_pct": -10.28,
+      "date": "2026-05-28",
+      "is_win": false,
+      "hold_days": 9
     }
   ]
 }
