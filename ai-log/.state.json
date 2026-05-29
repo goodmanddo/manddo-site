@@ -1,45 +1,52 @@
 {
   "last_holdings": {
+    "005850": {
+      "name": "에스엘",
+      "qty": 15,
+      "avg_price": 75400,
+      "current_price": 75100,
+      "opened_at": "2026-05-29"
+    },
     "093320": {
       "name": "케이아이엔엑스",
       "qty": 5,
       "avg_price": 120500,
-      "current_price": 112000,
+      "current_price": 114800,
       "opened_at": "2026-05-13"
     },
     "161390": {
       "name": "한국타이어앤테크놀로지",
       "qty": 18,
       "avg_price": 63800,
-      "current_price": 63000,
+      "current_price": 66800,
       "opened_at": "2026-05-27"
     },
     "229200": {
       "name": "KODEX 코스닥150",
       "qty": 16,
       "avg_price": 20315,
-      "current_price": 19120,
+      "current_price": 18730,
       "opened_at": "2026-05-26"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 3,
       "avg_price": 28155,
-      "current_price": 28000,
+      "current_price": 28300,
       "opened_at": "2026-05-26"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 3,
       "avg_price": 30295,
-      "current_price": 29300,
+      "current_price": 30005,
       "opened_at": "2026-05-26"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 2,
       "avg_price": 53860,
-      "current_price": 53515,
+      "current_price": 54165,
       "opened_at": "2026-05-26"
     }
   },
@@ -143,6 +150,10 @@
     {
       "date": "2026-05-28",
       "total_eval": 19615579
+    },
+    {
+      "date": "2026-05-29",
+      "total_eval": 19691404
     }
   ],
   "completed_trades": [
