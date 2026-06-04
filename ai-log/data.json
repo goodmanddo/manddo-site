@@ -1,44 +1,54 @@
 {
-  "date": "2026-06-03",
+  "date": "2026-06-04",
   "start_date": "2026-05-03",
-  "cumulative_return": -1.82,
-  "week_return": 0.09,
-  "day_return": 0.0,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -1.63,
+  "week_return": 0.3,
+  "day_return": 0.2,
+  "today_realized_avg": 9.56,
+  "today_trade_count": 1,
+  "today_win_count": 1,
   "today_loss_count": 0,
-  "win_rate": 42,
-  "total_trades": 36,
-  "ai_commentary": "오늘은 에스엘, 한국타이어앤테크놀로지 등 신규 편입. 시작 이후 누적 -1.8%.",
+  "win_rate": 43,
+  "total_trades": 37,
+  "ai_commentary": "오늘은 원텍, 에스엘 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -1.6%.",
   "new_buys": [
+    {
+      "name": "원텍",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 8,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
     {
       "name": "에스엘",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -8.49,
+      "entry_to_current_pct": -5.57,
       "weight_pct": 5,
-      "hold_days": 5,
-      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
-    },
-    {
-      "name": "한국타이어앤테크놀로지",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 9.4,
-      "weight_pct": 6,
-      "hold_days": 7,
+      "hold_days": 6,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
-  "holdings": [
+  "exits": [
     {
+      "type": "win",
       "name": "한국타이어앤테크놀로지",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 6
+      "return_pct": 9.56,
+      "hold_days": 8,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+    }
+  ],
+  "weekly_losses": [],
+  "holdings": [
+    {
+      "name": "원텍",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 8
     },
     {
       "name": "에스엘",
@@ -56,7 +66,7 @@
       "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 1
+      "weight_pct": 2
     },
     {
       "name": "PLUS 미국채30년액티브",
@@ -169,6 +179,10 @@
     {
       "date": "2026-06-03",
       "cumulative_return": -1.82
+    },
+    {
+      "date": "2026-06-04",
+      "cumulative_return": -1.63
     }
   ]
 }
