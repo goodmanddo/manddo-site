@@ -148,9 +148,9 @@ JSON 스키마:
 
 
 def gen_comment(context: str) -> dict:
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    client = anthropic.Anthropic(api_key=(os.environ.get("ANTHROPIC_API_KEY") or open(os.path.expanduser("~/stock_auto_trade/.anthropic_key")).read().strip()))
     msg = client.messages.create(
-        model="claude-opus-4-7",
+        model="claude-sonnet-4-6",
         max_tokens=2000,
         system=SYSTEM,
         messages=[{"role": "user", "content": context}],

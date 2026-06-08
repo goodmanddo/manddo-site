@@ -206,10 +206,26 @@ def main():
     prev_holdings = state.get("last_holdings", {})
 
     api = KISApi()
-    bal = api.get_balance()
+    # 2026-06-08 사고: KIS get_balance가 일시 빈응답(holdings=[], total=0)을 줘서
+    # prev_holdings의 모든 종목이 "사라진 줄" 알고 거짓 매도 등록 + cum=-100% 기록됨.
+    # 재발 방지: retry + 가드.
+    import time as _t
+    bal = None
+    for attempt in range(4):
+        bal = api.get_balance()
+        if bal.get("total_eval", 0) > 0 and bal.get("holdings"):
+            if attempt > 0:
+                log(f"잔고 정상응답 ({attempt+1}회차)")
+            break
+        if attempt < 3:
+            log(f"잔고 빈응답({attempt+1}/4) — 2.5s 후 재시도")
+            _t.sleep(2.5)
     holdings = {h["code"]: h for h in bal["holdings"]}
-    # KIS tot_evlu_amt 사용 (15:40 조회 시 종가 반영, 증권사 앱과 가장 근사)
     total_eval = bal["total_eval"]
+    # 가드: 잔고 비정상이면 state·data.json 변경 없이 종료(거짓 매도·-100% 사고 방지)
+    if total_eval <= 0 or not holdings:
+        log(f"⚠ 잔고 조회 이상 (total={total_eval}, holdings={len(holdings)}) — 업데이트 중단, 파일 변경 없음")
+        return
 
     # 초기 자본: 최초 실행 시 세팅
     if initial_capital <= 0:

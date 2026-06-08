@@ -574,30 +574,12 @@ body{{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;bac
 
 HTML만 출력하세요. 마크다운 코드블록(```)이나 설명 없이 <!DOCTYPE html>부터 </html>까지만."""
 
-    # PDF document 블록 (Files API + 캐시) — 웹 프로젝트 동급 컨텍스트
-    content_blocks = []
-    if CHART_FILES.exists():
-        try:
-            files_manifest = json.loads(CHART_FILES.read_text())
-            file_ids = [v["id"] for v in files_manifest.values() if v.get("id")]
-            for i, fid in enumerate(file_ids):
-                block = {
-                    "type": "document",
-                    "source": {"type": "file", "file_id": fid},
-                }
-                # 마지막 document에만 cache_control 부여 → 이전 document까지 묶어 캐싱
-                if i == len(file_ids) - 1:
-                    block["cache_control"] = {"type": "ephemeral"}
-                content_blocks.append(block)
-        except Exception as e:
-            print(f"[차트생성] PDF 매니페스트 로드 실패(무시): {e}")
-    content_blocks.append({"type": "text", "text": prompt})
-
+    # 2026-06-08 비용 최소화: PDF 첨부 제거(매일 cold cache로 풀입력 700K 청구되던 주범)
+    # 차트분석 이론은 위 prompt에 인라인 포함됨. Files API 비활성.
     response = client.messages.create(
-        model="claude-opus-4-7",
-        max_tokens=12000,
-        extra_headers={"anthropic-beta": "files-api-2025-04-14"},
-        messages=[{"role": "user", "content": content_blocks}],
+        model="claude-sonnet-4-6",
+        max_tokens=4000,             # 2026-06-08 8000→4000 (출력도 더 압축)
+        messages=[{"role": "user", "content": prompt}],
     )
     # 캐시 효과 로깅
     u = response.usage

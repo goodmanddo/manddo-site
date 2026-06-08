@@ -91,7 +91,7 @@ JSON 스키마:
 
 
 def gen_content(topic: dict) -> dict:
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    client = anthropic.Anthropic(api_key=(os.environ.get("ANTHROPIC_API_KEY") or open(os.path.expanduser("~/stock_auto_trade/.anthropic_key")).read().strip()))
     user = f"""비교 대상:
 - 종목 A: {topic['stock_a']['name']} ({topic['stock_a']['code']})
 - 종목 B: {topic['stock_b']['name']} ({topic['stock_b']['code']})
@@ -99,8 +99,8 @@ def gen_content(topic: dict) -> dict:
 
 이 두 종목 비교 글 1편 작성. JSON만 출력. comparison_table의 stock_a/stock_b 필드 키는 그대로 둘 것."""
     msg = client.messages.create(
-        model="claude-opus-4-7",
-        max_tokens=6000,
+        model="claude-sonnet-4-6",
+        max_tokens=3000,
         system=SYSTEM,
         messages=[{"role": "user", "content": user}],
     )
