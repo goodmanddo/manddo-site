@@ -1,5 +1,34 @@
 {
-  "last_holdings": {},
+  "last_holdings": {
+    "229200": {
+      "name": "KODEX 코스닥150",
+      "qty": 16,
+      "avg_price": 20315,
+      "current_price": 15790,
+      "opened_at": "2026-06-08"
+    },
+    "360750": {
+      "name": "TIGER 미국S&P500",
+      "qty": 3,
+      "avg_price": 28155,
+      "current_price": 28170,
+      "opened_at": "2026-06-08"
+    },
+    "411060": {
+      "name": "ACE KRX금현물",
+      "qty": 3,
+      "avg_price": 30295,
+      "current_price": 29020,
+      "opened_at": "2026-06-08"
+    },
+    "464470": {
+      "name": "PLUS 미국채30년액티브",
+      "qty": 2,
+      "avg_price": 53860,
+      "current_price": 54695,
+      "opened_at": "2026-06-08"
+    }
+  },
   "history": [
     {
       "date": "2026-05-04",
@@ -128,6 +157,10 @@
     {
       "date": "2026-06-08",
       "total_eval": 0
+    },
+    {
+      "date": "2026-06-08",
+      "total_eval": 19299926
     }
   ],
   "completed_trades": [
@@ -431,44 +464,12 @@
       "hold_days": 26
     },
     {
-      "name": "KODEX 코스닥150",
-      "code": "229200",
-      "return_pct": -22.27,
-      "date": "2026-06-08",
-      "is_win": false,
-      "hold_days": 13
-    },
-    {
       "name": "원텍",
       "code": "336570",
       "return_pct": -15.43,
       "date": "2026-06-08",
       "is_win": false,
       "hold_days": 4
-    },
-    {
-      "name": "TIGER 미국S&P500",
-      "code": "360750",
-      "return_pct": 0.05,
-      "date": "2026-06-08",
-      "is_win": true,
-      "hold_days": 13
-    },
-    {
-      "name": "ACE KRX금현물",
-      "code": "411060",
-      "return_pct": -4.21,
-      "date": "2026-06-08",
-      "is_win": false,
-      "hold_days": 13
-    },
-    {
-      "name": "PLUS 미국채30년액티브",
-      "code": "464470",
-      "return_pct": 1.55,
-      "date": "2026-06-08",
-      "is_win": true,
-      "hold_days": 13
     }
   ]
 }

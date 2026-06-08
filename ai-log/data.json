@@ -1,17 +1,54 @@
 {
   "date": "2026-06-08",
   "start_date": "2026-05-03",
-  "cumulative_return": -100.0,
-  "week_return": -100.0,
-  "day_return": -100.0,
-  "today_realized_avg": -8.58,
-  "today_trade_count": 6,
-  "today_win_count": 2,
-  "today_loss_count": 4,
-  "win_rate": 41,
-  "total_trades": 44,
-  "ai_commentary": "1건 익절로 수익 확정. 4건은 손절 규칙에 따라 정리. 시작 이후 누적 -100.0%.",
-  "new_buys": [],
+  "cumulative_return": -3.5,
+  "week_return": -1.71,
+  "day_return": -0.87,
+  "today_realized_avg": -13.31,
+  "today_trade_count": 2,
+  "today_win_count": 0,
+  "today_loss_count": 2,
+  "win_rate": 40,
+  "total_trades": 40,
+  "ai_commentary": "오늘은 KODEX 코스닥150, TIGER 미국S&P500, ACE KRX금현물 등 신규 편입. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 -3.5%.",
+  "new_buys": [
+    {
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -22.27,
+      "weight_pct": 1,
+      "hold_days": 0,
+      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+    },
+    {
+      "name": "TIGER 미국S&P500",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.05,
+      "weight_pct": 0,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
+    {
+      "name": "ACE KRX금현물",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -4.21,
+      "weight_pct": 0,
+      "hold_days": 0,
+      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+    },
+    {
+      "name": "PLUS 미국채30년액티브",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 1.55,
+      "weight_pct": 1,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    }
+  ],
   "exits": [
     {
       "type": "loss",
@@ -24,58 +61,19 @@
     },
     {
       "type": "loss",
-      "name": "KODEX 코스닥150",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -22.27,
-      "hold_days": 13,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
       "name": "원텍",
       "slug": "",
       "market": "코스피",
       "return_pct": -15.43,
       "hold_days": 4,
       "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "ACE KRX금현물",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -4.21,
-      "hold_days": 13,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "win",
-      "name": "PLUS 미국채30년액티브",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 1.55,
-      "hold_days": 13,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
   "weekly_losses": [
     {
-      "name": "ACE KRX금현물",
-      "slug": "",
-      "return_pct": -4.21,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    },
-    {
       "name": "원텍",
       "slug": "",
       "return_pct": -15.43,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    },
-    {
-      "name": "KODEX 코스닥150",
-      "slug": "",
-      "return_pct": -22.27,
       "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     },
     {
@@ -85,7 +83,32 @@
       "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     }
   ],
-  "holdings": [],
+  "holdings": [
+    {
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 1
+    },
+    {
+      "name": "PLUS 미국채30년액티브",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 1
+    },
+    {
+      "name": "TIGER 미국S&P500",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 0
+    },
+    {
+      "name": "ACE KRX금현물",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 0
+    }
+  ],
   "return_history": [
     {
       "date": "2026-05-04",
@@ -189,7 +212,7 @@
     },
     {
       "date": "2026-06-08",
-      "cumulative_return": -100.0
+      "cumulative_return": -3.5
     }
   ]
 }
