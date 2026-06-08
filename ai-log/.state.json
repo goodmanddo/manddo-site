@@ -1,48 +1,5 @@
 {
-  "last_holdings": {
-    "093320": {
-      "name": "케이아이엔엑스",
-      "qty": 5,
-      "avg_price": 120500,
-      "current_price": 113400,
-      "opened_at": "2026-05-13"
-    },
-    "229200": {
-      "name": "KODEX 코스닥150",
-      "qty": 16,
-      "avg_price": 20315,
-      "current_price": 17555,
-      "opened_at": "2026-05-26"
-    },
-    "336570": {
-      "name": "원텍",
-      "qty": 185,
-      "avg_price": 8490,
-      "current_price": 7720,
-      "opened_at": "2026-06-04"
-    },
-    "360750": {
-      "name": "TIGER 미국S&P500",
-      "qty": 3,
-      "avg_price": 28155,
-      "current_price": 28845,
-      "opened_at": "2026-05-26"
-    },
-    "411060": {
-      "name": "ACE KRX금현물",
-      "qty": 3,
-      "avg_price": 30295,
-      "current_price": 30165,
-      "opened_at": "2026-05-26"
-    },
-    "464470": {
-      "name": "PLUS 미국채30년액티브",
-      "qty": 2,
-      "avg_price": 53860,
-      "current_price": 55395,
-      "opened_at": "2026-05-26"
-    }
-  },
+  "last_holdings": {},
   "history": [
     {
       "date": "2026-05-04",
@@ -167,6 +124,10 @@
     {
       "date": "2026-06-05",
       "total_eval": 19469162
+    },
+    {
+      "date": "2026-06-08",
+      "total_eval": 0
     }
   ],
   "completed_trades": [
@@ -460,6 +421,54 @@
       "date": "2026-06-05",
       "is_win": false,
       "hold_days": 7
+    },
+    {
+      "name": "케이아이엔엑스",
+      "code": "093320",
+      "return_pct": -11.2,
+      "date": "2026-06-08",
+      "is_win": false,
+      "hold_days": 26
+    },
+    {
+      "name": "KODEX 코스닥150",
+      "code": "229200",
+      "return_pct": -22.27,
+      "date": "2026-06-08",
+      "is_win": false,
+      "hold_days": 13
+    },
+    {
+      "name": "원텍",
+      "code": "336570",
+      "return_pct": -15.43,
+      "date": "2026-06-08",
+      "is_win": false,
+      "hold_days": 4
+    },
+    {
+      "name": "TIGER 미국S&P500",
+      "code": "360750",
+      "return_pct": 0.05,
+      "date": "2026-06-08",
+      "is_win": true,
+      "hold_days": 13
+    },
+    {
+      "name": "ACE KRX금현물",
+      "code": "411060",
+      "return_pct": -4.21,
+      "date": "2026-06-08",
+      "is_win": false,
+      "hold_days": 13
+    },
+    {
+      "name": "PLUS 미국채30년액티브",
+      "code": "464470",
+      "return_pct": 1.55,
+      "date": "2026-06-08",
+      "is_win": true,
+      "hold_days": 13
     }
   ]
 }
