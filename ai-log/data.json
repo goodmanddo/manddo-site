@@ -1,60 +1,60 @@
 {
-  "date": "2026-06-09",
+  "date": "2026-06-10",
   "start_date": "2026-05-03",
-  "cumulative_return": -3.25,
-  "week_return": -1.45,
-  "day_return": 0.26,
+  "cumulative_return": -3.57,
+  "week_return": -1.97,
+  "day_return": -0.33,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 40,
   "total_trades": 40,
-  "ai_commentary": "오늘은 KODEX 200, KODEX 코스닥150, TIGER 미국S&P500 등 신규 편입. 시작 이후 누적 -3.2%.",
+  "ai_commentary": "오늘은 KODEX 200, KODEX 코스닥150, TIGER 미국S&P500 등 신규 편입. 시작 이후 누적 -3.6%.",
   "new_buys": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 5.24,
-      "weight_pct": 5,
-      "hold_days": 0,
+      "entry_to_current_pct": 0.12,
+      "weight_pct": 4,
+      "hold_days": 1,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -6.63,
+      "entry_to_current_pct": -7.74,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.37,
+      "entry_to_current_pct": -0.35,
       "weight_pct": 1,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "ACE KRX금현물",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.63,
+      "entry_to_current_pct": -3.72,
       "weight_pct": 2,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "PLUS 미국채30년액티브",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.19,
+      "entry_to_current_pct": 1.21,
       "weight_pct": 1,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
@@ -75,16 +75,16 @@
   ],
   "holdings": [
     {
-      "name": "KODEX 200",
+      "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
     },
     {
-      "name": "KODEX 코스닥150",
+      "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 4
     },
     {
       "name": "ACE KRX금현물",
@@ -213,6 +213,10 @@
     {
       "date": "2026-06-09",
       "cumulative_return": -3.25
+    },
+    {
+      "date": "2026-06-10",
+      "cumulative_return": -3.57
     }
   ]
 }
