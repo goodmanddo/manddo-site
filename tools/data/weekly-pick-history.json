@@ -1,0 +1,94 @@
+{
+  "season": 1,
+  "updated": "2026-06-14",
+  "rounds": [
+    {
+      "week_start": "2026-05-04",
+      "week_end": "2026-05-08",
+      "manddo": {
+        "code": "049070",
+        "name": "인탑스",
+        "reason": "지난 주 로봇 관련 주 반응 체크, 저평가 주여서 상승 여력 충분",
+        "final_return": 0
+      },
+      "ai": null,
+      "round": 1
+    },
+    {
+      "week_start": "2026-05-11",
+      "week_end": "2026-05-15",
+      "manddo": {
+        "code": "040160",
+        "name": "매커스",
+        "reason": "AMD 수혜주",
+        "final_return": -11.3
+      },
+      "ai": null,
+      "round": 2
+    },
+    {
+      "week_start": "2026-05-18",
+      "week_end": "2026-05-22",
+      "manddo": {
+        "code": "005180",
+        "name": "빙그레",
+        "reason": "무더위 시작",
+        "final_return": -5.29
+      },
+      "ai": {
+        "code": "192080",
+        "name": "더블유게임즈",
+        "reason": "AI 봇 swing 보유 종목 신호 강함",
+        "final_return": 16.75
+      },
+      "round": 3
+    },
+    {
+      "week_start": "2026-05-25",
+      "week_end": "2026-05-29",
+      "manddo": {
+        "code": "013030",
+        "name": "하이록코리아",
+        "reason": "코스닥 키 맞추기, 항공우주 + 조선·반도체·에너지",
+        "final_return": -11.41
+      },
+      "ai": null,
+      "round": 4
+    },
+    {
+      "week_start": "2026-06-01",
+      "week_end": "2026-06-05",
+      "manddo": {
+        "code": "035420",
+        "name": "네이버",
+        "reason": "젠승황 방문",
+        "final_return": 2.0
+      },
+      "ai": {
+        "code": "000660",
+        "name": "SK하이닉스",
+        "reason": "미국 반도체 섹터 ETF(SOXX 등)가 지난주 +8.5%로 압도적 강세를 보이며 AI·HBM 수요 기대감이 재점화된 가운데, SK하이닉스는 엔비디아향 HBM3E 독점 공급 지위를 보유한 국내 최대 수혜 반도체 대장주로 미국 반도체 랠리의 국내 직접 ",
+        "final_return": -10.84
+      },
+      "round": 5
+    },
+    {
+      "week_start": "2026-06-08",
+      "week_end": "2026-06-12",
+      "manddo": {
+        "code": "114090",
+        "name": "gkl",
+        "reason": "바닥 반등 신호",
+        "final_return": 3.64
+      },
+      "ai": {
+        "code": "009830",
+        "name": "한화솔루션",
+        "reason": "미국 에너지 섹터 +2.5% 강세 및 유틸리티 방어적 흐름 속 신재생에너지 투자 확대 기대감이 높아지며, 태양광 모듈 및 그린에너지 사업을 영위하는 한화솔루션이 국내 에너지 전환 수혜주로 부각될 가능성이 높다.",
+        "final_return": 7.05
+      },
+      "round": 6
+    }
+  ],
+  "note": "Round 1·2·4의 AI 픽은 closed 후 last_round 미보존 시점이라 빈값. 이후 라운드는 mode_close가 자동 append."
+}
