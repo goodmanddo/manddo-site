@@ -4,35 +4,35 @@
       "name": "KODEX 200",
       "qty": 7,
       "avg_price": 123650,
-      "current_price": 136290,
+      "current_price": 139550,
       "opened_at": "2026-06-09"
     },
     "229200": {
       "name": "KODEX 코스닥150",
-      "qty": 56,
-      "avg_price": 17950,
-      "current_price": 18295,
+      "qty": 72,
+      "avg_price": 17926,
+      "current_price": 17760,
       "opened_at": "2026-06-08"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 10,
       "avg_price": 27973,
-      "current_price": 28220,
+      "current_price": 28355,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 11,
       "avg_price": 29404,
-      "current_price": 29030,
+      "current_price": 28985,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 2,
       "avg_price": 53860,
-      "current_price": 54710,
+      "current_price": 54445,
       "opened_at": "2026-06-08"
     }
   },
@@ -188,6 +188,10 @@
     {
       "date": "2026-06-15",
       "total_eval": 19481991
+    },
+    {
+      "date": "2026-06-16",
+      "total_eval": 19473856
     }
   ],
   "completed_trades": [

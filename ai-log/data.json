@@ -1,74 +1,38 @@
 {
-  "date": "2026-06-15",
+  "date": "2026-06-16",
   "start_date": "2026-05-03",
-  "cumulative_return": -2.59,
-  "week_return": 0.94,
-  "day_return": 0.4,
+  "cumulative_return": -2.63,
+  "week_return": 0.64,
+  "day_return": -0.04,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 40,
   "total_trades": 40,
-  "ai_commentary": "오늘은 KODEX 200, KODEX 코스닥150, TIGER 미국S&P500 등 신규 편입. 시작 이후 누적 -2.6%.",
+  "ai_commentary": "오늘은 KODEX 200 등 신규 편입. 시작 이후 누적 -2.6%.",
   "new_buys": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 10.22,
+      "entry_to_current_pct": 12.86,
       "weight_pct": 5,
-      "hold_days": 6,
+      "hold_days": 7,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
-    },
-    {
-      "name": "KODEX 코스닥150",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 1.92,
-      "weight_pct": 5,
-      "hold_days": 7,
-      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
-    },
-    {
-      "name": "TIGER 미국S&P500",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.88,
-      "weight_pct": 1,
-      "hold_days": 7,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
-    },
-    {
-      "name": "ACE KRX금현물",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -1.27,
-      "weight_pct": 2,
-      "hold_days": 7,
-      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
-    },
-    {
-      "name": "PLUS 미국채30년액티브",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 1.58,
-      "weight_pct": 1,
-      "hold_days": 7,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
   "exits": [],
   "weekly_losses": [],
   "holdings": [
     {
-      "name": "KODEX 200",
+      "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 7
     },
     {
-      "name": "KODEX 코스닥150",
+      "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
@@ -93,10 +57,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-05",
-      "cumulative_return": 0.25
-    },
     {
       "date": "2026-05-06",
       "cumulative_return": 0.42
@@ -212,6 +172,10 @@
     {
       "date": "2026-06-15",
       "cumulative_return": -2.59
+    },
+    {
+      "date": "2026-06-16",
+      "cumulative_return": -2.63
     }
   ]
 }
