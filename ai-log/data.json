@@ -1,9 +1,9 @@
 {
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "start_date": "2026-05-03",
-  "cumulative_return": -2.37,
-  "week_return": 1.24,
-  "day_return": 0.27,
+  "cumulative_return": -2.4,
+  "week_return": 0.95,
+  "day_return": -0.03,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
@@ -47,10 +47,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-07",
-      "cumulative_return": -0.1
-    },
     {
       "date": "2026-05-08",
       "cumulative_return": 0.09
@@ -166,6 +162,10 @@
     {
       "date": "2026-06-17",
       "cumulative_return": -2.37
+    },
+    {
+      "date": "2026-06-18",
+      "cumulative_return": -2.4
     }
   ]
 }
