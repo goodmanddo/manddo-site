@@ -1,16 +1,16 @@
 {
-  "date": "2026-06-18",
+  "date": "2026-06-19",
   "start_date": "2026-05-03",
-  "cumulative_return": -2.4,
-  "week_return": 0.95,
-  "day_return": -0.03,
+  "cumulative_return": -2.7,
+  "week_return": 0.29,
+  "day_return": -0.31,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 40,
   "total_trades": 40,
-  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 -2.4%.",
+  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 -2.7%.",
   "new_buys": [],
   "exits": [],
   "weekly_losses": [],
@@ -19,7 +19,7 @@
       "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 7
+      "weight_pct": 6
     },
     {
       "name": "KODEX 200",
@@ -47,10 +47,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-08",
-      "cumulative_return": 0.09
-    },
     {
       "date": "2026-05-11",
       "cumulative_return": -0.61
@@ -166,6 +162,10 @@
     {
       "date": "2026-06-18",
       "cumulative_return": -2.4
+    },
+    {
+      "date": "2026-06-19",
+      "cumulative_return": -2.7
     }
   ]
 }
