@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지난 한 주 AI가 매수를 못 한 이유 — KIS 잔고 조회 사고 리포트 | 만또 블로그</title>
+<meta name="description" content="지난주 자동매매에서 매수 5건이 '예수금 부족'으로 거부됐는데, 실제로는 돈이 있었습니다. 원인은 한 줄의 누락이었고, 정직하게 정리합니다.">
+<meta name="keywords" content="만또블로그,투자일기">
+<meta property="og:title" content="지난 한 주 AI가 매수를 못 한 이유 — KIS 잔고 조회 사고 리포트">
+<meta property="og:description" content="지난주 자동매매에서 매수 5건이 '예수금 부족'으로 거부됐는데, 실제로는 돈이 있었습니다. 원인은 한 줄의 누락이었고, 정직하게 정리합니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/blog/지난-한-주-ai가-매수를-못-한-이유-kis-잔고-조회-사고-리포트.html">
+<link rel="canonical" href="https://manddo.kr/blog/지난-한-주-ai가-매수를-못-한-이유-kis-잔고-조회-사고-리포트.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.post-head{padding:32px 0 20px;border-bottom:1px solid #eef0f3;margin-bottom:28px}
+.post-head .cat{font-size:12px;color:#3182F6;font-weight:700;letter-spacing:0.04em;margin-bottom:10px}
+.post-head h1{font-size:30px;font-weight:800;letter-spacing:-0.035em;color:#191f28;line-height:1.3;margin-bottom:12px}
+.post-head .meta{font-size:13px;color:#8b95a1}
+.post-body{font-size:15.5px;line-height:1.85;color:#333d4b;max-width:720px}
+.post-body h2{font-size:21px;font-weight:800;letter-spacing:-0.03em;color:#191f28;margin:36px 0 14px;padding-top:8px}
+.post-body h3{font-size:17px;font-weight:700;color:#191f28;margin:24px 0 10px}
+.post-body p{margin:0 0 16px}
+.post-body ul,.post-body ol{margin:0 0 16px 20px;padding:0}
+.post-body li{margin-bottom:6px}
+.post-body blockquote{border-left:3px solid #3182F6;padding:4px 14px;margin:16px 0;color:#4e5968;background:#F7F9FC;border-radius:4px}
+.post-body img{max-width:100%;border-radius:10px;margin:16px 0;display:block}
+.post-body b,.post-body strong{color:#191f28}
+.post-body code{background:#F2F4F6;padding:2px 6px;border-radius:4px;font-size:14px}
+.post-body pre{background:#F2F4F6;padding:14px 16px;border-radius:8px;overflow-x:auto;font-size:13.5px;line-height:1.6;margin:16px 0}
+.post-body pre code{background:none;padding:0}
+.post-body a{color:#1B64DA}
+.post-body table{border-collapse:collapse;margin:16px 0;font-size:14px}
+.post-body th,.post-body td{border:1px solid #e5e8eb;padding:8px 12px}
+.post-body th{background:#F7F9FC;font-weight:700}
+@media(max-width:640px){.post-head h1{font-size:24px}.post-body{font-size:15px}}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 VS</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/" class="active">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <!-- manddo-back-nav -->
+  <a class="back-btn" href="/blog/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+
+  <div class="breadcrumb">
+    <a href="/blog/">블로그</a><span class="sep">/</span>지난 한 주 AI가 매수를 못 한 이유 — KIS 잔고 조회 사고 리포트
+  </div>
+
+  <header class="post-head">
+    <div class="cat">투자일기</div>
+    <h1>지난 한 주 AI가 매수를 못 한 이유 — KIS 잔고 조회 사고 리포트</h1>
+    <div class="meta">2026년 6월 21일 · 읽는 시간 약 3분</div>
+  </header>
+
+  <article class="post-body">
+    <h2>짧은 답</h2>
+    <p>한국투자증권(KIS) API가 가끔 잔고를 "0원"으로 잘못 응답해서, 실제로는 돈이 있는데도 "예수금 부족"으로 매수가 자동 거부됐습니다. 토론·전략 판단은 정상 작동했고, <strong>마지막 한 단계(주문 직전 잔고 확인)에서 막혔습니다.</strong></p>
+    <h2>무슨 일이 있었나</h2>
+    <p>지난주(6/15~6/21) AI 자동매매 트레이드 로그를 보면:</p>
+    <ul>
+    <li>
+    <p>BUY 시도: 6건</p>
+    </li>
+    <li>
+    <p>성공: 1건 (ETF 동적 리밸런싱 — KODEX 코스닥150)</p>
+    </li>
+    <li>
+    <p>거부: <strong>5건 (모두 "예수금 부족: 0원" 사유)</strong></p>
+    </li>
+    </ul>
+    <p>거부된 5건:</p>
+    <p>| 일시 | 종목 | 시도 | 사유 |</p>
+    <p>|---|---|---|---|</p>
+    <p>| 6/15 15:16 | NAVER | 7주 매수 | 예수금 부족: 0원 |</p>
+    <p>| 6/16 10:00 | KODEX 200 | 2주 매수 | 예수금 부족: 0원 |</p>
+    <p>| 6/16 10:00 | TIGER 미국S&amp;P500 | 3주 매수 | 예수금 부족: 0원 |</p>
+    <p>| 6/16 10:00 | ACE KRX금현물 | 4주 매수 | 예수금 부족: 0원 |</p>
+    <p>| 6/16 10:00 | PLUS 미국채30년 | 6주 매수 | 예수금 부족: 0원 |</p>
+    <p>그런데 같은 6/16 10시 실행에서 다른 한 종목(KODEX 코스닥150 16주)은 정상 매수됐고, 같은 시각 실험실 요약에는 <em>"예수금 16,792,491원"</em> 으로 정상 표시됐습니다. <strong>실제로는 돈이 있었습니다.</strong></p>
+    <h2>진단: 한 줄의 누락</h2>
+    <p>KIS OpenAPI의 잔고 조회 함수가 간헐적으로 빈응답을 반환합니다. 거래량이 몰리거나 KIS 서버 부하가 있을 때 종종 발생하는 알려진 현상입니다.</p>
+    <p>자동매매 시스템에는 매수 주문을 보내기 직전 "지금 정말 돈이 있는지" 한 번 더 확인하는 안전장치가 있는데, 이 함수가 <strong>한 번만</strong> 호출하고 끝났습니다. KIS가 빈응답을 주면 즉시 "예수금 0원"으로 판단하고 매수를 거부합니다.</p>
+    <p>같은 시각 실험실 요약이 정상이었던 이유는, 그쪽 코드는 잔고 조회 실패 시 재시도 로직이 따로 있었지만, <strong>매수 직전 단일 안전장치 함수에는 빠져 있었기 때문입니다.</strong></p>
+    <h2>수정 (6/21)</h2>
+    <p>근본 패치를 적용했습니다. KIS API 클래스의 잔고 조회 함수 자체에 <strong>자동 재시도 4회</strong>(2.5초 간격)를 박았습니다. 빈응답을 받으면 자동으로 다시 묻고, 4번까지 시도합니다.</p>
+    <p>이제 시스템 내 모든 잔고 조회가 자동으로 보호받습니다 — 미래에 새 스크립트를 추가해도 따로 신경 쓸 필요 없이 같은 보호가 적용됩니다.</p>
+    <h2>다음 거래일부터</h2>
+    <ul>
+    <li>
+    <p>토론으로 BUY 결정 났던 종목들이 <em>실제 매수까지</em> 정상 도달할 가능성↑</p>
+    </li>
+    <li>
+    <p>ETF 동적 비중 리밸런싱도 매주 화요일 10시에 5개 종목 모두 시도 가능</p>
+    </li>
+    <li>
+    <p>이번 주 화요일이 첫 검증</p>
+    </li>
+    </ul>
+    <h2>메타 — 정직한 한 줄</h2>
+    <p>"AI 자동매매" 하면 보통 <em>"어떻게 종목을 잘 고르는가"</em> 가 화제지만, 1년간 시드 2천만원으로 실험해보니 더 어려운 건 <strong>"꾸준히 끊김 없이 돌아가게 만드는 것"</strong> 이었습니다.</p>
+    <p>화려한 알고리즘보다 <em>주문 직전 잔고 한 번 더 확인할 때 재시도를 빠뜨리지 않는 것</em> 같은 작은 디테일이, 한 주 내내 매수를 못 하게 만들 수 있습니다.</p>
+    <p>시스템의 신뢰성은 <strong>가장 약한 한 줄의 코드</strong>가 결정합니다. 그 약한 한 줄을 찾아내 메우는 작업이, 어쩌면 AI 자동매매에서 가장 정직한 <em>알파</em>인지도 모릅니다.</p>
+  </article>
+
+  <div class="disclaimer" style="margin-top:40px">
+    <b>⚠ 투자 유의사항</b><br>
+    본 글은 개인의 투자 기록·의견이며, 특정 종목의 매수·매도 권유가 아닙니다. 모든 투자 판단과 그 결과는 본인의 책임입니다.
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+</body>
+</html>
