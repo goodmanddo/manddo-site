@@ -204,6 +204,7 @@ def render_page(etf, all_etfs, generated_at):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,follow">
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="keywords" content="{name},{code},{theme},ETF,ETF구성종목,ETF비중">

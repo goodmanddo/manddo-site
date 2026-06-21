@@ -14,6 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 STOCK_DIR = ROOT / "stock"
+ETF_DIR = ROOT / "etf"
 
 CORE_STOCKS = {
     "samsung-electronics", "sk-hynix", "samsung-sdi", "alteogen", "ncsoft",
@@ -89,6 +90,15 @@ def main():
             stock_changed.append(f.name)
         blocked_urls.add(f"https://manddo.kr/stock/{f.name}")
 
+    # 1b. etf 페이지 전체 처리 (AdSense scaled-content 대응 — 템플릿 복제)
+    etf_changed = []
+    for f in sorted(ETF_DIR.glob("*.html")):
+        if f.stem == "index":
+            continue
+        if process_file(f):
+            etf_changed.append(f.name)
+        blocked_urls.add(f"https://manddo.kr/etf/{f.name}")
+
     # 2. mind 부가 페이지 처리
     mind_changed = []
     for f in EXTRA_NOINDEX:
@@ -101,6 +111,7 @@ def main():
     removed = update_sitemap(blocked_urls)
 
     print(f"stock noindex 적용: {len(stock_changed)}건")
+    print(f"etf noindex 적용: {len(etf_changed)}건")
     print(f"mind noindex 적용: {len(mind_changed)}건")
     print(f"sitemap에서 제외: {removed}건")
 
