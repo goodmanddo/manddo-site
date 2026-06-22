@@ -1,38 +1,45 @@
 {
   "last_holdings": {
+    "000660": {
+      "name": "SK하이닉스",
+      "qty": 1,
+      "avg_price": 2789000,
+      "current_price": 2919000,
+      "opened_at": "2026-06-22"
+    },
     "069500": {
       "name": "KODEX 200",
       "qty": 7,
       "avg_price": 123650,
-      "current_price": 146910,
+      "current_price": 148355,
       "opened_at": "2026-06-09"
     },
     "229200": {
       "name": "KODEX 코스닥150",
       "qty": 72,
       "avg_price": 17926,
-      "current_price": 16965,
+      "current_price": 17380,
       "opened_at": "2026-06-08"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 10,
       "avg_price": 27973,
-      "current_price": 28355,
+      "current_price": 28570,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 11,
       "avg_price": 29404,
-      "current_price": 28110,
+      "current_price": 28515,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 2,
       "avg_price": 53860,
-      "current_price": 55495,
+      "current_price": 55850,
       "opened_at": "2026-06-08"
     }
   },
@@ -204,6 +211,10 @@
     {
       "date": "2026-06-19",
       "total_eval": 19460611
+    },
+    {
+      "date": "2026-06-22",
+      "total_eval": 19637531
     }
   ],
   "completed_trades": [

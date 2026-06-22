@@ -1,20 +1,36 @@
 {
-  "date": "2026-06-19",
+  "date": "2026-06-22",
   "start_date": "2026-05-03",
-  "cumulative_return": -2.7,
-  "week_return": 0.29,
-  "day_return": -0.31,
+  "cumulative_return": -1.81,
+  "week_return": 0.8,
+  "day_return": 0.91,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 40,
   "total_trades": 40,
-  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 -2.7%.",
-  "new_buys": [],
+  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -1.8%.",
+  "new_buys": [
+    {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 4.66,
+      "weight_pct": 15,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    }
+  ],
   "exits": [],
   "weekly_losses": [],
   "holdings": [
+    {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 15
+    },
     {
       "name": "KODEX 코스닥150",
       "slug": "",
@@ -47,10 +63,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-11",
-      "cumulative_return": -0.61
-    },
     {
       "date": "2026-05-12",
       "cumulative_return": -1.4
@@ -166,6 +178,10 @@
     {
       "date": "2026-06-19",
       "cumulative_return": -2.7
+    },
+    {
+      "date": "2026-06-22",
+      "cumulative_return": -1.81
     }
   ]
 }
