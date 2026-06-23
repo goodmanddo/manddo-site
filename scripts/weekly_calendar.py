@@ -34,7 +34,11 @@ def log(msg):
 
 
 def week_bounds(today: date):
+    # 일요일(자동 실행일)에는 다음 주(월~일)를 대상으로 한다.
+    # 그래야 월요일 이후에도 이벤트가 과거가 되어 프런트에서 숨겨지지 않음.
     monday = today - timedelta(days=today.weekday())
+    if today.weekday() == 6:  # 일요일 → 다가오는 주
+        monday += timedelta(days=7)
     sunday = monday + timedelta(days=6)
     return monday, sunday
 
