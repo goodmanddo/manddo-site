@@ -1,72 +1,94 @@
 {
-  "date": "2026-06-22",
+  "date": "2026-06-23",
   "start_date": "2026-05-03",
-  "cumulative_return": -1.81,
-  "week_return": 0.8,
-  "day_return": 0.91,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -4.95,
+  "week_return": -2.38,
+  "day_return": -3.19,
+  "today_realized_avg": -6.42,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 40,
-  "total_trades": 40,
-  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -1.8%.",
+  "today_loss_count": 1,
+  "win_rate": 39,
+  "total_trades": 41,
+  "ai_commentary": "오늘은 피에스케이홀딩스, SK하이닉스 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -4.9%.",
   "new_buys": [
+    {
+      "name": "피에스케이홀딩스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -4.63,
+      "weight_pct": 4,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 4.66,
-      "weight_pct": 15,
-      "hold_days": 0,
+      "entry_to_current_pct": -8.39,
+      "weight_pct": 13,
+      "hold_days": 1,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -6.42,
+      "hold_days": 15,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "return_pct": -6.42,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
   "holdings": [
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 15
-    },
-    {
-      "name": "KODEX 코스닥150",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 6
+      "weight_pct": 13
     },
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 8
     },
     {
-      "name": "ACE KRX금현물",
+      "name": "피에스케이홀딩스",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 2
+      "weight_pct": 4
     },
     {
       "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 1
+      "weight_pct": 3
+    },
+    {
+      "name": "ACE KRX금현물",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
     },
     {
       "name": "PLUS 미국채30년액티브",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 1
+      "weight_pct": 3
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-12",
-      "cumulative_return": -1.4
-    },
     {
       "date": "2026-05-13",
       "cumulative_return": -1.42
@@ -182,6 +204,10 @@
     {
       "date": "2026-06-22",
       "cumulative_return": -1.81
+    },
+    {
+      "date": "2026-06-23",
+      "cumulative_return": -4.95
     }
   ]
 }
