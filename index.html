@@ -90,6 +90,83 @@
     }).catch(()=>{});
   })();
   </script>
+  <!-- 📅 이번 주 시장 캘린더 -->
+  <section class="calendar-block" id="calendar-block" style="display:none">
+    <div class="calendar-head">
+      <h2>📅 이번 주 시장 캘린더</h2>
+      <span class="range" id="cal-range">—</span>
+      <a href="/ai-log/#calendar-block" class="cal-more">자세히 →</a>
+    </div>
+    <div class="calendar-desc">한국 시장에 영향이 큰 이벤트만 골라 정리. 매주 일요일 23시 자동 업데이트.</div>
+    <div class="cal-list" id="cal-list"></div>
+    <div class="cal-disc">⚠ 일정·시간은 발표 기관에 따라 변동될 수 있습니다. 매수·매도 권유가 아닙니다.</div>
+  </section>
+  <style>
+    .calendar-block{background:#fff;border:1px solid #E5E8EC;border-radius:18px;padding:22px 22px 18px;margin:0 0 32px}
+    .calendar-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+    .calendar-head h2{font-size:18px;font-weight:800;letter-spacing:-0.02em;color:#2c3038;margin:0}
+    .calendar-head .range{font-size:12px;color:#8b95a1}
+    .calendar-head .cal-more{margin-left:auto;font-size:12.5px;font-weight:600;color:#1B64DA;text-decoration:none}
+    .calendar-desc{font-size:12.5px;color:#6b7684;line-height:1.55;margin-bottom:14px}
+    .cal-list{display:flex;flex-direction:column;gap:8px}
+    .cal-item{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:start;padding:11px 13px;border:1px solid #EEF0F3;border-left:3px solid #C8CDD3;border-radius:10px;background:#FBFCFD}
+    .cal-item.high{border-left-color:#D63939;background:#FFF8F8}
+    .cal-item.mid{border-left-color:#F0A040;background:#FFFCF5}
+    .cal-item.low{border-left-color:#9aa3ad}
+    .cal-date{display:flex;flex-direction:column;align-items:center;font-family:'SF Mono',ui-monospace,monospace;line-height:1.1}
+    .cal-date .md{font-size:15px;font-weight:800;color:#2c3038}
+    .cal-date .wd{font-size:10.5px;font-weight:700;color:#8b95a1;margin-top:3px}
+    .cal-body{min-width:0}
+    .cal-title{font-size:14px;font-weight:700;color:#2c3038;line-height:1.4;margin-bottom:3px}
+    .cal-meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:5px}
+    .cal-cat{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:4px;background:#EEF0F3;color:#4e5968;letter-spacing:0.02em}
+    .cal-time{font-size:11px;color:#8b95a1;font-family:'SF Mono',ui-monospace,monospace}
+    .cal-view{font-size:12.5px;color:#4e5968;line-height:1.55}
+    .cal-impact{font-size:10px;font-weight:800;letter-spacing:0.05em;padding:3px 7px;border-radius:4px;white-space:nowrap;align-self:flex-start}
+    .cal-impact.high{background:#FFE8E8;color:#B33939}
+    .cal-impact.mid{background:#FEF5E0;color:#9A6014}
+    .cal-impact.low{background:#EEF0F3;color:#6b7684}
+    .cal-disc{font-size:11px;color:#8b95a1;margin-top:10px;line-height:1.5}
+    @media(max-width:520px){
+      .cal-item{grid-template-columns:46px 1fr;gap:10px}
+      .cal-impact{grid-column:2;justify-self:start;margin-top:2px}
+    }
+  </style>
+  <script>
+  (async function(){
+    try{
+      const wres = await fetch('/ai-log/weekly_calendar.json?v='+Date.now());
+      if(!wres.ok) throw new Error('no weekly_calendar');
+      const wc = await wres.json();
+      const today = new Date().toISOString().slice(0,10);
+      const events = (wc.events || []).filter(ev => ev.date >= today);
+      if(!events.length) throw new Error('empty');
+      const fmtMd = s => { const d=new Date(s+'T00:00:00'); return `${d.getMonth()+1}/${d.getDate()}`; };
+      document.getElementById('cal-range').textContent = `${fmtMd(wc.week_start)} – ${fmtMd(wc.week_end)}`;
+      const calList = document.getElementById('cal-list');
+      const impactLabel = {high:'HIGH', mid:'MID', low:'LOW'};
+      events.forEach(ev => {
+        const imp = ev.impact || 'low';
+        const timeTxt = ev.time ? `${ev.time} KST` : '시간 미정';
+        calList.insertAdjacentHTML('beforeend', `
+          <div class="cal-item ${imp}">
+            <div class="cal-date"><div class="md">${fmtMd(ev.date)}</div><div class="wd">${ev.weekday || ''}</div></div>
+            <div class="cal-body">
+              <div class="cal-title">${ev.title}</div>
+              <div class="cal-meta">
+                <span class="cal-cat">${ev.category || ''}</span>
+                <span class="cal-time">${timeTxt}</span>
+              </div>
+              <div class="cal-view">${ev.view || ''}</div>
+            </div>
+            <div class="cal-impact ${imp}">${impactLabel[imp] || ''}</div>
+          </div>
+        `);
+      });
+      document.getElementById('calendar-block').style.display = 'block';
+    }catch(e){ /* 캘린더 없으면 숨김 */ }
+  })();
+  </script>
   <section class="cat-section">
     <div class="cat-head">
       <h2>🤖 오늘 AI의 기록</h2>
