@@ -542,8 +542,9 @@ def git_push(week_label: str):
 
 # ---------- main ----------
 def main(target_date: str | None = None):
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        log("! ANTHROPIC_API_KEY 미설정")
+    key_file = os.path.expanduser("~/stock_auto_trade/.anthropic_key")
+    if not os.environ.get("ANTHROPIC_API_KEY") and not os.path.exists(key_file):
+        log("! ANTHROPIC_API_KEY 미설정 (환경변수·키파일 모두 없음)")
         sys.exit(1)
 
     target = date.fromisoformat(target_date) if target_date else date.today()
