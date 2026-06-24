@@ -4,22 +4,36 @@
       "name": "SK하이닉스",
       "qty": 1,
       "avg_price": 2789000,
-      "current_price": 2555000,
+      "current_price": 2580000,
       "opened_at": "2026-06-22"
     },
     "031980": {
       "name": "피에스케이홀딩스",
       "qty": 7,
       "avg_price": 123200,
-      "current_price": 117500,
+      "current_price": 122900,
       "opened_at": "2026-06-23"
+    },
+    "069080": {
+      "name": "웹젠",
+      "qty": 99,
+      "avg_price": 11598,
+      "current_price": 11920,
+      "opened_at": "2026-06-24"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 11,
       "avg_price": 131717,
-      "current_price": 132820,
+      "current_price": 138145,
       "opened_at": "2026-06-09"
+    },
+    "319660": {
+      "name": "피에스케이",
+      "qty": 5,
+      "avg_price": 167700,
+      "current_price": 169700,
+      "opened_at": "2026-06-24"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
@@ -32,7 +46,7 @@
       "name": "ACE KRX금현물",
       "qty": 20,
       "avg_price": 28900,
-      "current_price": 27715,
+      "current_price": 27760,
       "opened_at": "2026-06-08"
     },
     "464470": {
@@ -219,6 +233,10 @@
     {
       "date": "2026-06-23",
       "total_eval": 19010731
+    },
+    {
+      "date": "2026-06-24",
+      "total_eval": 19174596
     }
   ],
   "completed_trades": [
