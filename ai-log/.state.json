@@ -1,59 +1,38 @@
 {
   "last_holdings": {
-    "000660": {
-      "name": "SK하이닉스",
-      "qty": 1,
-      "avg_price": 2789000,
-      "current_price": 2917000,
-      "opened_at": "2026-06-22"
-    },
-    "031980": {
-      "name": "피에스케이홀딩스",
-      "qty": 7,
-      "avg_price": 123200,
-      "current_price": 127200,
-      "opened_at": "2026-06-23"
-    },
     "069080": {
       "name": "웹젠",
       "qty": 99,
       "avg_price": 11598,
-      "current_price": 11310,
+      "current_price": 11330,
       "opened_at": "2026-06-24"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 11,
       "avg_price": 131717,
-      "current_price": 145830,
+      "current_price": 137380,
       "opened_at": "2026-06-09"
-    },
-    "319660": {
-      "name": "피에스케이",
-      "qty": 5,
-      "avg_price": 167700,
-      "current_price": 170600,
-      "opened_at": "2026-06-24"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 17,
       "avg_price": 28210,
-      "current_price": 28395,
+      "current_price": 27890,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 20,
       "avg_price": 28900,
-      "current_price": 27110,
+      "current_price": 27120,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 10,
       "avg_price": 55296,
-      "current_price": 56515,
+      "current_price": 56340,
       "opened_at": "2026-06-08"
     }
   },
@@ -241,6 +220,10 @@
     {
       "date": "2026-06-25",
       "total_eval": 19566841
+    },
+    {
+      "date": "2026-06-26",
+      "total_eval": 19342560
     }
   ],
   "completed_trades": [
@@ -558,6 +541,30 @@
       "date": "2026-06-23",
       "is_win": false,
       "hold_days": 15
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "return_pct": -4.77,
+      "date": "2026-06-26",
+      "is_win": false,
+      "hold_days": 4
+    },
+    {
+      "name": "피에스케이홀딩스",
+      "code": "031980",
+      "return_pct": 10.39,
+      "date": "2026-06-26",
+      "is_win": true,
+      "hold_days": 3
+    },
+    {
+      "name": "피에스케이",
+      "code": "319660",
+      "return_pct": 9.96,
+      "date": "2026-06-26",
+      "is_win": true,
+      "hold_days": 2
     }
   ]
 }
