@@ -1,68 +1,79 @@
 {
-  "date": "2026-06-29",
+  "date": "2026-06-30",
   "start_date": "2026-05-03",
-  "cumulative_return": -2.44,
-  "week_return": -0.64,
-  "day_return": 0.88,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -3.3,
+  "week_return": 1.73,
+  "day_return": -0.89,
+  "today_realized_avg": -10.34,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 41,
-  "total_trades": 44,
-  "ai_commentary": "오늘은 유한양행, SOOP, 금호타이어 등 신규 편입. 시작 이후 누적 -2.4%.",
+  "today_loss_count": 1,
+  "win_rate": 40,
+  "total_trades": 45,
+  "ai_commentary": "오늘은 마녀공장, 유한양행, SOOP 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -3.3%.",
   "new_buys": [
+    {
+      "name": "마녀공장",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.17,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
     {
       "name": "유한양행",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 8.69,
-      "weight_pct": 6,
-      "hold_days": 0,
+      "entry_to_current_pct": 3.39,
+      "weight_pct": 5,
+      "hold_days": 1,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "SOOP",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.31,
+      "entry_to_current_pct": -0.71,
       "weight_pct": 4,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
-    },
-    {
-      "name": "금호타이어",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.0,
-      "weight_pct": 5,
-      "hold_days": 0,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 3.29,
+      "entry_to_current_pct": -0.33,
       "weight_pct": 6,
-      "hold_days": 5,
+      "hold_days": 6,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "금호타이어",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -10.34,
+      "hold_days": 1,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "금호타이어",
+      "slug": "",
+      "return_pct": -10.34,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 8
-    },
-    {
-      "name": "유한양행",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 6
+      "weight_pct": 10
     },
     {
       "name": "웹젠",
@@ -71,7 +82,13 @@
       "weight_pct": 6
     },
     {
-      "name": "금호타이어",
+      "name": "유한양행",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 5
+    },
+    {
+      "name": "마녀공장",
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
@@ -81,6 +98,12 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 4
+    },
+    {
+      "name": "TIGER 미국S&P500",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
     },
     {
       "name": "ACE KRX금현물",
@@ -93,19 +116,9 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
-    },
-    {
-      "name": "TIGER 미국S&P500",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 2
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-19",
-      "cumulative_return": -1.54
-    },
     {
       "date": "2026-05-20",
       "cumulative_return": -1.81
@@ -221,6 +234,10 @@
     {
       "date": "2026-06-29",
       "cumulative_return": -2.44
+    },
+    {
+      "date": "2026-06-30",
+      "cumulative_return": -3.3
     }
   ]
 }
