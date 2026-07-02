@@ -1,51 +1,42 @@
 {
-  "date": "2026-07-01",
+  "date": "2026-07-02",
   "start_date": "2026-05-03",
-  "cumulative_return": -3.13,
-  "week_return": 1.04,
-  "day_return": 0.18,
+  "cumulative_return": -4.36,
+  "week_return": -2.24,
+  "day_return": -1.27,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 40,
   "total_trades": 45,
-  "ai_commentary": "오늘은 마녀공장, 유한양행, SOOP 등 신규 편입. 시작 이후 누적 -3.1%.",
+  "ai_commentary": "오늘은 마녀공장, 유한양행, SOOP 등 신규 편입. 시작 이후 누적 -4.4%.",
   "new_buys": [
     {
       "name": "마녀공장",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 6.19,
+      "entry_to_current_pct": 1.03,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "유한양행",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 3.83,
+      "entry_to_current_pct": 3.24,
       "weight_pct": 5,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "SOOP",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.2,
+      "entry_to_current_pct": -1.92,
       "weight_pct": 4,
-      "hold_days": 2,
-      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
-    },
-    {
-      "name": "웹젠",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 2.09,
-      "weight_pct": 6,
-      "hold_days": 7,
+      "hold_days": 3,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     }
   ],
@@ -63,7 +54,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 10
+      "weight_pct": 9
     },
     {
       "name": "웹젠",
@@ -90,13 +81,13 @@
       "weight_pct": 4
     },
     {
-      "name": "TIGER 미국S&P500",
+      "name": "ACE KRX금현물",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 3
+      "weight_pct": 4
     },
     {
-      "name": "ACE KRX금현물",
+      "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -109,10 +100,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-21",
-      "cumulative_return": -1.68
-    },
     {
       "date": "2026-05-22",
       "cumulative_return": -1.53
@@ -228,6 +215,10 @@
     {
       "date": "2026-07-01",
       "cumulative_return": -3.13
+    },
+    {
+      "date": "2026-07-02",
+      "cumulative_return": -4.36
     }
   ]
 }
