@@ -4,56 +4,49 @@
       "name": "유나이티드제약",
       "qty": 143,
       "avg_price": 17553,
-      "current_price": 17410,
+      "current_price": 17210,
       "opened_at": "2026-07-06"
     },
     "067160": {
       "name": "SOOP",
       "qty": 15,
       "avg_price": 49550,
-      "current_price": 49300,
+      "current_price": 48150,
       "opened_at": "2026-06-29"
     },
     "069080": {
       "name": "웹젠",
       "qty": 99,
       "avg_price": 11598,
-      "current_price": 11720,
+      "current_price": 11980,
       "opened_at": "2026-06-24"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 18,
       "avg_price": 130640,
-      "current_price": 123710,
+      "current_price": 116865,
       "opened_at": "2026-06-09"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 23,
       "avg_price": 28308,
-      "current_price": 28525,
+      "current_price": 27920,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 27,
       "avg_price": 28573,
-      "current_price": 27960,
+      "current_price": 27460,
       "opened_at": "2026-06-08"
-    },
-    "439090": {
-      "name": "마녀공장",
-      "qty": 64,
-      "avg_price": 15095,
-      "current_price": 14860,
-      "opened_at": "2026-06-30"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 14,
       "avg_price": 55298,
-      "current_price": 54670,
+      "current_price": 53290,
       "opened_at": "2026-06-08"
     }
   },
@@ -273,6 +266,10 @@
     {
       "date": "2026-07-07",
       "total_eval": 19100185
+    },
+    {
+      "date": "2026-07-08",
+      "total_eval": 19072868
     }
   ],
   "completed_trades": [
@@ -630,6 +627,14 @@
       "date": "2026-07-03",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "마녀공장",
+      "code": "439090",
+      "return_pct": 15.53,
+      "date": "2026-07-08",
+      "is_win": true,
+      "hold_days": 8
     }
   ]
 }

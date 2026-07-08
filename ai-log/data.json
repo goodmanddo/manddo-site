@@ -1,37 +1,38 @@
 {
-  "date": "2026-07-07",
+  "date": "2026-07-08",
   "start_date": "2026-05-03",
-  "cumulative_return": -4.5,
-  "week_return": -1.24,
-  "day_return": -0.52,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -4.64,
+  "week_return": -1.56,
+  "day_return": -0.14,
+  "today_realized_avg": 15.53,
+  "today_trade_count": 1,
+  "today_win_count": 1,
   "today_loss_count": 0,
-  "win_rate": 41,
-  "total_trades": 46,
-  "ai_commentary": "오늘은 유나이티드제약, 마녀공장 등 신규 편입. 시작 이후 누적 -4.5%.",
+  "win_rate": 43,
+  "total_trades": 47,
+  "ai_commentary": "오늘은 유나이티드제약 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -4.6%.",
   "new_buys": [
     {
       "name": "유나이티드제약",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.81,
+      "entry_to_current_pct": -1.95,
       "weight_pct": 13,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
-    },
+    }
+  ],
+  "exits": [
     {
+      "type": "win",
       "name": "마녀공장",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.56,
-      "weight_pct": 5,
-      "hold_days": 7,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+      "return_pct": 15.53,
+      "hold_days": 8,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [],
   "holdings": [
     {
@@ -44,19 +45,13 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 12
+      "weight_pct": 11
     },
     {
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
-    },
-    {
-      "name": "마녀공장",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
     },
     {
       "name": "SOOP",
@@ -84,10 +79,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-05-27",
-      "cumulative_return": -1.91
-    },
     {
       "date": "2026-05-28",
       "cumulative_return": -1.92
@@ -203,6 +194,10 @@
     {
       "date": "2026-07-07",
       "cumulative_return": -4.5
+    },
+    {
+      "date": "2026-07-08",
+      "cumulative_return": -4.64
     }
   ]
 }
