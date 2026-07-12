@@ -309,11 +309,13 @@ def main():
             dest = STOCK_DIR / f"{meta['slug']}.html"
             src_text = src.read_text(encoding="utf-8", errors="ignore")
             out_text = inject_back_button(src_text)
-            is_core = manifest_by_slug.get(meta["slug"], {}).get("core", False)
-            if not is_core:
-                out_text = inject_noindex(out_text)
-            else:
-                out_text = remove_noindex(out_text)
+            # [2026-07-12] 애드센스 '가치 낮은 콘텐츠' 3차 거절 대응(승인 우선):
+            # core(대형주)도 포함해 전 종목리포트를 noindex 한다. 자동생성 차트분석이
+            # 색인 대상으로 재유입되던 재발의 근본 차단.
+            # ▶ 승인 후 SEO 재색인하려면 아래를 원복:
+            #     is_core = manifest_by_slug.get(meta["slug"], {}).get("core", False)
+            #     out_text = inject_noindex(out_text) if not is_core else remove_noindex(out_text)
+            out_text = inject_noindex(out_text)
             dest.write_text(out_text, encoding="utf-8")
             if is_dup:
                 # 기존 added 날짜 유지, 메타 갱신
