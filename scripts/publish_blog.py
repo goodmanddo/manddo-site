@@ -149,7 +149,7 @@ POST_TEMPLATE = """<!DOCTYPE html>
   <header class="post-head">
     <div class="cat">{category}</div>
     <h1>{title}</h1>
-    <div class="meta">{date_kor} · 읽는 시간 약 {read_min}분</div>
+    <div class="meta">글 <a href="/about.html" rel="author">만또</a> · {date_kor} · 읽는 시간 약 {read_min}분</div>
   </header>
 
   <article class="post-body">
