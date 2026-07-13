@@ -1,30 +1,36 @@
 {
-  "date": "2026-07-10",
+  "date": "2026-07-13",
   "start_date": "2026-05-03",
-  "cumulative_return": -3.86,
-  "week_return": -0.15,
-  "day_return": 0.63,
-  "today_realized_avg": 1.46,
-  "today_trade_count": 1,
-  "today_win_count": 1,
+  "cumulative_return": -8.0,
+  "week_return": -4.17,
+  "day_return": -4.31,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 48,
-  "ai_commentary": "1건 익절로 수익 확정. 시작 이후 누적 -3.9%.",
-  "new_buys": [],
-  "exits": [
+  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -8.0%.",
+  "new_buys": [
     {
-      "type": "win",
-      "name": "유나이티드제약",
+      "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "return_pct": 1.46,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+      "entry_to_current_pct": -13.22,
+      "weight_pct": 20,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
+  "exits": [],
   "weekly_losses": [],
   "holdings": [
+    {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 20
+    },
     {
       "name": "KODEX 200",
       "slug": "",
@@ -44,6 +50,12 @@
       "weight_pct": 4
     },
     {
+      "name": "TIGER 미국S&P500",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
+    {
       "name": "ACE KRX금현물",
       "slug": "",
       "market": "코스피",
@@ -54,19 +66,9 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 4
-    },
-    {
-      "name": "TIGER 미국S&P500",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-01",
-      "cumulative_return": -1.47
-    },
     {
       "date": "2026-06-02",
       "cumulative_return": -1.82
@@ -182,6 +184,10 @@
     {
       "date": "2026-07-10",
       "cumulative_return": -3.86
+    },
+    {
+      "date": "2026-07-13",
+      "cumulative_return": -8.0
     }
   ]
 }
