@@ -1,24 +1,24 @@
 {
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.66,
-  "week_return": -3.31,
-  "day_return": 0.37,
+  "cumulative_return": -5.3,
+  "week_return": -0.69,
+  "day_return": 2.56,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 48,
-  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -7.7%.",
+  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -5.3%.",
   "new_buys": [
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -10.02,
-      "weight_pct": 21,
-      "hold_days": 1,
+      "entry_to_current_pct": -2.07,
+      "weight_pct": 22,
+      "hold_days": 2,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
@@ -29,31 +29,19 @@
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 21
+      "weight_pct": 22
     },
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 13
+      "weight_pct": 14
     },
     {
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
-    },
-    {
-      "name": "ACE KRX금현물",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "PLUS 미국채30년액티브",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
     },
     {
       "name": "SOOP",
@@ -66,13 +54,21 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 4
+    },
+    {
+      "name": "ACE KRX금현물",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
+    {
+      "name": "PLUS 미국채30년액티브",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-03",
-      "cumulative_return": -1.82
-    },
     {
       "date": "2026-06-04",
       "cumulative_return": -1.63
@@ -188,6 +184,10 @@
     {
       "date": "2026-07-14",
       "cumulative_return": -7.66
+    },
+    {
+      "date": "2026-07-15",
+      "cumulative_return": -5.3
     }
   ]
 }
