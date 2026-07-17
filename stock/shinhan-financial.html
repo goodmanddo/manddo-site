@@ -3,45 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex,follow">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>신한지주 세력·차트 분석</title>
+<meta name="stock-name" content="신한지주">
+<meta name="stock-code" content="055550">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
 .wrap{max-width:740px;margin:0 auto}
-h1{font-size:17px;font-weight:700;margin-bottom:2px}
-.sub{font-size:12px;color:#888780;margin-bottom:16px}
-.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7;color:#444}
 .card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.met{background:#f5f5f0;border-radius:7px;padding:7px 9px}
-.ml{font-size:11px;color:#888780;margin-bottom:1px}
-.mv{font-size:18px;font-weight:700}
-.ms{font-size:10px;color:#b4b2a9}
-.tag{display:inline-block;font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;margin-left:4px}
-.t-r{background:#FCEBEB;color:#A32D2D}.t-g{background:#EAF3DE;color:#27500A}.t-b{background:#E6F1FB;color:#0C447C}
-.t-a{background:#FAEEDA;color:#633806}.t-p{background:#EEEDFE;color:#26215C}.t-teal{background:#E1F5EE;color:#04342C}
-.t-navy{background:#EEF2FF;color:#1E3A5F}
-.zone{display:flex;align-items:flex-start;gap:7px;padding:8px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
+.met{background:#fff;border:1px solid #d3d1c7;border-radius:8px;padding:10px 12px}
+.ml{font-size:11px;color:#888;margin-bottom:3px}
+.mv{font-size:17px;font-weight:700;color:#2c2c2a}
+.ms{font-size:11px;color:#888;margin-top:2px}
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 7px;border-radius:4px;margin:2px 2px}
+.t-r{background:#fde8e8;color:#c0392b}
+.t-g{background:#e3f5ec;color:#1D9E75}
+.t-b{background:#e8f0fe;color:#2563eb}
+.t-a{background:#fef3cd;color:#b45309}
+.t-navy{background:#e8edf7;color:#1e3a5f}
+.t-teal{background:#e0f4f4;color:#0d7e7e}
+.t-p{background:#f3e8ff;color:#7c3aed}
+.zone{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid #f0efe9}
 .zone:last-child{border-bottom:none}
-.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:3px}
-.row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1efe8;font-size:12px}
+.zdot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:3px}
+.zt{font-size:12px;font-weight:700;margin-bottom:2px}
+.zd{font-size:12px;color:#555;line-height:1.5}
+.row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid #f5f4f0;font-size:13px}
 .row:last-child{border-bottom:none}
-.score-wrap{height:8px;background:#f1efe8;border-radius:4px;margin:4px 0 6px}
-.score-fill{height:100%;border-radius:4px}
-.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
-.ct-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:600}
-.info-box{background:#E1F5EE;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1D9E75}
-.warn-box{background:#FAEEDA;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #EF9F27}
-.danger-box{background:#FCEBEB;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #E24B4A}
-.navy-box{background:#EEF2FF;border-radius:8px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #1E3A5F}
-.strategy-box{border-radius:7px;padding:8px;text-align:center;font-size:11px}
-.sp{font-size:14px;font-weight:700;margin:3px 0}
-.rr{padding:7px 0;border-bottom:1px solid #f1efe8;font-size:11px;display:flex;gap:8px;align-items:flex-start}
+.rr{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid #f5f4f0}
 .rr:last-child{border-bottom:none}
-.rn{min-width:62px;font-weight:700;color:#1E3A5F;background:#EEF2FF;padding:2px 6px;border-radius:4px;font-size:10px;text-align:center;margin-top:1px;flex-shrink:0}
+.rn{min-width:22px;height:22px;background:#2c2c2a;color:#fff;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.rd{font-size:13px;color:#444;line-height:1.6}
+.info-box{background:#e8f7ee;border:1px solid #a8d8ba;border-radius:8px;padding:12px 14px;margin-bottom:8px}
+.warn-box{background:#fef6e4;border:1px solid #f0c77a;border-radius:8px;padding:12px 14px;margin-bottom:8px}
+.danger-box{background:#fdecea;border:1px solid #f5a8a3;border-radius:8px;padding:12px 14px;margin-bottom:8px}
+.navy-box{background:#eef1f8;border:1px solid #b0bcd8;border-radius:10px;padding:14px 16px;margin-bottom:8px}
+.score-wrap{background:#e8e6e0;border-radius:6px;height:10px;overflow:hidden;margin-top:6px}
+.score-fill{height:100%;border-radius:6px;transition:width .4s}
+.strategy-box{background:#f7f6f2;border:1px solid #d3d1c7;border-radius:8px;padding:12px;text-align:center}
+.sp{font-size:18px;font-weight:700;margin:4px 0}
+.chart-area{width:100%;overflow-x:auto;background:#fff;border:1px solid #d3d1c7;border-radius:8px;margin-bottom:8px}
+h2{font-size:16px;font-weight:700;margin-bottom:10px;color:#1e3a5f}
+h3{font-size:14px;font-weight:700;margin:8px 0 5px;color:#2c2c2a}
+p{font-size:13px;line-height:1.6;color:#444}
+ul{padding-left:18px}
+ul li{font-size:13px;line-height:1.7;color:#444}
+.divider{height:1px;background:#e8e6e0;margin:10px 0}
 </style>
 </head>
 <body>
@@ -49,293 +61,106 @@ h1{font-size:17px;font-weight:700;margin-bottom:2px}
 <style>#__mdback{position:fixed;top:12px;left:12px;z-index:9999;display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid #d3d1c7;border-radius:10px;padding:9px 14px;font-size:13px;font-weight:700;color:#2c2c2a;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);cursor:pointer;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif}#__mdback:hover{background:#fff;border-color:#888780;transform:translateY(-1px)}#__mdback:active{transform:translateY(0)}</style><a id="__mdback" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
 
 <div class="wrap">
-<h1>신한지주 (055550) — 세력·차트 종합 분석</h1>
-<div class="sub">2026년 4월 기준 | KOSPI 금융지주 | 신고점 조정 후 재반등 — 정배열 강세 유지 중</div>
 
+<!-- ① 종합 요약 navy-box -->
 <div class="navy-box">
-  <div style="font-size:12px;font-weight:700;color:#1E3A5F;margin-bottom:5px">⚡ 신한지주 = "107,200 신고점 후 23.6% 피보나치 되돌림 완료, 4파 조정 끝나고 재상승 국면"</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:11px">
-    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#27500A">
-      <b>📈 구조적 강점</b><br>① 국내 1위 금융그룹 (은행·증권·보험 통합)<br>② 금리 정상화 → 이자마진 개선 사이클<br>③ 배당수익률 4~5% 고배당주<br>④ 이평선 완전 정배열 (MA20&gt;MA60&gt;MA120)
+  <h2>🏦 신한지주 (055550) 세력·차트 종합 분석</h2>
+  <p style="font-size:14px;font-weight:700;color:#1e3a5f;margin-bottom:10px">
+    📌 52주 최고가(113,300) 근접 구간에서 정배열 완성 후 단기 과열(RSI 77.1) — 눌림목 조정 대응이 핵심이며, 볼린저 상단 돌파 유지 여부가 추가 상승 트리거
+  </p>
+  <div class="g2" style="gap:12px">
+    <div>
+      <div class="zt" style="color:#1D9E75;margin-bottom:5px">✅ 구조적 강점</div>
+      <ul>
+        <li>MA5/20/60/120 완전 정배열 달성</li>
+        <li>52주 위치 89.2% — 강세장 진행 중</li>
+        <li>기관(+51만) · 외인(+15만) 동반 순매수</li>
+        <li>MACD 양전환 (+2,617) 히스토그램 확대</li>
+        <li>PBR 0.86배 — 역사적 저평가 구간</li>
+      </ul>
     </div>
-    <div style="background:rgba(255,255,255,0.6);border-radius:6px;padding:8px;color:#A32D2D">
-      <b>⚠ 리스크</b><br>52주 위치 76.7% 고점권 — 추격매수 경계 필요. 2월 급등(+26%) 후 조정 완료 여부 불확실. 거래량 감소 시 재조정 가능성. MA60(92,955) 이탈 시 추세 훼손.
+    <div>
+      <div class="zt" style="color:#c0392b;margin-bottom:5px">⚠️ 핵심 리스크</div>
+      <ul>
+        <li>RSI 77.1 — 과매수 구간 진입, 단기 조정 경계</li>
+        <li>볼린저 상단(114,029) 근접 — 매물 저항</li>
+        <li>52주 최고가(113,300) 재돌파 실패 시 더블탑 경계</li>
+        <li>최근 5거래일 연속 양봉 후 장대음봉 출현 가능</li>
+        <li>금리 정책 변동 시 금융주 밸류에이션 재조정 위험</li>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="sec">📊 현재 주가 현황 (2026.4 기준)</div>
-<div class="card">
-  <div class="g3">
-    <div class="met"><div class="ml">현재가</div><div class="mv" style="color:#1D9E75">99,600<span style="font-size:11px;color:#888">원</span></div><div class="ms">전일 대비 -0.3%</div></div>
-    <div class="met"><div class="ml">52주 범위</div><div class="mv" style="font-size:12px;line-height:1.4">74,600~<br>107,200원</div><div class="ms">저점 대비 +33.5%</div></div>
-    <div class="met"><div class="ml">52주 위치</div><div class="mv" style="color:#EF9F27;font-size:15px">76.7%</div><div class="ms">고점권 — 조정 경계</div></div>
+<!-- ② 현재 주가 현황 -->
+<div class="sec">📊 현재 주가 현황</div>
+<div class="g3" style="margin-bottom:8px">
+  <div class="met">
+    <div class="ml">현재가</div>
+    <div class="mv" style="color:#1D9E75">107,900</div>
+    <div class="ms">전일비 +600 (+0.56%)</div>
   </div>
-  <div style="font-size:11px;color:#888;margin-bottom:4px">신고점(107,200) 대비 -7.1% 조정 후 반등 중. 피보나치 23.6% 되돌림 지지 확인. 이평선 정배열 유지로 상승 추세 건재.</div>
-  <div style="position:relative;height:22px;background:linear-gradient(90deg,#9FE1CB 0%,#FAC775 50%,#F09595 75%,#E24B4A 100%);border-radius:5px;margin-bottom:20px">
-    <div style="position:absolute;left:76.7%;top:-4px;width:3px;height:30px;background:#26215C;border-radius:2px"><div style="position:absolute;top:31px;font-size:10px;color:#26215C;font-weight:700;white-space:nowrap;transform:translateX(-50%)">▲ 99,600</div></div>
+  <div class="met">
+    <div class="ml">52주 범위</div>
+    <div class="mv" style="font-size:13px">63,100 ~ 113,300</div>
+    <div class="ms">변동폭 +79.6%</div>
   </div>
-  <div style="display:flex;justify-content:space-between;font-size:10px;color:#b4b2a9;margin-top:6px"><span>저점 74,600</span><span>중간 90,900</span><span>고점 107,200</span></div>
-  <div style="border-top:.5px solid #f1efe8;margin-top:10px;padding-top:8px;font-size:11px;color:#5f5e5a">
-    <b>핵심 상황:</b> 2026년 2월 폭발적 급등(85,000→107,200, +26%)으로 신고점 돌파 후 3월 조정(87,700까지 -18% 하락). 4월 들어 반등 재개로 현재 99,600. 세력은 85,000~90,000 구간에서 매집 완료 후 시세 분출했으며, 조정 중에도 MA60(92,955) 사수 → 세력 본전 방어 의지 뚜렷. 현재 엘리어트 4파 조정 마무리 → 5파 상승 준비 중으로 판단.
-  </div>
-  <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px">
-    <span class="tag t-g" style="font-size:10px;padding:2px 7px">신고점 돌파</span>
-    <span class="tag t-b" style="font-size:10px;padding:2px 7px">정배열 강세</span>
-    <span class="tag t-teal" style="font-size:10px;padding:2px 7px">피보나치 23.6% 지지</span>
-    <span class="tag t-navy" style="font-size:10px;padding:2px 7px">엘리어트 4파 조정</span>
-    <span class="tag t-a" style="font-size:10px;padding:2px 7px">고배당주 4~5%</span>
+  <div class="met">
+    <div class="ml">52주 위치</div>
+    <div class="mv" style="color:#1D9E75">89.2%</div>
+    <div class="ms">상단 근접 강세</div>
   </div>
 </div>
 
-<div class="sec">📈 일봉 차트 모양 — "신고점 조정 후 피보나치 23.6% 지지 확인, 재반등 시작"</div>
-<div class="card" style="background:#f9f8f5;margin-bottom:6px">
-  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 일봉이 이런 모양인 이유</div>
-  <div class="rr"><div class="rn">이유①</div><div><b>2월 폭발적 거래량 급등 = 세력 시세 분출.</b> 2/9~2/13 5일간 거래량 1,000만주 돌파하며 93,600→107,200 (+14.5%) 수직 상승. 이는 세력이 85,000~90,000 매집 구간에서 물량 확보 후 본격 털기 전 가격 끌어올리기.</div></div>
-  <div class="rr"><div class="rn">이유②</div><div><b>조정 중에도 MA60(92,955) 사수 = 세력 본전 방어.</b> 3월 하락(107,200→87,700) 시 MA60까지 터치 후 즉시 반등. 세력은 90,000 전후를 매집원가로 추정 → 이 밑으로 떨어지는 것 참지 못함. 현재 MA20(94,305) 위 안착.</div></div>
-  <div class="rr"><div class="rn">이유③</div><div><b>피보나치 23.6% 되돌림(99,500) 정확 지지.</b> 신고점(107,200) → 조정 저점(87,700) 반등 과정에서 23.6% 되돌림 99,500 근처 현재가 99,600 형성. 얕은 되돌림 = 강세 지속 신호. 38.2%(94,750)까지 조정 없이 상승 시 목표가 110,000+.</div></div>
-  <div class="rr"><div class="rn">이유④</div><div><b>단기 카탈리스트 = 4월 실적 발표 + 배당 기대.</b> 금융주 특성상 분기 실적 개선 + 고배당 기대감이 4월 반등 동력. 107,200 신고점 재돌파 시 심리적 저항 해소 → 110,000~115,000 목표. 단, 거래량 감소 시 재조정(94,000) 경계.</div></div>
-</div>
-
-<div class="chart-area">
-  <div style="font-size:12px;font-weight:700;margin-bottom:8px">일봉 (Daily) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">신고점 후 조정 → 피보나치 지지 반등</span></div>
-  <svg width="100%" viewBox="0 0 680 225">
-    <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker></defs>
-    <rect x="40" y="30" width="180" height="175" rx="4" fill="#FAEEDA" opacity=".12"/>
-    <text x="130" y="42" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">① 매집 구간 (1월)</text>
-    <rect x="220" y="15" width="120" height="190" rx="4" fill="#EAF3DE" opacity=".15"/>
-    <text x="280" y="27" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">② 급등 (2월)</text>
-    <rect x="340" y="30" width="160" height="175" rx="4" fill="#FCEBEB" opacity=".12"/>
-    <text x="420" y="42" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">③ 조정 (3월)</text>
-    <rect x="500" y="40" width="130" height="165" rx="4" fill="#E1F5EE" opacity=".15"/>
-    <text x="565" y="52" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">④ 재반등 (4월)</text>
-    
-    <line x1="55" y1="125" x2="55" y2="145" stroke="#888" stroke-width="1.8"/><rect x="50" y="130" width="10" height="10" fill="#888" rx="1"/>
-    <line x1="75" y1="120" x2="75" y2="140" stroke="#888" stroke-width="1.8"/><rect x="70" y="125" width="10" height="10" fill="#888" rx="1"/>
-    <line x1="95" y1="115" x2="95" y2="135" stroke="#888" stroke-width="1.8"/><rect x="90" y="120" width="10" height="8" fill="#1D9E75" rx="1"/>
-    <line x1="115" y1="110" x2="115" y2="130" stroke="#1D9E75" stroke-width="1.8"/><rect x="110" y="115" width="10" height="10" fill="#1D9E75" rx="1"/>
-    <line x1="135" y1="120" x2="135" y2="135" stroke="#888" stroke-width="1.8"/><rect x="130" y="123" width="10" height="8" fill="#E24B4A" rx="1"/>
-    <line x1="155" y1="110" x2="155" y2="125" stroke="#1D9E75" stroke-width="1.8"/><rect x="150" y="112" width="10" height="10" fill="#1D9E75" rx="1"/>
-    <line x1="175" y1="115" x2="175" y2="130" stroke="#888" stroke-width="1.8"/><rect x="170" y="118" width="10" height="8" fill="#E24B4A" rx="1"/>
-    <line x1="195" y1="105" x2="195" y2="120" stroke="#1D9E75" stroke-width="1.8"/><rect x="190" y="108" width="10" height="9" fill="#1D9E75" rx="1"/>
-    
-    <line x1="230" y1="100" x2="230" y2="115" stroke="#888" stroke-width="1.8"/><rect x="225" y="103" width="10" height="8" fill="#E24B4A" rx="1"/>
-    <line x1="250" y1="80" x2="250" y2="95" stroke="#1D9E75" stroke-width="2"/><rect x="245" y="82" width="10" height="11" fill="#1D9E75" rx="1"/>
-    <line x1="270" y1="55" x2="270" y2="75" stroke="#1D9E75" stroke-width="2.2"/><rect x="265" y="57" width="10" height="16" fill="#1D9E75" rx="1"/>
-    <line x1="290" y1="40" x2="290" y2="60" stroke="#1D9E75" stroke-width="2.2"/><rect x="285" y="42" width="10" height="16" fill="#1D9E75" rx="1"/>
-    <line x1="310" y1="25" x2="310" y2="50" stroke="#1D9E75" stroke-width="2.5"/><rect x="305" y="28" width="10" height="20" fill="#1D9E75" rx="1"/>
-    <text x="310" y="18" text-anchor="middle" font-size="9" fill="#27500A" font-weight="700">신고점 107,200</text>
-    <line x1="310" y1="20" x2="310" y2="25" stroke="#27500A" stroke-width="1" marker-end="url(#arr)"/>
-    
-    <line x1="345" y1="35" x2="345" y2="58" stroke="#E24B4A" stroke-width="2"/><rect x="340" y="47" width="10" height="9" fill="#E24B4A" rx="1"/>
-    <line x1="365" y1="60" x2="365" y2="80" stroke="#1D9E75" stroke-width="1.8"/><rect x="360" y="63" width="10" height="14" fill="#1D9E75" rx="1"/>
-    <line x1="385" y1="65" x2="385" y2="82" stroke="#888" stroke-width="1.8"/><rect x="380" y="70" width="10" height="8" fill="#E24B4A" rx="1"/>
-    <line x1="405" y1="75" x2="405" y2="92" stroke="#888" stroke-width="1.8"/><rect x="400" y="79" width="10" height="9" fill="#E24B4A" rx="1"/>
-    <line x1="425" y1="90" x2="425" y2="110" stroke="#E24B4A" stroke-width="2"/><rect x="420" y="99" width="10" height="9" fill="#E24B4A" rx="1"/>
-    <line x1="445" y1="105" x2="445" y2="125" stroke="#E24B4A" stroke-width="2"/><rect x="440" y="113" width="10" height="10" fill="#E24B4A" rx="1"/>
-    <line x1="465" y1="115" x2="465" y2="135" stroke="#888" stroke-width="1.8"/><rect x="460" y="120" width="10" height="10" fill="#1D9E75" rx="1"/>
-    <line x1="485" y1="120" x2="485" y2="138" stroke="#888" stroke-width="1.8"/><rect x="480" y="125" width="10" height="9" fill="#E24B4A" rx="1"/>
-    
-    <line x1="515" y1="145" x2="515" y2="165" stroke="#E24B4A" stroke-width="1.8"/><rect x="510" y="153" width="10" height="10" fill="#E24B4A" rx="1"/>
-    <text x="515" y="180" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">조정 저점 87,700</text>
-    <line x1="535" y1="110" x2="535" y2="128" stroke="#1D9E75" stroke-width="2"/><rect x="530" y="113" width="10" height="13" fill="#1D9E75" rx="1"/>
-    <line x1="555" y1="100" x2="555" y2="118" stroke="#1D9E75" stroke-width="1.8"/><rect x="550" y="103" width="10" height="12" fill="#1D9E75" rx="1"/>
-    <line x1="575" y1="88" x2="575" y2="105" stroke="#1D9E75" stroke-width="2"/><rect x="570" y="91" width="10" height="12" fill="#1D9E75" rx="1"/>
-    <line x1="595" y1="75" x2="595" y2="92" stroke="#1D9E75" stroke-width="2"/><rect x="590" y="78" width="10" height="12" fill="#1D9E75" rx="1"/>
-    <line x1="615" y1="70" x2="615" y2="88" stroke="#888" stroke-width="1.8"/><rect x="610" y="75" width="10" height="10" fill="#1D9E75" rx="1"/>
-    
-    <line x1="40" y1="80" x2="640" y2="80" stroke="#26215C" stroke-width="1.5" stroke-dasharray="4 3" opacity=".6"/>
-    <text x="42" y="77" font-size="9" fill="#26215C" font-weight="600">현재 99,600</text>
-    
-    <line x1="40" y1="115" x2="640" y2="115" stroke="#1D9E75" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
-    <text x="545" y="113" font-size="8" fill="#1D9E75" font-weight="600">MA60 (92,955)</text>
-    
-    <line x1="40" y1="105" x2="640" y2="105" stroke="#0C447C" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
-    <text x="545" y="103" font-size="8" fill="#0C447C" font-weight="600">MA20 (94,305)</text>
-    
-    <text x="340" y="222" text-anchor="middle" font-size="9" fill="#b4b2a9">일봉: 세력 매집(1월) → 급등 시세(2월) → 조정 완료(3월) → 재상승 진입(4월). 피보나치 23.6% 지지 확인.</text>
+<!-- 52주 그라디언트 바 -->
+<div class="card" style="padding:14px 16px">
+  <div style="font-size:11px;color:#888;margin-bottom:6px">52주 가격 위치 (저가 63,100 → 고가 113,300)</div>
+  <svg width="100%" viewBox="0 0 600 36" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#ef4444"/>
+        <stop offset="40%" stop-color="#f59e0b"/>
+        <stop offset="75%" stop-color="#10b981"/>
+        <stop offset="100%" stop-color="#1D9E75"/>
+      </linearGradient>
+    </defs>
+    <rect x="10" y="14" width="580" height="10" rx="5" fill="url(#barGrad)" opacity=".35"/>
+    <!-- 현재가 마커 89.2% → x = 10 + 580*0.892 = 527.4 -->
+    <rect x="524" y="10" width="6" height="18" rx="3" fill="#1D9E75"/>
+    <text x="527" y="8" text-anchor="middle" font-size="10" fill="#1D9E75" font-weight="700">107,900</text>
+    <text x="10" y="32" font-size="10" fill="#888">63,100</text>
+    <text x="590" y="32" text-anchor="end" font-size="10" fill="#888">113,300</text>
+    <!-- 피보나치 레벨들 -->
+    <!-- 23.6% = 101,452 → (101452-63100)/(113300-63100)=0.764 → x=10+580*0.764=453 -->
+    <line x1="453" y1="12" x2="453" y2="26" stroke="#b45309" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="453" y="35" text-anchor="middle" font-size="9" fill="#b45309">23.6%</text>
+    <!-- 38.2% = 94,123 → (94123-63100)/50200=0.618 → x=10+580*0.618=368 -->
+    <line x1="368" y1="12" x2="368" y2="26" stroke="#7c3aed" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="368" y="35" text-anchor="middle" font-size="9" fill="#7c3aed">38.2%</text>
   </svg>
+  <div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:4px">
+    <span class="tag t-g">현재가 107,900</span>
+    <span class="tag t-r">RSI 77.1 과매수</span>
+    <span class="tag t-b">거래량 1,463,864</span>
+    <span class="tag t-teal">20일평균비 97.6%</span>
+    <span class="tag t-navy">정배열 완성</span>
+    <span class="tag t-a">볼린저상단 114,029</span>
+    <span class="tag t-p">PBR 0.86배 저평가</span>
+  </div>
 </div>
 
-<div class="sec">📈 주봉 차트 모양 — "엘리어트 3파 폭발 후 4파 조정, 5파 목표 110,000~120,000"</div>
-<div class="card" style="background:#f9f8f5;margin-bottom:6px">
-  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 주봉이 이런 모양인 이유</div>
-  <div class="rr"><div class="rn">이유①</div><div><b>2025년 하반기 ~ 2026년 1월 = 세력 장기 매집 구간.</b> 74,600~84,000 박스권 6개월 횡보. 거래량 꾸준히 유입 → 세력은 이 구간에서 평균 80,000 전후로 대량 매집 완료. 횡보 후 급등은 "길게 간다"는 법칙 적용 가능.</div></div>
-  <div class="rr"><div class="rn">이유②</div><div><b>엘리어트 파동 라벨링: ① ② ③파 완성, 현재 ④파 조정.</b> ①파(2025년 11월, 72,000→80,000) → ②파 조정(78,000) → ③파 폭발(2026년 2월, 85,000→107,200, +26%) → ④파 조정(현재 87,700~99,600). 엘리어트 법칙상 3파가 가장 강력 = 이미 증명. ⑤파 목표가 110,000~120,000.</div></div>
-  <div class="rr"><div class="rn">이유③</div><div><b>주봉 이평선 20/60/120주선 완전 정배열.</b> 20주선(약 94,000) > 60주선(약 88,000) > 120주선(약 75,000). 주봉 추세 강세 지속. 20주선 지지(94,000) 사수 시 ⑤파 돌파 확률 80%+. 60주선(88,000) 이탈 시 추세 훼손 → 장기 박스권 회귀 경고.</div></div>
-  <div class="rr"><div class="rn">이유④</div><div><b>중기 카탈리스트 = 금리 정상화 + 2분기 실적 개선.</b> 2026년 상반기 금융주 이자마진 개선 기대. 신한은행·신한증권 실적 호조 시 지주 밸류업 → 배당 증가 가능성. ⑤파 목표 달성 후 120,000 돌파 시 추가 연장파(extension) 가능 → 130,000+.</div></div>
-</div>
+<!-- ③ 일봉 분석 -->
+<div class="sec">📈 일봉 차트 분석 (최근 20일)</div>
 
-<div class="chart-area">
-  <div style="font-size:12px;font-weight:700;margin-bottom:8px">주봉 (Weekly) <span class="ct-badge" style="background:#EEF2FF;color:#1E3A5F">엘리어트 3파 폭발 → 4파 조정 → 5파 준비</span></div>
-  <svg width="100%" viewBox="0 0 680 195">
-    <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#26215C"/></marker></defs>
-    
-    <rect x="40" y="25" width="200" height="155" rx="4" fill="#FAEEDA" opacity=".12"/>
-    <text x="140" y="37" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">2025 하반기 매집 구간</text>
-    
-    <line x1="60" y1="110" x2="60" y2="140" stroke="#888" stroke-width="2.2"/><rect x="54" y="118" width="12" height="18" fill="#888" rx="1"/>
-    <line x1="85" y1="105" x2="85" y2="135" stroke="#888" stroke-width="2.2"/><rect x="79" y="115" width="12" height="15" fill="#888" rx="1"/>
-    <line x1="110" y1="100" x2="110" y2="130" stroke="#1D9E75" stroke-width="2.2"/><rect x="104" y="108" width="12" height="18" fill="#1D9E75" rx="1"/>
-    <line x1="135" y1="95" x2="135" y2="125" stroke="#888" stroke-width="2.2"/><rect x="129" y="105" width="12" height="15" fill="#E24B4A" rx="1"/>
-    <line x1="160" y1="90" x2="160" y2="120" stroke="#1D9E75" stroke-width="2.2"/><rect x="154" y="98" width="12" height="18" fill="#1D9E75" rx="1"/>
-    <text x="160" y="155" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">①파</text>
-    
-    <line x1="185" y1="95" x2="185" y2="125" stroke="#E24B4A" stroke-width="2"/><rect x="179" y="108" width="12" height="14" fill="#E24B4A" rx="1"/>
-    <line x1="210" y1="100" x2="210" y2="125" stroke="#888" stroke-width="2"/><rect x="204" y="108" width="12" height="13" fill="#E24B4A" rx="1"/>
-    <text x="197" y="155" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">②파 조정</text>
-    
-    <rect x="235" y="15" width="150" height="165" rx="4" fill="#EAF3DE" opacity=".15"/>
-    <text x="310" y="27" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2026년 2월 ③파 폭발</text>
-    
-    <line x1="250" y1="85" x2="250" y2="110" stroke="#1D9E75" stroke-width="2.5"/><rect x="244" y="90" width="12" height="18" fill="#1D9E75" rx="1"/>
-    <line x1="275" y1="65" x2="275" y2="95" stroke="#1D9E75" stroke-width="2.5"/><rect x="269" y="70" width="12" height="22" fill="#1D9E75" rx="1"/>
-    <line x1="300" y1="45" x2="300" y2="78" stroke="#1D9E75" stroke-width="2.8"/><rect x="294" y="50" width="12" height="25" fill="#1D9E75" rx="1"/>
-    <line x1="325" y1="25" x2="325" y2="60" stroke="#1D9E75" stroke-width="3"/><rect x="319" y="30" width="12" height="27" fill="#1D9E75" rx="1"/>
-    <text x="325" y="18" text-anchor="middle" font-size="9" fill="#27500A" font-weight="700">③파 107,200</text>
-    <line x1="325" y1="20" x2="325" y2="25" stroke="#27500A" stroke-width="1" marker-end="url(#arr2)"/>
-    <text x="310" y="155" text-anchor="middle" font-size="8" fill="#27500A" font-weight="600">③파 (가장 강력)</text>
-    
-    <rect x="385" y="30" width="180" height="150" rx="4" fill="#E6F1FB" opacity=".13"/>
-    <text x="475" y="42" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">④파 조정 (3~4월)</text>
-    
-    <line x1="360" y1="35" x2="360" y2="68" stroke="#E24B4A" stroke-width="2.5"/><rect x="354" y="50" width="12" height="16" fill="#E24B4A" rx="1"/>
-    <line x1="395" y1="50" x2="395" y2="80" stroke="#E24B4A" stroke-width="2.2"/><rect x="389" y="62" width="12" height="16" fill="#E24B4A" rx="1"/>
-    <line x1="430" y1="70" x2="430" y2="100" stroke="#E24B4A" stroke-width="2.2"/><rect x="424" y="82" width="12" height="16" fill="#E24B4A" rx="1"/>
-    <line x1="465" y1="95" x2="465" y2="120" stroke="#E24B4A" stroke-width="2"/><rect x="459" y="105" width="12" height="13" fill="#E24B4A" rx="1"/>
-    <line x1="500" y1="80" x2="500" y2="105" stroke="#1D9E75" stroke-width="2.2"/><rect x="494" y="85" width="12" height="18" fill="#1D9E75" rx="1"/>
-    <line x1="535" y1="65" x2="535" y2="90" stroke="#1D9E75" stroke-width="2.2"/><rect x="529" y="70" width="12" height="17" fill="#1D9E75" rx="1"/>
-    <text x="535" y="60" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">현재 99,600</text>
-    <text x="475" y="155" text-anchor="middle" font-size="8" fill="#0C447C" font-weight="600">④파 (조정 완료 중)</text>
-    
-    <path d="M 570 55 L 600 40 L 630 45" stroke="#633806" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
-    <text x="600" y="35" text-anchor="middle" font-size="8" fill="#633806" font-weight="600">⑤파 목표 110K~120K</text>
-    
-    <line x1="40" y1="72" x2="640" y2="72" stroke="#26215C" stroke-width="1.3" stroke-dasharray="4 3" opacity=".5"/>
-    <text x="42" y="69" font-size="8" fill="#26215C" font-weight="600">현재가</text>
-    
-    <text x="340" y="192" text-anchor="middle" font-size="9" fill="#b4b2a9">주봉: 매집(2025 하반기) → ①②③파 상승 → ④파 조정(현재) → ⑤파 목표 110,000~120,000. 엘리어트 파동 전형적 패턴.</text>
-  </svg>
-</div>
-
-<div class="sec">📈 월봉 차트 모양 — "2024년 저점 대비 +176% 대세 상승, 장기 턴어라운드 사이클"</div>
-<div class="card" style="background:#f9f8f5;margin-bottom:6px">
-  <div style="font-size:12px;font-weight:700;margin-bottom:7px;color:#1E3A5F">🔍 월봉이 이런 모양인 이유</div>
-  <div class="rr"><div class="rn">이유①</div><div><b>2024년 1월 36,100원 역사적 저점 = 장기 사이클 바닥.</b> 2023~2024년 금융주 밸류에이션 바닥 → 신한지주 PBR 0.3배 수준까지 하락. 이후 턴어라운드 시작 → 2026년 4월 99,600(저점 대비 +176%). 월봉 관점에서 명확한 상승 사이클 진입.</div></div>
-  <div class="rr"><div class="rn">이유②</div><div><b>구조적 트리거 = 금리 인하 사이클 종료 + 금융 규제 완화.</b> 2024~2025년 금리 정점 이후 안정화 → 은행 순이자마진(NIM) 개선. 2026년 신한은행 NIM 2.0% 회복 전망 → ROE 10%+ 달성 가능. 배당성향 상향 → 배당수익률 4~5% 유지.</div></div>
-  <div class="rr"><div class="rn">이유③</div><div><b>대세 상승 기간 = 2024년 7월 ~ 현재(21개월).</b> 월봉 저점 36,100 → 고점 107,200까지 21개월 소요. 중간 조정(-30%) 2회 겪었으나 추세 훼손 없이 지속 상승 → 세력의 장기 플랜 확인. 월봉 20개월 이평선(약 70,000) 위 유지 = 대세 상승 유효.</div></div>
-  <div class="rr"><div class="rn">이유④</div><div><b>장기 전망 = 130,000~150,000 목표 vs 리스크 = 금융위기 재발.</b> 월봉 목표가: 2024년 저점(36,100) → 고점(107,200) 폭(71,100) × 1.5배 = 130,000~140,000. 단, 글로벌 경기 침체·부동산 위기 재발 시 월봉 지지선 70,000 이탈 → 장기 하락 전환 경계.</div></div>
-</div>
-
-<div class="chart-area">
-  <div style="font-size:12px;font-weight:700;margin-bottom:8px">월봉 (Monthly) <span class="ct-badge" style="background:#E6F1FB;color:#0C447C">역사적 저점 탈출, 대세 상승 사이클</span></div>
-  <svg width="100%" viewBox="0 0 680 200">
-    <rect x="40" y="140" width="120" height="50" rx="4" fill="#FCEBEB" opacity=".15"/>
-    <text x="100" y="152" text-anchor="middle" font-size="9" fill="#A32D2D" font-weight="600">2024 저점 구간</text>
-    
-    <line x1="55" y1="165" x2="55" y2="185" stroke="#888" stroke-width="2.5"/><rect x="48" y="172" width="14" height="10" fill="#888" rx="1"/>
-    <line x1="80" y1="160" x2="80" y2="180" stroke="#888" stroke-width="2.5"/><rect x="73" y="167" width="14" height="10" fill="#888" rx="1"/>
-    <line x1="105" y1="155" x2="105" y2="175" stroke="#888" stroke-width="2.5"/><rect x="98" y="162" width="14" height="10" fill="#888" rx="1"/>
-    <line x1="130" y1="150" x2="130" y2="170" stroke="#1D9E75" stroke-width="2.5"/><rect x="123" y="157" width="14" height="10" fill="#1D9E75" rx="1"/>
-    <text x="80" y="192" text-anchor="middle" font-size="8" fill="#A32D2D" font-weight="600">저점 36,100</text>
-    
-    <rect x="155" y="100" width="180" height="90" rx="4" fill="#FAEEDA" opacity=".12"/>
-    <text x="245" y="112" text-anchor="middle" font-size="9" fill="#633806" font-weight="600">2024 하반기 회복</text>
-    
-    <line x1="165" y1="145" x2="165" y2="165" stroke="#888" stroke-width="2.5"/><rect x="158" y="152" width="14" height="10" fill="#888" rx="1"/>
-    <line x1="190" y1="130" x2="190" y2="150" stroke="#1D9E75" stroke-width="2.8"/><rect x="183" y="137" width="14" height="11" fill="#1D9E75" rx="1"/>
-    <line x1="215" y1="105" x2="215" y2="135" stroke="#1D9E75" stroke-width="3"/><rect x="208" y="115" width="14" height="17" fill="#1D9E75" rx="1"/>
-    <line x1="240" y1="110" x2="240" y2="135" stroke="#E24B4A" stroke-width="2.8"/><rect x="233" y="122" width="14" height="11" fill="#E24B4A" rx="1"/>
-    <line x1="265" y1="115" x2="265" y2="140" stroke="#888" stroke-width="2.5"/><rect x="258" y="124" width="14" height="13" fill="#E24B4A" rx="1"/>
-    <line x1="290" y1="120" x2="290" y2="145" stroke="#888" stroke-width="2.5"/><rect x="283" y="129" width="14" height="13" fill="#E24B4A" rx="1"/>
-    <line x1="315" y1="115" x2="315" y2="140" stroke="#1D9E75" stroke-width="2.5"/><rect x="308" y="124" width="14" height="13" fill="#1D9E75" rx="1"/>
-    
-    <rect x="340" y="75" width="140" height="115" rx="4" fill="#EAF3DE" opacity=".15"/>
-    <text x="410" y="87" text-anchor="middle" font-size="9" fill="#27500A" font-weight="600">2025 상승</text>
-    
-    <line x1="355" y1="105" x2="355" y2="130" stroke="#1D9E75" stroke-width="2.8"/><rect x="348" y="113" width="14" height="14" fill="#1D9E75" rx="1"/>
-    <line x1="380" y1="95" x2="380" y2="120" stroke="#1D9E75" stroke-width="2.8"/><rect x="373" y="103" width="14" height="14" fill="#1D9E75" rx="1"/>
-    <line x1="405" y1="90" x2="405" y2="115" stroke="#888" stroke-width="2.5"/><rect x="398" y="100" width="14" height="12" fill="#E24B4A" rx="1"/>
-    <line x1="430" y1="85" x2="430" y2="110" stroke="#1D9E75" stroke-width="2.8"/><rect x="423" y="93" width="14" height="14" fill="#1D9E75" rx="1"/>
-    <line x1="455" y1="95" x2="455" y2="120" stroke="#888" stroke-width="2.5"/><rect x="448" y="105" width="14" height="12" fill="#E24B4A" rx="1"/>
-    
-    <rect x="480" y="25" width="160" height="165" rx="4" fill="#E6F1FB" opacity=".13"/>
-    <text x="560" y="37" text-anchor="middle" font-size="9" fill="#0C447C" font-weight="600">2026 신고점 → 조정</text>
-    
-    <line x1="495" y1="80" x2="495" y2="105" stroke="#1D9E75" stroke-width="2.8"/><rect x="488" y="88" width="14" height="14" fill="#1D9E75" rx="1"/>
-    <line x1="520" y1="40" x2="520" y2="75" stroke="#1D9E75" stroke-width="3.2"/><rect x="513" y="48" width="14" height="24" fill="#1D9E75" rx="1"/>
-    <text x="520" y="33" text-anchor="middle" font-size="9" fill="#27500A" font-weight="700">신고점 107,200</text>
-    <line x1="545" y1="55" x2="545" y2="90" stroke="#E24B4A" stroke-width="3"/><rect x="538" y="70" width="14" height="18" fill="#E24B4A" rx="1"/>
-    <line x1="570" y1="95" x2="570" y2="125" stroke="#E24B4A" stroke-width="2.8"/><rect x="563" y="108" width="14" height="15" fill="#E24B4A" rx="1"/>
-    <line x1="595" y1="75" x2="595" y2="105" stroke="#1D9E75" stroke-width="2.8"/><rect x="588" y="85" width="14" height="17" fill="#1D9E75" rx="1"/>
-    <text x="595" y="70" text-anchor="middle" font-size="9" fill="#04342C" font-weight="600">현재 99,600</text>
-    
-    <line x1="40" y1="88" x2="640" y2="88" stroke="#26215C" stroke-width="1.3" stroke-dasharray="4 3" opacity=".5"/>
-    <text x="42" y="85" font-size="8" fill="#26215C" font-weight="600">현재가</text>
-    
-    <text x="340" y="197" text-anchor="middle" font-size="9" fill="#b4b2a9">월봉: 2024년 저점(36,100) → 2026년 고점(107,200) +176% 대세 상승. 장기 턴어라운드 사이클 진행 중. 목표 130,000~150,000.</text>
-  </svg>
-</div>
-
-<div class="sec">🧲 세력 관점 분석</div>
 <div class="card">
-  <div class="zone"><div class="dot" style="background:#1D9E75"></div><div><span style="font-weight:600">① 매집 완료 후 시세 분출 단계 — 세력 본전 90,000 전후</span><span class="tag t-g">강세 수급</span><div style="color:#888;margin-top:2px;font-size:11px">2025년 11월~2026년 1월 75,000~85,000 박스권 6개월 횡보 = 전형적 세력 매집 구간. 이후 2월 급등(+26%) 시 거래량 폭발(1,000만주+) → 세력 시세 분출 확인. 현재 조정 중에도 MA60(92,955) = 세력 매집원가 라인 사수 → 이 밑으로 참지 못함. 외국인 2월 순매수 후 3월 차익실현 → 4월 재유입 시그널. 기관 꾸준한 순매수 유지 = 장기 투자자 유입.</div></div></div>
-  <div class="zone"><div class="dot" style="background:#1E3A5F"></div><div><span style="font-weight:600">② 금융지주 구조적 경쟁력 — 국내 1위 시장점유율 + 배당 매력</span><span class="tag t-navy">펀더멘털</span><div style="color:#888;margin-top:2px;font-size:11px">신한은행·신한증권·신한카드 등 자회사 시너지. 2026년 금리 안정화 → 순이자마진(NIM) 2.0% 회복 전망 → ROE 10% 달성 시 적정 PBR 0.7배 = 주가 120,000 수준 정당화. 배당수익률 4~5% 고배당주 매력 → 연기금·배당펀드 꾸준한 수요. KB·하나금융 대비 밸류에이션 10% 저평가 → 업종 내 상대 강도 개선 여력.</div></div></div>
-  <div class="zone"><div class="dot" style="background:#EF9F27"></div><div><span style="font-weight:600">③ 2026년 1분기 실적 개선 기대 — 순이익 +15% YoY 컨센서스</span><span class="tag t-a">카탈리스트</span><div style="color:#888;margin-top:2px;font-size:11px">2026년 1분기 신한은행 가계대출 증가 + 기업대출 부실률 안정 → 충당금 환입 효과. 신한증권 IB 수수료 증가 + 시장 활황 시 브로커리지 수익 개선. 4월 말 실적 발표 + 배당 확정 시 긍정적 서프라이즈 가능 → 107,200 돌파 트리거. 피보나치 확장 1.618배 = 115,000 목표.</div></div></div>
-  <div class="zone"><div class="dot" style="background:#E24B4A"></div><div><span style="font-weight:600">④ 핵심 리스크 — 부동산 PF 부실화 + 글로벌 경기 침체</span><span class="tag t-r">경계 요인</span><div style="color:#888;margin-top:2px;font-size:11px">국내 부동산 PF(프로젝트 파이낸싱) 부실 리스크 상존. 신한은행 PF 익스포저 약 15조원 → 부실률 5% 가정 시 7,500억 손실 가능 → ROE 1~2%p 하락 압력. 글로벌 경기 침체 시 은행 대출 수요 감소 + 신용위험 증가 → 금융주 전반 밸류에이션 하향. MA60(92,955) 이탈 시 추세 훼손 → 85,000까지 재조정 경계.</div></div></div>
-</div>
-
-<div class="sec">✅ 체크리스트 & 📅 2026 카탈리스트</div>
-<div class="card">
-  <div class="row"><span>✅ 2026년 2월 신고점(107,200) 돌파 — 역사적 최고가 경신</span><span class="tag t-g">돌파</span></div>
-  <div class="row"><span>✅ 이평선 완전 정배열 — MA20 &gt; MA60 &gt; MA120 강세 구조</span><span class="tag t-g">추세</span></div>
-  <div class="row"><span>✅ 피보나치 23.6% 되돌림(99,500) 정확 지지 확인</span><span class="tag t-b">기술</span></div>
-  <div class="row"><span>✅ 금리 정상화 사이클 → 순이자마진(NIM) 개선 기대</span><span class="tag t-g">펀더멘털</span></div>
-  <div class="row"><span>✅ 배당수익률 4~5% 고배당 — 연기금 수요 지속</span><span class="tag t-navy">배당</span></div>
-  <div class="row"><span>✅ 4월 말 1분기 실적 발표 → 순이익 +15% YoY 컨센서스</span><span class="tag t-teal">카탈리스트</span></div>
-  <div class="row"><span>⚠ 52주 위치 76.7% 고점권 — 추격매수 경계 필요</span><span class="tag t-a">위치</span></div>
-  <div class="row"><span>⚠ 2월 급등(+26%) 후 조정 완료 여부 불확실</span><span class="tag t-a">변동성</span></div>
-  <div class="row"><span>🚨 부동산 PF 부실 리스크 — 15조원 익스포저</span><span class="tag t-r">리스크</span></div>
-  <div class="row"><span>🚨 글로벌 경기 침체 시 금융주 밸류에이션 하락 압력</span><span class="tag t-r">경기</span></div>
-</div>
-
-<div class="sec">🎯 매수 전략 종합</div>
-<div class="g2" style="margin-bottom:8px">
-  <div class="card">
-    <div style="font-size:12px;font-weight:700;margin-bottom:5px">단기 (3~6개월)</div>
-    <div class="score-wrap"><div class="score-fill" style="width:75%;background:linear-gradient(90deg,#1D9E75,#27500A)"></div></div>
-    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 75% — 적극 매수 (조정 시 분할 매수)</div>
-    <div style="font-size:11px;color:#5f5e5a">엘리어트 4파 조정 마무리 → 5파 목표 110,000~120,000. 단, 현재가(99,600)는 고점권이므로 94,000~96,000 조정 시 분할 매수 권장. 107,200 돌파 확인 후 추가 매수 가능. 손절 기준 92,000 (MA60 이탈).</div>
+  <div class="rr">
+    <div class="rn">①</div>
+    <div class="rd"><strong>정배열 완성 + 이평선 확산 상승</strong> — MA5(107,900) &gt; MA20(102,205) &gt; MA60(99,538) &gt; MA120(96,246) 완전 정배열. 10일 전 91,300~102,200 구간에서 V자 반등 후 모든 이평선이 우상향 전환. 이평선 간격이 벌어지는 분산 구조로 강세 추세 유효.</div>
   </div>
-  <div class="card">
-    <div style="font-size:12px;font-weight:700;margin-bottom:5px">중장기 (6~24개월)</div>
-    <div class="score-wrap"><div class="score-fill" style="width:85%;background:linear-gradient(90deg,#1D9E75,#27500A)"></div></div>
-    <div style="font-size:11px;color:#888;margin-bottom:5px">매수 매력도 85% — 핵심 매수 대상</div>
-    <div style="font-size:11px;color:#5f5e5a">월봉 관점 대세 상승 사이클 진행 중. 2024년 저점(36,100) 대비 +176% 상승했으나 ROE 10% 달성 시 적정 PBR 0.7배 = 120,000~130,000 목표 정당화. 금리 안정화 + 배당 매력 → 장기 보유 전략 유효. 단, 부동산 PF 리스크 모니터링 필수.</div>
+  <div class="rr">
+    <div class="rn">②</div>
+    <div class="rd"><strong>세력 진입 신호 — 10일 전 장대양봉 + 거래량 폭증</strong> — 10일 전(O:95,800→C:102,200) 장대양봉 출현 시 거래량 1,842,329주(20일 평균 대비 +23%). 이후 11일 전(O:104,000→C:107,300) 2,736,622주 급등으로 세력 진입 확정. 가이드 기준: 평소 대비 2배+ 거래량 = 세력 매집 진입 신호.</div>
   </div>
-</div>
-
-<div class="card" style="border-color:#1E3A5F">
-  <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:#1E3A5F">📌 추천 전략 — "94,000 조정 시 분할 매수 → 107,200 돌파 확인 → 목표 115,000"</div>
-  <div class="g4">
-    <div class="strategy-box" style="background:#EEF2FF;color:#1E3A5F"><div style="font-weight:700">조정 매수</div><div class="sp">94,000~<br>96,000</div><div>MA20 지지 확인<br>비중 30%</div></div>
-    <div class="strategy-box" style="background:#E1F5EE;color:#04342C"><div style="font-weight:700">★ 핵심</div><div class="sp">90,000~<br>93,000</div><div>MA60 or 피보나치 50%<br>비중 50%</div></div>
-    <div class="strategy-box" style="background:#E6F1FB;color:#042C53"><div style="font-weight:700">목표가</div><div class="sp">110,000~<br>120,000</div><div>신고점 돌파 + 엘리어트 5파<br>+10~20%</div></div>
-    <div class="strategy-box" style="background:#FCEBEB;color:#791F1F"><div style="font-weight:700">손절</div><div class="sp">92,000원</div><div>MA60 이탈 시<br>추세 훼손</div></div>
-  </div>
-  <div class="info-box" style="margin-top:10px;margin-bottom:4px">
-    <div style="font-size:11px;color:#085041"><b>💡 신한지주 핵심 4포인트:</b><br>
-    ① <b>엘리어트 4파 조정 완료 → 5파 목표 110,000~120,000</b> — 주봉 관점 3파 폭발 후 전형적 조정 패턴<br>
-    ② <b>이평선 완전 정배열 유지</b> — MA20(94,305) &gt; MA60(92,955) &gt; MA120(87,012) 강세 구조<br>
-    ③ <b>금리 안정화 + 배당 매력</b> — NIM 2.0% 회복 + 배당수익률 4~5% → 장기 투자 매력<br>
-    ④ <b>세력 매집원가 90,000 전후 방어</b> — MA60 사수 = 세력 본전 라인, 이탈 시 재조정 경계</div>
-  </div>
-  <div class="danger-box" style="margin-bottom:0">
-    <div style="font-size:11px;color:#791F1F"><b>🚨 핵심 리스크:</b> 52주 위치 76.7% 고점권 — 추격매수 경계. 부동산 PF 부실(15조 익스포저) + 글로벌 경기 침체 시 금융주 밸류에이션 하락. MA60(92,955) 이탈 시 추세 훼손 → 85,000까지 재조정 가능성. 거래량 감소 시 재조정 신호 = 94,000 이하 진입 대기.</div>
-  </div>
-</div>
-
-<div style="font-size:10px;color:#b4b2a9;margin-top:10px;text-align:center">⚠ 본 분석은 참고용이며 투자 권유가 아닙니다. 투자 결과의 책임은 본인에게 있습니다. (기준일: 2026.4)</div>
-</div>
-</body>
-</html>
+  <div class="rr">
+    <div class="rn">③</div>
+    <div class="rd"><strong>108,000~113,300 매물대 저항 구간 진입</strong> — 최근 6거래일 동안 105,000~113,300 박스권 등락 중. 52주 최고가(113,300) 갱신 후 재차
