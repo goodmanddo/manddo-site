@@ -31,6 +31,21 @@ from pathlib import Path
 sys.path.insert(0, "/Users/mandoo/stock_auto_trade")
 from kis_api import KISApi  # noqa: E402
 import anthropic  # noqa: E402
+import requests  # noqa: E402
+
+TG_TOKEN = "8601217415:AAFP0LJDYYLHFWNn0jorKfhZzt2_yiJ31LY"  # 주식분석봇
+TG_CHAT = "6579078641"
+
+
+def tg(text):
+    try:
+        requests.post(
+            f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+            json={"chat_id": TG_CHAT, "text": text, "disable_web_page_preview": False},
+            timeout=10,
+        )
+    except Exception as e:
+        log(f"텔레그램 실패: {e}")
 
 HOME = Path.home()
 SITE = HOME / "manddo-site"
@@ -379,6 +394,10 @@ def main():
 
     if args.publish:
         git_publish([r["slug"] for r in new])
+        for r in new:
+            verdict = "✅ AI 적중" if r["right"] else "❌ AI 오판"
+            tg(f"🎬 새 매매 복기 게시 ({verdict})\n{r['title']}\n"
+               f"https://manddo.kr/vs/replay/{r['slug']}.html")
     else:
         log("검토 대기: 확인 후 --publish 로 게시하거나 수동 git push")
 
