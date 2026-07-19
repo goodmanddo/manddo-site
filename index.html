@@ -167,6 +167,32 @@
     }catch(e){ /* 캘린더 없으면 숨김 */ }
   })();
   </script>
+  <a href="/nps/" class="home-nps-card" id="home-nps-card">
+    <div class="hnc-left">
+      <div class="hnc-badge">🏛️ 연기금 수급 · DART 공시</div>
+      <div class="hnc-title">국민연금이 담은 종목</div>
+      <div class="hnc-desc">국민연금이 최근 5% 이상 보유·변동 보고한 종목과 보유비율·증감을 한눈에. 새로 늘린 곳, 줄인 곳이 곧 수급의 방향.</div>
+      <div class="hnc-stats"><span id="hnc-count">—</span>개 종목 · <span id="hnc-updated">최근 60일</span></div>
+    </div>
+    <div class="hnc-arrow">→</div>
+  </a>
+  <style>
+    .home-nps-card{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#0d7a4f 0%,#0a5c3c 100%);border-radius:16px;padding:22px 24px;margin:0 0 32px;color:#fff;text-decoration:none;transition:transform .15s,box-shadow .15s}
+    .home-nps-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,122,79,.28)}
+    .home-nps-card .hnc-left{flex:1}
+    .home-nps-card .hnc-badge{font-size:11.5px;font-weight:700;letter-spacing:.5px;opacity:.85;margin-bottom:8px}
+    .home-nps-card .hnc-title{font-size:21px;font-weight:800;letter-spacing:-0.02em;margin-bottom:5px}
+    .home-nps-card .hnc-desc{font-size:13px;line-height:1.55;opacity:.9;margin-bottom:9px;max-width:600px}
+    .home-nps-card .hnc-stats{font-size:12.5px;opacity:.82;font-weight:600}
+    .home-nps-card .hnc-arrow{font-size:24px;opacity:.7}
+    @media(max-width:640px){.home-nps-card{padding:18px}.home-nps-card .hnc-title{font-size:18px}}
+  </style>
+  <script>
+  fetch('/tools/data/nps_holdings.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    var c=document.getElementById('hnc-count');if(c)c.textContent=d.count||(d.items||[]).length;
+    var u=document.getElementById('hnc-updated');if(u&&d.generated_at)u.textContent=d.generated_at.slice(0,10)+' 갱신';
+  }).catch(function(){});
+  </script>
   <section class="cat-section">
     <div class="cat-head">
       <h2>🤖 오늘 AI의 기록</h2>

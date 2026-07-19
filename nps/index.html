@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국민연금 보유 종목 — 최근 지분공시 (5%룰) | 만또</title>
+<meta name="description" content="국민연금공단이 최근 60일간 DART에 보고한 5% 이상 지분 보유·변동 종목을 한눈에. 국민연금 보유비율과 증감, 코스피·코스닥, DART 원문 링크까지. 검색·정렬 가능.">
+<meta name="keywords" content="국민연금 보유종목,국민연금 지분,국민연금 주식,5%룰,대량보유,연기금 수급,DART,만또">
+<meta property="og:title" content="국민연금 보유 종목 — 최근 지분공시">
+<meta property="og:description" content="국민연금이 최근 5% 이상 보유·변동 보고한 종목과 보유비율·증감을 한눈에.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/nps/">
+<link rel="canonical" href="https://manddo.kr/nps/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .nps-hero{background:linear-gradient(135deg,#0d7a4f 0%,#1B64DA 100%);border-radius:16px;padding:28px 24px;margin:20px 0 18px;color:#fff}
+  .nps-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;opacity:.9;margin-bottom:10px}
+  .nps-hero h1{font-size:26px;margin:0 0 8px;color:#fff;font-weight:800;letter-spacing:-0.02em}
+  .nps-hero p{font-size:14px;opacity:.95;line-height:1.6;margin:0;max-width:660px}
+  .nps-stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .nps-stat{flex:1;min-width:120px;background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px 16px}
+  .nps-stat .k{font-size:12px;color:#8b95a1;margin-bottom:4px}
+  .nps-stat .v{font-size:20px;font-weight:800;color:#111827}
+  .nps-stat .v.up{color:#dc2626}.nps-stat .v.down{color:#1B64DA}
+  .nps-ctrl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+  .nps-ctrl input{flex:1;min-width:180px;padding:11px 14px;border:1px solid #e5e8ec;border-radius:10px;font-size:14px}
+  .nps-ctrl select{padding:11px 12px;border:1px solid #e5e8ec;border-radius:10px;font-size:13.5px;background:#fff}
+  .nps-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eef0f3;border-radius:12px;overflow:hidden;font-size:13.5px}
+  .nps-table th{background:#f8fafc;color:#4b5563;font-weight:700;padding:11px 10px;text-align:left;font-size:12.5px;white-space:nowrap}
+  .nps-table td{padding:11px 10px;border-top:1px solid #f1f5f9;color:#374151;vertical-align:middle}
+  .nps-name{font-weight:700;color:#111827}
+  .nps-code{font-size:11.5px;color:#9ca3af;font-family:'SF Mono',ui-monospace,monospace}
+  .nps-mkt{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:4px;background:#eef2ff;color:#4338ca;margin-left:4px}
+  .nps-mkt.k{background:#fef3c7;color:#92400e}
+  .nps-rt{font-weight:800;color:#111827;font-family:'SF Mono',ui-monospace,monospace}
+  .nps-ch{font-weight:700;font-family:'SF Mono',ui-monospace,monospace}
+  .nps-ch.up{color:#dc2626}.nps-ch.down{color:#1B64DA}.nps-ch.flat{color:#9ca3af}
+  .nps-tp{font-size:11px;color:#6b7280;background:#f3f4f6;border-radius:5px;padding:2px 7px;white-space:nowrap}
+  .nps-dart{font-size:12px;color:#1B64DA;text-decoration:none;font-weight:600;white-space:nowrap}
+  .nps-note{font-size:12.5px;color:#8b95a1;line-height:1.7;margin:14px 0}
+  .nps-note b{color:#4b5563}
+  .disclaimer{font-size:12px;color:#8b95a1;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
+  @media(max-width:640px){.hide-sm{display:none}.nps-table th,.nps-table td{padding:9px 7px}}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/" class="active">🏛️ 국민연금</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="nps-hero">
+    <span class="badge">🏛️ 연기금 수급 · DART 공시 기반</span>
+    <h1>국민연금이 담은 종목</h1>
+    <p>국민연금공단이 최근 <b>DART에 보고한 5% 이상 지분</b> 보유·변동 종목입니다. 보유비율과 증감을 한눈에 보고, 원하는 종목을 검색·정렬해보세요. 국민연금이 새로 늘린 곳, 줄인 곳이 곧 <b>연기금 수급의 방향</b>입니다.</p>
+  </div>
+
+  <div class="nps-stats">
+    <div class="nps-stat"><div class="k">공시 종목</div><div class="v" id="s-count">—</div></div>
+    <div class="nps-stat"><div class="k">지분 늘림 ▲</div><div class="v up" id="s-up">—</div></div>
+    <div class="nps-stat"><div class="k">지분 줄임 ▼</div><div class="v down" id="s-down">—</div></div>
+    <div class="nps-stat"><div class="k">기준</div><div class="v" style="font-size:14px" id="s-updated">최근 60일</div></div>
+  </div>
+
+  <div class="nps-ctrl">
+    <input id="q" type="text" placeholder="🔍 종목명·코드 검색 (예: 삼성전자, 005930)">
+    <select id="sortby">
+      <option value="date">최신 공시순</option>
+      <option value="rt">보유비율 높은순</option>
+      <option value="up">지분 늘린순</option>
+      <option value="down">지분 줄인순</option>
+    </select>
+    <select id="filt">
+      <option value="all">전체</option>
+      <option value="up">늘림만</option>
+      <option value="down">줄임만</option>
+    </select>
+  </div>
+
+  <div style="overflow-x:auto">
+    <table class="nps-table">
+      <thead><tr>
+        <th>공시일</th><th>종목</th><th>국민연금 보유</th><th>증감</th>
+        <th class="hide-sm">보고 유형</th><th>원문</th>
+      </tr></thead>
+      <tbody id="rows"><tr><td colspan="6" style="padding:24px;text-align:center;color:#9ca3af">불러오는 중…</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="nps-note">
+    <b>어떻게 보나요?</b> 국민연금은 상장사 지분을 <b>5% 이상 보유</b>하거나 이후 <b>1%p 이상 변동</b>하면 5영업일 내 DART에 보고해야 합니다(자본시장법 5%룰). 이 표는 그 보고를 모은 것으로, <b>보유비율</b>은 가장 최근 보고 기준, <b>증감</b>은 직전 보고 대비 변화입니다.<br><br>
+    <b>주의</b> · 여기엔 <b>5% 이상 보유·변동 건만</b> 나옵니다. 5% 미만 소액 보유는 DART 보고 의무가 없어 포함되지 않습니다. 전체 포트폴리오(소액 포함)는 국민연금 기금운용본부(fund.nps.or.kr)가 연 1회 시차 공개합니다. 숫자는 참고용이며 정확한 내용은 각 <b>DART 원문</b>을 확인하세요.
+  </div>
+
+  <div class="disclaimer">
+    ⚠ 본 페이지는 DART 공개 공시를 정리한 참고 자료이며, 특정 종목의 매수·매도 권유가 아닙니다. 국민연금의 보유·매매가 수익을 보장하지 않습니다. 투자 판단과 결과는 본인 책임입니다. · 글 <a href="/about.html" rel="author">만또</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·<a href="/privacy.html">개인정보처리방침</a>·<a href="/terms.html">이용약관</a>·<a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다 · 데이터: 금융감독원 DART</div>
+  </div>
+</footer>
+<script>
+(function(){
+  var DATA=[];
+  function fmtDate(s){return s.length===8?(s.slice(0,4)+'.'+s.slice(4,6)+'.'+s.slice(6,8)):s;}
+  function shortTp(t){
+    if(t.indexOf('대량보유')>=0)return '대량보유(5%)';
+    if(t.indexOf('주요주주')>=0||t.indexOf('임원')>=0)return '주요주주';
+    return t.slice(0,10);
+  }
+  function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+  function render(){
+    var q=document.getElementById('q').value.trim().toLowerCase();
+    var sb=document.getElementById('sortby').value;
+    var ft=document.getElementById('filt').value;
+    var rows=DATA.filter(function(r){
+      if(q && (r.corp_name.toLowerCase().indexOf(q)<0 && (r.stock_code||'').indexOf(q)<0))return false;
+      var ch=num(r.stkrt_irds);
+      if(ft==='up' && !(ch>0))return false;
+      if(ft==='down' && !(ch<0))return false;
+      return true;
+    });
+    rows.sort(function(a,b){
+      if(sb==='rt')return (num(b.stkrt)||-1)-(num(a.stkrt)||-1);
+      if(sb==='up')return (num(b.stkrt_irds)||-99)-(num(a.stkrt_irds)||-99);
+      if(sb==='down')return (num(a.stkrt_irds)||99)-(num(b.stkrt_irds)||99);
+      return b.date.localeCompare(a.date);
+    });
+    var tb=document.getElementById('rows');
+    if(!rows.length){tb.innerHTML='<tr><td colspan="6" style="padding:24px;text-align:center;color:#9ca3af">검색 결과 없음</td></tr>';return;}
+    tb.innerHTML=rows.map(function(r){
+      var ch=num(r.stkrt_irds), chc=ch>0?'up':(ch<0?'down':'flat'), chs=ch===null?'-':((ch>0?'▲ +':(ch<0?'▼ ':''))+ch+'%p');
+      var mkt=r.market==='코스닥'?'<span class="nps-mkt k">코스닥</span>':(r.market==='코스피'?'<span class="nps-mkt">코스피</span>':'');
+      var dart='https://dart.fss.or.kr/dsaf001/main.do?rcpNo='+r.rcept_no;
+      return '<tr>'+
+        '<td style="white-space:nowrap;color:#6b7280">'+fmtDate(r.date)+'</td>'+
+        '<td><span class="nps-name">'+r.corp_name+'</span>'+mkt+'<br><span class="nps-code">'+(r.stock_code||'')+'</span></td>'+
+        '<td class="nps-rt">'+(r.stkrt?r.stkrt+'%':'-')+'</td>'+
+        '<td class="nps-ch '+chc+'">'+chs+'</td>'+
+        '<td class="hide-sm"><span class="nps-tp">'+shortTp(r.report_nm)+'</span></td>'+
+        '<td><a class="nps-dart" href="'+dart+'" target="_blank" rel="noopener">DART ↗</a></td>'+
+      '</tr>';
+    }).join('');
+  }
+  fetch('/tools/data/nps_holdings.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    DATA=d.items||[];
+    document.getElementById('s-count').textContent=DATA.length;
+    document.getElementById('s-up').textContent=DATA.filter(function(r){return num(r.stkrt_irds)>0;}).length;
+    document.getElementById('s-down').textContent=DATA.filter(function(r){return num(r.stkrt_irds)<0;}).length;
+    if(d.generated_at)document.getElementById('s-updated').textContent=d.generated_at.slice(0,10)+' 갱신';
+    ['q','sortby','filt'].forEach(function(id){document.getElementById(id).addEventListener('input',render);});
+    render();
+  }).catch(function(){
+    document.getElementById('rows').innerHTML='<tr><td colspan="6" style="padding:24px;text-align:center;color:#9ca3af">데이터를 불러오지 못했습니다.</td></tr>';
+  });
+})();
+</script>
+</body>
+</html>
