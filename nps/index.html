@@ -3,44 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>국민연금 보유 종목 — 최근 지분공시 (5%룰) | 만또</title>
-<meta name="description" content="국민연금공단이 최근 60일간 DART에 보고한 5% 이상 지분 보유·변동 종목을 한눈에. 국민연금 보유비율과 증감, 코스피·코스닥, DART 원문 링크까지. 검색·정렬 가능.">
-<meta name="keywords" content="국민연금 보유종목,국민연금 지분,국민연금 주식,5%룰,대량보유,연기금 수급,DART,만또">
-<meta property="og:title" content="국민연금 보유 종목 — 최근 지분공시">
-<meta property="og:description" content="국민연금이 최근 5% 이상 보유·변동 보고한 종목과 보유비율·증감을 한눈에.">
+<title>국민연금 보유 종목 — 지분율·신규 편입·전일 등락 (5%룰) | 만또</title>
+<meta name="description" content="국민연금공단이 DART에 보고한 5% 이상 지분 보유 종목을 지분율 높은 순으로. 신규 편입 배지, 국민연금 지분율, 전일 대비 주가 등락률, DART 원문까지 한눈에.">
+<meta name="keywords" content="국민연금 보유종목,국민연금 지분율,국민연금 신규편입,5%룰,대량보유,연기금 수급,DART,만또">
+<meta property="og:title" content="국민연금 보유 종목 — 지분율·신규 편입">
+<meta property="og:description" content="국민연금이 5% 이상 보유한 종목을 지분율 순으로. 신규 편입·전일 등락까지.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://manddo.kr/nps/">
 <link rel="canonical" href="https://manddo.kr/nps/">
 <link rel="stylesheet" href="/css/main.css">
 <style>
-  .nps-hero{background:linear-gradient(135deg,#0d7a4f 0%,#1B64DA 100%);border-radius:16px;padding:28px 24px;margin:20px 0 18px;color:#fff}
-  .nps-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;opacity:.9;margin-bottom:10px}
-  .nps-hero h1{font-size:26px;margin:0 0 8px;color:#fff;font-weight:800;letter-spacing:-0.02em}
-  .nps-hero p{font-size:14px;opacity:.95;line-height:1.6;margin:0;max-width:660px}
+  .nps-hero{background:linear-gradient(135deg,#0b6b45 0%,#0a4d8c 100%);border-radius:16px;padding:28px 24px;margin:20px 0 18px;color:#fff}
+  .nps-hero,.nps-hero *{color:#fff !important}
+  .nps-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+  .nps-hero h1{font-size:26px;margin:0 0 8px;font-weight:800;letter-spacing:-0.02em}
+  .nps-hero p{font-size:14px;line-height:1.6;margin:0;max-width:680px}
   .nps-stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
   .nps-stat{flex:1;min-width:120px;background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px 16px}
-  .nps-stat .k{font-size:12px;color:#8b95a1;margin-bottom:4px}
+  .nps-stat .k{font-size:12px;color:#4b5563;margin-bottom:4px;font-weight:600}
   .nps-stat .v{font-size:20px;font-weight:800;color:#111827}
-  .nps-stat .v.up{color:#dc2626}.nps-stat .v.down{color:#1B64DA}
+  .nps-stat .v.up{color:#dc2626}.nps-stat .v.down{color:#1B64DA}.nps-stat .v.new{color:#0b6b45}
   .nps-ctrl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
-  .nps-ctrl input{flex:1;min-width:180px;padding:11px 14px;border:1px solid #e5e8ec;border-radius:10px;font-size:14px}
-  .nps-ctrl select{padding:11px 12px;border:1px solid #e5e8ec;border-radius:10px;font-size:13.5px;background:#fff}
+  .nps-ctrl input{flex:1;min-width:180px;padding:11px 14px;border:1px solid #cbd5e1;border-radius:10px;font-size:14px;color:#111827}
+  .nps-ctrl select{padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px;background:#fff;color:#111827}
   .nps-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eef0f3;border-radius:12px;overflow:hidden;font-size:13.5px}
-  .nps-table th{background:#f8fafc;color:#4b5563;font-weight:700;padding:11px 10px;text-align:left;font-size:12.5px;white-space:nowrap}
-  .nps-table td{padding:11px 10px;border-top:1px solid #f1f5f9;color:#374151;vertical-align:middle}
+  .nps-table th{background:#f1f5f9;color:#334155;font-weight:700;padding:11px 9px;text-align:left;font-size:12.5px;white-space:nowrap}
+  .nps-table td{padding:11px 9px;border-top:1px solid #f1f5f9;color:#374151;vertical-align:middle}
+  .nps-table tr.top td{background:#fffdf5}
+  .rank{display:inline-block;min-width:22px;font-weight:800;color:#b45309;font-family:'SF Mono',ui-monospace,monospace}
+  .rank.crown{color:#d97706}
   .nps-name{font-weight:700;color:#111827}
-  .nps-code{font-size:11.5px;color:#9ca3af;font-family:'SF Mono',ui-monospace,monospace}
+  .nps-code{font-size:11.5px;color:#94a3b8;font-family:'SF Mono',ui-monospace,monospace}
   .nps-mkt{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:4px;background:#eef2ff;color:#4338ca;margin-left:4px}
   .nps-mkt.k{background:#fef3c7;color:#92400e}
-  .nps-rt{font-weight:800;color:#111827;font-family:'SF Mono',ui-monospace,monospace}
+  .badge-new{display:inline-block;font-size:10px;font-weight:800;padding:2px 6px;border-radius:5px;background:#dc2626;color:#fff;margin-left:5px;vertical-align:middle}
+  .nps-rt{font-weight:800;color:#0b6b45;font-family:'SF Mono',ui-monospace,monospace;font-size:14.5px}
   .nps-ch{font-weight:700;font-family:'SF Mono',ui-monospace,monospace}
-  .nps-ch.up{color:#dc2626}.nps-ch.down{color:#1B64DA}.nps-ch.flat{color:#9ca3af}
-  .nps-tp{font-size:11px;color:#6b7280;background:#f3f4f6;border-radius:5px;padding:2px 7px;white-space:nowrap}
-  .nps-dart{font-size:12px;color:#1B64DA;text-decoration:none;font-weight:600;white-space:nowrap}
-  .nps-note{font-size:12.5px;color:#8b95a1;line-height:1.7;margin:14px 0}
-  .nps-note b{color:#4b5563}
-  .disclaimer{font-size:12px;color:#8b95a1;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
-  @media(max-width:640px){.hide-sm{display:none}.nps-table th,.nps-table td{padding:9px 7px}}
+  .up{color:#dc2626}.down{color:#1B64DA}.flat{color:#94a3b8}
+  .nps-tp{font-size:11px;color:#475569;background:#f1f5f9;border-radius:5px;padding:2px 7px;white-space:nowrap}
+  .nps-dart{font-size:12px;color:#1B64DA;text-decoration:none;font-weight:700;white-space:nowrap}
+  .nps-note{font-size:12.5px;color:#475569;line-height:1.8;margin:16px 0;padding:16px 18px;background:#f8fafc;border:1px solid #eef0f3;border-radius:12px}
+  .nps-note b{color:#111827}
+  .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
+  @media(max-width:680px){.hide-sm{display:none}.nps-table th,.nps-table td{padding:9px 6px;font-size:12.5px}}
 </style>
   <!-- adsense-script -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
@@ -55,6 +60,7 @@
       <a href="/ai-log/">오늘 AI의 선택</a>
       <a href="/vs/">🏁 휴먼 vs AI</a>
       <a href="/nps/" class="active">🏛️ 국민연금</a>
+      <a href="/etf/">📊 ETF</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
@@ -67,44 +73,49 @@
   <div class="nps-hero">
     <span class="badge">🏛️ 연기금 수급 · DART 공시 기반</span>
     <h1>국민연금이 담은 종목</h1>
-    <p>국민연금공단이 최근 <b>DART에 보고한 5% 이상 지분</b> 보유·변동 종목입니다. 보유비율과 증감을 한눈에 보고, 원하는 종목을 검색·정렬해보세요. 국민연금이 새로 늘린 곳, 줄인 곳이 곧 <b>연기금 수급의 방향</b>입니다.</p>
+    <p>국민연금공단이 <b>DART에 보고한 5% 이상 지분</b> 종목을 <b>지분율 높은 순</b>으로 정렬했습니다. 새로 5%를 넘긴 종목엔 <b>신규</b> 배지, 각 종목의 <b>전일 대비 주가 등락</b>까지 함께 봅니다. 국민연금이 늘린 곳·줄인 곳이 곧 연기금 수급의 방향입니다.</p>
   </div>
 
   <div class="nps-stats">
     <div class="nps-stat"><div class="k">공시 종목</div><div class="v" id="s-count">—</div></div>
+    <div class="nps-stat"><div class="k">🆕 신규 편입</div><div class="v new" id="s-new">—</div></div>
     <div class="nps-stat"><div class="k">지분 늘림 ▲</div><div class="v up" id="s-up">—</div></div>
     <div class="nps-stat"><div class="k">지분 줄임 ▼</div><div class="v down" id="s-down">—</div></div>
-    <div class="nps-stat"><div class="k">기준</div><div class="v" style="font-size:14px" id="s-updated">최근 60일</div></div>
   </div>
 
   <div class="nps-ctrl">
     <input id="q" type="text" placeholder="🔍 종목명·코드 검색 (예: 삼성전자, 005930)">
     <select id="sortby">
+      <option value="rt">국민연금 지분율 높은순</option>
       <option value="date">최신 공시순</option>
-      <option value="rt">보유비율 높은순</option>
       <option value="up">지분 늘린순</option>
       <option value="down">지분 줄인순</option>
+      <option value="pxup">주가 오른순(전일)</option>
+      <option value="pxdown">주가 내린순(전일)</option>
     </select>
     <select id="filt">
       <option value="all">전체</option>
-      <option value="up">늘림만</option>
-      <option value="down">줄임만</option>
+      <option value="new">🆕 신규만</option>
+      <option value="up">지분 늘림만</option>
+      <option value="down">지분 줄임만</option>
     </select>
   </div>
 
   <div style="overflow-x:auto">
     <table class="nps-table">
       <thead><tr>
-        <th>공시일</th><th>종목</th><th>국민연금 보유</th><th>증감</th>
-        <th class="hide-sm">보고 유형</th><th>원문</th>
+        <th>#</th><th>종목</th><th>국민연금 지분율</th><th>전일 등락</th>
+        <th class="hide-sm">지분 증감</th><th class="hide-sm">공시일</th><th>원문</th>
       </tr></thead>
-      <tbody id="rows"><tr><td colspan="6" style="padding:24px;text-align:center;color:#9ca3af">불러오는 중…</td></tr></tbody>
+      <tbody id="rows"><tr><td colspan="7" style="padding:24px;text-align:center;color:#94a3b8">불러오는 중…</td></tr></tbody>
     </table>
   </div>
 
   <div class="nps-note">
-    <b>어떻게 보나요?</b> 국민연금은 상장사 지분을 <b>5% 이상 보유</b>하거나 이후 <b>1%p 이상 변동</b>하면 5영업일 내 DART에 보고해야 합니다(자본시장법 5%룰). 이 표는 그 보고를 모은 것으로, <b>보유비율</b>은 가장 최근 보고 기준, <b>증감</b>은 직전 보고 대비 변화입니다.<br><br>
-    <b>주의</b> · 여기엔 <b>5% 이상 보유·변동 건만</b> 나옵니다. 5% 미만 소액 보유는 DART 보고 의무가 없어 포함되지 않습니다. 전체 포트폴리오(소액 포함)는 국민연금 기금운용본부(fund.nps.or.kr)가 연 1회 시차 공개합니다. 숫자는 참고용이며 정확한 내용은 각 <b>DART 원문</b>을 확인하세요.
+    <b>💡 "국민연금 지분율"이 뭔가요?</b><br>
+    <b>그 종목 한 개</b>에 대해 국민연금이 가진 지분입니다. 예: 삼성증권 13.4% = <b>삼성증권 발행주식의 13.4%를 국민연금이 보유</b>. 종목마다 <b>따로따로</b>인 값이라, 여러 종목을 <b>더해도 의미가 없습니다</b>(100% 넘는 게 정상). 국민연금 <b>전체 포트폴리오 안에서의 비중</b>과는 다른 개념이며, 그 비중은 DART로는 알 수 없습니다.<br><br>
+    <b>어떻게 잡히나요?</b> 국민연금은 상장사 지분을 <b>5% 이상 보유</b>하거나 이후 <b>1%p 이상 변동</b>하면 5영업일 내 DART에 보고합니다(자본시장법 5%룰). <b>지분율</b>은 가장 최근 보고 기준, <b>지분 증감</b>은 직전 보고 대비, <b>신규</b> 배지는 최근 약 2개월 내 처음 5%를 넘긴 종목입니다.<br><br>
+    <b>주의</b> · <b>5% 이상만</b> 나옵니다(소액 보유는 DART 의무 없음). 전체 보유는 국민연금 기금운용본부(fund.nps.or.kr)가 연 1회 시차 공개. 전일 등락은 참고용 시세이며, 정확한 내용은 <b>DART 원문</b>을 확인하세요.
   </div>
 
   <div class="disclaimer">
@@ -120,56 +131,64 @@
 <script>
 (function(){
   var DATA=[];
-  function fmtDate(s){return s.length===8?(s.slice(0,4)+'.'+s.slice(4,6)+'.'+s.slice(6,8)):s;}
-  function shortTp(t){
-    if(t.indexOf('대량보유')>=0)return '대량보유(5%)';
-    if(t.indexOf('주요주주')>=0||t.indexOf('임원')>=0)return '주요주주';
-    return t.slice(0,10);
-  }
+  function fmtDate(s){return (s&&s.length===8)?(s.slice(0,4)+'.'+s.slice(4,6)+'.'+s.slice(6,8)):(s||'');}
+  function shortTp(t){t=t||'';if(t.indexOf('대량보유')>=0)return '대량보유(5%)';if(t.indexOf('주요주주')>=0||t.indexOf('임원')>=0)return '주요주주';return t.slice(0,10);}
   function num(v){var n=parseFloat(v);return isNaN(n)?null:n;}
+  function pct(v){var n=num(v);if(n===null)return {t:'-',c:'flat'};return {t:(n>0?'+':'')+n.toFixed(2)+'%',c:n>0?'up':(n<0?'down':'flat')};}
+
   function render(){
     var q=document.getElementById('q').value.trim().toLowerCase();
-    var sb=document.getElementById('sortby').value;
-    var ft=document.getElementById('filt').value;
+    var sb=document.getElementById('sortby').value, ft=document.getElementById('filt').value;
     var rows=DATA.filter(function(r){
-      if(q && (r.corp_name.toLowerCase().indexOf(q)<0 && (r.stock_code||'').indexOf(q)<0))return false;
+      if(q && r.corp_name.toLowerCase().indexOf(q)<0 && (r.stock_code||'').indexOf(q)<0)return false;
       var ch=num(r.stkrt_irds);
-      if(ft==='up' && !(ch>0))return false;
-      if(ft==='down' && !(ch<0))return false;
+      if(ft==='up'&&!(ch>0))return false;
+      if(ft==='down'&&!(ch<0))return false;
+      if(ft==='new'&&!r.is_new)return false;
       return true;
     });
     rows.sort(function(a,b){
-      if(sb==='rt')return (num(b.stkrt)||-1)-(num(a.stkrt)||-1);
+      if(sb==='date')return b.date.localeCompare(a.date);
       if(sb==='up')return (num(b.stkrt_irds)||-99)-(num(a.stkrt_irds)||-99);
       if(sb==='down')return (num(a.stkrt_irds)||99)-(num(b.stkrt_irds)||99);
-      return b.date.localeCompare(a.date);
+      if(sb==='pxup')return (num(b.day_change)||-99)-(num(a.day_change)||-99);
+      if(sb==='pxdown')return (num(a.day_change)||99)-(num(b.day_change)||99);
+      return (num(b.stkrt)||-1)-(num(a.stkrt)||-1);
     });
     var tb=document.getElementById('rows');
-    if(!rows.length){tb.innerHTML='<tr><td colspan="6" style="padding:24px;text-align:center;color:#9ca3af">검색 결과 없음</td></tr>';return;}
+    if(!rows.length){tb.innerHTML='<tr><td colspan="7" style="padding:24px;text-align:center;color:#94a3b8">검색 결과 없음</td></tr>';return;}
     tb.innerHTML=rows.map(function(r){
-      var ch=num(r.stkrt_irds), chc=ch>0?'up':(ch<0?'down':'flat'), chs=ch===null?'-':((ch>0?'▲ +':(ch<0?'▼ ':''))+ch+'%p');
+      var rk=r._rank, isTop=rk<=10;
+      var rankCell=isTop?('<span class="rank'+(rk<=3?' crown':'')+'">'+(rk<=3?'👑':'')+rk+'</span>'):('<span style="color:#cbd5e1">'+rk+'</span>');
+      var ch=pct(r.stkrt_irds), px=pct(r.day_change);
       var mkt=r.market==='코스닥'?'<span class="nps-mkt k">코스닥</span>':(r.market==='코스피'?'<span class="nps-mkt">코스피</span>':'');
+      var nb=r.is_new?'<span class="badge-new">🆕 신규</span>':'';
       var dart='https://dart.fss.or.kr/dsaf001/main.do?rcpNo='+r.rcept_no;
-      return '<tr>'+
-        '<td style="white-space:nowrap;color:#6b7280">'+fmtDate(r.date)+'</td>'+
-        '<td><span class="nps-name">'+r.corp_name+'</span>'+mkt+'<br><span class="nps-code">'+(r.stock_code||'')+'</span></td>'+
+      return '<tr'+(isTop?' class="top"':'')+'>'+
+        '<td>'+rankCell+'</td>'+
+        '<td><span class="nps-name">'+r.corp_name+'</span>'+mkt+nb+'<br><span class="nps-code">'+(r.stock_code||'')+'</span></td>'+
         '<td class="nps-rt">'+(r.stkrt?r.stkrt+'%':'-')+'</td>'+
-        '<td class="nps-ch '+chc+'">'+chs+'</td>'+
-        '<td class="hide-sm"><span class="nps-tp">'+shortTp(r.report_nm)+'</span></td>'+
+        '<td class="nps-ch '+px.c+'">'+px.t+'</td>'+
+        '<td class="hide-sm nps-ch '+ch.c+'">'+ch.t+'</td>'+
+        '<td class="hide-sm" style="color:#64748b;white-space:nowrap">'+fmtDate(r.date)+'</td>'+
         '<td><a class="nps-dart" href="'+dart+'" target="_blank" rel="noopener">DART ↗</a></td>'+
       '</tr>';
     }).join('');
   }
+
   fetch('/tools/data/nps_holdings.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
     DATA=d.items||[];
+    // 보유비율 순위 부여 (TOP 강조용)
+    var byRt=DATA.slice().sort(function(a,b){return (num(b.stkrt)||-1)-(num(a.stkrt)||-1);});
+    byRt.forEach(function(r,i){r._rank=i+1;});
     document.getElementById('s-count').textContent=DATA.length;
+    document.getElementById('s-new').textContent=DATA.filter(function(r){return r.is_new;}).length;
     document.getElementById('s-up').textContent=DATA.filter(function(r){return num(r.stkrt_irds)>0;}).length;
     document.getElementById('s-down').textContent=DATA.filter(function(r){return num(r.stkrt_irds)<0;}).length;
-    if(d.generated_at)document.getElementById('s-updated').textContent=d.generated_at.slice(0,10)+' 갱신';
     ['q','sortby','filt'].forEach(function(id){document.getElementById(id).addEventListener('input',render);});
     render();
   }).catch(function(){
-    document.getElementById('rows').innerHTML='<tr><td colspan="6" style="padding:24px;text-align:center;color:#9ca3af">데이터를 불러오지 못했습니다.</td></tr>';
+    document.getElementById('rows').innerHTML='<tr><td colspan="7" style="padding:24px;text-align:center;color:#94a3b8">데이터를 불러오지 못했습니다.</td></tr>';
   });
 })();
 </script>
