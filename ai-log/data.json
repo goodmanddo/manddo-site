@@ -1,35 +1,52 @@
 {
-  "date": "2026-07-17",
+  "date": "2026-07-20",
   "start_date": "2026-05-03",
-  "cumulative_return": -8.5,
-  "week_return": -4.83,
-  "day_return": 0.0,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -9.39,
+  "week_return": -1.51,
+  "day_return": -0.96,
+  "today_realized_avg": -17.07,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 44,
-  "total_trades": 48,
-  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -8.5%.",
+  "today_loss_count": 1,
+  "win_rate": 43,
+  "total_trades": 49,
+  "ai_commentary": "오늘은 S-Oil 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -9.4%.",
   "new_buys": [
     {
+      "name": "S-Oil",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 4.99,
+      "weight_pct": 15,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    }
+  ],
+  "exits": [
+    {
+      "type": "loss",
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -13.36,
-      "weight_pct": 20,
-      "hold_days": 4,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+      "return_pct": -17.07,
+      "hold_days": 7,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
-  "holdings": [
+  "weekly_losses": [
     {
       "name": "SK하이닉스",
       "slug": "",
+      "return_pct": -17.07,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
+  "holdings": [
+    {
+      "name": "S-Oil",
+      "slug": "",
       "market": "코스피",
-      "weight_pct": 20
+      "weight_pct": 15
     },
     {
       "name": "KODEX 200",
@@ -69,10 +86,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-08",
-      "cumulative_return": -3.5
-    },
     {
       "date": "2026-06-09",
       "cumulative_return": -3.25
@@ -188,6 +201,10 @@
     {
       "date": "2026-07-17",
       "cumulative_return": -8.5
+    },
+    {
+      "date": "2026-07-20",
+      "cumulative_return": -9.39
     }
   ]
 }
