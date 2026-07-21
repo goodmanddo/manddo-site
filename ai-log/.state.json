@@ -4,57 +4,53 @@
       "name": "S-Oil",
       "qty": 18,
       "avg_price": 139733,
-      "current_price": 146700,
+      "current_price": 141600,
       "opened_at": "2026-07-20"
     },
     "067160": {
       "name": "SOOP",
       "qty": 15,
       "avg_price": 49550,
-      "current_price": 45200,
+      "current_price": 45650,
       "opened_at": "2026-06-29"
     },
     "069080": {
       "name": "웹젠",
       "qty": 99,
       "avg_price": 11598,
-      "current_price": 11560,
+      "current_price": 12010,
       "opened_at": "2026-06-24"
     },
     "069500": {
       "name": "KODEX 200",
-      "qty": 22,
-      "avg_price": 127061,
-      "current_price": 104095,
+      "qty": 25,
+      "avg_price": 124399,
+      "current_price": 108140,
       "opened_at": "2026-06-09"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
-      "qty": 26,
-      "avg_price": 28264,
-      "current_price": 27365,
+      "qty": 29,
+      "avg_price": 28173,
+      "current_price": 27370,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
-      "qty": 32,
-      "avg_price": 28267,
-      "current_price": 26290,
+      "qty": 35,
+      "avg_price": 28106,
+      "current_price": 26635,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
-      "qty": 16,
-      "avg_price": 54997,
-      "current_price": 52305,
+      "qty": 18,
+      "avg_price": 54690,
+      "current_price": 52035,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-05-05",
-      "total_eval": 20049635
-    },
     {
       "date": "2026-05-06",
       "total_eval": 20083015
@@ -290,6 +286,10 @@
     {
       "date": "2026-07-20",
       "total_eval": 18122899
+    },
+    {
+      "date": "2026-07-21",
+      "total_eval": 18188248
     }
   ],
   "completed_trades": [

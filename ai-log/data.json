@@ -1,38 +1,28 @@
 {
-  "date": "2026-07-20",
+  "date": "2026-07-21",
   "start_date": "2026-05-03",
-  "cumulative_return": -9.39,
-  "week_return": -1.51,
-  "day_return": -0.96,
-  "today_realized_avg": -17.07,
-  "today_trade_count": 1,
+  "cumulative_return": -9.06,
+  "week_return": -1.52,
+  "day_return": 0.36,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_loss_count": 0,
   "win_rate": 43,
   "total_trades": 49,
-  "ai_commentary": "오늘은 S-Oil 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -9.4%.",
+  "ai_commentary": "오늘은 S-Oil 등 신규 편입. 시작 이후 누적 -9.1%.",
   "new_buys": [
     {
       "name": "S-Oil",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 4.99,
-      "weight_pct": 15,
-      "hold_days": 0,
+      "entry_to_current_pct": 1.34,
+      "weight_pct": 14,
+      "hold_days": 1,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "SK하이닉스",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -17.07,
-      "hold_days": 7,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "SK하이닉스",
@@ -43,22 +33,22 @@
   ],
   "holdings": [
     {
-      "name": "S-Oil",
+      "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
       "weight_pct": 15
     },
     {
-      "name": "KODEX 200",
+      "name": "S-Oil",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 13
+      "weight_pct": 14
     },
     {
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 6
+      "weight_pct": 7
     },
     {
       "name": "ACE KRX금현물",
@@ -86,10 +76,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-09",
-      "cumulative_return": -3.25
-    },
     {
       "date": "2026-06-10",
       "cumulative_return": -3.57
@@ -205,6 +191,10 @@
     {
       "date": "2026-07-20",
       "cumulative_return": -9.39
+    },
+    {
+      "date": "2026-07-21",
+      "cumulative_return": -9.06
     }
   ]
 }
