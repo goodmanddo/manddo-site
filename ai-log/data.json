@@ -1,28 +1,28 @@
 {
-  "date": "2026-07-23",
+  "date": "2026-07-24",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.45,
-  "week_return": 1.15,
-  "day_return": 1.7,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -8.61,
+  "week_return": -0.11,
+  "day_return": -1.25,
+  "today_realized_avg": 8.49,
+  "today_trade_count": 1,
+  "today_win_count": 1,
   "today_loss_count": 0,
-  "win_rate": 43,
-  "total_trades": 49,
-  "ai_commentary": "오늘은 S-Oil 등 신규 편입. 시작 이후 누적 -7.5%.",
-  "new_buys": [
+  "win_rate": 44,
+  "total_trades": 50,
+  "ai_commentary": "1건 익절로 수익 확정. 시작 이후 누적 -8.6%.",
+  "new_buys": [],
+  "exits": [
     {
+      "type": "win",
       "name": "S-Oil",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 7.2,
-      "weight_pct": 15,
-      "hold_days": 3,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+      "return_pct": 8.49,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [
     {
       "name": "SK하이닉스",
@@ -33,12 +33,6 @@
   ],
   "holdings": [
     {
-      "name": "S-Oil",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 15
-    },
-    {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
@@ -48,7 +42,7 @@
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 7
+      "weight_pct": 6
     },
     {
       "name": "ACE KRX금현물",
@@ -76,10 +70,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-12",
-      "cumulative_return": -2.97
-    },
     {
       "date": "2026-06-15",
       "cumulative_return": -2.59
@@ -195,6 +185,10 @@
     {
       "date": "2026-07-23",
       "cumulative_return": -7.45
+    },
+    {
+      "date": "2026-07-24",
+      "cumulative_return": -8.61
     }
   ]
 }
