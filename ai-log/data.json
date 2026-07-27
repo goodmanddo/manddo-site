@@ -1,36 +1,29 @@
 {
-  "date": "2026-07-24",
+  "date": "2026-07-27",
   "start_date": "2026-05-03",
-  "cumulative_return": -8.61,
-  "week_return": -0.11,
-  "day_return": -1.25,
-  "today_realized_avg": 8.49,
-  "today_trade_count": 1,
-  "today_win_count": 1,
+  "cumulative_return": -7.6,
+  "week_return": 1.97,
+  "day_return": 1.1,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 50,
-  "ai_commentary": "1건 익절로 수익 확정. 시작 이후 누적 -8.6%.",
-  "new_buys": [],
-  "exits": [
+  "ai_commentary": "오늘은 한국전력 등 신규 편입. 시작 이후 누적 -7.6%.",
+  "new_buys": [
     {
-      "type": "win",
-      "name": "S-Oil",
+      "name": "한국전력",
       "slug": "",
-      "market": "코스피",
-      "return_pct": 8.49,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+      "market": "코스닥",
+      "entry_to_current_pct": 1.4,
+      "weight_pct": 14,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
-  "weekly_losses": [
-    {
-      "name": "SK하이닉스",
-      "slug": "",
-      "return_pct": -17.07,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    }
-  ],
+  "exits": [],
+  "weekly_losses": [],
   "holdings": [
     {
       "name": "KODEX 200",
@@ -39,10 +32,16 @@
       "weight_pct": 15
     },
     {
+      "name": "한국전력",
+      "slug": "",
+      "market": "코스닥",
+      "weight_pct": 14
+    },
+    {
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 6
+      "weight_pct": 7
     },
     {
       "name": "ACE KRX금현물",
@@ -70,10 +69,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-15",
-      "cumulative_return": -2.59
-    },
     {
       "date": "2026-06-16",
       "cumulative_return": -2.63
@@ -189,6 +184,10 @@
     {
       "date": "2026-07-24",
       "cumulative_return": -8.61
+    },
+    {
+      "date": "2026-07-27",
+      "cumulative_return": -7.6
     }
   ]
 }
