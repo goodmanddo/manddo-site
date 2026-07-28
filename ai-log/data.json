@@ -1,24 +1,24 @@
 {
-  "date": "2026-07-27",
+  "date": "2026-07-28",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.6,
-  "week_return": 1.97,
-  "day_return": 1.1,
+  "cumulative_return": -10.61,
+  "week_return": -1.71,
+  "day_return": -3.26,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 50,
-  "ai_commentary": "오늘은 한국전력 등 신규 편입. 시작 이후 누적 -7.6%.",
+  "ai_commentary": "오늘은 한국전력 등 신규 편입. 시작 이후 누적 -10.6%.",
   "new_buys": [
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": 1.4,
-      "weight_pct": 14,
-      "hold_days": 0,
+      "entry_to_current_pct": -5.74,
+      "weight_pct": 13,
+      "hold_days": 1,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
@@ -29,13 +29,13 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 15
+      "weight_pct": 16
     },
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "weight_pct": 14
+      "weight_pct": 13
     },
     {
       "name": "웹젠",
@@ -47,10 +47,16 @@
       "name": "ACE KRX금현물",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 6
     },
     {
       "name": "PLUS 미국채30년액티브",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 6
+    },
+    {
+      "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
@@ -60,19 +66,9 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 4
-    },
-    {
-      "name": "TIGER 미국S&P500",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 4
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-16",
-      "cumulative_return": -2.63
-    },
     {
       "date": "2026-06-17",
       "cumulative_return": -2.37
@@ -188,6 +184,10 @@
     {
       "date": "2026-07-27",
       "cumulative_return": -7.6
+    },
+    {
+      "date": "2026-07-28",
+      "cumulative_return": -10.61
     }
   ]
 }
