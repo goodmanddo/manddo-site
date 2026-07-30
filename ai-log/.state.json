@@ -4,57 +4,53 @@
       "name": "한국전력",
       "qty": 71,
       "avg_price": 35700,
-      "current_price": 33100,
+      "current_price": 33050,
       "opened_at": "2026-07-27"
     },
     "067160": {
       "name": "SOOP",
       "qty": 15,
       "avg_price": 49550,
-      "current_price": 46950,
+      "current_price": 48250,
       "opened_at": "2026-06-29"
     },
     "069080": {
       "name": "웹젠",
       "qty": 99,
       "avg_price": 11598,
-      "current_price": 11750,
+      "current_price": 11740,
       "opened_at": "2026-06-24"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 30,
       "avg_price": 120162,
-      "current_price": 89605,
+      "current_price": 87635,
       "opened_at": "2026-06-09"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 33,
       "avg_price": 28037,
-      "current_price": 26655,
+      "current_price": 26110,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 39,
       "avg_price": 27933,
-      "current_price": 25865,
+      "current_price": 25730,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 20,
       "avg_price": 54399,
-      "current_price": 51190,
+      "current_price": 49740,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-05-08",
-      "total_eval": 20018460
-    },
     {
       "date": "2026-05-11",
       "total_eval": 19878848
@@ -290,6 +286,10 @@
     {
       "date": "2026-07-29",
       "total_eval": 17585841
+    },
+    {
+      "date": "2026-07-30",
+      "total_eval": 17489451
     }
   ],
   "completed_trades": [

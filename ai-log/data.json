@@ -1,24 +1,24 @@
 {
-  "date": "2026-07-29",
+  "date": "2026-07-30",
   "start_date": "2026-05-03",
-  "cumulative_return": -12.07,
-  "week_return": -3.38,
-  "day_return": -1.63,
+  "cumulative_return": -12.55,
+  "week_return": -5.51,
+  "day_return": -0.55,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 50,
-  "ai_commentary": "오늘은 한국전력 등 신규 편입. 시작 이후 누적 -12.1%.",
+  "ai_commentary": "오늘은 한국전력 등 신규 편입. 시작 이후 누적 -12.6%.",
   "new_buys": [
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": -7.28,
+      "entry_to_current_pct": -7.42,
       "weight_pct": 13,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
@@ -69,10 +69,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-18",
-      "cumulative_return": -2.4
-    },
     {
       "date": "2026-06-19",
       "cumulative_return": -2.7
@@ -188,6 +184,10 @@
     {
       "date": "2026-07-29",
       "cumulative_return": -12.07
+    },
+    {
+      "date": "2026-07-30",
+      "cumulative_return": -12.55
     }
   ]
 }
