@@ -1,47 +1,41 @@
 {
-  "date": "2026-07-30",
+  "date": "2026-07-31",
   "start_date": "2026-05-03",
-  "cumulative_return": -12.55,
-  "week_return": -5.51,
-  "day_return": -0.55,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -8.64,
+  "week_return": -0.04,
+  "day_return": 4.47,
+  "today_realized_avg": -1.96,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 44,
-  "total_trades": 50,
-  "ai_commentary": "오늘은 한국전력 등 신규 편입. 시작 이후 누적 -12.6%.",
-  "new_buys": [
+  "today_loss_count": 1,
+  "win_rate": 43,
+  "total_trades": 51,
+  "ai_commentary": "1건은 손절 규칙에 따라 정리. 시작 이후 누적 -8.6%.",
+  "new_buys": [],
+  "exits": [
     {
+      "type": "loss",
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": -7.42,
-      "weight_pct": 13,
-      "hold_days": 3,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+      "return_pct": -1.96,
+      "hold_days": 4,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     }
   ],
-  "exits": [],
   "weekly_losses": [],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 15
-    },
-    {
-      "name": "한국전력",
-      "slug": "",
-      "market": "코스닥",
-      "weight_pct": 13
+      "weight_pct": 18
     },
     {
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 7
+      "weight_pct": 6
     },
     {
       "name": "ACE KRX금현물",
@@ -50,13 +44,13 @@
       "weight_pct": 6
     },
     {
-      "name": "PLUS 미국채30년액티브",
+      "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 6
+      "weight_pct": 5
     },
     {
-      "name": "TIGER 미국S&P500",
+      "name": "PLUS 미국채30년액티브",
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
@@ -69,10 +63,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-19",
-      "cumulative_return": -2.7
-    },
     {
       "date": "2026-06-22",
       "cumulative_return": -1.81
@@ -188,6 +178,10 @@
     {
       "date": "2026-07-30",
       "cumulative_return": -12.55
+    },
+    {
+      "date": "2026-07-31",
+      "cumulative_return": -8.64
     }
   ]
 }
