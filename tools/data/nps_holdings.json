@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-31T19:32:15",
+  "generated_at": "2026-08-01T19:31:50",
   "window_days": 60,
-  "count": 154,
+  "count": 151,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -14,7 +14,7 @@
       "stkrt": "13.41",
       "stkrt_irds": "0.80",
       "stkrt_asof": "2025-03-11",
-      "first_report": "2024-08-01",
+      "first_report": "2025-03-11",
       "is_new": false,
       "price": 99800,
       "day_change": 10.52
@@ -449,7 +449,7 @@
       "stkrt": "10.40",
       "stkrt_irds": "1.00",
       "stkrt_asof": "2026-07-01",
-      "first_report": "2024-08-01",
+      "first_report": "2024-09-02",
       "is_new": false,
       "price": 19850,
       "day_change": 2.48
@@ -678,21 +678,6 @@
       "is_new": false,
       "price": 21350,
       "day_change": 7.88
-    },
-    {
-      "date": "20260601",
-      "corp_name": "CJ대한통운",
-      "stock_code": "000120",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260601001331",
-      "stkrt": "9.48",
-      "stkrt_irds": "-1.01",
-      "stkrt_asof": "2026-06-01",
-      "first_report": "2024-10-04",
-      "is_new": false,
-      "price": 74500,
-      "day_change": 1.5
     },
     {
       "date": "20260707",
@@ -1049,7 +1034,7 @@
       "stkrt": "7.94",
       "stkrt_irds": "-0.42",
       "stkrt_asof": "2026-06-17",
-      "first_report": "2024-08-01",
+      "first_report": "2025-01-03",
       "is_new": false,
       "price": 28500,
       "day_change": 7.14
@@ -1278,21 +1263,6 @@
       "is_new": true,
       "price": 1485000,
       "day_change": -2.75
-    },
-    {
-      "date": "20260601",
-      "corp_name": "한국전력공사",
-      "stock_code": "015760",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260601001366",
-      "stkrt": "6.88",
-      "stkrt_irds": "-1.02",
-      "stkrt_asof": "2026-06-01",
-      "first_report": "2024-09-25",
-      "is_new": false,
-      "price": 34800,
-      "day_change": 5.3
     },
     {
       "date": "20260701",
@@ -2253,21 +2223,6 @@
       "is_new": false,
       "price": 7060,
       "day_change": 18.66
-    },
-    {
-      "date": "20260601",
-      "corp_name": "하나머티리얼즈",
-      "stock_code": "166090",
-      "market": "코스닥",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260601001380",
-      "stkrt": "3.71",
-      "stkrt_irds": "-1.29",
-      "stkrt_asof": "2026-06-01",
-      "first_report": "2024-10-07",
-      "is_new": false,
-      "price": 52600,
-      "day_change": 21.9
     },
     {
       "date": "20260701",
