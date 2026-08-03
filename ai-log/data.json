@@ -1,44 +1,73 @@
 {
-  "date": "2026-07-31",
+  "date": "2026-08-03",
   "start_date": "2026-05-03",
-  "cumulative_return": -8.64,
-  "week_return": -0.04,
-  "day_return": 4.47,
-  "today_realized_avg": -1.96,
+  "cumulative_return": -10.27,
+  "week_return": -2.89,
+  "day_return": -1.78,
+  "today_realized_avg": -13.12,
   "today_trade_count": 1,
   "today_win_count": 0,
   "today_loss_count": 1,
-  "win_rate": 43,
-  "total_trades": 51,
-  "ai_commentary": "1건은 손절 규칙에 따라 정리. 시작 이후 누적 -8.6%.",
-  "new_buys": [],
+  "win_rate": 42,
+  "total_trades": 52,
+  "ai_commentary": "오늘은 현대차 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -10.3%.",
+  "new_buys": [
+    {
+      "name": "현대차",
+      "slug": "hyundai-motor",
+      "market": "코스피",
+      "entry_to_current_pct": 1.81,
+      "weight_pct": 15,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    }
+  ],
   "exits": [
     {
       "type": "loss",
-      "name": "한국전력",
+      "name": "SOOP",
       "slug": "",
-      "market": "코스닥",
-      "return_pct": -1.96,
-      "hold_days": 4,
+      "market": "코스피",
+      "return_pct": -13.12,
+      "hold_days": 35,
       "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     }
   ],
-  "weekly_losses": [],
+  "weekly_losses": [
+    {
+      "name": "SOOP",
+      "slug": "",
+      "return_pct": -13.12,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 18
+      "weight_pct": 17
+    },
+    {
+      "name": "현대차",
+      "slug": "hyundai-motor",
+      "market": "코스피",
+      "weight_pct": 15
     },
     {
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 6
+      "weight_pct": 7
     },
     {
       "name": "ACE KRX금현물",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 6
+    },
+    {
+      "name": "PLUS 미국채30년액티브",
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
@@ -48,25 +77,9 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
-    },
-    {
-      "name": "PLUS 미국채30년액티브",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "SOOP",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 4
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-22",
-      "cumulative_return": -1.81
-    },
     {
       "date": "2026-06-23",
       "cumulative_return": -4.95
@@ -182,6 +195,10 @@
     {
       "date": "2026-07-31",
       "cumulative_return": -8.64
+    },
+    {
+      "date": "2026-08-03",
+      "cumulative_return": -10.27
     }
   ]
 }
