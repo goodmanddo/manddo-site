@@ -1,38 +1,28 @@
 {
-  "date": "2026-08-03",
+  "date": "2026-08-04",
   "start_date": "2026-05-03",
-  "cumulative_return": -10.27,
-  "week_return": -2.89,
-  "day_return": -1.78,
-  "today_realized_avg": -13.12,
-  "today_trade_count": 1,
+  "cumulative_return": -9.67,
+  "week_return": 1.05,
+  "day_return": 0.67,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_loss_count": 0,
   "win_rate": 42,
   "total_trades": 52,
-  "ai_commentary": "오늘은 현대차 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -10.3%.",
+  "ai_commentary": "오늘은 현대차 등 신규 편입. 시작 이후 누적 -9.7%.",
   "new_buys": [
     {
       "name": "현대차",
       "slug": "hyundai-motor",
       "market": "코스피",
-      "entry_to_current_pct": 1.81,
+      "entry_to_current_pct": 1.68,
       "weight_pct": 15,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "SOOP",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -13.12,
-      "hold_days": 35,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "SOOP",
@@ -46,7 +36,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 17
+      "weight_pct": 18
     },
     {
       "name": "현대차",
@@ -80,10 +70,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-23",
-      "cumulative_return": -4.95
-    },
     {
       "date": "2026-06-24",
       "cumulative_return": -4.13
@@ -199,6 +185,10 @@
     {
       "date": "2026-08-03",
       "cumulative_return": -10.27
+    },
+    {
+      "date": "2026-08-04",
+      "cumulative_return": -9.67
     }
   ]
 }
