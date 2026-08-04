@@ -47,6 +47,21 @@
   .gw-report-head .upd{font-size:12px;color:#8b95a1}
   .gw-report pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:13.5px;line-height:1.75;color:#374151;margin:0}
   .gw-report .src{font-size:11.5px;color:#94a3b8;margin-top:12px}
+  .gw-ranks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 18px}
+  @media(max-width:560px){.gw-ranks{grid-template-columns:1fr}}
+  .gw-rank{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:12px 14px}
+  .gw-rank.star{border-color:#c4b5fd;background:#faf5ff}
+  .gw-rank .badge{min-width:56px;text-align:center;font-weight:800;font-size:14px;font-family:'SF Mono',ui-monospace,monospace;padding:8px 6px;border-radius:9px;background:#f1f5f9;color:#334155}
+  .gw-rank .badge.hi{background:#fee2e2;color:#b91c1c}
+  .gw-rank .badge.mid{background:#fef3c7;color:#92400e}
+  .gw-rank .badge.lo{background:#f1f5f9;color:#64748b}
+  .gw-rank .rk-body{min-width:0;flex:1}
+  .gw-rank .rk-game{font-size:14px;font-weight:800;color:#111827}
+  .gw-rank .rk-game .st{color:#7c3aed}
+  .gw-rank .rk-note{font-size:11.5px;color:#64748b;line-height:1.5;margin-top:2px}
+  .gw-rank .tr{font-size:12px;font-weight:800;white-space:nowrap}
+  .tr.up{color:#dc2626}.tr.down{color:#1B64DA}.tr.flat{color:#94a3b8}.tr.new{color:#7c3aed}
+  .gw-ranks-title{font-size:14px;font-weight:800;color:#111827;margin:2px 0 8px}
   .gw-empty{text-align:center;color:#94a3b8;padding:30px;background:#fff;border:1px dashed #e5e8ec;border-radius:12px}
   .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
 </style>
@@ -86,6 +101,10 @@
     <div class="gw-report-head">
       <h2>📰 이번 주 게임주 인텔</h2>
       <span class="upd" id="gw-report-upd">—</span>
+    </div>
+    <div id="gw-ranks-wrap" style="display:none">
+      <div class="gw-ranks-title">📊 주요 게임 매출 순위</div>
+      <div class="gw-ranks" id="gw-ranks"></div>
     </div>
     <pre id="gw-report-body"></pre>
     <div class="src">🔍 웹 검색 기반 주간 요약(매주 월요일 갱신). 신작 일정·매출 순위는 잠정·대략치이며, 매수·매도 권유가 아닙니다.</div>
@@ -133,11 +152,27 @@
     }).join('')+'</div>';
   }).catch(function(){document.getElementById('gw-list').innerHTML='<div class="gw-empty">데이터를 불러오지 못했습니다.</div>';});
 
-  // 주간 인텔 리포트
+  // 주간 인텔 리포트 + 매출순위 배지
   fetch('/tools/data/game_intel.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
     if(!d.report)return;
     document.getElementById('gw-report-body').textContent=d.report;
     if(d.generated_at)document.getElementById('gw-report-upd').textContent=d.generated_at.slice(0,10)+' 갱신';
+    var rk=d.rankings||[];
+    if(rk.length){
+      var rankOrder={'1위권':1,'10위권':2,'30위권':3,'100위권 밖':4,'미상':5};
+      rk.sort(function(a,b){return (rankOrder[a.rank]||9)-(rankOrder[b.rank]||9);});
+      var trLab={up:'▲ 상승',down:'▼ 하락',flat:'― 유지',new:'🆕 신규',na:''};
+      document.getElementById('gw-ranks').innerHTML=rk.map(function(r){
+        var star=(String(r.company||'').indexOf('데브')>=0||String(r.game||'').indexOf('쿠키런')>=0);
+        var bc=(r.rank==='1위권')?'hi':((r.rank==='10위권'||r.rank==='30위권')?'mid':'lo');
+        var tr=(r.trend&&trLab[r.trend])?('<span class="tr '+r.trend+'">'+trLab[r.trend]+'</span>'):'';
+        return '<div class="gw-rank'+(star?' star':'')+'">'+
+          '<div class="badge '+bc+'">'+(r.rank||'미상')+'</div>'+
+          '<div class="rk-body"><div class="rk-game">'+(star?'<span class="st">★ </span>':'')+(r.game||'')+'</div>'+
+          (r.note?'<div class="rk-note">'+r.note+(r.source?' ('+r.source+')':'')+'</div>':'')+'</div>'+tr+'</div>';
+      }).join('');
+      document.getElementById('gw-ranks-wrap').style.display='block';
+    }
     document.getElementById('gw-report').style.display='block';
   }).catch(function(){});
 })();

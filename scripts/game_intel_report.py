@@ -69,10 +69,12 @@ def build_prompt():
 {registered_summary()}
 
 ## 2) 매출/성과 신호
-위 추적 게임 및 주요 상장사 대표 모바일게임(예: 리니지·오딘·나이트크로우·아키에이지워 등)의 **최근 구글플레이 매출순위 대략 위치**나 성과 뉴스(급상승/급락/신작 흥행·부진)를 검색.
-⚠️ **정확한 순위를 확인 못 하면 숫자를 지어내지 말고** '대략 O위권' 또는 '뉴스상 호조/부진'으로만 적어라. 확인된 것만.
+아래 게임들의 **최근 구글플레이(및 앱스토어) 매출순위 대략 위치**와 성과 뉴스(급상승/급락/신작 흥행·부진)를 검색:
+- ★고정 추적: **데브시스터즈(194480)의 쿠키런 시리즈**(쿠키런: 킹덤/오븐스매시/크럼블 등) — 반드시 현재 매출 성과·순위를 포함하라.
+- 추적 중인 게임(위 목록) + 주요 상장사 대표작(리니지·오딘·나이트크로우·아키에이지워 등)
+⚠️ **정확한 순위를 확인 못 하면 숫자를 지어내지 말고** '대략 O위권' 또는 '뉴스상 호조/부진'으로만. 확인된 것만.
 
-## 출력 형식 (텔레그램용 플레인텍스트, 이모지 활용, 450단어 이내, 마크다운 기호 남발 금지)
+## 출력 형식 (텔레그램용 플레인텍스트, 이모지 활용, 450단어 이내)
 🎮 게임주 주간 인텔 ({today})
 ━━━━━━━━━
 📅 신작 일정
@@ -82,7 +84,27 @@ def build_prompt():
 💡 한 줄 정리
 - (이번 주 관전 포인트)
 
-각 항목 끝에 근거 출처를 (매체명)으로 짧게. 확인 안 된 건 넣지 마라."""
+각 항목 근거 출처를 (매체명)으로 짧게. 확인 안 된 건 넣지 마라."""
+
+
+def extract_rankings(client, report_text):
+    """리포트 텍스트에서 매출 순위 정보를 JSON 배열로 추출 (2차 호출, web_search 없음)."""
+    p = ("다음 게임주 리포트에서 **매출 순위·성과** 정보를 JSON 배열로 추출하라. "
+         "각 원소: {\"game\":\"게임명\",\"company\":\"회사\",\"code\":\"종목코드\",\"market\":\"구글 매출\","
+         "\"rank\":\"1위권|10위권|30위권|100위권 밖|미상\",\"trend\":\"up|down|flat|new|na\","
+         "\"note\":\"짧은 근거\",\"source\":\"매체\"}. "
+         "리포트에 언급된 게임만, 지어내지 말 것. 데브시스터즈 쿠키런이 있으면 반드시 포함. "
+         "JSON 배열만 출력.\n\n" + report_text)
+    try:
+        r = client.messages.create(model="claude-sonnet-4-6", max_tokens=1500,
+                                    messages=[{"role": "user", "content": p}])
+        txt = "".join(getattr(b, "text", "") for b in r.content if b.type == "text")
+        import re
+        m = re.search(r"\[.*\]", txt, re.S)
+        return json.loads(m.group(0)) if m else []
+    except Exception as e:
+        log(f"rankings 추출 실패: {e}")
+        return []
 
 
 def main():
@@ -106,16 +128,17 @@ def main():
     if not text:
         log("빈 응답")
         return
-    # 서두 잡담 제거: 🎮 헤더부터 시작
     i = text.find("🎮")
     if i > 0:
         text = text[i:]
-    log(f"리포트 생성 (검색 {searches}회, {len(text)}자)")
+    rankings = extract_rankings(client, text)
+    log(f"리포트 생성 (검색 {searches}회, 본문 {len(text)}자, 순위 {len(rankings)}건)")
     tg(text)
     # 로컬 보관 + 웹 노출용 JSON (/game-watch/ 하단에서 fetch)
     (SITE / "scripts" / "game_intel_last.txt").write_text(
         f"[{datetime.now().isoformat(timespec='seconds')}]\n{text}\n", encoding="utf-8")
-    out = {"generated_at": datetime.now().isoformat(timespec="seconds"), "report": text}
+    out = {"generated_at": datetime.now().isoformat(timespec="seconds"),
+           "report": text, "rankings": rankings}
     (SITE / "tools" / "data" / "game_intel.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     try:
