@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /_integrate.sh
+Disallow: /scripts/
 
 Sitemap: https://manddo.kr/sitemap.xml
