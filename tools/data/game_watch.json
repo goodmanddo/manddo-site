@@ -1,30 +1,51 @@
 {
-  "generated_at": "2026-08-04T23:02:35",
-  "count": 1,
+  "generated_at": "2026-08-04T23:21:30",
+  "count": 2,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
     {
-      "company": "데브시스터즈",
-      "code": "194480",
-      "game": "예시 — 실제 신작명 입력",
-      "launch_date": "20260901",
+      "company": "엔씨소프트",
+      "code": "036570",
+      "game": "아이온2 글로벌 (PC/Steam)",
+      "launch_date": "20260930",
       "status": "expected",
-      "note": "예시 데이터. 실제 발표 출시일로 교체하세요.",
-      "bench": "229200",
-      "bench_name": "코스닥150",
-      "price": 21050,
-      "dday": 28,
+      "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 240500,
+      "dday": 57,
       "launched": false,
       "milestones": {
         "d40": {
-          "status": "done",
-          "ret": 22.8,
-          "excess": 23.3
+          "status": "pending"
         },
         "d30": {
-          "status": "done",
-          "ret": 14.0,
-          "excess": 3.8
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "도깨비의세계 (MMORPG)",
+      "launch_date": "20261015",
+      "status": "expected",
+      "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 8340,
+      "dday": 72,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
         },
         "d7": {
           "status": "pending"
