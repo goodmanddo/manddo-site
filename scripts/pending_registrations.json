@@ -1,0 +1,6 @@
+{
+  "_note": "출시일 확정 대기 중인 게임. register_pending_game.py가 매일 web_search로 출시일 확정 여부를 확인해 확정되면 upcoming_game_launches.json에 자동 등록하고 여기서 제거한다. 새 '쇼케이스 대기' 게임은 여기에 추가하면 자동 처리된다.",
+  "pending": [
+    {"company": "컴투스", "code": "078340", "game": "제우스: 오만의 신 (MMORPG)", "bench": "229200", "search_hint": "컴투스 제우스 오만의 신 정식 출시일", "note": "2026-08-07 쇼케이스에서 출시일 공개 예정"}
+  ]
+}
