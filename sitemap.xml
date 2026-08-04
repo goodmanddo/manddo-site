@@ -222,4 +222,10 @@
     <priority>0.7</priority>
   </url>
   <url><loc>https://manddo.kr/ai-project/weekly/2026-w31.html</loc><lastmod>2026-08-02</lastmod><priority>0.8</priority></url>
+  <url>
+    <loc>https://manddo.kr/game-watch/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>게임 신작 출시 카운트다운 — 오픈 전 주가 러너업 추적 | 만또</title>
+<meta name="description" content="신작 게임 출시를 앞둔 게임주가 오픈 전에 정말 오르고 있는지 추적. 출시 D-40·D-30·D-7 대비 현재 수익률과 D-day 카운트다운을 한눈에. '신작 전 상승' 통념을 실시간 관찰.">
+<meta name="keywords" content="게임주,신작 출시,게임 출시일,오픈 전 상승,기대감 선반영,게임주 러너업,D-day,만또">
+<meta property="og:title" content="게임 신작 출시 카운트다운 — 오픈 전 러너업 추적">
+<meta property="og:description" content="출시 D-40·D-30·D-7 대비 게임주가 정말 오르고 있는지 실시간 관찰.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/game-watch/">
+<link rel="canonical" href="https://manddo.kr/game-watch/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .gw-hero{background:linear-gradient(135deg,#7c3aed 0%,#be185d 100%);border-radius:16px;padding:28px 24px;margin:20px 0 18px;color:#fff}
+  .gw-hero,.gw-hero *{color:#fff !important}
+  .gw-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+  .gw-hero h1{font-size:25px;margin:0 0 8px;font-weight:800;letter-spacing:-0.02em;line-height:1.35}
+  .gw-hero p{font-size:14px;line-height:1.6;margin:0;max-width:680px}
+  .gw-hero a.rlink{text-decoration:underline;font-weight:700}
+  .gw-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px}
+  @media(max-width:640px){.gw-cards{grid-template-columns:1fr}}
+  .gw-card{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 20px;position:relative;overflow:hidden}
+  .gw-card.soon{border-color:#c4b5fd;box-shadow:0 4px 16px -8px rgba(124,58,237,.3)}
+  .gw-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px}
+  .gw-co{font-size:17px;font-weight:800;color:#111827}
+  .gw-game{font-size:12.5px;color:#6b7280;margin-top:2px}
+  .gw-code{font-size:11px;color:#9ca3af;font-family:'SF Mono',ui-monospace,monospace}
+  .gw-dday{text-align:center;background:#f5f3ff;border-radius:12px;padding:8px 12px;min-width:74px}
+  .gw-dday .num{font-size:22px;font-weight:800;color:#7c3aed;font-family:'SF Mono',ui-monospace,monospace;line-height:1}
+  .gw-dday .lab{font-size:10.5px;color:#8b5cf6;font-weight:700;margin-top:3px}
+  .gw-dday.done{background:#f1f5f9}.gw-dday.done .num{color:#475569}.gw-dday.done .lab{color:#64748b}
+  .gw-mile{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:6px}
+  .gw-m{text-align:center;background:#fbfcfd;border:1px solid #eef0f3;border-radius:9px;padding:9px 4px}
+  .gw-m .k{font-size:10.5px;color:#8b95a1;font-weight:700;margin-bottom:3px}
+  .gw-m .v{font-size:15px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace}
+  .up{color:#dc2626}.down{color:#1B64DA}.flat{color:#94a3b8}.pend{color:#c4b5fd}
+  .gw-price{font-size:12px;color:#64748b;margin-top:10px}
+  .gw-tag{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:5px;margin-left:6px}
+  .gw-tag.exp{background:#fef3c7;color:#92400e}.gw-tag.conf{background:#dcfce7;color:#166534}.gw-tag.done{background:#f1f5f9;color:#475569}
+  .gw-note{font-size:12.5px;color:#475569;line-height:1.8;margin:16px 0;padding:16px 18px;background:#f8fafc;border:1px solid #eef0f3;border-radius:12px}
+  .gw-note b{color:#111827}
+  .gw-empty{text-align:center;color:#94a3b8;padding:30px;background:#fff;border:1px dashed #e5e8ec;border-radius:12px}
+  .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/game-watch/" class="active">🎮 게임 신작</a>
+      <a href="/etf/">📊 ETF</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="gw-hero">
+    <span class="badge">🎮 신작 카운트다운 · 오픈 전 러너업 추적</span>
+    <h1>게임주는 신작 출시 전에 오르고 있을까?</h1>
+    <p>"게임주는 신작 오픈 한 달 전부터 오른다"는 통념을 <b>실시간으로 관찰</b>합니다. 출시를 앞둔 게임주가 <b>D-40·D-30·D-7 시점 대비 지금 얼마나 올랐는지</b>와 출시까지 <b>D-day</b>를 함께 봅니다. 과거 16개 신작으로 검증한 결과는 <a class="rlink" href="/learn/game-launch-rally.html">이 글</a>에서 확인하세요(결론: 평균으로는 통념만큼 안 오릅니다).</p>
+  </div>
+
+  <div id="gw-list"><div class="gw-empty">불러오는 중…</div></div>
+
+  <div class="gw-note">
+    <b>💡 어떻게 보나요?</b> 각 카드의 <b>D-40 / D-30 / D-7</b>은 "그 종목이 출시 40·30·7일 전 종가 대비 <b>지금 얼마나 올랐나(절대 수익률)</b>"입니다. 아직 그 시점이 안 왔으면 <b>대기</b>로 표시됩니다. <b>D-day</b>는 출시까지 남은 일수입니다.<br><br>
+    <b>⚠ 주의</b> · 출시일은 운영자가 관리하는 <b>잠정 정보</b>로, 게임사 발표에 따라 자주 변동됩니다. 수익률은 한국투자증권 수정주가 기준 참고용이며, <b>특정 종목 추천이 아닙니다.</b> 과거 데이터는 미래를 보장하지 않고, 실제로 <a href="/learn/game-launch-rally.html">출시 후엔 오히려 빠지는 경향(sell the news)</a>도 있었습니다.
+  </div>
+
+  <div class="disclaimer">
+    ⚠ 본 페이지는 공개 시세와 잠정 일정을 정리한 개인의 관찰 기록이며, 특정 종목의 매수·매도 권유가 아닙니다. 투자 판단과 결과는 본인 책임입니다. · 글 <a href="/about.html" rel="author">만또</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·<a href="/privacy.html">개인정보처리방침</a>·<a href="/terms.html">이용약관</a>·<a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다 · 데이터: 한국투자증권</div>
+  </div>
+</footer>
+<script>
+(function(){
+  function ymdKor(s){return s.slice(0,4)+'.'+s.slice(4,6)+'.'+s.slice(6,8);}
+  function mcell(k,m){
+    if(!m||m.status==='pending')return '<div class="gw-m"><div class="k">'+k+'</div><div class="v pend">대기</div></div>';
+    var v=m.ret, c=v>0?'up':(v<0?'down':'flat'), t=(v===null||v===undefined)?'-':((v>0?'+':'')+v.toFixed(1)+'%');
+    return '<div class="gw-m"><div class="k">'+k+'</div><div class="v '+c+'">'+t+'</div></div>';
+  }
+  fetch('/tools/data/game_watch.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    var el=document.getElementById('gw-list');
+    if(!d.items||!d.items.length){el.innerHTML='<div class="gw-empty">추적 중인 신작이 아직 없습니다. 곧 등록됩니다.</div>';return;}
+    el.innerHTML='<div class="gw-cards">'+d.items.map(function(i){
+      var soon=!i.launched && i.dday<=45 && i.dday>=0;
+      var ddayHtml, tag;
+      if(i.launched){ddayHtml='<div class="gw-dday done"><div class="num">D+'+Math.abs(i.dday)+'</div><div class="lab">출시됨</div></div>';tag='<span class="gw-tag done">출시완료</span>';}
+      else{ddayHtml='<div class="gw-dday"><div class="num">D-'+i.dday+'</div><div class="lab">출시까지</div></div>';tag=i.status==='confirmed'?'<span class="gw-tag conf">확정</span>':'<span class="gw-tag exp">잠정</span>';}
+      var m=i.milestones||{};
+      var postHtml='';
+      if(i.launched && i.post_ret!==null && i.post_ret!==undefined){var pc=i.post_ret>0?'up':(i.post_ret<0?'down':'flat');postHtml=' · 출시 후 <b class="'+pc+'">'+(i.post_ret>0?'+':'')+i.post_ret.toFixed(1)+'%</b>';}
+      return '<div class="gw-card'+(soon?' soon':'')+'">'+
+        '<div class="gw-top"><div><div class="gw-co">'+i.company+tag+'</div><div class="gw-game">'+(i.game||'')+'</div><div class="gw-code">'+i.code+'</div></div>'+ddayHtml+'</div>'+
+        '<div class="gw-mile">'+mcell('D-40',m.d40)+mcell('D-30',m.d30)+mcell('D-7',m.d7)+'</div>'+
+        '<div class="gw-price">현재가 '+i.price.toLocaleString()+'원 · 출시(예정) '+ymdKor(i.launch_date)+postHtml+'</div>'+
+      '</div>';
+    }).join('')+'</div>';
+  }).catch(function(){document.getElementById('gw-list').innerHTML='<div class="gw-empty">데이터를 불러오지 못했습니다.</div>';});
+})();
+</script>
+</body>
+</html>
