@@ -12,6 +12,7 @@
 """
 import os
 import json
+import subprocess
 import urllib.request
 from datetime import datetime, date
 from pathlib import Path
@@ -105,12 +106,27 @@ def main():
     if not text:
         log("빈 응답")
         return
+    # 서두 잡담 제거: 🎮 헤더부터 시작
+    i = text.find("🎮")
+    if i > 0:
+        text = text[i:]
     log(f"리포트 생성 (검색 {searches}회, {len(text)}자)")
     tg(text)
-    # 로컬 보관 (참조용)
+    # 로컬 보관 + 웹 노출용 JSON (/game-watch/ 하단에서 fetch)
     (SITE / "scripts" / "game_intel_last.txt").write_text(
         f"[{datetime.now().isoformat(timespec='seconds')}]\n{text}\n", encoding="utf-8")
-    log("✓ 텔레그램 전송 완료")
+    out = {"generated_at": datetime.now().isoformat(timespec="seconds"), "report": text}
+    (SITE / "tools" / "data" / "game_intel.json").write_text(
+        json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    try:
+        env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
+        subprocess.run(["git", "-C", str(SITE), "add", "tools/data/game_intel.json"], check=False, env=env)
+        subprocess.run(["git", "-C", str(SITE), "commit", "-q", "-m",
+                        f"chore(game-intel): 주간 리포트 갱신 ({date.today()})"], env=env)
+        subprocess.run(["git", "-C", str(SITE), "push", "-q"], check=False, env=env)
+    except Exception as e:
+        log(f"git 실패: {e}")
+    log("✓ 텔레그램 전송 + 웹 반영 완료")
 
 
 if __name__ == "__main__":

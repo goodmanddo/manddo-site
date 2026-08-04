@@ -41,6 +41,12 @@
   .gw-tag.exp{background:#fef3c7;color:#92400e}.gw-tag.conf{background:#dcfce7;color:#166534}.gw-tag.done{background:#f1f5f9;color:#475569}
   .gw-note{font-size:12.5px;color:#475569;line-height:1.8;margin:16px 0;padding:16px 18px;background:#f8fafc;border:1px solid #eef0f3;border-radius:12px}
   .gw-note b{color:#111827}
+  .gw-report{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:20px 22px;margin:22px 0 16px}
+  .gw-report-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+  .gw-report-head h2{font-size:18px;font-weight:800;color:#111827;margin:0;letter-spacing:-0.02em}
+  .gw-report-head .upd{font-size:12px;color:#8b95a1}
+  .gw-report pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:13.5px;line-height:1.75;color:#374151;margin:0}
+  .gw-report .src{font-size:11.5px;color:#94a3b8;margin-top:12px}
   .gw-empty{text-align:center;color:#94a3b8;padding:30px;background:#fff;border:1px dashed #e5e8ec;border-radius:12px}
   .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
 </style>
@@ -75,6 +81,15 @@
   </div>
 
   <div id="gw-list"><div class="gw-empty">불러오는 중…</div></div>
+
+  <div class="gw-report" id="gw-report" style="display:none">
+    <div class="gw-report-head">
+      <h2>📰 이번 주 게임주 인텔</h2>
+      <span class="upd" id="gw-report-upd">—</span>
+    </div>
+    <pre id="gw-report-body"></pre>
+    <div class="src">🔍 웹 검색 기반 주간 요약(매주 월요일 갱신). 신작 일정·매출 순위는 잠정·대략치이며, 매수·매도 권유가 아닙니다.</div>
+  </div>
 
   <div class="gw-note">
     <b>💡 어떻게 보나요?</b> 각 카드의 <b>D-40 / D-30 / D-7</b>은 "그 종목이 출시 40·30·7일 전 종가 대비 <b>지금 얼마나 올랐나(절대 수익률)</b>"입니다. 아직 그 시점이 안 왔으면 <b>대기</b>로 표시됩니다. <b>D-day</b>는 출시까지 남은 일수입니다.<br><br>
@@ -117,6 +132,14 @@
       '</div>';
     }).join('')+'</div>';
   }).catch(function(){document.getElementById('gw-list').innerHTML='<div class="gw-empty">데이터를 불러오지 못했습니다.</div>';});
+
+  // 주간 인텔 리포트
+  fetch('/tools/data/game_intel.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    if(!d.report)return;
+    document.getElementById('gw-report-body').textContent=d.report;
+    if(d.generated_at)document.getElementById('gw-report-upd').textContent=d.generated_at.slice(0,10)+' 갱신';
+    document.getElementById('gw-report').style.display='block';
+  }).catch(function(){});
 })();
 </script>
 </body>
