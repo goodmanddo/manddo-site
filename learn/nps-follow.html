@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>국민연금 따라 사면 벌까? — 지분공시 추종 검증 | 만또</title>
+<meta name="description" content="국민연금이 지분을 늘린 종목을 공시일에 따라 사면 시장을 이길까? 실제 지분 변동 공시로 시장중립 검증. 늘린 종목·줄인 종목을 비교해 '큰손 따라사기'의 함정을 데이터로 밝힌다.">
+<meta name="keywords" content="국민연금 따라사기,연기금 수급,큰손 따라하기,지분공시,5%룰,시장중립 백테스트,후행정보,만또">
+<meta property="og:title" content="국민연금 따라 사면 벌까? — 데이터 검증">
+<meta property="og:description" content="국민연금 지분 늘린 종목 따라사기, 시장을 이길까? 늘림 vs 줄임 비교로 함정을 밝힌다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/learn/nps-follow.html">
+<link rel="canonical" href="https://manddo.kr/learn/nps-follow.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .pt-hero{background:linear-gradient(135deg,#0b6b45 0%,#7c2d12 100%);border-radius:16px;padding:30px 24px;margin:20px 0 20px;color:#fff}
+  .pt-hero,.pt-hero *{color:#fff !important}
+  .pt-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+  .pt-hero h1{font-size:25px;margin:0 0 8px;font-weight:800;letter-spacing:-0.02em;line-height:1.35}
+  .pt-hero p{font-size:14px;line-height:1.6;margin:0;max-width:680px}
+  .pt-verdict{border-radius:14px;padding:20px 22px;margin-bottom:18px;background:#fffbeb;border:1px solid #fde68a}
+  .pt-verdict h2{font-size:19px;margin:0 0 6px;color:#111827}
+  .pt-verdict p{font-size:14px;line-height:1.7;color:#374151;margin:0}
+  .pt-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px}
+  @media(max-width:620px){.pt-cards{grid-template-columns:1fr}}
+  .pt-c{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:16px}
+  .pt-c .k{font-size:12.5px;color:#4b5563;font-weight:600;margin-bottom:8px}
+  .pt-c .big{font-size:23px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace}
+  .pt-c .sub{font-size:12px;color:#64748b;margin-top:4px}
+  .up{color:#dc2626}.down{color:#1B64DA}.flat{color:#64748b}
+  .pt-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eef0f3;border-radius:12px;overflow:hidden;font-size:13px}
+  .pt-table th{background:#f1f5f9;color:#334155;font-weight:700;padding:10px 8px;text-align:left;font-size:12px;white-space:nowrap}
+  .pt-table td{padding:10px 8px;border-top:1px solid #f1f5f9;color:#374151}
+  .pt-table .num{font-family:'SF Mono',ui-monospace,monospace;font-weight:700;text-align:right;white-space:nowrap}
+  .pt-sec{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:20px 22px;margin-bottom:16px}
+  .pt-sec h2{font-size:18px;margin:0 0 10px;color:#111827}
+  .pt-sec p{font-size:14px;line-height:1.75;color:#374151;margin:0 0 10px}
+  .pt-note{font-size:12.5px;color:#64748b;line-height:1.7;margin:14px 0;padding:14px 16px;background:#f8fafc;border:1px solid #eef0f3;border-radius:10px}
+  .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/game-watch/">🎮 게임 신작</a>
+      <a href="/learn/" class="active">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="pt-hero">
+    <span class="badge">🔬 데이터 검증 · 큰손 따라하기</span>
+    <h1>국민연금 따라 사면, 정말 벌까?</h1>
+    <p>국민연금은 국내 최대 큰손입니다. "국민연금이 지분 늘린 종목을 따라 사면 되지 않을까?" 누구나 한 번쯤 떠올리는 생각이죠. 실제 <b id="n-total">100</b>여 건의 지분 변동 공시로, 공시일에 따라 샀을 때 시장을 이기는지 검증했습니다. 결과엔 <b>함정이 있었습니다.</b></p>
+  </div>
+
+  <div class="pt-verdict">
+    <h2 id="v-title">⏳ 데이터 불러오는 중…</h2>
+    <p id="v-body"></p>
+  </div>
+
+  <div class="pt-cards">
+    <div class="pt-c"><div class="k">지분 <b>늘린</b> 종목 따라사기 (+20일)</div><div class="big up" id="c-up">—</div><div class="sub" id="c-up-sub">시장 대비</div></div>
+    <div class="pt-c"><div class="k">지분 <b>줄인</b> 종목 따라사기 (+20일)</div><div class="big up" id="c-dn">—</div><div class="sub" id="c-dn-sub">시장 대비</div></div>
+    <div class="pt-c"><div class="k">순수 방향신호 (늘림−줄임)</div><div class="big" id="c-sp">—</div><div class="sub">0에 가까우면 신호 없음</div></div>
+  </div>
+
+  <div class="pt-sec">
+    <h2>📊 공시일 매수 후 시장 대비 초과수익</h2>
+    <p style="font-size:12.5px;color:#64748b">지분 변동 공시일 종가에 매수해 N거래일 뒤 종가에 판 결과. 시장 대비는 종목이 속한 시장(코스피→코스피200, 코스닥→코스닥150)을 뺀 초과수익. beat%는 시장을 이긴 비율.</p>
+    <div style="overflow-x:auto">
+      <table class="pt-table">
+        <thead><tr><th>보유</th><th class="num" colspan="2">지분 늘림</th><th class="num" colspan="2">지분 줄임</th></tr>
+        <tr><th></th><th class="num">beat%</th><th class="num">평균</th><th class="num">beat%</th><th class="num">평균</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="5" style="padding:20px;text-align:center;color:#94a3b8">불러오는 중…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="pt-sec">
+    <h2>🧐 함정: 줄인 종목도 똑같이 올랐다</h2>
+    <p><b>①</b> 국민연금이 지분을 늘린 종목은 20일 뒤 시장을 <b id="up-inline">+6%p</b> 이겼습니다. 언뜻 "따라사기가 통한다"로 보이죠.</p>
+    <p><b>② 그런데 국민연금이 지분을 <u>줄인</u> 종목도 똑같이(오히려 더) 시장을 이겼습니다.</b> 만약 국민연금의 방향에 진짜 정보가 있다면 늘린 쪽이 줄인 쪽보다 나아야 하는데, 순수 방향신호(늘림−줄임)는 <b id="sp-inline">0 근처</b>였습니다. 즉 <b>"늘렸냐 줄였냐"는 아무 신호가 아니었습니다.</b></p>
+    <p><b>③ 그럼 왜 둘 다 올랐나?</b> 초과수익의 원인은 "국민연금이 담아서"가 아니라, <b>국민연금이 5% 이상 보유하는 유형의 종목(대체로 저평가 가치주)이 이 기간에 강세였던</b> 시장 국면 효과입니다. 국민연금의 매매 방향과는 무관합니다.</p>
+  </div>
+
+  <div class="pt-sec">
+    <h2>💡 왜 큰손 따라하기는 잘 안 될까</h2>
+    <p>가장 큰 이유는 <b>후행성</b>입니다. 국민연금의 5%룰 공시는 실제 매매를 마치고 <b>5영업일 뒤</b>에 나옵니다. 우리가 공시를 보고 살 때쯤이면, 이미 그 정보는 가격에 반영된 뒤죠. "모두가 아는 정보는 더 이상 정보가 아니다"라는 격언 그대로입니다. 앞서 검증한 <a href="/blog/follow-smart-money-truth.html">외국인·기관 순매수 추격</a>도 시장 이긴 비율이 38%에 그쳤는데, 같은 이유였습니다.</p>
+    <p>그래서 <a href="/nps/">국민연금 보유 종목 페이지</a>는 "따라 사라"는 매매 신호가 아니라, <b>연기금 수급의 큰 흐름을 참고하는 관찰 정보</b>로 보는 게 맞습니다. 방향을 베팅하는 도구가 아닙니다.</p>
+  </div>
+
+  <div class="pt-note">
+    <b>방법</b> · 최근 국민연금 지분 변동 공시(DART 5%룰)를 이벤트로, 공시일 종가에 매수해 한국투자증권 <b>수정주가</b>로 이후 종가 수익률을 계산하고, 종목이 속한 시장의 대표 ETF를 뺀 <b>초과수익</b>으로 비교했습니다. 지분 늘림(+1%p↑)과 줄임(-1%p↓)을 나눠 방향 신호를 봤습니다. 표본이 한정적(최근 약 2개월)이라 참고용이며, 특정 종목 추천이 아닌 통념 검증입니다.
+  </div>
+
+  <div class="disclaimer">
+    ⚠ 본 글은 공개 공시·시세로 통념을 검증한 개인의 기록·의견이며, 특정 종목의 매수·매도 권유가 아닙니다. 과거 데이터가 미래를 보장하지 않습니다. 투자 판단과 결과는 본인 책임입니다. · 글 <a href="/about.html" rel="author">만또</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·<a href="/privacy.html">개인정보처리방침</a>·<a href="/terms.html">이용약관</a>·<a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다 · 데이터: 금융감독원 DART · 한국투자증권</div>
+  </div>
+</footer>
+<script>
+(function(){
+  function f2(v){return v===null||v===undefined?'n/a':(v>0?'+':'')+v.toFixed(2)+'%p';}
+  function cls(v){return v>0?'up':(v<0?'down':'flat');}
+  fetch('/tools/data/nps_follow_backtest.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    document.getElementById('n-total').textContent=(d.n_up+d.n_dn);
+    var u20=d.up['20'], d20=d.dn['20'], sp20=d.spread['20'];
+    var cu=document.getElementById('c-up');cu.textContent=f2(u20.mean);cu.className='big '+cls(u20.mean);
+    document.getElementById('c-up-sub').textContent='beat '+u20.beat+'% (n='+u20.n+')';
+    var cd=document.getElementById('c-dn');cd.textContent=f2(d20.mean);cd.className='big '+cls(d20.mean);
+    document.getElementById('c-dn-sub').textContent='beat '+d20.beat+'% (n='+d20.n+')';
+    var cs=document.getElementById('c-sp');cs.textContent=f2(sp20);cs.className='big '+cls(sp20);
+    document.getElementById('up-inline').textContent=f2(u20.mean);
+    document.getElementById('sp-inline').textContent=f2(sp20);
+    document.getElementById('v-title').textContent='❌ 결론: "국민연금 따라사기"는 엣지가 없다';
+    document.getElementById('v-body').innerHTML='국민연금이 지분 늘린 종목은 20일 뒤 시장을 <b class="up">'+f2(u20.mean)+'</b> 이겼지만, <b>줄인 종목도 <span class="up">'+f2(d20.mean)+'</span>로 똑같이(더) 올랐습니다.</b> 방향 신호(늘림−줄임)는 <b>'+f2(sp20)+'</b> — 즉 "늘렸냐 줄였냐"는 수익과 무관했습니다. 초과수익은 국민연금 방향이 아니라 종목 유형·시장 국면 효과입니다.';
+    var tb=document.getElementById('rows');
+    tb.innerHTML=['5','10','20'].map(function(n){
+      var u=d.up[n]||{}, dd=d.dn[n]||{};
+      return '<tr><td><b>+'+n+'일</b></td>'+
+        '<td class="num">'+u.beat+'%</td><td class="num '+cls(u.mean)+'">'+f2(u.mean)+'</td>'+
+        '<td class="num">'+dd.beat+'%</td><td class="num '+cls(dd.mean)+'">'+f2(dd.mean)+'</td></tr>';
+    }).join('');
+  }).catch(function(){document.getElementById('v-title').textContent='데이터를 불러오지 못했습니다.';});
+})();
+</script>
+</body>
+</html>
