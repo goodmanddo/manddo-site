@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI '오늘의 픽', 아침에 사면 벌까? — 90일 검증 | 만또</title>
+<meta name="description" content="매일 아침 AI가 뽑는 '오늘의 픽'을 09시에 사서 파는 매매가 실제로 수익이 나는지 90일치 실제 픽으로 검증. 09시 갭, 홀딩 기간별 수익률, 시장 대비까지 한투 수정주가로 계산.">
+<meta name="keywords" content="AI 오늘의 픽,종목 추천,데이트레이딩,갭 상승,기대감 선반영,sell the news,시장중립 백테스트,만또">
+<meta property="og:title" content="AI '오늘의 픽', 아침에 사면 벌까? — 90일 검증">
+<meta property="og:description" content="09시에 사서 파는 매매, 실제로 수익 날까? 90일치 픽으로 검증한 결과.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/learn/ai-pick-timing.html">
+<link rel="canonical" href="https://manddo.kr/learn/ai-pick-timing.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .pt-hero{background:linear-gradient(135deg,#b91c1c 0%,#7c2d12 100%);border-radius:16px;padding:30px 24px;margin:20px 0 20px;color:#fff}
+  .pt-hero,.pt-hero *{color:#fff !important}
+  .pt-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+  .pt-hero h1{font-size:25px;margin:0 0 8px;font-weight:800;letter-spacing:-0.02em;line-height:1.35}
+  .pt-hero p{font-size:14px;line-height:1.6;margin:0;max-width:680px}
+  .pt-verdict{border-radius:14px;padding:20px 22px;margin-bottom:18px;background:#fef2f2;border:1px solid #fecaca}
+  .pt-verdict h2{font-size:19px;margin:0 0 6px;color:#111827}
+  .pt-verdict p{font-size:14px;line-height:1.7;color:#374151;margin:0}
+  .pt-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+  @media(max-width:560px){.pt-cards{grid-template-columns:1fr}}
+  .pt-c{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:16px}
+  .pt-c .k{font-size:12.5px;color:#4b5563;font-weight:600;margin-bottom:8px}
+  .pt-c .big{font-size:24px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace}
+  .pt-c .sub{font-size:12px;color:#64748b;margin-top:4px}
+  .up{color:#dc2626}.down{color:#1B64DA}.flat{color:#64748b}
+  .pt-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eef0f3;border-radius:12px;overflow:hidden;font-size:13px}
+  .pt-table th{background:#f1f5f9;color:#334155;font-weight:700;padding:10px 8px;text-align:left;font-size:12px;white-space:nowrap}
+  .pt-table td{padding:10px 8px;border-top:1px solid #f1f5f9;color:#374151}
+  .pt-table .num{font-family:'SF Mono',ui-monospace,monospace;font-weight:700;text-align:right;white-space:nowrap}
+  .pt-sec{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:20px 22px;margin-bottom:16px}
+  .pt-sec h2{font-size:18px;margin:0 0 10px;color:#111827}
+  .pt-sec p{font-size:14px;line-height:1.75;color:#374151;margin:0 0 10px}
+  .pt-note{font-size:12.5px;color:#64748b;line-height:1.7;margin:14px 0;padding:14px 16px;background:#f8fafc;border:1px solid #eef0f3;border-radius:10px}
+  .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
+  @media(max-width:560px){.hide-sm{display:none}}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/game-watch/">🎮 게임 신작</a>
+      <a href="/learn/" class="active">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="pt-hero">
+    <span class="badge">🔬 데이터 검증 · 자기 시스템 팩트체크</span>
+    <h1>AI '오늘의 픽', 아침에 사면 벌까?</h1>
+    <p>만또는 매일 아침 AI가 뽑는 '오늘의 픽'을 공개합니다. 그런데 이걸 <b>09시에 사서 파는 매매</b>를 하면 실제로 수익이 날까요? 최근 <b id="n-days">90</b>일치 실제 픽을 복원해, 한국투자증권 수정주가로 검증했습니다. 결론부터 — <b>제 직감도, 데이터도 "손해"였습니다.</b></p>
+  </div>
+
+  <div class="pt-verdict">
+    <h2 id="v-title">⏳ 데이터 불러오는 중…</h2>
+    <p id="v-body"></p>
+  </div>
+
+  <div class="pt-cards">
+    <div class="pt-c"><div class="k">픽 종목의 09시 갭 (전일종가→시가)</div><div class="big up" id="c-gap">—</div><div class="sub" id="c-gap-sub">이미 올라서 시작</div></div>
+    <div class="pt-c"><div class="k">당일 09시 매수 → 15시 매도</div><div class="big" id="c-intra">—</div><div class="sub" id="c-intra-sub">인트라데이 평균</div></div>
+  </div>
+
+  <div class="pt-sec">
+    <h2>📊 09시 매수 후 보유 기간별 수익률</h2>
+    <p style="font-size:12.5px;color:#64748b">픽 당일 09시 시가에 매수해 N거래일 뒤 종가에 판 결과. '시장 대비'는 같은 기간 코스피200(KODEX200)을 뺀 초과수익.</p>
+    <div style="overflow-x:auto">
+      <table class="pt-table">
+        <thead><tr><th>보유</th><th class="num">표본</th><th class="num">승률</th><th class="num">평균 수익</th><th class="num hide-sm">누적</th><th class="num">시장 대비</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="6" style="padding:20px;text-align:center;color:#94a3b8">불러오는 중…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="pt-sec">
+    <h2>🧐 왜 손해였나</h2>
+    <p><b>① 픽 종목은 09시에 이미 올라서 시작합니다.</b> '오늘의 픽'은 아침 8시에 <b>전날 미국장 호재</b>를 근거로 뽑힙니다(예: "미국 방산 강세 → 한화에어로"). 그래서 그 종목은 09시 시가가 이미 평균 <b id="gap-inline">+1.6%</b> 갭업으로 출발합니다. 09시에 사는 건 <b>그 갭 고점을 사는 셈</b>이죠.</p>
+    <p><b>② 갭은 소진되며 하락합니다.</b> 호재가 이미 가격에 반영됐으니, 이후 장중·며칠에 걸쳐 갭이 빠집니다. 보유 기간을 늘려도 회복되지 않고 <b>오히려 더 나빠졌습니다.</b></p>
+    <p><b>③ 전형적인 'buy the rumor, sell the news'.</b> 정보가 공개되는 순간이 고점이라는 격언 그대로입니다. (게임주 신작에서 본 <a href="/learn/game-launch-rally.html">그 패턴</a>과 똑같습니다.)</p>
+  </div>
+
+  <div class="pt-sec">
+    <h2>💡 그래서 '오늘의 픽'은 뭔가요</h2>
+    <p>이 검증이 말해주는 건 분명합니다 — <b>'오늘의 픽'은 매매 신호가 아니라 관찰·기록입니다.</b> "AI가 오늘 이 종목을 왜 주목했나"를 남기는 실험 로그이지, "09시에 사라"는 추천이 아닙니다. 실제로 그렇게 매매하면 <b>수수료·세금 전에도 손해</b>이고, 넣으면 더 나빠집니다. 만또가 픽을 공개하되 "추천이 아닌 실험 기록"이라고 못박아온 이유가 이 데이터로 확인됐습니다.</p>
+  </div>
+
+  <div class="pt-note" id="methodo">
+    <b>방법</b> · git 히스토리에 남은 매일의 '오늘의 픽'(<span id="m-days">—</span>일치)을 복원해, 각 픽 종목을 픽 당일 <b>09시 시가</b>에 매수했다고 가정하고 한국투자증권 <b>수정주가</b>로 이후 종가 수익률을 계산했습니다. 수수료·세금·슬리피지는 미반영이며, 넣으면 결과는 더 나빠집니다. 표본이 한정적이라 참고용이고, 특정 종목 추천이 아닌 <b>자기 시스템 검증</b>입니다.
+  </div>
+
+  <div class="disclaimer">
+    ⚠ 본 글은 공개 시세로 자체 시스템을 검증한 개인의 기록·의견이며, 특정 종목의 매수·매도 권유가 아닙니다. 과거 데이터가 미래를 보장하지 않습니다. 투자 판단과 결과는 본인 책임입니다. · 글 <a href="/about.html" rel="author">만또</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·<a href="/privacy.html">개인정보처리방침</a>·<a href="/terms.html">이용약관</a>·<a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다 · 데이터: 한국투자증권</div>
+  </div>
+</footer>
+<script>
+(function(){
+  function f2(v){return v===null||v===undefined?'n/a':(v>0?'+':'')+v.toFixed(2)+'%';}
+  function f1(v){return v===null||v===undefined?'n/a':(v>0?'+':'')+v.toFixed(1)+'%';}
+  function cls(v){return v>0?'up':(v<0?'down':'flat');}
+  fetch('/tools/data/pick_timing_backtest.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    document.getElementById('n-days').textContent=d.n_days;
+    document.getElementById('m-days').textContent=d.n_days;
+    var g=document.getElementById('c-gap');g.textContent=f2(d.avg_gap);
+    document.getElementById('c-gap-sub').textContent='갭업 비율 '+(d.gap_up_pct||0)+'%';
+    document.getElementById('gap-inline').textContent=f1(d.avg_gap);
+    var it=d.intraday||{};var ci=document.getElementById('c-intra');ci.textContent=f2(it.mean);ci.className='big '+cls(it.mean);
+    document.getElementById('c-intra-sub').textContent='승률 '+(it.winrate||0)+'% · 누적 '+f1(it.cum)+' (n='+(it.n||0)+')';
+    // 판정
+    var h20=(d.holding||[]).find(function(x){return x.days===20;})||{};
+    document.getElementById('v-title').textContent='❌ 결론: 09시에 사면 어느 기간을 보유해도 손해';
+    document.getElementById('v-body').innerHTML='당일 09시에 사서 15시에 팔면 평균 <b class="'+cls(it.mean)+'">'+f2(it.mean)+'</b>, 승률 '+(it.winrate||0)+'%. 보유를 늘려도 회복되지 않고 20일 보유 시 평균 <b class="down">'+f1(h20.mean)+'</b>까지 악화됐습니다. <b>시장 대비로도 전 구간 마이너스</b> — 어느 타이밍에도 알파가 없었습니다.';
+    // 표
+    var ex={};(d.excess||[]).forEach(function(x){ex[x.days]=x;});
+    var tb=document.getElementById('rows');
+    tb.innerHTML=(d.holding||[]).map(function(x){
+      var e=ex[x.days]||{};
+      return '<tr><td><b>+'+x.days+'일</b></td>'+
+        '<td class="num">'+x.n+'</td>'+
+        '<td class="num">'+x.winrate+'%</td>'+
+        '<td class="num '+cls(x.mean)+'">'+f2(x.mean)+'</td>'+
+        '<td class="num hide-sm '+cls(x.cum)+'">'+f1(x.cum)+'</td>'+
+        '<td class="num '+cls(e.mean)+'">'+f2(e.mean)+'</td></tr>';
+    }).join('');
+  }).catch(function(){document.getElementById('v-title').textContent='데이터를 불러오지 못했습니다.';});
+})();
+</script>
+</body>
+</html>
