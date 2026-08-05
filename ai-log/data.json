@@ -1,24 +1,24 @@
 {
-  "date": "2026-08-04",
+  "date": "2026-08-05",
   "start_date": "2026-05-03",
-  "cumulative_return": -9.67,
-  "week_return": 1.05,
-  "day_return": 0.67,
+  "cumulative_return": -8.56,
+  "week_return": 4.0,
+  "day_return": 1.23,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 42,
   "total_trades": 52,
-  "ai_commentary": "오늘은 현대차 등 신규 편입. 시작 이후 누적 -9.7%.",
+  "ai_commentary": "오늘은 현대차 등 신규 편입. 시작 이후 누적 -8.6%.",
   "new_buys": [
     {
       "name": "현대차",
       "slug": "hyundai-motor",
       "market": "코스피",
-      "entry_to_current_pct": 1.68,
+      "entry_to_current_pct": 4.79,
       "weight_pct": 15,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
@@ -36,7 +36,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 18
+      "weight_pct": 19
     },
     {
       "name": "현대차",
@@ -48,7 +48,7 @@
       "name": "웹젠",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 7
+      "weight_pct": 6
     },
     {
       "name": "ACE KRX금현물",
@@ -70,10 +70,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-24",
-      "cumulative_return": -4.13
-    },
     {
       "date": "2026-06-25",
       "cumulative_return": -2.17
@@ -189,6 +185,10 @@
     {
       "date": "2026-08-04",
       "cumulative_return": -9.67
+    },
+    {
+      "date": "2026-08-05",
+      "cumulative_return": -8.56
     }
   ]
 }
