@@ -4,50 +4,46 @@
       "name": "현대차",
       "qty": 7,
       "avg_price": 386000,
-      "current_price": 404500,
+      "current_price": 400000,
       "opened_at": "2026-08-03"
     },
     "069080": {
       "name": "웹젠",
       "qty": 99,
       "avg_price": 11598,
-      "current_price": 11830,
+      "current_price": 12470,
       "opened_at": "2026-06-24"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 33,
       "avg_price": 117965,
-      "current_price": 104300,
+      "current_price": 98900,
       "opened_at": "2026-06-09"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 36,
       "avg_price": 27935,
-      "current_price": 27405,
+      "current_price": 27275,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 44,
       "avg_price": 27686,
-      "current_price": 26600,
+      "current_price": 27170,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 23,
       "avg_price": 53733,
-      "current_price": 49905,
+      "current_price": 49770,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-05-15",
-      "total_eval": 19878492
-    },
     {
       "date": "2026-05-18",
       "total_eval": 19776892
@@ -283,6 +279,10 @@
     {
       "date": "2026-08-05",
       "total_eval": 18288493
+    },
+    {
+      "date": "2026-08-06",
+      "total_eval": 18159448
     }
   ],
   "completed_trades": [
