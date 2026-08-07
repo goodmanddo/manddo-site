@@ -1,53 +1,35 @@
 {
   "last_holdings": {
-    "005380": {
-      "name": "현대차",
-      "qty": 7,
-      "avg_price": 386000,
-      "current_price": 400000,
-      "opened_at": "2026-08-03"
-    },
-    "069080": {
-      "name": "웹젠",
-      "qty": 99,
-      "avg_price": 11598,
-      "current_price": 12470,
-      "opened_at": "2026-06-24"
-    },
     "069500": {
       "name": "KODEX 200",
       "qty": 33,
       "avg_price": 117965,
-      "current_price": 98900,
+      "current_price": 98090,
       "opened_at": "2026-06-09"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 36,
       "avg_price": 27935,
-      "current_price": 27275,
+      "current_price": 27075,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 44,
       "avg_price": 27686,
-      "current_price": 27170,
+      "current_price": 27330,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 23,
       "avg_price": 53733,
-      "current_price": 49770,
+      "current_price": 49225,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-05-18",
-      "total_eval": 19776892
-    },
     {
       "date": "2026-05-19",
       "total_eval": 19691155
@@ -283,6 +265,10 @@
     {
       "date": "2026-08-06",
       "total_eval": 18159448
+    },
+    {
+      "date": "2026-08-07",
+      "total_eval": 18104669
     }
   ],
   "completed_trades": [
@@ -688,6 +674,22 @@
       "date": "2026-08-03",
       "is_win": false,
       "hold_days": 35
+    },
+    {
+      "name": "현대차",
+      "code": "005380",
+      "return_pct": 2.33,
+      "date": "2026-08-07",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "웹젠",
+      "code": "069080",
+      "return_pct": 10.02,
+      "date": "2026-08-07",
+      "is_win": true,
+      "hold_days": 44
     }
   ]
 }
