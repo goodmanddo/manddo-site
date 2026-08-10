@@ -1,51 +1,41 @@
 {
-  "date": "2026-08-07",
+  "date": "2026-08-10",
   "start_date": "2026-05-03",
-  "cumulative_return": -9.48,
-  "week_return": -0.91,
-  "day_return": -0.3,
-  "today_realized_avg": 6.17,
-  "today_trade_count": 2,
-  "today_win_count": 2,
+  "cumulative_return": -9.34,
+  "week_return": 1.04,
+  "day_return": 0.15,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 54,
-  "ai_commentary": "2건 익절로 수익 확정. 시작 이후 누적 -9.5%.",
-  "new_buys": [],
-  "exits": [
+  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -9.3%.",
+  "new_buys": [
     {
-      "type": "win",
-      "name": "현대차",
-      "slug": "hyundai-motor",
-      "market": "코스피",
-      "return_pct": 2.33,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    },
-    {
-      "type": "win",
-      "name": "웹젠",
+      "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "return_pct": 10.02,
-      "hold_days": 44,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+      "entry_to_current_pct": -0.35,
+      "weight_pct": 16,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "weekly_losses": [
-    {
-      "name": "SOOP",
-      "slug": "",
-      "return_pct": -13.12,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    }
-  ],
+  "exits": [],
+  "weekly_losses": [],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
       "weight_pct": 18
+    },
+    {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 16
     },
     {
       "name": "ACE KRX금현물",
@@ -67,10 +57,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-06-29",
-      "cumulative_return": -2.44
-    },
     {
       "date": "2026-06-30",
       "cumulative_return": -3.3
@@ -186,6 +172,10 @@
     {
       "date": "2026-08-07",
       "cumulative_return": -9.48
+    },
+    {
+      "date": "2026-08-10",
+      "cumulative_return": -9.34
     }
   ]
 }
