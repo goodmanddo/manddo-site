@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T16:00:06",
+  "generated_at": "2026-08-11T16:00:06",
   "count": 3,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -12,19 +12,19 @@
       "note": "자동등록 2026-08-08 (출처 ZDNet Korea / 뉴스핌 / 헤럴드경제 / 나무위키 (2026-08-07 쇼케이스 공식 발표))",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 32900,
-      "dday": 16,
+      "price": 33950,
+      "dday": 15,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 29.0,
-          "excess": 20.2
+          "ret": 33.1,
+          "excess": 24.3
         },
         "d30": {
           "status": "done",
-          "ret": 21.4,
-          "excess": 7.3
+          "ret": 25.3,
+          "excess": 11.2
         },
         "d7": {
           "status": "pending"
@@ -41,8 +41,8 @@
       "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 243500,
-      "dday": 51,
+      "price": 255500,
+      "dday": 50,
       "launched": false,
       "milestones": {
         "d40": {
@@ -66,8 +66,8 @@
       "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 8360,
-      "dday": 66,
+      "price": 8720,
+      "dday": 65,
       "launched": false,
       "milestones": {
         "d40": {
