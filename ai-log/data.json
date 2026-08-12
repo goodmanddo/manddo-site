@@ -1,24 +1,33 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "start_date": "2026-05-03",
-  "cumulative_return": -9.14,
-  "week_return": 0.59,
-  "day_return": 0.22,
+  "cumulative_return": -7.62,
+  "week_return": 1.03,
+  "day_return": 1.67,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 54,
-  "ai_commentary": "오늘은 SK하이닉스 등 신규 편입. 시작 이후 누적 -9.1%.",
+  "ai_commentary": "오늘은 하나머티리얼즈, SK하이닉스 등 신규 편입. 시작 이후 누적 -7.6%.",
   "new_buys": [
+    {
+      "name": "하나머티리얼즈",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.94,
+      "weight_pct": 6,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.0,
+      "entry_to_current_pct": 5.54,
       "weight_pct": 16,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
@@ -29,7 +38,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 20
+      "weight_pct": 21
     },
     {
       "name": "SK하이닉스",
@@ -50,6 +59,12 @@
       "weight_pct": 7
     },
     {
+      "name": "하나머티리얼즈",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 6
+    },
+    {
       "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
@@ -57,10 +72,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-01",
-      "cumulative_return": -3.13
-    },
     {
       "date": "2026-07-02",
       "cumulative_return": -4.36
@@ -176,6 +187,10 @@
     {
       "date": "2026-08-11",
       "cumulative_return": -9.14
+    },
+    {
+      "date": "2026-08-12",
+      "cumulative_return": -7.62
     }
   ]
 }
