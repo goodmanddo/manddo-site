@@ -1,38 +1,73 @@
 {
-  "date": "2026-08-12",
+  "date": "2026-08-13",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.62,
-  "week_return": 1.03,
-  "day_return": 1.67,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -6.36,
+  "week_return": 3.14,
+  "day_return": 1.37,
+  "today_realized_avg": -6.41,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
+  "today_loss_count": 1,
   "win_rate": 44,
-  "total_trades": 54,
-  "ai_commentary": "오늘은 하나머티리얼즈, SK하이닉스 등 신규 편입. 시작 이후 누적 -7.6%.",
+  "total_trades": 55,
+  "ai_commentary": "오늘은 삼성전자, 한국가스공사, 이엔에프테크놀로지 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -6.4%.",
   "new_buys": [
     {
-      "name": "하나머티리얼즈",
+      "name": "삼성전자",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.94,
-      "weight_pct": 6,
+      "entry_to_current_pct": -0.09,
+      "weight_pct": 3,
       "hold_days": 0,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "한국가스공사",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -1.1,
+      "weight_pct": 7,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
+    {
+      "name": "이엔에프테크놀로지",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.75,
+      "weight_pct": 4,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 5.54,
-      "weight_pct": 16,
-      "hold_days": 2,
+      "entry_to_current_pct": 11.79,
+      "weight_pct": 17,
+      "hold_days": 3,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "하나머티리얼즈",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -6.41,
+      "hold_days": 1,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "하나머티리얼즈",
+      "slug": "",
+      "return_pct": -6.41,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
   "holdings": [
     {
       "name": "KODEX 200",
@@ -44,7 +79,13 @@
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 16
+      "weight_pct": 17
+    },
+    {
+      "name": "한국가스공사",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 7
     },
     {
       "name": "ACE KRX금현물",
@@ -59,23 +100,25 @@
       "weight_pct": 7
     },
     {
-      "name": "하나머티리얼즈",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 6
-    },
-    {
       "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
+    },
+    {
+      "name": "이엔에프테크놀로지",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
+    {
+      "name": "삼성전자",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-02",
-      "cumulative_return": -4.36
-    },
     {
       "date": "2026-07-03",
       "cumulative_return": -3.72
@@ -191,6 +234,10 @@
     {
       "date": "2026-08-12",
       "cumulative_return": -7.62
+    },
+    {
+      "date": "2026-08-13",
+      "cumulative_return": -6.36
     }
   ]
 }
