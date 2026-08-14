@@ -1,67 +1,56 @@
 {
   "last_holdings": {
-    "000660": {
-      "name": "SK하이닉스",
-      "qty": 2,
-      "avg_price": 1425000,
-      "current_price": 1593000,
-      "opened_at": "2026-08-10"
+    "005830": {
+      "name": "DB손해보험",
+      "qty": 5,
+      "avg_price": 176600,
+      "current_price": 176800,
+      "opened_at": "2026-08-14"
     },
     "005930": {
       "name": "삼성전자",
       "qty": 2,
       "avg_price": 268250,
-      "current_price": 268000,
+      "current_price": 274500,
       "opened_at": "2026-08-13"
     },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 35900,
+      "current_price": 36600,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 37,
       "avg_price": 115753,
-      "current_price": 107270,
+      "current_price": 110060,
       "opened_at": "2026-06-09"
-    },
-    "102710": {
-      "name": "이엔에프테크놀로지",
-      "qty": 14,
-      "avg_price": 51992,
-      "current_price": 51600,
-      "opened_at": "2026-08-13"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 39,
       "avg_price": 27877,
-      "current_price": 27280,
+      "current_price": 27410,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 44,
       "avg_price": 27686,
-      "current_price": 28035,
+      "current_price": 27625,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 25,
       "avg_price": 53339,
-      "current_price": 49225,
+      "current_price": 49215,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-05-25",
-      "total_eval": 19694931
-    },
     {
       "date": "2026-05-26",
       "total_eval": 19663816
@@ -297,6 +286,10 @@
     {
       "date": "2026-08-13",
       "total_eval": 18728988
+    },
+    {
+      "date": "2026-08-14",
+      "total_eval": 18919971
     }
   ],
   "completed_trades": [
@@ -724,6 +717,22 @@
       "code": "166090",
       "return_pct": -6.41,
       "date": "2026-08-13",
+      "is_win": false,
+      "hold_days": 1
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "return_pct": 15.3,
+      "date": "2026-08-14",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "이엔에프테크놀로지",
+      "code": "102710",
+      "return_pct": -5.27,
+      "date": "2026-08-14",
       "is_win": false,
       "hold_days": 1
     }
