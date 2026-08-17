@@ -158,6 +158,11 @@
     </div>
     <div style="font-size:11px;color:#9ca3af;margin-top:12px;line-height:1.6">⚠ 누적은 주간 수익률 단순 합산(참고용)이며, 복리·실현손익과 다릅니다. 표본이 적어 운·실력 구분엔 부족합니다. 특정 종목 추천이 아닙니다.</div>
   </div>
+  <div id="wp-etf" style="display:none;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px 20px;margin-bottom:16px">
+    <div style="font-size:15px;font-weight:800;color:#111827;margin-bottom:4px">🧪 AI ETF 매수 수익률 <span style="font-size:12px;font-weight:600;color:#8b95a1">(실전 병행)</span></div>
+    <div style="font-size:12px;color:#8b95a1;margin-bottom:14px">AI 픽을 <b>개별 종목(250만)</b>과 그 <b>섹터 ETF(200만)</b>로 나란히 실제 매매. "종목 고르기가 나은가, 섹터만 맞히면 되나"를 실전으로 비교. <a href="/learn/ai-pick-etf.html" style="color:#1B64DA">과거 백테스트 →</a></div>
+    <div id="wp-etf-body"><div style="color:#94a3b8;font-size:13px">불러오는 중…</div></div>
+  </div>
   <div class="wp-rules">
     <b>🎮 게임 규칙</b>
     <ul>
@@ -566,6 +571,29 @@
           document.getElementById('wp-cumul-n').textContent = '(시즌' + (h.season||1) + ' · ' + R.length + '라운드)';
           document.getElementById('wp-cumul').style.display = 'block';
         })();
+        // AI 종목 vs AI 섹터 ETF (실전 병행)
+        fetch('/tools/data/etf_track.json?t=' + Date.now()).then(r => r.json()).then(t => {
+          const paired = (t.rounds || []).filter(r => r.etf_ret != null);
+          const box = document.getElementById('wp-etf'), body = document.getElementById('wp-etf-body');
+          const f1 = v => v == null ? '-' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+          const f2 = v => v == null ? '-' : (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+          const col = v => v >= 0 ? '#d33' : '#258';
+          if (!paired.length) {
+            body.innerHTML = '<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:13px 15px;font-size:13px;color:#1e3a8a">🔜 실전 병행 매매는 <b>2026-08-18(화)</b> 시작 — 첫 결과는 <b>8/22</b>에 여기 표시됩니다.</div>';
+          } else {
+            const s = t.paired_stock, e = t.paired_etf;
+            let html = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">'
+              + '<div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:11px;padding:13px"><div style="font-size:12px;font-weight:700;color:#9a3412;margin-bottom:5px">🎯 종목 트랙</div><div style="font-size:21px;font-weight:800;font-family:monospace;color:' + col(s.cum) + '">' + f1(s.cum) + '</div><div style="font-size:11.5px;color:#78716c">승률 ' + s.winrate + '% · ' + s.n + '주</div></div>'
+              + '<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:11px;padding:13px"><div style="font-size:12px;font-weight:700;color:#1e40af;margin-bottom:5px">📊 섹터 ETF 트랙</div><div style="font-size:21px;font-weight:800;font-family:monospace;color:' + col(e.cum) + '">' + f1(e.cum) + '</div><div style="font-size:11.5px;color:#64748b">승률 ' + e.winrate + '% · ' + e.n + '주</div></div></div>';
+            html += '<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12.5px;background:#fff"><thead><tr style="background:#f5f6fa;text-align:left"><th style="padding:8px 10px">주</th><th style="padding:8px 10px">종목</th><th style="padding:8px 10px;text-align:right">종목</th><th style="padding:8px 10px">ETF</th><th style="padding:8px 10px;text-align:right">ETF</th></tr></thead><tbody>';
+            paired.slice().reverse().forEach(r => {
+              html += '<tr style="border-top:1px solid #eee"><td style="padding:8px 10px;color:#666;white-space:nowrap">' + (r.buy_date || '').slice(5) + '</td><td style="padding:8px 10px"><b>' + r.stock_name + '</b></td><td style="padding:8px 10px;text-align:right;color:' + col(r.stock_ret) + '">' + f2(r.stock_ret) + '</td><td style="padding:8px 10px">' + (r.etf_name || '') + '</td><td style="padding:8px 10px;text-align:right;color:' + col(r.etf_ret) + '">' + f2(r.etf_ret) + '</td></tr>';
+            });
+            html += '</tbody></table></div>';
+            body.innerHTML = html;
+          }
+          box.style.display = 'block';
+        }).catch(() => {});
         const rows = [...h.rounds].reverse();  // 최신 라운드 먼저
         const fmt = (v) => v == null ? '<span style="color:#aaa">–</span>'
           : (v >= 0 ? `<span style="color:#d33;font-weight:600">+${v.toFixed(2)}%</span>`
