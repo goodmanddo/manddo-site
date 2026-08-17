@@ -1,0 +1,81 @@
+{
+  "generated_at": "2026-08-17T17:15:57",
+  "n_rounds": 8,
+  "n_paired": 0,
+  "paired_stock": null,
+  "paired_etf": null,
+  "rounds": [
+    {
+      "buy_date": "2026-06-22",
+      "sell_date": "2026-06-26",
+      "round": 8,
+      "stock_name": "SK하이닉스",
+      "stock_ret": -4.73,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-06-29",
+      "sell_date": "2026-07-03",
+      "round": 9,
+      "stock_name": "유한양행",
+      "stock_ret": 3.38,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-07-06",
+      "sell_date": "2026-07-10",
+      "round": 10,
+      "stock_name": "유나이티드제약",
+      "stock_ret": 1.48,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-07-13",
+      "sell_date": "2026-07-20",
+      "round": 11,
+      "stock_name": "SK하이닉스",
+      "stock_ret": -17.19,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-07-20",
+      "sell_date": "2026-07-24",
+      "round": 12,
+      "stock_name": "S-Oil",
+      "stock_ret": 8.44,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-07-27",
+      "sell_date": "2026-07-31",
+      "round": 13,
+      "stock_name": "한국전력",
+      "stock_ret": -1.96,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-08-03",
+      "sell_date": "2026-08-07",
+      "round": 14,
+      "stock_name": "현대차",
+      "stock_ret": 2.6,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-08-10",
+      "sell_date": "2026-08-14",
+      "round": 15,
+      "stock_name": "SK하이닉스",
+      "stock_ret": 15.54,
+      "etf_name": null,
+      "etf_ret": null
+    }
+  ]
+}
