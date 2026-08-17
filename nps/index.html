@@ -19,10 +19,13 @@
   .nps-hero h1{font-size:26px;margin:0 0 8px;font-weight:800;letter-spacing:-0.02em}
   .nps-hero p{font-size:14px;line-height:1.6;margin:0;max-width:680px}
   .nps-stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-  .nps-stat{flex:1;min-width:120px;background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px 16px}
+  .nps-stat{flex:1;min-width:120px;background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:14px 16px;cursor:pointer;transition:all .12s;user-select:none}
+  .nps-stat:hover{border-color:#94a3b8;transform:translateY(-1px)}
+  .nps-stat.active{border-color:#0b6b45;box-shadow:0 0 0 2px rgba(11,107,69,.15);background:#f6fdf9}
   .nps-stat .k{font-size:12px;color:#4b5563;margin-bottom:4px;font-weight:600}
   .nps-stat .v{font-size:20px;font-weight:800;color:#111827}
   .nps-stat .v.up{color:#dc2626}.nps-stat .v.down{color:#1B64DA}.nps-stat .v.new{color:#0b6b45}
+  .nps-stat .hint{font-size:10.5px;color:#9ca3af;margin-top:3px;font-weight:600}
   .nps-ctrl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
   .nps-ctrl input{flex:1;min-width:180px;padding:11px 14px;border:1px solid #cbd5e1;border-radius:10px;font-size:14px;color:#111827}
   .nps-ctrl select{padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:13.5px;background:#fff;color:#111827}
@@ -78,10 +81,10 @@
   </div>
 
   <div class="nps-stats">
-    <div class="nps-stat"><div class="k">공시 종목</div><div class="v" id="s-count">—</div></div>
-    <div class="nps-stat"><div class="k">🆕 신규 편입</div><div class="v new" id="s-new">—</div></div>
-    <div class="nps-stat"><div class="k">지분 늘림 ▲</div><div class="v up" id="s-up">—</div></div>
-    <div class="nps-stat"><div class="k">지분 줄임 ▼</div><div class="v down" id="s-down">—</div></div>
+    <div class="nps-stat active" data-filter="all"><div class="k">공시 종목</div><div class="v" id="s-count">—</div><div class="hint">전체 보기</div></div>
+    <div class="nps-stat" data-filter="new"><div class="k">🆕 신규 편입</div><div class="v new" id="s-new">—</div><div class="hint">눌러서 보기</div></div>
+    <div class="nps-stat" data-filter="up"><div class="k">지분 늘림 ▲</div><div class="v up" id="s-up">—</div><div class="hint">눌러서 보기</div></div>
+    <div class="nps-stat" data-filter="down"><div class="k">지분 줄임 ▼</div><div class="v down" id="s-down">—</div><div class="hint">눌러서 보기</div></div>
   </div>
 
   <div class="nps-ctrl">
@@ -194,6 +197,23 @@
     document.getElementById('s-up').textContent=DATA.filter(function(r){return num(r.stkrt_irds)>0;}).length;
     document.getElementById('s-down').textContent=DATA.filter(function(r){return num(r.stkrt_irds)<0;}).length;
     ['q','sortby','filt'].forEach(function(id){document.getElementById(id).addEventListener('input',render);});
+    // 통계 카드 클릭 → 해당 필터 적용 + 활성 표시
+    var cards=document.querySelectorAll('.nps-stat[data-filter]');
+    cards.forEach(function(card){
+      card.addEventListener('click',function(){
+        var f=card.getAttribute('data-filter');
+        document.getElementById('filt').value=f;
+        cards.forEach(function(c){c.classList.remove('active');});
+        card.classList.add('active');
+        render();
+        document.querySelector('.nps-table').scrollIntoView({behavior:'smooth',block:'nearest'});
+      });
+    });
+    // select로 필터 바꿔도 카드 활성 동기화
+    document.getElementById('filt').addEventListener('change',function(){
+      var v=this.value;
+      cards.forEach(function(c){c.classList.toggle('active',c.getAttribute('data-filter')===v);});
+    });
     render();
   }).catch(function(){
     document.getElementById('rows').innerHTML='<tr><td colspan="7" style="padding:24px;text-align:center;color:#94a3b8">데이터를 불러오지 못했습니다.</td></tr>';
