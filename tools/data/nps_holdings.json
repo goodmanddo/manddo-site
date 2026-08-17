@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-16T19:32:54",
+  "generated_at": "2026-08-17T19:33:09",
   "window_days": 60,
-  "count": 156,
+  "count": 154,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -740,21 +740,6 @@
       "day_change": 2.83
     },
     {
-      "date": "20260617",
-      "corp_name": "KB금융",
-      "stock_code": "105560",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260617000314",
-      "stkrt": "9.33",
-      "stkrt_irds": "0.39",
-      "stkrt_asof": "2026-06-17",
-      "first_report": "2026-02-02",
-      "is_new": false,
-      "price": 168500,
-      "day_change": 0.24
-    },
-    {
       "date": "20260731",
       "corp_name": "케이씨씨",
       "stock_code": "002380",
@@ -1038,21 +1023,6 @@
       "is_new": false,
       "price": 516000,
       "day_change": 5.95
-    },
-    {
-      "date": "20260617",
-      "corp_name": "NH투자증권",
-      "stock_code": "005940",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260617000311",
-      "stkrt": "7.94",
-      "stkrt_irds": "-0.42",
-      "stkrt_asof": "2026-06-17",
-      "first_report": "2025-01-03",
-      "is_new": false,
-      "price": 28750,
-      "day_change": 1.41
     },
     {
       "date": "20260810",
