@@ -11,64 +11,53 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;background:#f5f5f0;color:#2c2c2a;padding:16px;font-size:14px}
 .wrap{max-width:740px;margin:0 auto}
-.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7;color:#2c2c2a}
+h1{font-size:18px;font-weight:800;margin-bottom:4px}
+h2{font-size:15px;font-weight:700;margin-bottom:2px}
+.sec{font-size:13px;font-weight:700;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid #d3d1c7;color:#555}
 .card{background:#fff;border:1px solid #d3d1c7;border-radius:10px;padding:12px 14px;margin-bottom:8px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
 .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
-.met{background:#fff;border:1px solid #d3d1c7;border-radius:8px;padding:10px 12px;text-align:center}
-.ml{font-size:11px;color:#888780;margin-bottom:3px}
-.mv{font-size:18px;font-weight:700;color:#2c2c2a}
-.ms{font-size:11px;color:#888780;margin-top:2px}
+.met{background:#fff;border:1px solid #d3d1c7;border-radius:8px;padding:10px 12px}
+.ml{font-size:11px;color:#888;margin-bottom:3px}
+.mv{font-size:16px;font-weight:800;color:#2c2c2a}
+.ms{font-size:11px;color:#888;margin-top:2px}
 .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;margin:2px 2px}
 .t-r{background:#fde8e8;color:#A32D2D}
-.t-g{background:#e4f5ed;color:#1D9E75}
-.t-b{background:#e8f0fd;color:#1a4fb5}
-.t-a{background:#fef3e2;color:#b96c0a}
-.t-navy{background:#e6eaf5;color:#1e2f6b}
-.t-teal{background:#e0f5f4;color:#0d7c78}
-.t-p{background:#f3e8fd;color:#6b21a8}
-.zone{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;padding:8px 10px;background:#f9f9f7;border-radius:7px;border-left:3px solid #d3d1c7}
-.zone.z-g{border-left-color:#1D9E75}
-.zone.z-r{border-left-color:#A32D2D}
-.zone.z-a{border-left-color:#EF9F27}
-.zone.z-b{border-left-color:#1a4fb5}
-.zone .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
-.dot-g{background:#1D9E75}
-.dot-r{background:#A32D2D}
-.dot-a{background:#EF9F27}
-.dot-b{background:#1a4fb5}
+.t-g{background:#e6f4ed;color:#1D9E75}
+.t-b{background:#e8eef8;color:#2255aa}
+.t-a{background:#fef3e2;color:#c07800}
+.t-navy{background:#e6eaf4;color:#1a2a6e}
+.t-teal{background:#e0f5f5;color:#0e7b7b}
+.t-p{background:#f3e8fa;color:#7a22aa}
+.zone{display:flex;align-items:flex-start;gap:8px;margin-bottom:7px;padding:8px 10px;background:#f9f9f7;border-radius:7px;border:1px solid #e8e6de}
+.zone .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:3px}
 .zone .zt{font-size:12px;font-weight:700;margin-bottom:2px}
 .zone .zd{font-size:12px;color:#555;line-height:1.5}
-.row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid #f0ede6;font-size:12px}
+.row{display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:1px solid #f0ede6;font-size:12px}
 .row:last-child{border-bottom:none}
-.rr{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px}
-.rn{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#2c2c2a;color:#fff;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
-.rd{font-size:12px;line-height:1.6;color:#3a3a38}
-.info-box{background:#e4f5ed;border:1px solid #a8ddc3;border-radius:8px;padding:11px 13px;margin-bottom:8px;font-size:12px;line-height:1.6}
-.warn-box{background:#fef3e2;border:1px solid #f5c97a;border-radius:8px;padding:11px 13px;margin-bottom:8px;font-size:12px;line-height:1.6}
-.danger-box{background:#fde8e8;border:1px solid #e8a8a8;border-radius:8px;padding:11px 13px;margin-bottom:8px;font-size:12px;line-height:1.6}
-.navy-box{background:#e6eaf5;border:1px solid #b3bde8;border-radius:10px;padding:13px 15px;margin-bottom:10px}
-.score-wrap{background:#ece9e1;border-radius:6px;height:10px;overflow:hidden;margin-top:5px}
-.score-fill{height:10px;border-radius:6px}
-.strategy-box{background:#f9f9f7;border:1px solid #d3d1c7;border-radius:8px;padding:10px 12px;text-align:center}
-.sp{font-size:18px;font-weight:700;margin:4px 0}
-.sp-l{font-size:11px;color:#888780}
-.chart-area{background:#fff;border:1px solid #d3d1c7;border-radius:8px;overflow:hidden;margin-bottom:8px}
-h1{font-size:19px;font-weight:700;margin-bottom:3px}
-h2{font-size:14px;font-weight:700;margin-bottom:6px}
-h3{font-size:13px;font-weight:700;margin-bottom:5px;color:#444}
-.sub{font-size:12px;color:#888780}
-.highlight{color:#A32D2D;font-weight:700}
-.hl-g{color:#1D9E75;font-weight:700}
-.hl-b{color:#1a4fb5;font-weight:700}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
-.col-head{font-size:12px;font-weight:700;margin-bottom:5px}
-.col-item{font-size:12px;color:#3a3a38;padding:2px 0;border-bottom:1px dashed #e8e5de;line-height:1.5}
-.bar-track{background:#ece9e1;border-radius:10px;height:14px;position:relative;margin:8px 0}
-.bar-fill{height:14px;border-radius:10px;background:linear-gradient(90deg,#1D9E75 0%,#EF9F27 60%,#A32D2D 100%)}
-.bar-pin{position:absolute;top:-3px;width:4px;height:20px;background:#2c2c2a;border-radius:2px}
-.phase-badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:700}
+.rr,.rn{display:flex;align-items:flex-start;gap:8px;margin-bottom:7px}
+.rr .nb,.rn .nb{background:#A32D2D;color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0;margin-top:1px}
+.rn .nb{background:#2255aa}
+.rr .rd,.rn .rd{font-size:12px;color:#444;line-height:1.6}
+.info-box{background:#e6f4ed;border:1px solid #a8d8bc;border-radius:8px;padding:12px 14px;margin-bottom:8px}
+.warn-box{background:#fef3e2;border:1px solid #f5d080;border-radius:8px;padding:12px 14px;margin-bottom:8px}
+.danger-box{background:#fde8e8;border:1px solid #f0b0b0;border-radius:8px;padding:12px 14px;margin-bottom:8px}
+.navy-box{background:#e6eaf4;border:1px solid #b0bce0;border-radius:10px;padding:14px 16px;margin-bottom:8px}
+.navy-box h2{color:#1a2a6e}
+.score-wrap{background:#e8e6de;border-radius:20px;height:14px;overflow:hidden;margin:6px 0 2px}
+.score-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,#1D9E75,#55cc99)}
+.strategy-box{border:1px solid #d3d1c7;border-radius:8px;padding:10px 12px;background:#fafaf8;text-align:center}
+.strategy-box .sp{font-size:17px;font-weight:800;margin:4px 0}
+.strategy-box .sl{font-size:11px;color:#888;margin-bottom:2px}
+.strategy-box .sd{font-size:11px;color:#555}
+.chart-area{width:100%;background:#fff;border:1px solid #d3d1c7;border-radius:8px;overflow:hidden;margin-bottom:8px}
+.hd{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}
+.badge{font-size:11px;background:#e6eaf4;color:#1a2a6e;padding:2px 8px;border-radius:12px;font-weight:700}
+ul.pts{padding-left:18px;margin:6px 0}
+ul.pts li{font-size:12px;color:#444;line-height:1.7}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.col-t{font-size:12px;font-weight:700;margin-bottom:4px;color:#333}
 </style>
 </head>
 <body>
@@ -78,41 +67,41 @@ h3{font-size:13px;font-weight:700;margin-bottom:5px;color:#444}
 <div class="wrap">
 
 <!-- 헤더 -->
-<div style="padding:8px 0 12px">
+<div style="margin-bottom:14px">
   <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-    <div>
-      <h1>삼성전자 <span style="font-size:14px;color:#888780;font-weight:400">005930</span></h1>
-      <div class="sub">세력·차트 종합 분석 | 기준일: 2025년 최신</div>
-    </div>
-    <div style="margin-left:auto;text-align:right">
-      <div style="font-size:22px;font-weight:700;color:#A32D2D">274,500<span style="font-size:13px">원</span></div>
-      <div style="font-size:12px;color:#1D9E75">▲ 반등 국면 진입 중</div>
-    </div>
+    <h1>삼성전자 <span style="font-size:13px;color:#888;font-weight:400">005930</span></h1>
+    <span class="tag t-navy">KOSPI 대형주</span>
+    <span class="tag t-a">2025.05 기준</span>
   </div>
+  <div style="font-size:12px;color:#888;margin-top:4px">세력·차트 종합 분석 리포트 | 기술적 분석 가이드 기반</div>
 </div>
 
-<!-- ① NAVY-BOX 종합 요약 -->
+<!-- ① 종합 박스 -->
 <div class="navy-box">
-  <div style="font-size:13px;font-weight:700;color:#1e2f6b;margin-bottom:6px">🔍 핵심 한 줄 요약</div>
-  <div style="font-size:13px;line-height:1.7;margin-bottom:10px">
-    <span style="font-weight:700">52주 저점(67,500)에서 +306% 급반등 후 374,500 고점을 찍고 현재 38.2% 피보나치 지지권(257,226)을 상향 돌파 — 단기 MA5·MA20 정배열 전환 + 외국인/기관 동반 순매수로 <span class="highlight">중기 반등 2파 진행 여부</span>가 핵심 트리거.</span>
+  <h2>📌 핵심 요약</h2>
+  <div style="font-size:13px;color:#1a2a6e;font-weight:700;margin:8px 0 4px;line-height:1.6">
+    52주 저점(67,500원)에서 <span style="color:#A32D2D">분할 분할바닥 이후 반등 초입</span> — 현재가 274,500원은 52주 고가 374,500원 대비 큰 낙폭을 회복 중이며, MA5(253,500)·MA20(244,475)을 상회하고 MACD 데드크로스에서 골든 수렴 진행 중. 60일선(290,500) 돌파 여부가 핵심 트리거.
   </div>
-  <div class="two-col">
+  <div class="two-col" style="margin-top:10px">
     <div>
-      <div class="col-head" style="color:#1D9E75">✅ 구조적 강점</div>
-      <div class="col-item">· MA5(253,500)·MA20(244,475) 단기 정배열 전환</div>
-      <div class="col-item">· 외국인 5일 순매수 +838만주, 기관 +544만주 동반</div>
-      <div class="col-item">· 영업이익률 48.9% — 반도체 슈퍼사이클 수혜</div>
-      <div class="col-item">· RSI 55.3 — 과열 아닌 상승 여력 구간</div>
-      <div class="col-item">· MACD 음수→양수 수렴 진행 (-6,461 vs 시그널 -12,853)</div>
+      <div class="col-t" style="color:#1D9E75">✅ 구조적 강점</div>
+      <ul class="pts">
+        <li>MA5·MA20 정배열 진행, 현재가 위에 위치</li>
+        <li>MACD 시그널 수렴(−6,462 vs −12,853) 상승 다이버전스</li>
+        <li>RSI 55.3 — 50선 돌파 후 추세 전환 신호</li>
+        <li>기관 5일 순매수 +543만주, 외인 +838만주 동반 유입</li>
+        <li>영업이익률 48.9%, PBR 3.82 펀더멘탈 견고</li>
+      </ul>
     </div>
     <div>
-      <div class="col-head" style="color:#A32D2D">⚠️ 핵심 리스크</div>
-      <div class="col-item">· MA60(290,500)이 강한 저항 — 정배열 전환 미완성</div>
-      <div class="col-item">· 52주 고가 374,500 대비 현재 -26.7% 역배열 구간</div>
-      <div class="col-item">· 현 거래량(21.7M) 20일 평균(29.9M) 대비 -27% 감소</div>
-      <div class="col-item">· HBM 경쟁 심화 — SK하이닉스 대비 기술 격차 우려</div>
-      <div class="col-item">· 274,500 돌파 후 볼린저 상단(283,117) 저항 임박</div>
+      <div class="col-t" style="color:#A32D2D">⚠️ 구조적 리스크</div>
+      <ul class="pts">
+        <li>MA60(290,500) 역배열 — 핵심 저항 미돌파</li>
+        <li>52주 고가 대비 현재가 여전히 26.7% 하단</li>
+        <li>최근 20일 거래량(2,167만) 평균 대비 27.5% 미달</li>
+        <li>피보나치 38.2%(257,226) 부근 저항권 진입</li>
+        <li>글로벌 반도체 업황 둔화·환율 변수 상존</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -122,40 +111,64 @@ h3{font-size:13px;font-weight:700;margin-bottom:5px;color:#444}
 <div class="g3" style="margin-bottom:8px">
   <div class="met">
     <div class="ml">현재가</div>
-    <div class="mv" style="color:#A32D2D">274,500</div>
-    <div class="ms">원</div>
+    <div class="mv" style="color:#A32D2D">274,500원</div>
+    <div class="ms">전일대비 +6,500원 (+2.42%)</div>
   </div>
   <div class="met">
     <div class="ml">52주 범위</div>
-    <div class="mv" style="font-size:13px">67,500 ~ 374,500</div>
-    <div class="ms">변동폭 307,000원</div>
+    <div class="mv">67,500 ~ 374,500</div>
+    <div class="ms">범위폭 307,000원</div>
   </div>
   <div class="met">
     <div class="ml">52주 위치</div>
     <div class="mv" style="color:#EF9F27">67.4%</div>
-    <div class="ms">상단 32.6% 여유</div>
+    <div class="ms">중상단권 (하단 탈출 완료)</div>
   </div>
 </div>
-
 <div class="card">
-  <div style="font-size:12px;color:#888780;margin-bottom:6px">52주 위치 바 (저가 → 현재 → 고가)</div>
-  <svg viewBox="0 0 640 44" width="100%" style="display:block">
+  <div style="font-size:11px;color:#888;margin-bottom:6px">52주 가격 위치 바</div>
+  <svg viewBox="0 0 660 40" width="100%" style="display:block">
     <defs>
-      <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#1D9E75"/>
-        <stop offset="60%" stop-color="#EF9F27"/>
-        <stop offset="100%" stop-color="#A32D2D"/>
+      <linearGradient id="bg52" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#0C447C;stop-opacity:0.18"/>
+        <stop offset="50%" style="stop-color:#EF9F27;stop-opacity:0.18"/>
+        <stop offset="100%" style="stop-color:#A32D2D;stop-opacity:0.18"/>
       </linearGradient>
     </defs>
-    <rect x="10" y="18" width="620" height="10" rx="5" fill="#ece9e1"/>
-    <rect x="10" y="18" width="417" height="10" rx="5" fill="url(#barGrad)"/>
-    <!-- 현재가 핀: 67.4% = 10+620*0.674 = 427.9 -->
-    <rect x="425" y="13" width="5" height="20" rx="2" fill="#2c2c2a"/>
-    <text x="10" y="40" font-size="10" fill="#888780">67,500</text>
-    <text x="427" y="12" font-size="10" fill="#2c2c2a" text-anchor="middle">274,500</text>
-    <text x="620" y="40" font-size="10" fill="#888780" text-anchor="end">374,500</text>
-    <!-- 볼린저 상단 위치: (283117-67500)/(374500-67500) = 215617/307000 = 70.2% => 10+620*0.702=445 -->
-    <line x1="445" y1="15" x2="445" y2="30" stroke="#EF9F27" stroke-width="1.5" stroke-dasharray="3 2"/>
-    <text x="445" y="43" font-size="9" fill="#EF9F27" text-anchor="middle">BB상단</text>
-    <!-- MA60 위치: (290500-67500)/307000=72.7% => 10+620*0.727=460.7 -->
-    <line
+    <rect x="20" y="14" width="620" height="12" rx="6" fill="url(#bg52)" stroke="#d3d1c7" stroke-width="1"/>
+    <!-- 현재가 마커: 67.4% -->
+    <rect x="437" y="10" width="3" height="20" rx="2" fill="#A32D2D"/>
+    <text x="440" y="9" font-size="10" fill="#A32D2D" font-weight="700">274,500</text>
+    <!-- 피보나치 38.2% 마커 -->
+    <rect x="310" y="12" width="2" height="16" rx="1" fill="#EF9F27" opacity="0.7"/>
+    <text x="270" y="36" font-size="9" fill="#EF9F27">Fib 38.2% 257,226</text>
+    <!-- 볼린저 상단 -->
+    <rect x="466" y="12" width="2" height="16" rx="1" fill="#2255aa" opacity="0.6"/>
+    <text x="468" y="36" font-size="9" fill="#2255aa">BB상단 283,117</text>
+    <!-- MA60 -->
+    <rect x="504" y="12" width="2" height="16" rx="1" fill="#888780" opacity="0.8"/>
+    <text x="490" y="9" font-size="9" fill="#888780">MA60 290,500</text>
+    <!-- 저가 -->
+    <text x="18" y="36" font-size="10" fill="#0C447C" font-weight="700">67,500</text>
+    <!-- 고가 -->
+    <text x="590" y="36" font-size="10" fill="#A32D2D" font-weight="700">374,500</text>
+  </svg>
+  <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:4px">
+    <span class="tag t-g">RSI 55.3 — 50선 돌파</span>
+    <span class="tag t-a">MACD 수렴 중</span>
+    <span class="tag t-b">볼린저 중단 위</span>
+    <span class="tag t-navy">MA5·MA20 정배열</span>
+    <span class="tag t-r">MA60 저항 미돌파</span>
+    <span class="tag t-teal">외인+기관 순매수</span>
+  </div>
+</div>
+<div class="g3">
+  <div class="met">
+    <div class="ml">MA5 / MA20</div>
+    <div class="mv" style="font-size:14px;color:#1D9E75">253,500 / 244,475</div>
+    <div class="ms">현재가 양선 위 — 단기 정배열</div>
+  </div>
+  <div class="met">
+    <div class="ml">MA60 / MA120</div>
+    <div class="mv" style="font-size:14px;color:#A32D2D">290,500 / 251,621</div>
+    <div class="
