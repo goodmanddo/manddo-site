@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI가 종목 대신 섹터 ETF를 샀다면? — 수익률 검증 | 만또</title>
+<meta name="description" content="휴먼 vs AI의 AI 픽은 '전주 미국 섹터 강세 → 한국 종목'. 그럼 개별종목 대신 그 섹터 ETF를 샀다면 어땠을까? 실제 매매를 섹터 ETF로 대체해 수익률·승률·세금까지 비교.">
+<meta name="keywords" content="섹터 ETF,AI 종목추천,ETF 투자,종목 vs ETF,반도체 ETF,분산투자,증권거래세,만또">
+<meta property="og:title" content="AI가 종목 대신 섹터 ETF를 샀다면?">
+<meta property="og:description" content="개별종목 vs 섹터 ETF, 실제 AI 픽으로 비교한 수익률·리스크·세금.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://manddo.kr/learn/ai-pick-etf.html">
+<link rel="canonical" href="https://manddo.kr/learn/ai-pick-etf.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .pt-hero{background:linear-gradient(135deg,#1e40af 0%,#0b6b45 100%);border-radius:16px;padding:30px 24px;margin:20px 0 20px;color:#fff}
+  .pt-hero,.pt-hero *{color:#fff !important}
+  .pt-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+  .pt-hero h1{font-size:25px;margin:0 0 8px;font-weight:800;letter-spacing:-0.02em;line-height:1.35}
+  .pt-hero p{font-size:14px;line-height:1.6;margin:0;max-width:680px}
+  .pt-verdict{border-radius:14px;padding:20px 22px;margin-bottom:18px;background:#ecfdf5;border:1px solid #a7f3d0}
+  .pt-verdict h2{font-size:19px;margin:0 0 6px;color:#111827}
+  .pt-verdict p{font-size:14px;line-height:1.7;color:#374151;margin:0}
+  .pt-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+  @media(max-width:560px){.pt-cards{grid-template-columns:1fr}}
+  .pt-c{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:16px}
+  .pt-c.stock{border-color:#fed7aa}.pt-c.etf{border-color:#bfdbfe}
+  .pt-c .k{font-size:12.5px;color:#4b5563;font-weight:700;margin-bottom:8px}
+  .pt-c .big{font-size:24px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace}
+  .pt-c .sub{font-size:12px;color:#64748b;margin-top:4px}
+  .up{color:#dc2626}.down{color:#1B64DA}.flat{color:#64748b}
+  .pt-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #eef0f3;border-radius:12px;overflow:hidden;font-size:13px}
+  .pt-table th{background:#f1f5f9;color:#334155;font-weight:700;padding:10px 8px;text-align:left;font-size:12px;white-space:nowrap}
+  .pt-table td{padding:10px 8px;border-top:1px solid #f1f5f9;color:#374151}
+  .pt-table .num{font-family:'SF Mono',ui-monospace,monospace;font-weight:700;text-align:right;white-space:nowrap}
+  .pt-sec{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:20px 22px;margin-bottom:16px}
+  .pt-sec h2{font-size:18px;margin:0 0 10px;color:#111827}
+  .pt-sec p{font-size:14px;line-height:1.75;color:#374151;margin:0 0 10px}
+  .pt-note{font-size:12.5px;color:#64748b;line-height:1.7;margin:14px 0;padding:14px 16px;background:#f8fafc;border:1px solid #eef0f3;border-radius:10px}
+  .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
+  @media(max-width:560px){.hide-sm{display:none}}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/game-watch/">🎮 게임 신작</a>
+      <a href="/learn/" class="active">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="pt-hero">
+    <span class="badge">🔬 데이터 검증 · 종목 vs ETF</span>
+    <h1>AI가 종목 대신 '섹터 ETF'를 샀다면?</h1>
+    <p><a href="/vs/weekly-pick.html">휴먼 vs AI</a>의 AI 픽 원리는 "전주 미국에서 강했던 섹터 → 그 섹터의 한국 대표 종목"입니다(예: 미국 반도체 강세 → SK하이닉스). 그렇다면 개별 종목을 콕 집는 대신, <b>그 섹터 ETF를 통째로 샀다면</b> 어땠을까요? 실제 AI 픽 <b id="n-p">7</b>라운드를 섹터 ETF로 바꿔 계산했습니다.</p>
+  </div>
+
+  <div class="pt-verdict">
+    <h2 id="v-title">⏳ 데이터 불러오는 중…</h2>
+    <p id="v-body"></p>
+  </div>
+
+  <div class="pt-cards">
+    <div class="pt-c stock"><div class="k">🎯 개별 종목 (실제 AI 픽)</div><div class="big up" id="c-stock">—</div><div class="sub" id="c-stock-sub">누적 수익</div></div>
+    <div class="pt-c etf"><div class="k">📊 섹터 ETF로 대체</div><div class="big up" id="c-etf">—</div><div class="sub" id="c-etf-sub">누적 수익</div></div>
+  </div>
+
+  <div class="pt-sec">
+    <h2>📋 라운드별 비교 (같은 주 매수·매도)</h2>
+    <div style="overflow-x:auto">
+      <table class="pt-table">
+        <thead><tr><th>주</th><th>AI 픽 종목</th><th class="num">종목</th><th>섹터 ETF</th><th class="num">ETF</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="5" style="padding:20px;text-align:center;color:#94a3b8">불러오는 중…</td></tr></tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:#64748b;margin-top:10px">섹터는 픽 사유의 키워드로 매핑(반도체→KODEX반도체 등). 유틸리티는 대응 ETF가 없어 제외.</p>
+  </div>
+
+  <div class="pt-sec">
+    <h2>🧐 무엇을 알 수 있나</h2>
+    <p><b>① 섹터 ETF로 샀어도 수익 구간이었습니다.</b> 개별종목이 근소하게 앞섰지만(둘 다 플러스), 차이는 크지 않았습니다. AI의 강점이 "정확한 종목 찍기"보다 <b>"강한 섹터 방향 맞히기"</b>에 있다는 뜻입니다.</p>
+    <p><b>② ETF가 극단 리스크를 막아줍니다.</b> 어떤 주엔 개별주가 ETF를 크게 이겼지만, 반대로 개별주가 -17%까지 빠진 주도 있었습니다. ETF는 분산 덕에 <b>한 종목이 무너질 위험을 완화</b>합니다.</p>
+    <p><b>③ 세금은 ETF가 유리합니다.</b> 국내주식형 ETF는 <b>매도 시 증권거래세(0.18%)가 면제</b>됩니다. 개별주는 매도할 때마다 이 세금이 붙죠. 매주 사고파는 이 전략에선 ETF가 라운드마다 세금에서 앞섭니다.</p>
+  </div>
+
+  <div class="pt-sec">
+    <h2>💡 그래서?</h2>
+    <p>표본이 <b id="n-p2">7</b>라운드로 아직 매우 작아 "종목이 낫다/ETF가 낫다"를 단정할 순 없습니다. 다만 방향은 흥미롭습니다 — <b>비슷한 수익을 더 낮은 변동성과 세금으로</b> 얻을 수 있다면, 섹터 ETF가 더 실용적인 선택일 수 있습니다. 그래서 만또는 앞으로 <b>AI 픽을 개별종목과 섹터 ETF 두 갈래로 병행 매매</b>해, 어느 쪽이 실제로 나은지 계속 기록해볼 예정입니다.</p>
+  </div>
+
+  <div class="pt-note">
+    <b>방법</b> · <a href="/vs/weekly-pick.html">휴먼 vs AI</a>의 AI 픽 자동매매 기록에서, 각 라운드 개별종목 대신 그 섹터 ETF를 같은 주(월 시가~금 종가) 매매했다고 가정해 한국투자증권 <b>수정주가</b>로 계산했습니다. 수수료·세금은 미반영(본문에서 세금 방향만 설명). 표본이 작아 참고용이며, 특정 종목·ETF 추천이 아닙니다.
+  </div>
+
+  <div class="disclaimer">
+    ⚠ 본 글은 공개 시세로 검증한 개인의 기록·의견이며, 특정 종목·ETF의 매수·매도 권유가 아닙니다. 과거 데이터가 미래를 보장하지 않습니다. 투자 판단과 결과는 본인 책임입니다. · 글 <a href="/about.html" rel="author">만또</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·<a href="/privacy.html">개인정보처리방침</a>·<a href="/terms.html">이용약관</a>·<a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다 · 데이터: 한국투자증권</div>
+  </div>
+</footer>
+<script>
+(function(){
+  function f2(v){return v===null||v===undefined?'n/a':(v>0?'+':'')+v.toFixed(2)+'%';}
+  function f1(v){return v===null||v===undefined?'n/a':(v>0?'+':'')+v.toFixed(1)+'%';}
+  function cls(v){return v>0?'up':(v<0?'down':'flat');}
+  fetch('/tools/data/pick_etf_backtest.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    document.getElementById('n-p').textContent=d.n_paired;
+    document.getElementById('n-p2').textContent=d.n_paired;
+    var s=d.paired_stock, e=d.paired_etf;
+    var cs=document.getElementById('c-stock');cs.textContent=f1(s.cum);cs.className='big '+cls(s.cum);
+    document.getElementById('c-stock-sub').textContent='승률 '+s.winrate+'% · 평균 '+f2(s.mean)+' (n='+s.n+')';
+    var ce=document.getElementById('c-etf');ce.textContent=f1(e.cum);ce.className='big '+cls(e.cum);
+    document.getElementById('c-etf-sub').textContent='승률 '+e.winrate+'% · 평균 '+f2(e.mean)+' (n='+e.n+')';
+    document.getElementById('v-title').textContent='✅ 결론: 섹터 ETF로 샀어도 수익 구간이었다';
+    document.getElementById('v-body').innerHTML='실제 AI 픽 종목은 누적 <b class="'+cls(s.cum)+'">'+f1(s.cum)+'</b>, 같은 걸 섹터 ETF로 바꿨어도 <b class="'+cls(e.cum)+'">'+f1(e.cum)+'</b>로 <b>둘 다 플러스</b>였습니다. 개별종목이 근소하게 앞섰지만, ETF는 더 낮은 변동성과 세금(매도세 면제)이라는 이점이 있습니다.';
+    var tb=document.getElementById('rows');
+    tb.innerHTML=d.events.map(function(x){
+      var etf=x.etf_ret===null||x.etf_ret===undefined;
+      return '<tr><td style="white-space:nowrap;color:#64748b">'+x.buy_date.slice(5)+'</td>'+
+        '<td><b>'+x.name+'</b></td>'+
+        '<td class="num '+cls(x.stock_ret)+'">'+f2(x.stock_ret)+'</td>'+
+        '<td>'+(etf?'<span style="color:#94a3b8">—(유틸)</span>':x.etf_name)+'</td>'+
+        '<td class="num '+(etf?'flat':cls(x.etf_ret))+'">'+(etf?'—':f2(x.etf_ret))+'</td></tr>';
+    }).join('');
+  }).catch(function(){document.getElementById('v-title').textContent='데이터를 불러오지 못했습니다.';});
+})();
+</script>
+</body>
+</html>

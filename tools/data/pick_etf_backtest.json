@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-08-17T17:06:32",
+  "n_rounds": 8,
+  "n_paired": 7,
+  "all_stock": {
+    "n": 8,
+    "winrate": 62,
+    "mean": 0.94,
+    "cum": 7.6
+  },
+  "paired_stock": {
+    "n": 7,
+    "winrate": 71,
+    "mean": 1.36,
+    "cum": 9.5
+  },
+  "paired_etf": {
+    "n": 7,
+    "winrate": 57,
+    "mean": 1.08,
+    "cum": 7.5
+  },
+  "events": [
+    {
+      "buy_date": "2026-06-22",
+      "sell_date": "2026-06-26",
+      "name": "SK하이닉스",
+      "code": "000660",
+      "stock_ret": -4.73,
+      "etf": "091160",
+      "etf_name": "반도체",
+      "etf_ret": -2.99
+    },
+    {
+      "buy_date": "2026-06-29",
+      "sell_date": "2026-07-03",
+      "name": "유한양행",
+      "code": "000100",
+      "stock_ret": 3.38,
+      "etf": "266420",
+      "etf_name": "헬스케어",
+      "etf_ret": 4.0
+    },
+    {
+      "buy_date": "2026-07-06",
+      "sell_date": "2026-07-10",
+      "name": "유나이티드제약",
+      "code": "033270",
+      "stock_ret": 1.48,
+      "etf": "266420",
+      "etf_name": "헬스케어",
+      "etf_ret": -7.3
+    },
+    {
+      "buy_date": "2026-07-13",
+      "sell_date": "2026-07-20",
+      "name": "SK하이닉스",
+      "code": "000660",
+      "stock_ret": -17.19,
+      "etf": "091160",
+      "etf_name": "반도체",
+      "etf_ret": -13.51
+    },
+    {
+      "buy_date": "2026-07-20",
+      "sell_date": "2026-07-24",
+      "name": "S-Oil",
+      "code": "010950",
+      "stock_ret": 8.44,
+      "etf": "117460",
+      "etf_name": "에너지화학",
+      "etf_ret": 4.66
+    },
+    {
+      "buy_date": "2026-07-27",
+      "sell_date": "2026-07-31",
+      "name": "한국전력",
+      "code": "015760",
+      "stock_ret": -1.96,
+      "etf": null,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-08-03",
+      "sell_date": "2026-08-07",
+      "name": "현대차",
+      "code": "005380",
+      "stock_ret": 2.6,
+      "etf": "091180",
+      "etf_name": "자동차",
+      "etf_ret": 6.74
+    },
+    {
+      "buy_date": "2026-08-10",
+      "sell_date": "2026-08-14",
+      "name": "SK하이닉스",
+      "code": "000660",
+      "stock_ret": 15.54,
+      "etf": "091160",
+      "etf_name": "반도체",
+      "etf_ret": 15.93
+    }
+  ]
+}
