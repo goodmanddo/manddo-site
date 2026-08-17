@@ -101,6 +101,12 @@
     <p>표본이 <b id="n-p2">7</b>라운드로 아직 매우 작아 "종목이 낫다/ETF가 낫다"를 단정할 순 없습니다. 다만 방향은 흥미롭습니다 — <b>비슷한 수익을 더 낮은 변동성과 세금으로</b> 얻을 수 있다면, 섹터 ETF가 더 실용적인 선택일 수 있습니다. 그래서 만또는 앞으로 <b>AI 픽을 개별종목과 섹터 ETF 두 갈래로 병행 매매</b>해, 어느 쪽이 실제로 나은지 계속 기록해볼 예정입니다.</p>
   </div>
 
+  <div class="pt-sec" style="border:2px solid #dc2626">
+    <h2>🔴 실제 병행 매매 (라이브)</h2>
+    <p style="font-size:12.5px;color:#64748b">위 표는 "만약 ETF로 샀다면"의 가정 계산입니다. 아래는 <b>실제로 종목과 섹터 ETF를 나란히 매매</b>한 라이브 성과입니다(종목 250만·ETF 200만, 매주 첫 거래일 매수→마지막 거래일 매도).</p>
+    <div id="live-body" style="margin-top:10px"><div style="color:#94a3b8;font-size:13px">불러오는 중…</div></div>
+  </div>
+
   <div class="pt-note">
     <b>방법</b> · <a href="/vs/weekly-pick.html">휴먼 vs AI</a>의 AI 픽 자동매매 기록에서, 각 라운드 개별종목 대신 그 섹터 ETF를 같은 주(월 시가~금 종가) 매매했다고 가정해 한국투자증권 <b>수정주가</b>로 계산했습니다. 수수료·세금은 미반영(본문에서 세금 방향만 설명). 표본이 작아 참고용이며, 특정 종목·ETF 추천이 아닙니다.
   </div>
@@ -140,6 +146,31 @@
         '<td class="num '+(etf?'flat':cls(x.etf_ret))+'">'+(etf?'—':f2(x.etf_ret))+'</td></tr>';
     }).join('');
   }).catch(function(){document.getElementById('v-title').textContent='데이터를 불러오지 못했습니다.';});
+
+  // 실제 라이브 트랙
+  fetch('/tools/data/etf_track.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    var lb=document.getElementById('live-body');
+    var paired=(d.rounds||[]).filter(function(r){return r.etf_ret!=null;});
+    if(!paired.length){
+      lb.innerHTML='<div style="background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:14px 16px;font-size:13.5px;color:#7f1d1d">🔜 실제 병행 매매는 <b>2026-08-18(화)</b> 시작됩니다. 첫 결과는 <b>8/22</b>에 이 자리에 표시됩니다. (종목 트랙은 이미 '+9.5%' 등으로 돌고 있고, ETF 트랙이 이번 주부터 나란히 시작)</div>';
+      return;
+    }
+    var s=d.paired_stock, e=d.paired_etf;
+    var f1=function(v){return v==null?'-':(v>0?'+':'')+v.toFixed(1)+'%';};
+    var f2=function(v){return v==null?'-':(v>0?'+':'')+v.toFixed(2)+'%';};
+    var cls=function(v){return v>0?'up':(v<0?'down':'flat');};
+    var html='<div class="pt-cards" style="margin-bottom:14px">'+
+      '<div class="pt-c stock"><div class="k">🎯 종목 트랙 (실제)</div><div class="big '+cls(s.cum)+'">'+f1(s.cum)+'</div><div class="sub">승률 '+s.winrate+'% · '+s.n+'주</div></div>'+
+      '<div class="pt-c etf"><div class="k">📊 섹터 ETF 트랙 (실제)</div><div class="big '+cls(e.cum)+'">'+f1(e.cum)+'</div><div class="sub">승률 '+e.winrate+'% · '+e.n+'주</div></div></div>';
+    html+='<div style="overflow-x:auto"><table class="pt-table"><thead><tr><th>주</th><th>종목</th><th class="num">종목</th><th>ETF</th><th class="num">ETF</th></tr></thead><tbody>';
+    paired.slice().reverse().forEach(function(r){
+      html+='<tr><td style="white-space:nowrap;color:#64748b">'+(r.buy_date||'').slice(5)+'</td>'+
+        '<td><b>'+r.stock_name+'</b></td><td class="num '+cls(r.stock_ret)+'">'+f2(r.stock_ret)+'</td>'+
+        '<td>'+(r.etf_name||'')+'</td><td class="num '+cls(r.etf_ret)+'">'+f2(r.etf_ret)+'</td></tr>';
+    });
+    html+='</tbody></table></div>';
+    lb.innerHTML=html;
+  }).catch(function(){document.getElementById('live-body').innerHTML='<div style="color:#94a3b8;font-size:13px">라이브 데이터 준비 중</div>';});
 })();
 </script>
 </body>
