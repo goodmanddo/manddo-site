@@ -136,6 +136,28 @@
       <div style="font-size:13px;color:#6b7280">월요일 09:00에 첫 가격이 기록되면 순위가 표시됩니다.</div>
     </div>
   </div>
+  <div id="wp-cumul" style="display:none;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px 20px;margin-bottom:16px">
+    <div style="font-size:15px;font-weight:800;color:#111827;margin-bottom:4px">📊 시즌 통산 성적 <span id="wp-cumul-n" style="font-size:12.5px;font-weight:600;color:#8b95a1"></span></div>
+    <div style="font-size:12px;color:#8b95a1;margin-bottom:14px">매주 AI(전주 미국 섹터 강세 → 다음주 한국 종목 예측)와 휴먼이 픽한 종목의 주간 수익률 누적. 검증 진행 중.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+      <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:11px;padding:14px">
+        <div style="font-size:12.5px;font-weight:700;color:#9a3412;margin-bottom:6px">🧑 휴먼(만또)</div>
+        <div id="wp-h-cum" style="font-size:22px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace">—</div>
+        <div id="wp-h-sub" style="font-size:11.5px;color:#78716c;margin-top:3px">—</div>
+      </div>
+      <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:11px;padding:14px">
+        <div style="font-size:12.5px;font-weight:700;color:#1e40af;margin-bottom:6px">🤖 AI(자동매매봇)</div>
+        <div id="wp-a-cum" style="font-size:22px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace">—</div>
+        <div id="wp-a-sub" style="font-size:11.5px;color:#64748b;margin-top:3px">—</div>
+      </div>
+      <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:11px;padding:14px">
+        <div style="font-size:12.5px;font-weight:700;color:#334155;margin-bottom:6px">⚔️ 맞대결 전적</div>
+        <div id="wp-vs" style="font-size:20px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace">—</div>
+        <div style="font-size:11.5px;color:#64748b;margin-top:3px">둘 다 픽한 주 기준</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#9ca3af;margin-top:12px;line-height:1.6">⚠ 누적은 주간 수익률 단순 합산(참고용)이며, 복리·실현손익과 다릅니다. 표본이 적어 운·실력 구분엔 부족합니다. 특정 종목 추천이 아닙니다.</div>
+  </div>
   <div class="wp-rules">
     <b>🎮 게임 규칙</b>
     <ul>
@@ -516,6 +538,34 @@
           body.innerHTML = '<div style="padding:14px;background:#f7f7f9;border-radius:8px;color:#888">이력 데이터 없음</div>';
           return;
         }
+        // 시즌 통산 누적 성적
+        (function(){
+          const R = h.rounds;
+          const agg = (who) => {
+            const rs = R.filter(r => r[who] && r[who].final_return != null).map(r => r[who].final_return);
+            if (!rs.length) return null;
+            const w = rs.filter(x => x > 0).length, cum = rs.reduce((a,b)=>a+b,0);
+            return { n: rs.length, wr: Math.round(w/rs.length*100), cum: cum, avg: cum/rs.length };
+          };
+          const H = agg('manddo'), A = agg('ai');
+          const both = R.filter(r => r.manddo && r.ai && r.manddo.final_return != null && r.ai.final_return != null);
+          const hw = both.filter(r => r.manddo.final_return > r.ai.final_return).length;
+          const aw = both.filter(r => r.ai.final_return > r.manddo.final_return).length;
+          const sc = (v) => v >= 0 ? '#d33' : '#258';
+          const setC = (id, o) => {
+            if (!o) return;
+            const el = document.getElementById(id);
+            el.textContent = (o.cum >= 0 ? '+' : '') + o.cum.toFixed(1) + '%';
+            el.style.color = sc(o.cum);
+            document.getElementById(id.replace('-cum','-sub')).textContent =
+              o.n + '라운드 · 승률 ' + o.wr + '% · 평균 ' + (o.avg>=0?'+':'') + o.avg.toFixed(2) + '%';
+          };
+          setC('wp-h-cum', H); setC('wp-a-cum', A);
+          document.getElementById('wp-vs').innerHTML =
+            '<span style="color:#9a3412">휴먼 ' + hw + '</span> : <span style="color:#1e40af">' + aw + ' AI</span>';
+          document.getElementById('wp-cumul-n').textContent = '(시즌' + (h.season||1) + ' · ' + R.length + '라운드)';
+          document.getElementById('wp-cumul').style.display = 'block';
+        })();
         const rows = [...h.rounds].reverse();  // 최신 라운드 먼저
         const fmt = (v) => v == null ? '<span style="color:#aaa">–</span>'
           : (v >= 0 ? `<span style="color:#d33;font-weight:600">+${v.toFixed(2)}%</span>`
