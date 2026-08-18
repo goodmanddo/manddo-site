@@ -1,42 +1,69 @@
 {
-  "date": "2026-08-17",
+  "date": "2026-08-18",
   "start_date": "2026-05-03",
-  "cumulative_return": -5.4,
-  "week_return": 4.35,
-  "day_return": 0.0,
+  "cumulative_return": -6.28,
+  "week_return": 3.14,
+  "day_return": -0.93,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 57,
-  "ai_commentary": "오늘은 DB손해보험, 삼성전자, 한국가스공사 등 신규 편입. 시작 이후 누적 -5.4%.",
+  "ai_commentary": "오늘은 한화솔루션, KODEX 에너지화학, KODEX 코스닥150 등 신규 편입. 시작 이후 누적 -6.3%.",
   "new_buys": [
+    {
+      "name": "한화솔루션",
+      "slug": "hanwha-solutions",
+      "market": "코스피",
+      "entry_to_current_pct": -1.73,
+      "weight_pct": 13,
+      "hold_days": 0,
+      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
+    },
+    {
+      "name": "KODEX 에너지화학",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -1.08,
+      "weight_pct": 11,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    },
+    {
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -5.15,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+    },
     {
       "name": "DB손해보험",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.11,
+      "entry_to_current_pct": 3.06,
       "weight_pct": 5,
-      "hold_days": 3,
+      "hold_days": 4,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "삼성전자",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.33,
+      "entry_to_current_pct": 0.09,
       "weight_pct": 3,
-      "hold_days": 4,
+      "hold_days": 5,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "한국가스공사",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.83,
+      "entry_to_current_pct": 0.69,
       "weight_pct": 7,
-      "hold_days": 4,
+      "hold_days": 5,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
@@ -47,10 +74,28 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 22
+      "weight_pct": 19
+    },
+    {
+      "name": "한화솔루션",
+      "slug": "hanwha-solutions",
+      "market": "코스피",
+      "weight_pct": 13
+    },
+    {
+      "name": "KODEX 에너지화학",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 11
     },
     {
       "name": "한국가스공사",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 7
+    },
+    {
+      "name": "ACE KRX금현물",
       "slug": "",
       "market": "코스피",
       "weight_pct": 7
@@ -68,13 +113,13 @@
       "weight_pct": 6
     },
     {
-      "name": "ACE KRX금현물",
+      "name": "DB손해보험",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 6
+      "weight_pct": 5
     },
     {
-      "name": "DB손해보험",
+      "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
@@ -87,10 +132,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-07",
-      "cumulative_return": -4.5
-    },
     {
       "date": "2026-07-08",
       "cumulative_return": -4.64
@@ -206,6 +247,10 @@
     {
       "date": "2026-08-17",
       "cumulative_return": -5.4
+    },
+    {
+      "date": "2026-08-18",
+      "cumulative_return": -6.28
     }
   ]
 }
