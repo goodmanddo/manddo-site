@@ -1,81 +1,63 @@
 {
   "last_holdings": {
-    "005830": {
-      "name": "DB손해보험",
-      "qty": 5,
-      "avg_price": 176600,
-      "current_price": 182000,
-      "opened_at": "2026-08-14"
-    },
-    "005930": {
-      "name": "삼성전자",
-      "qty": 2,
-      "avg_price": 268250,
-      "current_price": 268500,
-      "opened_at": "2026-08-13"
-    },
     "009830": {
       "name": "한화솔루션",
       "qty": 73,
       "avg_price": 34600,
-      "current_price": 34000,
+      "current_price": 34650,
       "opened_at": "2026-08-18"
     },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 36550,
+      "current_price": 36250,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 33,
       "avg_price": 115753,
-      "current_price": 108550,
+      "current_price": 101760,
       "opened_at": "2026-06-09"
     },
     "117460": {
       "name": "KODEX 에너지화학",
       "qty": 140,
       "avg_price": 14249,
-      "current_price": 14095,
+      "current_price": 13915,
       "opened_at": "2026-08-18"
     },
     "229200": {
       "name": "KODEX 코스닥150",
       "qty": 64,
       "avg_price": 14960,
-      "current_price": 14190,
+      "current_price": 14230,
       "opened_at": "2026-08-18"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 42,
       "avg_price": 27819,
-      "current_price": 26995,
+      "current_price": 26635,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 47,
       "avg_price": 27716,
-      "current_price": 27900,
+      "current_price": 27300,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 27,
       "avg_price": 52973,
-      "current_price": 48365,
+      "current_price": 48290,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-05-28",
-      "total_eval": 19615579
-    },
     {
       "date": "2026-05-29",
       "total_eval": 19691404
@@ -311,6 +293,10 @@
     {
       "date": "2026-08-18",
       "total_eval": 18743451
+    },
+    {
+      "date": "2026-08-19",
+      "total_eval": 18472479
     }
   ],
   "completed_trades": [
@@ -756,6 +742,22 @@
       "date": "2026-08-14",
       "is_win": false,
       "hold_days": 1
+    },
+    {
+      "name": "DB손해보험",
+      "code": "005830",
+      "return_pct": 5.95,
+      "date": "2026-08-19",
+      "is_win": true,
+      "hold_days": 5
+    },
+    {
+      "name": "삼성전자",
+      "code": "005930",
+      "return_pct": -6.8,
+      "date": "2026-08-19",
+      "is_win": false,
+      "hold_days": 6
     }
   ]
 }
