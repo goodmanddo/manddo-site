@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T21:07:48",
+  "generated_at": "2026-08-20T21:36:17",
   "period_start": "2026-04-18",
   "period_end": "2026-08-20",
   "days": 125,
@@ -9,6 +9,7 @@
   "bot_return": -4.17,
   "btc_return": -11.6,
   "defense_pp": 7.4,
+  "defense_on": false,
   "coins": [
     {
       "code": "KRW-BTC",
@@ -17,7 +18,10 @@
       "value": 494586,
       "weight": 5.0,
       "price": 99450000.0,
-      "trend_pct": -11.6
+      "trend_pct": -11.6,
+      "market_status": "📈 상승 추세",
+      "grid_percent": 2.1,
+      "defense_mode": false
     },
     {
       "code": "KRW-ETH",
@@ -26,7 +30,10 @@
       "value": 314916,
       "weight": 3.2,
       "price": 3159000.0,
-      "trend_pct": -9.3
+      "trend_pct": -9.3,
+      "market_status": "🚀 강한 상승",
+      "grid_percent": 2.8,
+      "defense_mode": false
     },
     {
       "code": "KRW-XRP",
@@ -35,7 +42,10 @@
       "value": 239957,
       "weight": 2.4,
       "price": 1603.0,
-      "trend_pct": -24.6
+      "trend_pct": -24.6,
+      "market_status": "⚖️ 보통",
+      "grid_percent": 1.2,
+      "defense_mode": false
     }
   ],
   "series": [
