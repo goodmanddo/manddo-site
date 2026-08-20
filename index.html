@@ -92,6 +92,33 @@
     }).catch(()=>{});
   })();
   </script>
+  <a href="/crypto/" class="home-btc-card" id="home-btc-card">
+    <div class="hbc-left">
+      <div class="hbc-badge">₿ 실계좌 자동매매 · 하락 방어 트랙</div>
+      <div class="hbc-title">비트코인 자동매매 — 하락장을 어떻게 버틸까</div>
+      <div class="hbc-desc">업비트 그리드봇으로 코인을 자동매매하는 실계좌 기록. 수익 극대화가 아니라, 하락장에서 현금으로 빼서 덜 잃는 게 목적. "BTC 그냥 보유"와 나란히 정직 공개.</div>
+      <div class="hbc-stats"><span id="hbc-bot">—</span> · <span id="hbc-def">방어 —</span></div>
+    </div>
+    <div class="hbc-arrow">→</div>
+  </a>
+  <style>
+    .home-btc-card{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#f7931a 0%,#b45309 100%);border-radius:16px;padding:22px 24px;margin:0 0 32px;color:#fff;text-decoration:none;transition:transform .15s,box-shadow .15s}
+    .home-btc-card,.home-btc-card *{color:#fff !important}
+    .home-btc-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(247,147,26,.3)}
+    .home-btc-card .hbc-left{flex:1}
+    .home-btc-card .hbc-badge{font-size:11.5px;font-weight:700;letter-spacing:.5px;opacity:.9;margin-bottom:8px}
+    .home-btc-card .hbc-title{font-size:21px;font-weight:800;letter-spacing:-0.02em;margin-bottom:5px}
+    .home-btc-card .hbc-desc{font-size:13px;line-height:1.55;opacity:.92;margin-bottom:9px;max-width:600px}
+    .home-btc-card .hbc-stats{font-size:12.5px;opacity:.9;font-weight:700}
+    .home-btc-card .hbc-arrow{font-size:24px;opacity:.7}
+    @media(max-width:640px){.home-btc-card{padding:18px}.home-btc-card .hbc-title{font-size:18px}}
+  </style>
+  <script>
+  fetch('/tools/data/crypto_track.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    var b=document.getElementById('hbc-bot');if(b)b.textContent='봇 '+(d.bot_return>0?'+':'')+d.bot_return+'% (BTC '+(d.btc_return>0?'+':'')+d.btc_return+'%)';
+    var f=document.getElementById('hbc-def');if(f)f.textContent='🛡 방어 +'+d.defense_pp+'%p';
+  }).catch(function(){});
+  </script>
   <!-- 📅 이번 주 시장 캘린더 -->
   <section class="calendar-block" id="calendar-block" style="display:none">
     <div class="calendar-head">
@@ -306,8 +333,8 @@
     <p class="cat-desc">정제된 리포트 말고, 오늘 본 종목과 시장에서 느낀 것을 가볍게 기록하는 공간.</p>
     <div class="post-list">
 <!-- HOME_BLOG_START -->
+      <a href="/blog/xbi-590-biotech-surge-korean-bio-reading-20260820.html" class="post-item"><div class="cat">시장관찰</div><div class="title">XBI +5.90%, 바이오가 폭발한 날 — 셀트리온·삼성바이오·신라젠을 나는 이렇게 읽었다</div><div class="date">2026.08.20</div></a>
       <a href="/blog/us-market-defensive-tech-double-rally-aug14.html" class="post-item"><div class="cat">시장관찰</div><div class="title">필수소비 +1.08%, 기술 +1.01% — 방어와 성장이 같이 오른 날, 나는 무엇을 읽었나</div><div class="date">2026.08.14</div></a>
-      <a href="/blog/energy-steel-up-semiconductor-down-aug-11-2026.html" class="post-item"><div class="cat">시장관찰</div><div class="title">에너지·철강이 오르고 반도체가 빠진 날 — 2차전지와 철강주를 나는 이렇게 읽었다</div><div class="date">2026.08.11</div></a>
 <!-- HOME_BLOG_END -->
     </div>
   </section>

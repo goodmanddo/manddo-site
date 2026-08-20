@@ -61,6 +61,7 @@
     <url><loc>https://manddo.kr/blog/dow-down-biotech-robot-surge-cash-strategy.html</loc><lastmod>2026-08-07</lastmod><priority>0.7</priority></url>
     <url><loc>https://manddo.kr/blog/energy-steel-up-semiconductor-down-aug-11-2026.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
     <url><loc>https://manddo.kr/blog/us-market-defensive-tech-double-rally-aug14.html</loc><lastmod>2026-08-14</lastmod><priority>0.7</priority></url>
+    <url><loc>https://manddo.kr/blog/xbi-590-biotech-surge-korean-bio-reading-20260820.html</loc><lastmod>2026-08-20</lastmod><priority>0.7</priority></url>
   <!-- STOCK_URLS_START -->
   <url><loc>https://manddo.kr/stock/kb-financial.html</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
   <url><loc>https://manddo.kr/stock/lg-energy-solution.html</loc><lastmod>2026-04-20</lastmod><priority>0.8</priority></url>
@@ -262,5 +263,11 @@
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://manddo.kr/crypto/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
