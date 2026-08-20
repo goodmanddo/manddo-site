@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>비트코인 자동매매 — 하락 방어 트랙 (실계좌 기록) | 만또</title>
+<meta name="description" content="업비트 그리드봇으로 비트코인·이더리움·리플을 자동매매한 실계좌 기록. 하락장에서 현금 비중으로 방어하는 그리드봇의 성과를 'BTC 그냥 보유' 대비로 정직하게 공개. 총자산 추세·코인별 추세·현재 방어 태세.">
+<meta name="keywords" content="비트코인 자동매매,그리드봇,업비트,하락방어,BTC 추세,코인 자동투자,만또">
+<meta property="og:title" content="비트코인 자동매매 — 하락 방어 트랙">
+<meta property="og:description" content="그리드봇 실계좌 기록. 하락장에서 현금으로 방어한 성과를 BTC 보유 대비로 공개.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/crypto/">
+<link rel="canonical" href="https://manddo.kr/crypto/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .cy-hero{background:linear-gradient(135deg,#f7931a 0%,#7c2d12 100%);border-radius:16px;padding:28px 24px;margin:20px 0 18px;color:#fff}
+  .cy-hero,.cy-hero *{color:#fff !important}
+  .cy-hero .badge{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+  .cy-hero h1{font-size:25px;margin:0 0 8px;font-weight:800;letter-spacing:-0.02em;line-height:1.35}
+  .cy-hero p{font-size:14px;line-height:1.6;margin:0;max-width:680px}
+  .cy-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+  @media(max-width:560px){.cy-stats{grid-template-columns:1fr}}
+  .cy-stat{background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:15px 16px}
+  .cy-stat .k{font-size:12px;color:#4b5563;font-weight:600;margin-bottom:5px}
+  .cy-stat .v{font-size:22px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace}
+  .cy-stat .sub{font-size:11.5px;color:#8b95a1;margin-top:3px}
+  .up{color:#dc2626}.down{color:#1B64DA}.flat{color:#64748b}.green2{color:#059669}
+  .cy-sec{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:20px 22px;margin-bottom:16px}
+  .cy-sec h2{font-size:17px;margin:0 0 4px;color:#111827;font-weight:800}
+  .cy-sec .desc{font-size:12.5px;color:#8b95a1;margin-bottom:12px;line-height:1.55}
+  .cy-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:#4b5563;margin-bottom:8px}
+  .cy-legend span{display:inline-flex;align-items:center;gap:5px}
+  .cy-legend i{width:16px;height:3px;border-radius:2px;display:inline-block}
+  .cy-bars{display:flex;flex-direction:column;gap:9px}
+  .cy-bar-row{display:grid;grid-template-columns:64px 1fr 52px;align-items:center;gap:10px}
+  .cy-bar-row .lbl{font-size:13px;font-weight:700;color:#334155}
+  .cy-bar-track{background:#f1f5f9;border-radius:6px;height:22px;overflow:hidden}
+  .cy-bar-fill{height:100%;border-radius:6px}
+  .cy-bar-row .pct{font-size:13px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;text-align:right;color:#111827}
+  .cy-coins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  @media(max-width:560px){.cy-coins{grid-template-columns:1fr}}
+  .cy-coin{background:#fbfcfd;border:1px solid #eef0f3;border-radius:11px;padding:13px 15px}
+  .cy-coin .cn{font-size:13.5px;font-weight:800;color:#111827}
+  .cy-coin .cb{font-size:11.5px;color:#8b95a1;font-family:'SF Mono',ui-monospace,monospace;margin:3px 0}
+  .cy-coin .ct{font-size:15px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;margin-top:5px}
+  .cy-note{font-size:12.5px;color:#475569;line-height:1.8;margin:14px 0;padding:16px 18px;background:#f8fafc;border:1px solid #eef0f3;border-radius:12px}
+  .cy-note b{color:#111827}
+  .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/crypto/" class="active">₿ 비트코인</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/game-watch/">🎮 게임 신작</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="cy-hero">
+    <span class="badge">₿ 실계좌 자동매매 · 하락 방어 트랙</span>
+    <h1>비트코인 자동매매, 하락장을 어떻게 버틸까</h1>
+    <p>업비트 그리드봇으로 비트코인·이더리움·리플을 자동매매한 <b>실계좌 기록</b>입니다. 이 봇의 목표는 "많이 버는 것"이 아니라 <b>하락장에서 덜 잃는 것</b> — 위험하면 현금으로 빼서 방어합니다. 성과를 "BTC를 그냥 들고 있었다면"과 나란히 정직하게 공개합니다.</p>
+  </div>
+
+  <div class="cy-stats">
+    <div class="cy-stat"><div class="k">현재 평가액</div><div class="v" id="s-tv">—</div><div class="sub" id="s-period">—</div></div>
+    <div class="cy-stat"><div class="k">봇 손익 <span style="font-weight:400">(입출금 보정)</span></div><div class="v" id="s-bot">—</div><div class="sub">vs BTC 보유 <span id="s-btc">—</span></div></div>
+    <div class="cy-stat"><div class="k">🛡 하락 방어</div><div class="v green2" id="s-def">—</div><div class="sub">BTC 대비 덜 잃은 폭</div></div>
+  </div>
+
+  <div class="cy-sec">
+    <h2>📉 총자산 추세</h2>
+    <div class="desc">내 봇(입출금 보정)과 "BTC를 그냥 보유했다면"을 시작=100으로 맞춰 비교. 두 선의 간격이 방어 효과.</div>
+    <div class="cy-legend"><span><i style="background:#f7931a"></i> 내 봇</span><span><i style="background:#9ca3af"></i> BTC 그냥 보유</span></div>
+    <svg id="cy-svg" viewBox="0 0 640 220" width="100%" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+
+  <div class="cy-sec">
+    <h2>🛡 현재 방어 태세</h2>
+    <div class="desc">현금 비중이 곧 방어 강도입니다. 하락장이라 대부분 현금으로 빼둔 상태 — 시장이 오르면 코인 비중이 늘어납니다.</div>
+    <div class="cy-bars" id="cy-bars"></div>
+  </div>
+
+  <div class="cy-sec">
+    <h2>📊 코인 시장 추세 <span style="font-size:12px;font-weight:600;color:#8b95a1">(기간 대비)</span></h2>
+    <div class="desc">봇이 다루는 코인들의 시세가 이 기간 얼마나 움직였는지. 시장은 이만큼 빠졌습니다.</div>
+    <div class="cy-coins" id="cy-coins"></div>
+  </div>
+
+  <div class="cy-note">
+    <b>💡 이 봇을 어떻게 읽나요?</b><br>
+    그리드봇은 가격이 오르내릴 때마다 조금씩 사고팔아 <b>횡보장에서 수익</b>을 쌓고, <b>하락장에서는 현금 비중을 높여 방어</b>합니다. 그래서 성과는 "얼마 벌었나"보다 <b>"BTC 그냥 보유했을 때보다 덜 잃었나"</b>로 봐야 맞습니다. 반대로 <b>급등장에서는 BTC를 그냥 든 것보다 덜 법니다</b>(방어의 대가). 수익 극대화가 아니라 <b>변동성 완화·하락 방어</b>가 목적인 도구입니다.<br><br>
+    <b>주의</b> · 실계좌 기록이지만 특정 코인·전략의 매수·매도 권유가 아닙니다. 암호화폐는 변동성이 매우 크며, 과거 방어가 미래를 보장하지 않습니다.
+  </div>
+
+  <div class="disclaimer">
+    ⚠ 본 페이지는 실제 자동매매 계좌를 정직하게 기록한 개인의 관찰이며, 투자 권유가 아닙니다. 투자 판단과 결과는 본인 책임입니다. · 글 <a href="/about.html" rel="author">만또</a>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·<a href="/privacy.html">개인정보처리방침</a>·<a href="/terms.html">이용약관</a>·<a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다 · 데이터: 업비트</div>
+  </div>
+</footer>
+<script>
+(function(){
+  function won(v){return v.toLocaleString()+'원';}
+  function pct(v){return (v>0?'+':'')+v.toFixed(v%1===0?0:1)+'%';}
+  function cls(v){return v>0?'up':(v<0?'down':'flat');}
+  fetch('/tools/data/crypto_track.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
+    document.getElementById('s-tv').textContent=won(d.total_value);
+    document.getElementById('s-period').textContent=d.period_start+' ~ '+d.period_end+' ('+d.days+'일)';
+    var sb=document.getElementById('s-bot');sb.textContent=pct(d.bot_return);sb.className='v '+cls(d.bot_return);
+    document.getElementById('s-btc').textContent=pct(d.btc_return);
+    document.getElementById('s-def').textContent=(d.defense_pp>0?'+':'')+d.defense_pp+'%p';
+
+    // 추세 차트
+    var svg=document.getElementById('cy-svg'),W=640,H=220,pl=38,pr=14,pt=14,pb=24;
+    var S=d.series, all=[]; S.forEach(function(p){all.push(p.bot,p.btc_hold);});
+    var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);
+    function x(i){return pl+(W-pl-pr)*i/(S.length-1);}
+    function y(v){return pt+(H-pt-pb)*(1-(v-mn)/(mx-mn||1));}
+    function path(key,color,w){var dd='';S.forEach(function(p,i){dd+=(i?'L':'M')+x(i).toFixed(1)+','+y(p[key]).toFixed(1)+' ';});return '<path d="'+dd+'" fill="none" stroke="'+color+'" stroke-width="'+w+'"/>';}
+    var out='';
+    // 기준선 100
+    var y100=y(100);
+    out+='<line x1="'+pl+'" y1="'+y100+'" x2="'+(W-pr)+'" y2="'+y100+'" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4 4"/>';
+    out+='<text x="'+pl+'" y="'+(y100-4)+'" font-size="10" fill="#9ca3af">시작 100</text>';
+    out+=path('btc_hold','#9ca3af',2);
+    out+=path('bot','#f7931a',2.5);
+    // x축 라벨
+    [0,Math.floor(S.length/2),S.length-1].forEach(function(i){
+      out+='<text x="'+x(i)+'" y="'+(H-7)+'" text-anchor="middle" font-size="10" fill="#9ca3af">'+S[i].date.slice(5)+'</text>';
+    });
+    svg.innerHTML=out;
+
+    // 방어 태세 막대 (현금 + 코인)
+    var rows=[{lbl:'현금',w:d.cash_weight,c:'#059669'}];
+    var palette={'비트코인':'#f7931a','이더리움':'#627eea','리플':'#23292f'};
+    d.coins.forEach(function(c){rows.push({lbl:c.name,w:c.weight,c:palette[c.name]||'#94a3b8'});});
+    document.getElementById('cy-bars').innerHTML=rows.map(function(r){
+      return '<div class="cy-bar-row"><div class="lbl">'+r.lbl+'</div>'+
+        '<div class="cy-bar-track"><div class="cy-bar-fill" style="width:'+Math.max(r.w,1.5)+'%;background:'+r.c+'"></div></div>'+
+        '<div class="pct">'+r.w+'%</div></div>';
+    }).join('');
+
+    // 코인 시장 추세
+    document.getElementById('cy-coins').innerHTML=d.coins.map(function(c){
+      return '<div class="cy-coin"><div class="cn">'+c.name+'</div>'+
+        '<div class="cb">'+c.balance.toFixed(4)+'개 · '+won(c.value)+'</div>'+
+        '<div class="ct '+cls(c.trend_pct)+'">'+(c.trend_pct==null?'-':pct(c.trend_pct))+'</div></div>';
+    }).join('');
+  }).catch(function(){document.getElementById('s-tv').textContent='불러오기 실패';});
+})();
+</script>
+</body>
+</html>
