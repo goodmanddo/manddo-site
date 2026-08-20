@@ -1,74 +1,55 @@
 {
-  "date": "2026-08-19",
+  "date": "2026-08-20",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.64,
-  "week_return": -0.02,
-  "day_return": -1.45,
-  "today_realized_avg": -0.42,
-  "today_trade_count": 2,
-  "today_win_count": 1,
-  "today_loss_count": 1,
+  "cumulative_return": -6.04,
+  "week_return": 0.34,
+  "day_return": 1.73,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
+  "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 59,
-  "ai_commentary": "오늘은 한화솔루션, KODEX 에너지화학, KODEX 코스닥150 등 신규 편입. 1건 익절로 수익 확정. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -7.6%.",
+  "ai_commentary": "오늘은 한화솔루션, KODEX 에너지화학, KODEX 코스닥150 등 신규 편입. 시작 이후 누적 -6.0%.",
   "new_buys": [
     {
       "name": "한화솔루션",
       "slug": "hanwha-solutions",
       "market": "코스피",
-      "entry_to_current_pct": 0.14,
+      "entry_to_current_pct": 1.73,
       "weight_pct": 14,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "KODEX 에너지화학",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -2.34,
-      "weight_pct": 11,
-      "hold_days": 1,
+      "entry_to_current_pct": -2.98,
+      "weight_pct": 10,
+      "hold_days": 2,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
       "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -4.88,
+      "entry_to_current_pct": -2.31,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "한국가스공사",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.14,
+      "entry_to_current_pct": 0.14,
       "weight_pct": 7,
-      "hold_days": 6,
+      "hold_days": 7,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "exits": [
-    {
-      "type": "win",
-      "name": "DB손해보험",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 5.95,
-      "hold_days": 5,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    },
-    {
-      "type": "loss",
-      "name": "삼성전자",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -6.8,
-      "hold_days": 6,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "삼성전자",
@@ -82,7 +63,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 18
+      "weight_pct": 19
     },
     {
       "name": "한화솔루션",
@@ -94,7 +75,7 @@
       "name": "KODEX 에너지화학",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 11
+      "weight_pct": 10
     },
     {
       "name": "한국가스공사",
@@ -128,10 +109,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-09",
-      "cumulative_return": -4.46
-    },
     {
       "date": "2026-07-10",
       "cumulative_return": -3.86
@@ -247,6 +224,10 @@
     {
       "date": "2026-08-19",
       "cumulative_return": -7.64
+    },
+    {
+      "date": "2026-08-20",
+      "cumulative_return": -6.04
     }
   ]
 }
