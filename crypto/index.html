@@ -39,10 +39,19 @@
   .cy-bar-row .pct{font-size:13px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;text-align:right;color:#111827}
   .cy-coins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
   @media(max-width:560px){.cy-coins{grid-template-columns:1fr}}
-  .cy-coin{background:#fbfcfd;border:1px solid #eef0f3;border-radius:11px;padding:13px 15px}
-  .cy-coin .cn{font-size:13.5px;font-weight:800;color:#111827}
-  .cy-coin .cb{font-size:11.5px;color:#8b95a1;font-family:'SF Mono',ui-monospace,monospace;margin:3px 0}
-  .cy-coin .ct{font-size:15px;font-weight:800;font-family:'SF Mono',ui-monospace,monospace;margin-top:5px}
+  .cy-coin{background:#fbfcfd;border:1px solid #eef0f3;border-radius:11px;padding:14px 15px}
+  .cy-coin .cn{font-size:14px;font-weight:800;color:#111827}
+  .cy-coin .trend{display:inline-block;font-size:13px;font-weight:800;padding:4px 10px;border-radius:8px;margin:8px 0 6px}
+  .cy-coin .trend.up{background:#fee2e2;color:#b91c1c}
+  .cy-coin .trend.strong{background:#fecaca;color:#7f1d1d}
+  .cy-coin .trend.flat{background:#f1f5f9;color:#475569}
+  .cy-coin .trend.down{background:#dbeafe;color:#1e40af}
+  .cy-coin .cmeta{font-size:11.5px;color:#8b95a1;line-height:1.6}
+  .cy-coin .cb{font-size:11px;color:#9ca3af;font-family:'SF Mono',ui-monospace,monospace;margin-top:6px;padding-top:6px;border-top:1px solid #eef0f3}
+  .cy-help{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  @media(max-width:560px){.cy-help{grid-template-columns:1fr}}
+  .cy-help .hi{font-size:12px;color:#475569;line-height:1.5;background:#f8fafc;border:1px solid #eef0f3;border-radius:9px;padding:9px 11px}
+  .cy-help .hi b{color:#111827}
   .cy-note{font-size:12.5px;color:#475569;line-height:1.8;margin:14px 0;padding:16px 18px;background:#f8fafc;border:1px solid #eef0f3;border-radius:12px}
   .cy-note b{color:#111827}
   .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
@@ -95,9 +104,21 @@
   </div>
 
   <div class="cy-sec">
-    <h2>📊 코인 시장 추세 <span style="font-size:12px;font-weight:600;color:#8b95a1">(기간 대비)</span></h2>
-    <div class="desc">봇이 다루는 코인들의 시세가 이 기간 얼마나 움직였는지. 시장은 이만큼 빠졌습니다.</div>
+    <h2>🧭 지금 봇이 보는 코인 추세</h2>
+    <div class="desc">봇이 각 코인의 최근 가격 흐름을 <b>상승 / 강한 상승 / 보통(횡보) / 하락</b>으로 판단하고, 그에 맞춰 매매 방식을 바꿉니다. 아래는 지금 봇의 판단입니다.</div>
     <div class="cy-coins" id="cy-coins"></div>
+    <div class="cy-help">
+      <div class="hi">📈 <b>상승 / 🚀 강한 상승</b><br>오르는 중. 봇은 그리드 간격을 넓혀 더 큰 폭에서 사고팔아요.</div>
+      <div class="hi">⚖️ <b>보통(횡보)</b><br>옆으로 움직이는 중. 촘촘한 그리드로 잔수익을 쌓기 좋은 구간.</div>
+      <div class="hi">📉 <b>하락</b><br>내리는 중. 봇은 방어모드로 <b>현금 비중을 높여</b> 위험을 피해요.</div>
+      <div class="hi">🛡 <b>그리드 %</b><br>봇이 사고파는 가격 간격. 추세가 강할수록 넓어집니다.</div>
+    </div>
+  </div>
+
+  <div class="cy-sec">
+    <h2>📊 코인 가격 추세 <span style="font-size:12px;font-weight:600;color:#8b95a1">(기간 대비)</span></h2>
+    <div class="desc">봇 판단과 별개로, 코인 <b>시세 자체</b>가 이 기간 얼마나 움직였는지. 시장은 이만큼 빠졌습니다.</div>
+    <div class="cy-coins" id="cy-prices"></div>
   </div>
 
   <div class="cy-note">
@@ -158,11 +179,28 @@
         '<div class="pct">'+r.w+'%</div></div>';
     }).join('');
 
-    // 코인 시장 추세
+    // 봇이 보는 추세
+    function trendClass(ms){
+      if(!ms)return 'flat';
+      if(ms.indexOf('강한')>=0)return 'strong';
+      if(ms.indexOf('상승')>=0)return 'up';
+      if(ms.indexOf('하락')>=0)return 'down';
+      return 'flat';
+    }
     document.getElementById('cy-coins').innerHTML=d.coins.map(function(c){
+      var ms=c.market_status||'—';
+      var def=c.defense_mode?' · 🛡방어중':'';
       return '<div class="cy-coin"><div class="cn">'+c.name+'</div>'+
-        '<div class="cb">'+c.balance.toFixed(4)+'개 · '+won(c.value)+'</div>'+
-        '<div class="ct '+cls(c.trend_pct)+'">'+(c.trend_pct==null?'-':pct(c.trend_pct))+'</div></div>';
+        '<div class="trend '+trendClass(ms)+'">'+ms+'</div>'+
+        '<div class="cmeta">그리드 '+(c.grid_percent!=null?c.grid_percent+'%':'—')+def+'</div>'+
+        '<div class="cb">보유 '+c.balance.toFixed(4)+'개 · '+won(c.value)+'</div></div>';
+    }).join('');
+
+    // 코인 가격 추세 (시세 자체)
+    document.getElementById('cy-prices').innerHTML=d.coins.map(function(c){
+      return '<div class="cy-coin"><div class="cn">'+c.name+'</div>'+
+        '<div class="cb" style="border:none;margin:3px 0;padding:0">현재가 '+won(c.price)+'</div>'+
+        '<div class="ct '+cls(c.trend_pct)+'" style="font-size:15px;font-weight:800;font-family:monospace">'+(c.trend_pct==null?'-':pct(c.trend_pct))+'</div></div>';
     }).join('');
   }).catch(function(){document.getElementById('s-tv').textContent='불러오기 실패';});
 })();
