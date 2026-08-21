@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T21:36:17",
+  "generated_at": "2026-08-21T20:10:05",
   "period_start": "2026-04-18",
   "period_end": "2026-08-20",
   "days": 125,
@@ -19,8 +19,8 @@
       "weight": 5.0,
       "price": 99450000.0,
       "trend_pct": -11.6,
-      "market_status": "📈 상승 추세",
-      "grid_percent": 2.1,
+      "market_status": "🚀 강한 상승",
+      "grid_percent": 2.8,
       "defense_mode": false
     },
     {
@@ -43,8 +43,8 @@
       "weight": 2.4,
       "price": 1603.0,
       "trend_pct": -24.6,
-      "market_status": "⚖️ 보통",
-      "grid_percent": 1.2,
+      "market_status": "🚀 강한 상승",
+      "grid_percent": 2.8,
       "defense_mode": false
     }
   ],
