@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-08-21T20:10:05",
+  "generated_at": "2026-08-22T18:27:43",
   "period_start": "2026-04-18",
   "period_end": "2026-08-20",
   "days": 125,
-  "total_value": 9834700,
+  "total_value": 9950742,
   "cash": 8785242,
-  "cash_weight": 89.3,
-  "bot_return": -4.17,
-  "btc_return": -11.6,
-  "defense_pp": 7.4,
-  "defense_on": false,
+  "cash_weight": 88.3,
+  "bot_return": -3.04,
+  "btc_return": -6.1,
+  "defense_pp": 3.0,
+  "defense_on": true,
   "coins": [
     {
       "code": "KRW-BTC",
       "name": "비트코인",
       "balance": 0.00497321,
-      "value": 494586,
-      "weight": 5.0,
-      "price": 99450000.0,
-      "trend_pct": -11.6,
+      "value": 525420,
+      "weight": 5.3,
+      "price": 105650000.0,
+      "trend_pct": -6.1,
       "market_status": "🚀 강한 상승",
       "grid_percent": 2.8,
       "defense_mode": false
@@ -27,25 +27,25 @@
       "code": "KRW-ETH",
       "name": "이더리움",
       "balance": 0.0996886,
-      "value": 314916,
-      "weight": 3.2,
-      "price": 3159000.0,
-      "trend_pct": -9.3,
-      "market_status": "🚀 강한 상승",
-      "grid_percent": 2.8,
-      "defense_mode": false
+      "value": 330667,
+      "weight": 3.3,
+      "price": 3317000.0,
+      "trend_pct": -4.7,
+      "market_status": "🛡️ 방어 모드",
+      "grid_percent": 3.0,
+      "defense_mode": true
     },
     {
       "code": "KRW-XRP",
       "name": "리플",
       "balance": 149.69234272,
-      "value": 239957,
-      "weight": 2.4,
-      "price": 1603.0,
-      "trend_pct": -24.6,
-      "market_status": "🚀 강한 상승",
-      "grid_percent": 2.8,
-      "defense_mode": false
+      "value": 309414,
+      "weight": 3.1,
+      "price": 2067.0,
+      "trend_pct": -2.8,
+      "market_status": "🛡️ 방어 모드",
+      "grid_percent": 3.0,
+      "defense_mode": true
     }
   ],
   "series": [
@@ -673,6 +673,11 @@
       "date": "2026-08-20",
       "bot": 95.83,
       "btc_hold": 88.41
+    },
+    {
+      "date": "2026-08-22",
+      "bot": 96.96,
+      "btc_hold": 93.92
     }
   ]
 }
