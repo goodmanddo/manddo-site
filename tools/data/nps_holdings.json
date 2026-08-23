@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-22T19:32:56",
+  "generated_at": "2026-08-23T19:32:51",
   "window_days": 60,
-  "count": 154,
+  "count": 151,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -830,21 +830,6 @@
       "day_change": -6.04
     },
     {
-      "date": "20260623",
-      "corp_name": "POSCO홀딩스",
-      "stock_code": "005490",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260623000336",
-      "stkrt": "8.30",
-      "stkrt_irds": "0.01",
-      "stkrt_asof": "2026-06-23",
-      "first_report": "2024-10-30",
-      "is_new": false,
-      "price": 310000,
-      "day_change": -3.58
-    },
-    {
       "date": "20260701",
       "corp_name": "산일전기",
       "stock_code": "062040",
@@ -918,21 +903,6 @@
       "is_new": false,
       "price": 222000,
       "day_change": 1.14
-    },
-    {
-      "date": "20260623",
-      "corp_name": "CJ제일제당",
-      "stock_code": "097950",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260623000341",
-      "stkrt": "8.14",
-      "stkrt_irds": "0.33",
-      "stkrt_asof": "2026-06-23",
-      "first_report": "2024-10-07",
-      "is_new": false,
-      "price": 184000,
-      "day_change": -0.43
     },
     {
       "date": "20260701",
@@ -1323,21 +1293,6 @@
       "is_new": false,
       "price": 122100,
       "day_change": -2.63
-    },
-    {
-      "date": "20260623",
-      "corp_name": "한화오션",
-      "stock_code": "042660",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260623000338",
-      "stkrt": "6.66",
-      "stkrt_irds": "0.19",
-      "stkrt_asof": "2026-06-23",
-      "first_report": "2026-03-10",
-      "is_new": false,
-      "price": 84200,
-      "day_change": -4.86
     },
     {
       "date": "20260701",
