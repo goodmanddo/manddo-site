@@ -1,53 +1,77 @@
 {
   "last_holdings": {
+    "000100": {
+      "name": "유한양행",
+      "qty": 31,
+      "avg_price": 82900,
+      "current_price": 84300,
+      "opened_at": "2026-08-24"
+    },
+    "035420": {
+      "name": "NAVER",
+      "qty": 4,
+      "avg_price": 231000,
+      "current_price": 223500,
+      "opened_at": "2026-08-24"
+    },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 35650,
+      "current_price": 36500,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 33,
       "avg_price": 115753,
-      "current_price": 109980,
+      "current_price": 105995,
       "opened_at": "2026-06-09"
+    },
+    "180640": {
+      "name": "한진칼",
+      "qty": 8,
+      "avg_price": 121400,
+      "current_price": 121500,
+      "opened_at": "2026-08-24"
     },
     "229200": {
       "name": "KODEX 코스닥150",
       "qty": 64,
       "avg_price": 14960,
-      "current_price": 13810,
+      "current_price": 14075,
       "opened_at": "2026-08-18"
+    },
+    "266420": {
+      "name": "KODEX 헬스케어",
+      "qty": 113,
+      "avg_price": 17660,
+      "current_price": 18020,
+      "opened_at": "2026-08-24"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 42,
       "avg_price": 27819,
-      "current_price": 26295,
+      "current_price": 26235,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 47,
       "avg_price": 27716,
-      "current_price": 28450,
+      "current_price": 29065,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 27,
       "avg_price": 52973,
-      "current_price": 48060,
+      "current_price": 48030,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-06-02",
-      "total_eval": 19635266
-    },
     {
       "date": "2026-06-03",
       "total_eval": 19635266
@@ -283,6 +307,10 @@
     {
       "date": "2026-08-21",
       "total_eval": 18443451
+    },
+    {
+      "date": "2026-08-24",
+      "total_eval": 18439061
     }
   ],
   "completed_trades": [
