@@ -1,71 +1,85 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.8,
-  "week_return": -0.18,
-  "day_return": -0.02,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -8.12,
+  "week_return": -2.22,
+  "day_return": -0.34,
+  "today_realized_avg": -7.99,
+  "today_trade_count": 2,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 43,
-  "total_trades": 61,
-  "ai_commentary": "오늘은 유한양행, NAVER, 한진칼 등 신규 편입. 시작 이후 누적 -7.8%.",
+  "today_loss_count": 2,
+  "win_rate": 41,
+  "total_trades": 63,
+  "ai_commentary": "오늘은 유한양행, 한진칼, KODEX 헬스케어 등 신규 편입. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 -8.1%.",
   "new_buys": [
     {
       "name": "유한양행",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.69,
+      "entry_to_current_pct": 0.48,
       "weight_pct": 14,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
-    },
-    {
-      "name": "NAVER",
-      "slug": "naver",
-      "market": "코스피",
-      "entry_to_current_pct": -3.25,
-      "weight_pct": 5,
-      "hold_days": 0,
-      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
       "name": "한진칼",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.08,
+      "entry_to_current_pct": 0.74,
       "weight_pct": 5,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "KODEX 헬스케어",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.04,
+      "entry_to_current_pct": 0.65,
       "weight_pct": 11,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
+    }
+  ],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "NAVER",
+      "slug": "naver",
+      "market": "코스피",
+      "return_pct": -7.79,
+      "hold_days": 1,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     },
     {
+      "type": "loss",
       "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -5.92,
-      "weight_pct": 5,
-      "hold_days": 6,
-      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+      "return_pct": -8.19,
+      "hold_days": 7,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
+  "weekly_losses": [
+    {
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "return_pct": -8.19,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    },
+    {
+      "name": "NAVER",
+      "slug": "naver",
+      "return_pct": -7.79,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 19
+      "weight_pct": 20
     },
     {
       "name": "유한양행",
@@ -104,29 +118,13 @@
       "weight_pct": 6
     },
     {
-      "name": "NAVER",
-      "slug": "naver",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
       "name": "한진칼",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-14",
-      "cumulative_return": -7.66
-    },
     {
       "date": "2026-07-15",
       "cumulative_return": -5.3
@@ -242,6 +240,10 @@
     {
       "date": "2026-08-24",
       "cumulative_return": -7.8
+    },
+    {
+      "date": "2026-08-25",
+      "cumulative_return": -8.12
     }
   ]
 }
