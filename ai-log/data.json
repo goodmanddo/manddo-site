@@ -1,65 +1,46 @@
 {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "start_date": "2026-05-03",
-  "cumulative_return": -8.12,
-  "week_return": -0.34,
-  "day_return": -0.34,
-  "today_realized_avg": -7.99,
-  "today_trade_count": 2,
+  "cumulative_return": -6.95,
+  "week_return": 0.92,
+  "day_return": 1.27,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 2,
+  "today_loss_count": 0,
   "win_rate": 41,
   "total_trades": 63,
-  "ai_commentary": "오늘은 유한양행, 한진칼, KODEX 헬스케어 등 신규 편입. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 -8.1%.",
+  "ai_commentary": "오늘은 유한양행, 한진칼, KODEX 헬스케어 등 신규 편입. 시작 이후 누적 -7.0%.",
   "new_buys": [
     {
       "name": "유한양행",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.48,
+      "entry_to_current_pct": 4.58,
       "weight_pct": 14,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "한진칼",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.74,
-      "weight_pct": 5,
-      "hold_days": 1,
+      "entry_to_current_pct": 6.1,
+      "weight_pct": 6,
+      "hold_days": 2,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "KODEX 헬스케어",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.65,
+      "entry_to_current_pct": 2.15,
       "weight_pct": 11,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "NAVER",
-      "slug": "naver",
-      "market": "코스피",
-      "return_pct": -7.79,
-      "hold_days": 1,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "KODEX 코스닥150",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -8.19,
-      "hold_days": 7,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "KODEX 코스닥150",
@@ -112,23 +93,19 @@
       "weight_pct": 7
     },
     {
-      "name": "TIGER 미국S&P500",
+      "name": "한진칼",
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
     },
     {
-      "name": "한진칼",
+      "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 6
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-15",
-      "cumulative_return": -5.3
-    },
     {
       "date": "2026-07-16",
       "cumulative_return": -8.5
@@ -244,6 +221,10 @@
     {
       "date": "2026-08-25",
       "cumulative_return": -8.12
+    },
+    {
+      "date": "2026-08-26",
+      "cumulative_return": -6.95
     }
   ]
 }
