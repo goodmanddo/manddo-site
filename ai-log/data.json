@@ -1,42 +1,42 @@
 {
-  "date": "2026-08-26",
+  "date": "2026-08-27",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.95,
-  "week_return": 1.27,
-  "day_return": 1.27,
+  "cumulative_return": -7.58,
+  "week_return": 0.59,
+  "day_return": -0.68,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 41,
   "total_trades": 63,
-  "ai_commentary": "오늘은 유한양행, 한진칼, KODEX 헬스케어 등 신규 편입. 시작 이후 누적 -7.0%.",
+  "ai_commentary": "오늘은 유한양행, 한진칼, KODEX 헬스케어 등 신규 편입. 시작 이후 누적 -7.6%.",
   "new_buys": [
     {
       "name": "유한양행",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 4.58,
+      "entry_to_current_pct": -0.24,
       "weight_pct": 14,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "한진칼",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 6.1,
-      "weight_pct": 6,
-      "hold_days": 2,
+      "entry_to_current_pct": 4.28,
+      "weight_pct": 5,
+      "hold_days": 3,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "KODEX 헬스케어",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.15,
+      "entry_to_current_pct": 1.56,
       "weight_pct": 11,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     }
   ],
@@ -60,7 +60,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 20
+      "weight_pct": 21
     },
     {
       "name": "유한양행",
@@ -93,23 +93,19 @@
       "weight_pct": 7
     },
     {
-      "name": "한진칼",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 6
-    },
-    {
       "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
+    },
+    {
+      "name": "한진칼",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 5
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-16",
-      "cumulative_return": -8.5
-    },
     {
       "date": "2026-07-17",
       "cumulative_return": -8.5
@@ -225,6 +221,10 @@
     {
       "date": "2026-08-26",
       "cumulative_return": -6.95
+    },
+    {
+      "date": "2026-08-27",
+      "cumulative_return": -7.58
     }
   ]
 }
