@@ -1,67 +1,49 @@
 {
   "last_holdings": {
-    "000100": {
-      "name": "유한양행",
-      "qty": 31,
-      "avg_price": 82900,
-      "current_price": 82700,
-      "opened_at": "2026-08-24"
-    },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 36900,
+      "current_price": 37100,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 35,
       "avg_price": 115038,
-      "current_price": 109135,
+      "current_price": 107180,
       "opened_at": "2026-06-09"
     },
     "180640": {
       "name": "한진칼",
       "qty": 8,
       "avg_price": 121400,
-      "current_price": 126600,
-      "opened_at": "2026-08-24"
-    },
-    "266420": {
-      "name": "KODEX 헬스케어",
-      "qty": 113,
-      "avg_price": 17660,
-      "current_price": 17935,
+      "current_price": 131300,
       "opened_at": "2026-08-24"
     },
     "360750": {
       "name": "TIGER 미국S&P500",
       "qty": 42,
       "avg_price": 27819,
-      "current_price": 26365,
+      "current_price": 26280,
       "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 47,
       "avg_price": 27716,
-      "current_price": 28730,
+      "current_price": 28390,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 27,
       "avg_price": 52973,
-      "current_price": 48465,
+      "current_price": 47885,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-06-17",
-      "total_eval": 19525671
-    },
     {
       "date": "2026-06-18",
       "total_eval": 19520151
@@ -297,6 +279,10 @@
     {
       "date": "2026-08-27",
       "total_eval": 18483586
+    },
+    {
+      "date": "2026-08-28",
+      "total_eval": 18480259
     }
   ],
   "completed_trades": [
@@ -790,6 +776,22 @@
       "date": "2026-08-25",
       "is_win": false,
       "hold_days": 7
+    },
+    {
+      "name": "유한양행",
+      "code": "000100",
+      "return_pct": 2.29,
+      "date": "2026-08-28",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "KODEX 헬스케어",
+      "code": "266420",
+      "return_pct": 1.16,
+      "date": "2026-08-28",
+      "is_win": true,
+      "hold_days": 4
     }
   ]
 }

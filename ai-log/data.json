@@ -1,46 +1,47 @@
 {
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.58,
-  "week_return": -0.68,
-  "day_return": -0.68,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -7.6,
+  "week_return": -0.69,
+  "day_return": -0.02,
+  "today_realized_avg": 1.73,
+  "today_trade_count": 2,
+  "today_win_count": 2,
   "today_loss_count": 0,
-  "win_rate": 41,
-  "total_trades": 63,
-  "ai_commentary": "오늘은 유한양행, 한진칼, KODEX 헬스케어 등 신규 편입. 시작 이후 누적 -7.6%.",
+  "win_rate": 43,
+  "total_trades": 65,
+  "ai_commentary": "오늘은 한진칼 등 신규 편입. 2건 익절로 수익 확정. 시작 이후 누적 -7.6%.",
   "new_buys": [
-    {
-      "name": "유한양행",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -0.24,
-      "weight_pct": 14,
-      "hold_days": 3,
-      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
-    },
     {
       "name": "한진칼",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 4.28,
-      "weight_pct": 5,
-      "hold_days": 3,
+      "entry_to_current_pct": 8.15,
+      "weight_pct": 6,
+      "hold_days": 4,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+    }
+  ],
+  "exits": [
+    {
+      "type": "win",
+      "name": "유한양행",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 2.29,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     },
     {
+      "type": "win",
       "name": "KODEX 헬스케어",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.56,
-      "weight_pct": 11,
-      "hold_days": 3,
-      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
+      "return_pct": 1.16,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [
     {
       "name": "KODEX 코스닥150",
@@ -60,19 +61,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 21
-    },
-    {
-      "name": "유한양행",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 14
-    },
-    {
-      "name": "KODEX 헬스케어",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 11
+      "weight_pct": 20
     },
     {
       "name": "한국가스공사",
@@ -93,23 +82,19 @@
       "weight_pct": 7
     },
     {
-      "name": "TIGER 미국S&P500",
+      "name": "한진칼",
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
     },
     {
-      "name": "한진칼",
+      "name": "TIGER 미국S&P500",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
+      "weight_pct": 6
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-17",
-      "cumulative_return": -8.5
-    },
     {
       "date": "2026-07-20",
       "cumulative_return": -9.39
@@ -225,6 +210,10 @@
     {
       "date": "2026-08-27",
       "cumulative_return": -7.58
+    },
+    {
+      "date": "2026-08-28",
+      "cumulative_return": -7.6
     }
   ]
 }
