@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-21T15:20:10",
-  "n_rounds": 9,
-  "n_paired": 1,
+  "generated_at": "2026-08-28T15:20:11",
+  "n_rounds": 10,
+  "n_paired": 2,
   "paired_stock": {
-    "n": 1,
-    "winrate": 0,
-    "mean": -7.07,
-    "cum": -7.1
+    "n": 2,
+    "winrate": 50,
+    "mean": -2.39,
+    "cum": -4.8
   },
   "paired_etf": {
-    "n": 1,
-    "winrate": 0,
-    "mean": -6.7,
-    "cum": -6.7
+    "n": 2,
+    "winrate": 50,
+    "mean": -2.77,
+    "cum": -5.5
   },
   "rounds": [
     {
@@ -95,6 +95,15 @@
       "stock_ret": -7.07,
       "etf_name": "KODEX 에너지화학",
       "etf_ret": -6.7
+    },
+    {
+      "buy_date": "2026-08-24",
+      "sell_date": "2026-08-28",
+      "round": 17,
+      "stock_name": "유한양행",
+      "stock_ret": 2.29,
+      "etf_name": "KODEX 헬스케어",
+      "etf_ret": 1.16
     }
   ]
 }
