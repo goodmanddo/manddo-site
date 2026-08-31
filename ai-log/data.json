@@ -1,67 +1,83 @@
 {
-  "date": "2026-08-28",
+  "date": "2026-08-31",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.6,
-  "week_return": -0.02,
-  "day_return": -0.02,
-  "today_realized_avg": 1.73,
-  "today_trade_count": 2,
-  "today_win_count": 2,
+  "cumulative_return": -6.47,
+  "week_return": 1.2,
+  "day_return": 1.22,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 43,
   "total_trades": 65,
-  "ai_commentary": "오늘은 한진칼 등 신규 편입. 2건 익절로 수익 확정. 시작 이후 누적 -7.6%.",
+  "ai_commentary": "오늘은 삼성전자, 동국제약, KODEX 반도체 등 신규 편입. 시작 이후 누적 -6.5%.",
   "new_buys": [
+    {
+      "name": "삼성전자",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 5.05,
+      "weight_pct": 15,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "동국제약",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 2.06,
+      "weight_pct": 1,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
+    {
+      "name": "KODEX 반도체",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 5.24,
+      "weight_pct": 11,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
+    {
+      "name": "아이패밀리에스씨",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.69,
+      "weight_pct": 1,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
     {
       "name": "한진칼",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 8.15,
+      "entry_to_current_pct": 9.56,
       "weight_pct": 6,
-      "hold_days": 4,
+      "hold_days": 7,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
   ],
-  "exits": [
-    {
-      "type": "win",
-      "name": "유한양행",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 2.29,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    },
-    {
-      "type": "win",
-      "name": "KODEX 헬스케어",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 1.16,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    }
-  ],
-  "weekly_losses": [
-    {
-      "name": "KODEX 코스닥150",
-      "slug": "",
-      "return_pct": -8.19,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    },
-    {
-      "name": "NAVER",
-      "slug": "naver",
-      "return_pct": -7.79,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    }
-  ],
+  "exits": [],
+  "weekly_losses": [],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
       "weight_pct": 20
+    },
+    {
+      "name": "삼성전자",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 15
+    },
+    {
+      "name": "KODEX 반도체",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 11
     },
     {
       "name": "한국가스공사",
@@ -92,13 +108,21 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 6
+    },
+    {
+      "name": "동국제약",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 1
+    },
+    {
+      "name": "아이패밀리에스씨",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 1
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-20",
-      "cumulative_return": -9.39
-    },
     {
       "date": "2026-07-21",
       "cumulative_return": -9.06
@@ -214,6 +238,10 @@
     {
       "date": "2026-08-28",
       "cumulative_return": -7.6
+    },
+    {
+      "date": "2026-08-31",
+      "cumulative_return": -6.47
     }
   ]
 }
