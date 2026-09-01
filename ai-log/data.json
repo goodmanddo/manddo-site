@@ -1,65 +1,73 @@
 {
-  "date": "2026-08-31",
+  "date": "2026-09-01",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.47,
-  "week_return": 1.22,
-  "day_return": 1.22,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -6.54,
+  "week_return": 1.14,
+  "day_return": -0.07,
+  "today_realized_avg": -6.07,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 43,
-  "total_trades": 65,
-  "ai_commentary": "오늘은 삼성전자, 동국제약, KODEX 반도체 등 신규 편입. 시작 이후 누적 -6.5%.",
+  "today_loss_count": 1,
+  "win_rate": 42,
+  "total_trades": 66,
+  "ai_commentary": "오늘은 삼성전자, 동국제약, KODEX 반도체 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -6.5%.",
   "new_buys": [
     {
       "name": "삼성전자",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 5.05,
+      "entry_to_current_pct": 5.45,
       "weight_pct": 15,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "동국제약",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.06,
+      "entry_to_current_pct": 0.46,
       "weight_pct": 1,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 5.24,
+      "entry_to_current_pct": 5.27,
       "weight_pct": 11,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "아이패밀리에스씨",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.69,
+      "entry_to_current_pct": 1.08,
       "weight_pct": 1,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
-    },
-    {
-      "name": "한진칼",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 9.56,
-      "weight_pct": 6,
-      "hold_days": 7,
-      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "TIGER 미국S&P500",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -6.07,
+      "hold_days": 85,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "TIGER 미국S&P500",
+      "slug": "",
+      "return_pct": -6.07,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
   "holdings": [
     {
       "name": "KODEX 200",
@@ -104,12 +112,6 @@
       "weight_pct": 6
     },
     {
-      "name": "TIGER 미국S&P500",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 6
-    },
-    {
       "name": "동국제약",
       "slug": "",
       "market": "코스피",
@@ -123,10 +125,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-21",
-      "cumulative_return": -9.06
-    },
     {
       "date": "2026-07-22",
       "cumulative_return": -9.0
@@ -242,6 +240,10 @@
     {
       "date": "2026-08-31",
       "cumulative_return": -6.47
+    },
+    {
+      "date": "2026-09-01",
+      "cumulative_return": -6.54
     }
   ]
 }

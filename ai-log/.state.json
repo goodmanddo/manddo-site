@@ -4,78 +4,67 @@
       "name": "삼성전자",
       "qty": 11,
       "avg_price": 247500,
-      "current_price": 260000,
+      "current_price": 261000,
       "opened_at": "2026-08-31"
     },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 37450,
+      "current_price": 37500,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 35,
       "avg_price": 115038,
-      "current_price": 107615,
+      "current_price": 107885,
       "opened_at": "2026-06-09"
     },
     "086450": {
       "name": "동국제약",
       "qty": 12,
       "avg_price": 21800,
-      "current_price": 22250,
+      "current_price": 21900,
       "opened_at": "2026-08-31"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 16,
       "avg_price": 118475,
-      "current_price": 124680,
+      "current_price": 124720,
       "opened_at": "2026-08-31"
     },
     "114840": {
       "name": "아이패밀리에스씨",
       "qty": 26,
       "avg_price": 10140,
-      "current_price": 10070,
+      "current_price": 10250,
       "opened_at": "2026-08-31"
     },
     "180640": {
       "name": "한진칼",
       "qty": 8,
       "avg_price": 121400,
-      "current_price": 133000,
+      "current_price": 129800,
       "opened_at": "2026-08-24"
-    },
-    "360750": {
-      "name": "TIGER 미국S&P500",
-      "qty": 42,
-      "avg_price": 27819,
-      "current_price": 26130,
-      "opened_at": "2026-06-08"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 47,
       "avg_price": 27716,
-      "current_price": 27425,
+      "current_price": 27435,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 27,
       "avg_price": 52973,
-      "current_price": 47720,
+      "current_price": 47300,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-06-25",
-      "total_eval": 19566841
-    },
     {
       "date": "2026-06-26",
       "total_eval": 19342560
@@ -311,6 +300,10 @@
     {
       "date": "2026-08-31",
       "total_eval": 18705224
+    },
+    {
+      "date": "2026-09-01",
+      "total_eval": 18691754
     }
   ],
   "completed_trades": [
@@ -820,6 +813,14 @@
       "date": "2026-08-28",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "TIGER 미국S&P500",
+      "code": "360750",
+      "return_pct": -6.07,
+      "date": "2026-09-01",
+      "is_win": false,
+      "hold_days": 85
     }
   ]
 }
