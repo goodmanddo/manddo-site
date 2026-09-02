@@ -4,71 +4,53 @@
       "name": "삼성전자",
       "qty": 11,
       "avg_price": 247500,
-      "current_price": 261000,
+      "current_price": 250500,
       "opened_at": "2026-08-31"
     },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 37500,
+      "current_price": 37000,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 35,
       "avg_price": 115038,
-      "current_price": 107885,
+      "current_price": 103500,
       "opened_at": "2026-06-09"
     },
     "086450": {
       "name": "동국제약",
       "qty": 12,
       "avg_price": 21800,
-      "current_price": 21900,
+      "current_price": 21850,
       "opened_at": "2026-08-31"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 16,
       "avg_price": 118475,
-      "current_price": 124720,
+      "current_price": 121100,
       "opened_at": "2026-08-31"
-    },
-    "114840": {
-      "name": "아이패밀리에스씨",
-      "qty": 26,
-      "avg_price": 10140,
-      "current_price": 10250,
-      "opened_at": "2026-08-31"
-    },
-    "180640": {
-      "name": "한진칼",
-      "qty": 8,
-      "avg_price": 121400,
-      "current_price": 129800,
-      "opened_at": "2026-08-24"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 47,
       "avg_price": 27716,
-      "current_price": 27435,
+      "current_price": 26635,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 27,
       "avg_price": 52973,
-      "current_price": 47300,
+      "current_price": 47120,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-06-30",
-      "total_eval": 19339467
-    },
     {
       "date": "2026-07-01",
       "total_eval": 19374337
@@ -304,6 +286,10 @@
     {
       "date": "2026-09-01",
       "total_eval": 18691754
+    },
+    {
+      "date": "2026-09-02",
+      "total_eval": 18321785
     }
   ],
   "completed_trades": [
@@ -821,6 +807,22 @@
       "date": "2026-09-01",
       "is_win": false,
       "hold_days": 85
+    },
+    {
+      "name": "아이패밀리에스씨",
+      "code": "114840",
+      "return_pct": -5.23,
+      "date": "2026-09-02",
+      "is_win": false,
+      "hold_days": 2
+    },
+    {
+      "name": "한진칼",
+      "code": "180640",
+      "return_pct": 10.71,
+      "date": "2026-09-02",
+      "is_win": true,
+      "hold_days": 9
     }
   ]
 }
