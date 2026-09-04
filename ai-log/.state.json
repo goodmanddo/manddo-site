@@ -1,60 +1,42 @@
 {
   "last_holdings": {
-    "005930": {
-      "name": "삼성전자",
-      "qty": 11,
-      "avg_price": 247500,
-      "current_price": 250000,
-      "opened_at": "2026-08-31"
-    },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 37700,
+      "current_price": 35100,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 35,
       "avg_price": 115038,
-      "current_price": 103610,
+      "current_price": 105720,
       "opened_at": "2026-06-09"
     },
     "086450": {
       "name": "동국제약",
       "qty": 12,
       "avg_price": 21800,
-      "current_price": 21800,
-      "opened_at": "2026-08-31"
-    },
-    "091160": {
-      "name": "KODEX 반도체",
-      "qty": 16,
-      "avg_price": 118475,
-      "current_price": 119330,
+      "current_price": 21600,
       "opened_at": "2026-08-31"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 47,
       "avg_price": 27716,
-      "current_price": 27155,
+      "current_price": 27280,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 27,
       "avg_price": 52973,
-      "current_price": 47130,
+      "current_price": 46920,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-07-08",
-      "total_eval": 19072868
-    },
     {
       "date": "2026-07-09",
       "total_eval": 19108253
@@ -290,6 +272,10 @@
     {
       "date": "2026-09-03",
       "total_eval": 18341125
+    },
+    {
+      "date": "2026-09-04",
+      "total_eval": 18444100
     }
   ],
   "completed_trades": [
@@ -823,6 +809,22 @@
       "date": "2026-09-02",
       "is_win": true,
       "hold_days": 9
+    },
+    {
+      "name": "삼성전자",
+      "code": "005930",
+      "return_pct": 3.43,
+      "date": "2026-09-04",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "KODEX 반도체",
+      "code": "091160",
+      "return_pct": 4.51,
+      "date": "2026-09-04",
+      "is_win": true,
+      "hold_days": 4
     }
   ]
 }

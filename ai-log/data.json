@@ -1,46 +1,47 @@
 {
-  "date": "2026-09-03",
+  "date": "2026-09-04",
   "start_date": "2026-05-03",
-  "cumulative_return": -8.29,
-  "week_return": 0.11,
-  "day_return": 0.11,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -7.78,
+  "week_return": 0.67,
+  "day_return": 0.56,
+  "today_realized_avg": 3.97,
+  "today_trade_count": 2,
+  "today_win_count": 2,
   "today_loss_count": 0,
-  "win_rate": 43,
-  "total_trades": 68,
-  "ai_commentary": "오늘은 삼성전자, 동국제약, KODEX 반도체 등 신규 편입. 시작 이후 누적 -8.3%.",
+  "win_rate": 44,
+  "total_trades": 70,
+  "ai_commentary": "오늘은 동국제약 등 신규 편입. 2건 익절로 수익 확정. 시작 이후 누적 -7.8%.",
   "new_buys": [
-    {
-      "name": "삼성전자",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 1.01,
-      "weight_pct": 15,
-      "hold_days": 3,
-      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
-    },
     {
       "name": "동국제약",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.0,
+      "entry_to_current_pct": -0.92,
       "weight_pct": 1,
-      "hold_days": 3,
+      "hold_days": 4,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    }
+  ],
+  "exits": [
+    {
+      "type": "win",
+      "name": "삼성전자",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 3.43,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     },
     {
+      "type": "win",
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.72,
-      "weight_pct": 10,
-      "hold_days": 3,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+      "return_pct": 4.51,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [
     {
       "name": "아이패밀리에스씨",
@@ -61,18 +62,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 20
-    },
-    {
-      "name": "삼성전자",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 15
-    },
-    {
-      "name": "KODEX 반도체",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 10
     },
     {
       "name": "한국가스공사",
@@ -100,10 +89,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-24",
-      "cumulative_return": -8.61
-    },
     {
       "date": "2026-07-27",
       "cumulative_return": -7.6
@@ -219,6 +204,10 @@
     {
       "date": "2026-09-03",
       "cumulative_return": -8.29
+    },
+    {
+      "date": "2026-09-04",
+      "cumulative_return": -7.78
     }
   ]
 }
