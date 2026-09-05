@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-05T16:10:00",
+  "generated_at": "2026-09-05T20:10:01",
   "period_start": "2026-04-18",
-  "period_end": "2026-09-04",
-  "days": 139,
-  "total_value": 9955245,
+  "period_end": "2026-09-05",
+  "days": 140,
+  "total_value": 9955345,
   "cash": 8791674,
   "cash_weight": 88.3,
-  "bot_return": -3.06,
+  "bot_return": -3.05,
   "btc_return": -3.2,
   "defense_pp": 0.1,
   "defense_on": true,
@@ -15,9 +15,9 @@
       "code": "KRW-BTC",
       "name": "비트코인",
       "balance": 0.00497321,
-      "value": 541607,
+      "value": 541707,
       "weight": 5.4,
-      "price": 108905000.0,
+      "price": 108925000.0,
       "trend_pct": -3.2,
       "market_status": "📈 상승 추세",
       "grid_percent": 1.8,
@@ -746,8 +746,13 @@
     },
     {
       "date": "2026-09-05",
-      "bot": 96.94,
-      "btc_hold": 96.82
+      "bot": 96.95,
+      "btc_hold": 96.88
+    },
+    {
+      "date": "2026-09-05",
+      "bot": 96.95,
+      "btc_hold": 96.83
     }
   ]
 }
