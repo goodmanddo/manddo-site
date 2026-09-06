@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-05T19:30:57",
+  "generated_at": "2026-09-06T19:30:59",
   "window_days": 60,
-  "count": 34,
+  "count": 32,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -93,21 +93,6 @@
       "is_new": false,
       "price": 12530,
       "day_change": -0.24
-    },
-    {
-      "date": "20260707",
-      "corp_name": "동아쏘시오홀딩스",
-      "stock_code": "000640",
-      "market": "코스피",
-      "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "rcept_no": "20260707000340",
-      "stkrt": "10.47",
-      "stkrt_irds": "1.01",
-      "stkrt_asof": "2025-10-01",
-      "first_report": "2025-10-01",
-      "is_new": false,
-      "price": 92600,
-      "day_change": -1.49
     },
     {
       "date": "20260901",
@@ -213,21 +198,6 @@
       "is_new": false,
       "price": 652000,
       "day_change": -1.95
-    },
-    {
-      "date": "20260707",
-      "corp_name": "코리아써키트",
-      "stock_code": "007810",
-      "market": "코스피",
-      "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "rcept_no": "20260707000347",
-      "stkrt": "9.67",
-      "stkrt_irds": "3.29",
-      "stkrt_asof": "2026-07-01",
-      "first_report": "2026-01-02",
-      "is_new": false,
-      "price": 51000,
-      "day_change": -0.78
     },
     {
       "date": "20260901",
