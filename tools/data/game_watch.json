@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-04T16:00:05",
-  "count": 3,
+  "generated_at": "2026-09-06T20:54:04",
+  "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
     {
@@ -13,7 +13,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 222000,
-      "dday": 26,
+      "dday": 24,
       "launched": false,
       "milestones": {
         "d40": {
@@ -42,7 +42,34 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 9030,
-      "dday": 41,
+      "dday": 39,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "done",
+          "ret": 0.0,
+          "excess": 0.0
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "플레이위드",
+      "code": "023770",
+      "game": "씰M2 (SEAL M2, MMORPG)",
+      "launch_date": "20261215",
+      "status": "expected",
+      "note": "2026-09 보도로 '4분기 출시 준비 돌입'(씰온라인 후속작). 구체 일자 미발표(12/15는 4분기 잠정). 코스닥 종목.",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 2870,
+      "dday": 100,
       "launched": false,
       "milestones": {
         "d40": {
@@ -67,7 +94,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 32400,
-      "dday": -9,
+      "dday": -11,
       "launched": true,
       "milestones": {
         "d40": {
