@@ -1,5 +1,12 @@
 {
   "last_holdings": {
+    "000660": {
+      "name": "SK하이닉스",
+      "qty": 2,
+      "avg_price": 1736000,
+      "current_price": 1783000,
+      "opened_at": "2026-09-07"
+    },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
@@ -7,40 +14,64 @@
       "current_price": 35100,
       "opened_at": "2026-08-13"
     },
+    "039030": {
+      "name": "이오테크닉스",
+      "qty": 4,
+      "avg_price": 461500,
+      "current_price": 456000,
+      "opened_at": "2026-09-07"
+    },
+    "062040": {
+      "name": "산일전기",
+      "qty": 5,
+      "avg_price": 199000,
+      "current_price": 198900,
+      "opened_at": "2026-09-07"
+    },
     "069500": {
       "name": "KODEX 200",
       "qty": 35,
       "avg_price": 115038,
-      "current_price": 105720,
+      "current_price": 110820,
       "opened_at": "2026-06-09"
     },
-    "086450": {
-      "name": "동국제약",
-      "qty": 12,
-      "avg_price": 21800,
-      "current_price": 21600,
-      "opened_at": "2026-08-31"
+    "086390": {
+      "name": "유니테스트",
+      "qty": 78,
+      "avg_price": 11760,
+      "current_price": 11560,
+      "opened_at": "2026-09-07"
+    },
+    "091160": {
+      "name": "KODEX 반도체",
+      "qty": 15,
+      "avg_price": 129780,
+      "current_price": 131200,
+      "opened_at": "2026-09-07"
+    },
+    "306200": {
+      "name": "세아제강",
+      "qty": 9,
+      "avg_price": 144188,
+      "current_price": 145000,
+      "opened_at": "2026-09-07"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 47,
       "avg_price": 27716,
-      "current_price": 27280,
+      "current_price": 26665,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 27,
       "avg_price": 52973,
-      "current_price": 46920,
+      "current_price": 46445,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-07-13",
-      "total_eval": 18399828
-    },
     {
       "date": "2026-07-14",
       "total_eval": 18468673
@@ -276,6 +307,10 @@
     {
       "date": "2026-09-04",
       "total_eval": 18444100
+    },
+    {
+      "date": "2026-09-07",
+      "total_eval": 18668357
     }
   ],
   "completed_trades": [
@@ -825,6 +860,14 @@
       "date": "2026-09-04",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "동국제약",
+      "code": "086450",
+      "return_pct": -5.05,
+      "date": "2026-09-07",
+      "is_win": false,
+      "hold_days": 7
     }
   ]
 }
