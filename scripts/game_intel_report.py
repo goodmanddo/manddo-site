@@ -116,7 +116,7 @@ def main():
     try:
         r = client.messages.create(
             model="claude-sonnet-4-6", max_tokens=3000,
-            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
             messages=[{"role": "user", "content": build_prompt()}],
         )
     except Exception as e:
