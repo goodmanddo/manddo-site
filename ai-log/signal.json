@@ -1,23 +1,23 @@
 {
   "us_market": {
-    "summary": "미국 증시 소폭 하락 속 반도체·기술주 강세 두드러짐 — SOXX +3.52%, XLK +0.70%로 AI·반도체 관련 섹터 독주.",
+    "summary": "미 증시 소폭 하락 속 반도체·친환경 섹터 강세 대조 — SOXX +1.64%, TAN +2.27% 반등으로 기술주 매수세 포착.",
     "indices": [
       {
         "name": "다우",
-        "change_pct": -0.51
+        "change_pct": -1.18
       },
       {
         "name": "나스닥",
-        "change_pct": -0.29
+        "change_pct": -0.32
       },
       {
         "name": "S&P 500",
-        "change_pct": -0.38
+        "change_pct": -0.58
       }
     ],
-    "fx_usd_krw": 1344.6,
-    "fx_change_pct": -0.03,
-    "sector_focus": "반도체 / 기술·테크",
+    "fx_usd_krw": 1340.8,
+    "fx_change_pct": -0.21,
+    "sector_focus": "반도체(SOXX +1.64%) / 친환경(TAN +2.27%)",
     "impacted_kr_stocks": [
       {
         "name": "삼성전자",
@@ -25,8 +25,8 @@
         "slug": "samsung-electronics",
         "sector": "반도체",
         "rank": 1,
-        "trigger": "미국 SOXX +3.52% 반도체 강세 → 파운드리·메모리 수요 회복 신호. AI칩 성능경쟁 속 삼성전자의 3나노 프로세스 수급 우위 부각.",
-        "ai_view": "미국 반도체 섹터 강한 모멘텀이 한국 메모리·파운드리 대장주로 직결. 어제 NAVER 함께 선정했으나 반도체 강세가 더욱 두드러지므로 1안으로 상향.",
+        "trigger": "미국 SOXX +1.64% 반도체 섹터 강세 → 메모리칩 수급 개선 신호. 어제 대비 지속 강도 유지.",
+        "ai_view": "미 반도체 수요 회복 신호에 삼성전자 동조 확률 높음. 메모리 가격 상승세 전개 시 추가 상승 기대.",
         "stance": "small_entry"
       },
       {
@@ -35,9 +35,9 @@
         "slug": "sk-hynix",
         "sector": "반도체",
         "rank": 2,
-        "trigger": "미국 반도체 ETF +3.52% 상승 — 메모리 칩 가격 안정화 + HBM 수요 확대 신호. 美 데이터센터 투자 가속.",
-        "ai_view": "메모리 초과공급 우려 완화 흐름 속 SK하이닉스의 고부가 HBM 포지셔닝이 부각. 어제 선정 지속 타당성 높음.",
-        "stance": "small_entry"
+        "trigger": "SOXX 반도체 강세 지속 → HBM·고부가 메모리 영역 수주 확대 가능성.",
+        "ai_view": "반도체 섹터 수익성 개선국면에서 고마진 제품 비중 확대 수혜. 기술주 매수세 이어질 경우 비교우위.",
+        "stance": "watch"
       },
       {
         "name": "삼성전기",
@@ -45,65 +45,25 @@
         "slug": "samsung-electro-mechanics",
         "sector": "반도체",
         "rank": 3,
-        "trigger": "반도체 섹터 +3.52% 상승 + 기술·테크 +0.70% 지지 → 패키징·테스트 및 부품 공급망 강화. AI 칩 패키징 박스 수요 증가.",
-        "ai_view": "메모리 강세 + 파운드리 부품 수급 타이트로 삼성전기의 고주파 패키징 수요 가시화.",
+        "trigger": "반도체 공급망 정상화 + 테크 리바운드 → BGA·패키징 소재 수요 회복.",
+        "ai_view": "반도체 기저 설비투자 선행지표로 기능. SOXX 강세 = 후속 부품·소재 수요 확대 신호.",
         "stance": "watch"
       }
     ]
   },
   "volume_surge": [
     {
-      "name": "필옵틱스",
-      "code": "161580",
-      "slug": "philoptics",
-      "volume_ratio": 7.8,
-      "price_change_pct": 29.8,
-      "context": "미국 반도체 강세(SOXX +3.52%) → 반도체 검사·광학장비 수요 확대 기대감. AI 칩 검사 장비 수급 타이트.",
-      "ai_view": "반도체 산업 장비 사이클 관점에서 필옥틱스의 검사 광학계 포지셔닝이 주목. 다만 고평가 우려로 추가 상승은 제한적.",
-      "stance": "watch"
-    },
-    {
-      "name": "나무가",
-      "code": "190510",
-      "slug": "namuga",
-      "volume_ratio": 14.8,
-      "price_change_pct": 18.7,
-      "context": "소형주 차익실현 + 기술주 회전 장면. 정보부족으로 추측성 거래 가능성 높음.",
-      "ai_view": "거래량 폭증 대비 호가 스프레드 및 유동성 위험 존재. 단기 수급장이지만 재료성 불명확.",
+      "name": "현황 파악 불가",
+      "code": "N/A",
+      "slug": "",
+      "volume_ratio": 0.0,
+      "price_change_pct": 0.0,
+      "context": "제공된 거래량 급증 종목 데이터 부재",
+      "ai_view": "한국 거래량 급증 종목 정보가 누락되어 분석 불가. 장중 실시간 거래량 모니터링 필요.",
       "stance": "avoid"
-    },
-    {
-      "name": "삼미금속",
-      "code": "012210",
-      "slug": "sammi-metals",
-      "volume_ratio": 12.7,
-      "price_change_pct": 22.2,
-      "context": "메탈·철강 ETF XME +0.20% 약세 속 역주행 → 순환주 쏠림 또는 특정 대금 이슈 추측.",
-      "ai_view": "대금 재료 불명 상황에서 고평가된 소형주. 다음날 조정 가능성.",
-      "stance": "avoid"
-    },
-    {
-      "name": "TPC로보틱스",
-      "code": "048770",
-      "slug": "tpc-robotics",
-      "volume_ratio": 11.5,
-      "price_change_pct": 10.3,
-      "context": "미국 산업·방산 ETF XLI +0.41% + 기술·테크 XLK +0.70% 동조 → 반도체 설비 자동화 로봇 수요.",
-      "ai_view": "팹 투자 사이클 강화 국면에서 로봇 공급업체로의 간접 수혜. 다만 소형주 유동성 위험.",
-      "stance": "watch"
-    },
-    {
-      "name": "SNT에너지",
-      "code": "100840",
-      "slug": "snt-energy",
-      "volume_ratio": 4.3,
-      "price_change_pct": 15.0,
-      "context": "태양광·친환경 ETF TAN +0.67% 지지 → 재정 법안 기대감 또는 ESG 기금 유입.",
-      "ai_view": "에너지 전환 트렌드 긍정적이나 단일 거래 모멘텀이 자산가치보다 클 가능성. 차익실현 유의.",
-      "stance": "watch"
     }
   ],
-  "ai_summary": "미국 반도체·기술 섹터 강세(SOXX +3.52%, XLK +0.70%)가 한국 반도체주 동조 시그널로 작동 중. 삼성전자·SK하이닉스 소액 진입 타이밍으로 판단되나, 거래량 급증 종목 대다수는 추측성 거래로 회피 권장. 섹터 깊이(반도체) 중심 포지셔닝이 장기 수익성 최적화.",
-  "date": "2026-09-08",
+  "ai_summary": "미 증시 약세 속 반도체·친환경 섹터 이중 강세로 기술주 중심 회복세 시작. 한국은 삼성전자·SK하이닉스 중심 반도체 섹터 동조 기대 → 소액 진입 및 관망 병행 추천. USD/KRW 약세(-0.21%) 수출주 추가 수익성 강화 요인.",
+  "date": "2026-09-09",
   "generated_at": "06:00"
 }
