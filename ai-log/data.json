@@ -1,84 +1,81 @@
 {
-  "date": "2026-09-07",
+  "date": "2026-09-08",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.66,
-  "week_return": 1.22,
-  "day_return": 1.22,
-  "today_realized_avg": -5.05,
-  "today_trade_count": 1,
-  "today_win_count": 0,
+  "cumulative_return": -6.24,
+  "week_return": 1.67,
+  "day_return": 0.45,
+  "today_realized_avg": -1.36,
+  "today_trade_count": 2,
+  "today_win_count": 1,
   "today_loss_count": 1,
   "win_rate": 44,
-  "total_trades": 71,
-  "ai_commentary": "오늘은 SK하이닉스, 이오테크닉스, 산일전기 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -6.7%.",
+  "total_trades": 73,
+  "ai_commentary": "오늘은 SK하이닉스, 산일전기, KODEX 반도체 등 신규 편입. 1건 익절로 수익 확정. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -6.2%.",
   "new_buys": [
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.71,
+      "entry_to_current_pct": 3.28,
       "weight_pct": 19,
-      "hold_days": 0,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
-    },
-    {
-      "name": "이오테크닉스",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -1.19,
-      "weight_pct": 10,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "산일전기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.05,
+      "entry_to_current_pct": 1.01,
       "weight_pct": 5,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
-    },
-    {
-      "name": "유니테스트",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -1.7,
-      "weight_pct": 5,
-      "hold_days": 0,
-      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.09,
+      "entry_to_current_pct": 1.35,
       "weight_pct": 11,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "세아제강",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.56,
+      "entry_to_current_pct": 2.16,
       "weight_pct": 7,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     }
   ],
   "exits": [
     {
-      "type": "loss",
-      "name": "동국제약",
+      "type": "win",
+      "name": "이오테크닉스",
       "slug": "",
       "market": "코스피",
-      "return_pct": -5.05,
-      "hold_days": 7,
+      "return_pct": 2.38,
+      "hold_days": 1,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+    },
+    {
+      "type": "loss",
+      "name": "유니테스트",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -5.1,
+      "hold_days": 1,
       "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     }
   ],
   "weekly_losses": [
+    {
+      "name": "유니테스트",
+      "slug": "",
+      "return_pct": -5.1,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    },
     {
       "name": "동국제약",
       "slug": "",
@@ -88,13 +85,13 @@
   ],
   "holdings": [
     {
-      "name": "KODEX 200",
+      "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 21
+      "weight_pct": 19
     },
     {
-      "name": "SK하이닉스",
+      "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
       "weight_pct": 19
@@ -104,12 +101,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 11
-    },
-    {
-      "name": "이오테크닉스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 10
     },
     {
       "name": "한국가스공사",
@@ -140,19 +131,9 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
-    },
-    {
-      "name": "유니테스트",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-28",
-      "cumulative_return": -10.61
-    },
     {
       "date": "2026-07-29",
       "cumulative_return": -12.07
@@ -268,6 +249,10 @@
     {
       "date": "2026-09-07",
       "cumulative_return": -6.66
+    },
+    {
+      "date": "2026-09-08",
+      "cumulative_return": -6.24
     }
   ]
 }
