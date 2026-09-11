@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T16:00:04",
+  "generated_at": "2026-09-11T16:00:06",
   "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -12,19 +12,19 @@
       "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 209500,
-      "dday": 20,
+      "price": 205500,
+      "dday": 19,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -6.7,
-          "excess": -8.4
+          "ret": -8.5,
+          "excess": -8.1
         },
         "d30": {
           "status": "done",
-          "ret": -6.7,
-          "excess": -10.6
+          "ret": -8.5,
+          "excess": -10.3
         },
         "d7": {
           "status": "pending"
@@ -41,14 +41,14 @@
       "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 9390,
-      "dday": 35,
+      "price": 9230,
+      "dday": 34,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 4.0,
-          "excess": 0.1
+          "ret": 2.2,
+          "excess": 2.1
         },
         "d30": {
           "status": "pending"
@@ -68,8 +68,8 @@
       "note": "2026-09 보도로 '4분기 출시 준비 돌입'(씰온라인 후속작). 구체 일자 미발표(12/15는 4분기 잠정). 코스닥 종목.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 2705,
-      "dday": 96,
+      "price": 2640,
+      "dday": 95,
       "launched": false,
       "milestones": {
         "d40": {
@@ -93,27 +93,27 @@
       "note": "자동등록 2026-08-08 (출처 ZDNet Korea / 뉴스핌 / 헤럴드경제 / 나무위키 (2026-08-07 쇼케이스 공식 발표))",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 34850,
-      "dday": -15,
+      "price": 35000,
+      "dday": -16,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 36.7,
-          "excess": 30.9
+          "ret": 37.3,
+          "excess": 35.4
         },
         "d30": {
           "status": "done",
-          "ret": 28.6,
-          "excess": 17.7
+          "ret": 29.2,
+          "excess": 22.3
         },
         "d7": {
           "status": "done",
-          "ret": 7.2,
-          "excess": 6.3
+          "ret": 7.7,
+          "excess": 10.4
         }
       },
-      "post_ret": 2.5
+      "post_ret": 2.9
     }
   ]
 }
