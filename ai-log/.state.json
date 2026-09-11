@@ -1,67 +1,49 @@
 {
   "last_holdings": {
-    "000660": {
-      "name": "SK하이닉스",
-      "qty": 2,
-      "avg_price": 1736000,
-      "current_price": 1853000,
-      "opened_at": "2026-09-07"
-    },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 36500,
+      "current_price": 37000,
       "opened_at": "2026-08-13"
     },
     "062040": {
       "name": "산일전기",
       "qty": 5,
       "avg_price": 199000,
-      "current_price": 196200,
+      "current_price": 198600,
       "opened_at": "2026-09-07"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 33,
       "avg_price": 115038,
-      "current_price": 111865,
+      "current_price": 109500,
       "opened_at": "2026-06-09"
-    },
-    "091160": {
-      "name": "KODEX 반도체",
-      "qty": 15,
-      "avg_price": 129780,
-      "current_price": 136920,
-      "opened_at": "2026-09-07"
     },
     "306200": {
       "name": "세아제강",
       "qty": 9,
       "avg_price": 144188,
-      "current_price": 147900,
+      "current_price": 150600,
       "opened_at": "2026-09-07"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 49,
       "avg_price": 27678,
-      "current_price": 26800,
+      "current_price": 26490,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 28,
       "avg_price": 52743,
-      "current_price": 46210,
+      "current_price": 45910,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-07-29",
-      "total_eval": 17585841
-    },
     {
       "date": "2026-07-30",
       "total_eval": 17489451
@@ -297,6 +279,10 @@
     {
       "date": "2026-09-10",
       "total_eval": 19019531
+    },
+    {
+      "date": "2026-09-11",
+      "total_eval": 18761868
     }
   ],
   "completed_trades": [
@@ -870,6 +856,22 @@
       "date": "2026-09-08",
       "is_win": false,
       "hold_days": 1
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "return_pct": 4.38,
+      "date": "2026-09-11",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "KODEX 반도체",
+      "code": "091160",
+      "return_pct": -0.51,
+      "date": "2026-09-11",
+      "is_win": false,
+      "hold_days": 4
     }
   ]
 }

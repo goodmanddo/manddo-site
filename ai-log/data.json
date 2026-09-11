@@ -1,55 +1,47 @@
 {
-  "date": "2026-09-10",
+  "date": "2026-09-11",
   "start_date": "2026-05-03",
-  "cumulative_return": -4.9,
-  "week_return": -0.2,
-  "day_return": -0.2,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
-  "today_loss_count": 0,
+  "cumulative_return": -6.19,
+  "week_return": -1.55,
+  "day_return": -1.35,
+  "today_realized_avg": 1.94,
+  "today_trade_count": 2,
+  "today_win_count": 1,
+  "today_loss_count": 1,
   "win_rate": 44,
-  "total_trades": 73,
-  "ai_commentary": "오늘은 SK하이닉스, 산일전기, KODEX 반도체 등 신규 편입. 시작 이후 누적 -4.9%.",
+  "total_trades": 75,
+  "ai_commentary": "오늘은 산일전기, 세아제강 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -6.2%.",
   "new_buys": [
-    {
-      "name": "SK하이닉스",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 6.74,
-      "weight_pct": 19,
-      "hold_days": 3,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
-    },
     {
       "name": "산일전기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.41,
+      "entry_to_current_pct": -0.2,
       "weight_pct": 5,
-      "hold_days": 3,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
-    },
-    {
-      "name": "KODEX 반도체",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 5.5,
-      "weight_pct": 11,
-      "hold_days": 3,
+      "hold_days": 4,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "세아제강",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.57,
+      "entry_to_current_pct": 4.45,
       "weight_pct": 7,
-      "hold_days": 3,
+      "hold_days": 4,
       "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     }
   ],
-  "exits": [],
+  "exits": [
+    {
+      "type": "win",
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 4.38,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+    }
+  ],
   "weekly_losses": [
     {
       "name": "유니테스트",
@@ -66,22 +58,10 @@
   ],
   "holdings": [
     {
-      "name": "SK하이닉스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 19
-    },
-    {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
       "weight_pct": 19
-    },
-    {
-      "name": "KODEX 반도체",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 11
     },
     {
       "name": "한국가스공사",
@@ -115,10 +95,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-07-31",
-      "cumulative_return": -8.64
-    },
     {
       "date": "2026-08-03",
       "cumulative_return": -10.27
@@ -234,6 +210,10 @@
     {
       "date": "2026-09-10",
       "cumulative_return": -4.9
+    },
+    {
+      "date": "2026-09-11",
+      "cumulative_return": -6.19
     }
   ]
 }
