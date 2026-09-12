@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-11T19:31:22",
+  "generated_at": "2026-09-12T19:31:06",
   "window_days": 60,
-  "count": 33,
+  "count": 32,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -243,21 +243,6 @@
       "is_new": false,
       "price": 12680,
       "day_change": -1.55
-    },
-    {
-      "date": "20260713",
-      "corp_name": "현대해상",
-      "stock_code": "001450",
-      "market": "코스피",
-      "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "rcept_no": "20260713000335",
-      "stkrt": "9.42",
-      "stkrt_irds": "0.02",
-      "stkrt_asof": "2026-07-01",
-      "first_report": "2025-01-06",
-      "is_new": false,
-      "price": 51300,
-      "day_change": 1.79
     },
     {
       "date": "20260826",
