@@ -21,9 +21,9 @@ import subprocess
 from datetime import date, datetime
 from pathlib import Path
 
-# 환경변수 없으면 키 파일에서 로드 (launchd는 .zprofile을 읽지 않음)
+# 키 파일을 진실의 소스로 우선 사용 (환경변수에 옛 키가 박혀 있어도 파일 키로 덮어씀)
 _kf = os.path.expanduser("~/stock_auto_trade/.anthropic_key")
-if not os.environ.get("ANTHROPIC_API_KEY") and os.path.isfile(_kf):
+if os.path.isfile(_kf):
     os.environ["ANTHROPIC_API_KEY"] = open(_kf).read().strip()
 
 ROOT = Path.home() / "manddo-site"
@@ -175,8 +175,11 @@ def generate_content(today, us, events):
         "아래는 오늘 새벽 미국 증시 마감 데이터야. 숫자를 그대로 나열하지 말고, "
         "'무슨 일이 있었나 → 뭐가 좋았고 뭐가 나빴나 → 왜 그런가 → 그래서 한국 시장엔 "
         "어떤 의미인가'를 쉬운 말로 풀어줘. 전문용어(예: SOXX, 필수소비)는 괄호로 짧게 "
-        "풀이. 3문단, 각 문단 2~3문장. 겁주지 말고 담담하게.\n\n"
-        "그리고 똑같은 내용을 몽골어(키릴)로도 써줘. events는 몽골어 번역만.\n\n"
+        "풀이. 3문단, 각 문단 2~3문장. 겁주지 말고 담담하게.\n"
+        "말투는 정중한 존댓말 해설체('~합니다/~했어요/~입니다')로. 반말('~했어/~야') 절대 "
+        "금지. 쉽지만 예의 있게.\n\n"
+        "그리고 똑같은 내용을 자연스러운 현대 몽골어(키릴)로도 써줘(오타·어색한 표현 없이). "
+        "events는 몽골어 번역만.\n\n"
         "설명 없이 아래 형식의 JSON만 출력:\n"
         '{"headline_ko":"...", "story_ko":["문단1","문단2","문단3"], '
         '"headline_mn":"...", "story_mn":["...","...","..."], '
@@ -188,7 +191,7 @@ def generate_content(today, us, events):
         client = anthropic.Anthropic(api_key=key)
         resp = client.messages.create(
             model=HAIKU_MODEL,
-            max_tokens=2000,
+            max_tokens=4000,
             messages=[{"role": "user", "content": prompt}],
         )
         txt = resp.content[0].text.strip()
