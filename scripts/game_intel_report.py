@@ -2,11 +2,11 @@
 """
 게임주 주간 인텔리전스 리포트 — web_search로 신작 일정 + 매출 성과 조사 → 텔레그램.
 
-주 1회 LaunchAgent(com.mandoo.game-intel)로 실행:
+하루 2회(09:00·22:00) LaunchAgent(com.mandoo.game-intel)로 실행:
   1) 국내 상장(코스피/코스닥) 게임사의 향후 ~3개월 신작 출시 일정 (이미 추적중 외 신규는 🆕)
   2) 추적/주요 상장사 게임의 최근 구글플레이 매출순위 대략 위치·성과 뉴스
-결과를 만또에게 텔레그램으로 전송 → 만또가 확인 후 upcoming_game_launches.json에 반영.
-(자동으로 사이트에 반영하지 않음 — 게임 일정·순위는 오류·변동이 많아 사람이 한 번 거른다.)
+결과를 텔레그램으로 전송 + game_intel.json(리포트·순위)은 자동 commit/push → /game-watch/ 반영.
+단, 신작 출시 '일정'(upcoming_game_launches.json)은 오류가 많아 사람이 확인 후 수동 반영한다.
 
 매출순위 정확도는 무료 web_search 특성상 '대략'이며, 없는 수치를 지어내지 않도록 프롬프트로 강제.
 """
