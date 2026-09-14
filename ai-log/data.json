@@ -1,61 +1,39 @@
 {
-  "date": "2026-09-11",
+  "date": "2026-09-14",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.19,
-  "week_return": -1.35,
-  "day_return": -1.35,
-  "today_realized_avg": 1.94,
-  "today_trade_count": 2,
+  "cumulative_return": -6.98,
+  "week_return": -2.18,
+  "day_return": -0.84,
+  "today_realized_avg": 5.14,
+  "today_trade_count": 1,
   "today_win_count": 1,
-  "today_loss_count": 1,
-  "win_rate": 44,
-  "total_trades": 75,
-  "ai_commentary": "오늘은 산일전기, 세아제강 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -6.2%.",
+  "today_loss_count": 0,
+  "win_rate": 45,
+  "total_trades": 76,
+  "ai_commentary": "오늘은 산일전기 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -7.0%.",
   "new_buys": [
     {
       "name": "산일전기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.2,
+      "entry_to_current_pct": -0.5,
       "weight_pct": 5,
-      "hold_days": 4,
+      "hold_days": 7,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
-    },
-    {
-      "name": "세아제강",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 4.45,
-      "weight_pct": 7,
-      "hold_days": 4,
-      "reason": "차트 구조 안정화와 수급 균형 회복으로 편입."
     }
   ],
   "exits": [
     {
       "type": "win",
-      "name": "SK하이닉스",
+      "name": "세아제강",
       "slug": "",
       "market": "코스피",
-      "return_pct": 4.38,
-      "hold_days": 4,
+      "return_pct": 5.14,
+      "hold_days": 7,
       "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "weekly_losses": [
-    {
-      "name": "유니테스트",
-      "slug": "",
-      "return_pct": -5.1,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    },
-    {
-      "name": "동국제약",
-      "slug": "",
-      "return_pct": -5.05,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    }
-  ],
+  "weekly_losses": [],
   "holdings": [
     {
       "name": "KODEX 200",
@@ -65,12 +43,6 @@
     },
     {
       "name": "한국가스공사",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 7
-    },
-    {
-      "name": "세아제강",
       "slug": "",
       "market": "코스피",
       "weight_pct": 7
@@ -95,10 +67,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-03",
-      "cumulative_return": -10.27
-    },
     {
       "date": "2026-08-04",
       "cumulative_return": -9.67
@@ -214,6 +182,10 @@
     {
       "date": "2026-09-11",
       "cumulative_return": -6.19
+    },
+    {
+      "date": "2026-09-14",
+      "cumulative_return": -6.98
     }
   ]
 }
