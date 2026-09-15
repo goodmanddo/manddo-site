@@ -4,43 +4,32 @@
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 36800,
+      "current_price": 36900,
       "opened_at": "2026-08-13"
-    },
-    "062040": {
-      "name": "산일전기",
-      "qty": 5,
-      "avg_price": 199000,
-      "current_price": 198000,
-      "opened_at": "2026-09-07"
     },
     "069500": {
       "name": "KODEX 200",
-      "qty": 33,
-      "avg_price": 115038,
-      "current_price": 105410,
+      "qty": 35,
+      "avg_price": 114469,
+      "current_price": 104275,
       "opened_at": "2026-06-09"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 49,
       "avg_price": 27678,
-      "current_price": 26270,
+      "current_price": 26255,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 28,
       "avg_price": 52743,
-      "current_price": 45935,
+      "current_price": 46140,
       "opened_at": "2026-06-08"
     }
   },
   "history": [
-    {
-      "date": "2026-08-06",
-      "total_eval": 18159448
-    },
     {
       "date": "2026-08-07",
       "total_eval": 18104669
@@ -276,6 +265,10 @@
     {
       "date": "2026-09-14",
       "total_eval": 18604616
+    },
+    {
+      "date": "2026-09-15",
+      "total_eval": 18522606
     }
   ],
   "completed_trades": [
@@ -873,6 +866,14 @@
       "date": "2026-09-14",
       "is_win": true,
       "hold_days": 7
+    },
+    {
+      "name": "산일전기",
+      "code": "062040",
+      "return_pct": -5.48,
+      "date": "2026-09-15",
+      "is_win": false,
+      "hold_days": 8
     }
   ]
 }

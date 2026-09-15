@@ -1,45 +1,42 @@
 {
-  "date": "2026-09-14",
+  "date": "2026-09-15",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.98,
-  "week_return": -0.84,
-  "day_return": -0.84,
-  "today_realized_avg": 5.14,
+  "cumulative_return": -7.39,
+  "week_return": -1.28,
+  "day_return": -0.44,
+  "today_realized_avg": -5.48,
   "today_trade_count": 1,
-  "today_win_count": 1,
-  "today_loss_count": 0,
-  "win_rate": 45,
-  "total_trades": 76,
-  "ai_commentary": "오늘은 산일전기 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -7.0%.",
-  "new_buys": [
+  "today_win_count": 0,
+  "today_loss_count": 1,
+  "win_rate": 44,
+  "total_trades": 77,
+  "ai_commentary": "1건은 손절 규칙에 따라 정리. 시작 이후 누적 -7.4%.",
+  "new_buys": [],
+  "exits": [
     {
+      "type": "loss",
       "name": "산일전기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.5,
-      "weight_pct": 5,
-      "hold_days": 7,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+      "return_pct": -5.48,
+      "hold_days": 8,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
     }
   ],
-  "exits": [
+  "weekly_losses": [
     {
-      "type": "win",
-      "name": "세아제강",
+      "name": "산일전기",
       "slug": "",
-      "market": "코스피",
-      "return_pct": 5.14,
-      "hold_days": 7,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+      "return_pct": -5.48,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     }
   ],
-  "weekly_losses": [],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 19
+      "weight_pct": 20
     },
     {
       "name": "한국가스공사",
@@ -58,19 +55,9 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 7
-    },
-    {
-      "name": "산일전기",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-05",
-      "cumulative_return": -8.56
-    },
     {
       "date": "2026-08-06",
       "cumulative_return": -9.2
@@ -182,6 +169,10 @@
     {
       "date": "2026-09-14",
       "cumulative_return": -6.98
+    },
+    {
+      "date": "2026-09-15",
+      "cumulative_return": -7.39
     }
   ]
 }
