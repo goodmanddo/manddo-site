@@ -1,28 +1,18 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-09-16",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.39,
-  "week_return": -0.44,
-  "day_return": -0.44,
-  "today_realized_avg": -5.48,
-  "today_trade_count": 1,
+  "cumulative_return": -6.96,
+  "week_return": 0.01,
+  "day_return": 0.46,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 77,
-  "ai_commentary": "1건은 손절 규칙에 따라 정리. 시작 이후 누적 -7.4%.",
+  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 -7.0%.",
   "new_buys": [],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "산일전기",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -5.48,
-      "hold_days": 8,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "산일전기",
@@ -58,10 +48,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-10",
-      "cumulative_return": -9.34
-    },
     {
       "date": "2026-08-11",
       "cumulative_return": -9.14
@@ -165,6 +151,10 @@
     {
       "date": "2026-09-15",
       "cumulative_return": -7.39
+    },
+    {
+      "date": "2026-09-16",
+      "cumulative_return": -6.96
     }
   ]
 }
