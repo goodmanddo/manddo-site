@@ -1,16 +1,16 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.96,
-  "week_return": 0.46,
-  "day_return": 0.46,
+  "cumulative_return": -6.83,
+  "week_return": 0.61,
+  "day_return": 0.15,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 77,
-  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 -7.0%.",
+  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 -6.8%.",
   "new_buys": [],
   "exits": [],
   "weekly_losses": [
@@ -48,10 +48,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-13",
-      "cumulative_return": -6.36
-    },
     {
       "date": "2026-08-14",
       "cumulative_return": -5.4
@@ -147,6 +143,10 @@
     {
       "date": "2026-09-16",
       "cumulative_return": -6.96
+    },
+    {
+      "date": "2026-09-17",
+      "cumulative_return": -6.83
     }
   ]
 }
