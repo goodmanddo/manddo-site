@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T19:31:13",
+  "generated_at": "2026-09-18T19:31:15",
   "window_days": 60,
   "count": 35,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
@@ -16,8 +16,8 @@
       "stkrt_asof": "2026-04-01",
       "first_report": "2025-01-06",
       "is_new": false,
-      "price": 101800,
-      "day_change": 0.1
+      "price": 102800,
+      "day_change": 2.09
     },
     {
       "date": "20260723",
@@ -31,8 +31,8 @@
       "stkrt_asof": "2026-04-01",
       "first_report": "2025-10-01",
       "is_new": false,
-      "price": 9760,
-      "day_change": -0.31
+      "price": 9660,
+      "day_change": -0.72
     },
     {
       "date": "20260901",
@@ -46,8 +46,8 @@
       "stkrt_asof": "2026-06-01",
       "first_report": "2024-12-02",
       "is_new": false,
-      "price": 323500,
-      "day_change": -0.31
+      "price": 327000,
+      "day_change": 1.24
     },
     {
       "date": "20260917",
@@ -61,8 +61,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 97400,
-      "day_change": -3.47
+      "price": 98700,
+      "day_change": 2.49
     },
     {
       "date": "20260803",
@@ -76,8 +76,8 @@
       "stkrt_asof": "2026-03-25",
       "first_report": "2024-12-02",
       "is_new": false,
-      "price": 513000,
-      "day_change": 2.19
+      "price": 504000,
+      "day_change": -2.14
     },
     {
       "date": "20260901",
@@ -91,8 +91,8 @@
       "stkrt_asof": "2026-06-01",
       "first_report": "2025-01-06",
       "is_new": false,
-      "price": 1288000,
-      "day_change": 2.14
+      "price": 1297000,
+      "day_change": 0.7
     },
     {
       "date": "20260723",
@@ -106,8 +106,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-07-02",
       "is_new": false,
-      "price": 11690,
-      "day_change": -0.51
+      "price": 11790,
+      "day_change": 1.11
     },
     {
       "date": "20260917",
@@ -121,8 +121,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-01-06",
       "is_new": false,
-      "price": 204500,
-      "day_change": 1.74
+      "price": 209000,
+      "day_change": 2.2
     },
     {
       "date": "20260901",
@@ -136,8 +136,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 126400,
-      "day_change": 1.69
+      "price": 125300,
+      "day_change": 0.0
     },
     {
       "date": "20260821",
@@ -151,8 +151,8 @@
       "stkrt_asof": "2025-10-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 111100,
-      "day_change": 2.02
+      "price": 110200,
+      "day_change": -0.99
     },
     {
       "date": "20260803",
@@ -166,8 +166,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-10-01",
       "is_new": false,
-      "price": 2869000,
-      "day_change": 2.25
+      "price": 2888000,
+      "day_change": 0.94
     },
     {
       "date": "20260731",
@@ -182,7 +182,7 @@
       "first_report": "2025-01-06",
       "is_new": false,
       "price": 51500,
-      "day_change": -1.9
+      "day_change": -0.19
     },
     {
       "date": "20260810",
@@ -196,8 +196,8 @@
       "stkrt_asof": "2025-12-01",
       "first_report": "2024-12-12",
       "is_new": false,
-      "price": 53600,
-      "day_change": 11.55
+      "price": 51600,
+      "day_change": -2.64
     },
     {
       "date": "20260731",
@@ -211,8 +211,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 121900,
-      "day_change": 0.74
+      "price": 119900,
+      "day_change": -1.64
     },
     {
       "date": "20260901",
@@ -226,8 +226,8 @@
       "stkrt_asof": "2026-04-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 712000,
-      "day_change": 6.91
+      "price": 740000,
+      "day_change": 4.52
     },
     {
       "date": "20260901",
@@ -241,8 +241,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 56700,
-      "day_change": 6.18
+      "price": 57100,
+      "day_change": 0.88
     },
     {
       "date": "20260914",
@@ -256,8 +256,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2026-07-01",
       "is_new": false,
-      "price": 24000,
-      "day_change": -0.21
+      "price": 23250,
+      "day_change": -3.12
     },
     {
       "date": "20260826",
@@ -271,8 +271,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2026-01-02",
       "is_new": false,
-      "price": 12330,
-      "day_change": 1.07
+      "price": 12260,
+      "day_change": -0.24
     },
     {
       "date": "20260914",
@@ -286,8 +286,8 @@
       "stkrt_asof": "2026-04-01",
       "first_report": "2026-01-02",
       "is_new": false,
-      "price": 152900,
-      "day_change": 6.11
+      "price": 149500,
+      "day_change": -1.77
     },
     {
       "date": "20260813",
@@ -301,8 +301,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-07-02",
       "is_new": false,
-      "price": 16000,
-      "day_change": -1.3
+      "price": 17810,
+      "day_change": 12.08
     },
     {
       "date": "20260731",
@@ -316,8 +316,8 @@
       "stkrt_asof": "2026-07-31",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 466500,
-      "day_change": 0.11
+      "price": 464500,
+      "day_change": 0.65
     },
     {
       "date": "20260901",
@@ -331,8 +331,8 @@
       "stkrt_asof": "2026-01-02",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 54700,
-      "day_change": 0.18
+      "price": 55000,
+      "day_change": 1.29
     },
     {
       "date": "20260803",
@@ -346,8 +346,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2025-01-03",
       "is_new": false,
-      "price": 87900,
-      "day_change": -0.23
+      "price": 88800,
+      "day_change": 1.37
     },
     {
       "date": "20260917",
@@ -361,8 +361,8 @@
       "stkrt_asof": "2026-03-17",
       "first_report": "2025-03-04",
       "is_new": false,
-      "price": 144300,
-      "day_change": -0.21
+      "price": 143000,
+      "day_change": -0.07
     },
     {
       "date": "20260908",
@@ -376,8 +376,8 @@
       "stkrt_asof": "2026-09-08",
       "first_report": "2025-07-02",
       "is_new": false,
-      "price": 471500,
-      "day_change": 7.04
+      "price": 461500,
+      "day_change": -1.7
     },
     {
       "date": "20260810",
@@ -391,8 +391,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-02-03",
       "is_new": false,
-      "price": 36700,
-      "day_change": 0.0
+      "price": 37200,
+      "day_change": 1.64
     },
     {
       "date": "20260803",
@@ -406,8 +406,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 269000,
-      "day_change": -0.74
+      "price": 268000,
+      "day_change": 0.0
     },
     {
       "date": "20260731",
@@ -421,8 +421,8 @@
       "stkrt_asof": "2026-07-31",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 86400,
-      "day_change": 3.1
+      "price": 85400,
+      "day_change": 0.0
     },
     {
       "date": "20260803",
@@ -436,8 +436,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2026-08-03",
       "is_new": true,
-      "price": 181100,
-      "day_change": 2.2
+      "price": 179900,
+      "day_change": -0.22
     },
     {
       "date": "20260803",
@@ -451,8 +451,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2026-08-03",
       "is_new": true,
-      "price": 123000,
-      "day_change": 2.93
+      "price": 123400,
+      "day_change": 0.9
     },
     {
       "date": "20260731",
@@ -466,8 +466,8 @@
       "stkrt_asof": "2026-07-31",
       "first_report": "2026-07-31",
       "is_new": true,
-      "price": 1402000,
-      "day_change": -0.5
+      "price": 1398000,
+      "day_change": 0.14
     },
     {
       "date": "20260901",
@@ -481,8 +481,8 @@
       "stkrt_asof": "2026-09-01",
       "first_report": "2024-12-02",
       "is_new": false,
-      "price": 169100,
-      "day_change": 0.42
+      "price": 165700,
+      "day_change": -1.31
     },
     {
       "date": "20260826",
@@ -496,8 +496,8 @@
       "stkrt_asof": "2026-08-26",
       "first_report": "2025-07-02",
       "is_new": false,
-      "price": 27100,
-      "day_change": 1.88
+      "price": 26700,
+      "day_change": -0.93
     },
     {
       "date": "20260731",
@@ -511,8 +511,8 @@
       "stkrt_asof": "2026-07-31",
       "first_report": "2025-01-07",
       "is_new": false,
-      "price": 1131000,
-      "day_change": -0.26
+      "price": 1133000,
+      "day_change": 0.89
     },
     {
       "date": "20260803",
@@ -526,8 +526,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2026-08-03",
       "is_new": true,
-      "price": 15690,
-      "day_change": 4.32
+      "price": 15570,
+      "day_change": 0.19
     }
   ]
 }
