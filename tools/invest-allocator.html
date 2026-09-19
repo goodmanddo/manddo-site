@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월급 투자 배분 계산기 — 월급의 몇 %를 종목별로 얼마씩 | 만또 투자 인사이트</title>
+<meta name="description" content="월급과 투자 비율(%)을 넣으면 투자할 금액이 나오고, 종목별 비중대로 매달 얼마씩 사면 되는지 자동 계산. 종목은 +/− 로 추가·삭제. 만또 추천 배분 프리셋도 제공.">
+<meta name="keywords" content="월급투자, 투자배분계산기, 적립식투자, 분산투자, 포트폴리오 계산기, 월급 몇퍼센트 투자">
+<meta property="og:title" content="월급 투자 배분 계산기 — 매달 종목별 얼마씩">
+<meta property="og:description" content="월급 × 투자비율(%) = 투자금. 종목 비중대로 매달 매수 금액을 자동 배분.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/tools/invest-allocator.html">
+<link rel="canonical" href="https://manddo.kr/tools/invest-allocator.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.calc-hero{margin:8px 0 20px}
+.calc-hero h1{font-size:26px;font-weight:800;color:#191f28;letter-spacing:-0.04em;margin:0 0 8px}
+.calc-hero .lead{font-size:15px;line-height:1.7;color:#4e5968;margin:0}
+.calc-form{background:#fff;border:1px solid #eef0f3;border-radius:20px;padding:26px 22px;margin:16px 0}
+.sec-title{font-size:18px;font-weight:800;color:#191f28;letter-spacing:-0.02em;margin:30px 0 6px;display:flex;align-items:center;gap:8px}
+.sec-sub{font-size:13px;color:#8b95a1;margin:0 0 8px}
+.field{margin-bottom:20px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:13px;font-weight:700;color:#191f28;margin-bottom:8px}
+.field .hint{font-size:12px;color:#8b95a1;margin-top:6px;line-height:1.5}
+.input-row{display:flex;align-items:center;gap:10px}
+.input-row input[type=number],.input-row input[type=text]{
+  flex:1;min-width:0;padding:13px 15px;font-size:16px;font-weight:600;border:1px solid #eef0f3;
+  border-radius:12px;color:#191f28;font-family:inherit;background:#fafbfc;-moz-appearance:textfield}
+.input-row input::-webkit-outer-spin-button,.input-row input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.input-row input:focus{outline:none;border-color:#3182F6;background:#fff;box-shadow:0 0 0 3px rgba(49,130,246,.1)}
+.input-row .unit{font-size:15px;font-weight:700;color:#4e5968;white-space:nowrap}
+.chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.chip{background:#fff;border:1px solid #eef0f3;border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600;color:#4e5968;cursor:pointer;font-family:inherit}
+.chip:hover{background:#f2f4f6}
+.stock-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.stock-row input.name{flex:1.7}
+.stock-row input.weight{width:78px;flex:none;text-align:center}
+.stock-row .wunit{font-size:13px;color:#8b95a1;font-weight:700;margin-left:-4px}
+.iconbtn{width:38px;height:38px;flex:none;border:1px solid #eef0f3;background:#fff;border-radius:11px;font-size:20px;font-weight:700;color:#4e5968;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+.iconbtn:hover{background:#f2f4f6;border-color:#d1d6db}
+.iconbtn.rm:hover{background:#fff1f0;border-color:#ffccc7;color:#cf1322}
+.addbtn{width:100%;padding:12px;border:1px dashed #c9d2dc;background:#fafbfc;border-radius:12px;font-size:14px;font-weight:700;color:#3182F6;cursor:pointer;font-family:inherit;margin-top:4px}
+.addbtn:hover{background:#f2f7ff;border-color:#3182F6}
+.wsum{font-size:12.5px;color:#8b95a1;margin-top:8px}
+.wsum b{color:#4e5968}
+.result-box{background:linear-gradient(135deg,#EBF4FF,#F4F9FF);border-radius:20px;padding:24px 22px;margin:16px 0}
+.result-label{font-size:12px;font-weight:700;color:#1B64DA;letter-spacing:0.06em}
+.result-amount{font-size:36px;font-weight:800;color:#191f28;letter-spacing:-0.04em;line-height:1.1;margin:4px 0 2px}
+.result-amount .unit{font-size:18px;color:#4e5968;font-weight:700;margin-left:3px}
+.result-sub{font-size:13px;color:#6b7684;font-weight:500}
+.alloc{background:#fff;border:1px solid #eef0f3;border-radius:16px;padding:6px 18px;margin:14px 0}
+.alloc-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #f2f4f6}
+.alloc-item:last-child{border-bottom:none}
+.alloc-item .nm{font-size:15px;font-weight:700;color:#191f28}
+.alloc-item .nm .pw{font-size:12px;font-weight:700;color:#8b95a1;margin-left:6px}
+.alloc-item .amt{font-size:16px;font-weight:800;color:#1B64DA}
+.alloc-empty{padding:22px 4px;text-align:center;color:#8b95a1;font-size:13.5px}
+.manddo-card{background:#fff;border:1px solid #d3e3ff;border-radius:20px;padding:24px 22px;margin:16px 0}
+.preset-list{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.preset-tag{background:#EBF4FF;border:1px solid #d3e3ff;border-radius:999px;padding:7px 13px;font-size:13px;font-weight:700;color:#1B64DA}
+.preset-tag span{color:#5b8def;font-weight:600;margin-left:5px}
+.disclaimer{font-size:12.5px;color:#8b95a1;line-height:1.7;background:#fafbfc;border:1px solid #eef0f3;border-radius:14px;padding:16px 18px;margin:22px 0}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/macro/">📰 오늘의 시장</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/crypto/">₿ 비트코인</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/etf/">📊 ETF</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/" class="active">머니 툴</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <a class="back-btn" href="/tools/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+  <div class="breadcrumb"><a href="/tools/">머니 툴</a><span class="sep">/</span>월급 투자 배분 계산기</div>
+
+  <section class="calc-hero">
+    <h1>💸 월급 투자 배분 계산기</h1>
+    <p class="lead">월급과 "그중 몇 %를 투자할지"를 넣으면 투자할 금액이 나오고, 종목 비중대로 <b>매달 얼마씩 사면 되는지</b> 자동으로 나눠 드립니다. 예) 월급 100만원 · 10% → 10만원을 종목별로 배분.</p>
+  </section>
+
+  <!-- ── 기본 버전 ── -->
+  <div class="sec-title">✏️ 기본 버전 <span style="font-size:12px;font-weight:600;color:#8b95a1">직접 입력</span></div>
+  <p class="sec-sub">종목은 + 버튼으로 추가, − 버튼으로 삭제할 수 있어요. 비중은 합이 100이 아니어도 비율대로 자동 배분됩니다.</p>
+  <div class="calc-form">
+    <div class="field">
+      <label>월급 (세후 실수령 기준 권장)</label>
+      <div class="input-row"><input type="number" id="b-salary" inputmode="numeric" placeholder="1000000" value="1000000"><span class="unit">원</span></div>
+      <div class="chip-row">
+        <button class="chip" data-t="b-salary" data-v="2000000">200만</button>
+        <button class="chip" data-t="b-salary" data-v="3000000">300만</button>
+        <button class="chip" data-t="b-salary" data-v="4000000">400만</button>
+      </div>
+    </div>
+    <div class="field">
+      <label>투자 비율</label>
+      <div class="input-row"><input type="number" id="b-pct" inputmode="decimal" placeholder="10" value="10"><span class="unit">%</span></div>
+      <div class="chip-row">
+        <button class="chip" data-t="b-pct" data-v="5">5%</button>
+        <button class="chip" data-t="b-pct" data-v="10">10%</button>
+        <button class="chip" data-t="b-pct" data-v="20">20%</button>
+        <button class="chip" data-t="b-pct" data-v="30">30%</button>
+      </div>
+    </div>
+    <div class="field">
+      <label>종목 & 비중</label>
+      <div id="b-stocks"></div>
+      <button class="addbtn" id="b-add">＋ 종목 추가</button>
+      <div class="wsum" id="b-wsum"></div>
+    </div>
+  </div>
+  <div class="result-box">
+    <div class="result-label">매달 투자할 금액</div>
+    <div class="result-amount"><span id="b-budget">0</span><span class="unit">원</span></div>
+    <div class="result-sub" id="b-budget-sub">월급의 0%</div>
+  </div>
+  <div class="alloc" id="b-alloc"></div>
+
+  <!-- ── 만또 버전 ── -->
+  <div class="sec-title">🧭 만또 버전 <span style="font-size:12px;font-weight:600;color:#8b95a1">종목·비중 프리셋</span></div>
+  <p class="sec-sub">만또가 종목과 비중을 미리 세팅해 둔 버전이에요. 월급과 비율만 넣으면 이 구성대로 매달 얼마씩 사면 되는지 나옵니다.</p>
+  <div class="manddo-card">
+    <div style="font-size:15px;font-weight:800;color:#191f28" id="m-title"></div>
+    <div class="preset-list" id="m-preset"></div>
+    <div class="field" style="margin-top:16px">
+      <label>월급</label>
+      <div class="input-row"><input type="number" id="m-salary" inputmode="numeric" placeholder="1000000" value="1000000"><span class="unit">원</span></div>
+    </div>
+    <div class="field">
+      <label>투자 비율</label>
+      <div class="input-row"><input type="number" id="m-pct" inputmode="decimal" placeholder="10" value="10"><span class="unit">%</span></div>
+    </div>
+    <div class="wsum" id="m-note"></div>
+  </div>
+  <div class="result-box">
+    <div class="result-label">만또 버전 · 매달 투자할 금액</div>
+    <div class="result-amount"><span id="m-budget">0</span><span class="unit">원</span></div>
+    <div class="result-sub" id="m-budget-sub"></div>
+  </div>
+  <div class="alloc" id="m-alloc"></div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    본 계산기는 입력값에 따른 단순 금액 배분 도구이며, 특정 종목의 매수·매도를 권유하지 않습니다. 실제 매수 시 1주 단위·최소 거래금액·수수료·세금으로 금액이 달라질 수 있습니다. 투자 판단과 결과는 투자자 본인의 책임입니다.
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+<script>
+(function(){
+  // ── 만또 버전 프리셋 (여기 종목·비중만 바꾸면 됨) ──
+  const MANDDO = {
+    title: "만또 추천 배분 (예시)",
+    stocks: [
+      {name:"KODEX 200", w:40},
+      {name:"삼성전자", w:20},
+      {name:"SK하이닉스", w:20},
+      {name:"한국가스공사", w:20}
+    ]
+  };
+
+  const won = n => Math.round(n).toLocaleString('ko-KR');
+  const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  const val = id => parseFloat(document.getElementById(id).value) || 0;
+
+  function allocHTML(budget, stocks){
+    const sumW = stocks.reduce((a,s)=>a + (s.w>0?s.w:0), 0);
+    if(budget<=0 || sumW<=0)
+      return '<div class="alloc-empty">월급·투자 비율·종목 비중을 입력하면 종목별 매수 금액이 나옵니다.</div>';
+    return stocks.filter(s=>s.w>0).map(s=>{
+      const amt = budget * s.w / sumW;
+      const p = s.w / sumW * 100;
+      return `<div class="alloc-item"><span class="nm">${esc(s.name||'종목')}<span class="pw">${p.toFixed(0)}%</span></span><span class="amt">${won(amt)}원</span></div>`;
+    }).join('');
+  }
+
+  // ── 기본 버전 ──
+  const bStocks = document.getElementById('b-stocks');
+  function rowHTML(name='', w=50){
+    return `<div class="stock-row">
+      <input type="text" class="name" placeholder="종목명 (예: 삼성전자)" value="${esc(name)}">
+      <input type="number" class="weight" inputmode="decimal" value="${w}"><span class="wunit">%</span>
+      <button class="iconbtn rm" title="삭제">−</button>
+    </div>`;
+  }
+  function readStocks(){
+    return [...bStocks.querySelectorAll('.stock-row')].map(r=>({
+      name: r.querySelector('.name').value.trim(),
+      w: parseFloat(r.querySelector('.weight').value) || 0
+    }));
+  }
+  function calcBasic(){
+    const budget = val('b-salary') * val('b-pct')/100;
+    document.getElementById('b-budget').textContent = won(budget);
+    document.getElementById('b-budget-sub').textContent = `월급 ${won(val('b-salary'))}원의 ${val('b-pct')}%`;
+    const stocks = readStocks();
+    document.getElementById('b-alloc').innerHTML = allocHTML(budget, stocks);
+    const sumW = stocks.reduce((a,s)=>a+(s.w>0?s.w:0),0);
+    document.getElementById('b-wsum').innerHTML =
+      `비중 합계 <b>${sumW}%</b> ${sumW===100?'✓':'— 합이 100이 아니어도 비율대로 자동 배분돼요'}`;
+  }
+  bStocks.innerHTML = rowHTML('삼성전자',50) + rowHTML('SK하이닉스',50);
+  document.getElementById('b-add').addEventListener('click', ()=>{
+    bStocks.insertAdjacentHTML('beforeend', rowHTML('',0));
+    calcBasic();
+  });
+  bStocks.addEventListener('click', e=>{
+    if(e.target.classList.contains('rm')){
+      if(bStocks.querySelectorAll('.stock-row').length<=1) return; // 최소 1개
+      e.target.closest('.stock-row').remove();
+      calcBasic();
+    }
+  });
+  document.querySelector('.page').addEventListener('input', e=>{
+    if(e.target.closest('#b-stocks') || ['b-salary','b-pct'].includes(e.target.id)) calcBasic();
+    if(['m-salary','m-pct'].includes(e.target.id)) calcManddo();
+  });
+  document.querySelectorAll('.chip[data-t]').forEach(c=>c.addEventListener('click',()=>{
+    document.getElementById(c.dataset.t).value = c.dataset.v;
+    calcBasic();
+  }));
+
+  // ── 만또 버전 ──
+  document.getElementById('m-title').textContent = MANDDO.title;
+  document.getElementById('m-preset').innerHTML = MANDDO.stocks
+    .map(s=>`<span class="preset-tag">${esc(s.name)}<span>${s.w}%</span></span>`).join('');
+  function calcManddo(){
+    const budget = val('m-salary') * val('m-pct')/100;
+    document.getElementById('m-budget').textContent = won(budget);
+    document.getElementById('m-budget-sub').textContent = `${MANDDO.title} · ${MANDDO.stocks.length}종목 배분`;
+    document.getElementById('m-alloc').innerHTML = allocHTML(budget, MANDDO.stocks);
+  }
+
+  calcBasic();
+  calcManddo();
+})();
+</script>
+</body>
+</html>
