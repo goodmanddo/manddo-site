@@ -24,20 +24,21 @@
 .field label{display:block;font-size:13px;font-weight:700;color:#191f28;margin-bottom:8px}
 .field .hint{font-size:12px;color:#8b95a1;margin-top:6px;line-height:1.5}
 .input-row{display:flex;align-items:center;gap:10px}
-.input-row input[type=number],.input-row input[type=text]{
+.input-row input[type=number],.input-row input[type=text],.stock-row input{
   flex:1;min-width:0;padding:13px 15px;font-size:16px;font-weight:600;border:1px solid #eef0f3;
-  border-radius:12px;color:#191f28;font-family:inherit;background:#fafbfc;-moz-appearance:textfield}
-.input-row input::-webkit-outer-spin-button,.input-row input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-.input-row input:focus{outline:none;border-color:#3182F6;background:#fff;box-shadow:0 0 0 3px rgba(49,130,246,.1)}
+  border-radius:12px;color:#191f28;font-family:inherit;background:#fafbfc;box-sizing:border-box;-moz-appearance:textfield}
+.input-row input::-webkit-outer-spin-button,.input-row input::-webkit-inner-spin-button,
+.stock-row input::-webkit-outer-spin-button,.stock-row input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.input-row input:focus,.stock-row input:focus{outline:none;border-color:#3182F6;background:#fff;box-shadow:0 0 0 3px rgba(49,130,246,.1)}
 .input-row .unit{font-size:15px;font-weight:700;color:#4e5968;white-space:nowrap}
 .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .chip{background:#fff;border:1px solid #eef0f3;border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600;color:#4e5968;cursor:pointer;font-family:inherit}
 .chip:hover{background:#f2f4f6}
 .stock-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
 .stock-row input.name{flex:1.7}
-.stock-row input.weight{width:78px;flex:none;text-align:center}
-.stock-row .wunit{font-size:13px;color:#8b95a1;font-weight:700;margin-left:-4px}
-.iconbtn{width:38px;height:38px;flex:none;border:1px solid #eef0f3;background:#fff;border-radius:11px;font-size:20px;font-weight:700;color:#4e5968;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+.stock-row input.weight{width:84px;flex:none;text-align:center}
+.stock-row .wunit{font-size:14px;color:#8b95a1;font-weight:700;margin-left:-4px}
+.iconbtn{width:48px;height:48px;flex:none;border:1px solid #eef0f3;background:#fff;border-radius:12px;font-size:22px;font-weight:700;color:#4e5968;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
 .iconbtn:hover{background:#f2f4f6;border-color:#d1d6db}
 .iconbtn.rm:hover{background:#fff1f0;border-color:#ffccc7;color:#cf1322}
 .addbtn{width:100%;padding:12px;border:1px dashed #c9d2dc;background:#fafbfc;border-radius:12px;font-size:14px;font-weight:700;color:#3182F6;cursor:pointer;font-family:inherit;margin-top:4px}
@@ -53,6 +54,7 @@
 .alloc-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #f2f4f6}
 .alloc-item:last-child{border-bottom:none}
 .alloc-item .nm{font-size:15px;font-weight:700;color:#191f28}
+.alloc-item .nm .en{font-size:12.5px;font-weight:600;color:#8b95a1;margin-left:7px}
 .alloc-item .nm .pw{font-size:12px;font-weight:700;color:#8b95a1;margin-left:6px}
 .alloc-item .amt{font-size:16px;font-weight:800;color:#1B64DA}
 .alloc-empty{padding:22px 4px;text-align:center;color:#8b95a1;font-size:13.5px}
@@ -173,13 +175,13 @@
   const MANDDO = {
     title: "만또 글로벌 분산 배분",
     stocks: [
-      {name:"QQQ", w:20},
-      {name:"SCHD", w:20},
-      {name:"JEPQ", w:20},
-      {name:"인텔", w:10},
-      {name:"비트코인", w:10},
-      {name:"이더리움", w:10},
-      {name:"리플", w:10}
+      {ticker:"QQQ",  name:"Invesco QQQ Trust",             w:20},
+      {ticker:"SCHD", name:"Schwab US Dividend Equity",      w:20},
+      {ticker:"JEPQ", name:"JPMorgan Nasdaq Equity Premium", w:20},
+      {ticker:"INTC", name:"Intel",                          w:10},
+      {ticker:"BTC",  name:"Bitcoin",                        w:10},
+      {ticker:"ETH",  name:"Ethereum",                       w:10},
+      {ticker:"XRP",  name:"Ripple",                         w:10}
     ]
   };
 
@@ -194,7 +196,10 @@
     return stocks.filter(s=>s.w>0).map(s=>{
       const amt = budget * s.w / sumW;
       const p = s.w / sumW * 100;
-      return `<div class="alloc-item"><span class="nm">${esc(s.name||'종목')}<span class="pw">${p.toFixed(0)}%</span></span><span class="amt">${won(amt)}원</span></div>`;
+      const label = s.ticker
+        ? `<b>${esc(s.ticker)}</b><span class="en">${esc(s.name)}</span>`
+        : esc(s.name||'종목');
+      return `<div class="alloc-item"><span class="nm">${label}<span class="pw">${p.toFixed(0)}%</span></span><span class="amt">${won(amt)}원</span></div>`;
     }).join('');
   }
 
@@ -202,7 +207,7 @@
   const bStocks = document.getElementById('b-stocks');
   function rowHTML(name='', w=50){
     return `<div class="stock-row">
-      <input type="text" class="name" placeholder="종목명 (예: 삼성전자)" value="${esc(name)}">
+      <input type="text" class="name" placeholder="티커 또는 종목명 (예: AAPL, QQQ)" value="${esc(name)}">
       <input type="number" class="weight" inputmode="decimal" value="${w}"><span class="wunit">%</span>
       <button class="iconbtn rm" title="삭제">−</button>
     </div>`;
@@ -223,7 +228,7 @@
     document.getElementById('b-wsum').innerHTML =
       `비중 합계 <b>${sumW}%</b> ${sumW===100?'✓':'— 합이 100이 아니어도 비율대로 자동 배분돼요'}`;
   }
-  bStocks.innerHTML = rowHTML('삼성전자',50) + rowHTML('SK하이닉스',50);
+  bStocks.innerHTML = rowHTML('AAPL',50) + rowHTML('QQQ',50);
   document.getElementById('b-add').addEventListener('click', ()=>{
     bStocks.insertAdjacentHTML('beforeend', rowHTML('',0));
     calcBasic();
@@ -247,7 +252,7 @@
   // ── 만또 버전 ──
   document.getElementById('m-title').textContent = MANDDO.title;
   document.getElementById('m-preset').innerHTML = MANDDO.stocks
-    .map(s=>`<span class="preset-tag">${esc(s.name)}<span>${s.w}%</span></span>`).join('');
+    .map(s=>`<span class="preset-tag">${esc(s.ticker)}<span>${esc(s.name)} · ${s.w}%</span></span>`).join('');
   function calcManddo(){
     const budget = val('m-salary') * val('m-pct')/100;
     document.getElementById('m-budget').textContent = won(budget);

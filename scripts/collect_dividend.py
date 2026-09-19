@@ -27,45 +27,26 @@ MIN_YIELD = 1.0  # 배당수익률 1% 이상만 포함
 
 
 def parse_naver(code: str):
-    """네이버 금융 종목 페이지에서 배당수익률·PER·PBR 추출
+    """네이버 모바일 API(JSON)에서 배당수익률·PER·PBR 추출.
 
-    `.aside_invest_info` 내부 테이블 구조:
-      - 한 row의 th: "배당수익률 l 2025.12 ..." / "PER l EPS (2025.12) ..." / "PBR l BPS (2025.12) ..."
-      - 같은 row의 td: "0.72 %" / "35.42 배 l 6,564 원" / "3.63 배 l 63,997 원"
-    th의 첫 토큰만으로 라벨을 매칭한다 (날짜 2025.12 등 디스크립션 무시).
+    구 방식(finance.naver.com 종목페이지 HTML의 .aside_invest_info 테이블)은
+    네이버가 페이지를 JS 렌더로 바꾸면서 '배당수익률' 문자열이 사라져 전부 실패했다.
+    → m.stock.naver.com 통합 API의 totalInfos(code: dividendYieldRatio/per/pbr)로 교체.
+    값 예: '0.64%', '11.66배', '3.02배'.
     """
-    url = f"https://finance.naver.com/item/main.naver?code={code}"
-    r = requests.get(url, headers=UA, timeout=10)
+    url = f"https://m.stock.naver.com/api/stock/{code}/integration"
+    r = requests.get(url, headers={**UA, "Referer": "https://m.stock.naver.com/"}, timeout=10)
     if r.status_code != 200:
         return None
-    soup = BeautifulSoup(r.text, "html.parser")
-    info = soup.select_one(".aside_invest_info")
-    if not info:
-        return None
-
+    key_map = {"dividendYieldRatio": "yield", "per": "per", "pbr": "pbr"}
     result = {"yield": None, "per": None, "pbr": None}
-    for tr in info.select("tr"):
-        th = tr.select_one("th")
-        td = tr.select_one("td")
-        if not th or not td:
+    for item in r.json().get("totalInfos", []):
+        k = key_map.get(item.get("code"))
+        if not k:
             continue
-        # th 텍스트의 첫 단어(배당수익률 / PER / PBR)
-        label = th.get_text(" ", strip=True).split()[0] if th.get_text(strip=True) else ""
-        # td의 첫 숫자(소수 가능). "35.42 배 l 6,564 원" → 35.42
-        td_text = td.get_text(" ", strip=True)
-        m = re.search(r"(-?[0-9]+(?:\.[0-9]+)?)", td_text)
-        if not m:
-            continue
-        try:
-            val = float(m.group(1))
-        except ValueError:
-            continue
-        if label == "배당수익률":
-            result["yield"] = val
-        elif label == "PER":
-            result["per"] = val
-        elif label == "PBR":
-            result["pbr"] = val
+        m = re.search(r"-?[0-9]+(?:\.[0-9]+)?", (item.get("value") or "").replace(",", ""))
+        if m:
+            result[k] = float(m.group(0))
     return result
 
 
@@ -113,7 +94,7 @@ def main():
     rows.sort(key=lambda r: r["dividend_yield"], reverse=True)
     out = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-        "source": "Naver Finance + FinanceDataReader",
+        "source": "Naver Mobile API + FinanceDataReader",
         "criteria": f"KOSPI+KOSDAQ 시총 ≥ 1,000억, 배당수익률 ≥ {MIN_YIELD}%",
         "count": len(rows),
         "stocks": rows,
