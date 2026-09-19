@@ -1,23 +1,27 @@
 #!/usr/bin/env python3
 """
-오늘의 매크로 브리핑 생성 → /macro/ (한국어) + /macro/mn/ (몽골어) → git push
+오늘의 시장 = /macro/ (한국어) + /macro/mn/ (몽골어) → git push
 
-평일 07:45 LaunchAgent 실행. 06:00 morning-signal이 만든 signal.json
-(미 증시·환율·섹터·요약)과 weekly_calendar.json(경제 일정)을 재료로 삼는다.
+평일 07:45 LaunchAgent 실행. 한 페이지에 3섹션:
+  📈 주식·매크로 — 06:00 morning-signal의 signal.json + weekly_calendar.json 재활용
+  🪙 비트코인·코인 — 업비트 공개 API 시세 + 오늘 코인 이슈
+  🗣️ 화제의 목소리 — 유명 투자자·크립토 논객(VOICES 로스터) 최근 발언·시장 심리
 
-핵심: 숫자 나열이 아니라 "무슨 일이 있었나 → 뭐가 좋고 나빴나 → 왜 그런가"를
-쉬운 말로 풀어 쓴다. 숫자는 보조로만.
+핵심: 숫자 나열이 아니라 "무슨 일 → 왜 → 무슨 뜻"을 쉬운 존댓말로.
 
-토큰 절약 설계:
-  - 데이터 수집/표 렌더는 순수 파이썬 (Claude 호출 0)
-  - 하루 1회 Haiku 호출로 [쉬운 한국어 해설 + 몽골어 버전]을 한 번에 생성
-  - 이미 생성한 날짜는 캐시에서 읽어 재호출하지 않음
-  - 호출 실패 시 signal 원문 요약을 그대로 노출하고 페이지는 발행(내구성)
+데이터·비용 설계:
+  - 주식 섹션: signal.json 재활용 + Haiku 1회로 쉬운 해설+몽골어 (웹서치 없음)
+  - 코인 시세: 업비트 REST (토큰 0)
+  - 코인 이슈+화제의 목소리: 하루 1회 Sonnet+web_search로 KO·MN 동시 생성
+  - 날짜별 캐시(.cache/{날짜}.json, pulse_{날짜}.json)로 재호출 방지
+  - 각 파트 실패해도 나머지는 발행(내구성)
 """
 
 import json
 import os
+import re
 import subprocess
+import urllib.request
 from datetime import date, datetime
 from pathlib import Path
 
@@ -35,6 +39,18 @@ LOG_FILE = ROOT / "scripts" / "macro_brief.log"
 SITEMAP = ROOT / "sitemap.xml"
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
+SONNET_MODEL = "claude-sonnet-4-6"
+
+# 화제의 목소리 대상 — 만또 큐레이션 (검증된 조언 아님, 동향 관찰용)
+VOICES = (
+    "크립토: Vitalik Buterin(@VitalikButerin), CZ(@cz_binance), Anthony Pompliano(@APompliano), "
+    "The Crypto Dog(@TheCryptoDog), Watcher.Guru(@WatcherGuru); "
+    "트럼프 크립토 인맥: David Sacks(@DavidSacks), Patrick Witt; "
+    "주식·매크로: Michael Burry(@michaeljburry, 삭제 트윗은 @BurryArchive), "
+    "Liz Ann Sonders(@LizAnnSonders), Charlie Bilello(@charliebilello), Michael Saylor(@saylor)"
+)
+CRYPTO_MARKETS = [("KRW-BTC", "비트코인"), ("KRW-ETH", "이더리움"),
+                  ("KRW-XRP", "리플"), ("KRW-SOL", "솔라나")]
 
 # ── 공통 조각 ────────────────────────────────────────────────────────────────
 NAV = """<header class="site-header">
@@ -44,7 +60,7 @@ NAV = """<header class="site-header">
       <a href="/">홈</a>
       <a href="/ai-project/">🧪 AI 1년 실험</a>
       <a href="/crypto/">₿ 비트코인</a>
-      <a href="/macro/" class="active">📰 오늘 매크로</a>
+      <a href="/macro/" class="active">📰 오늘의 시장</a>
       <a href="/vs/">🏁 휴먼 vs AI</a>
       <a href="/nps/">🏛️ 국민연금</a>
       <a href="/etf/">📊 ETF</a>
@@ -250,20 +266,110 @@ def story_html(headline, paragraphs):
     return head + f'<div class="mstory">{body}</div>'
 
 
+# ── 코인 시세 (업비트 공개 API, 토큰 0) ──────────────────────────────────────
+def fetch_crypto():
+    out = []
+    for mkt, label in CRYPTO_MARKETS:
+        try:
+            u = f"https://api.upbit.com/v1/candles/days?market={mkt}&count=2"
+            req = urllib.request.Request(u, headers={"accept": "application/json"})
+            r = json.loads(urllib.request.urlopen(req, timeout=10).read())
+            price = r[0]["trade_price"]
+            prev = r[1]["trade_price"]
+            chg = (price - prev) / prev * 100 if prev else 0
+            out.append({"name": label, "price": price, "chg": chg})
+        except Exception as e:
+            log(f"코인 시세 실패 {mkt}: {e}")
+    return out
+
+
+def fmt_won(p):
+    if p >= 1e8:
+        return f"{p/1e8:.2f}억"
+    if p >= 1e4:
+        return f"{p/1e4:,.0f}만"
+    return f"{p:,.0f}"
+
+
+def crypto_stats_html(coins):
+    if not coins:
+        return ""
+    cells = []
+    for c in coins:
+        color = "#e0342b" if c["chg"] > 0 else ("#1B64DA" if c["chg"] < 0 else "#8b95a1")
+        cells.append(
+            f'<div class="mstat"><div class="lbl">{esc(c["name"])} '
+            f'<span style="color:{color}">{fmt_pct(c["chg"])}</span></div>'
+            f'<div class="val">{fmt_won(c["price"])}원</div></div>'
+        )
+    return '<div class="mstats">' + "".join(cells) + "</div>"
+
+
+# ── 코인 이슈 + 화제의 목소리 (Sonnet+web_search, 하루 1회, 캐시) ─────────────
+def generate_pulse(today, crypto):
+    """오늘 코인 시장 이슈 + 유명 계정 동향을 웹서치로 조사해 KO·MN 생성. 실패 시 None."""
+    CACHE.mkdir(parents=True, exist_ok=True)
+    cache_file = CACHE / f"pulse_{today}.json"
+    if cache_file.exists():
+        log("펄스 캐시 사용 — 웹서치 호출 스킵")
+        return json.loads(cache_file.read_text())
+
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        log("ANTHROPIC_API_KEY 없음 — 코인/화제 섹션 생략")
+        return None
+
+    coin_line = ", ".join(f"{c['name']} {fmt_pct(c['chg'])}" for c in crypto) or "(시세 없음)"
+    prompt = (
+        f"오늘 날짜: {today}. 웹 검색을 적극 사용해 '오늘 하루' 시장 상황을 조사하고, "
+        "주식 초보·외국인도 이해할 정중한 존댓말(반말 금지)로 쉽게 정리하라.\n\n"
+        f"참고 코인 시세(업비트, 전일 대비): {coin_line}\n\n"
+        "① 비트코인·암호화폐 시장: 오늘 주요 이슈·흐름을 2문단으로 쉽게. 숫자 나열 말고 "
+        "'무슨 일 → 왜 → 분위기'.\n"
+        "② 화제의 목소리: 아래 유명 계정/인물들이 최근(오늘 전후) 공개적으로 무슨 말을 했고 "
+        "시장 심리가 어떤지 2~3문단으로. 확인 안 되면 지어내지 말고 확인된 발언 위주로. "
+        "특정 코인·종목 매수 권유처럼 쓰지 말 것.\n"
+        f"대상: {VOICES}\n\n"
+        "각 항목을 한국어와 자연스러운 몽골어(키릴) 둘 다. 설명 없이 JSON만 출력:\n"
+        '{"crypto_ko":["문단","문단"],"crypto_mn":["문단","문단"],'
+        '"voices_ko":["문단","문단"],"voices_mn":["문단","문단"]}'
+    )
+    try:
+        import anthropic
+        client = anthropic.Anthropic(api_key=key)
+        resp = client.messages.create(
+            model=SONNET_MODEL, max_tokens=4000,
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
+            messages=[{"role": "user", "content": prompt}],
+        )
+        txt = "".join(getattr(b, "text", "") for b in resp.content if b.type == "text").strip()
+        m = re.search(r"\{.*\}", txt, re.S)
+        pulse = json.loads(m.group(0)) if m else None
+        if pulse:
+            cache_file.write_text(json.dumps(pulse, ensure_ascii=False, indent=2))
+            log("펄스 생성 완료 (Sonnet+web_search)")
+        return pulse
+    except Exception as e:
+        log(f"펄스 생성 실패 — 코인/화제 섹션 생략: {e}")
+        return None
+
+
 # ── 페이지 렌더 ──────────────────────────────────────────────────────────────
-def render_page(lang, today, us, events, content):
+def render_page(lang, today, us, events, content, crypto=None, pulse=None):
     is_mn = lang == "mn"
     root = "/macro/mn/" if is_mn else "/macro/"
 
     if is_mn:
         t = dict(
-            title=f"Өнөөдрийн макро тойм ({today}) | Манто",
-            desc="Өмнөх шөнийн АНУ-ын зах зээлд юу болов, юу сайн байв, яагаад — Солонгосын зах зээл нээхээс өмнө ойлгомжтой, энгийн хэлээр.",
-            back="← Буцах", crumb="Макро тойм", h1="📰 Өнөөдрийн макро тойм",
-            when="Өмнөх шөнийн АНУ-ын зах зээлийн хаалт дээр үндэслэв",
-            flow="📰 Өнөөдөр юу болов", nums="📊 Тоогоор харвал",
+            title=f"Өнөөдрийн зах зээл ({today}) — хувьцаа·крипто·яригдаж буй сэдэв | Манто",
+            desc="Өмнөх шөнийн АНУ-ын зах зээл, өнөөдрийн крипто урсгал, нэр хүндтэй хүмүүс юу яриад байгаа — бүгдийг нэг хуудсаар, энгийн хэлээр.",
+            back="← Буцах", crumb="Өнөөдрийн зах зээл", h1="📰 Өнөөдрийн зах зээл",
+            when="Хувьцаа · биткойн · яригдаж буй сэдэв · өдөр бүр",
+            flow="📈 Хувьцаа — өнөөдөр юу болов", nums="📊 АНУ-ын зах зээл тоогоор",
             cal="🗓️ Энэ долоо хоногт анхаарах зүйл",
-            disc="Энэ хуудас нь ерөнхий мэдээллийн зорилготой бөгөөд хувьцаа худалдан авах·зарах зөвлөмж биш.",
+            crypto_h="🪙 Биткойн · крипто", voices_h="🗣️ Яригдаж буй дуу хоолой",
+            voices_disc="※ Хувь хүмүүсийн нээлттэй мэдэгдэл·санал бөгөөд баталгаажсан хөрөнгө оруулалтын зөвлөгөө биш.",
+            disc="Энэ хуудас нь ерөнхий мэдээллийн зорилготой бөгөөд хувьцаа·крипто худалдан авах·зарах зөвлөмж биш.",
         )
         if content:
             headline = content.get("headline_mn", "")
@@ -273,13 +379,15 @@ def render_page(lang, today, us, events, content):
             headline, paras, cal = "", [us.get("summary", "")], cal_html(events)
     else:
         t = dict(
-            title=f"오늘의 매크로 브리핑 ({today}) — 밤사이 무슨 일이 있었나 | 만또",
-            desc="밤사이 미국 증시에 무슨 일이 있었고 뭐가 좋았는지, 그 이유를 쉬운 말로. 숫자는 보조로. 매일 아침 코스피 개장 전 업데이트.",
-            back="← 뒤로", crumb="오늘의 매크로", h1="📰 오늘의 매크로 브리핑",
-            when="밤사이 미국 증시 마감 기준",
-            flow="📰 오늘 무슨 일이 있었나", nums="📊 숫자로 보면",
+            title=f"오늘의 시장 ({today}) — 주식·비트코인·화제의 목소리 한눈에 | 만또",
+            desc="밤사이 미국 증시, 오늘 코인 시장 흐름, 유명 투자자·논객들이 무슨 얘기를 하는지까지 한 장으로 쉽게. 매일 업데이트.",
+            back="← 뒤로", crumb="오늘의 시장", h1="📰 오늘의 시장",
+            when="주식 · 비트코인 · 화제의 목소리 · 매일 업데이트",
+            flow="📈 주식 — 오늘 무슨 일이 있었나", nums="📊 미국 증시 숫자",
             cal="🗓️ 이번 주 챙길 일정",
-            disc="본 페이지는 교육·참고용 일반 정보이며 특정 종목의 매수·매도를 권유하지 않습니다.",
+            crypto_h="🪙 비트코인 · 코인", voices_h="🗣️ 화제의 목소리",
+            voices_disc="※ 유명 계정·인물들의 공개 발언·의견 요약이며, 검증된 투자 조언이 아닙니다.",
+            disc="본 페이지는 교육·참고용 일반 정보이며 특정 종목·코인의 매수·매도를 권유하지 않습니다.",
         )
         if content:
             headline = content.get("headline_ko", "")
@@ -289,6 +397,20 @@ def render_page(lang, today, us, events, content):
         cal = cal_html(events)
 
     cal_block = f'<section class="msec"><h2>{t["cal"]}</h2>{cal}</section>' if cal else ""
+
+    # 🪙 코인 + 🗣️ 화제의 목소리
+    crypto_paras = (pulse or {}).get("crypto_mn" if is_mn else "crypto_ko") or []
+    voices_paras = (pulse or {}).get("voices_mn" if is_mn else "voices_ko") or []
+    crypto_stats = crypto_stats_html(crypto or [])
+    crypto_block = ""
+    if crypto_stats or crypto_paras:
+        crypto_block = (f'<section class="msec"><h2>{t["crypto_h"]}</h2>'
+                        f'{crypto_stats}{story_html("", crypto_paras)}</section>')
+    voices_block = ""
+    if voices_paras:
+        voices_block = (f'<section class="msec"><h2>{t["voices_h"]}</h2>'
+                        f'{story_html("", voices_paras)}'
+                        f'<p class="mnote">{t["voices_disc"]}</p></section>')
 
     return f"""<!DOCTYPE html>
 <html lang="{'mn' if is_mn else 'ko'}">
@@ -331,6 +453,8 @@ def render_page(lang, today, us, events, content):
     {stats_html(us)}
   </section>
   {cal_block}
+  {crypto_block}
+  {voices_block}
   <div class="disclaimer"><b>⚠</b> {t['disc']}</div>
 </main>
 {FOOTER}
@@ -366,21 +490,22 @@ def rebuild_index(lang):
         f'<p style="color:#8b95a1">{empty}</p>'
 
     if is_mn:
-        title = "Макро тойм — Өдөр бүрийн зах зээлийн энгийн тайлбар | Манто"
-        desc = "Өмнөх шөнийн АНУ-ын зах зээлд юу болов, яагаад — өдөр бүр энгийн хэлээр. Монгол хэлээр."
-        h1, crumb = "📰 Макро тойм", "Макро тойм"
-        lead = ("Өмнөх шөнийн АНУ-ын зах зээлд юу болов, юу сайн байв, яагаад тэр вэ — "
-                "Солонгосын зах зээл нээхээс өмнө өдөр бүр энгийн хэлээр тайлбарлана. "
+        title = "Өнөөдрийн зах зээл — хувьцаа·крипто·яригдаж буй сэдэв өдөр бүр | Манто"
+        desc = "Өмнөх шөнийн АНУ-ын зах зээл, өнөөдрийн крипто урсгал, нэр хүндтэй хүмүүс юу яриад байгаа — өдөр бүр энгийн хэлээр. Монгол хэлээр."
+        h1, crumb = "📰 Өнөөдрийн зах зээл", "Өнөөдрийн зах зээл"
+        lead = ("Өмнөх шөнийн АНУ-ын зах зээл, өнөөдрийн биткойн·крипто урсгал, нэр хүндтэй "
+                "хөрөнгө оруулагч·шинжээчид юу яриад байгааг нэг хуудсаар өдөр бүр энгийн хэлээр. "
                 "Тоо биш, ойлголт руу.")
         toggle = ('<a href="/macro/">🇰🇷 한국어</a>'
                   '<a href="/macro/mn/" class="active">🇲🇳 Монгол</a>')
         arch = "Архив"
     else:
-        title = "오늘의 매크로 — 밤사이 무슨 일이 있었나, 쉽게 | 만또"
-        desc = "밤사이 미국 증시에 무슨 일이 있었고 뭐가 좋았는지, 그 이유를 쉬운 말로. 평일 아침 8시 업데이트."
-        h1, crumb = "📰 오늘의 매크로", "오늘의 매크로"
-        lead = ("밤사이 미국 증시에 무슨 일이 있었고, 뭐가 좋았고 왜 그런지를 코스피 개장 전 "
-                "아침 8시에 쉬운 말로 풀어 드립니다. 숫자 나열이 아니라 '그래서 무슨 뜻인가'를 중심으로.")
+        title = "오늘의 시장 — 주식·비트코인·화제의 목소리 매일 한눈에 | 만또"
+        desc = "밤사이 미국 증시, 오늘 코인 시장 흐름, 유명 투자자·논객들이 무슨 얘기를 하는지까지 한 장으로 쉽게. 매일 업데이트."
+        h1, crumb = "📰 오늘의 시장", "오늘의 시장"
+        lead = ("밤사이 미국 증시, 오늘 비트코인·코인 흐름, 그리고 유명 투자자·논객들이 무슨 "
+                "얘기를 하는지까지 — 매일 한 장으로 쉽게 정리합니다. 숫자 나열이 아니라 "
+                "'그래서 무슨 뜻인가'를 중심으로.")
         toggle = ('<a href="/macro/" class="active">🇰🇷 한국어</a>'
                   '<a href="/macro/mn/">🇲🇳 Монгол</a>')
         arch = "지난 브리핑"
@@ -475,9 +600,13 @@ def main():
 
     events = collect_events(load_json(AILOG / "weekly_calendar.json"), today)
     content = generate_content(today, us, events)
+    crypto = fetch_crypto()
+    pulse = generate_pulse(today, crypto)
 
-    (MACRO / f"{today}.html").write_text(render_page("ko", today, us, events, content))
-    (MACRO_MN / f"{today}.html").write_text(render_page("mn", today, us, events, content))
+    (MACRO / f"{today}.html").write_text(
+        render_page("ko", today, us, events, content, crypto, pulse))
+    (MACRO_MN / f"{today}.html").write_text(
+        render_page("mn", today, us, events, content, crypto, pulse))
     rebuild_index("ko")
     rebuild_index("mn")
     update_sitemap(today)
