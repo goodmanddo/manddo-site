@@ -163,6 +163,15 @@ def collect_events(cal, today):
     return out[:5]
 
 
+def is_krx_session(d):
+    """오늘 한국 증시가 열리는 날인가 (주말·휴일 = False → 코인 전용판)."""
+    try:
+        import exchange_calendars as ec
+        return bool(ec.get_calendar("XKRX").is_session(d.strftime("%Y-%m-%d")))
+    except Exception:
+        return d.weekday() < 5  # 폴백: 평일이면 개장 가정
+
+
 # ── 콘텐츠 생성 (Haiku, 하루 1회, 캐시) ───────────────────────────────────────
 def generate_content(today, us, events):
     """숫자를 쉬운 해설로 풀고 몽골어까지 한 번에. 실패 시 None(폴백)."""
@@ -355,7 +364,7 @@ def generate_pulse(today, crypto):
 
 
 # ── 페이지 렌더 ──────────────────────────────────────────────────────────────
-def render_page(lang, today, us, events, content, crypto=None, pulse=None):
+def render_page(lang, today, us, events, content, crypto=None, pulse=None, stock_open=True):
     is_mn = lang == "mn"
     root = "/macro/mn/" if is_mn else "/macro/"
 
@@ -365,6 +374,7 @@ def render_page(lang, today, us, events, content, crypto=None, pulse=None):
             desc="Өмнөх шөнийн АНУ-ын зах зээл, өнөөдрийн крипто урсгал, нэр хүндтэй хүмүүс юу яриад байгаа — бүгдийг нэг хуудсаар, энгийн хэлээр.",
             back="← Буцах", crumb="Өнөөдрийн зах зээл", h1="📰 Өнөөдрийн зах зээл",
             when="Хувьцаа · биткойн · яригдаж буй сэдэв · өдөр бүр",
+            when_wknd="Амралт·баярын өдөр — хувьцааны зах хаалттай, крипто зах голлоно",
             flow="📈 Хувьцаа — өнөөдөр юу болов", nums="📊 АНУ-ын зах зээл тоогоор",
             cal="🗓️ Энэ долоо хоногт анхаарах зүйл",
             crypto_h="🪙 Биткойн · крипто", voices_h="🗣️ Яригдаж буй дуу хоолой",
@@ -383,6 +393,7 @@ def render_page(lang, today, us, events, content, crypto=None, pulse=None):
             desc="밤사이 미국 증시, 오늘 코인 시장 흐름, 유명 투자자·논객들이 무슨 얘기를 하는지까지 한 장으로 쉽게. 매일 업데이트.",
             back="← 뒤로", crumb="오늘의 시장", h1="📰 오늘의 시장",
             when="주식 · 비트코인 · 화제의 목소리 · 매일 업데이트",
+            when_wknd="주말·휴장 — 주식장은 쉬고, 코인 시장 중심으로",
             flow="📈 주식 — 오늘 무슨 일이 있었나", nums="📊 미국 증시 숫자",
             cal="🗓️ 이번 주 챙길 일정",
             crypto_h="🪙 비트코인 · 코인", voices_h="🗣️ 화제의 목소리",
@@ -412,6 +423,17 @@ def render_page(lang, today, us, events, content, crypto=None, pulse=None):
                         f'{story_html("", voices_paras)}'
                         f'<p class="mnote">{t["voices_disc"]}</p></section>')
 
+    # 📈 주식 섹션 — 한국장 열리는 날만. 주말·휴일은 코인 전용판.
+    if stock_open:
+        stock_sections = (
+            f'<section class="msec"><h2>{t["flow"]}</h2>{story_html(headline, paras)}</section>'
+            f'<section class="msec"><h2>{t["nums"]}</h2>{stats_html(us)}</section>'
+            f'{cal_block}'
+        )
+    else:
+        stock_sections = ""
+    when = t["when"] if stock_open else t["when_wknd"]
+
     return f"""<!DOCTYPE html>
 <html lang="{'mn' if is_mn else 'ko'}">
 <head>
@@ -438,21 +460,13 @@ def render_page(lang, today, us, events, content, crypto=None, pulse=None):
   <div class="breadcrumb"><a href="{root}">{t['crumb']}</a><span class="sep">/</span>{today}</div>
   <section class="learn-hero">
     <h1>{t['h1']}</h1>
-    <p class="lead">{today} · {t['when']}</p>
+    <p class="lead">{today} · {when}</p>
     <div class="lang-toggle">
       <a href="/macro/{today}.html"{' class="active"' if not is_mn else ''}>🇰🇷 한국어</a>
       <a href="/macro/mn/{today}.html"{' class="active"' if is_mn else ''}>🇲🇳 Монгол</a>
     </div>
   </section>
-  <section class="msec">
-    <h2>{t['flow']}</h2>
-    {story_html(headline, paras)}
-  </section>
-  <section class="msec">
-    <h2>{t['nums']}</h2>
-    {stats_html(us)}
-  </section>
-  {cal_block}
+  {stock_sections}
   {crypto_block}
   {voices_block}
   <div class="disclaimer"><b>⚠</b> {t['disc']}</div>
@@ -590,23 +604,32 @@ def main():
     MACRO_MN.mkdir(parents=True, exist_ok=True)
     today = date.today().isoformat()
 
+    stock_open = is_krx_session(date.today())
     signal = load_json(AILOG / "signal.json")
     us = signal.get("us_market", {})
-    if not us:
-        log("signal.json에 us_market 없음 — 중단")
-        return
-    if signal.get("date") != today:
+    if stock_open and not us:
+        log("한국장 개장일인데 signal.json us_market 없음 — 코인 전용으로 강등")
+        stock_open = False
+    if stock_open and signal.get("date") != today:
         log(f"주의: signal.json 날짜({signal.get('date')}) != 오늘({today}) — 최신 데이터로 진행")
 
-    events = collect_events(load_json(AILOG / "weekly_calendar.json"), today)
-    content = generate_content(today, us, events)
+    if stock_open:
+        events = collect_events(load_json(AILOG / "weekly_calendar.json"), today)
+        content = generate_content(today, us, events)
+    else:
+        events, content = [], None
+        log("한국장 휴장(주말·휴일) — 코인 전용판 생성")
+
     crypto = fetch_crypto()
     pulse = generate_pulse(today, crypto)
+    if not stock_open and not crypto and not pulse:
+        log("휴장일인데 코인 데이터·펄스 모두 없음 — 발행 중단")
+        return
 
     (MACRO / f"{today}.html").write_text(
-        render_page("ko", today, us, events, content, crypto, pulse))
+        render_page("ko", today, us, events, content, crypto, pulse, stock_open))
     (MACRO_MN / f"{today}.html").write_text(
-        render_page("mn", today, us, events, content, crypto, pulse))
+        render_page("mn", today, us, events, content, crypto, pulse, stock_open))
     rebuild_index("ko")
     rebuild_index("mn")
     update_sitemap(today)
