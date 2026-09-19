@@ -41,13 +41,17 @@ SITEMAP = ROOT / "sitemap.xml"
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
 SONNET_MODEL = "claude-sonnet-4-6"
 
-# 화제의 목소리 대상 — 만또 큐레이션 (검증된 조언 아님, 동향 관찰용)
+# 화제의 목소리 코어 로스터 — 만또 큐레이션 (검증된 조언 아님, 동향 관찰용)
 VOICES = (
-    "크립토: Vitalik Buterin(@VitalikButerin), CZ(@cz_binance), Anthony Pompliano(@APompliano), "
-    "The Crypto Dog(@TheCryptoDog), Watcher.Guru(@WatcherGuru); "
-    "트럼프 크립토 인맥: David Sacks(@DavidSacks), Patrick Witt; "
-    "주식·매크로: Michael Burry(@michaeljburry, 삭제 트윗은 @BurryArchive), "
-    "Liz Ann Sonders(@LizAnnSonders), Charlie Bilello(@charliebilello), Michael Saylor(@saylor)"
+    "크립토: Vitalik Buterin(@VitalikButerin), CZ(@cz_binance), Michael Saylor(@saylor), "
+    "Arthur Hayes(@CryptoHayes), Raoul Pal(@RaoulGMI), Balaji Srinivasan(@balajis), "
+    "Anthony Pompliano(@APompliano), Mike Novogratz(@novogratz), Lookonchain(@lookonchain, 온체인), "
+    "Watcher.Guru(@WatcherGuru, 속보), The Crypto Dog(@TheCryptoDog, 익명); "
+    "주식·매크로·경제: Michael Burry(@michaeljburry, 삭제 트윗은 @BurryArchive), "
+    "Cathie Wood(@CathieDWood), Liz Ann Sonders(@LizAnnSonders), Charlie Bilello(@charliebilello), "
+    "Nouriel Roubini(@Nouriel), Mohamed El-Erian(@elerianm), Lyn Alden(@LynAldenContact), "
+    "Peter Schiff(@PeterSchiff, 약세론), Morgan Housel(@morganhousel); "
+    "정책·연준·트럼프 크립토: 연준(FOMC·파월), David Sacks(@DavidSacks), Patrick Witt"
 )
 CRYPTO_MARKETS = [("KRW-BTC", "비트코인"), ("KRW-ETH", "이더리움"),
                   ("KRW-XRP", "리플"), ("KRW-SOL", "솔라나")]
@@ -335,11 +339,16 @@ def generate_pulse(today, crypto):
         f"참고 코인 시세(업비트, 전일 대비): {coin_line}\n\n"
         "① 비트코인·암호화폐 시장: 오늘 주요 이슈·흐름을 2문단으로 쉽게. 숫자 나열 말고 "
         "'무슨 일 → 왜 → 분위기'.\n"
-        "② 화제의 목소리: 아래 유명 계정/인물들이 최근(오늘 전후) 공개적으로 무슨 말을 했고 "
-        "시장 심리가 어떤지 2~3문단으로. 확인 안 되면 지어내지 말고 확인된 발언 위주로. "
+        "② 화제의 목소리: 아래 코어 인물들 + '오늘 시장에서 화제가 된 인물은 누구든'이 "
+        "X·Threads 등에서 공개적으로 한 말과 시장 심리를 2~3문단으로. "
+        "포함 기준(엄수): 실제 시장에 영향을 줬거나 신뢰 매체 2곳 이상이 인용한 발언만. "
+        "단발 루머·단일 출처·홍보(펌핑)성·익명 계정의 미검증 콜은 제외. "
+        "확인 안 되면 지어내지 말고 확인된 발언 위주로, 각 발언에 출처(매체/인물)를 짧게. "
         "특정 코인·종목 매수 권유처럼 쓰지 말 것.\n"
-        f"대상: {VOICES}\n\n"
-        "각 항목을 한국어와 자연스러운 몽골어(키릴) 둘 다. 설명 없이 JSON만 출력:\n"
+        f"코어 대상: {VOICES}\n\n"
+        "각 항목을 한국어와 자연스러운 몽골어(키릴) 둘 다.\n"
+        "⚠️ 유효한 JSON만 출력: 각 문단은 줄바꿈 없이 한 줄로, 문단 안에서 큰따옴표(\") 대신 "
+        "홑따옴표(')만 사용(인용도 '…'). 설명·코드펜스 없이 아래 형식만:\n"
         '{"crypto_ko":["문단","문단"],"crypto_mn":["문단","문단"],'
         '"voices_ko":["문단","문단"],"voices_mn":["문단","문단"]}'
     )
@@ -347,7 +356,7 @@ def generate_pulse(today, crypto):
         import anthropic
         client = anthropic.Anthropic(api_key=key)
         resp = client.messages.create(
-            model=SONNET_MODEL, max_tokens=4000,
+            model=SONNET_MODEL, max_tokens=8000,
             tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
             messages=[{"role": "user", "content": prompt}],
         )
@@ -357,6 +366,8 @@ def generate_pulse(today, crypto):
         if pulse:
             cache_file.write_text(json.dumps(pulse, ensure_ascii=False, indent=2))
             log("펄스 생성 완료 (Sonnet+web_search)")
+        else:
+            log(f"펄스 파싱 실패(JSON 없음/잘림) — 응답 {len(txt)}자, stop={getattr(resp,'stop_reason',None)}")
         return pulse
     except Exception as e:
         log(f"펄스 생성 실패 — 코인/화제 섹션 생략: {e}")
