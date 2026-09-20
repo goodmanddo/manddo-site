@@ -5,8 +5,9 @@
 하루 2회(09:00·22:00) LaunchAgent(com.mandoo.game-intel)로 실행:
   1) 국내 상장(코스피/코스닥) 게임사의 향후 ~3개월 신작 출시 일정 (이미 추적중 외 신규는 🆕)
   2) 추적/주요 상장사 게임의 최근 구글플레이 매출순위 대략 위치·성과 뉴스
-결과를 텔레그램으로 전송 + game_intel.json(리포트·순위)은 자동 commit/push → /game-watch/ 반영.
-단, 신작 출시 '일정'(upcoming_game_launches.json)은 오류가 많아 사람이 확인 후 수동 반영한다.
+텔레그램은 '출시 예정 게임 D-day' 요약만 아침 1회 전송(전체 인텔은 반복 이슈라 미전송).
+전체 리포트·순위는 game_intel.json으로 사이트(/game-watch/)에만 반영(자동 commit/push).
+신작 출시 '일정'(upcoming_game_launches.json)은 오류가 많아 사람이 확인 후 수동 반영한다.
 
 매출순위 정확도는 무료 web_search 특성상 '대략'이며, 없는 수치를 지어내지 않도록 프롬프트로 강제.
 """
@@ -113,6 +114,37 @@ def extract_rankings(client, report_text):
         return []
 
 
+def dday_telegram():
+    """추적 중인 출시 예정 게임의 D-day 간결 요약. 예정 없으면 None."""
+    try:
+        evs = json.loads(UPCOMING.read_text()).get("events", [])
+    except Exception:
+        return None
+    today = date.today()
+    rows = []
+    for e in evs:
+        ds = str(e.get("date", ""))
+        if len(ds) != 8:
+            continue
+        try:
+            d = date(int(ds[:4]), int(ds[4:6]), int(ds[6:8]))
+        except ValueError:
+            continue
+        dd = (d - today).days
+        if dd < 0:
+            continue  # 이미 출시된 건 제외
+        rows.append((dd, d, e))
+    if not rows:
+        return None
+    rows.sort(key=lambda x: x[0])
+    lines = [f"🎮 출시 예정 게임 D-day ({today} 기준)", "━━━━━━━━━━━━"]
+    for dd, d, e in rows:
+        tag = "🔥" if dd <= 7 else ("⏰" if dd <= 30 else "•")
+        dd_txt = "D-DAY" if dd == 0 else f"D-{dd}"
+        lines.append(f"{tag} {dd_txt} · {e.get('game','')} — {e.get('company','')}({e.get('code','')}) {d.isoformat()}")
+    return "\n".join(lines)
+
+
 def main():
     if not API_KEY:
         log("ANTHROPIC 키 없음 — 종료")
@@ -139,7 +171,12 @@ def main():
         text = text[i:]
     rankings = extract_rankings(client, text)
     log(f"리포트 생성 (검색 {searches}회, 본문 {len(text)}자, 순위 {len(rankings)}건)")
-    tg(text)
+    # 텔레그램: 반복되는 전체 인텔 대신 'D-day 요약'만, 아침 1회(스팸 방지).
+    # 전체 리포트/순위는 아래 game_intel.json으로 사이트(/game-watch/)에만 반영.
+    if datetime.now().hour < 12:
+        dmsg = dday_telegram()
+        if dmsg:
+            tg(dmsg)
     # 로컬 보관 + 웹 노출용 JSON (/game-watch/ 하단에서 fetch)
     (SITE / "scripts" / "game_intel_last.txt").write_text(
         f"[{datetime.now().isoformat(timespec='seconds')}]\n{text}\n", encoding="utf-8")
