@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T21:35:03",
+  "generated_at": "2026-09-20T22:12:17",
   "source": "Naver Mobile API + FinanceDataReader",
   "criteria": "KOSPI+KOSDAQ 시총 ≥ 1,000억, 배당수익률 ≥ 1.0%",
   "count": 655,
