@@ -1,79 +1,9 @@
 {
   "generated_at": "2026-09-20T22:12:17",
   "source": "Naver Mobile API + FinanceDataReader",
-  "criteria": "KOSPI+KOSDAQ 시총 ≥ 1,000억, 배당수익률 ≥ 1.0%",
-  "count": 655,
+  "criteria": "KOSPI+KOSDAQ 시총 ≥ 1,000억, 배당수익률 1.0~12.0% (초과분은 일회성·오류로 제외)",
+  "count": 648,
   "stocks": [
-    {
-      "code": "035810",
-      "name": "이지홀딩스",
-      "market": "KOSDAQ",
-      "marcap_eok": 2987.0,
-      "close": 4630,
-      "dividend_yield": 29.4,
-      "per": 13.46,
-      "pbr": 0.46
-    },
-    {
-      "code": "285490",
-      "name": "노바텍",
-      "market": "KOSDAQ",
-      "marcap_eok": 1274.0,
-      "close": 12050,
-      "dividend_yield": 23.85,
-      "per": 3.76,
-      "pbr": 0.68
-    },
-    {
-      "code": "017800",
-      "name": "현대엘리베이터",
-      "market": "KOSPI",
-      "marcap_eok": 28655.0,
-      "close": 73300,
-      "dividend_yield": 18.96,
-      "per": 7.86,
-      "pbr": 2.46
-    },
-    {
-      "code": "381970",
-      "name": "케이카",
-      "market": "KOSPI",
-      "marcap_eok": 3178.0,
-      "close": 6510,
-      "dividend_yield": 18.49,
-      "per": 41.87,
-      "pbr": 1.74
-    },
-    {
-      "code": "432320",
-      "name": "KB스타리츠",
-      "market": "KOSPI",
-      "marcap_eok": 2655.0,
-      "close": 1761,
-      "dividend_yield": 17.62,
-      "per": null,
-      "pbr": 0.96
-    },
-    {
-      "code": "065710",
-      "name": "서호전기",
-      "market": "KOSDAQ",
-      "marcap_eok": 2338.0,
-      "close": 45400,
-      "dividend_yield": 13.22,
-      "per": 10.44,
-      "pbr": 2.16
-    },
-    {
-      "code": "339950",
-      "name": "아이비김영",
-      "market": "KOSDAQ",
-      "marcap_eok": 1067.0,
-      "close": 2375,
-      "dividend_yield": 12.42,
-      "per": 6.54,
-      "pbr": 1.73
-    },
     {
       "code": "016450",
       "name": "한세예스24홀딩스",

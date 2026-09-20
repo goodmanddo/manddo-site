@@ -23,7 +23,8 @@ OUT = ROOT / "tools" / "data" / "dividend.json"
 
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"}
 MIN_MARCAP = 1_000 * 1e8  # 시총 1,000억원 이상만 (코스닥 소형주 노이즈 컷)
-MIN_YIELD = 1.0  # 배당수익률 1% 이상만 포함
+MIN_YIELD = 1.0   # 배당수익률 1% 이상만 포함
+MAX_YIELD = 12.0  # 12% 초과는 일회성 특별배당·주가급락·데이터오류로 보고 제외
 
 
 def parse_naver(code: str):
@@ -77,7 +78,7 @@ def main():
         if not info or info.get("yield") is None:
             continue
         yld = info["yield"]
-        if yld < MIN_YIELD:
+        if yld < MIN_YIELD or yld > MAX_YIELD:
             continue
         rows.append({
             "code": code,
@@ -95,7 +96,7 @@ def main():
     out = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "source": "Naver Mobile API + FinanceDataReader",
-        "criteria": f"KOSPI+KOSDAQ 시총 ≥ 1,000억, 배당수익률 ≥ {MIN_YIELD}%",
+        "criteria": f"KOSPI+KOSDAQ 시총 ≥ 1,000억, 배당수익률 {MIN_YIELD}~{MAX_YIELD}% (초과분은 일회성·오류로 제외)",
         "count": len(rows),
         "stocks": rows,
     }
