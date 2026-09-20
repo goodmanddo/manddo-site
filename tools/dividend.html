@@ -198,9 +198,9 @@ function render(){
       <a class="tbl-row ${top}" href="/stock/${s.code}.html" target="_blank" rel="noopener">
         <div class="rk">${rk}</div>
         <div class="nm">${s.name}<span class="cd">${s.code}</span>${s.market ? `<span class="mkt mkt-${s.market}">${s.market === 'KOSDAQ' ? 'Q' : 'P'}</span>` : ''}<span class="arrow">→</span></div>
-        <div class="n yield">${s.dividend_yield.toFixed(2)}%</div>
-        <div class="n">${s.per.toFixed(1)}</div>
-        <div class="n">${s.pbr.toFixed(2)}</div>
+        <div class="n yield">${(s.dividend_yield ?? 0).toFixed(2)}%</div>
+        <div class="n">${s.per != null ? s.per.toFixed(1) : '—'}</div>
+        <div class="n">${s.pbr != null ? s.pbr.toFixed(2) : '—'}</div>
         <div class="n muted market">${fmtMarcap(s.marcap_eok)}</div>
       </a>`;
   }).join('');
