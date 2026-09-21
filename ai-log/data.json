@@ -1,32 +1,56 @@
 {
-  "date": "2026-09-18",
+  "date": "2026-09-21",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.33,
-  "week_return": 0.53,
-  "day_return": 0.53,
+  "cumulative_return": -5.7,
+  "week_return": 1.21,
+  "day_return": 0.68,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 77,
-  "ai_commentary": "오늘은 신규 매매 없이 포지션 유지 전략. 시작 이후 누적 -6.3%.",
-  "new_buys": [],
-  "exits": [],
-  "weekly_losses": [
+  "ai_commentary": "오늘은 셀트리온, KODEX 헬스케어 등 신규 편입. 시작 이후 누적 -5.7%.",
+  "new_buys": [
     {
-      "name": "산일전기",
+      "name": "셀트리온",
       "slug": "",
-      "return_pct": -5.48,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+      "market": "코스피",
+      "entry_to_current_pct": 1.4,
+      "weight_pct": 13,
+      "hold_days": 0,
+      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+    },
+    {
+      "name": "KODEX 헬스케어",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.82,
+      "weight_pct": 11,
+      "hold_days": 0,
+      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     }
   ],
+  "exits": [],
+  "weekly_losses": [],
   "holdings": [
     {
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 20
+      "weight_pct": 21
+    },
+    {
+      "name": "셀트리온",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 13
+    },
+    {
+      "name": "KODEX 헬스케어",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 11
     },
     {
       "name": "한국가스공사",
@@ -48,10 +72,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-21",
-      "cumulative_return": -7.78
-    },
     {
       "date": "2026-08-24",
       "cumulative_return": -7.8
@@ -131,6 +151,10 @@
     {
       "date": "2026-09-18",
       "cumulative_return": -6.33
+    },
+    {
+      "date": "2026-09-21",
+      "cumulative_return": -5.7
     }
   ]
 }
