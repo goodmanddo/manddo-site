@@ -1,33 +1,42 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "start_date": "2026-05-03",
-  "cumulative_return": -5.7,
-  "week_return": 0.68,
-  "day_return": 0.68,
+  "cumulative_return": -6.36,
+  "week_return": -0.03,
+  "day_return": -0.7,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 44,
   "total_trades": 77,
-  "ai_commentary": "오늘은 셀트리온, KODEX 헬스케어 등 신규 편입. 시작 이후 누적 -5.7%.",
+  "ai_commentary": "오늘은 KODEX 코스닥150, 셀트리온, KODEX 헬스케어 등 신규 편입. 시작 이후 누적 -6.4%.",
   "new_buys": [
+    {
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -1.9,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "단기 모멘텀 강화 구간에서 분할 진입."
+    },
     {
       "name": "셀트리온",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.4,
-      "weight_pct": 13,
-      "hold_days": 0,
+      "entry_to_current_pct": -0.22,
+      "weight_pct": 12,
+      "hold_days": 1,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     },
     {
       "name": "KODEX 헬스케어",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.82,
+      "entry_to_current_pct": -1.26,
       "weight_pct": 11,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     }
   ],
@@ -38,13 +47,13 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 21
+      "weight_pct": 20
     },
     {
       "name": "셀트리온",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 13
+      "weight_pct": 12
     },
     {
       "name": "KODEX 헬스케어",
@@ -69,13 +78,15 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 7
+    },
+    {
+      "name": "KODEX 코스닥150",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 5
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-24",
-      "cumulative_return": -7.8
-    },
     {
       "date": "2026-08-25",
       "cumulative_return": -8.12
@@ -155,6 +166,10 @@
     {
       "date": "2026-09-21",
       "cumulative_return": -5.7
+    },
+    {
+      "date": "2026-09-22",
+      "cumulative_return": -6.36
     }
   ]
 }
