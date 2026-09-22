@@ -144,7 +144,7 @@
   function cls(v){return v>0?'up':(v<0?'down':'flat');}
   fetch('/tools/data/crypto_track.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
     document.getElementById('s-tv').textContent=won(d.total_value);
-    document.getElementById('s-period').textContent=d.period_end+' 기준 · 추적 '+d.days+'일차';
+    document.getElementById('s-period').textContent=(d.generated_at||d.period_end).slice(0,16).replace('T',' ')+' 기준 · 추적 '+d.days+'일차';
     var sb=document.getElementById('s-bot');sb.textContent=pct(d.bot_return);sb.className='v '+cls(d.bot_return);
     document.getElementById('s-btc').textContent=pct(d.btc_return);
     document.getElementById('s-def').textContent=(d.defense_pp>0?'+':'')+d.defense_pp+'%p';
