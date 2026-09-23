@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-11T15:20:11",
-  "n_rounds": 12,
-  "n_paired": 4,
+  "generated_at": "2026-09-23T15:20:09",
+  "n_rounds": 13,
+  "n_paired": 5,
   "paired_stock": {
-    "n": 4,
-    "winrate": 75,
-    "mean": 0.83,
-    "cum": 3.3
+    "n": 5,
+    "winrate": 60,
+    "mean": 0.5,
+    "cum": 2.5
   },
   "paired_etf": {
-    "n": 4,
-    "winrate": 50,
-    "mean": -0.36,
-    "cum": -1.4
+    "n": 5,
+    "winrate": 40,
+    "mean": -0.61,
+    "cum": -3.0
   },
   "rounds": [
     {
@@ -122,6 +122,15 @@
       "stock_ret": 4.44,
       "etf_name": "KODEX 반도체",
       "etf_ret": -0.44
+    },
+    {
+      "buy_date": "2026-09-21",
+      "sell_date": "2026-09-23",
+      "round": 21,
+      "stock_name": "셀트리온",
+      "stock_ret": -0.78,
+      "etf_name": "KODEX 헬스케어",
+      "etf_ret": -1.58
     }
   ]
 }
