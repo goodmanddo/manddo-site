@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T16:00:03",
+  "generated_at": "2026-09-23T16:00:04",
   "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -12,22 +12,24 @@
       "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 223000,
-      "dday": 8,
+      "price": 212000,
+      "dday": 7,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -0.7,
-          "excess": -2.4
+          "ret": -5.6,
+          "excess": -8.5
         },
         "d30": {
           "status": "done",
-          "ret": -0.7,
-          "excess": -4.7
+          "ret": -5.6,
+          "excess": -10.7
         },
         "d7": {
-          "status": "pending"
+          "status": "done",
+          "ret": 0.0,
+          "excess": 0.0
         }
       },
       "post_ret": null
@@ -41,19 +43,19 @@
       "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 8890,
-      "dday": 23,
+      "price": 9020,
+      "dday": 22,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -1.6,
-          "excess": -2.3
+          "ret": -0.1,
+          "excess": -2.5
         },
         "d30": {
           "status": "done",
-          "ret": -10.0,
-          "excess": -11.7
+          "ret": -8.7,
+          "excess": -12.1
         },
         "d7": {
           "status": "pending"
@@ -70,8 +72,8 @@
       "note": "2026-09 보도로 '4분기 출시 준비 돌입'(씰온라인 후속작). 구체 일자 미발표(12/15는 4분기 잠정). 코스닥 종목.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 2620,
-      "dday": 84,
+      "price": 2645,
+      "dday": 83,
       "launched": false,
       "milestones": {
         "d40": {
@@ -95,27 +97,27 @@
       "note": "자동등록 2026-08-08 (출처 ZDNet Korea / 뉴스핌 / 헤럴드경제 / 나무위키 (2026-08-07 쇼케이스 공식 발표))",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 35000,
-      "dday": -27,
+      "price": 34950,
+      "dday": -28,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 37.3,
-          "excess": 34.8
+          "ret": 37.1,
+          "excess": 32.9
         },
         "d30": {
           "status": "done",
-          "ret": 29.2,
-          "excess": 21.7
+          "ret": 29.0,
+          "excess": 19.7
         },
         "d7": {
           "status": "done",
-          "ret": 7.7,
-          "excess": 9.9
+          "ret": 7.5,
+          "excess": 8.1
         }
       },
-      "post_ret": 2.9
+      "post_ret": 2.8
     }
   ]
 }
