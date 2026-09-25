@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-24",
+  "date": "2026-09-25",
   "start_date": "2026-05-03",
   "cumulative_return": -6.19,
   "week_return": 0.0,
@@ -18,7 +18,7 @@
       "market": "코스피",
       "entry_to_current_pct": -0.28,
       "weight_pct": 5,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
   ],
@@ -57,10 +57,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-27",
-      "cumulative_return": -7.58
-    },
     {
       "date": "2026-08-28",
       "cumulative_return": -7.6
@@ -139,6 +135,10 @@
     },
     {
       "date": "2026-09-24",
+      "cumulative_return": -6.19
+    },
+    {
+      "date": "2026-09-25",
       "cumulative_return": -6.19
     }
   ]
