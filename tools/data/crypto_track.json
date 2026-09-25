@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-09-25T18:10:05",
+  "generated_at": "2026-09-25T20:10:06",
   "period_start": "2026-04-18",
-  "period_end": "2026-09-24",
-  "days": 159,
-  "total_value": 10025436,
+  "period_end": "2026-09-25",
+  "days": 160,
+  "total_value": 10052896,
   "cash": 4511283,
-  "cash_weight": 45.0,
-  "bot_return": -0.17,
-  "btc_return": 2.4,
-  "defense_pp": -2.6,
+  "cash_weight": 44.9,
+  "bot_return": 0.1,
+  "btc_return": 2.5,
+  "defense_pp": -2.4,
   "defense_on": true,
   "coins": [
     {
       "code": "KRW-BTC",
       "name": "비트코인",
       "balance": 0.02599994,
-      "value": 2995817,
-      "weight": 29.9,
-      "price": 115224000.0,
-      "trend_pct": 2.4,
+      "value": 2999093,
+      "weight": 29.8,
+      "price": 115350000.0,
+      "trend_pct": 2.5,
       "market_status": "⚖️ 보통",
       "grid_percent": 1.2,
       "defense_mode": false
@@ -27,24 +27,24 @@
       "code": "KRW-ETH",
       "name": "이더리움",
       "balance": 0.39951932,
-      "value": 1465836,
-      "weight": 14.6,
-      "price": 3669000.0,
-      "trend_pct": 5.4,
-      "market_status": "🛡️ 방어 모드",
-      "grid_percent": 3.0,
-      "defense_mode": true
+      "value": 1479021,
+      "weight": 14.7,
+      "price": 3702000.0,
+      "trend_pct": 6.3,
+      "market_status": "⚖️ 보통",
+      "grid_percent": 1.2,
+      "defense_mode": false
     },
     {
       "code": "KRW-XRP",
       "name": "리플",
       "balance": 500.0,
-      "value": 1052500,
-      "weight": 10.5,
-      "price": 2105.0,
-      "trend_pct": -1.0,
-      "market_status": "🛡️ 방어 모드",
-      "grid_percent": 3.0,
+      "value": 1063500,
+      "weight": 10.6,
+      "price": 2127.0,
+      "trend_pct": 0.0,
+      "market_status": "📈 상승 추세",
+      "grid_percent": 1.8,
       "defense_mode": true
     }
   ],
@@ -846,8 +846,13 @@
     },
     {
       "date": "2026-09-25",
-      "bot": 97.55,
-      "btc_hold": 102.43
+      "bot": 97.58,
+      "btc_hold": 102.23
+    },
+    {
+      "date": "2026-09-25",
+      "bot": 97.82,
+      "btc_hold": 102.55
     }
   ]
 }
