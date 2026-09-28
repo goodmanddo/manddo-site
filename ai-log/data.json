@@ -1,24 +1,42 @@
 {
-  "date": "2026-09-25",
+  "date": "2026-09-28",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.19,
-  "week_return": 0.0,
-  "day_return": 0.0,
+  "cumulative_return": -7.63,
+  "week_return": -1.54,
+  "day_return": -1.54,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 43,
   "total_trades": 79,
-  "ai_commentary": "오늘은 KODEX 코스닥150 등 신규 편입. 시작 이후 누적 -6.2%.",
+  "ai_commentary": "오늘은 SK하이닉스, KODEX 반도체, KODEX 코스닥150 등 신규 편입. 시작 이후 누적 -7.6%.",
   "new_buys": [
+    {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -3.02,
+      "weight_pct": 10,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
+    {
+      "name": "KODEX 반도체",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -1.58,
+      "weight_pct": 10,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
     {
       "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.28,
+      "entry_to_current_pct": -0.46,
       "weight_pct": 5,
-      "hold_days": 3,
+      "hold_days": 6,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
   ],
@@ -30,6 +48,18 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 20
+    },
+    {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 10
+    },
+    {
+      "name": "KODEX 반도체",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 10
     },
     {
       "name": "한국가스공사",
@@ -57,10 +87,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-28",
-      "cumulative_return": -7.6
-    },
     {
       "date": "2026-08-31",
       "cumulative_return": -6.47
@@ -140,6 +166,10 @@
     {
       "date": "2026-09-25",
       "cumulative_return": -6.19
+    },
+    {
+      "date": "2026-09-28",
+      "cumulative_return": -7.63
     }
   ]
 }
