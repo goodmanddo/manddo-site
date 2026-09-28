@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-28T14:10:06",
+  "generated_at": "2026-09-28T16:10:05",
   "period_start": "2026-04-18",
   "period_end": "2026-09-27",
   "days": 162,
-  "total_value": 9919210,
+  "total_value": 9917378,
   "cash": 4932751,
   "cash_weight": 49.7,
-  "bot_return": -1.25,
+  "bot_return": -1.26,
   "btc_return": 0.5,
   "defense_pp": -1.7,
   "defense_on": true,
@@ -15,9 +15,9 @@
       "code": "KRW-BTC",
       "name": "비트코인",
       "balance": 0.03099994,
-      "value": 3504388,
+      "value": 3503458,
       "weight": 35.3,
-      "price": 113045000.0,
+      "price": 113015000.0,
       "trend_pct": 0.5,
       "market_status": "⚖️ 보통",
       "grid_percent": 1.2,
@@ -27,10 +27,10 @@
       "code": "KRW-ETH",
       "name": "이더리움",
       "balance": 0.29951932,
-      "value": 1077671,
+      "value": 1078569,
       "weight": 10.9,
-      "price": 3598000.0,
-      "trend_pct": 3.3,
+      "price": 3601000.0,
+      "trend_pct": 3.4,
       "market_status": "⚖️ 보통",
       "grid_percent": 1.2,
       "defense_mode": true
@@ -39,10 +39,10 @@
       "code": "KRW-XRP",
       "name": "리플",
       "balance": 200.0,
-      "value": 404400,
+      "value": 402600,
       "weight": 4.1,
-      "price": 2022.0,
-      "trend_pct": -4.9,
+      "price": 2013.0,
+      "trend_pct": -5.4,
       "market_status": "🛡️ 방어 모드",
       "grid_percent": 3.0,
       "defense_mode": true
@@ -861,8 +861,8 @@
     },
     {
       "date": "2026-09-28",
-      "bot": 96.51,
-      "btc_hold": 100.5
+      "bot": 96.49,
+      "btc_hold": 100.47
     }
   ]
 }
