@@ -1,42 +1,42 @@
 {
-  "date": "2026-09-28",
+  "date": "2026-09-29",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.63,
-  "week_return": -1.54,
-  "day_return": -1.54,
+  "cumulative_return": -7.35,
+  "week_return": -1.24,
+  "day_return": 0.3,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 43,
   "total_trades": 79,
-  "ai_commentary": "오늘은 SK하이닉스, KODEX 반도체, KODEX 코스닥150 등 신규 편입. 시작 이후 누적 -7.6%.",
+  "ai_commentary": "오늘은 SK하이닉스, KODEX 반도체, KODEX 코스닥150 등 신규 편입. 시작 이후 누적 -7.4%.",
   "new_buys": [
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -3.02,
+      "entry_to_current_pct": -3.18,
       "weight_pct": 10,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.58,
-      "weight_pct": 10,
-      "hold_days": 0,
+      "entry_to_current_pct": 1.95,
+      "weight_pct": 11,
+      "hold_days": 1,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "KODEX 코스닥150",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.46,
+      "entry_to_current_pct": 0.78,
       "weight_pct": 5,
-      "hold_days": 6,
+      "hold_days": 7,
       "reason": "단기 모멘텀 강화 구간에서 분할 진입."
     }
   ],
@@ -50,13 +50,13 @@
       "weight_pct": 20
     },
     {
-      "name": "SK하이닉스",
+      "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 10
+      "weight_pct": 11
     },
     {
-      "name": "KODEX 반도체",
+      "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
       "weight_pct": 10
@@ -87,10 +87,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-08-31",
-      "cumulative_return": -6.47
-    },
     {
       "date": "2026-09-01",
       "cumulative_return": -6.54
@@ -170,6 +166,10 @@
     {
       "date": "2026-09-28",
       "cumulative_return": -7.63
+    },
+    {
+      "date": "2026-09-29",
+      "cumulative_return": -7.35
     }
   ]
 }
