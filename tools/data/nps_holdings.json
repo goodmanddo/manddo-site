@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-29T19:31:13",
+  "generated_at": "2026-09-30T19:31:13",
   "window_days": 60,
-  "count": 33,
+  "count": 28,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -16,8 +16,8 @@
       "stkrt_asof": "2026-04-01",
       "first_report": "2025-01-06",
       "is_new": false,
-      "price": 131800,
-      "day_change": 6.89
+      "price": 132500,
+      "day_change": 1.77
     },
     {
       "date": "20260901",
@@ -31,8 +31,8 @@
       "stkrt_asof": "2026-06-01",
       "first_report": "2024-12-02",
       "is_new": false,
-      "price": 290000,
-      "day_change": -7.79
+      "price": 279500,
+      "day_change": -2.61
     },
     {
       "date": "20260917",
@@ -46,8 +46,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 88700,
-      "day_change": -3.9
+      "price": 89000,
+      "day_change": 0.56
     },
     {
       "date": "20260929",
@@ -62,7 +62,7 @@
       "first_report": "2024-12-02",
       "is_new": false,
       "price": 498000,
-      "day_change": -1.19
+      "day_change": -1.78
     },
     {
       "date": "20260901",
@@ -76,8 +76,8 @@
       "stkrt_asof": "2026-06-01",
       "first_report": "2025-01-06",
       "is_new": false,
-      "price": 1223000,
-      "day_change": 0.66
+      "price": 1211000,
+      "day_change": -1.14
     },
     {
       "date": "20260917",
@@ -91,8 +91,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-01-06",
       "is_new": false,
-      "price": 210000,
-      "day_change": -2.78
+      "price": 211500,
+      "day_change": 0.24
     },
     {
       "date": "20260901",
@@ -106,8 +106,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 117800,
-      "day_change": -5.46
+      "price": 117700,
+      "day_change": 0.6
     },
     {
       "date": "20260821",
@@ -121,8 +121,8 @@
       "stkrt_asof": "2025-10-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 106900,
-      "day_change": -1.29
+      "price": 106300,
+      "day_change": -0.93
     },
     {
       "date": "20260803",
@@ -136,23 +136,23 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-10-01",
       "is_new": false,
-      "price": 2809000,
-      "day_change": 1.04
+      "price": 2787000,
+      "day_change": -0.61
     },
     {
-      "date": "20260731",
-      "corp_name": "씨에스윈드",
-      "stock_code": "112610",
+      "date": "20260930",
+      "corp_name": "이수페타시스",
+      "stock_code": "007660",
       "market": "코스피",
       "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "rcept_no": "20260731000155",
-      "stkrt": "9.92",
-      "stkrt_irds": "0.96",
-      "stkrt_asof": "2026-07-01",
-      "first_report": "2025-01-06",
+      "rcept_no": "20260930000461",
+      "stkrt": "9.84",
+      "stkrt_irds": "-1.17",
+      "stkrt_asof": "2026-04-01",
+      "first_report": "2024-10-07",
       "is_new": false,
-      "price": 50500,
-      "day_change": -4.54
+      "price": 115100,
+      "day_change": -2.46
     },
     {
       "date": "20260810",
@@ -166,38 +166,23 @@
       "stkrt_asof": "2025-12-01",
       "first_report": "2024-12-12",
       "is_new": false,
-      "price": 46750,
-      "day_change": -1.89
+      "price": 49400,
+      "day_change": 6.12
     },
     {
-      "date": "20260731",
-      "corp_name": "금호석유화학",
-      "stock_code": "011780",
-      "market": "코스피",
-      "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "rcept_no": "20260731000172",
-      "stkrt": "9.74",
-      "stkrt_irds": "-1.04",
-      "stkrt_asof": "2026-07-01",
-      "first_report": "2025-04-01",
-      "is_new": false,
-      "price": 115600,
-      "day_change": -2.36
-    },
-    {
-      "date": "20260901",
+      "date": "20260930",
       "corp_name": "LIG디펜스앤에어로스페이스",
       "stock_code": "079550",
       "market": "코스피",
       "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "rcept_no": "20260901000244",
+      "rcept_no": "20260930000466",
       "stkrt": "9.67",
       "stkrt_irds": "1.01",
       "stkrt_asof": "2026-04-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 679000,
-      "day_change": -2.02
+      "price": 681000,
+      "day_change": 0.44
     },
     {
       "date": "20260901",
@@ -211,8 +196,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2024-10-07",
       "is_new": false,
-      "price": 54800,
-      "day_change": -2.84
+      "price": 55000,
+      "day_change": 0.18
     },
     {
       "date": "20260914",
@@ -226,8 +211,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2026-07-01",
       "is_new": false,
-      "price": 22750,
-      "day_change": -1.09
+      "price": 22450,
+      "day_change": -2.18
     },
     {
       "date": "20260826",
@@ -241,8 +226,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2026-01-02",
       "is_new": false,
-      "price": 11530,
-      "day_change": -2.45
+      "price": 11560,
+      "day_change": 0.09
     },
     {
       "date": "20260914",
@@ -256,8 +241,8 @@
       "stkrt_asof": "2026-04-01",
       "first_report": "2026-01-02",
       "is_new": false,
-      "price": 158400,
-      "day_change": -2.34
+      "price": 161700,
+      "day_change": 2.47
     },
     {
       "date": "20260813",
@@ -271,23 +256,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-07-02",
       "is_new": false,
-      "price": 20400,
-      "day_change": 0.25
-    },
-    {
-      "date": "20260731",
-      "corp_name": "케이씨씨",
-      "stock_code": "002380",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260731000365",
-      "stkrt": "9.27",
-      "stkrt_irds": "-0.87",
-      "stkrt_asof": "2026-07-31",
-      "first_report": "2024-10-07",
-      "is_new": false,
-      "price": 471000,
-      "day_change": -1.88
+      "price": 21200,
+      "day_change": 4.18
     },
     {
       "date": "20260901",
@@ -301,8 +271,8 @@
       "stkrt_asof": "2026-01-02",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 50100,
-      "day_change": -4.21
+      "price": 49650,
+      "day_change": -1.29
     },
     {
       "date": "20260803",
@@ -316,8 +286,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2025-01-03",
       "is_new": false,
-      "price": 86100,
-      "day_change": -2.38
+      "price": 85800,
+      "day_change": -0.46
     },
     {
       "date": "20260917",
@@ -331,8 +301,8 @@
       "stkrt_asof": "2026-03-17",
       "first_report": "2025-03-04",
       "is_new": false,
-      "price": 141800,
-      "day_change": -0.63
+      "price": 138400,
+      "day_change": -3.01
     },
     {
       "date": "20260908",
@@ -346,8 +316,8 @@
       "stkrt_asof": "2026-09-08",
       "first_report": "2025-07-02",
       "is_new": false,
-      "price": 429000,
-      "day_change": -2.94
+      "price": 433000,
+      "day_change": 0.93
     },
     {
       "date": "20260810",
@@ -361,8 +331,8 @@
       "stkrt_asof": "2026-07-01",
       "first_report": "2025-02-03",
       "is_new": false,
-      "price": 34300,
-      "day_change": -3.52
+      "price": 34000,
+      "day_change": 0.0
     },
     {
       "date": "20260803",
@@ -376,23 +346,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2025-04-01",
       "is_new": false,
-      "price": 251500,
-      "day_change": -4.19
-    },
-    {
-      "date": "20260731",
-      "corp_name": "두산에너빌리티",
-      "stock_code": "034020",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260731000382",
-      "stkrt": "7.63",
-      "stkrt_irds": "-0.23",
-      "stkrt_asof": "2026-07-31",
-      "first_report": "2025-04-01",
-      "is_new": false,
-      "price": 80200,
-      "day_change": -2.2
+      "price": 251000,
+      "day_change": 0.4
     },
     {
       "date": "20260803",
@@ -406,8 +361,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2026-08-03",
       "is_new": true,
-      "price": 179000,
-      "day_change": 0.39
+      "price": 177900,
+      "day_change": -0.56
     },
     {
       "date": "20260803",
@@ -421,23 +376,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2026-08-03",
       "is_new": true,
-      "price": 112000,
-      "day_change": -3.2
-    },
-    {
-      "date": "20260731",
-      "corp_name": "삼성바이오로직스",
-      "stock_code": "207940",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260731000384",
-      "stkrt": "6.88",
-      "stkrt_irds": "0.20",
-      "stkrt_asof": "2026-07-31",
-      "first_report": "2026-07-31",
-      "is_new": true,
-      "price": 1380000,
-      "day_change": -1.43
+      "price": 113100,
+      "day_change": 0.71
     },
     {
       "date": "20260901",
@@ -451,8 +391,8 @@
       "stkrt_asof": "2026-09-01",
       "first_report": "2024-12-02",
       "is_new": false,
-      "price": 161100,
-      "day_change": -3.36
+      "price": 160800,
+      "day_change": 0.12
     },
     {
       "date": "20260826",
@@ -466,23 +406,8 @@
       "stkrt_asof": "2026-08-26",
       "first_report": "2025-07-02",
       "is_new": false,
-      "price": 25300,
-      "day_change": -2.32
-    },
-    {
-      "date": "20260731",
-      "corp_name": "고려아연",
-      "stock_code": "010130",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260731000377",
-      "stkrt": "5.48",
-      "stkrt_irds": "0.48",
-      "stkrt_asof": "2026-07-31",
-      "first_report": "2025-01-07",
-      "is_new": false,
-      "price": 1072000,
-      "day_change": -2.72
+      "price": 25350,
+      "day_change": 0.2
     },
     {
       "date": "20260803",
@@ -496,8 +421,8 @@
       "stkrt_asof": "2026-08-03",
       "first_report": "2026-08-03",
       "is_new": true,
-      "price": 14480,
-      "day_change": -3.14
+      "price": 14720,
+      "day_change": 1.17
     }
   ]
 }
