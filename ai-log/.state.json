@@ -4,49 +4,49 @@
       "name": "SK하이닉스",
       "qty": 1,
       "avg_price": 1823000,
-      "current_price": 1776000,
+      "current_price": 1833000,
       "opened_at": "2026-09-28"
     },
     "036460": {
       "name": "한국가스공사",
       "qty": 36,
       "avg_price": 36300,
-      "current_price": 34800,
+      "current_price": 35250,
       "opened_at": "2026-08-13"
     },
     "069500": {
       "name": "KODEX 200",
       "qty": 33,
       "avg_price": 114469,
-      "current_price": 109545,
+      "current_price": 111520,
       "opened_at": "2026-06-09"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 14,
       "avg_price": 138465,
-      "current_price": 142700,
+      "current_price": 149700,
       "opened_at": "2026-09-28"
     },
     "229200": {
       "name": "KODEX 코스닥150",
       "qty": 66,
       "avg_price": 14190,
-      "current_price": 14455,
+      "current_price": 15315,
       "opened_at": "2026-09-22"
     },
     "411060": {
       "name": "ACE KRX금현물",
       "qty": 49,
       "avg_price": 27678,
-      "current_price": 25570,
+      "current_price": 25655,
       "opened_at": "2026-06-08"
     },
     "464470": {
       "name": "PLUS 미국채30년액티브",
       "qty": 28,
       "avg_price": 52743,
-      "current_price": 44780,
+      "current_price": 44570,
       "opened_at": "2026-06-08"
     }
   },
@@ -60,10 +60,6 @@
       "total_eval": 18341125
     },
     {
-      "date": "2026-09-03",
-      "total_eval": 18341125
-    },
-    {
       "date": "2026-09-04",
       "total_eval": 18444100
     },
@@ -290,6 +286,10 @@
     {
       "date": "2026-09-30",
       "total_eval": 18539919
+    },
+    {
+      "date": "2026-10-01",
+      "total_eval": 18831339
     }
   ],
   "completed_trades": [

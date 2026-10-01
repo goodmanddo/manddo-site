@@ -1,33 +1,33 @@
 {
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "start_date": "2026-05-03",
-  "cumulative_return": -7.3,
-  "week_return": 0.06,
-  "day_return": 0.06,
+  "cumulative_return": -5.84,
+  "week_return": 1.63,
+  "day_return": 1.57,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 43,
   "total_trades": 79,
-  "ai_commentary": "오늘은 SK하이닉스, KODEX 반도체 등 신규 편입. 시작 이후 누적 -7.3%.",
+  "ai_commentary": "오늘은 SK하이닉스, KODEX 반도체 등 신규 편입. 시작 이후 누적 -5.8%.",
   "new_buys": [
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -2.58,
+      "entry_to_current_pct": 0.55,
       "weight_pct": 10,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 3.06,
+      "entry_to_current_pct": 8.11,
       "weight_pct": 11,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     }
   ],
@@ -38,7 +38,7 @@
       "name": "KODEX 200",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 19
+      "weight_pct": 20
     },
     {
       "name": "KODEX 반도체",
@@ -78,10 +78,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-09-02",
-      "cumulative_return": -8.39
-    },
     {
       "date": "2026-09-03",
       "cumulative_return": -8.29
@@ -161,6 +157,10 @@
     {
       "date": "2026-09-30",
       "cumulative_return": -7.3
+    },
+    {
+      "date": "2026-10-01",
+      "cumulative_return": -5.84
     }
   ]
 }
