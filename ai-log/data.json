@@ -1,37 +1,37 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-02",
   "start_date": "2026-05-03",
-  "cumulative_return": -5.84,
-  "week_return": 1.57,
-  "day_return": 1.57,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -5.76,
+  "week_return": 1.66,
+  "day_return": 0.09,
+  "today_realized_avg": 4.27,
+  "today_trade_count": 2,
+  "today_win_count": 2,
   "today_loss_count": 0,
-  "win_rate": 43,
-  "total_trades": 79,
-  "ai_commentary": "오늘은 SK하이닉스, KODEX 반도체 등 신규 편입. 시작 이후 누적 -5.8%.",
-  "new_buys": [
+  "win_rate": 44,
+  "total_trades": 81,
+  "ai_commentary": "2건 익절로 수익 확정. 시작 이후 누적 -5.8%.",
+  "new_buys": [],
+  "exits": [
     {
+      "type": "win",
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.55,
-      "weight_pct": 10,
-      "hold_days": 3,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+      "return_pct": 1.1,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     },
     {
+      "type": "win",
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 8.11,
-      "weight_pct": 11,
-      "hold_days": 3,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+      "return_pct": 7.44,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [],
   "holdings": [
     {
@@ -39,18 +39,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 20
-    },
-    {
-      "name": "KODEX 반도체",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 11
-    },
-    {
-      "name": "SK하이닉스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 10
     },
     {
       "name": "한국가스공사",
@@ -78,10 +66,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-09-03",
-      "cumulative_return": -8.29
-    },
     {
       "date": "2026-09-04",
       "cumulative_return": -7.78
@@ -161,6 +145,10 @@
     {
       "date": "2026-10-01",
       "cumulative_return": -5.84
+    },
+    {
+      "date": "2026-10-02",
+      "cumulative_return": -5.76
     }
   ]
 }
