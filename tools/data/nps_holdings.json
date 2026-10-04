@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T19:31:29",
+  "generated_at": "2026-10-04T19:31:28",
   "window_days": 60,
   "count": 131,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
@@ -119,7 +119,7 @@
       "stkrt": "11.44",
       "stkrt_irds": "1.04",
       "stkrt_asof": "2026-10-02",
-      "first_report": "2024-10-04",
+      "first_report": "2025-04-01",
       "is_new": false,
       "price": 22350,
       "day_change": -1.32
@@ -209,7 +209,7 @@
       "stkrt": "10.86",
       "stkrt_irds": "-1.03",
       "stkrt_asof": "2026-10-02",
-      "first_report": "2024-10-04",
+      "first_report": "2025-03-04",
       "is_new": false,
       "price": 277500,
       "day_change": -0.54
