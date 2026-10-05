@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T16:00:06",
+  "generated_at": "2026-10-05T16:00:06",
   "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -12,19 +12,19 @@
       "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10140,
-      "dday": 13,
+      "price": 10180,
+      "dday": 10,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 12.3,
-          "excess": 2.5
+          "ret": 12.7,
+          "excess": 2.9
         },
         "d30": {
           "status": "done",
-          "ret": 2.6,
-          "excess": -8.3
+          "ret": 3.0,
+          "excess": -7.9
         },
         "d7": {
           "status": "pending"
@@ -42,7 +42,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 2610,
-      "dday": 74,
+      "dday": 71,
       "launched": false,
       "milestones": {
         "d40": {
@@ -66,27 +66,27 @@
       "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 241000,
-      "dday": -2,
+      "price": 244500,
+      "dday": -5,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 7.3,
-          "excess": 5.4
+          "ret": 8.9,
+          "excess": 7.0
         },
         "d30": {
           "status": "done",
-          "ret": 7.3,
-          "excess": 3.2
+          "ret": 8.9,
+          "excess": 4.8
         },
         "d7": {
           "status": "done",
-          "ret": 13.7,
-          "excess": 14.7
+          "ret": 15.3,
+          "excess": 16.3
         }
       },
-      "post_ret": 15.3
+      "post_ret": 17.0
     },
     {
       "company": "컴투스",
@@ -98,7 +98,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 34950,
-      "dday": -37,
+      "dday": -40,
       "launched": true,
       "milestones": {
         "d40": {
