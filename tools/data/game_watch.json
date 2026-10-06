@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T16:00:06",
+  "generated_at": "2026-10-06T16:00:02",
   "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -12,19 +12,19 @@
       "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10180,
-      "dday": 10,
+      "price": 10010,
+      "dday": 9,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 12.7,
-          "excess": 2.9
+          "ret": 10.9,
+          "excess": -3.8
         },
         "d30": {
           "status": "done",
-          "ret": 3.0,
-          "excess": -7.9
+          "ret": 1.3,
+          "excess": -14.5
         },
         "d7": {
           "status": "pending"
@@ -41,8 +41,8 @@
       "note": "2026-09 보도로 '4분기 출시 준비 돌입'(씰온라인 후속작). 구체 일자 미발표(12/15는 4분기 잠정). 코스닥 종목.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 2610,
-      "dday": 71,
+      "price": 2730,
+      "dday": 70,
       "launched": false,
       "milestones": {
         "d40": {
@@ -66,27 +66,27 @@
       "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 244500,
-      "dday": -5,
+      "price": 224000,
+      "dday": -6,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 8.9,
-          "excess": 7.0
+          "ret": -0.2,
+          "excess": -0.9
         },
         "d30": {
           "status": "done",
-          "ret": 8.9,
-          "excess": 4.8
+          "ret": -0.2,
+          "excess": -3.1
         },
         "d7": {
           "status": "done",
-          "ret": 15.3,
-          "excess": 16.3
+          "ret": 5.7,
+          "excess": 7.8
         }
       },
-      "post_ret": 17.0
+      "post_ret": 7.2
     },
     {
       "company": "컴투스",
@@ -98,7 +98,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 34950,
-      "dday": -40,
+      "dday": -41,
       "launched": true,
       "milestones": {
         "d40": {
