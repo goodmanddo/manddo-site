@@ -2,37 +2,44 @@
   "last_holdings": {
     "000660": {
       "name": "SK하이닉스",
-      "qty": 1,
-      "avg_price": 1815000,
-      "current_price": 1773000,
+      "qty": 2,
+      "avg_price": 1778000,
+      "current_price": 1723000,
       "opened_at": "2026-10-06"
     },
     "000990": {
       "name": "DB하이텍",
       "qty": 4,
       "avg_price": 141950,
-      "current_price": 139700,
+      "current_price": 134400,
       "opened_at": "2026-10-06"
+    },
+    "005380": {
+      "name": "현대차",
+      "qty": 2,
+      "avg_price": 342500,
+      "current_price": 336000,
+      "opened_at": "2026-10-07"
     },
     "015760": {
       "name": "한국전력",
       "qty": 23,
       "avg_price": 30100,
-      "current_price": 30300,
+      "current_price": 30050,
       "opened_at": "2026-10-06"
     },
     "042700": {
       "name": "한미반도체",
       "qty": 2,
       "avg_price": 278000,
-      "current_price": 278000,
+      "current_price": 264500,
       "opened_at": "2026-10-06"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 13,
       "avg_price": 149996,
-      "current_price": 151060,
+      "current_price": 144715,
       "opened_at": "2026-10-06"
     }
   },
@@ -46,10 +53,6 @@
       "total_eval": 19058116
     },
     {
-      "date": "2026-09-09",
-      "total_eval": 19058116
-    },
-    {
       "date": "2026-09-10",
       "total_eval": 19019531
     },
@@ -276,6 +279,10 @@
     {
       "date": "2026-10-06",
       "total_eval": 18789217
+    },
+    {
+      "date": "2026-10-07",
+      "total_eval": 18571452
     }
   ],
   "completed_trades": [

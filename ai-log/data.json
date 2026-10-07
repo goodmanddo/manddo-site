@@ -1,110 +1,73 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "start_date": "2026-05-03",
-  "cumulative_return": -6.05,
-  "week_return": -0.31,
-  "day_return": -0.31,
-  "today_realized_avg": -3.95,
-  "today_trade_count": 5,
-  "today_win_count": 1,
-  "today_loss_count": 4,
+  "cumulative_return": -7.14,
+  "week_return": -1.47,
+  "day_return": -1.16,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
+  "today_loss_count": 0,
   "win_rate": 43,
   "total_trades": 86,
-  "ai_commentary": "오늘은 SK하이닉스, DB하이텍, 한국전력 등 신규 편입. 1건 익절로 수익 확정. 4건은 손절 규칙에 따라 정리. 시작 이후 누적 -6.1%.",
+  "ai_commentary": "오늘은 현대차, SK하이닉스, DB하이텍 등 신규 편입. 시작 이후 누적 -7.1%.",
   "new_buys": [
+    {
+      "name": "현대차",
+      "slug": "hyundai-motor",
+      "market": "코스피",
+      "entry_to_current_pct": -1.9,
+      "weight_pct": 4,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    },
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -2.31,
-      "weight_pct": 9,
-      "hold_days": 0,
+      "entry_to_current_pct": -3.09,
+      "weight_pct": 19,
+      "hold_days": 1,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "DB하이텍",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.59,
+      "entry_to_current_pct": -5.32,
       "weight_pct": 3,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": 0.66,
+      "entry_to_current_pct": -0.17,
       "weight_pct": 4,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
       "name": "한미반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.0,
+      "entry_to_current_pct": -4.86,
       "weight_pct": 3,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.71,
+      "entry_to_current_pct": -3.52,
       "weight_pct": 10,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "한국가스공사",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -1.38,
-      "hold_days": 54,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "KODEX 200",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -2.12,
-      "hold_days": 119,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "win",
-      "name": "KODEX 코스닥150",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 9.73,
-      "hold_days": 14,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    },
-    {
-      "type": "loss",
-      "name": "ACE KRX금현물",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -9.24,
-      "hold_days": 120,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "PLUS 미국채30년액티브",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -16.74,
-      "hold_days": 120,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "PLUS 미국채30년액티브",
@@ -121,16 +84,22 @@
   ],
   "holdings": [
     {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 19
+    },
+    {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
       "weight_pct": 10
     },
     {
-      "name": "SK하이닉스",
-      "slug": "",
+      "name": "현대차",
+      "slug": "hyundai-motor",
       "market": "코스피",
-      "weight_pct": 9
+      "weight_pct": 4
     },
     {
       "name": "한국전력",
@@ -152,10 +121,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-09-08",
-      "cumulative_return": -6.24
-    },
     {
       "date": "2026-09-09",
       "cumulative_return": -4.71
@@ -235,6 +200,10 @@
     {
       "date": "2026-10-06",
       "cumulative_return": -6.05
+    },
+    {
+      "date": "2026-10-07",
+      "cumulative_return": -7.14
     }
   ]
 }
