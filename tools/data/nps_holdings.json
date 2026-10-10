@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-09T19:39:49",
+  "generated_at": "2026-10-10T19:31:39",
   "window_days": 60,
-  "count": 143,
+  "count": 142,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -530,19 +530,19 @@
       "day_change": -1.41
     },
     {
-      "date": "20260810",
-      "corp_name": "한화엔진",
-      "stock_code": "082740",
+      "date": "20261002",
+      "corp_name": "대덕전자",
+      "stock_code": "353200",
       "market": "코스피",
-      "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "rcept_no": "20260810000546",
-      "stkrt": "9.76",
-      "stkrt_irds": "-1.00",
-      "stkrt_asof": "2025-12-01",
-      "first_report": "2024-12-12",
+      "report_nm": "주식등의대량보유상황보고서(약식)",
+      "rcept_no": "20261002000437",
+      "stkrt": "9.67",
+      "stkrt_irds": "-3.09",
+      "stkrt_asof": "2026-10-02",
+      "first_report": "2025-01-06",
       "is_new": false,
-      "price": 41150,
-      "day_change": -9.16
+      "price": 157600,
+      "day_change": 4.16
     },
     {
       "date": "20260901",
@@ -2133,21 +2133,6 @@
       "is_new": false,
       "price": 268500,
       "day_change": -4.11
-    },
-    {
-      "date": "20261002",
-      "corp_name": "대덕전자",
-      "stock_code": "353200",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20261002000437",
-      "stkrt": null,
-      "stkrt_irds": null,
-      "stkrt_asof": null,
-      "first_report": null,
-      "is_new": false,
-      "price": 157600,
-      "day_change": 4.16
     }
   ]
 }
