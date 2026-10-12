@@ -1,46 +1,32 @@
 {
   "last_holdings": {
-    "000660": {
-      "name": "SK하이닉스",
-      "qty": 2,
-      "avg_price": 1778000,
-      "current_price": 1723000,
-      "opened_at": "2026-10-06"
-    },
-    "000990": {
-      "name": "DB하이텍",
-      "qty": 4,
-      "avg_price": 141950,
-      "current_price": 134400,
-      "opened_at": "2026-10-06"
-    },
-    "005380": {
-      "name": "현대차",
-      "qty": 2,
-      "avg_price": 342500,
-      "current_price": 336000,
-      "opened_at": "2026-10-07"
-    },
     "015760": {
       "name": "한국전력",
-      "qty": 23,
-      "avg_price": 30100,
-      "current_price": 30050,
+      "qty": 52,
+      "avg_price": 28700,
+      "current_price": 28550,
       "opened_at": "2026-10-06"
     },
-    "042700": {
-      "name": "한미반도체",
-      "qty": 2,
-      "avg_price": 278000,
-      "current_price": 264500,
-      "opened_at": "2026-10-06"
+    "034020": {
+      "name": "두산에너빌리티",
+      "qty": 107,
+      "avg_price": 74800,
+      "current_price": 71500,
+      "opened_at": "2026-10-12"
     },
-    "091160": {
-      "name": "KODEX 반도체",
-      "qty": 13,
-      "avg_price": 149996,
-      "current_price": 144715,
-      "opened_at": "2026-10-06"
+    "036460": {
+      "name": "한국가스공사",
+      "qty": 41,
+      "avg_price": 35650,
+      "current_price": 36050,
+      "opened_at": "2026-10-12"
+    },
+    "097950": {
+      "name": "CJ제일제당",
+      "qty": 8,
+      "avg_price": 185425,
+      "current_price": 181900,
+      "opened_at": "2026-10-12"
     }
   },
   "history": [
@@ -53,10 +39,6 @@
       "total_eval": 19019531
     },
     {
-      "date": "2026-09-10",
-      "total_eval": 19019531
-    },
-    {
       "date": "2026-09-11",
       "total_eval": 18761868
     },
@@ -283,6 +265,10 @@
     {
       "date": "2026-10-07",
       "total_eval": 18571452
+    },
+    {
+      "date": "2026-10-12",
+      "total_eval": 18097364
     }
   ],
   "completed_trades": [
@@ -960,6 +946,46 @@
       "date": "2026-10-06",
       "is_win": false,
       "hold_days": 120
+    },
+    {
+      "name": "SK하이닉스",
+      "code": "000660",
+      "return_pct": -4.56,
+      "date": "2026-10-12",
+      "is_win": false,
+      "hold_days": 6
+    },
+    {
+      "name": "DB하이텍",
+      "code": "000990",
+      "return_pct": -2.36,
+      "date": "2026-10-12",
+      "is_win": false,
+      "hold_days": 6
+    },
+    {
+      "name": "현대차",
+      "code": "005380",
+      "return_pct": -5.11,
+      "date": "2026-10-12",
+      "is_win": false,
+      "hold_days": 5
+    },
+    {
+      "name": "한미반도체",
+      "code": "042700",
+      "return_pct": -4.68,
+      "date": "2026-10-12",
+      "is_win": false,
+      "hold_days": 6
+    },
+    {
+      "name": "KODEX 반도체",
+      "code": "091160",
+      "return_pct": -2.43,
+      "date": "2026-10-12",
+      "is_win": false,
+      "hold_days": 6
     }
   ]
 }
