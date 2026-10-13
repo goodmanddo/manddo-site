@@ -4,28 +4,21 @@
       "name": "한국전력",
       "qty": 52,
       "avg_price": 28700,
-      "current_price": 28550,
+      "current_price": 29150,
       "opened_at": "2026-10-06"
     },
     "034020": {
       "name": "두산에너빌리티",
       "qty": 107,
       "avg_price": 74800,
-      "current_price": 71500,
-      "opened_at": "2026-10-12"
-    },
-    "036460": {
-      "name": "한국가스공사",
-      "qty": 41,
-      "avg_price": 35650,
-      "current_price": 36050,
+      "current_price": 70200,
       "opened_at": "2026-10-12"
     },
     "097950": {
       "name": "CJ제일제당",
       "qty": 8,
       "avg_price": 185425,
-      "current_price": 181900,
+      "current_price": 182800,
       "opened_at": "2026-10-12"
     }
   },
@@ -39,10 +32,6 @@
       "total_eval": 18761868
     },
     {
-      "date": "2026-09-11",
-      "total_eval": 18761868
-    },
-    {
       "date": "2026-09-14",
       "total_eval": 18604616
     },
@@ -269,6 +258,10 @@
     {
       "date": "2026-10-12",
       "total_eval": 18097364
+    },
+    {
+      "date": "2026-10-13",
+      "total_eval": 17960775
     }
   ],
   "completed_trades": [
@@ -986,6 +979,14 @@
       "date": "2026-10-12",
       "is_win": false,
       "hold_days": 6
+    },
+    {
+      "name": "한국가스공사",
+      "code": "036460",
+      "return_pct": -0.98,
+      "date": "2026-10-13",
+      "is_win": false,
+      "hold_days": 1
     }
   ]
 }

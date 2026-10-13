@@ -1,101 +1,46 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "start_date": "2026-05-03",
-  "cumulative_return": -9.51,
-  "week_return": -2.55,
-  "day_return": -2.55,
-  "today_realized_avg": -3.83,
-  "today_trade_count": 5,
+  "cumulative_return": -10.2,
+  "week_return": -3.29,
+  "day_return": -0.75,
+  "today_realized_avg": -0.98,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 5,
-  "win_rate": 41,
-  "total_trades": 91,
-  "ai_commentary": "오늘은 두산에너빌리티, 한국가스공사, CJ제일제당 등 신규 편입. 5건은 손절 규칙에 따라 정리. 시작 이후 누적 -9.5%.",
+  "today_loss_count": 1,
+  "win_rate": 40,
+  "total_trades": 92,
+  "ai_commentary": "오늘은 두산에너빌리티, CJ제일제당, 한국전력 등 신규 편입. 시작 이후 누적 -10.2%.",
   "new_buys": [
     {
       "name": "두산에너빌리티",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -4.41,
+      "entry_to_current_pct": -6.15,
       "weight_pct": 42,
-      "hold_days": 0,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
-    },
-    {
-      "name": "한국가스공사",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 1.12,
-      "weight_pct": 8,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.9,
+      "entry_to_current_pct": -1.42,
       "weight_pct": 8,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": -0.52,
+      "entry_to_current_pct": 1.57,
       "weight_pct": 8,
-      "hold_days": 6,
+      "hold_days": 7,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "SK하이닉스",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -4.56,
-      "hold_days": 6,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "DB하이텍",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -2.36,
-      "hold_days": 6,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "현대차",
-      "slug": "hyundai-motor",
-      "market": "코스피",
-      "return_pct": -5.11,
-      "hold_days": 5,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "한미반도체",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -4.68,
-      "hold_days": 6,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "KODEX 반도체",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -2.43,
-      "hold_days": 6,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "한미반도체",
@@ -130,12 +75,6 @@
       "weight_pct": 8
     },
     {
-      "name": "한국가스공사",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 8
-    },
-    {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
@@ -143,10 +82,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-09-10",
-      "cumulative_return": -4.9
-    },
     {
       "date": "2026-09-11",
       "cumulative_return": -6.19
@@ -226,6 +161,10 @@
     {
       "date": "2026-10-12",
       "cumulative_return": -9.51
+    },
+    {
+      "date": "2026-10-13",
+      "cumulative_return": -10.2
     }
   ]
 }
