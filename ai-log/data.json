@@ -1,43 +1,43 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "start_date": "2026-05-03",
-  "cumulative_return": -10.2,
-  "week_return": -0.75,
-  "day_return": -0.75,
-  "today_realized_avg": -0.98,
-  "today_trade_count": 1,
+  "cumulative_return": -10.72,
+  "week_return": -1.33,
+  "day_return": -0.58,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_loss_count": 0,
   "win_rate": 40,
   "total_trades": 92,
-  "ai_commentary": "오늘은 두산에너빌리티, CJ제일제당, 한국전력 등 신규 편입. 시작 이후 누적 -10.2%.",
+  "ai_commentary": "오늘은 한국가스공사, 두산에너빌리티, CJ제일제당 등 신규 편입. 시작 이후 누적 -10.7%.",
   "new_buys": [
+    {
+      "name": "한국가스공사",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -0.95,
+      "weight_pct": 8,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
     {
       "name": "두산에너빌리티",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -6.15,
+      "entry_to_current_pct": -7.22,
       "weight_pct": 42,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.42,
+      "entry_to_current_pct": -1.74,
       "weight_pct": 8,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
-    },
-    {
-      "name": "한국전력",
-      "slug": "",
-      "market": "코스닥",
-      "entry_to_current_pct": 1.57,
-      "weight_pct": 8,
-      "hold_days": 7,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
   "exits": [],
@@ -75,6 +75,12 @@
       "weight_pct": 8
     },
     {
+      "name": "한국가스공사",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 8
+    },
+    {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
@@ -82,10 +88,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-09-11",
-      "cumulative_return": -6.19
-    },
     {
       "date": "2026-09-14",
       "cumulative_return": -6.98
@@ -165,6 +167,10 @@
     {
       "date": "2026-10-13",
       "cumulative_return": -10.2
+    },
+    {
+      "date": "2026-10-14",
+      "cumulative_return": -10.72
     }
   ]
 }

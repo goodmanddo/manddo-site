@@ -11,14 +11,21 @@
       "name": "두산에너빌리티",
       "qty": 107,
       "avg_price": 74800,
-      "current_price": 70200,
+      "current_price": 69400,
       "opened_at": "2026-10-12"
+    },
+    "036460": {
+      "name": "한국가스공사",
+      "qty": 40,
+      "avg_price": 36750,
+      "current_price": 36400,
+      "opened_at": "2026-10-14"
     },
     "097950": {
       "name": "CJ제일제당",
       "qty": 8,
       "avg_price": 185425,
-      "current_price": 182800,
+      "current_price": 182200,
       "opened_at": "2026-10-12"
     }
   },
@@ -32,10 +39,6 @@
       "total_eval": 18604616
     },
     {
-      "date": "2026-09-14",
-      "total_eval": 18604616
-    },
-    {
       "date": "2026-09-15",
       "total_eval": 18522606
     },
@@ -262,6 +265,10 @@
     {
       "date": "2026-10-13",
       "total_eval": 17960775
+    },
+    {
+      "date": "2026-10-14",
+      "total_eval": 17856175
     }
   ],
   "completed_trades": [
