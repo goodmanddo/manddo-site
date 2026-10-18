@@ -41,6 +41,15 @@ SECTORS = [
     ("인터넷",       "🌐", "365000", "purple"),
 ]
 
+# ETF가 없는 세부 테마 — 대표종목 바스켓의 평균 등락으로 판정 (공개 종목 시세)
+THEMES = [
+    ("보안",     "🔒", ["053800", "136540", "042510"], "blue"),    # 안랩·윈스·라온시큐어
+    ("엔터",     "🎤", ["352820", "035900", "041510"], "purple"),  # 하이브·JYP·에스엠
+    ("전력설비", "⚡", ["010120", "267260", "298040"], "orange"),  # LS일렉트릭·HD현대일렉트릭·효성중공업
+    ("우주항공", "🛰️", ["099320", "189300", "012450"], "navy"),    # 쎄트렉아이·인텔리안테크·한화에어로
+    ("미용의료", "💉", ["214150", "214450", "287410"], "pink"),    # 클래시스·파마리서치·제이시스메디칼
+]
+
 
 def log(m):
     from datetime import datetime
@@ -60,6 +69,22 @@ def latest_change(code):
     return round(float(chg), 2), df.index[-1].date().isoformat()
 
 
+def basket_change(codes):
+    """바스켓(여러 종목) 평균 등락률과 거래일."""
+    chgs, day = [], None
+    for c in codes:
+        try:
+            v, d = latest_change(c)
+            if v is not None:
+                chgs.append(v)
+                day = day or d
+        except Exception:
+            pass
+    if not chgs:
+        return None, None
+    return round(sum(chgs) / len(chgs), 2), day
+
+
 def main():
     rows = []
     trade_day = None
@@ -72,6 +97,15 @@ def main():
             rows.append({"name": name, "icon": icon, "pct": chg, "code": code, "color": color})
         except Exception as e:
             log(f"{name}({code}) 실패: {e}")
+    for name, icon, codes, color in THEMES:
+        try:
+            chg, d = basket_change(codes)
+            if chg is None:
+                continue
+            trade_day = trade_day or d
+            rows.append({"name": name, "icon": icon, "pct": chg, "code": ",".join(codes), "color": color})
+        except Exception as e:
+            log(f"{name}(테마) 실패: {e}")
     if not trade_day:
         log("거래일 데이터 없음 — 중단")
         return
@@ -86,7 +120,7 @@ def main():
     data.setdefault("days", {})
     data["days"][trade_day] = ups
     data["updated_at"] = date.today().isoformat()
-    data["sectors"] = [s[0] for s in SECTORS]
+    data["sectors"] = [s[0] for s in SECTORS] + [t[0] for t in THEMES]
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=2))
     log(f"{trade_day}: 오른섹터 {len(ups)}개 기록 — " + ", ".join(f"{r['name']}{r['pct']:+.1f}" for r in ups))
