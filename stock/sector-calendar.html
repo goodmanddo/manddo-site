@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>섹터 캘린더 — 그날 오른 섹터 한눈에 | 만또 투자 인사이트</title>
+<meta name="description" content="매일 어떤 섹터가 올랐는지 달력으로 한눈에. 반도체·2차전지·제약바이오·화장품·방산·게임 등 섹터/테마 ETF 등락 기준으로 그날 강세 섹터를 자동 기록. 매 장마감 후 업데이트.">
+<meta name="keywords" content="섹터캘린더, 섹터 순환, 테마주, 강세섹터, 반도체, 2차전지, 제약바이오, 섹터 로테이션, 주식 달력">
+<meta property="og:title" content="섹터 캘린더 — 그날 오른 섹터 한눈에">
+<meta property="og:description" content="매일 강세 섹터를 달력으로. 섹터 순환(로테이션)이 눈에 보입니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/stock/sector-calendar.html">
+<link rel="canonical" href="https://manddo.kr/stock/sector-calendar.html">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+.sc-head{display:flex;align-items:center;justify-content:center;gap:16px;margin:20px 0 6px}
+.sc-head h2{font-size:20px;font-weight:800;color:#191f28;margin:0;min-width:150px;text-align:center}
+.sc-nav{width:40px;height:40px;border:1px solid #eef0f3;background:#fff;border-radius:12px;font-size:18px;cursor:pointer;color:#4e5968}
+.sc-nav:hover{background:#f2f4f6;border-color:#d1d6db}
+.sc-nav:disabled{opacity:.35;cursor:default}
+.sc-sub{text-align:center;font-size:13px;color:#8b95a1;margin-bottom:16px}
+.sc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:0 0 8px}
+.sc-dow{text-align:center;font-size:12px;font-weight:700;color:#8b95a1;padding:4px 0}
+.sc-cell{background:#fafbfc;border:1px solid #f1f3f5;border-radius:12px;min-height:96px;padding:8px 8px 10px}
+.sc-cell.empty{background:transparent;border:none}
+.sc-cell.today{border:2px solid #191f28;background:#fff}
+.sc-cell.holiday{background:#fff5f5}
+.sc-date{font-size:14px;font-weight:700;color:#333d4b;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.sc-date .hol{font-size:10px;font-weight:700;color:#e0342b;background:#fde8e8;border-radius:5px;padding:1px 5px}
+.sc-chips{display:flex;flex-direction:column;gap:5px}
+.sc-chip{font-size:11.5px;font-weight:700;border-radius:7px;padding:5px 8px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sc-chip .pct{float:right;font-weight:600;opacity:.75;margin-left:4px}
+.c-blue{background:#e7f1ff;color:#1b64da}
+.c-green{background:#e6f7ee;color:#1aa260}
+.c-yellow{background:#fff6e0;color:#b7791f}
+.c-pink{background:#ffeef3;color:#d6336c}
+.c-purple{background:#f1ebff;color:#7048e8}
+.c-teal{background:#e2f7f5;color:#0ca89a}
+.c-navy{background:#e9edf5;color:#3b5ba5}
+.c-orange{background:#fff0e6;color:#e8590c}
+.c-gray{background:#eef0f3;color:#4e5968}
+@media(max-width:560px){.sc-cell{min-height:80px;padding:6px}.sc-chip{font-size:10.5px;padding:4px 6px}.sc-chip .pct{display:none}}
+.sc-legend{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:18px 0}
+.sc-legend .sc-chip{cursor:default}
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/macro/">📰 오늘의 시장</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/crypto/">₿ 비트코인</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/etf/">📊 ETF</a>
+      <a href="/stock/" class="active">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <a class="back-btn" href="/stock/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
+  <div class="breadcrumb"><a href="/stock/">차트분석</a><span class="sep">/</span>섹터 캘린더</div>
+  <section class="learn-hero">
+    <h1>📅 섹터 캘린더</h1>
+    <p class="lead">매일 어떤 섹터가 올랐는지 달력으로 한눈에. 섹터/테마 ETF 등락을 기준으로 <b>그날 강세였던 섹터</b>를 자동 기록합니다. 섹터가 어떻게 <b>순환(로테이션)</b>하는지 흐름이 보여요.</p>
+    <div class="meta">
+      <span class="chip">매 장마감 후 자동</span>
+      <span class="chip green">+1% 이상 상위 4개</span>
+      <span class="chip gray">무료 · 회원가입 없음</span>
+    </div>
+  </section>
+
+  <div class="sc-head">
+    <button class="sc-nav" id="prev">‹</button>
+    <h2 id="sc-month">—</h2>
+    <button class="sc-nav" id="next">›</button>
+  </div>
+  <div class="sc-sub">칩 = 그날 +1% 이상 오른 섹터(많이 오른 순 최대 4개). 빈 날은 강세 섹터 없음/휴장.</div>
+
+  <div class="sc-grid" id="sc-dow"></div>
+  <div class="sc-grid" id="sc-grid"></div>
+
+  <div class="sc-legend" id="sc-legend"></div>
+
+  <div class="disclaimer">
+    <b>⚠ 참고용 안내</b><br>
+    섹터 등락은 대표 ETF의 전일 대비 종가 기준이며, 개별 종목 성과와 다를 수 있습니다. 특정 종목·섹터의 매수·매도를 권유하지 않습니다.
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·<a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·<a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+<script>
+(function(){
+  const DOW=['월','화','수','목','금'];
+  const todayStr=new Date().toLocaleDateString('sv-SE'); // YYYY-MM-DD(KST 로컬)
+  let DATA={days:{},sectors:[]};
+  let cur=new Date(); cur.setDate(1);
+
+  const dowWrap=document.getElementById('sc-dow');
+  dowWrap.innerHTML=DOW.map(d=>`<div class="sc-dow">${d}</div>`).join('');
+
+  function chipHTML(c){
+    const cls='c-'+(c.color||'gray');
+    return `<div class="sc-chip ${cls}" title="${c.name} ${c.pct>=0?'+':''}${c.pct}%">${c.icon||''} ${c.name}<span class="pct">${c.pct>=0?'+':''}${c.pct}%</span></div>`;
+  }
+  function render(){
+    const y=cur.getFullYear(), m=cur.getMonth();
+    document.getElementById('sc-month').textContent=`${y}년 ${m+1}월`;
+    // 그 달 평일만 (월~금)
+    const grid=document.getElementById('sc-grid');
+    const first=new Date(y,m,1);
+    // 첫 평일 요일 기준 앞 빈칸
+    let lead=(first.getDay()+6)%7; // 월=0
+    let cells='';
+    for(let i=0;i<Math.min(lead,5);i++) cells+='<div class="sc-cell empty"></div>';
+    const last=new Date(y,m+1,0).getDate();
+    for(let d=1; d<=last; d++){
+      const dt=new Date(y,m,d), dow=(dt.getDay()+6)%7;
+      if(dow>4) continue; // 주말 제외
+      const ds=dt.toLocaleDateString('sv-SE');
+      const chips=DATA.days[ds];
+      const hasData=Array.isArray(chips);
+      const isHoliday=hasData && chips.length===0; // 데이터 수집됐는데 0 = 약세/휴장 가능
+      let cls='sc-cell';
+      if(ds===todayStr) cls+=' today';
+      const body = hasData && chips.length
+        ? `<div class="sc-chips">${chips.map(chipHTML).join('')}</div>`
+        : '';
+      cells+=`<div class="${cls}"><div class="sc-date">${d}</div>${body}</div>`;
+    }
+    grid.innerHTML=cells;
+    // 이전 달 버튼은 데이터 최소 날짜까지만
+    const days=Object.keys(DATA.days).sort();
+    const minM = days.length? days[0].slice(0,7):null;
+    const curM=`${y}-${String(m+1).padStart(2,'0')}`;
+    document.getElementById('prev').disabled = minM && curM<=minM;
+    const nowM=new Date().toLocaleDateString('sv-SE').slice(0,7);
+    document.getElementById('next').disabled = curM>=nowM;
+  }
+  function legend(){
+    // 등장한 섹터 색 범례
+    const seen={};
+    Object.values(DATA.days).flat().forEach(c=>{seen[c.name]={icon:c.icon,color:c.color};});
+    document.getElementById('sc-legend').innerHTML=Object.entries(seen)
+      .map(([n,v])=>`<div class="sc-chip c-${v.color||'gray'}">${v.icon} ${n}</div>`).join('');
+  }
+  document.getElementById('prev').onclick=()=>{cur.setMonth(cur.getMonth()-1);render();};
+  document.getElementById('next').onclick=()=>{cur.setMonth(cur.getMonth()+1);render();};
+
+  fetch('/tools/data/sector_calendar.json?t='+Date.now()).then(r=>r.json()).then(d=>{
+    DATA=d; render(); legend();
+  }).catch(()=>{document.getElementById('sc-grid').innerHTML='<div style="grid-column:1/-1;text-align:center;color:#8b95a1;padding:40px">데이터를 불러오지 못했습니다.</div>';});
+})();
+</script>
+</body>
+</html>
