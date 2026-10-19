@@ -1,31 +1,24 @@
 {
   "last_holdings": {
-    "015760": {
-      "name": "한국전력",
-      "qty": 52,
-      "avg_price": 28700,
-      "current_price": 28450,
-      "opened_at": "2026-10-06"
+    "007310": {
+      "name": "오뚜기",
+      "qty": 4,
+      "avg_price": 323000,
+      "current_price": 325500,
+      "opened_at": "2026-10-19"
     },
-    "034020": {
-      "name": "두산에너빌리티",
-      "qty": 107,
-      "avg_price": 74800,
-      "current_price": 63300,
-      "opened_at": "2026-10-12"
-    },
-    "036460": {
-      "name": "한국가스공사",
-      "qty": 40,
-      "avg_price": 36750,
-      "current_price": 36450,
-      "opened_at": "2026-10-14"
+    "010950": {
+      "name": "S-Oil",
+      "qty": 9,
+      "avg_price": 152900,
+      "current_price": 156200,
+      "opened_at": "2026-10-19"
     },
     "097950": {
       "name": "CJ제일제당",
-      "qty": 8,
-      "avg_price": 185425,
-      "current_price": 183200,
+      "qty": 7,
+      "avg_price": 185285,
+      "current_price": 186300,
       "opened_at": "2026-10-12"
     }
   },
@@ -39,10 +32,6 @@
       "total_eval": 18607021
     },
     {
-      "date": "2026-09-16",
-      "total_eval": 18607021
-    },
-    {
       "date": "2026-09-17",
       "total_eval": 18634771
     },
@@ -269,6 +258,10 @@
     {
       "date": "2026-10-15",
       "total_eval": 17177075
+    },
+    {
+      "date": "2026-10-19",
+      "total_eval": 17363577
     }
   ],
   "completed_trades": [
@@ -994,6 +987,30 @@
       "date": "2026-10-13",
       "is_win": false,
       "hold_days": 1
+    },
+    {
+      "name": "한국전력",
+      "code": "015760",
+      "return_pct": -0.7,
+      "date": "2026-10-19",
+      "is_win": false,
+      "hold_days": 13
+    },
+    {
+      "name": "두산에너빌리티",
+      "code": "034020",
+      "return_pct": -13.9,
+      "date": "2026-10-19",
+      "is_win": false,
+      "hold_days": 7
+    },
+    {
+      "name": "한국가스공사",
+      "code": "036460",
+      "return_pct": -1.63,
+      "date": "2026-10-19",
+      "is_win": false,
+      "hold_days": 5
     }
   ]
 }

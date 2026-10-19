@@ -1,97 +1,94 @@
 {
-  "date": "2026-10-15",
+  "date": "2026-10-19",
   "start_date": "2026-05-03",
-  "cumulative_return": -14.11,
-  "week_return": -3.8,
-  "day_return": -3.8,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -13.18,
+  "week_return": -2.76,
+  "day_return": 1.09,
+  "today_realized_avg": -5.41,
+  "today_trade_count": 3,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 40,
-  "total_trades": 92,
-  "ai_commentary": "오늘은 한국가스공사, 두산에너빌리티, CJ제일제당 등 신규 편입. 시작 이후 누적 -14.1%.",
+  "today_loss_count": 3,
+  "win_rate": 39,
+  "total_trades": 95,
+  "ai_commentary": "오늘은 오뚜기, S-Oil, CJ제일제당 등 신규 편입. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 -13.2%.",
   "new_buys": [
     {
-      "name": "한국가스공사",
+      "name": "오뚜기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.82,
-      "weight_pct": 8,
-      "hold_days": 1,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+      "entry_to_current_pct": 0.77,
+      "weight_pct": 7,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
-      "name": "두산에너빌리티",
+      "name": "S-Oil",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -15.37,
-      "weight_pct": 39,
-      "hold_days": 3,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+      "entry_to_current_pct": 2.16,
+      "weight_pct": 8,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.2,
-      "weight_pct": 9,
-      "hold_days": 3,
+      "entry_to_current_pct": 0.55,
+      "weight_pct": 8,
+      "hold_days": 7,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     }
   ],
-  "exits": [],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "두산에너빌리티",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -13.9,
+      "hold_days": 7,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    },
+    {
+      "type": "loss",
+      "name": "한국가스공사",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -1.63,
+      "hold_days": 5,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
   "weekly_losses": [
     {
-      "name": "한미반도체",
+      "name": "두산에너빌리티",
       "slug": "",
-      "return_pct": -4.68,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    },
-    {
-      "name": "현대차",
-      "slug": "hyundai-motor",
-      "return_pct": -5.11,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    },
-    {
-      "name": "SK하이닉스",
-      "slug": "",
-      "return_pct": -4.56,
+      "return_pct": -13.9,
       "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     }
   ],
   "holdings": [
     {
-      "name": "두산에너빌리티",
+      "name": "S-Oil",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 39
-    },
-    {
-      "name": "한국전력",
-      "slug": "",
-      "market": "코스닥",
-      "weight_pct": 9
+      "weight_pct": 8
     },
     {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 9
+      "weight_pct": 8
     },
     {
-      "name": "한국가스공사",
+      "name": "오뚜기",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 8
+      "weight_pct": 7
     }
   ],
   "return_history": [
-    {
-      "date": "2026-09-15",
-      "cumulative_return": -7.39
-    },
     {
       "date": "2026-09-16",
       "cumulative_return": -6.96
@@ -171,6 +168,10 @@
     {
       "date": "2026-10-15",
       "cumulative_return": -14.11
+    },
+    {
+      "date": "2026-10-19",
+      "cumulative_return": -13.18
     }
   ]
 }
