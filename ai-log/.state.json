@@ -4,22 +4,29 @@
       "name": "오뚜기",
       "qty": 4,
       "avg_price": 323000,
-      "current_price": 325500,
+      "current_price": 327500,
       "opened_at": "2026-10-19"
     },
     "010950": {
       "name": "S-Oil",
       "qty": 9,
       "avg_price": 152900,
-      "current_price": 156200,
+      "current_price": 144000,
       "opened_at": "2026-10-19"
     },
     "097950": {
       "name": "CJ제일제당",
       "qty": 7,
       "avg_price": 185285,
-      "current_price": 186300,
+      "current_price": 185100,
       "opened_at": "2026-10-12"
+    },
+    "271560": {
+      "name": "오리온",
+      "qty": 67,
+      "avg_price": 112598,
+      "current_price": 112100,
+      "opened_at": "2026-10-20"
     }
   },
   "history": [
@@ -32,10 +39,6 @@
       "total_eval": 18634771
     },
     {
-      "date": "2026-09-17",
-      "total_eval": 18634771
-    },
-    {
       "date": "2026-09-18",
       "total_eval": 18733686
     },
@@ -262,6 +265,10 @@
     {
       "date": "2026-10-19",
       "total_eval": 17363577
+    },
+    {
+      "date": "2026-10-20",
+      "total_eval": 17218917
     }
   ],
   "completed_trades": [
