@@ -1,42 +1,42 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-10-21",
   "start_date": "2026-05-03",
-  "cumulative_return": -13.91,
-  "week_return": -0.83,
-  "day_return": -0.83,
+  "cumulative_return": -14.08,
+  "week_return": -1.04,
+  "day_return": -0.21,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 39,
   "total_trades": 95,
-  "ai_commentary": "오늘은 오리온, 오뚜기, S-Oil 등 신규 편입. 시작 이후 누적 -13.9%.",
+  "ai_commentary": "오늘은 오리온, 오뚜기, S-Oil 등 신규 편입. 시작 이후 누적 -14.1%.",
   "new_buys": [
     {
       "name": "오리온",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.44,
+      "entry_to_current_pct": -0.26,
       "weight_pct": 44,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
       "name": "오뚜기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.39,
-      "weight_pct": 8,
-      "hold_days": 1,
+      "entry_to_current_pct": -0.77,
+      "weight_pct": 7,
+      "hold_days": 2,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "S-Oil",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -5.82,
+      "entry_to_current_pct": -3.27,
       "weight_pct": 8,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     }
   ],
@@ -57,29 +57,25 @@
       "weight_pct": 44
     },
     {
-      "name": "오뚜기",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 8
-    },
-    {
       "name": "S-Oil",
       "slug": "",
       "market": "코스피",
       "weight_pct": 8
     },
     {
+      "name": "오뚜기",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 7
+    },
+    {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 8
+      "weight_pct": 7
     }
   ],
   "return_history": [
-    {
-      "date": "2026-09-17",
-      "cumulative_return": -6.83
-    },
     {
       "date": "2026-09-18",
       "cumulative_return": -6.33
@@ -159,6 +155,10 @@
     {
       "date": "2026-10-20",
       "cumulative_return": -13.91
+    },
+    {
+      "date": "2026-10-21",
+      "cumulative_return": -14.08
     }
   ]
 }
