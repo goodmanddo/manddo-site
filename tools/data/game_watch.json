@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T16:00:04",
+  "generated_at": "2026-10-22T16:00:02",
   "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -12,8 +12,8 @@
       "note": "2026-09 보도로 '4분기 출시 준비 돌입'(씰온라인 후속작). 구체 일자 미발표(12/15는 4분기 잠정). 코스닥 종목.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 2785,
-      "dday": 55,
+      "price": 2885,
+      "dday": 54,
       "launched": false,
       "milestones": {
         "d40": {
@@ -37,27 +37,27 @@
       "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10140,
-      "dday": -6,
+      "price": 10880,
+      "dday": -7,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 12.3,
-          "excess": 15.9
+          "ret": 20.5,
+          "excess": 28.4
         },
         "d30": {
           "status": "done",
-          "ret": 2.6,
-          "excess": 5.3
+          "ret": 10.1,
+          "excess": 17.1
         },
         "d7": {
           "status": "done",
-          "ret": 8.4,
-          "excess": 20.6
+          "ret": 16.4,
+          "excess": 32.5
         }
       },
-      "post_ret": 3.2
+      "post_ret": 10.7
     },
     {
       "company": "엔씨소프트",
@@ -68,27 +68,27 @@
       "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 214000,
-      "dday": -21,
+      "price": 211500,
+      "dday": -22,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -4.7,
-          "excess": 13.7
+          "ret": -5.8,
+          "excess": 15.5
         },
         "d30": {
           "status": "done",
-          "ret": -4.7,
-          "excess": 11.9
+          "ret": -5.8,
+          "excess": 13.8
         },
         "d7": {
           "status": "done",
-          "ret": 0.9,
-          "excess": 21.6
+          "ret": -0.2,
+          "excess": 23.3
         }
       },
-      "post_ret": 2.4
+      "post_ret": 1.2
     },
     {
       "company": "컴투스",
@@ -100,7 +100,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 34950,
-      "dday": -56,
+      "dday": -57,
       "launched": true,
       "milestones": {
         "d40": {
