@@ -136,6 +136,10 @@ def main():
             "company": ev["company"], "code": code, "game": ev.get("game", ""),
             "launch_date": ev["date"], "status": ev.get("status", "expected"),
             "note": ev.get("note", ""),
+            # 날짜가 확정이 아니면(tentative) D-day 숫자를 신뢰하지 말라는 신호.
+            # 보통 "4분기 예정"처럼 분기만 나온 경우. date_label은 사이트 표시용.
+            "tentative": bool(ev.get("tentative")),
+            "date_label": ev.get("date_label", ""),
             "bench": bench, "bench_name": BENCH_NAME.get(bench, ""),
             "price": int(cur), "dday": dday, "launched": launched,
             "milestones": mile, "post_ret": post,

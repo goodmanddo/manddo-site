@@ -147,7 +147,12 @@
     el.innerHTML='<div class="gw-cards">'+d.items.map(function(i){
       var soon=!i.launched && i.dday<=45 && i.dday>=0;
       var ddayHtml, tag;
-      if(i.launched){ddayHtml='<div class="gw-dday done"><div class="num">D+'+Math.abs(i.dday)+'</div><div class="lab">출시됨</div></div>';tag='<span class="gw-tag done">출시완료</span>';}
+      if(i.tentative){
+        // 날짜 미확정(분기만 나온 경우): D-day/출시여부 모두 못 믿으니 '예정(미정)'으로만 표시
+        var lbl=i.date_label||'출시 예정';
+        ddayHtml='<div class="gw-dday" style="background:#fff7ed"><div class="num" style="font-size:14px;color:#c2410c">'+lbl+'</div><div class="lab" style="color:#ea580c">날짜 미정</div></div>';
+        tag='<span class="gw-tag exp">잠정</span>';}
+      else if(i.launched){ddayHtml='<div class="gw-dday done"><div class="num">D+'+Math.abs(i.dday)+'</div><div class="lab">출시됨</div></div>';tag='<span class="gw-tag done">출시완료</span>';}
       else{ddayHtml='<div class="gw-dday"><div class="num">D-'+i.dday+'</div><div class="lab">출시까지</div></div>';tag=i.status==='confirmed'?'<span class="gw-tag conf">확정</span>':'<span class="gw-tag exp">잠정</span>';}
       var m=i.milestones||{};
       var postHtml='';
