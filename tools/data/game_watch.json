@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T16:00:02",
+  "generated_at": "2026-10-22T22:25:30",
   "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -8,87 +8,99 @@
       "code": "023770",
       "game": "씰M2 (SEAL M2, MMORPG)",
       "launch_date": "20261022",
-      "status": "launched",
+      "status": "expected",
       "note": "2026-10-22 오전10시 국내 정식 출시(확정). 씰온라인·씰M 후속작. 출시 당일 양대 앱마켓 인기 1위. 코스닥 종목.",
+      "tentative": false,
+      "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 2885,
+      "price": 2660,
       "dday": 0,
       "launched": true,
       "milestones": {
         "d40": {
-          "status": "pending"
+          "status": "done",
+          "ret": 0.8,
+          "excess": 8.9
         },
         "d30": {
-          "status": "pending"
+          "status": "done",
+          "ret": 1.5,
+          "excess": 10.1
         },
         "d7": {
-          "status": "pending"
+          "status": "done",
+          "ret": -2.9,
+          "excess": -2.6
         }
       },
-      "post_ret": null
+      "post_ret": 0.0
     },
     {
       "company": "카카오게임즈",
       "code": "293490",
       "game": "도깨비의세계 (MMORPG)",
-      "launch_date": "20261015",
-      "status": "expected",
-      "note": "2026-07 다수 보도로 '10월 출시 확정', 구체 일자 미발표(15일은 잠정). 8월 사전등록·9월 쇼케이스 예정.",
+      "launch_date": "20261008",
+      "status": "launched",
+      "note": "2026-10-08 정식 출시(확정). 2.5D 한국형 MMORPG. 코스닥.",
+      "tentative": false,
+      "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10880,
-      "dday": -7,
+      "price": 10900,
+      "dday": -14,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 20.5,
-          "excess": 28.4
+          "ret": 32.0,
+          "excess": 44.1
         },
         "d30": {
           "status": "done",
-          "ret": 10.1,
-          "excess": 17.1
+          "ret": 21.9,
+          "excess": 28.9
         },
         "d7": {
           "status": "done",
-          "ret": 16.4,
-          "excess": 32.5
+          "ret": 9.5,
+          "excess": 26.4
         }
       },
-      "post_ret": 10.7
+      "post_ret": 16.6
     },
     {
       "company": "엔씨소프트",
       "code": "036570",
       "game": "아이온2 글로벌 (PC/Steam)",
-      "launch_date": "20260930",
-      "status": "expected",
-      "note": "컨콜서 '3분기 글로벌 출시' 언급, 구체 일자 미발표(9/30은 3분기말 잠정).",
+      "launch_date": "20261005",
+      "status": "launched",
+      "note": "2026-10-05 글로벌 정식 출시(확정). Steam·퍼플, 최고 동접 40만+. 코스피.",
+      "tentative": false,
+      "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 211500,
-      "dday": -22,
+      "price": 213000,
+      "dday": -17,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -5.8,
-          "excess": 15.5
+          "ret": -6.0,
+          "excess": 13.7
         },
         "d30": {
           "status": "done",
-          "ret": -5.8,
-          "excess": 13.8
+          "ret": -4.1,
+          "excess": 14.1
         },
         "d7": {
           "status": "done",
-          "ret": -0.2,
-          "excess": 23.3
+          "ret": -1.4,
+          "excess": 19.6
         }
       },
-      "post_ret": 1.2
+      "post_ret": -4.9
     },
     {
       "company": "컴투스",
@@ -97,6 +109,8 @@
       "launch_date": "20260826",
       "status": "confirmed",
       "note": "자동등록 2026-08-08 (출처 ZDNet Korea / 뉴스핌 / 헤럴드경제 / 나무위키 (2026-08-07 쇼케이스 공식 발표))",
+      "tentative": false,
+      "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 34950,
