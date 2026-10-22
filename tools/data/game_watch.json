@@ -7,14 +7,14 @@
       "company": "플레이위드",
       "code": "023770",
       "game": "씰M2 (SEAL M2, MMORPG)",
-      "launch_date": "20261215",
-      "status": "expected",
-      "note": "2026-09 보도로 '4분기 출시 준비 돌입'(씰온라인 후속작). 구체 일자 미발표(12/15는 4분기 잠정). 코스닥 종목.",
+      "launch_date": "20261022",
+      "status": "launched",
+      "note": "2026-10-22 오전10시 국내 정식 출시(확정). 씰온라인·씰M 후속작. 출시 당일 양대 앱마켓 인기 1위. 코스닥 종목.",
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 2885,
-      "dday": 54,
-      "launched": false,
+      "dday": 0,
+      "launched": true,
       "milestones": {
         "d40": {
           "status": "pending"
