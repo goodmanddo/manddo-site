@@ -1,109 +1,109 @@
 {
   "us_market": {
-    "summary": "미국 증시 소폭 상승 속 반도체·친환경 섹터 강세. SOXX +2.07%, TAN +1.94%로 기술 기반 성장주 우위. 원화 약보합(+0.19%).",
+    "summary": "미국 증시 지수 데이터 부재로 정확한 방향성 판단 어려우나, 금융(XLF +1.09%) 강세 vs 반도체(SOXX -6.79%), 기술(XLK -3.29%) 약세로 섹터 양극화 심화. 금융 섹터 강세가 한국 금융주에 긍정 신호.",
     "indices": [
       {
         "name": "다우",
-        "change_pct": 0.69
+        "change_pct": null
       },
       {
         "name": "나스닥",
-        "change_pct": 1.05
+        "change_pct": null
       },
       {
         "name": "S&P 500",
-        "change_pct": 0.58
+        "change_pct": null
       }
     ],
-    "fx_usd_krw": 1326.5,
-    "fx_change_pct": 0.19,
-    "sector_focus": "반도체 / 태양광·친환경",
+    "fx_usd_krw": 1325.2,
+    "fx_change_pct": -0.03,
+    "sector_focus": "금융(강세) vs 반도체/기술(약세) 양극화",
     "impacted_kr_stocks": [
       {
-        "name": "삼성전자",
-        "code": "005930",
-        "slug": "samsung-electronics",
-        "sector": "반도체",
+        "name": "KB금융",
+        "code": "105560",
+        "slug": "kb-financial",
+        "sector": "금융",
         "rank": 1,
-        "trigger": "미국 SOXX +2.07% 반도체 섹터 강세로 한국 대표 메모리·파운드리 기업 동조 매수 기대. 메모리 수급 개선 사이클 지속.",
-        "ai_view": "반도체 수요 회복세 명확. 글로벌 AI 인프라 수요 견조하고 가격 회복 추세 유지. 기술주 선호도 높아진 외인 수급 호재.",
+        "trigger": "미국 금융(XLF +1.09%) 강세 확대 → 한국 금융주 동조 가능성 높음. 글로벌 금융 사이클 재개 신호",
+        "ai_view": "미 금융 섹터 유일한 강세 섹터로 기능 중. KB금융은 시가총액 최대 금융주로 동조성 높음. 단기 매수 신호 유효.",
         "stance": "small_entry"
       },
       {
-        "name": "SK하이닉스",
-        "code": "000660",
-        "slug": "sk-hynix",
-        "sector": "반도체",
+        "name": "신한지주",
+        "code": "055550",
+        "slug": "shinhan-financial",
+        "sector": "금융",
         "rank": 2,
-        "trigger": "SOXX 강세의 직접 수혜. HBM 고부가가치 제품 판매 확대로 마진 개선 중. 반도체 업사이클 재개 신호.",
-        "ai_view": "메모리 가격 상승 모멘텀이 지속되는 가운데 AI 칩 수요 집중. 실적 개선 확률 높음.",
-        "stance": "watch"
+        "trigger": "XLF +1.09% 금융 강세로 한국 대형 금융주 수혜. 글로벌 펀드 리밸런싱 수요 기대",
+        "ai_view": "금융 섹터 동조성이 높은 중형 금융주. KB금융 대비 변동성 다소 낮으나 상승 여력 충분.",
+        "stance": "small_entry"
       },
       {
-        "name": "삼성전기",
-        "code": "009150",
-        "slug": "samsung-electro-mech",
-        "sector": "반도체",
+        "name": "하나금융지주",
+        "code": "086790",
+        "slug": "hana-financial",
+        "sector": "금융",
         "rank": 3,
-        "trigger": "반도체 공급 확대에 따른 PCB·부품 수요 증가. 섹터 깊이 강화로 후행주 수익성 개선 기대.",
-        "ai_view": "반도체 업황 개선이 장비·부품사로 전파되는 단계. 하지만 상대적으로 밸류에이션 고평가 우려 있음.",
+        "trigger": "금융 섹터 전반 강세에 한국 3대 금융지주 수혜 패턴 반복 가능",
+        "ai_view": "금융주 3연합 중 유동성 개선 추세. 금융 섹터 모멘텀 지속 시 3순위 수혜주로 예상.",
         "stance": "watch"
       }
     ]
   },
   "volume_surge": [
     {
-      "name": "앤로보틱스",
-      "code": "138360",
-      "slug": "ann-robotics",
-      "volume_ratio": 9.9,
-      "price_change_pct": 21.1,
-      "context": "미국 기술·테크 섹터 강세(XLK +1.67%)에 힘입어 로봇·자동화 솔루션 기업으로서 AI·제조 자동화 수혜 기대감 확산.",
-      "ai_view": "정보 부족 상태에서의 급등은 높은 변동성 내재. 펀더멘탈 확인 필요. 기술주 랠리의 후발주로 주의 필요.",
+      "name": "SKAI",
+      "code": "357880",
+      "slug": "skai",
+      "volume_ratio": 10.8,
+      "price_change_pct": 20.8,
+      "context": "20% 이상 상승률 기록으로 시장 주목도 급증. AI/테크 관련 호재 또는 기관 수급 진입 추정",
+      "ai_view": "거래량 10.8배 + 주가 20.8% 상승은 강한 매수 신호이나, 일일 변동성 매우 높음. 단기 수익실현 매물 가능성 상존.",
+      "stance": "watch"
+    },
+    {
+      "name": "빅텍",
+      "code": "065450",
+      "slug": "bigtech",
+      "volume_ratio": 8.1,
+      "price_change_pct": 17.5,
+      "context": "17.5% 상승 + 8.1배 거래량으로 강한 모멘텀 확인. 소형주 급등 패턴",
+      "ai_view": "기술/임의소비 관련 소형주로 추정. 미국 테크 약세(XLK -3.29%)와 역행하는 점이 특이. 국내 수급 중심 상승 가능성.",
+      "stance": "watch"
+    },
+    {
+      "name": "폴라리스AI",
+      "code": "039980",
+      "slug": "polaris-ai",
+      "volume_ratio": 14.4,
+      "price_change_pct": 7.2,
+      "context": "AI 테마 종목으로 추정. 거래량 14.4배는 매우 높으나 가격 상승률 7.2%로 완화됨 → 변동성 높은 약세 신호",
+      "ai_view": "AI 수요 지속되나 미국 기술/반도체 약세에 영향받을 수 있음. 거래량 급증 대비 가격 상승이 약한 것은 매도 우위 신호.",
       "stance": "avoid"
     },
     {
-      "name": "레몬헬스케어",
-      "code": "365660",
-      "slug": "lemon-healthcare",
-      "volume_ratio": 8.5,
-      "price_change_pct": 29.7,
-      "context": "헬스케어 섹터 약세(XLV -0.49%)에도 불구하고 역행 급등. 특정 뉴스/호재 추측되나 정보 수집 실패로 불명확.",
-      "ai_view": "비합리적 급등 신호로 보임. 미국 섹터 약세와 괴리 심함. 익일 조정 압박 가능성 높음.",
+      "name": "대모",
+      "code": "317850",
+      "slug": "daemo",
+      "volume_ratio": 16.7,
+      "price_change_pct": 4.3,
+      "context": "거래량 16.7배 극심한 증가량에도 가격 상승 4.3%에 그침. 기관 차입공매도 또는 변동성 거래",
+      "ai_view": "거래량 대비 가격 상승이 현저히 낮은 것은 주가 약세 신호. 공매도 압력 존재 가능성. 진입 위험.",
       "stance": "avoid"
     },
     {
-      "name": "켐트로스",
-      "code": "220260",
-      "slug": "chemtros",
-      "volume_ratio": 9.5,
-      "price_change_pct": 16.0,
-      "context": "미국 메탈·철강 섹터 상승(XME +0.94%)에 동반 상승. 화학·철강 재료 수급 개선 신호로 해석 가능.",
-      "ai_view": "섹터 긍정 신호는 있으나 거래량 16배 급증은 과도한 매력. 기술적 과매수 상태일 가능성 높음.",
-      "stance": "watch"
-    },
-    {
-      "name": "에스팀",
-      "code": "458350",
-      "slug": "estem",
-      "volume_ratio": 16.9,
-      "price_change_pct": 14.2,
-      "context": "기술·테크 섹터 강세(XLK +1.67%)의 연쇄 수혜로 추정. IT 서비스·솔루션 기업으로 기술투자 사이클 호재.",
-      "ai_view": "16배 거래량은 비정상 신호. 실적 발표나 공시 여부 확인 필수. 단기 매매 수급에 흔들릴 수 있음.",
-      "stance": "watch"
-    },
-    {
-      "name": "자이언트스텝",
-      "code": "289220",
-      "slug": "giantstep",
-      "volume_ratio": 15.2,
-      "price_change_pct": 12.8,
-      "context": "기술주 랠리(XLK +1.67%) 속 소프트웨어·플랫폼 기업 수혜. 디지털 전환 투자 확대 기대.",
-      "ai_view": "거래량 급증이 뚜렷하나 중장기 관점에선 섹터 강세와 괴리 가능성. 단기 수급 주도 추정.",
-      "stance": "watch"
+      "name": "휴니드",
+      "code": "005870",
+      "slug": "huneed",
+      "volume_ratio": 8.0,
+      "price_change_pct": 6.1,
+      "context": "거래량 8.0배 + 6.1% 상승으로 상대적 균형감 있음. 산업/중형주 수급 개선 신호",
+      "ai_view": "미국 금융/산업 혼조 시장에서 국내 중형주 자체 수급 개선 신호. 단기 모멘텀 지속 가능성 있음.",
+      "stance": "small_entry"
     }
   ],
-  "ai_summary": "미국 증시 반도체(SOXX +2.07%) 및 친환경(TAN +1.94%) 섹터 주도 상승으로 한국 기술주 동조 강화 기대. 삼성전자·SK하이닉스 등 메모리 칩 수요 회복 신호가 유효하나, 한국 거래량 급증 종목 대다수는 단순 기술적 수급 과열로 보임. 섹터 분석 기반의 우량주 소액 진입보다는 거래량 급증 종목 회피 권장.",
-  "date": "2026-10-22",
+  "ai_summary": "미국 금융 섹터(XLF +1.09%) 유일 강세 vs 반도체·기술 약세(SOXX -6.79%, XLK -3.29%)의 양극화 심화. 한국 금융주(KB금융, 신한지주) 매수 신호 유효하나 거래량 급증 종목 중 대부분 거래량 대비 가격 상승 미흡으로 변동성 수급 성향 강함. 금융 섹터 깊이 파고 소액 진입 후 관망 권고.",
+  "date": "2026-10-23",
   "generated_at": "06:00"
 }
