@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-25T09:55:57",
+  "generated_at": "2026-10-25T21:00:02",
   "week": "2026-10-26",
   "window": {
     "from": "2026-09-22",
     "to": "2026-10-23",
     "trading_days": 20
   },
-  "dividend_as_of": "2026-10-18T22:11:50",
-  "nps_as_of": "2026-10-24T19:31:22",
+  "dividend_as_of": "2026-10-25T20:11:52",
+  "nps_as_of": "2026-10-25T19:31:29",
   "trend": [
     {
       "sector": "반도체",
@@ -72,7 +72,7 @@
       "icon": "🔋",
       "kind": "both",
       "core": true,
-      "dividend_yield": 4.39,
+      "dividend_yield": 4.64,
       "nps_stake": 6.4,
       "nps_change": 1.05,
       "nps_date": "20261002",
@@ -100,11 +100,11 @@
       "icon": "🔲",
       "kind": "div",
       "core": true,
-      "dividend_yield": 4.62,
+      "dividend_yield": 4.91,
       "nps_stake": null,
       "nps_change": null,
       "nps_date": null,
-      "reason": "Display Driver IC · 섹터 배당주 28개 중 배당률 1위 · PBR 0.47 자산가치 이하",
+      "reason": "Display Driver IC · 섹터 배당주 28개 중 배당률 1위 · PBR 0.44 자산가치 이하",
       "new": false
     },
     {
@@ -114,7 +114,7 @@
       "icon": "🔲",
       "kind": "div",
       "core": true,
-      "dividend_yield": 4.36,
+      "dividend_yield": 4.77,
       "nps_stake": null,
       "nps_change": null,
       "nps_date": null,
