@@ -213,7 +213,8 @@ def main():
     bal = None
     for attempt in range(4):
         bal = api.get_balance()
-        if bal.get("total_eval", 0) > 0 and bal.get("holdings"):
+        # 정상: 보유 있음(일반) OR 전액현금(보유 없지만 요약 주식평가액도 0 = 금요일 매도 완료)
+        if bal.get("total_eval", 0) > 0 and (bal.get("holdings") or int(bal.get("stock_eval", 0)) == 0):
             if attempt > 0:
                 log(f"잔고 정상응답 ({attempt+1}회차)")
             break
@@ -222,9 +223,14 @@ def main():
             _t.sleep(2.5)
     holdings = {h["code"]: h for h in bal["holdings"]}
     total_eval = bal["total_eval"]
-    # 가드: 잔고 비정상이면 state·data.json 변경 없이 종료(거짓 매도·-100% 사고 방지)
-    if total_eval <= 0 or not holdings:
-        log(f"⚠ 잔고 조회 이상 (total={total_eval}, holdings={len(holdings)}) — 업데이트 중단, 파일 변경 없음")
+    stock_eval = int(bal.get("stock_eval", 0))
+    # 가드: '진짜 글리치'만 차단 (거짓 매도·-100% 사고 방지).
+    #   - total<=0           : 완전 빈응답(2026-06-08형)
+    #   - 보유[] & stock_eval>0: 부분 글리치(output1만 누락, 요약엔 주식 남음)
+    # 보유[]여도 stock_eval==0 이면 '전액 현금(금요일 매도 완료)'이라 정상 처리해 보유를 비운다.
+    # (2026-10-25 수정: 금요일 청산 후 주말에 목요일 보유가 '보유'로 잘못 남던 문제)
+    if total_eval <= 0 or (not holdings and stock_eval > 0):
+        log(f"⚠ 잔고 조회 이상 (total={total_eval}, stock_eval={stock_eval}, holdings={len(holdings)}) — 업데이트 중단, 파일 변경 없음")
         return
 
     # 초기 자본: 최초 실행 시 세팅

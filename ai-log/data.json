@@ -1,47 +1,68 @@
 {
-  "date": "2026-10-22",
+  "date": "2026-10-23",
   "start_date": "2026-05-03",
-  "cumulative_return": -14.48,
-  "week_return": -0.46,
-  "day_return": -0.46,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -15.48,
+  "week_return": -1.63,
+  "day_return": -1.17,
+  "today_realized_avg": -6.02,
+  "today_trade_count": 4,
   "today_win_count": 0,
-  "today_loss_count": 0,
-  "win_rate": 39,
-  "total_trades": 95,
-  "ai_commentary": "오늘은 오리온, 오뚜기, S-Oil 등 신규 편입. 시작 이후 누적 -14.5%.",
-  "new_buys": [
+  "today_loss_count": 4,
+  "win_rate": 37,
+  "total_trades": 99,
+  "ai_commentary": "4건은 손절 규칙에 따라 정리. 시작 이후 누적 -15.5%.",
+  "new_buys": [],
+  "exits": [
     {
-      "name": "오리온",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.0,
-      "weight_pct": 44,
-      "hold_days": 2,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
-    },
-    {
+      "type": "loss",
       "name": "오뚜기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.0,
-      "weight_pct": 8,
+      "return_pct": -2.94,
+      "hold_days": 4,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    },
+    {
+      "type": "loss",
+      "name": "S-Oil",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -13.73,
+      "hold_days": 4,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    },
+    {
+      "type": "loss",
+      "name": "CJ제일제당",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -6.25,
+      "hold_days": 11,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    },
+    {
+      "type": "loss",
+      "name": "오리온",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -1.15,
       "hold_days": 3,
-      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "CJ제일제당",
+      "slug": "",
+      "return_pct": -6.25,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     },
     {
       "name": "S-Oil",
       "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": -8.57,
-      "weight_pct": 7,
-      "hold_days": 3,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
-    }
-  ],
-  "exits": [],
-  "weekly_losses": [
+      "return_pct": -13.73,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    },
     {
       "name": "두산에너빌리티",
       "slug": "",
@@ -49,37 +70,8 @@
       "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
     }
   ],
-  "holdings": [
-    {
-      "name": "오리온",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 44
-    },
-    {
-      "name": "오뚜기",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 8
-    },
-    {
-      "name": "S-Oil",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 7
-    },
-    {
-      "name": "CJ제일제당",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 7
-    }
-  ],
+  "holdings": [],
   "return_history": [
-    {
-      "date": "2026-09-21",
-      "cumulative_return": -5.7
-    },
     {
       "date": "2026-09-22",
       "cumulative_return": -6.36
@@ -159,6 +151,10 @@
     {
       "date": "2026-10-22",
       "cumulative_return": -14.48
+    },
+    {
+      "date": "2026-10-23",
+      "cumulative_return": -15.48
     }
   ]
 }
