@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-10-25T09:55:57",
+  "week": "2026-10-26",
+  "window": {
+    "from": "2026-09-22",
+    "to": "2026-10-23",
+    "trading_days": 20
+  },
+  "dividend_as_of": "2026-10-18T22:11:50",
+  "nps_as_of": "2026-10-24T19:31:22",
+  "trend": [
+    {
+      "sector": "반도체",
+      "icon": "🔲",
+      "score": 17.8,
+      "days_up": 7
+    },
+    {
+      "sector": "2차전지",
+      "icon": "🔋",
+      "score": 14.8,
+      "days_up": 7
+    },
+    {
+      "sector": "보안",
+      "icon": "🔒",
+      "score": 12.4,
+      "days_up": 5
+    },
+    {
+      "sector": "제약/바이오",
+      "icon": "💊",
+      "score": 12.2,
+      "days_up": 4
+    },
+    {
+      "sector": "엔터",
+      "icon": "🎤",
+      "score": 10.8,
+      "days_up": 4
+    },
+    {
+      "sector": "전력설비",
+      "icon": "⚡",
+      "score": 10.4,
+      "days_up": 2
+    }
+  ],
+  "sectors_used": [
+    "반도체",
+    "2차전지"
+  ],
+  "picks": [
+    {
+      "code": "007340",
+      "name": "DN오토모티브",
+      "sector": "2차전지",
+      "icon": "🔋",
+      "kind": "both",
+      "core": true,
+      "dividend_yield": 2.48,
+      "nps_stake": 7.08,
+      "nps_change": 1.06,
+      "nps_date": "20261002",
+      "reason": "자동차용 밧데리 · 국민연금 지분 7.08%로 +1.06%p 늘림 (10/02 공시) · 섹터 배당주 7개 중 배당률 3위",
+      "new": false
+    },
+    {
+      "code": "004490",
+      "name": "세방전지",
+      "sector": "2차전지",
+      "icon": "🔋",
+      "kind": "both",
+      "core": true,
+      "dividend_yield": 4.39,
+      "nps_stake": 6.4,
+      "nps_change": 1.05,
+      "nps_date": "20261002",
+      "reason": "자동차용 및 산업용 축전지(연축전지) … · 국민연금 지분 6.40%로 +1.05%p 늘림 (10/02 공시) · 섹터 배당주 7개 중 배당률 1위",
+      "new": false
+    },
+    {
+      "code": "222800",
+      "name": "심텍",
+      "sector": "반도체",
+      "icon": "🔲",
+      "kind": "nps",
+      "core": true,
+      "dividend_yield": null,
+      "nps_stake": 7.14,
+      "nps_change": 1.05,
+      "nps_date": "20261002",
+      "reason": "반도체용 인쇄회로기판 · 국민연금 지분 7.14%로 +1.05%p 늘림 (10/02 공시)",
+      "new": false
+    },
+    {
+      "code": "108320",
+      "name": "LX세미콘",
+      "sector": "반도체",
+      "icon": "🔲",
+      "kind": "div",
+      "core": true,
+      "dividend_yield": 4.62,
+      "nps_stake": null,
+      "nps_change": null,
+      "nps_date": null,
+      "reason": "Display Driver IC · 섹터 배당주 28개 중 배당률 1위 · PBR 0.47 자산가치 이하",
+      "new": false
+    },
+    {
+      "code": "093520",
+      "name": "매커스",
+      "sector": "반도체",
+      "icon": "🔲",
+      "kind": "div",
+      "core": true,
+      "dividend_yield": 4.36,
+      "nps_stake": null,
+      "nps_change": null,
+      "nps_date": null,
+      "reason": "자일링스(Xilinx)비메모리반도체(P… · 섹터 배당주 28개 중 배당률 2위",
+      "new": false
+    }
+  ],
+  "method": "섹터 캘린더 최근 20거래일 강세 점수(등락률 합 × 최근성 가중) 상위 2개 섹터에서 배당주∩국민연금 지분확대 종목 우선, 연금 관련 3개·나머지 배당률 높은 순으로 총 5개.",
+  "dropped": []
+}

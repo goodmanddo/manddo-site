@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>종목 수익 일별 체크 — 월요일에 산 종목, 매일 종가 수익률 | 만또 투자 인사이트</title>
+<meta name="description" content="매주 월요일에 산 종목의 그 주 일별 종가 수익률을 표로 기록합니다. 현재 운영 중인 위클리 픽 자동매매 종목과 추세섹터×배당·국민연금 추가 전략을 코스피·코스닥과 비교.">
+<meta property="og:title" content="📊 종목 수익 일별 체크">
+<meta property="og:description" content="월요일에 산 종목, 금요일까지 매일 종가 수익률을 현재 전략·추가 전략으로 나눠 기록합니다.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manddo.kr/check/">
+<link rel="canonical" href="https://manddo.kr/check/">
+<link rel="stylesheet" href="/css/main.css">
+<style>
+  .sp-hero { background:linear-gradient(135deg,#191f28 0%,#333d4b 100%); border-radius:16px; padding:28px 24px; margin:24px 0 20px; color:#fff; }
+  .sp-hero h1 { font-size:24px; margin:0 0 6px; color:#fff; letter-spacing:-0.02em; }
+  .sp-hero p { font-size:14px; color:#fff; opacity:0.92; margin:0; max-width:580px; line-height:1.6; }
+  .sp-sum { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-bottom:22px; }
+  .sp-sum[hidden] { display:none; }
+  .sp-sum div { background:#fff; border:1px solid #eef0f3; border-radius:12px; padding:14px 16px; }
+  .sp-sum small { display:block; font-size:11.5px; color:#8b95a1; font-weight:700; margin-bottom:4px; }
+  .sp-sum b { font-family:'SF Mono',ui-monospace,monospace; font-size:19px; font-weight:800; }
+  .sp-h { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin:6px 0 10px; }
+  .sp-h h2 { font-size:17px; font-weight:800; margin:0; }
+  .sp-h select { font:inherit; font-size:13px; padding:6px 10px; border:1px solid #e2e5ed; border-radius:8px; background:#fff; }
+  .sp-badge { font-size:11px; font-weight:800; border-radius:6px; padding:2px 7px; margin-left:6px; vertical-align:2px; }
+  .sp-badge.live { background:#E6F7EE; color:#0E9F5B; }
+  .sp-badge.done { background:#f2f4f6; color:#6b7684; }
+  .sp-wrap { overflow-x:auto; background:#fff; border:1px solid #eef0f3; border-radius:14px; margin-bottom:8px; }
+  .sp-tbl { width:100%; border-collapse:collapse; font-size:13px; min-width:560px; }
+  .sp-tbl th, .sp-tbl td { padding:11px 10px; border-bottom:1px solid #f2f4f6; text-align:right; white-space:nowrap; }
+  .sp-tbl th { background:#f7f9fc; font-size:11.5px; color:#8b95a1; font-weight:800; }
+  .sp-tbl th:first-child, .sp-tbl td:first-child { text-align:left; position:sticky; left:0; z-index:1; }
+  .sp-tbl td { background:#fff; }
+  .sp-tbl th.l { text-align:left; }
+  .sp-tbl td.nm { font-weight:800; color:#191f28; }
+  .sp-tbl td.nm .k { font-size:10.5px; font-weight:700; color:#8b95a1; margin-left:5px; }
+  .sp-tbl td.num { font-family:'SF Mono',ui-monospace,monospace; font-weight:700; }
+  .sp-tbl td.fin { font-weight:800; background:#fafbfc; }
+  .sp-tbl tr.avg td { background:#FFF8E6; font-weight:800; border-top:2px solid #FDE9A8; }
+  .sp-tbl tr.bm td { color:#6b7684; }
+  .sp-tbl tr.bm td.nm { font-weight:700; color:#6b7684; }
+  .up { color:#D63939; } .dn { color:#1B64DA; } .na { color:#c4cad2; }
+  .sp-note { font-size:12px; color:#8b95a1; line-height:1.65; margin:0 0 26px; }
+  .sp-empty { background:#fff; border:1px dashed #d8dde4; border-radius:14px; padding:28px 18px; text-align:center; color:#6b7684; font-size:13.5px; line-height:1.7; margin-bottom:26px; }
+  .sp-tabs { display:flex; gap:6px; margin:0 0 14px; background:#f2f4f6; padding:4px; border-radius:12px; }
+  .sp-tabs button { flex:1; font:inherit; font-size:14px; font-weight:800; border:0; background:transparent; color:#6b7684; padding:10px 8px; border-radius:9px; cursor:pointer; }
+  .sp-tabs button.on { background:#fff; color:#191f28; box-shadow:0 1px 3px rgba(0,0,0,.08); }
+  .sp-tabs button small { display:block; font-size:11px; font-weight:600; color:#8b95a1; margin-top:2px; }
+  .sp-tbl td.uf { color:#c4cad2; text-align:center; font-size:12px; }
+  .sb { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin:0 0 28px; }
+  .sb-card { background:#fff; border:1px solid #eef0f3; border-radius:14px; padding:16px 18px; }
+  .sb-card h3 { font-size:15px; font-weight:800; margin:0 0 2px; color:#191f28; }
+  .sb-card .who { font-size:11.5px; color:#8b95a1; font-weight:600; margin-bottom:12px; }
+  .sb-card .big { font-family:'SF Mono',ui-monospace,monospace; font-size:26px; font-weight:800; letter-spacing:-0.02em; }
+  .sb-card .big small { font-family:inherit; font-size:11.5px; color:#8b95a1; font-weight:700; margin-left:6px; letter-spacing:0; }
+  .sb-card dl { display:grid; grid-template-columns:1fr auto; gap:6px 10px; margin:12px 0 0; font-size:12.5px; }
+  .sb-card dt { color:#6b7684; font-weight:600; }
+  .sb-card dd { margin:0; text-align:right; font-family:'SF Mono',ui-monospace,monospace; font-weight:700; color:#191f28; }
+  .sb-card .wait { font-size:13px; color:#8b95a1; line-height:1.6; padding:8px 0 2px; }
+  .wk { list-style:none; padding:0; margin:0 0 24px; display:grid; gap:8px; }
+  .wk > li { margin:0; padding:0; min-width:0; list-style:none; }
+  .wk details { background:#fff; border:1px solid #eef0f3; border-radius:12px; min-width:0; overflow:hidden; }
+  .wk .in .sp-wrap { max-width:100%; }
+  .wk details[open] { border-color:#d1d6db; }
+  .wk summary { list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 16px; flex-wrap:wrap; }
+  .wk summary::-webkit-details-marker { display:none; }
+  .wk summary .d { font-weight:800; color:#191f28; font-size:15px; }
+  .wk summary .s { font-size:12.5px; color:#6b7684; font-weight:600; display:flex; gap:12px; flex-wrap:wrap; }
+  .wk summary .s b { font-family:'SF Mono',ui-monospace,monospace; }
+  .wk summary::after { content:'+'; color:#8b95a1; font-size:20px; margin-left:auto; }
+  .wk details[open] summary::after { content:'−'; }
+  .wk .in { padding:0 16px 8px; }
+  .wk .in h4 { font-size:14px; font-weight:800; margin:14px 0 8px; color:#191f28; }
+  .wk .in h4 span { font-size:11.5px; color:#8b95a1; font-weight:600; margin-left:6px; }
+  .sp-callout { background:#f7f9fc; border-radius:12px; padding:14px 16px; font-size:12.5px; color:#4e5968; line-height:1.7; margin:20px 0 30px; }
+</style>
+  <!-- adsense-script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="logo">만또<span>.kr</span></a>
+    <nav class="nav">
+      <a href="/">홈</a>
+      <a href="/ai-project/">🧪 AI 1년 실험</a>
+      <a href="/crypto/">₿ 비트코인</a>
+      <a href="/ai-log/">오늘 AI의 선택</a>
+      <a href="/vs/">🏁 휴먼 vs AI</a>
+      <a href="/nps/">🏛️ 국민연금</a>
+      <a href="/game-watch/">🎮 게임 신작</a>
+      <a href="/etf/">📊 ETF</a>
+      <a href="/tools/dividend.html">💰 배당주</a>
+      <a href="/stock/">차트분석 리포트</a>
+      <a href="/learn/">학습</a>
+      <a href="/blog/">블로그</a>
+      <a href="/tools/">머니 툴</a>
+      <a href="/about.html">소개</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <section class="sp-hero">
+    <h1>📊 종목 수익 일별 체크</h1>
+    <p>월요일 가격을 기준으로 그 주 매일 종가가 몇 %인지, 금요일 최종 수익률까지 기록해요. 지금 쓰는 전략과 새로 시험하는 전략, 어느 쪽이 잘 되는지 코스피와 함께 한눈에 봅니다.</p>
+  </section>
+
+  <section class="msec-like">
+    <div class="sp-h"><h2>두 전략 성적표</h2></div>
+    <div class="sb" id="sb"></div>
+  </section>
+
+  <div class="sp-h"><h2>주별 종목 수익 체크</h2></div>
+  <ul class="wk" id="wk"></ul>
+
+  <div class="sp-callout">
+    ⚠ <b>현재 전략</b>은 위클리 픽 자동매매가 실제로 산 종목(메인 1픽 + 서브 3 + 섹터 ETF)이라 <b>실제 매수가</b>가 기준이고, 매도한 날까지만 표시해요.
+    <b>추가 전략</b>은 <a href="/tools/dividend.html">추세섹터 × 배당·국민연금 5종목</a>을 <b>사지 않고</b> 월요일 시가를 기준으로 금요일 종가까지 따라가는 기록이에요 (2026년 10월 26일 주 시작).
+    평균은 종목 단순 평균, 누적은 매주 재투자 가정. 수수료·세금·배당금은 빠진 단순 주가 비교예요. <b>매수·매도 권유가 아닙니다.</b>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <a href="/about.html">소개</a>·
+    <a href="/privacy.html">개인정보처리방침</a>·
+    <a href="/terms.html">이용약관</a>·
+    <a href="/contact.html">문의</a>
+    <div class="copy">© 2026 만또 (manddo.kr) · 본 사이트는 투자 자문업자가 아닙니다</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const DOW = ['일','월','화','수','목','금','토'];
+  const KIND = {both:'배당+연금', nps:'연금', div:'배당'};
+  const pct = v => v == null ? '<span class="na">—</span>'
+    : `<span class="${v > 0 ? 'up' : v < 0 ? 'dn' : ''}">${v > 0 ? '+' : ''}${v.toFixed(2)}%</span>`;
+  const md = d => `${+d.slice(5,7)}/${+d.slice(8,10)}`;
+  const kday = d => `${+d.slice(5,7)}월 ${+d.slice(8,10)}일`;
+  const weekDays = w => [0,1,2,3,4].map(i => { const d = new Date(w+'T00:00:00'); d.setDate(d.getDate()+i);
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`; });
+  const lastOf = o => { const k = Object.keys(o || {}).sort(); return k.length ? o[k[k.length-1]] : null; };
+  const STRAT = [
+    {k:'current', name:'현재 전략', who:'위클리 픽 메인·서브·ETF · 실제 매수', base:'실제 매수가'},
+    {k:'extra', name:'추가 전략', who:'추세섹터 × 배당·국민연금 5종목 · 매수 안 함', base:'월요일 시가'},
+  ];
+
+  function table(r, blk, st){
+    const days = weekDays(r.week);
+    const head = days.map(d => `<th>${DOW[new Date(d+'T00:00:00').getDay()]} ${md(d)}</th>`).join('');
+    const row = (cls, name, daily, sub='') => `<tr class="${cls}"><td class="nm">${name}${sub ? `<span class="k">${sub}</span>` : ''}</td>`
+      + days.map(d => `<td class="num">${pct(daily ? daily[d] : null)}</td>`).join('')
+      + `<td class="num fin">${pct(lastOf(daily))}</td></tr>`;
+    const stock = p => (p.unfilled || p.planned)
+      ? `<tr><td class="nm">${p.name}<span class="k">${p.slot_label}</span></td><td class="uf" colspan="6">${p.planned ? '월요일 09:05 매수 예정' : '아직 안 삼 (미체결·재시도 대기)'}</td></tr>`
+      : row('', `${p.icon ? p.icon + ' ' : ''}${p.name}`, p.daily, p.slot_label || KIND[p.kind] || '');
+    return `<div class="sp-wrap"><table class="sp-tbl"><thead><tr><th>종목</th>${head}<th>${r.status === '완료' ? '최종' : '현재'}</th></tr></thead><tbody>`
+      + blk.rows.map(stock).join('')
+      + row('avg', '평균', blk.avg)
+      + r.bench.map(b => row('bm', b.name, b.daily)).join('')
+      + `</tbody></table></div>`;
+  }
+
+  function scoreboard(J){
+    const card = st => {
+      const t = (J.total || {})[st.k] || {};
+      if(!t.rounds) return `<div class="sb-card"><h3>${st.name}</h3><div class="who">${st.who}</div><div class="wait">아직 끝난 주가 없어요.<br>첫 주가 끝나는 금요일부터 성적이 나와요.</div></div>`;
+      const done = J.rounds.filter(r => r.status === '완료' && r[st.k].result != null);
+      const avg = done.reduce((a, r) => a + r[st.k].result, 0) / done.length;
+      const win = done.filter(r => r[st.k].result > 0).length;
+      return `<div class="sb-card"><h3>${st.name}</h3><div class="who">${st.who}</div>`
+        + `<div class="big">${pct(t.cum)}<small>누적 ${t.rounds}주</small></div><dl>`
+        + `<dt>같은 기간 코스피</dt><dd>${pct(t.cum_KS11)}</dd>`
+        + `<dt>코스피 대비</dt><dd>${pct(+(t.cum - t.cum_KS11).toFixed(2))}</dd>`
+        + `<dt>주 평균</dt><dd>${pct(+avg.toFixed(2))}</dd>`
+        + `<dt>플러스로 끝난 주</dt><dd>${win} / ${t.rounds}</dd>`
+        + `<dt>코스피 이긴 주</dt><dd>${t.beat_kospi} / ${t.rounds}</dd></dl></div>`;
+    };
+    $('sb').innerHTML = STRAT.map(card).join('');
+  }
+
+  function week(r, open){
+    const ks = (r.bench_result || {}).KS11;
+    const sum = STRAT.map(st => `<span>${st.name.replace(' 전략','')} <b>${r[st.k].rows.length ? pct(r[st.k].result) : pct(null)}</b></span>`).join('')
+      + `<span>코스피 <b>${pct(ks)}</b></span>`;
+    const inner = STRAT.map(st => {
+      const blk = r[st.k];
+      const body = blk.rows.length ? table(r, blk, st)
+        : `<div class="sp-empty">${r.status === '대기' ? '일요일 밤 9시에 종목이 정해지면 여기에 먼저 떠요.' : (st.k === 'extra' ? '추가 전략은 10월 26일 주부터 기록돼요.' : '이 주에는 산 종목이 없어요.')}</div>`;
+      return `<h4>${st.name}<span>${st.base} 기준${blk.sectors && blk.sectors.length ? ' · ' + blk.sectors.join(', ') : ''}</span></h4>${body}`;
+    }).join('');
+    return `<li><details${open ? ' open' : ''}><summary><span class="d">${kday(r.week)} 종목 수익 체크 <span class="sp-badge ${r.status === '진행중' ? 'live' : 'done'}">${r.status}</span></span>`
+      + `<span class="s">${sum}</span></summary>`
+      + `<div class="in">${r.status === '대기' ? '<p class="sp-note">월요일 장 마감 뒤(15:50)부터 매일 채워져요.</p>' : ''}${inner}</div></details></li>`;
+  }
+
+  fetch('/tools/data/daily_check.json?v=' + Date.now()).then(r => r.json()).then(J => {
+    scoreboard(J);
+    const rs = J.rounds || [];
+    $('wk').innerHTML = rs.length ? rs.map((r, i) => week(r, i === 0)).join('') : '<div class="sp-empty">아직 기록이 없어요.</div>';
+  }).catch(() => { $('wk').innerHTML = '<div class="sp-empty">데이터를 불러오지 못했어요.</div>'; });
+})();
+</script>
+</body>
+</html>

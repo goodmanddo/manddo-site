@@ -57,6 +57,30 @@ details.faq .answer p{margin-bottom:8px}
   .tbl-head .market,.tbl-row .market{display:none}
   .lead h1{font-size:22px}
 }
+.pick{background:#fff;border:1px solid #eef0f3;border-radius:18px;padding:20px 20px 8px;margin-bottom:24px}
+.pick-hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.pick-hd h2{font-size:18px;font-weight:800;letter-spacing:-0.03em;color:#191f28;margin:0}
+.pick-hd .when{font-size:11.5px;color:#8b95a1;font-weight:700}
+.pick-sub{font-size:12.5px;color:#6b7684;line-height:1.6;margin-bottom:12px}
+.trend{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.trend span{background:#f2f4f6;border-radius:999px;padding:5px 11px;font-size:12px;font-weight:700;color:#4e5968}
+.trend span.on{background:#191f28;color:#fff}
+.trend span.on b{color:#fff}
+.trend span b{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;margin-left:3px}
+.pk{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:start;padding:12px 0;border-top:1px solid #f2f4f6;text-decoration:none;color:inherit}
+.pk .no{font-family:'SF Mono',ui-monospace,monospace;font-weight:800;color:#8b95a1;font-size:13px;padding-top:1px}
+.pk .nm2{font-weight:800;color:#191f28;font-size:14.5px;letter-spacing:-0.02em}
+.pk .nm2 .cd{font-size:11px;color:#8b95a1;font-family:'SF Mono',ui-monospace,monospace;margin-left:5px;font-weight:600}
+.pk .why{font-size:12.5px;color:#4e5968;line-height:1.55;margin-top:3px}
+.pk .y{font-family:'SF Mono',ui-monospace,monospace;color:#D63939;font-weight:800;font-size:15px;white-space:nowrap}
+.pk .tag{display:inline-block;font-size:10.5px;font-weight:800;border-radius:6px;padding:2px 6px;margin-left:6px;vertical-align:2px}
+.pk .tag.both{background:#FFE8E8;color:#C92A2A}
+.pk .tag.nps{background:#E7F0FF;color:#1B64DA}
+.pk .tag.div{background:#FFF3D6;color:#8A5A00}
+.pk .new{display:inline-block;font-size:10px;font-weight:800;background:#E6F7EE;color:#0E9F5B;border-radius:6px;padding:2px 6px;margin-right:6px;vertical-align:2px}
+.pick-diff{font-size:12px;color:#6b7684;font-weight:700;padding:10px 0;border-top:1px solid #f2f4f6}
+.pk .y.none{color:#b0b8c1;font-size:13px}
+.pick-foot{font-size:11px;color:#8b95a1;line-height:1.6;padding:10px 0 12px;border-top:1px solid #f2f4f6}
 </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8944533986573467" crossorigin="anonymous"></script>
 </head>
@@ -94,6 +118,18 @@ details.faq .answer p{margin-bottom:8px}
       <span class="pill">기준: <b>KOSPI 시총 TOP 80</b></span>
     </div>
   </div>
+
+  <section class="pick" id="pick" hidden>
+    <div class="pick-hd">
+      <h2>📈 이번 주 추세섹터 × 배당·국민연금</h2>
+      <span class="when" id="pick-when"></span>
+    </div>
+    <p class="pick-sub">섹터 캘린더에서 <b>최근 4주간 자주·크게 오른 섹터</b>를 찾고, 그 섹터에서 <b>배당주</b>와 <b>국민연금이 지분을 늘린 종목</b>(DART 5% 공시)을 함께 골랐어요. 둘 다 해당하면 맨 위에. 매주 월요일 아침 갱신.</p>
+    <div class="trend" id="pick-trend"></div>
+    <div id="pick-rows"></div>
+    <div class="pick-diff" id="pick-diff" hidden></div>
+    <div class="pick-foot">규칙 기반으로 걸러낸 관찰 리스트예요. 섹터가 최근 강했다고 계속 오른다는 보장은 없고, 배당률은 전년 결산 기준, 국민연금 지분은 공시 시점 기준(실제 매수일과 차이)입니다. <b>매수 권유가 아닙니다.</b> · <a href="/stock/sector-calendar.html">섹터 캘린더 보기 →</a> · <a href="/check/#extra">이 픽 일별 수익률 →</a></div>
+  </section>
 
   <div class="sort-bar">
     <button class="sort-chip active" data-sort="yield">배당률 ↓</button>
@@ -215,7 +251,30 @@ document.querySelectorAll('.sort-chip').forEach(c => {
   });
 });
 
+const TAGS = {both:'🎯 배당+연금', nps:'🏛️ 연금 매수', div:'💰 배당'};
+async function loadPick(){
+  try{
+    const j = await (await fetch('/tools/data/dividend_sector_pick.json?v='+Date.now())).json();
+    if(!j.picks || !j.picks.length) return;
+    const used = new Set(j.sectors_used);
+    document.getElementById('pick-when').textContent = `${fmtDate(j.generated_at)} 기준 · ${j.window.from.slice(5).replace('-','/')}~${j.window.to.slice(5).replace('-','/')}`;
+    document.getElementById('pick-trend').innerHTML = j.trend.slice(0,5).map(t =>
+      `<span class="${used.has(t.sector)?'on':''}">${t.icon} ${t.sector}<b>${t.days_up}일</b></span>`).join('');
+    document.getElementById('pick-rows').innerHTML = j.picks.map((p,i) => `
+      <a class="pk" href="https://finance.naver.com/item/main.naver?code=${p.code}" target="_blank" rel="noopener">
+        <div class="no">${i+1}</div>
+        <div><div class="nm2">${p.new ? '<span class="new">NEW</span>' : ''}${p.icon} ${p.name}<span class="cd">${p.code}</span><span class="tag ${p.kind}">${TAGS[p.kind]}</span></div><div class="why">${p.reason}</div></div>
+        <div class="y ${p.dividend_yield==null?'none':''}">${p.dividend_yield!=null ? p.dividend_yield.toFixed(1)+'%' : '배당 —'}</div>
+      </a>`).join('');
+    const nNew = j.picks.filter(p => p.new).length;
+    const diff = document.getElementById('pick-diff');
+    if(nNew || (j.dropped||[]).length){ diff.textContent = `🔄 지난주 대비 새로 들어온 종목 ${nNew}개 · 유지 ${j.picks.length - nNew}개`; diff.hidden = false; }
+    document.getElementById('pick').hidden = false;
+  }catch(e){}
+}
+
 load();
+loadPick();
 </script>
 </body>
 </html>
