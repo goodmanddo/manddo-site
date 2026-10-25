@@ -23,7 +23,9 @@
 .sc-dow{text-align:center;font-size:12px;font-weight:700;color:#8b95a1;padding:4px 0}
 .sc-cell{background:#fafbfc;border:1px solid #f1f3f5;border-radius:12px;min-height:96px;padding:8px 8px 10px}
 .sc-cell.empty{background:transparent;border:none}
-.sc-cell.today{border:2px solid #191f28;background:#fff}
+.sc-cell.today{border:3px solid #3182F6;background:#fff;box-shadow:0 0 0 4px rgba(49,130,246,.15);padding:6px 6px 8px}
+.sc-date .now{font-size:10px;font-weight:800;color:#fff;background:#3182F6;border-radius:5px;padding:1px 6px}
+.sc-wkend{text-align:center;font-size:12.5px;color:#3182F6;font-weight:700;margin:-8px 0 12px}
 .sc-cell.holiday{background:#fff5f5}
 .sc-date{font-size:14px;font-weight:700;color:#333d4b;margin-bottom:6px;display:flex;align-items:center;gap:6px}
 .sc-date .hol{font-size:10px;font-weight:700;color:#e0342b;background:#fde8e8;border-radius:5px;padding:1px 5px}
@@ -90,6 +92,7 @@
   </div>
   <div class="sc-sub">칩 = 그날 +1% 이상 오른 섹터(많이 오른 순 최대 4개). 빈 날은 강세 섹터 없음/휴장.</div>
 
+  <div class="sc-wkend" id="sc-wkend" hidden></div>
   <div class="sc-grid" id="sc-dow"></div>
   <div class="sc-grid" id="sc-grid"></div>
 
@@ -144,9 +147,13 @@
       const body = hasData && chips.length
         ? `<div class="sc-chips">${chips.map(chipHTML).join('')}</div>`
         : '';
-      cells+=`<div class="${cls}"><div class="sc-date">${d}</div>${body}</div>`;
+      cells+=`<div class="${cls}"><div class="sc-date">${d}${ds===todayStr?'<span class="now">오늘</span>':''}</div>${body}</div>`;
     }
     grid.innerHTML=cells;
+    // 달력은 평일만 — 주말엔 오늘 칸이 없으니 한 줄로 알려줌
+    const t=new Date(), wk=document.getElementById('sc-wkend');
+    if(wk){ const isW=(t.getDay()===0||t.getDay()===6) && curMonthIsNow(y,m);
+      wk.hidden=!isW; if(isW) wk.textContent=`오늘은 ${t.getMonth()+1}월 ${t.getDate()}일 ${t.getDay()===0?'일':'토'}요일 — 주말이라 장이 쉬어요`; }
     // 이전 달 버튼은 데이터 최소 날짜까지만
     const days=Object.keys(DATA.days).sort();
     const minM = days.length? days[0].slice(0,7):null;
@@ -155,6 +162,7 @@
     const nowM=new Date().toLocaleDateString('sv-SE').slice(0,7);
     document.getElementById('next').disabled = curM>=nowM;
   }
+  function curMonthIsNow(y,m){ const n=new Date(); return n.getFullYear()===y && n.getMonth()===m; }
   function legend(){
     // 등장한 섹터 색 범례
     const seen={};
