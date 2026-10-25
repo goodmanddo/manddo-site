@@ -297,7 +297,6 @@ def render_page(etf, all_etfs, generated_at):
       <a href="/game-watch/">🎮 게임 신작</a>
       <a href="/tools/dividend.html">💰 배당주</a>
       <a href="/crypto/">₿ 비트코인</a>
-      <a href="/etf/" class="active">📊 ETF</a>
       <a href="/stock/">차트분석 리포트</a>
       <a href="/learn/">학습</a>
       <a href="/blog/">블로그</a>
