@@ -71,8 +71,9 @@
   a.today-cta, a.today-cta:link, a.today-cta:visited, a.today-cta:hover, a.today-cta:active { display:block; margin-top:14px; padding:14px 18px; background:linear-gradient(135deg,#1B64DA,#0d47a1); color:#ffffff !important; text-decoration:none; border-radius:12px; text-align:center; font-weight:700; font-size:14px; transition:transform .15s; }
   a.today-cta:hover { transform:translateY(-1px); }
   a.today-cta .arrow { margin-left:6px; color:#ffffff !important; }
-  .notice-banner { background:#fff7ed; border:1px solid #fed7aa; border-radius:10px; padding:12px 14px; font-size:13px; color:#9a3412; line-height:1.55; margin:0 0 16px; }
-  .notice-banner b { color:#7c2d12; }
+  .notice-head { font-size:15px; font-weight:800; color:#4e5968; margin:28px 0 10px; }
+  .notice-banner { background:#f7f9fc; border:1px solid #eef0f3; border-radius:10px; padding:12px 14px; font-size:12.5px; color:#6b7684; line-height:1.6; margin:0 0 10px; }
+  .notice-banner b { color:#4e5968; }
   .return-chart-box{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:18px 18px 14px;margin:16px 0 0}
   .return-chart-box .chart-title{font-size:14px;font-weight:800;color:#191f28;letter-spacing:-0.02em;margin-bottom:12px;display:flex;align-items:center;gap:6px}
   .return-chart-box canvas{width:100%;height:180px;display:block}
@@ -106,14 +107,6 @@
 </header>
 <main class="page">
   <a class="back-btn" href="/" onclick="if(document.referrer&&history.length>1){event.preventDefault();history.back()}">← 뒤로</a>
-  <div class="notice-banner">
-    <b>📢 전략 방향 전환 공지 (2026-05-25)</b><br>
-    흔한 매매 전략 8가지를 같은 잣대로 검증한 결과, ‘종목 맞히기’로는 시장을 이기지 못한다는 결론에 도달했습니다. 그래서 실험을 <b>개별 종목 선택</b>에서 <b>코스피·코스닥·미국·금·채권 분산 + 추세 위험관리</b> 구조로 전환합니다(여러 주에 걸쳐 분할 매수). 목적은 여전히 수익이 아니라 <i>"AI가 무엇을 잘하고 무엇을 못하는지"</i>의 정직한 기록이며, 배경은 <a href="/blog/" style="color:#7c2d12;font-weight:600;text-decoration:underline">블로그</a>에 정리했습니다.
-  </div>
-  <div class="notice-banner">
-    <b>📢 베이스라인 재설정 공지 (2026-05-03)</b><br>
-    실험 시작 후 외부 출금이 운용 손실로 잘못 계상되는 오류가 있어, 시드 <b>2,000만원</b>·시작일 <b>2026-05-03</b> 기준으로 베이스라인을 재초기화했습니다. 이후 누적 수익률은 5/3부터 다시 산정됩니다. 5/3 이전 매매 기록은 <a href="/ai-log/" style="color:#7c2d12;font-weight:600;text-decoration:underline">AI 매매 일지</a>에 그대로 보존돼 있어요.
-  </div>
   <section class="proj-hero">
     <div class="proj-hero-inner">
       <div class="proj-badge">🧪 진행 중인 실험 · 시즌 1</div>
@@ -312,6 +305,15 @@
   <div class="disclaimer">
     <b>⚠ 투자 자문업자가 아닙니다</b><br>
     본 프로젝트는 만또 운영자의 자기 자본으로 진행하는 공개 실험이며, 특정 종목의 매수·매도를 권유하지 않습니다. 모든 거래 결과는 실 잔고 기준으로 공개되지만, 동일 결과를 보장하지 않습니다.
+  </div>
+  <h2 class="notice-head">📢 공지</h2>
+  <div class="notice-banner">
+    <b>📢 전략 방향 전환 공지 (2026-05-25)</b><br>
+    흔한 매매 전략 8가지를 같은 잣대로 검증한 결과, ‘종목 맞히기’로는 시장을 이기지 못한다는 결론에 도달했습니다. 그래서 실험을 <b>개별 종목 선택</b>에서 <b>코스피·코스닥·미국·금·채권 분산 + 추세 위험관리</b> 구조로 전환합니다(여러 주에 걸쳐 분할 매수). 목적은 여전히 수익이 아니라 <i>"AI가 무엇을 잘하고 무엇을 못하는지"</i>의 정직한 기록이며, 배경은 <a href="/blog/" style="color:#4e5968;font-weight:600;text-decoration:underline">블로그</a>에 정리했습니다.
+  </div>
+  <div class="notice-banner">
+    <b>📢 베이스라인 재설정 공지 (2026-05-03)</b><br>
+    실험 시작 후 외부 출금이 운용 손실로 잘못 계상되는 오류가 있어, 시드 <b>2,000만원</b>·시작일 <b>2026-05-03</b> 기준으로 베이스라인을 재초기화했습니다. 이후 누적 수익률은 5/3부터 다시 산정됩니다. 5/3 이전 매매 기록은 <a href="/ai-log/" style="color:#4e5968;font-weight:600;text-decoration:underline">AI 매매 일지</a>에 그대로 보존돼 있어요.
   </div>
 </main>
 <footer class="site-footer">
