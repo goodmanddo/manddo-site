@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>종목 수익 일별 체크 — 월요일에 산 종목, 매일 종가 수익률 | 만또 투자 인사이트</title>
-<meta name="description" content="매주 월요일에 산 종목의 그 주 일별 종가 수익률을 표로 기록합니다. 현재 운영 중인 위클리 픽 자동매매 종목과 추세섹터×배당·국민연금 추가 전략을 코스피·코스닥과 비교.">
+<meta name="description" content="매주 월요일에 산 종목의 그 주 일별 종가 수익률을 표로 기록합니다. 현재 운영 중인 위클리 픽 자동매매 종목과 추세섹터×배당·국민연금 추가 전략, 상한가 단타 전략 실제 수익률을 기록.">
 <meta property="og:title" content="📊 종목 수익 일별 체크">
 <meta property="og:description" content="월요일에 산 종목, 금요일까지 매일 종가 수익률을 현재 전략·추가 전략으로 나눠 기록합니다.">
 <meta property="og:type" content="website">
@@ -73,6 +73,8 @@
   .wk .in { padding:0 16px 8px; }
   .wk .in h4 { font-size:14px; font-weight:800; margin:14px 0 8px; color:#191f28; }
   .wk .in h4 span { font-size:11.5px; color:#8b95a1; font-weight:600; margin-left:6px; }
+  .dt-tbl { min-width:0; }
+  .dt-tbl td.st { color:#8b95a1; font-size:12px; font-weight:600; }
   .sp-callout { background:#f7f9fc; border-radius:12px; padding:14px 16px; font-size:12.5px; color:#4e5968; line-height:1.7; margin:20px 0 30px; }
 </style>
   <!-- adsense-script -->
@@ -117,9 +119,17 @@
   <div class="sp-h"><h2>주별 종목 수익 체크</h2></div>
   <ul class="wk" id="wk"></ul>
 
+  <section id="danta">
+    <div class="sp-h"><h2>⚡ 단타 전략</h2></div>
+    <p class="sp-note" style="margin-bottom:12px">장 마감 때 <b>상한가에 붙어 있는 종목</b>을 종가에 소액으로 사서 <b>다음날 아침 시가에 바로 파는</b> 실제 매매 기록이에요. 종목은 공개하지 않고 매수한 날짜별 수익률만 적어요 (2026년 10월 26일 시작).</p>
+    <div class="sb" id="dt-sb"></div>
+    <div class="sp-wrap" id="dt-wrap"></div>
+  </section>
+
   <div class="sp-callout">
     ⚠ <b>현재 전략</b>은 위클리 픽 자동매매가 실제로 산 종목(메인 1픽 + 서브 3 + 섹터 ETF)이라 <b>실제 매수가</b>가 기준이고, 매도한 날까지만 표시해요.
     <b>추가 전략</b>은 <a href="/tools/dividend.html">추세섹터 × 배당·국민연금 5종목</a>을 <b>사지 않고</b> 월요일 시가를 기준으로 금요일 종가까지 따라가는 기록이에요 (2026년 10월 26일 주 시작).
+    <b>단타 전략</b>은 실제로 산 종목을 <b>실제 체결가</b>로 계산하고, 수수료·세금 추정치를 뺀 수익률이에요. 상한가 종목은 사려는 사람이 많아 주문이 안 채워지는 날도 있어서 체결률도 함께 적어요.
     평균은 종목 단순 평균, 누적은 매주 재투자 가정. 수수료·세금·배당금은 빠진 단순 주가 비교예요. <b>매수·매도 권유가 아닙니다.</b>
   </div>
 </main>
@@ -199,6 +209,23 @@
       + `<span class="s">${sum}</span></summary>`
       + `<div class="in">${r.status === '대기' ? '<p class="sp-note">월요일 장 마감 뒤(15:50)부터 매일 채워져요.</p>' : ''}${inner}</div></details></li>`;
   }
+
+  const ST_TXT = {'보유중':'다음날 시가 매도 대기', '미체결':'주문했지만 체결 안 됨', '대상없음':'조건 맞는 종목 없음', '체결확인중':'체결 확인 중'};
+  fetch('/tools/data/limitup_daily.json?v=' + Date.now()).then(r => r.json()).then(D => {
+    const t = D.total || {};
+    $('dt-sb').innerHTML = `<div class="sb-card"><h3>상한가 종가매수 → 다음날 시가 매도</h3><div class="who">실제 매수 · 종목당 소액</div>`
+      + (t.days ? `<div class="big">${pct(t.cum)}<small>누적 ${t.days}일</small></div><dl>`
+        + `<dt>하루 평균</dt><dd>${pct(t.avg)}</dd>`
+        + `<dt>플러스로 끝난 날</dt><dd>${t.win} / ${t.days}</dd>`
+        + `<dt>주문 체결률</dt><dd>${t.fill_rate == null ? '—' : t.fill_rate + '%'}</dd></dl>`
+        : `<div class="wait">아직 끝난 거래가 없어요.<br>첫 매수 다음날 아침 9시 10분부터 기록돼요.</div>`) + `</div>`;
+    const rows = (D.days || []).map(d => `<tr><td class="nm">${md(d.date)} (${DOW[new Date(d.date+'T00:00:00').getDay()]})</td>`
+      + `<td class="num">${d.filled} / ${d.ordered}</td>`
+      + (d.ret != null ? `<td class="num fin">${pct(d.ret)}</td>` : `<td class="st">${ST_TXT[d.status] || d.status}</td>`) + `</tr>`).join('');
+    $('dt-wrap').innerHTML = rows
+      ? `<table class="sp-tbl dt-tbl"><thead><tr><th>매수한 날</th><th>체결 / 주문 종목</th><th>다음날 시가 수익률</th></tr></thead><tbody>${rows}</tbody></table>`
+      : '<div class="sp-empty" style="margin:0">10월 26일(월) 장 마감부터 기록돼요.</div>';
+  }).catch(() => { $('dt-sb').innerHTML = ''; $('dt-wrap').innerHTML = '<div class="sp-empty" style="margin:0">10월 26일(월) 장 마감부터 기록돼요.</div>'; });
 
   fetch('/tools/data/daily_check.json?v=' + Date.now()).then(r => r.json()).then(J => {
     scoreboard(J);
