@@ -6,10 +6,10 @@
 <meta name="naver-site-verification" content="d65ba5816309bee412fb3189ab79013517559923" />
 <meta name="google-site-verification" content="isLVAiq-MiS6ON2HjP0n2cX8w-vpBXCzWqrBU53M9wk" />
 <title>만또 투자 인사이트 — AI와 사람의 시장 관찰 기록 | 주식 분석 · 계산기 · 테스트</title>
-<meta name="description" content="AI와 사람이 시장을 관찰하고 기록하는 공간 — 만또. 오늘 AI의 기록, 주식 차트분석, 실용 계산기, 가벼운 심리 테스트까지. 무료로 보세요.">
+<meta name="description" content="AI와 사람이 시장을 관찰하고 기록하는 공간 — 만또. 오늘의 시장, 종목 수익률 체크, 주식 차트분석, 실용 계산기, 가벼운 심리 테스트까지. 무료로 보세요.">
 <meta name="keywords" content="만또투자인사이트, 투자인사이트, 주식분석, 차트분석, AI관찰, 휴먼vsAI, 시장기록, 연봉계산기, 머니툴, 투자성향테스트">
 <meta property="og:title" content="만또 투자 인사이트 — AI와 사람의 시장 관찰 기록">
-<meta property="og:description" content="AI와 사람이 시장을 관찰하고 기록하는 공간. 오늘 AI의 기록, 주식 차트분석, 실용 계산기, 심리 테스트까지.">
+<meta property="og:description" content="AI와 사람이 시장을 관찰하고 기록하는 공간. 오늘의 시장, 종목 수익률 체크, 주식 차트분석, 실용 계산기, 심리 테스트까지.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://manddo.kr/">
 <meta property="og:locale" content="ko_KR">
@@ -47,7 +47,7 @@
     <h1>만또 투자 인사이트</h1>
     <p>AI와 사람의 시장 관찰 기록 — 읽고, 계산하고, 놀고</p>
     <div class="hero-cta">
-      <a href="/ai-log/" class="hero-btn primary">오늘 AI의 기록 보기 →</a>
+      <a href="/ai-project/" class="hero-btn primary">🧪 AI 1년 실험 보기 →</a>
       <a href="/vs/" class="hero-btn ghost">🏁 휴먼 vs AI 게임</a>
     </div>
   </section>
@@ -254,61 +254,6 @@
   </script>
   <section class="cat-section">
     <div class="cat-head">
-      <h2>🤖 오늘 AI의 기록</h2>
-      <a href="/ai-log/" class="more">전체 일지 →</a>
-    </div>
-    <p class="cat-desc">AI가 오늘 본 종목과 판단 근거를 매일 기록합니다. 성공·실패 케이스 모두 투명하게 공개합니다. 종목 추천이나 매매 권유가 아닌 실험 기록입니다.</p>
-    <div class="home-signal" id="home-signal">
-      <div class="home-signal-head">
-        <span class="badge">🌙 새벽 관찰</span>
-        <span class="label" id="home-signal-label">오늘 새벽 AI가 본 종목 (실험 기록)</span>
-        <a href="/ai-log/#sec-signal" class="more-link">전체 보기 →</a>
-      </div>
-      <div class="home-signal-list" id="home-signal-list"></div>
-    </div>
-    <div class="ai-trend" id="ai-trend">
-      <div class="ai-trend-head">
-        <span class="ai-trend-label">누적 변화 추세 (실험 기록)</span>
-        <span class="ai-trend-delta" id="ai-trend-delta">—</span>
-      </div>
-      <div class="ai-trend-body" id="ai-trend-body">
-        <div class="ai-trend-empty">불러오는 중…</div>
-      </div>
-    </div>
-    <div class="ai-summary">
-      <div class="sum-box">
-        <div class="sum-label">오늘 변화</div>
-        <div class="sum-value" id="ai-day">—</div>
-        <div class="sum-sub" id="ai-day-sub">—</div>
-      </div>
-      <div class="sum-box">
-        <div class="sum-label">누적 변화</div>
-        <div class="sum-value" id="ai-cum">—</div>
-        <div class="sum-sub" id="ai-cum-sub">—</div>
-      </div>
-      <div class="sum-box">
-        <div class="sum-label">이번 주 변화</div>
-        <div class="sum-value" id="ai-week">—</div>
-        <div class="sum-sub">W/W 기준</div>
-      </div>
-      <div class="sum-box">
-        <div class="sum-label">기록 비율</div>
-        <div class="sum-value" id="ai-wr">—</div>
-        <div class="sum-sub" id="ai-wr-sub">—</div>
-      </div>
-    </div>
-    <a class="home-changelog" id="home-changelog" href="/ai-log/#sec-changelog">
-      <span class="hc-dot"></span>
-      <span class="hc-label">AI 자동화 시스템 최근 변경</span>
-      <span class="hc-sep">·</span>
-      <span class="hc-date" id="home-changelog-date">—</span>
-      <span class="hc-sep">·</span>
-      <span class="hc-text" id="home-changelog-text">—</span>
-      <span class="hc-arrow">→</span>
-    </a>
-  </section>
-  <section class="cat-section">
-    <div class="cat-head">
       <h2>🏁 휴먼 vs AI</h2>
       <a href="/vs/" class="more">전체 보기 →</a>
     </div>
@@ -458,135 +403,6 @@
   input.addEventListener('input', toggle);
   clearBtn.addEventListener('click', () => { input.value=''; toggle(); input.focus(); });
   toggle();
-})();
-(function(){
-  const fmtPct = (v, digits) => { if (v == null || isNaN(v)) return '—'; const s = v > 0 ? '+' : ''; return s + Number(v).toFixed(digits != null ? digits : 1) + '%'; };
-  const setPctVal = (id, v) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.textContent = fmtPct(v);
-    el.classList.remove('pos','neg');
-    if (v > 0) el.classList.add('pos');
-    else if (v < 0) el.classList.add('neg');
-  };
-  function renderTrend(rh) {
-    if (!rh || rh.length < 2) {
-      return '<div class="ai-trend-empty">운용 이력이 2일 이상 쌓이면 추세가 표시됩니다</div>';
-    }
-    const vals = rh.map(p => p.cumulative_return);
-    let lo = Math.min(...vals), hi = Math.max(...vals);
-    const span = hi - lo;
-    const pad = span < 2 ? 1.5 : Math.max(1, span * 0.30);
-    lo -= pad; hi += pad;
-    const w = 600, h = 160;
-    const padX = 44, padTop = 28, padBot = 32;
-    const step = (w - padX * 2) / (rh.length - 1);
-    const pts = rh.map((p, i) => [padX + step * i, padTop + (h - padTop - padBot) * (1 - (p.cumulative_return - lo) / (hi - lo)), p]);
-    const line = 'M ' + pts.map(p => p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' L ');
-    const area = line + ' L ' + pts[pts.length-1][0].toFixed(1) + ',' + (h - padBot) + ' L ' + pts[0][0].toFixed(1) + ',' + (h - padBot) + ' Z';
-    const isUp = vals[vals.length-1] >= vals[0];
-    const color = '#3182F6';
-    let zeroLine = '';
-    if (lo < 0 && hi > 0) {
-      const zy = padTop + (h - padTop - padBot) * (1 - (0 - lo) / (hi - lo));
-      zeroLine = '<line x1="'+padX+'" y1="'+zy.toFixed(1)+'" x2="'+(w-padX)+'" y2="'+zy.toFixed(1)+'" stroke="#E5E8EB" stroke-width="1" stroke-dasharray="3,3"/>';
-    }
-    const pctLabels = pts.map((p, i) => {
-      const v = vals[i];
-      const sign = v > 0 ? '+' : '';
-      const txt = sign + Number(v).toFixed(1) + '%';
-      const below = p[1] < padTop + 16;
-      const ty = below ? p[1] + 18 : p[1] - 10;
-      const anchor = i === 0 ? 'start' : (i === pts.length - 1 ? 'end' : 'middle');
-      return '<text x="'+p[0].toFixed(1)+'" y="'+ty.toFixed(1)+'" text-anchor="'+anchor+'" fill="'+color+'" font-size="12" font-weight="700" font-family="Pretendard Variable,Pretendard,system-ui,sans-serif">'+txt+'</text>';
-    }).join('');
-    const dateLabels = pts.map((p, i) => {
-      const anchor = i === 0 ? 'start' : (i === pts.length - 1 ? 'end' : 'middle');
-      const dtxt = p[2].date ? p[2].date.slice(5).replace('-', '.') : '';
-      return '<text x="'+p[0].toFixed(1)+'" y="'+(h - 10)+'" text-anchor="'+anchor+'" fill="#8b95a1" font-size="11" font-weight="500" font-family="Pretendard Variable,Pretendard,system-ui,sans-serif">'+dtxt+'</text>';
-    }).join('');
-    const circles = pts.map((p, i) => {
-      const isLast = i === pts.length - 1;
-      return '<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="'+(isLast ? 4.5 : 3.5)+'" fill="'+color+'" stroke="#fff" stroke-width="2"/>';
-    }).join('');
-    return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">'
-      + '<defs><linearGradient id="ai-trend-grad" x1="0" y1="0" x2="0" y2="1">'
-      + '<stop offset="0%" stop-color="'+color+'" stop-opacity="0.22"/>'
-      + '<stop offset="100%" stop-color="'+color+'" stop-opacity="0"/>'
-      + '</linearGradient></defs>'
-      + zeroLine
-      + '<path d="'+area+'" fill="url(#ai-trend-grad)"/>'
-      + '<path d="'+line+'" fill="none" stroke="'+color+'" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'
-      + circles + pctLabels + dateLabels
-      + '</svg>';
-  }
-  // 시스템 변경 한 줄 주석 (최신 1건만)
-  fetch('/ai-log/changelog.json', {cache:'no-store'}).then(r => r.ok ? r.json() : Promise.reject()).then(c => {
-    const items = (c.items || []).slice().sort((a,b)=>b.date.localeCompare(a.date));
-    if (!items.length) return;
-    const it = items[0];
-    document.getElementById('home-changelog-date').textContent = it.date.slice(5).replace('-', '.');
-    document.getElementById('home-changelog-text').textContent = it.title;
-    document.getElementById('home-changelog').classList.add('has-data');
-  }).catch(() => {});
-  // AI 야간 시그널 미리보기 (3종목 chip)
-  fetch('/ai-log/signal.json', {cache:'no-store'}).then(r => r.ok ? r.json() : Promise.reject()).then(s => {
-    const wrap = document.getElementById('home-signal');
-    const list = document.getElementById('home-signal-list');
-    const stanceLabel = {avoid:'회피', watch:'관망', small_entry:'소액'};
-    const picks = [];
-    if (s.us_market && s.us_market.impacted_kr_stocks) {
-      s.us_market.impacted_kr_stocks.slice(0,2).forEach(x => picks.push(x));
-    }
-    if (s.volume_surge) {
-      s.volume_surge.slice(0,1).forEach(x => picks.push(x));
-    }
-    if (!picks.length) return;
-    picks.forEach(p => {
-      const href = p.slug ? `/stock/${p.slug}.html` : '/ai-log/#sec-signal';
-      list.insertAdjacentHTML('beforeend',
-        `<a href="${href}" class="home-sig-chip">${p.name}<span class="stance ${p.stance}">${stanceLabel[p.stance]||'관망'}</span></a>`);
-    });
-    wrap.classList.add('has-data');
-  }).catch(() => {});
-  fetch('/ai-log/data.json', {cache:'no-store'}).then(r => r.ok ? r.json() : Promise.reject()).then(d => {
-    // 추세 차트
-    const body = document.getElementById('ai-trend-body');
-    const rh = d.return_history || [];
-    if (body) body.innerHTML = renderTrend(rh);
-    const delta = document.getElementById('ai-trend-delta');
-    if (delta && rh.length >= 2) {
-      const diff = rh[rh.length - 1].cumulative_return - rh[0].cumulative_return;
-      const s = diff > 0 ? '+' : '';
-      delta.textContent = s + diff.toFixed(2) + '%p (' + rh.length + '영업일)';
-      delta.classList.remove('pos','neg');
-      delta.classList.add(diff >= 0 ? 'pos' : 'neg');
-    } else if (delta) {
-      delta.textContent = '—';
-    }
-    // 요약 카드 4개
-    setPctVal('ai-day', d.day_return);
-    setPctVal('ai-cum', d.cumulative_return);
-    setPctVal('ai-week', d.week_return);
-    const wr = document.getElementById('ai-wr');
-    if (wr && d.win_rate != null) wr.textContent = d.win_rate + '%';
-    // sub 라인
-    const daySub = document.getElementById('ai-day-sub');
-    if (daySub) {
-      if (d.today_trade_count) {
-        daySub.textContent = '매도 ' + d.today_trade_count + '건 · 실현 ' + fmtPct(d.today_realized_avg);
-      } else {
-        daySub.textContent = '매도 없음 · 관망';
-      }
-    }
-    const cumSub = document.getElementById('ai-cum-sub');
-    if (cumSub && d.start_date) cumSub.textContent = d.start_date + ' 이후 · 입금 보정';
-    const wrSub = document.getElementById('ai-wr-sub');
-    if (wrSub) wrSub.textContent = '누적 ' + (d.total_trades || 0) + '건';
-  }).catch(() => {
-    const body = document.getElementById('ai-trend-body');
-    if (body) body.innerHTML = '<div class="ai-trend-empty">데이터를 불러올 수 없습니다</div>';
-  });
 })();
 </script>
 <footer class="site-footer">
