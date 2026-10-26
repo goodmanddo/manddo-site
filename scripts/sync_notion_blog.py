@@ -188,10 +188,16 @@ def main():
             title = extract_prop(page, "제목", "title") or "제목없음"
             category = extract_prop(page, "카테고리", "select") or "투자일기"
             slug = extract_prop(page, "슬러그", "rich_text") or slugify(title)
-            date_str = extract_prop(page, "게시일", "date") or date.today().isoformat()
+            raw_date = extract_prop(page, "게시일", "date")
+            today_iso = date.today().isoformat()
+            # ── 예약 발행 (2026-10-26 추가) ──
+            # 게시일이 '오늘 이후'면 그 날짜가 될 때까지 발행 보류 (상태=게시대기 유지, 다음 날짜 도달 시 발행).
+            # 게시일이 비어 있으면 기존대로 즉시 발행. 치명: 리뷰 전 글이 미래날짜 지정했는데 즉시 나가던 문제 차단.
+            if raw_date and raw_date.split("T")[0] > today_iso:
+                log(f"예약 보류: {title} — 게시일 {raw_date.split('T')[0]} (오늘 이후, 발행 안 함)")
+                continue
+            date_str = (raw_date or today_iso).split("T")[0]
             summary = extract_prop(page, "요약", "rich_text")
-            if "T" in date_str:
-                date_str = date_str.split("T")[0]
 
             lines = fetch_page_blocks(page["id"])
             body = "\n\n".join(lines)
