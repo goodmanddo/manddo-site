@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T15:50:01",
+  "updated_at": "2026-10-26T23:11:39",
   "total": {
     "current": {
       "rounds": 3,
@@ -20,26 +20,40 @@
             "code": "015760",
             "name": "한국전력",
             "slot": "main",
-            "planned": true,
-            "slot_label": "메인"
+            "buy_date": "2026-10-26",
+            "sell_date": null,
+            "slot_label": "메인",
+            "daily": {
+              "2026-10-26": -1.23
+            }
           },
           {
             "code": "036460",
             "name": "한국가스공사",
             "slot": "rank2",
-            "planned": true,
-            "slot_label": "서브 · 같은섹터2"
+            "buy_date": "2026-10-26",
+            "sell_date": null,
+            "slot_label": "서브 · 같은섹터2",
+            "daily": {
+              "2026-10-26": -1.65
+            }
           },
           {
             "code": "017390",
             "name": "서울가스",
             "slot": "rank3",
-            "planned": true,
-            "slot_label": "서브 · 같은섹터3"
+            "buy_date": "2026-10-26",
+            "sell_date": null,
+            "slot_label": "서브 · 같은섹터3",
+            "daily": {
+              "2026-10-26": -1.36
+            }
           }
         ],
-        "avg": {},
-        "result": null
+        "avg": {
+          "2026-10-26": -1.41
+        },
+        "result": -1.41
       },
       "extra": {
         "sectors": [
@@ -52,53 +66,83 @@
             "name": "DN오토모티브",
             "sector": "2차전지",
             "icon": "🔋",
-            "kind": "both"
+            "kind": "both",
+            "daily": {
+              "2026-10-26": -1.61
+            }
           },
           {
             "code": "004490",
             "name": "세방전지",
             "sector": "2차전지",
             "icon": "🔋",
-            "kind": "both"
+            "kind": "both",
+            "daily": {
+              "2026-10-26": 1.25
+            }
           },
           {
             "code": "222800",
             "name": "심텍",
             "sector": "반도체",
             "icon": "🔲",
-            "kind": "nps"
+            "kind": "nps",
+            "daily": {
+              "2026-10-26": -4.5
+            }
           },
           {
             "code": "108320",
             "name": "LX세미콘",
             "sector": "반도체",
             "icon": "🔲",
-            "kind": "div"
+            "kind": "div",
+            "daily": {
+              "2026-10-26": -0.34
+            }
           },
           {
             "code": "093520",
             "name": "매커스",
             "sector": "반도체",
             "icon": "🔲",
-            "kind": "div"
+            "kind": "div",
+            "daily": {
+              "2026-10-26": -0.4
+            }
           }
         ],
-        "avg": {},
-        "result": null
+        "avg": {
+          "2026-10-26": -1.12
+        },
+        "result": -1.12
       },
       "bench": [
         {
           "code": "KS11",
-          "name": "코스피"
+          "name": "코스피",
+          "entry": 5499.05,
+          "daily": {
+            "2026-10-26": -0.54
+          }
         },
         {
           "code": "KQ11",
-          "name": "코스닥"
+          "name": "코스닥",
+          "entry": 742.17,
+          "daily": {
+            "2026-10-26": -2.02
+          }
         }
       ],
-      "days": [],
-      "status": "대기",
-      "bench_result": {}
+      "days": [
+        "2026-10-26"
+      ],
+      "status": "진행중",
+      "bench_result": {
+        "KS11": -0.54,
+        "KQ11": -2.02
+      }
     },
     {
       "week": "2026-10-19",
