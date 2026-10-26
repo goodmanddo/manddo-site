@@ -86,7 +86,9 @@ def current_rows(monday):
         for h in st.get("history", []):
             add(slot, h)
     sub = load(SUB_STATE)
-    for p in list(sub.get("positions", {}).values()) + sub.get("history", []):
+    # positions는 종목코드를 '키'로만 저장하고 값엔 code가 없음 → 키에서 주입(history엔 code 있음)
+    sub_positions = [{**p, "code": code} for code, p in sub.get("positions", {}).items()]
+    for p in sub_positions + sub.get("history", []):
         add(p.get("slot", "rank2"), p)
 
     # 이번 주 계획(서브 픽 파일)에 있는데 아직 안 산 종목 → 월요일 전이면 '매수 예정', 이후면 '미체결'(화·수 재시도 중일 수 있음)
