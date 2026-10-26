@@ -1,10 +1,35 @@
 {
-  "last_holdings": {},
-  "history": [
-    {
-      "date": "2026-09-22",
-      "total_eval": 18728771
+  "last_holdings": {
+    "015760": {
+      "name": "한국전력",
+      "qty": 153,
+      "avg_price": 28400,
+      "current_price": 28000,
+      "opened_at": "2026-10-26"
     },
+    "017390": {
+      "name": "서울가스",
+      "qty": 15,
+      "avg_price": 52120,
+      "current_price": 50900,
+      "opened_at": "2026-10-26"
+    },
+    "036460": {
+      "name": "한국가스공사",
+      "qty": 22,
+      "avg_price": 36450,
+      "current_price": 36050,
+      "opened_at": "2026-10-26"
+    },
+    "192410": {
+      "name": "오늘이엔엠",
+      "qty": 114,
+      "avg_price": 3920,
+      "current_price": 3920,
+      "opened_at": "2026-10-26"
+    }
+  },
+  "history": [
     {
       "date": "2026-09-22",
       "total_eval": 18728771
@@ -240,6 +265,10 @@
     {
       "date": "2026-10-23",
       "total_eval": 16903438
+    },
+    {
+      "date": "2026-10-26",
+      "total_eval": 16814258
     }
   ],
   "completed_trades": [

@@ -1,76 +1,82 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-26",
   "start_date": "2026-05-03",
-  "cumulative_return": -15.48,
-  "week_return": -1.63,
-  "day_return": -1.17,
-  "today_realized_avg": -6.02,
-  "today_trade_count": 4,
+  "cumulative_return": -15.93,
+  "week_return": -2.15,
+  "day_return": -0.53,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 4,
+  "today_loss_count": 0,
   "win_rate": 37,
   "total_trades": 99,
-  "ai_commentary": "4건은 손절 규칙에 따라 정리. 시작 이후 누적 -15.5%.",
-  "new_buys": [],
-  "exits": [
+  "ai_commentary": "오늘은 한국전력, 서울가스, 한국가스공사 등 신규 편입. 시작 이후 누적 -15.9%.",
+  "new_buys": [
     {
-      "type": "loss",
-      "name": "오뚜기",
+      "name": "한국전력",
       "slug": "",
-      "market": "코스피",
-      "return_pct": -2.94,
-      "hold_days": 4,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+      "market": "코스닥",
+      "entry_to_current_pct": -1.41,
+      "weight_pct": 25,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
-      "type": "loss",
-      "name": "S-Oil",
+      "name": "서울가스",
       "slug": "",
-      "market": "코스피",
-      "return_pct": -13.73,
-      "hold_days": 4,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+      "market": "코스닥",
+      "entry_to_current_pct": -2.34,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
-      "type": "loss",
-      "name": "CJ제일제당",
+      "name": "한국가스공사",
       "slug": "",
       "market": "코스피",
-      "return_pct": -6.25,
-      "hold_days": 11,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+      "entry_to_current_pct": -1.1,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
-      "type": "loss",
-      "name": "오리온",
+      "name": "오늘이엔엠",
       "slug": "",
       "market": "코스피",
-      "return_pct": -1.15,
-      "hold_days": 3,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     }
   ],
-  "weekly_losses": [
+  "exits": [],
+  "weekly_losses": [],
+  "holdings": [
     {
-      "name": "CJ제일제당",
+      "name": "한국전력",
       "slug": "",
-      "return_pct": -6.25,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+      "market": "코스닥",
+      "weight_pct": 25
     },
     {
-      "name": "S-Oil",
+      "name": "서울가스",
       "slug": "",
-      "return_pct": -13.73,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+      "market": "코스닥",
+      "weight_pct": 5
     },
     {
-      "name": "두산에너빌리티",
+      "name": "한국가스공사",
       "slug": "",
-      "return_pct": -13.9,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+      "market": "코스피",
+      "weight_pct": 5
+    },
+    {
+      "name": "오늘이엔엠",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
     }
   ],
-  "holdings": [],
   "return_history": [
     {
       "date": "2026-09-22",
@@ -155,6 +161,10 @@
     {
       "date": "2026-10-23",
       "cumulative_return": -15.48
+    },
+    {
+      "date": "2026-10-26",
+      "cumulative_return": -15.93
     }
   ]
 }
