@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-10-27T12:10:01",
+  "generated_at": "2026-10-27T14:10:06",
   "period_start": "2026-04-18",
   "period_end": "2026-10-26",
   "days": 191,
-  "total_value": 9438442,
+  "total_value": 9441366,
   "cash": 5011961,
   "cash_weight": 53.1,
-  "bot_return": -6.09,
-  "btc_return": -5.6,
-  "defense_pp": -0.5,
+  "bot_return": -6.06,
+  "btc_return": -5.5,
+  "defense_pp": -0.6,
   "defense_on": true,
   "coins": [
     {
       "code": "KRW-BTC",
       "name": "비트코인",
       "balance": 0.03099181,
-      "value": 3292105,
+      "value": 3294429,
       "weight": 34.9,
-      "price": 106225000.0,
-      "trend_pct": -5.6,
+      "price": 106300000.0,
+      "trend_pct": -5.5,
       "market_status": "🛡️ 방어 모드",
       "grid_percent": 3.0,
       "defense_mode": true
@@ -27,9 +27,9 @@
       "code": "KRW-ETH",
       "name": "이더리움",
       "balance": 0.19994015,
-      "value": 615816,
+      "value": 616415,
       "weight": 6.5,
-      "price": 3080000.0,
+      "price": 3083000.0,
       "trend_pct": -11.5,
       "market_status": "🛡️ 방어 모드",
       "grid_percent": 3.0,
@@ -1006,8 +1006,8 @@
     },
     {
       "date": "2026-10-27",
-      "bot": 91.77,
-      "btc_hold": 94.43
+      "bot": 91.8,
+      "btc_hold": 94.5
     }
   ]
 }
