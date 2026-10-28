@@ -2,6 +2,18 @@
   "_note": "신작 출시 예정 게임주 (운영자 편집). date=출시(예정)일 YYYYMMDD, status=confirmed(확정)/expected(잠정/미확정), bench=벤치마크 ETF(069500 코스피200 / 229200 코스닥150). ⚠ 출시일은 발표에 따라 변동되니 반드시 실제 발표 기준으로 검증·갱신하세요. 구체 '일'이 미발표면 해당 월 중순 등 잠정값을 쓰고 status=expected로 두세요.",
   "events": [
     {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "Stellar Blade™ 컴플리트 에디션 (Nintendo Switch 2)",
+      "date": "20261106",
+      "status": "confirmed",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-10-28 (출처 닌텐도 공식 발매 스케줄 2026-10-28)"
+    }
+  ],
+  "launched_archive": [
+    {
       "company": "카카오게임즈",
       "code": "293490",
       "game": "도깨비의세계 (MMORPG)",
