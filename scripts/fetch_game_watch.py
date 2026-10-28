@@ -5,7 +5,7 @@
 upcoming_game_launches.json(운영자 편집)의 각 종목에 대해:
   - 출시(예정)일까지 D-day
   - 출시 D-40 / D-30 / D-7 시점 종가 대비 현재 수익률 (절대 + 시장초과)
-  - 이미 출시됐으면 출시 후 경과·수익률
+  (출시일이 지난 게임은 제외 — 오픈 전만 추적)
 을 한투 수정주가로 계산 → tools/data/game_watch.json.
 
 숫자는 실시세로 결정론 계산(환각 없음). 출시일 자체는 운영자 큐레이션(잠정)이며
@@ -91,6 +91,11 @@ def main():
             L = datetime.strptime(ev["date"], "%Y%m%d").date()
         except Exception:
             log(f"! 날짜 오류 스킵: {ev.get('company')}")
+            continue
+        # 출시 후엔 추적 의미 없음(사용자 결정 2026-10-28) — 오픈 전 게임만 카드로.
+        # 날짜 미정(tentative)은 D-day를 못 믿으니 출시 판정 없이 유지.
+        if L <= today and not ev.get("tentative"):
+            log(f"- 출시됨 제외: {ev.get('company')} {ev.get('game','')} ({ev['date']})")
             continue
         code = ev["code"]
         bench = ev.get("bench", "229200")

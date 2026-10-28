@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-게임주 주간 인텔리전스 리포트 — web_search로 신작 일정 + 매출 성과 조사 → 텔레그램.
+게임주 신작 인텔 — web_search로 '오픈 전' 소식만 조사 → 사이트 + 텔레그램.
 
 하루 2회(09:00·22:00) LaunchAgent(com.mandoo.game-intel)로 실행:
-  1) 국내 상장(코스피/코스닥) 게임사의 향후 ~3개월 신작 출시 일정 (이미 추적중 외 신규는 🆕)
-  2) 추적/주요 상장사 게임의 최근 구글플레이 매출순위 대략 위치·성과 뉴스
-텔레그램은 '출시 예정 게임 D-day' 요약만 아침 1회 전송(전체 인텔은 반복 이슈라 미전송).
-전체 리포트·순위는 game_intel.json으로 사이트(/game-watch/)에만 반영(자동 commit/push).
-신작 출시 '일정'(upcoming_game_launches.json)은 오류가 많아 사람이 확인 후 수동 반영한다.
+  1) 국내 상장 게임사의 신작 발표·출시 일정(쇼케이스·사전예약·출시일 공개)
+  2) 이미 국내에 나온 게임의 해외(글로벌·일본·중국·북미 등) 출시 소식
+출시가 끝난 게임의 매출·성과는 다루지 않는다(사용자 결정 2026-10-28: 오픈 후 추적은 의미 없음).
 
-매출순위 정확도는 무료 web_search 특성상 '대략'이며, 없는 수치를 지어내지 않도록 프롬프트로 강제.
+검색으로 찾은 예정 건은 upcoming_game_launches.json에 자동 등록(auto_register)하고,
+출시일이 지난 건은 launched_archive로 옮겨 카드에서 뺀다(prune_launched).
+자동 등록 오류(옛 전망기사·이미 출시된 게임) 방지: 오늘 이후 날짜만, 구체 일자 아니면 tentative,
+종목코드 6자리 확인된 상장사만. 등록·정리 내역은 텔레그램으로 알려 사람이 바로 잡을 수 있게 한다.
 """
 import os
 import json
@@ -55,57 +56,57 @@ def tg(text):
 def registered_summary():
     try:
         evs = json.loads(UPCOMING.read_text()).get("events", [])
-        return "\n".join(f"- {e['company']}({e['code']}) {e.get('game','')} / 예정 {e['date']}" for e in evs) or "(없음)"
+        return "\n".join(f"- {e['company']}({e['code']}) {e.get('game','')} / 예정 "
+                         f"{e.get('date_label') if e.get('tentative') else e['date']}" for e in evs) or "(없음)"
     except Exception:
         return "(목록 읽기 실패)"
 
 
 def build_prompt():
     today = date.today().isoformat()
-    return f"""너는 한국 게임주 투자자를 위한 주간 인텔리전스 리포터다. **웹 검색을 적극 사용**해 아래를 조사하고, 텔레그램으로 보낼 간결한 한국어 리포트를 작성하라. 오늘 날짜: {today}.
+    return f"""너는 한국 게임주 투자자를 위한 신작 인텔리전스 리포터다. **웹 검색을 적극 사용**해 '아직 출시 전'인 소식만 조사하고 간결한 한국어 리포트를 작성하라. 오늘 날짜: {today}.
 
-## 1) 신작 출시 일정 (향후 약 3개월)
-한국 증시 **상장(코스피/코스닥) 게임사**가 곧 출시 예정인 신작을 검색. 각 항목: 회사명·종목코드·신작명·출시예정일(확정/잠정 구분)·한 줄 근거. **비상장사(스마일게이트 등)는 제외.** 종목코드가 불확실하면 '코드미상'으로.
-아래는 우리가 **이미 추적 중**인 게임이다(괄호 안이 우리가 등록해둔 예정일). 이것 외에 **새로 발견된** 신작은 앞에 🆕를 붙여라:
+## 조사 대상 (출시 전 소식만)
+A) **국내 신작**: 한국 증시 상장(코스피/코스닥) 게임사의 신작 발표·쇼케이스·사전예약·출시일 공개 (향후 약 6개월)
+B) **해외 출시**: 상장 게임사 게임의 해외(글로벌·일본·중국 판호·북미/유럽·동남아 등) 출시 예정 소식 — 국내에 이미 나온 게임이라도 해외 출시가 아직이면 포함
+각 항목: 회사명·종목코드·게임명·구분(신작/해외출시+지역)·출시예정일(확정 일자/월·분기만 나온 잠정 구분)·한 줄 근거(매체, 기사 날짜).
+
+⚠️ 엄수:
+- **오늘 이전 날짜에 이미 출시됐거나 출시일이 지난 건(해외 출시 포함)은 넣지 마라**. **이미 출시된 게임은 넣지 마라**(출시 후 매출·순위·흥행 성과도 쓰지 마라). 넣기 전에 "이미 출시됐는지" 반드시 검색으로 확인.
+- 옛 전망기사(몇 달 전 "4분기 출시 준비")만 근거면 잠정으로, 최신 기사로 일정이 확인될 때만 확정.
+- 국내 증시 미상장사는 제외: 비상장(스마일게이트 등)과 해외 상장(넥슨=도쿄 상장)도 제외. 단 국내 상장 자회사(넥슨게임즈 225570 등) 게임이면 그 회사로. 종목코드 불확실하면 '코드미상'.
+- 확인 안 된 건 넣지 마라. 지어내지 마라.
+
+우리가 이미 추적 중인 목록(이것 외 새로 찾은 건 앞에 🆕):
 {registered_summary()}
 
-⚠️ **날짜 변경 감지(중요)**: 위 '등록된 예정일'과 네가 검색한 **실제 출시일이 다르면**(이미 출시됐는데 미출시로 등록돼 있거나, 날짜가 바뀐 경우), 리포트 **맨 위에** 아래 형식으로 꼭 써라:
+⚠️ **날짜 변경 감지**: 위 목록의 예정일이 바뀌었거나 이미 출시됐으면 리포트 **맨 위에**
 🔔 날짜변경: [게임명] 등록 YYYY-MM-DD → 실제 YYYY-MM-DD (근거 매체)
-변경 없으면 이 줄은 쓰지 마라.
+형식으로 써라. 변경 없으면 쓰지 마라.
 
-## 2) 매출/성과 신호
-아래 게임들의 **최근 구글플레이(및 앱스토어) 매출순위 대략 위치**와 성과 뉴스(급상승/급락/신작 흥행·부진)를 검색:
-- ★고정 추적: **데브시스터즈(194480)의 쿠키런 시리즈**(쿠키런: 킹덤/오븐스매시/크럼블 등) — 반드시 현재 매출 성과·순위를 포함하라.
-- 추적 중인 게임(위 목록) + 주요 상장사 대표작(리니지·오딘·나이트크로우·아키에이지워 등)
-⚠️ **정확한 순위를 확인 못 하면 숫자를 지어내지 말고** '대략 O위권' 또는 '뉴스상 호조/부진'으로만. 확인된 것만.
-⚠️ **매출 순위와 무료(인기·다운로드) 순위를 명확히 구분**해서 적어라(예: '애플 무료 1위, 매출 3위' — 이 둘은 다름). 출시 당일·초반 흥행 수치는 '출시 초기'라고 **시점을 밝히고**, 현재 매출 순위가 확인 안 되면 '현재 매출 순위 미확인'이라고 써라.
-
-## 출력 형식 (텔레그램용 플레인텍스트, 이모지 활용, 450단어 이내)
-🎮 게임주 주간 인텔 ({today})
+## 출력 형식 (플레인텍스트, 이모지 활용, 400단어 이내)
+🎮 게임주 신작 인텔 ({today})
 ━━━━━━━━━
-📅 신작 일정
-- (회사/코드/신작/예정일/근거)
-📊 매출·성과
-- (게임/대략 순위 또는 뉴스)
+🆕 국내 신작 일정
+- (회사/코드/게임/예정일/근거)
+🌏 해외 출시 소식
+- (회사/코드/게임/지역/예정일/근거)
 💡 한 줄 정리
-- (이번 주 관전 포인트)
+- (가장 가까운 출시 이벤트)
 
-각 항목 근거 출처를 (매체명)으로 짧게. 확인 안 된 건 넣지 마라."""
+해당 소식이 없으면 그 섹션에 '이번 조사에서 새 소식 없음'이라고 써라."""
 
 
-def extract_rankings(client, report_text):
-    """리포트 텍스트에서 매출 순위 정보를 JSON 배열로 추출 (2차 호출, web_search 없음)."""
-    p = ("다음 게임주 리포트에서 **매출(그로싱) 순위** 정보를 JSON 배열로 추출하라. "
-         "각 원소: {\"game\":\"게임명\",\"company\":\"회사\",\"code\":\"종목코드\",\"market\":\"매출 순위\","
-         "\"rank\":\"1위권|10위권|30위권|100위권 밖|미상\",\"trend\":\"up|down|flat|new|na\","
-         "\"note\":\"짧은 근거\",\"source\":\"매체\"}.\n"
-         "⚠️ rank 규칙(엄수):\n"
-         "1) **매출 순위만** 기준. 무료·인기·다운로드 순위를 매출 순위로 쓰지 마라(둘은 완전히 다름). "
-         "'무료 1위'만 있고 매출 순위가 없으면 그 무료 순위로 rank를 매기지 말 것.\n"
-         "2) 출시 당일·업데이트 직후 같은 **초기 피크**는 현재값이 아니다. 현재 매출 순위가 "
-         "명확하지 않으면 rank=\"미상\", 시점·피크는 note에만 남겨라(예: '출시 초기 매출 5위').\n"
-         "3) 리포트에 언급된 게임만, 지어내지 말 것. 데브시스터즈 쿠키런이 있으면 포함하되 위 규칙 그대로 적용.\n"
-         "JSON 배열만 출력.\n\n" + report_text)
+def extract_events(client, report_text):
+    """리포트에서 출시 예정 건을 JSON 배열로 추출 (2차 호출, web_search 없음)."""
+    p = ("다음 게임주 신작 리포트에서 **아직 출시 전인** 예정 건만 JSON 배열로 추출하라. "
+         "각 원소: {\"company\":\"회사\",\"code\":\"6자리 종목코드 또는 null\",\"game\":\"게임명\","
+         "\"kind\":\"신작|해외출시\",\"region\":\"해외출시면 지역, 아니면 빈칸\","
+         "\"date\":\"구체 일자가 있으면 YYYYMMDD, 없으면 null\","
+         "\"date_label\":\"일자 없으면 '11월 예정'·'4분기 예정'·'2027년 상반기' 같은 표시, 있으면 빈칸\","
+         "\"month_hint\":\"일자 없을 때 가장 이른 예상 월 YYYYMM, 모르면 null\","
+         "\"source\":\"매체\"}.\n"
+         "리포트에 있는 것만, 이미 출시된 건 제외, 지어내지 말 것. JSON 배열만 출력.\n\n" + report_text)
     try:
         r = client.messages.create(model="claude-sonnet-4-6", max_tokens=1500,
                                     messages=[{"role": "user", "content": p}])
@@ -114,8 +115,88 @@ def extract_rankings(client, report_text):
         m = re.search(r"\[.*\]", txt, re.S)
         return json.loads(m.group(0)) if m else []
     except Exception as e:
-        log(f"rankings 추출 실패: {e}")
+        log(f"events 추출 실패: {e}")
         return []
+
+
+def _gkey(code, game):
+    import re
+    return (code, re.sub(r"[^0-9a-z가-힣]", "", re.sub(r"\(.*?\)", "", (game or "").lower())))
+
+
+def prune_launched(up):
+    """출시일 지난(확정 날짜) 건은 events → launched_archive. 옮긴 목록 반환."""
+    today = date.today().strftime("%Y%m%d")
+    keep, gone = [], []
+    for e in up.get("events", []):
+        if not e.get("tentative") and str(e.get("date", "")) <= today:
+            gone.append(e)
+        else:
+            keep.append(e)
+    if gone:
+        up["events"] = keep
+        up.setdefault("launched_archive", []).extend(gone)
+    return gone
+
+
+_KRX = None
+
+
+def krx_lookup(company):
+    """회사명 → (코드, 벤치). KRX 상장 목록 기준이라 비상장·해외상장(넥슨 등)은 None."""
+    global _KRX
+    try:
+        if _KRX is None:
+            import FinanceDataReader as fdr
+            df = fdr.StockListing("KRX")
+            _KRX = {r.Name: (r.Code, r.Market) for r in df.itertuples()}
+        hit = _KRX.get((company or "").strip())
+        if hit:
+            return hit[0], ("069500" if hit[1] == "KOSPI" else "229200")
+    except Exception as e:
+        log(f"KRX 목록 실패: {e}")
+    return None, None
+
+
+def auto_register(up, found):
+    """검색으로 찾은 예정 건을 events에 추가. 추가 목록 반환."""
+    import re
+    import calendar
+    today = date.today()
+    keys = {_gkey(e["code"], e.get("game")) for e in up.get("events", [])}
+    keys |= {_gkey(e["code"], e.get("game")) for e in up.get("launched_archive", [])}
+    added = []
+    for f in found:
+        kcode, bench = krx_lookup(f.get("company"))
+        code = kcode or str(f.get("code") or "")   # 상장목록 우선(모델 코드 오기 방지)
+        if not re.fullmatch(r"\d{6}", code) or not f.get("game"):
+            continue
+        game = f["game"] + (f" ({f['region']} 출시)" if f.get("kind") == "해외출시" and f.get("region") else "")
+        k = _gkey(code, game)
+        if k in keys:
+            continue
+        d = str(f.get("date") or "")
+        if re.fullmatch(r"\d{8}", d):
+            if d <= today.strftime("%Y%m%d"):
+                continue  # 이미 지났거나 오늘 = 출시 전 소식 아님
+            ev = {"date": d, "status": "confirmed"}
+        else:
+            mh = str(f.get("month_hint") or "")
+            if not re.fullmatch(r"\d{6}", mh):
+                continue  # 시기조차 모르면 카드로 만들 수 없음 → 리포트 텍스트에만
+            y, m = int(mh[:4]), int(mh[4:])
+            if (y, m) < (today.year, today.month):
+                continue
+            last = calendar.monthrange(y, m)[1]
+            ev = {"date": f"{y}{m:02d}{last:02d}", "status": "expected", "tentative": True,
+                  "date_label": f.get("date_label") or f"{m}월 예정"}
+        ev = {"company": f.get("company", ""), "code": code, "game": game, **ev,
+              "bench": bench or "229200", "kind": f.get("kind", "신작"),
+              "note": f"자동등록 {today} (출처 {f.get('source', '?')})"}
+        up.setdefault("events", []).append(ev)
+        keys.add(k)
+        added.append(ev)
+    return added
 
 
 def dday_telegram():
@@ -158,7 +239,7 @@ def main():
     try:
         r = client.messages.create(
             model="claude-sonnet-4-6", max_tokens=3000,
-            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
             messages=[{"role": "user", "content": build_prompt()}],
         )
     except Exception as e:
@@ -180,8 +261,26 @@ def main():
     i = text.find("🎮")
     if i > 0:
         text = text[i:]
-    rankings = extract_rankings(client, text)
-    log(f"리포트 생성 (검색 {searches}회, 본문 {len(text)}자, 순위 {len(rankings)}건)")
+    # 페이지는 <pre> 플레인텍스트라 마크다운 기호 제거
+    text = re.sub(r"\*\*|__", "", text)
+    text = "\n".join(re.sub(r"^>\s?", "", l) for l in text.splitlines()
+                     if l.strip() not in ("---", "```"))
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    found = extract_events(client, text)
+    up = json.loads(UPCOMING.read_text())
+    gone = prune_launched(up)
+    added = auto_register(up, found)
+    if gone or added:
+        UPCOMING.write_text(json.dumps(up, ensure_ascii=False, indent=2), encoding="utf-8")
+        msg = ["🎮 게임 신작 트래커 자동 갱신"]
+        msg += [f"➕ {e['company']}({e['code']}) {e['game']} — "
+                f"{e.get('date_label') if e.get('tentative') else e['date']} ({e['note']})" for e in added]
+        msg += [f"➖ 출시됨 정리: {e['company']} {e.get('game','')} ({e['date']})" for e in gone]
+        msg.append("틀린 건 upcoming_game_launches.json에서 지우면 됩니다")
+        tg("\n".join(msg))
+        subprocess.run(["/opt/homebrew/bin/python3", str(SITE / "scripts" / "fetch_game_watch.py")], check=False)
+    log(f"리포트 생성 (검색 {searches}회, 본문 {len(text)}자, 추출 {len(found)}건, "
+        f"추가 {len(added)}, 정리 {len(gone)})")
     # 텔레그램: 반복되는 전체 인텔 대신 'D-day 요약'만, 아침 1회(스팸 방지).
     # 전체 리포트/순위는 아래 game_intel.json으로 사이트(/game-watch/)에만 반영.
     if datetime.now().hour < 12:
@@ -192,14 +291,15 @@ def main():
     (SITE / "scripts" / "game_intel_last.txt").write_text(
         f"[{datetime.now().isoformat(timespec='seconds')}]\n{text}\n", encoding="utf-8")
     out = {"generated_at": datetime.now().isoformat(timespec="seconds"),
-           "report": text, "rankings": rankings}
+           "report": text, "events": found}
     (SITE / "tools" / "data" / "game_intel.json").write_text(
         json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     try:
         env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
-        subprocess.run(["git", "-C", str(SITE), "add", "tools/data/game_intel.json"], check=False, env=env)
+        subprocess.run(["git", "-C", str(SITE), "add", "tools/data/game_intel.json",
+                        "scripts/upcoming_game_launches.json"], check=False, env=env)
         subprocess.run(["git", "-C", str(SITE), "commit", "-q", "-m",
-                        f"chore(game-intel): 주간 리포트 갱신 ({date.today()})"], env=env)
+                        f"chore(game-intel): 신작 인텔 갱신 ({date.today()})"], env=env)
         subprocess.run(["git", "-C", str(SITE), "push", "-q"], check=False, env=env)
     except Exception as e:
         log(f"git 실패: {e}")

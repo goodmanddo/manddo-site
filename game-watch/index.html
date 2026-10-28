@@ -47,21 +47,6 @@
   .gw-report-head .upd{font-size:12px;color:#8b95a1}
   .gw-report pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:13.5px;line-height:1.75;color:#374151;margin:0}
   .gw-report .src{font-size:11.5px;color:#94a3b8;margin-top:12px}
-  .gw-ranks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 18px}
-  @media(max-width:560px){.gw-ranks{grid-template-columns:1fr}}
-  .gw-rank{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #eef0f3;border-radius:12px;padding:12px 14px}
-  .gw-rank.star{border-color:#c4b5fd;background:#faf5ff}
-  .gw-rank .badge{min-width:56px;text-align:center;font-weight:800;font-size:14px;font-family:'SF Mono',ui-monospace,monospace;padding:8px 6px;border-radius:9px;background:#f1f5f9;color:#334155}
-  .gw-rank .badge.hi{background:#fee2e2;color:#b91c1c}
-  .gw-rank .badge.mid{background:#fef3c7;color:#92400e}
-  .gw-rank .badge.lo{background:#f1f5f9;color:#64748b}
-  .gw-rank .rk-body{min-width:0;flex:1}
-  .gw-rank .rk-game{font-size:14px;font-weight:800;color:#111827}
-  .gw-rank .rk-game .st{color:#7c3aed}
-  .gw-rank .rk-note{font-size:11.5px;color:#64748b;line-height:1.5;margin-top:2px}
-  .gw-rank .tr{font-size:12px;font-weight:800;white-space:nowrap}
-  .tr.up{color:#dc2626}.tr.down{color:#1B64DA}.tr.flat{color:#94a3b8}.tr.new{color:#7c3aed}
-  .gw-ranks-title{font-size:14px;font-weight:800;color:#111827;margin:2px 0 8px}
   .gw-empty{text-align:center;color:#94a3b8;padding:30px;background:#fff;border:1px dashed #e5e8ec;border-radius:12px}
   .disclaimer{font-size:12px;color:#64748b;line-height:1.6;margin:20px 0;padding:14px 16px;background:#fafbfc;border:1px solid #eef0f3;border-radius:10px}
 </style>
@@ -102,22 +87,18 @@
 
   <div class="gw-report" id="gw-report" style="display:none">
     <div class="gw-report-head">
-      <h2>📰 이번 주 게임주 인텔</h2>
+      <h2>📰 신작·해외 출시 소식</h2>
       <span class="upd" id="gw-report-upd">—</span>
     </div>
-    <div id="gw-ranks-wrap" style="display:none">
-      <div class="gw-ranks-title">📊 주요 게임 매출 순위</div>
-      <div class="gw-ranks" id="gw-ranks"></div>
-    </div>
     <pre id="gw-report-body"></pre>
-    <div class="src">🔍 웹 검색 기반 주간 요약(매주 월요일 갱신). 신작 일정·매출 순위는 잠정·대략치이며, 매수·매도 권유가 아닙니다.</div>
+    <div class="src">🔍 웹 검색 기반 요약(하루 2회 갱신). 출시 전 신작·해외 출시 소식만 다루며, 일정은 잠정이고 매수·매도 권유가 아닙니다.</div>
   </div>
 
   <div class="gw-note" style="background:#fff">
     <b>🎮 게임주는 왜 신작 출시에 민감할까</b><br>
     게임사의 실적은 신작 한두 개의 흥행에 크게 좌우됩니다. 그래서 게임주는 새 게임 출시를 앞두고 기대감이 주가에 먼저 반영되는 경향이 있고, "신작 오픈 한 달 전부터 오른다"는 통념이 널리 퍼져 있습니다. 이 페이지는 출시를 앞둔 <b>국내 상장 게임사</b>의 신작을 모아, 출시 <b>D-40·D-30·D-7</b> 시점 종가 대비 지금 주가가 실제로 오르고 있는지와 출시까지 남은 <b>D-day</b>를 함께 보여줍니다.<br><br>
     <b>그런데 정말 오를까?</b><br>
-    저희가 과거 <b>16개 신작 출시</b>를 실제 데이터로 검증한 결과는 통념과 달랐습니다. 출시 한 달 전 진입은 평균적으로 시장(코스피200·코스닥150)을 <b>밑돌았고</b>, 출시 직후엔 오히려 빠지는 경향(<b>sell the news</b>)이 있었습니다. 자세한 검증은 <a href="/learn/game-launch-rally.html">게임주는 정말 신작 전에 오를까</a>에서 볼 수 있습니다. 그래서 이 페이지는 "지금 사라"는 매수 신호가 아니라, 그 통념이 이번엔 맞는지 <b>실시간으로 관찰·검증</b>하는 도구입니다. 아래 '이번 주 게임주 인텔'은 매주 신작 일정과 주요 게임 매출 순위를 자동 정리해 함께 보여드립니다.
+    저희가 과거 <b>16개 신작 출시</b>를 실제 데이터로 검증한 결과는 통념과 달랐습니다. 출시 한 달 전 진입은 평균적으로 시장(코스피200·코스닥150)을 <b>밑돌았고</b>, 출시 직후엔 오히려 빠지는 경향(<b>sell the news</b>)이 있었습니다. 자세한 검증은 <a href="/learn/game-launch-rally.html">게임주는 정말 신작 전에 오를까</a>에서 볼 수 있습니다. 그래서 이 페이지는 "지금 사라"는 매수 신호가 아니라, 그 통념이 이번엔 맞는지 <b>실시간으로 관찰·검증</b>하는 도구입니다. 출시가 끝난 게임은 목록에서 빠지고, 아래 '신작·해외 출시 소식'은 아직 나오지 않은 국내 신작과 해외 출시 일정을 검색해 자동 정리합니다.
   </div>
 
   <div class="gw-note">
@@ -145,7 +126,7 @@
   }
   fetch('/tools/data/game_watch.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
     var el=document.getElementById('gw-list');
-    if(!d.items||!d.items.length){el.innerHTML='<div class="gw-empty">추적 중인 신작이 아직 없습니다. 곧 등록됩니다.</div>';return;}
+    if(!d.items||!d.items.length){el.innerHTML='<div class="gw-empty">지금 출시를 앞둔 신작이 없습니다. 새 신작·해외 출시 소식이 확인되면 자동으로 추가됩니다.</div>';return;}
     el.innerHTML='<div class="gw-cards">'+d.items.map(function(i){
       var soon=!i.launched && i.dday<=45 && i.dday>=0;
       var ddayHtml, tag;
@@ -156,6 +137,7 @@
         tag='<span class="gw-tag exp">잠정</span>';}
       else if(i.launched){ddayHtml='<div class="gw-dday done"><div class="num">D+'+Math.abs(i.dday)+'</div><div class="lab">출시됨</div></div>';tag='<span class="gw-tag done">출시완료</span>';}
       else{ddayHtml='<div class="gw-dday"><div class="num">D-'+i.dday+'</div><div class="lab">출시까지</div></div>';tag=i.status==='confirmed'?'<span class="gw-tag conf">확정</span>':'<span class="gw-tag exp">잠정</span>';}
+      if(i.kind==='해외출시')tag+='<span class="gw-tag" style="background:#e0f2fe;color:#075985">🌏 해외</span>';
       var m=i.milestones||{};
       var postHtml='';
       if(i.launched && i.post_ret!==null && i.post_ret!==undefined){var pc=i.post_ret>0?'up':(i.post_ret<0?'down':'flat');postHtml=' · 출시 후 <b class="'+pc+'">'+(i.post_ret>0?'+':'')+i.post_ret.toFixed(1)+'%</b>';}
@@ -167,27 +149,11 @@
     }).join('')+'</div>';
   }).catch(function(){document.getElementById('gw-list').innerHTML='<div class="gw-empty">데이터를 불러오지 못했습니다.</div>';});
 
-  // 주간 인텔 리포트 + 매출순위 배지
+  // 신작·해외 출시 소식 리포트
   fetch('/tools/data/game_intel.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){
     if(!d.report)return;
     document.getElementById('gw-report-body').textContent=d.report;
     if(d.generated_at)document.getElementById('gw-report-upd').textContent=d.generated_at.slice(0,10)+' 갱신';
-    var rk=d.rankings||[];
-    if(rk.length){
-      var rankOrder={'1위권':1,'10위권':2,'30위권':3,'100위권 밖':4,'미상':5};
-      rk.sort(function(a,b){return (rankOrder[a.rank]||9)-(rankOrder[b.rank]||9);});
-      var trLab={up:'▲ 상승',down:'▼ 하락',flat:'― 유지',new:'🆕 신규',na:''};
-      document.getElementById('gw-ranks').innerHTML=rk.map(function(r){
-        var star=(String(r.company||'').indexOf('데브')>=0||String(r.game||'').indexOf('쿠키런')>=0);
-        var bc=(r.rank==='1위권')?'hi':((r.rank==='10위권'||r.rank==='30위권')?'mid':'lo');
-        var tr=(r.trend&&trLab[r.trend])?('<span class="tr '+r.trend+'">'+trLab[r.trend]+'</span>'):'';
-        return '<div class="gw-rank'+(star?' star':'')+'">'+
-          '<div class="badge '+bc+'">'+(r.rank||'미상')+'</div>'+
-          '<div class="rk-body"><div class="rk-game">'+(star?'<span class="st">★ </span>':'')+(r.game||'')+'</div>'+
-          (r.note?'<div class="rk-note">'+r.note+(r.source?' ('+r.source+')':'')+'</div>':'')+'</div>'+tr+'</div>';
-      }).join('');
-      document.getElementById('gw-ranks-wrap').style.display='block';
-    }
     document.getElementById('gw-report').style.display='block';
   }).catch(function(){});
 })();
