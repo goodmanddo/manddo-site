@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T16:00:07",
+  "generated_at": "2026-10-28T16:00:07",
   "count": 4,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -14,27 +14,27 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 2100,
-      "dday": -5,
+      "price": 2150,
+      "dday": -6,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -20.5,
-          "excess": -9.1
+          "ret": -18.6,
+          "excess": -11.0
         },
         "d30": {
           "status": "done",
-          "ret": -19.8,
-          "excess": -7.9
+          "ret": -17.9,
+          "excess": -9.8
         },
         "d7": {
           "status": "done",
-          "ret": -23.4,
-          "excess": -19.5
+          "ret": -21.5,
+          "excess": -21.8
         }
       },
-      "post_ret": -27.2
+      "post_ret": -25.5
     },
     {
       "company": "카카오게임즈",
@@ -47,27 +47,27 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11850,
-      "dday": -19,
+      "price": 11460,
+      "dday": -20,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 43.5,
-          "excess": 58.8
+          "ret": 38.7,
+          "excess": 50.3
         },
         "d30": {
           "status": "done",
-          "ret": 32.6,
-          "excess": 43.0
+          "ret": 28.2,
+          "excess": 34.7
         },
         "d7": {
           "status": "done",
-          "ret": 19.1,
-          "excess": 39.0
+          "ret": 15.2,
+          "excess": 31.7
         }
       },
-      "post_ret": 26.7
+      "post_ret": 22.6
     },
     {
       "company": "엔씨소프트",
@@ -80,27 +80,27 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 198700,
-      "dday": -22,
+      "price": 201000,
+      "dday": -23,
       "launched": true,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -12.3,
-          "excess": 5.2
+          "ret": -11.3,
+          "excess": -0.1
         },
         "d30": {
           "status": "done",
-          "ret": -10.5,
-          "excess": 5.4
+          "ret": -9.5,
+          "excess": 0.0
         },
         "d7": {
           "status": "done",
-          "ret": -8.0,
-          "excess": 10.8
+          "ret": -6.9,
+          "excess": 5.7
         }
       },
-      "post_ret": -11.3
+      "post_ret": -10.3
     },
     {
       "company": "컴투스",
@@ -114,7 +114,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 34950,
-      "dday": -62,
+      "dday": -63,
       "launched": true,
       "milestones": {
         "d40": {
