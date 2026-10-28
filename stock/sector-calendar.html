@@ -43,6 +43,18 @@
 .c-gray{background:#eef0f3;color:#4e5968}
 @media(max-width:560px){.sc-cell{min-height:80px;padding:6px}.sc-chip{font-size:10.5px;padding:4px 6px}.sc-chip .pct{display:none}}
 .sc-legend{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:18px 0}
+.sc-trend{margin:22px 0 6px}
+.sc-trend h3{font-size:17px;font-weight:800;color:#191f28;margin:0 0 4px;text-align:center}
+.sc-trend .sub{font-size:12.5px;color:#8b95a1;text-align:center;margin-bottom:12px}
+.sc-trend-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sc-tcard{background:#fff;border:1px solid #eef0f3;border-radius:14px;padding:12px}
+.sc-tcard .tt{font-size:13px;font-weight:800;color:#4e5968;margin-bottom:8px}
+.sc-tcard .tt small{font-weight:600;color:#8b95a1}
+.sc-trow{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.sc-trow .rk{font-size:12px;font-weight:800;color:#8b95a1;width:14px}
+.sc-trow .sc-chip{flex:1;min-width:0}
+.sc-trow .cnt{font-size:13px;font-weight:800;color:#191f28;white-space:nowrap}
+@media(max-width:560px){.sc-trend-grid{grid-template-columns:1fr}}
 .sc-legend .sc-chip{cursor:default}
 </style>
   <!-- adsense-script -->
@@ -94,6 +106,12 @@
   <div class="sc-wkend" id="sc-wkend" hidden></div>
   <div class="sc-grid" id="sc-dow"></div>
   <div class="sc-grid" id="sc-grid"></div>
+
+  <section class="sc-trend">
+    <h3>🔥 최근 추세 섹터</h3>
+    <div class="sub">기간 안에 강세 섹터(칩)로 가장 많이 뜬 섹터 TOP 3 · 거래일 기준</div>
+    <div class="sc-trend-grid" id="sc-trend"></div>
+  </section>
 
   <div class="sc-legend" id="sc-legend"></div>
 
@@ -162,6 +180,22 @@
     document.getElementById('next').disabled = curM>=nowM;
   }
   function curMonthIsNow(y,m){ const n=new Date(); return n.getFullYear()===y && n.getMonth()===m; }
+  function trend(){
+    // 최근 N거래일 동안 칩으로 등장한 횟수 TOP3 (동률이면 등락 합이 큰 순)
+    const days=Object.keys(DATA.days).filter(d=>d<=todayStr).sort();
+    document.getElementById('sc-trend').innerHTML=[7,15,30].map(n=>{
+      const win=days.slice(-n), agg={};
+      win.forEach(d=>DATA.days[d].forEach(c=>{
+        const a=agg[c.name]||(agg[c.name]={c,cnt:0,sum:0});
+        a.cnt++; a.sum+=c.pct;
+      }));
+      const top=Object.values(agg).sort((a,b)=>b.cnt-a.cnt||b.sum-a.sum).slice(0,3);
+      const note=win.length<n?` <small>(데이터 ${win.length}일)</small>`:'';
+      const rows=top.length?top.map((a,i)=>`<div class="sc-trow"><span class="rk">${i+1}</span><div class="sc-chip c-${a.c.color||'gray'}">${a.c.icon||''} ${a.c.name}</div><span class="cnt">${a.cnt}회</span></div>`).join('')
+        :'<div style="font-size:12px;color:#8b95a1">강세 섹터 없음</div>';
+      return `<div class="sc-tcard"><div class="tt">최근 ${n}일${note}</div>${rows}</div>`;
+    }).join('');
+  }
   function legend(){
     // 등장한 섹터 색 범례
     const seen={};
@@ -173,7 +207,7 @@
   document.getElementById('next').onclick=()=>{cur.setMonth(cur.getMonth()+1);render();};
 
   fetch('/tools/data/sector_calendar.json?t='+Date.now()).then(r=>r.json()).then(d=>{
-    DATA=d; render(); legend();
+    DATA=d; render(); trend(); legend();
   }).catch(()=>{document.getElementById('sc-grid').innerHTML='<div style="grid-column:1/-1;text-align:center;color:#8b95a1;padding:40px">데이터를 불러오지 못했습니다.</div>';});
 })();
 </script>
