@@ -4,7 +4,7 @@
       "name": "한국전력",
       "qty": 153,
       "avg_price": 28400,
-      "current_price": 27850,
+      "current_price": 28650,
       "opened_at": "2026-10-26"
     },
     "017390": {
@@ -18,15 +18,11 @@
       "name": "한국가스공사",
       "qty": 22,
       "avg_price": 36450,
-      "current_price": 36600,
+      "current_price": 36900,
       "opened_at": "2026-10-26"
     }
   },
   "history": [
-    {
-      "date": "2026-09-24",
-      "total_eval": 18762729
-    },
     {
       "date": "2026-09-24",
       "total_eval": 18762729
@@ -262,6 +258,10 @@
     {
       "date": "2026-10-27",
       "total_eval": 16805353
+    },
+    {
+      "date": "2026-10-28",
+      "total_eval": 16934353
     }
   ],
   "completed_trades": [

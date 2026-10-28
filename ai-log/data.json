@@ -1,24 +1,24 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "start_date": "2026-05-03",
-  "cumulative_return": -15.97,
-  "week_return": -0.05,
-  "day_return": -0.05,
-  "today_realized_avg": -2.04,
-  "today_trade_count": 1,
+  "cumulative_return": -15.33,
+  "week_return": 0.71,
+  "day_return": 0.77,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
   "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_loss_count": 0,
   "win_rate": 37,
   "total_trades": 100,
-  "ai_commentary": "오늘은 한국전력, 서울가스, 한국가스공사 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -16.0%.",
+  "ai_commentary": "오늘은 한국전력, 서울가스, 한국가스공사 등 신규 편입. 시작 이후 누적 -15.3%.",
   "new_buys": [
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": -1.94,
-      "weight_pct": 25,
-      "hold_days": 1,
+      "entry_to_current_pct": 0.88,
+      "weight_pct": 26,
+      "hold_days": 2,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
@@ -27,37 +27,27 @@
       "market": "코스닥",
       "entry_to_current_pct": -0.81,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
       "name": "한국가스공사",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.41,
+      "entry_to_current_pct": 1.23,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "오늘이엔엠",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -2.04,
-      "hold_days": 1,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [],
   "holdings": [
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "weight_pct": 25
+      "weight_pct": 26
     },
     {
       "name": "서울가스",
@@ -156,6 +146,10 @@
     {
       "date": "2026-10-27",
       "cumulative_return": -15.97
+    },
+    {
+      "date": "2026-10-28",
+      "cumulative_return": -15.33
     }
   ]
 }
