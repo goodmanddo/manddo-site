@@ -20,6 +20,38 @@
       "bench": "069500",
       "kind": "신작",
       "note": "자동등록 2026-10-28 (출처 닌텐도 공식 발매 스케줄 2026-10-28)"
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "아키에이지 크로니클",
+      "date": "20261104",
+      "status": "confirmed",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-10-29 (출처 나무위키 2026-10-27 갱신, 게임뷰 2026-07-14)"
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "크로노 오디세이",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 1분기 예정",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-10-29 (출처 인벤 컨콜 기사, 2026년 3분기 실적발표)"
+    },
+    {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "Stellar Blade™ Complete Edition (Nintendo Switch 2 글로벌 출시)",
+      "date": "20261106",
+      "status": "confirmed",
+      "bench": "069500",
+      "kind": "해외출시",
+      "note": "자동등록 2026-10-29 (출처 Go Nintendo, 2026-09-10)"
     }
   ],
   "launched_archive": [
