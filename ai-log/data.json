@@ -1,33 +1,33 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-10-29",
   "start_date": "2026-05-03",
-  "cumulative_return": -15.33,
-  "week_return": 0.77,
-  "day_return": 0.77,
+  "cumulative_return": -15.61,
+  "week_return": 0.43,
+  "day_return": -0.33,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 37,
   "total_trades": 100,
-  "ai_commentary": "오늘은 한국전력, 서울가스, 한국가스공사 등 신규 편입. 시작 이후 누적 -15.3%.",
+  "ai_commentary": "오늘은 한국전력, 서울가스, 한국가스공사 등 신규 편입. 시작 이후 누적 -15.6%.",
   "new_buys": [
     {
       "name": "한국전력",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": 0.88,
+      "entry_to_current_pct": -0.35,
       "weight_pct": 26,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
       "name": "서울가스",
       "slug": "",
       "market": "코스닥",
-      "entry_to_current_pct": -0.81,
+      "entry_to_current_pct": -1.19,
       "weight_pct": 5,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
@@ -36,7 +36,7 @@
       "market": "코스피",
       "entry_to_current_pct": 1.23,
       "weight_pct": 5,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
@@ -146,6 +146,10 @@
     {
       "date": "2026-10-28",
       "cumulative_return": -15.33
+    },
+    {
+      "date": "2026-10-29",
+      "cumulative_return": -15.61
     }
   ]
 }
