@@ -52,6 +52,18 @@
       "bench": "069500",
       "kind": "해외출시",
       "note": "자동등록 2026-10-29 (출처 Go Nintendo, 2026-09-10)"
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "크로노 오디세이 (글로벌(서구권 중심) 출시)",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 1분기 예정",
+      "bench": "229200",
+      "kind": "해외출시",
+      "note": "자동등록 2026-10-29 (출처 인벤)"
     }
   ],
   "launched_archive": [
