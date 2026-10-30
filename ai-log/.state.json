@@ -1,32 +1,6 @@
 {
-  "last_holdings": {
-    "015760": {
-      "name": "한국전력",
-      "qty": 153,
-      "avg_price": 28400,
-      "current_price": 28300,
-      "opened_at": "2026-10-26"
-    },
-    "017390": {
-      "name": "서울가스",
-      "qty": 15,
-      "avg_price": 52120,
-      "current_price": 51500,
-      "opened_at": "2026-10-26"
-    },
-    "036460": {
-      "name": "한국가스공사",
-      "qty": 22,
-      "avg_price": 36450,
-      "current_price": 36900,
-      "opened_at": "2026-10-26"
-    }
-  },
+  "last_holdings": {},
   "history": [
-    {
-      "date": "2026-09-28",
-      "total_eval": 18473409
-    },
     {
       "date": "2026-09-28",
       "total_eval": 18473409
@@ -262,6 +236,10 @@
     {
       "date": "2026-10-29",
       "total_eval": 16877803
+    },
+    {
+      "date": "2026-10-30",
+      "total_eval": 16920547
     }
   ],
   "completed_trades": [
@@ -1051,6 +1029,30 @@
       "date": "2026-10-27",
       "is_win": false,
       "hold_days": 1
+    },
+    {
+      "name": "한국전력",
+      "code": "015760",
+      "return_pct": 0.35,
+      "date": "2026-10-30",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "서울가스",
+      "code": "017390",
+      "return_pct": -0.81,
+      "date": "2026-10-30",
+      "is_win": false,
+      "hold_days": 4
+    },
+    {
+      "name": "한국가스공사",
+      "code": "036460",
+      "return_pct": 1.65,
+      "date": "2026-10-30",
+      "is_win": true,
+      "hold_days": 4
     }
   ]
 }
