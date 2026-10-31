@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T22:01:39",
-  "count": 7,
+  "generated_at": "2026-10-31T09:01:26",
+  "count": 8,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
     {
@@ -15,7 +15,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 11780,
-      "dday": 5,
+      "dday": 4,
       "launched": false,
       "milestones": {
         "d40": {
@@ -48,7 +48,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 29200,
-      "dday": 6,
+      "dday": 5,
       "launched": false,
       "milestones": {
         "d40": {
@@ -81,7 +81,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 29200,
-      "dday": 7,
+      "dday": 6,
       "launched": false,
       "milestones": {
         "d40": {
@@ -114,7 +114,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 29200,
-      "dday": 7,
+      "dday": 6,
       "launched": false,
       "milestones": {
         "d40": {
@@ -147,7 +147,36 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 181300,
-      "dday": 34,
+      "dday": 33,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "done",
+          "ret": -2.3,
+          "excess": -6.6
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "The Ascent Ultimate Edition (Nintendo Switch 2 글로벌(한국 포함) 출시)",
+      "launch_date": "20261203",
+      "status": "confirmed",
+      "note": "자동등록 2026-10-31 (출처 뉴스탭)",
+      "tentative": false,
+      "date_label": "",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 181300,
+      "dday": 33,
       "launched": false,
       "milestones": {
         "d40": {
@@ -176,7 +205,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 11780,
-      "dday": 93,
+      "dday": 92,
       "launched": false,
       "milestones": {
         "d40": {
@@ -203,7 +232,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 11780,
-      "dday": 93,
+      "dday": 92,
       "launched": false,
       "milestones": {
         "d40": {
