@@ -265,13 +265,19 @@ def main():
         "method": f"섹터 캘린더 최근 {LOOKBACK}거래일 강세 점수(등락률 합 × 최근성 가중) 상위 {TREND_SECTORS}개 섹터에서 "
                   f"배당주∩국민연금 지분확대 종목 우선, 연금 관련 {NPS_PICKS}개·나머지 배당률 높은 순으로 총 {PICKS}개.",
     }
-    try:  # 지난주 세트와 비교 → 새로 들어온 종목 🆕
-        prev = {p["code"] for p in json.loads(OUT.read_text()).get("picks", [])}
+    try:  # 지난주 세트와 비교 → 새로 들어온 종목 🆕 / 빠진 종목
+        old = json.loads(OUT.read_text())
     except Exception:
-        prev = set()
+        old = {}
+    if old.get("week") == out["week"]:  # 같은 주 재실행이면 이미 저장해 둔 지난주 세트와 비교
+        prev = old.get("prev_picks", {})
+    else:
+        prev = {p["code"]: p["name"] for p in old.get("picks", [])}
+    out["prev_picks"] = prev
     for p in picks:
         p["new"] = bool(prev) and p["code"] not in prev
-    out["dropped"] = sorted(prev - {p["code"] for p in picks})
+    out["dropped"] = sorted(set(prev) - {p["code"] for p in picks})
+    out["dropped_names"] = [prev[c] for c in out["dropped"]]
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2))
     log(f"{days[0]}~{days[-1]} 추세: " + ", ".join(f"{t['sector']}{t['score']:+.1f}" for t in trend[:4])
         + f" → 사용 섹터 {out['sectors_used']}, 픽 {len(picks)}개")
@@ -287,6 +293,8 @@ def main():
     n_new = sum(p["new"] for p in picks)
     if n_new or out["dropped"]:
         msg += ["", f"🔄 지난주 대비: 🆕 {n_new}개 / 유지 {len(picks) - n_new}개"]
+        if out["dropped_names"]:
+            msg.append("   빠짐: " + ", ".join(out["dropped_names"]))
     msg += ["", "https://manddo.kr/tools/dividend.html", "※ 규칙 기반 관찰 리스트, 매수 권유 아님"]
     send_telegram("\n".join(msg))
 

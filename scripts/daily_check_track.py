@@ -183,8 +183,9 @@ def main():
         # 월요일 전(대기)이면 일요일 21시 최종 세트로 갱신, 월요일 이후엔 고정
         if pick.get("week") == w and (not rounds[w]["extra"]["rows"] or date.today().isoformat() < w):
             rounds[w]["extra"] = {"sectors": pick.get("sectors_used", []),
-                                  "rows": [{k: p[k] for k in ("code", "name", "sector", "icon", "kind")}
-                                           for p in pick["picks"]]}
+                                  "rows": [{**{k: p[k] for k in ("code", "name", "sector", "icon", "kind")},
+                                            "new": bool(p.get("new"))} for p in pick["picks"]],
+                                  "dropped": pick.get("dropped_names", [])}
             log(f"{w} 추가 전략 등록: " + ", ".join(p["name"] for p in pick["picks"]))
         w = (date.fromisoformat(w) + timedelta(days=7)).isoformat()
 

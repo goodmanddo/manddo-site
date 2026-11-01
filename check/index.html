@@ -169,12 +169,13 @@
       + `<td class="num fin">${pct(lastOf(daily))}</td></tr>`;
     const stock = p => (p.unfilled || p.planned)
       ? `<tr><td class="nm">${p.name}<span class="k">${p.slot_label}</span></td><td class="uf" colspan="6">${p.planned ? '월요일 09:05 매수 예정' : '아직 안 삼 (미체결·재시도 대기)'}</td></tr>`
-      : row('', `${p.icon ? p.icon + ' ' : ''}${p.name}`, p.daily, p.slot_label || KIND[p.kind] || '');
+      : row('', `${p.icon ? p.icon + ' ' : ''}${p.name}`, p.daily, (p.new ? '🆕 새로 들어옴 · ' : '') + (p.slot_label || KIND[p.kind] || ''));
     return `<div class="sp-wrap"><table class="sp-tbl"><thead><tr><th>종목</th>${head}<th>${r.status === '완료' ? '최종' : '현재'}</th></tr></thead><tbody>`
       + blk.rows.map(stock).join('')
       + row('avg', '평균', blk.avg)
       + r.bench.map(b => row('bm', b.name, b.daily)).join('')
-      + `</tbody></table></div>`;
+      + `</tbody></table></div>`
+      + (blk.dropped && blk.dropped.length ? `<p class="sp-note">🔄 지난주에서 빠진 종목: ${blk.dropped.join(', ')}</p>` : '');
   }
 
   function scoreboard(J){

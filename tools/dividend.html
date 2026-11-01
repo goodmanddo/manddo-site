@@ -269,7 +269,14 @@ async function loadPick(){
       </a>`).join('');
     const nNew = j.picks.filter(p => p.new).length;
     const diff = document.getElementById('pick-diff');
-    if(nNew || (j.dropped||[]).length){ diff.textContent = `🔄 지난주 대비 새로 들어온 종목 ${nNew}개 · 유지 ${j.picks.length - nNew}개`; diff.hidden = false; }
+    if(nNew || (j.dropped||[]).length){
+      const added = j.picks.filter(p => p.new).map(p => p.name);
+      const gone = j.dropped_names || [];
+      diff.textContent = `🔄 지난주 대비 ${nNew}개 교체 · 유지 ${j.picks.length - nNew}개`
+        + (added.length ? ` · 새로 들어옴: ${added.join(', ')}` : '')
+        + (gone.length ? ` · 빠짐: ${gone.join(', ')}` : '');
+      diff.hidden = false;
+    }
     document.getElementById('pick').hidden = false;
   }catch(e){}
 }
