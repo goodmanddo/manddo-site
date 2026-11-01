@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T15:50:18",
+  "updated_at": "2026-11-01T21:30:05",
   "total": {
     "current": {
       "rounds": 4,
@@ -15,6 +15,105 @@
     }
   },
   "rounds": [
+    {
+      "week": "2026-11-02",
+      "current": {
+        "rows": [
+          {
+            "code": "000080",
+            "name": "하이트진로",
+            "slot": "main",
+            "planned": true,
+            "slot_label": "메인"
+          },
+          {
+            "code": "000087",
+            "name": "하이트진로2우B",
+            "slot": "rank2",
+            "planned": true,
+            "slot_label": "서브 · 같은섹터2"
+          },
+          {
+            "code": "007310",
+            "name": "오뚜기",
+            "slot": "rank3",
+            "planned": true,
+            "slot_label": "서브 · 같은섹터3"
+          }
+        ],
+        "avg": {},
+        "result": null
+      },
+      "extra": {
+        "sectors": [
+          "보안",
+          "반도체"
+        ],
+        "rows": [
+          {
+            "code": "222800",
+            "name": "심텍",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "nps",
+            "new": false
+          },
+          {
+            "code": "131970",
+            "name": "두산테스나",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "nps",
+            "new": true
+          },
+          {
+            "code": "136540",
+            "name": "윈스테크넷",
+            "sector": "보안",
+            "icon": "🔒",
+            "kind": "div",
+            "new": true
+          },
+          {
+            "code": "032190",
+            "name": "다우데이타",
+            "sector": "보안",
+            "icon": "🔒",
+            "kind": "div",
+            "new": true
+          },
+          {
+            "code": "143160",
+            "name": "아이디스",
+            "sector": "보안",
+            "icon": "🔒",
+            "kind": "div",
+            "new": true
+          }
+        ],
+        "dropped": [
+          "세방전지",
+          "DN오토모티브",
+          "매커스",
+          "LX세미콘"
+        ],
+        "avg": {},
+        "result": null
+      },
+      "bench": [
+        {
+          "code": "KS11",
+          "name": "코스피"
+        },
+        {
+          "code": "KQ11",
+          "name": "코스닥"
+        }
+      ],
+      "days": [],
+      "status": "대기",
+      "bench_result": {}
+    },
     {
       "week": "2026-10-26",
       "current": {
