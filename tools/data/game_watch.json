@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-31T22:01:34",
-  "count": 9,
+  "generated_at": "2026-11-02T09:01:17",
+  "count": 11,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
     {
@@ -14,24 +14,57 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11780,
-      "dday": 4,
+      "price": 11900,
+      "dday": 2,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 30.6,
-          "excess": 46.4
+          "ret": 31.9,
+          "excess": 48.2
         },
         "d30": {
           "status": "done",
-          "ret": 16.2,
-          "excess": 37.7
+          "ret": 17.4,
+          "excess": 39.4
         },
         "d7": {
           "status": "done",
-          "ret": 2.8,
-          "excess": 9.7
+          "ret": 3.8,
+          "excess": 11.2
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "아키에이지 크로니클 (글로벌(스팀) 출시)",
+      "launch_date": "20261104",
+      "status": "confirmed",
+      "note": "자동등록 2026-11-02 (출처 게임메카)",
+      "tentative": false,
+      "date_label": "",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 11810,
+      "dday": 2,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "done",
+          "ret": 30.9,
+          "excess": 47.3
+        },
+        "d30": {
+          "status": "done",
+          "ret": 16.5,
+          "excess": 38.6
+        },
+        "d7": {
+          "status": "done",
+          "ret": 3.1,
+          "excess": 10.7
         }
       },
       "post_ret": null
@@ -47,24 +80,24 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 29200,
-      "dday": 5,
+      "price": 29100,
+      "dday": 3,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -7.4,
-          "excess": 12.3
+          "ret": -7.8,
+          "excess": 13.3
         },
         "d30": {
           "status": "done",
-          "ret": -5.0,
-          "excess": 13.0
+          "ret": -5.4,
+          "excess": 14.0
         },
         "d7": {
           "status": "done",
-          "ret": -1.4,
-          "excess": 2.5
+          "ret": -1.7,
+          "excess": 3.8
         }
       },
       "post_ret": null
@@ -80,24 +113,24 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 29200,
-      "dday": 6,
+      "price": 28950,
+      "dday": 4,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -7.4,
-          "excess": 12.3
+          "ret": -8.2,
+          "excess": 12.8
         },
         "d30": {
           "status": "done",
-          "ret": -6.9,
-          "excess": 9.5
+          "ret": -7.7,
+          "excess": 9.9
         },
         "d7": {
           "status": "done",
-          "ret": 0.0,
-          "excess": 0.0
+          "ret": -1.7,
+          "excess": -0.2
         }
       },
       "post_ret": null
@@ -113,24 +146,24 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 29200,
-      "dday": 6,
+      "price": 29100,
+      "dday": 4,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -7.4,
-          "excess": 12.3
+          "ret": -7.8,
+          "excess": 13.0
         },
         "d30": {
           "status": "done",
-          "ret": -6.9,
-          "excess": 9.5
+          "ret": -7.2,
+          "excess": 10.2
         },
         "d7": {
           "status": "done",
-          "ret": 0.0,
-          "excess": 0.0
+          "ret": -1.2,
+          "excess": 0.1
         }
       },
       "post_ret": null
@@ -146,14 +179,14 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 181300,
-      "dday": 33,
+      "price": 181000,
+      "dday": 31,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -2.3,
-          "excess": -6.6
+          "ret": -2.5,
+          "excess": -5.2
         },
         "d30": {
           "status": "pending"
@@ -176,13 +209,13 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 181300,
-      "dday": 33,
+      "dday": 31,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
           "ret": -2.3,
-          "excess": -6.6
+          "excess": -4.9
         },
         "d30": {
           "status": "pending"
@@ -205,13 +238,42 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 181300,
-      "dday": 33,
+      "dday": 31,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
           "ret": -2.3,
-          "excess": -6.6
+          "excess": -4.9
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "패스 오브 엑자일 2 (국내 정식출시)",
+      "launch_date": "20261212",
+      "status": "confirmed",
+      "note": "자동등록 2026-11-02 (출처 게임뷰)",
+      "tentative": false,
+      "date_label": "",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 11810,
+      "dday": 40,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "done",
+          "ret": 0.0,
+          "excess": 0.0
         },
         "d30": {
           "status": "pending"
@@ -233,8 +295,8 @@
       "date_label": "2027년 1분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11780,
-      "dday": 92,
+      "price": 11890,
+      "dday": 90,
       "launched": false,
       "milestones": {
         "d40": {
@@ -260,8 +322,8 @@
       "date_label": "2027년 1분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11780,
-      "dday": 92,
+      "price": 11880,
+      "dday": 90,
       "launched": false,
       "milestones": {
         "d40": {
