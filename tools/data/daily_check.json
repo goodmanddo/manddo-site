@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T21:30:05",
+  "updated_at": "2026-11-02T15:50:06",
   "total": {
     "current": {
       "rounds": 4,
@@ -23,26 +23,40 @@
             "code": "000080",
             "name": "하이트진로",
             "slot": "main",
-            "planned": true,
-            "slot_label": "메인"
+            "buy_date": "2026-11-02",
+            "sell_date": null,
+            "slot_label": "메인",
+            "daily": {
+              "2026-11-02": -0.68
+            }
           },
           {
             "code": "000087",
             "name": "하이트진로2우B",
             "slot": "rank2",
-            "planned": true,
-            "slot_label": "서브 · 같은섹터2"
+            "buy_date": "2026-11-02",
+            "sell_date": null,
+            "slot_label": "서브 · 같은섹터2",
+            "daily": {
+              "2026-11-02": 0.83
+            }
           },
           {
             "code": "007310",
             "name": "오뚜기",
             "slot": "rank3",
-            "planned": true,
-            "slot_label": "서브 · 같은섹터3"
+            "buy_date": "2026-11-02",
+            "sell_date": null,
+            "slot_label": "서브 · 같은섹터3",
+            "daily": {
+              "2026-11-02": -0.94
+            }
           }
         ],
-        "avg": {},
-        "result": null
+        "avg": {
+          "2026-11-02": -0.26
+        },
+        "result": -0.26
       },
       "extra": {
         "sectors": [
@@ -56,7 +70,10 @@
             "sector": "반도체",
             "icon": "🔲",
             "kind": "nps",
-            "new": false
+            "new": false,
+            "daily": {
+              "2026-11-02": 5.99
+            }
           },
           {
             "code": "131970",
@@ -64,7 +81,10 @@
             "sector": "반도체",
             "icon": "🔲",
             "kind": "nps",
-            "new": true
+            "new": true,
+            "daily": {
+              "2026-11-02": 1.92
+            }
           },
           {
             "code": "136540",
@@ -72,7 +92,10 @@
             "sector": "보안",
             "icon": "🔒",
             "kind": "div",
-            "new": true
+            "new": true,
+            "daily": {
+              "2026-11-02": 1.16
+            }
           },
           {
             "code": "032190",
@@ -80,7 +103,10 @@
             "sector": "보안",
             "icon": "🔒",
             "kind": "div",
-            "new": true
+            "new": true,
+            "daily": {
+              "2026-11-02": -0.24
+            }
           },
           {
             "code": "143160",
@@ -88,7 +114,10 @@
             "sector": "보안",
             "icon": "🔒",
             "kind": "div",
-            "new": true
+            "new": true,
+            "daily": {
+              "2026-11-02": -2.28
+            }
           }
         ],
         "dropped": [
@@ -97,22 +126,37 @@
           "매커스",
           "LX세미콘"
         ],
-        "avg": {},
-        "result": null
+        "avg": {
+          "2026-11-02": 1.31
+        },
+        "result": 1.31
       },
       "bench": [
         {
           "code": "KS11",
-          "name": "코스피"
+          "name": "코스피",
+          "entry": 5637.77,
+          "daily": {
+            "2026-11-02": 3.95
+          }
         },
         {
           "code": "KQ11",
-          "name": "코스닥"
+          "name": "코스닥",
+          "entry": 716.44,
+          "daily": {
+            "2026-11-02": 2.78
+          }
         }
       ],
-      "days": [],
-      "status": "대기",
-      "bench_result": {}
+      "days": [
+        "2026-11-02"
+      ],
+      "status": "진행중",
+      "bench_result": {
+        "KS11": 3.95,
+        "KQ11": 2.78
+      }
     },
     {
       "week": "2026-10-26",
