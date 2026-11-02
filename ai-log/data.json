@@ -1,30 +1,67 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-11-02",
   "start_date": "2026-05-03",
-  "cumulative_return": -15.4,
-  "week_return": 0.25,
-  "day_return": 0.25,
-  "today_realized_avg": 0.4,
-  "today_trade_count": 3,
-  "today_win_count": 2,
-  "today_loss_count": 1,
+  "cumulative_return": -15.65,
+  "week_return": -0.05,
+  "day_return": -0.3,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
+  "today_loss_count": 0,
   "win_rate": 38,
   "total_trades": 103,
-  "ai_commentary": "1건 익절로 수익 확정. 시작 이후 누적 -15.4%.",
-  "new_buys": [],
-  "exits": [
+  "ai_commentary": "오늘은 하이트진로, 하이트진로2우B, 오뚜기 등 신규 편입. 시작 이후 누적 -15.7%.",
+  "new_buys": [
     {
-      "type": "win",
-      "name": "한국가스공사",
+      "name": "하이트진로",
       "slug": "",
       "market": "코스피",
-      "return_pct": 1.65,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+      "entry_to_current_pct": -1.1,
+      "weight_pct": 26,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
+    },
+    {
+      "name": "하이트진로2우B",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.75,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    },
+    {
+      "name": "오뚜기",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -1.25,
+      "weight_pct": 4,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     }
   ],
+  "exits": [],
   "weekly_losses": [],
-  "holdings": [],
+  "holdings": [
+    {
+      "name": "하이트진로",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 26
+    },
+    {
+      "name": "하이트진로2우B",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 5
+    },
+    {
+      "name": "오뚜기",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    }
+  ],
   "return_history": [
     {
       "date": "2026-09-29",
@@ -109,6 +146,10 @@
     {
       "date": "2026-10-30",
       "cumulative_return": -15.4
+    },
+    {
+      "date": "2026-11-02",
+      "cumulative_return": -15.65
     }
   ]
 }

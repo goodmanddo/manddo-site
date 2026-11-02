@@ -1,10 +1,28 @@
 {
-  "last_holdings": {},
-  "history": [
-    {
-      "date": "2026-09-29",
-      "total_eval": 18529244
+  "last_holdings": {
+    "000080": {
+      "name": "하이트진로",
+      "qty": 271,
+      "avg_price": 16168,
+      "current_price": 15990,
+      "opened_at": "2026-11-02"
     },
+    "000087": {
+      "name": "하이트진로2우B",
+      "qty": 67,
+      "avg_price": 12040,
+      "current_price": 12130,
+      "opened_at": "2026-11-02"
+    },
+    "007310": {
+      "name": "오뚜기",
+      "qty": 2,
+      "avg_price": 319000,
+      "current_price": 315000,
+      "opened_at": "2026-11-02"
+    }
+  },
+  "history": [
     {
       "date": "2026-09-29",
       "total_eval": 18529244
@@ -240,6 +258,10 @@
     {
       "date": "2026-10-30",
       "total_eval": 16920547
+    },
+    {
+      "date": "2026-11-02",
+      "total_eval": 16869327
     }
   ],
   "completed_trades": [
