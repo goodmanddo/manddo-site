@@ -4,7 +4,7 @@
 
 판정: 섹터 ETF 일별 등락 중 +MIN_PCT 이상 오른 것 상위 MAX_CHIPS개를 그 날짜 칩으로.
 출력: manddo-site/tools/data/sector_calendar.json  { "YYYY-MM-DD": [{name,icon,pct,code}], ... }
-LaunchAgent: com.mandoo.sector-calendar (평일 15:40, 장마감 직후)
+LaunchAgent: com.mandoo.sector-calendar (평일 20:00)
 """
 import json
 import subprocess
