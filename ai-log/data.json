@@ -2,7 +2,7 @@
   "date": "2026-11-04",
   "start_date": "2026-05-03",
   "cumulative_return": -15.5,
-  "week_return": 0.18,
+  "week_return": 0.01,
   "day_return": 0.01,
   "today_realized_avg": -0.46,
   "today_trade_count": 1,
@@ -63,10 +63,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-10-01",
-      "cumulative_return": -5.84
-    },
     {
       "date": "2026-10-02",
       "cumulative_return": -5.76
