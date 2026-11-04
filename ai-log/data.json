@@ -1,51 +1,42 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "start_date": "2026-05-03",
-  "cumulative_return": -15.51,
-  "week_return": 0.17,
-  "day_return": 0.17,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -15.5,
+  "week_return": 0.18,
+  "day_return": 0.01,
+  "today_realized_avg": -0.46,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
+  "today_loss_count": 1,
   "win_rate": 38,
-  "total_trades": 103,
-  "ai_commentary": "오늘은 벡트로보틱스, 하이트진로, 하이트진로2우B 등 신규 편입. 시작 이후 누적 -15.5%.",
+  "total_trades": 104,
+  "ai_commentary": "오늘은 하이트진로, 하이트진로2우B, 오뚜기 등 신규 편입. 시작 이후 누적 -15.5%.",
   "new_buys": [
-    {
-      "name": "벡트로보틱스",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.0,
-      "weight_pct": 3,
-      "hold_days": 0,
-      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
-    },
     {
       "name": "하이트진로",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.42,
+      "entry_to_current_pct": -0.3,
       "weight_pct": 26,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "하이트진로2우B",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.42,
+      "entry_to_current_pct": 0.58,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
     },
     {
       "name": "오뚜기",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -1.1,
+      "entry_to_current_pct": -1.25,
       "weight_pct": 4,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     }
   ],
@@ -69,12 +60,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 4
-    },
-    {
-      "name": "벡트로보틱스",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
     }
   ],
   "return_history": [
@@ -161,6 +146,10 @@
     {
       "date": "2026-11-03",
       "cumulative_return": -15.51
+    },
+    {
+      "date": "2026-11-04",
+      "cumulative_return": -15.5
     }
   ]
 }

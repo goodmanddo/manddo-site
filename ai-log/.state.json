@@ -4,36 +4,25 @@
       "name": "하이트진로",
       "qty": 271,
       "avg_price": 16168,
-      "current_price": 16100,
+      "current_price": 16120,
       "opened_at": "2026-11-02"
     },
     "000087": {
       "name": "하이트진로2우B",
       "qty": 67,
       "avg_price": 12040,
-      "current_price": 12090,
+      "current_price": 12110,
       "opened_at": "2026-11-02"
     },
     "007310": {
       "name": "오뚜기",
       "qty": 2,
       "avg_price": 319000,
-      "current_price": 315500,
+      "current_price": 315000,
       "opened_at": "2026-11-02"
-    },
-    "457600": {
-      "name": "벡트로보틱스",
-      "qty": 228,
-      "avg_price": 2165,
-      "current_price": 2165,
-      "opened_at": "2026-11-03"
     }
   },
   "history": [
-    {
-      "date": "2026-10-01",
-      "total_eval": 18831339
-    },
     {
       "date": "2026-10-01",
       "total_eval": 18831339
@@ -269,6 +258,10 @@
     {
       "date": "2026-11-03",
       "total_eval": 16897397
+    },
+    {
+      "date": "2026-11-04",
+      "total_eval": 16899835
     }
   ],
   "completed_trades": [
@@ -1082,6 +1075,14 @@
       "date": "2026-10-30",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "벡트로보틱스",
+      "code": "457600",
+      "return_pct": -0.46,
+      "date": "2026-11-04",
+      "is_win": false,
+      "hold_days": 1
     }
   ]
 }
