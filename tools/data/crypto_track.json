@@ -1,51 +1,51 @@
 {
-  "generated_at": "2026-11-05T22:10:05",
+  "generated_at": "2026-11-06T08:10:05",
   "period_start": "2026-04-18",
   "period_end": "2026-11-05",
   "days": 201,
-  "total_value": 9437313,
-  "cash": 3903344,
-  "cash_weight": 41.4,
-  "bot_return": -6.15,
-  "btc_return": -4.8,
-  "defense_pp": -1.3,
-  "defense_on": false,
+  "total_value": 9070996,
+  "cash": 2510958,
+  "cash_weight": 27.7,
+  "bot_return": -9.81,
+  "btc_return": -8.9,
+  "defense_pp": -0.9,
+  "defense_on": true,
   "coins": [
     {
       "code": "KRW-BTC",
       "name": "비트코인",
-      "balance": 0.02599269,
-      "value": 2783271,
-      "weight": 29.5,
-      "price": 107079000.0,
-      "trend_pct": -4.8,
-      "market_status": "⚖️ 보통",
-      "grid_percent": 1.2,
-      "defense_mode": false
+      "balance": 0.03599064,
+      "value": 3689796,
+      "weight": 40.7,
+      "price": 102521000.0,
+      "trend_pct": -8.9,
+      "market_status": "🛡️ 방어 모드",
+      "grid_percent": 3.0,
+      "defense_mode": true
     },
     {
       "code": "KRW-ETH",
       "name": "이더리움",
-      "balance": 0.5,
-      "value": 1607500,
-      "weight": 17.0,
-      "price": 3215000.0,
-      "trend_pct": -7.7,
-      "market_status": "⚖️ 보통",
-      "grid_percent": 1.2,
-      "defense_mode": false
+      "balance": 0.5998075,
+      "value": 1805421,
+      "weight": 19.9,
+      "price": 3010000.0,
+      "trend_pct": -13.6,
+      "market_status": "🛡️ 방어 모드",
+      "grid_percent": 3.0,
+      "defense_mode": true
     },
     {
       "code": "KRW-XRP",
       "name": "리플",
-      "balance": 649.54435559,
-      "value": 1143198,
-      "weight": 12.1,
-      "price": 1760.0,
-      "trend_pct": -17.3,
-      "market_status": "⚖️ 보통",
-      "grid_percent": 1.2,
-      "defense_mode": false
+      "balance": 649.28144598,
+      "value": 1064822,
+      "weight": 11.7,
+      "price": 1640.0,
+      "trend_pct": -22.9,
+      "market_status": "🛡️ 방어 모드",
+      "grid_percent": 3.0,
+      "defense_mode": true
     }
   ],
   "series": [
@@ -1055,9 +1055,9 @@
       "btc_hold": 95.92
     },
     {
-      "date": "2026-11-05",
-      "bot": 91.72,
-      "btc_hold": 95.19
+      "date": "2026-11-06",
+      "bot": 88.14,
+      "btc_hold": 91.14
     }
   ]
 }
