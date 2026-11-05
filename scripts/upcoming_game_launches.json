@@ -56,16 +56,6 @@
       "note": "자동등록 2026-10-29 (출처 인벤)"
     },
     {
-      "company": "시프트업",
-      "code": "462870",
-      "game": "Stellar Blade™ Complete Edition (Nintendo Switch 2 글로벌(전 세계 동시) 출시)",
-      "date": "20261105",
-      "status": "confirmed",
-      "bench": "069500",
-      "kind": "해외출시",
-      "note": "자동등록 2026-10-30 (출처 GoNintendo)"
-    },
-    {
       "company": "크래프톤",
       "code": "259960",
       "game": "The Ascent Ultimate Edition (Nintendo Switch 2 글로벌(한국 포함) 출시)",
@@ -106,14 +96,40 @@
       "note": "자동등록 2026-11-03 (출처 다이렉투데이)"
     },
     {
-      "company": "시프트업",
-      "code": "462870",
-      "game": "Stellar Blade™ Complete Edition (글로벌(전 세계 동시) Switch 2 출시)",
-      "date": "20261105",
-      "status": "confirmed",
+      "company": "넷마블",
+      "code": "251270",
+      "game": "나 혼자만 레벨업: 카르마",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 출시 목표 (잠정)",
       "bench": "069500",
-      "kind": "해외출시",
-      "note": "자동등록 2026-11-04 (출처 RPGSite)"
+      "kind": "신작",
+      "note": "자동등록 2026-11-05 (출처 바이라인네트워크)"
+    },
+    {
+      "company": "엔씨소프트",
+      "code": "036570",
+      "game": "신더시티(Cinder City)",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 출시 목표 (잠정)",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-05 (출처 바이라인네트워크)"
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "오딘Q: 발키리스콜",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 하반기 (잠정)",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-05 (출처 바이라인네트워크)"
     }
   ],
   "launched_archive": [
@@ -172,6 +188,26 @@
       "bench": "229200",
       "kind": "해외출시",
       "note": "자동등록 2026-11-02 (출처 게임메카)"
+    },
+    {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "Stellar Blade™ Complete Edition (Nintendo Switch 2 글로벌(전 세계 동시) 출시)",
+      "date": "20261105",
+      "status": "confirmed",
+      "bench": "069500",
+      "kind": "해외출시",
+      "note": "자동등록 2026-10-30 (출처 GoNintendo)"
+    },
+    {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "Stellar Blade™ Complete Edition (글로벌(전 세계 동시) Switch 2 출시)",
+      "date": "20261105",
+      "status": "confirmed",
+      "bench": "069500",
+      "kind": "해외출시",
+      "note": "자동등록 2026-11-04 (출처 RPGSite)"
     }
   ]
 }
