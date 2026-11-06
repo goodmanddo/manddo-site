@@ -1,67 +1,30 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "start_date": "2026-05-03",
-  "cumulative_return": -14.56,
-  "week_return": 1.11,
-  "day_return": 1.11,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
-  "today_win_count": 0,
+  "cumulative_return": -14.91,
+  "week_return": 0.7,
+  "day_return": -0.4,
+  "today_realized_avg": 0.86,
+  "today_trade_count": 3,
+  "today_win_count": 3,
   "today_loss_count": 0,
-  "win_rate": 38,
-  "total_trades": 104,
-  "ai_commentary": "오늘은 하이트진로, 하이트진로2우B, 오뚜기 등 신규 편입. 시작 이후 누적 -14.6%.",
-  "new_buys": [
+  "win_rate": 39,
+  "total_trades": 107,
+  "ai_commentary": "1건 익절로 수익 확정. 시작 이후 누적 -14.9%.",
+  "new_buys": [],
+  "exits": [
     {
+      "type": "win",
       "name": "하이트진로",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 3.6,
-      "weight_pct": 27,
-      "hold_days": 3,
-      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
-    },
-    {
-      "name": "하이트진로2우B",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 1.0,
-      "weight_pct": 5,
-      "hold_days": 3,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
-    },
-    {
-      "name": "오뚜기",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.94,
-      "weight_pct": 4,
-      "hold_days": 3,
-      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
+      "return_pct": 2.49,
+      "hold_days": 4,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
     }
   ],
-  "exits": [],
   "weekly_losses": [],
-  "holdings": [
-    {
-      "name": "하이트진로",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 27
-    },
-    {
-      "name": "하이트진로2우B",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "오뚜기",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 4
-    }
-  ],
+  "holdings": [],
   "return_history": [
     {
       "date": "2026-10-05",
@@ -146,6 +109,10 @@
     {
       "date": "2026-11-05",
       "cumulative_return": -14.56
+    },
+    {
+      "date": "2026-11-06",
+      "cumulative_return": -14.91
     }
   ]
 }

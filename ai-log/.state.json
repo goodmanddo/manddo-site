@@ -1,32 +1,6 @@
 {
-  "last_holdings": {
-    "000080": {
-      "name": "하이트진로",
-      "qty": 271,
-      "avg_price": 16168,
-      "current_price": 16750,
-      "opened_at": "2026-11-02"
-    },
-    "000087": {
-      "name": "하이트진로2우B",
-      "qty": 67,
-      "avg_price": 12040,
-      "current_price": 12160,
-      "opened_at": "2026-11-02"
-    },
-    "007310": {
-      "name": "오뚜기",
-      "qty": 2,
-      "avg_price": 319000,
-      "current_price": 322000,
-      "opened_at": "2026-11-02"
-    }
-  },
+  "last_holdings": {},
   "history": [
-    {
-      "date": "2026-10-05",
-      "total_eval": 18847862
-    },
     {
       "date": "2026-10-05",
       "total_eval": 18847862
@@ -262,6 +236,10 @@
     {
       "date": "2026-11-05",
       "total_eval": 17087915
+    },
+    {
+      "date": "2026-11-06",
+      "total_eval": 17018815
     }
   ],
   "completed_trades": [
@@ -1083,6 +1061,30 @@
       "date": "2026-11-04",
       "is_win": false,
       "hold_days": 1
+    },
+    {
+      "name": "하이트진로",
+      "code": "000080",
+      "return_pct": 2.49,
+      "date": "2026-11-06",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "하이트진로2우B",
+      "code": "000087",
+      "return_pct": 0.08,
+      "date": "2026-11-06",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "오뚜기",
+      "code": "007310",
+      "return_pct": 0.0,
+      "date": "2026-11-06",
+      "is_win": true,
+      "hold_days": 4
     }
   ]
 }
