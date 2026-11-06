@@ -2,16 +2,6 @@
   "_note": "신작 출시 예정 게임주 (운영자 편집). date=출시(예정)일 YYYYMMDD, status=confirmed(확정)/expected(잠정/미확정), bench=벤치마크 ETF(069500 코스피200 / 229200 코스닥150). ⚠ 출시일은 발표에 따라 변동되니 반드시 실제 발표 기준으로 검증·갱신하세요. 구체 '일'이 미발표면 해당 월 중순 등 잠정값을 쓰고 status=expected로 두세요.",
   "events": [
     {
-      "company": "시프트업",
-      "code": "462870",
-      "game": "Stellar Blade™ 컴플리트 에디션 (Nintendo Switch 2)",
-      "date": "20261106",
-      "status": "confirmed",
-      "bench": "069500",
-      "kind": "신작",
-      "note": "자동등록 2026-10-28 (출처 닌텐도 공식 발매 스케줄 2026-10-28)"
-    },
-    {
       "company": "크래프톤",
       "code": "259960",
       "game": "THE ASCENT Ultimate Edition (Nintendo Switch 2)",
@@ -32,16 +22,6 @@
       "bench": "229200",
       "kind": "신작",
       "note": "자동등록 2026-10-29 (출처 인벤 컨콜 기사, 2026년 3분기 실적발표)"
-    },
-    {
-      "company": "시프트업",
-      "code": "462870",
-      "game": "Stellar Blade™ Complete Edition (Nintendo Switch 2 글로벌 출시)",
-      "date": "20261106",
-      "status": "confirmed",
-      "bench": "069500",
-      "kind": "해외출시",
-      "note": "자동등록 2026-10-29 (출처 Go Nintendo, 2026-09-10)"
     },
     {
       "company": "카카오게임즈",
@@ -130,6 +110,30 @@
       "bench": "229200",
       "kind": "신작",
       "note": "자동등록 2026-11-05 (출처 바이라인네트워크)"
+    },
+    {
+      "company": "넥슨게임즈",
+      "code": "225570",
+      "game": "프로젝트 RX",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 출시 목표(잠정)",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-06 (출처 베타뉴스)"
+    },
+    {
+      "company": "엔씨소프트",
+      "code": "036570",
+      "game": "리밋 제로 브레이커스",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 출시 목표(잠정)",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-06 (출처 바이라인네트워크)"
     }
   ],
   "launched_archive": [
@@ -208,6 +212,26 @@
       "bench": "069500",
       "kind": "해외출시",
       "note": "자동등록 2026-11-04 (출처 RPGSite)"
+    },
+    {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "Stellar Blade™ 컴플리트 에디션 (Nintendo Switch 2)",
+      "date": "20261106",
+      "status": "confirmed",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-10-28 (출처 닌텐도 공식 발매 스케줄 2026-10-28)"
+    },
+    {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "Stellar Blade™ Complete Edition (Nintendo Switch 2 글로벌 출시)",
+      "date": "20261106",
+      "status": "confirmed",
+      "bench": "069500",
+      "kind": "해외출시",
+      "note": "자동등록 2026-10-29 (출처 Go Nintendo, 2026-09-10)"
     }
   ]
 }
