@@ -144,6 +144,18 @@
       "bench": "229200",
       "kind": "신작",
       "note": "자동등록 2026-11-06 (출처 빅데이터뉴스)"
+    },
+    {
+      "company": "넷마블",
+      "code": "251270",
+      "game": "나혼렙: 카르마",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 예정",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-08 (출처 포쓰저널)"
     }
   ],
   "launched_archive": [
