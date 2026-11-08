@@ -231,7 +231,9 @@
   fetch('/tools/data/daily_check.json?v=' + Date.now()).then(r => r.json()).then(J => {
     scoreboard(J);
     const rs = J.rounds || [];
-    $('wk').innerHTML = rs.length ? rs.map((r, i) => week(r, i === 0)).join('') : '<div class="sp-empty">아직 기록이 없어요.</div>';
+    // 맨 위가 '대기'(일요일 밤 등록, 수익률 빈칸)면 수치가 있는 가장 최근 주도 같이 펼침
+    const firstData = rs.findIndex(r => r.status !== '대기');
+    $('wk').innerHTML = rs.length ? rs.map((r, i) => week(r, i === 0 || i === firstData)).join('') : '<div class="sp-empty">아직 기록이 없어요.</div>';
   }).catch(() => { $('wk').innerHTML = '<div class="sp-empty">데이터를 불러오지 못했어요.</div>'; });
 })();
 </script>
