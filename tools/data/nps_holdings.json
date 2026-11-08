@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-07T19:31:23",
+  "generated_at": "2026-11-08T19:31:27",
   "window_days": 60,
-  "count": 143,
+  "count": 142,
   "source": "DART OpenDART (국민연금공단 5%룰 지분공시)",
   "items": [
     {
@@ -963,21 +963,6 @@
       "is_new": false,
       "price": 17900,
       "day_change": -2.08
-    },
-    {
-      "date": "20260908",
-      "corp_name": "HD현대중공업",
-      "stock_code": "329180",
-      "market": "코스피",
-      "report_nm": "주식등의대량보유상황보고서(약식)",
-      "rcept_no": "20260908000302",
-      "stkrt": "8.02",
-      "stkrt_irds": "0.64",
-      "stkrt_asof": "2026-09-08",
-      "first_report": "2025-07-02",
-      "is_new": false,
-      "price": 262000,
-      "day_change": -3.32
     },
     {
       "date": "20261102",
