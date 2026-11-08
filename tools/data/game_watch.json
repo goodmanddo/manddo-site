@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T22:01:11",
-  "count": 13,
+  "generated_at": "2026-11-08T09:01:13",
+  "count": 14,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
     {
@@ -15,7 +15,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 207500,
-      "dday": 20,
+      "dday": 18,
       "launched": false,
       "milestones": {
         "d40": {
@@ -46,7 +46,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 220000,
-      "dday": 27,
+      "dday": 25,
       "launched": false,
       "milestones": {
         "d40": {
@@ -77,7 +77,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 220000,
-      "dday": 27,
+      "dday": 25,
       "launched": false,
       "milestones": {
         "d40": {
@@ -108,7 +108,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 220000,
-      "dday": 27,
+      "dday": 25,
       "launched": false,
       "milestones": {
         "d40": {
@@ -139,7 +139,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 12380,
-      "dday": 36,
+      "dday": 34,
       "launched": false,
       "milestones": {
         "d40": {
@@ -168,7 +168,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 12380,
-      "dday": 36,
+      "dday": 34,
       "launched": false,
       "milestones": {
         "d40": {
@@ -197,7 +197,7 @@
       "bench": "069500",
       "bench_name": "코스피200",
       "price": 34700,
-      "dday": 55,
+      "dday": 53,
       "launched": false,
       "milestones": {
         "d40": {
@@ -224,7 +224,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 207500,
-      "dday": 55,
+      "dday": 53,
       "launched": false,
       "milestones": {
         "d40": {
@@ -251,7 +251,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 12380,
-      "dday": 55,
+      "dday": 53,
       "launched": false,
       "milestones": {
         "d40": {
@@ -278,7 +278,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 9660,
-      "dday": 55,
+      "dday": 53,
       "launched": false,
       "milestones": {
         "d40": {
@@ -305,7 +305,34 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 207500,
-      "dday": 55,
+      "dday": 53,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "넷마블",
+      "code": "251270",
+      "game": "나혼렙: 카르마",
+      "launch_date": "20261231",
+      "status": "expected",
+      "note": "자동등록 2026-11-08 (출처 포쓰저널)",
+      "tentative": true,
+      "date_label": "2026년 연내 예정",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 34700,
+      "dday": 53,
       "launched": false,
       "milestones": {
         "d40": {
@@ -332,7 +359,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 12380,
-      "dday": 86,
+      "dday": 84,
       "launched": false,
       "milestones": {
         "d40": {
@@ -359,7 +386,7 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 12380,
-      "dday": 86,
+      "dday": 84,
       "launched": false,
       "milestones": {
         "d40": {
