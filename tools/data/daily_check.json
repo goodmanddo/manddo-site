@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T21:30:05",
+  "updated_at": "2026-11-09T15:50:06",
   "total": {
     "current": {
       "rounds": 5,
@@ -23,26 +23,51 @@
             "code": "035420",
             "name": "NAVER",
             "slot": "main",
-            "planned": true,
-            "slot_label": "메인"
+            "buy_date": "2026-11-09",
+            "sell_date": null,
+            "slot_label": "메인",
+            "daily": {
+              "2026-11-09": 0.11
+            }
           },
           {
             "code": "035720",
             "name": "카카오",
             "slot": "rank2",
-            "planned": true,
-            "slot_label": "서브 · 같은섹터2"
+            "buy_date": "2026-11-09",
+            "sell_date": null,
+            "slot_label": "서브 · 같은섹터2",
+            "daily": {
+              "2026-11-09": 0.78
+            }
           },
           {
             "code": "067160",
             "name": "SOOP",
             "slot": "rank3",
-            "planned": true,
-            "slot_label": "서브 · 같은섹터3"
+            "buy_date": "2026-11-09",
+            "sell_date": null,
+            "slot_label": "서브 · 같은섹터3",
+            "daily": {
+              "2026-11-09": -1.73
+            }
+          },
+          {
+            "code": "091160",
+            "name": "KODEX 반도체",
+            "slot": "etf",
+            "buy_date": "2026-11-09",
+            "sell_date": null,
+            "slot_label": "섹터 ETF",
+            "daily": {
+              "2026-11-09": 2.26
+            }
           }
         ],
-        "avg": {},
-        "result": null
+        "avg": {
+          "2026-11-09": 0.35
+        },
+        "result": 0.35
       },
       "extra": {
         "sectors": [
@@ -56,7 +81,10 @@
             "sector": "반도체",
             "icon": "🔲",
             "kind": "nps",
-            "new": false
+            "new": false,
+            "daily": {
+              "2026-11-09": 8.71
+            }
           },
           {
             "code": "131970",
@@ -64,7 +92,10 @@
             "sector": "반도체",
             "icon": "🔲",
             "kind": "nps",
-            "new": false
+            "new": false,
+            "daily": {
+              "2026-11-09": 4.5
+            }
           },
           {
             "code": "136540",
@@ -72,7 +103,10 @@
             "sector": "보안",
             "icon": "🔒",
             "kind": "div",
-            "new": false
+            "new": false,
+            "daily": {
+              "2026-11-09": -0.8
+            }
           },
           {
             "code": "032190",
@@ -80,7 +114,10 @@
             "sector": "보안",
             "icon": "🔒",
             "kind": "div",
-            "new": false
+            "new": false,
+            "daily": {
+              "2026-11-09": 0.58
+            }
           },
           {
             "code": "143160",
@@ -88,26 +125,44 @@
             "sector": "보안",
             "icon": "🔒",
             "kind": "div",
-            "new": false
+            "new": false,
+            "daily": {
+              "2026-11-09": -0.08
+            }
           }
         ],
         "dropped": [],
-        "avg": {},
-        "result": null
+        "avg": {
+          "2026-11-09": 2.58
+        },
+        "result": 2.58
       },
       "bench": [
         {
           "code": "KS11",
-          "name": "코스피"
+          "name": "코스피",
+          "entry": 5034.2,
+          "daily": {
+            "2026-11-09": 1.53
+          }
         },
         {
           "code": "KQ11",
-          "name": "코스닥"
+          "name": "코스닥",
+          "entry": 638.82,
+          "daily": {
+            "2026-11-09": 2.45
+          }
         }
       ],
-      "days": [],
-      "status": "대기",
-      "bench_result": {}
+      "days": [
+        "2026-11-09"
+      ],
+      "status": "진행중",
+      "bench_result": {
+        "KS11": 1.53,
+        "KQ11": 2.45
+      }
     },
     {
       "week": "2026-11-02",
