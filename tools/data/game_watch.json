@@ -1,39 +1,8 @@
 {
-  "generated_at": "2026-11-09T16:00:09",
-  "count": 18,
+  "generated_at": "2026-11-09T22:01:16",
+  "count": 20,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
-    {
-      "company": "넥슨",
-      "code": "036570",
-      "game": "템빨: 오버기어드",
-      "launch_date": "20261126",
-      "status": "confirmed",
-      "note": "자동등록 2026-11-06 (출처 빅데이터뉴스)",
-      "tentative": false,
-      "date_label": "",
-      "bench": "229200",
-      "bench_name": "코스닥150",
-      "price": 209000,
-      "dday": 17,
-      "launched": false,
-      "milestones": {
-        "d40": {
-          "status": "done",
-          "ret": 1.0,
-          "excess": 24.1
-        },
-        "d30": {
-          "status": "done",
-          "ret": 5.2,
-          "excess": 21.4
-        },
-        "d7": {
-          "status": "pending"
-        }
-      },
-      "post_ret": null
-    },
     {
       "company": "넥슨",
       "code": "032350",
@@ -45,19 +14,19 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10500,
+      "price": 10480,
       "dday": 17,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -1.5,
-          "excess": 21.6
+          "ret": -1.7,
+          "excess": 21.4
         },
         "d30": {
           "status": "done",
-          "ret": 1.9,
-          "excess": 18.1
+          "ret": 1.7,
+          "excess": 17.9
         },
         "d7": {
           "status": "pending"
@@ -76,19 +45,19 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10500,
+      "price": 10480,
       "dday": 17,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -1.5,
-          "excess": 21.6
+          "ret": -1.7,
+          "excess": 21.4
         },
         "d30": {
           "status": "done",
-          "ret": 1.9,
-          "excess": 18.1
+          "ret": 1.7,
+          "excess": 17.9
         },
         "d7": {
           "status": "pending"
@@ -107,19 +76,50 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10500,
+      "price": 10480,
       "dday": 22,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -3.7,
-          "excess": 15.5
+          "ret": -3.9,
+          "excess": 15.3
         },
         "d30": {
           "status": "done",
-          "ret": 4.6,
-          "excess": 18.3
+          "ret": 4.4,
+          "excess": 18.1
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "넥슨",
+      "code": "032350",
+      "game": "일랜시아 모바일",
+      "launch_date": "20261201",
+      "status": "confirmed",
+      "note": "자동등록 2026-11-09 (출처 디지털데일리)",
+      "tentative": false,
+      "date_label": "",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 10480,
+      "dday": 22,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "done",
+          "ret": -3.9,
+          "excess": 15.3
+        },
+        "d30": {
+          "status": "done",
+          "ret": 4.4,
+          "excess": 18.1
         },
         "d7": {
           "status": "pending"
@@ -138,19 +138,19 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 217500,
+      "price": 218500,
       "dday": 24,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 17.2,
-          "excess": 27.1
+          "ret": 17.7,
+          "excess": 27.6
         },
         "d30": {
           "status": "done",
-          "ret": 19.6,
-          "excess": 31.7
+          "ret": 20.1,
+          "excess": 32.2
         },
         "d7": {
           "status": "pending"
@@ -169,19 +169,19 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 217500,
+      "price": 218500,
       "dday": 24,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 17.2,
-          "excess": 27.1
+          "ret": 17.7,
+          "excess": 27.6
         },
         "d30": {
           "status": "done",
-          "ret": 19.6,
-          "excess": 31.7
+          "ret": 20.1,
+          "excess": 32.2
         },
         "d7": {
           "status": "pending"
@@ -200,19 +200,50 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 217500,
+      "price": 218500,
       "dday": 24,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 17.2,
-          "excess": 27.1
+          "ret": 17.7,
+          "excess": 27.6
         },
         "d30": {
           "status": "done",
-          "ret": 19.6,
-          "excess": 31.7
+          "ret": 20.1,
+          "excess": 32.2
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "왈츠앤잼",
+      "launch_date": "20261203",
+      "status": "confirmed",
+      "note": "자동등록 2026-11-09 (출처 테크M, 이코리아)",
+      "tentative": false,
+      "date_label": "",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 218500,
+      "dday": 24,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "done",
+          "ret": 17.7,
+          "excess": 27.6
+        },
+        "d30": {
+          "status": "done",
+          "ret": 20.1,
+          "excess": 32.2
         },
         "d7": {
           "status": "pending"
@@ -231,14 +262,14 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11940,
+      "price": 11990,
       "dday": 33,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 2.9,
-          "excess": 18.4
+          "ret": 3.4,
+          "excess": 18.9
         },
         "d30": {
           "status": "pending"
@@ -260,14 +291,14 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11940,
+      "price": 11990,
       "dday": 33,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 2.9,
-          "excess": 18.4
+          "ret": 3.4,
+          "excess": 18.9
         },
         "d30": {
           "status": "pending"
@@ -289,7 +320,7 @@
       "date_label": "2026년 연내 출시 목표 (잠정)",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 33800,
+      "price": 34200,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -316,7 +347,7 @@
       "date_label": "2026년 연내 출시 목표 (잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 209000,
+      "price": 211500,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -343,7 +374,7 @@
       "date_label": "2026년 하반기 (잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11940,
+      "price": 11990,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -370,7 +401,7 @@
       "date_label": "2026년 연내 출시 목표(잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 9430,
+      "price": 9460,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -397,7 +428,7 @@
       "date_label": "2026년 연내 출시 목표(잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 209000,
+      "price": 211500,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -424,7 +455,7 @@
       "date_label": "2026년 연내 예정",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 33800,
+      "price": 34200,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -451,7 +482,7 @@
       "date_label": "2027년 1분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11940,
+      "price": 11990,
       "dday": 83,
       "launched": false,
       "milestones": {
@@ -478,7 +509,34 @@
       "date_label": "2027년 1분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11940,
+      "price": 11990,
+      "dday": 83,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "넥슨",
+      "code": "032350",
+      "game": "아주르 프로밀리아 (글로벌(서구권) 출시)",
+      "launch_date": "20270131",
+      "status": "expected",
+      "note": "자동등록 2026-11-09 (출처 나무위키 인용)",
+      "tentative": true,
+      "date_label": "2027년 예정",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 10480,
       "dday": 83,
       "launched": false,
       "milestones": {
@@ -505,7 +563,7 @@
       "date_label": "2027년 2분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 11940,
+      "price": 11990,
       "dday": 172,
       "launched": false,
       "milestones": {
