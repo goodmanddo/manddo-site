@@ -1,30 +1,82 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-09",
   "start_date": "2026-05-03",
-  "cumulative_return": -14.91,
-  "week_return": -0.4,
-  "day_return": -0.4,
-  "today_realized_avg": 0.86,
-  "today_trade_count": 3,
-  "today_win_count": 3,
+  "cumulative_return": -14.65,
+  "week_return": -0.11,
+  "day_return": 0.3,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 39,
   "total_trades": 107,
-  "ai_commentary": "1건 익절로 수익 확정. 시작 이후 누적 -14.9%.",
-  "new_buys": [],
-  "exits": [
+  "ai_commentary": "오늘은 NAVER, 카카오, SOOP 등 신규 편입. 시작 이후 누적 -14.7%.",
+  "new_buys": [
     {
-      "type": "win",
-      "name": "하이트진로",
+      "name": "NAVER",
+      "slug": "naver",
+      "market": "코스피",
+      "entry_to_current_pct": 0.16,
+      "weight_pct": 25,
+      "hold_days": 0,
+      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
+    },
+    {
+      "name": "카카오",
+      "slug": "kakao",
+      "market": "코스피",
+      "entry_to_current_pct": 0.47,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
+    },
+    {
+      "name": "SOOP",
       "slug": "",
       "market": "코스피",
-      "return_pct": 2.49,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+      "entry_to_current_pct": -2.69,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "KODEX 반도체",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 2.16,
+      "weight_pct": 17,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
     }
   ],
+  "exits": [],
   "weekly_losses": [],
-  "holdings": [],
+  "holdings": [
+    {
+      "name": "NAVER",
+      "slug": "naver",
+      "market": "코스피",
+      "weight_pct": 25
+    },
+    {
+      "name": "KODEX 반도체",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 17
+    },
+    {
+      "name": "카카오",
+      "slug": "kakao",
+      "market": "코스피",
+      "weight_pct": 5
+    },
+    {
+      "name": "SOOP",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 5
+    }
+  ],
   "return_history": [
     {
       "date": "2026-10-06",
@@ -109,6 +161,10 @@
     {
       "date": "2026-11-06",
       "cumulative_return": -14.91
+    },
+    {
+      "date": "2026-11-09",
+      "cumulative_return": -14.65
     }
   ]
 }

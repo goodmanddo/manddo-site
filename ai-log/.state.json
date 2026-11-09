@@ -1,10 +1,35 @@
 {
-  "last_holdings": {},
-  "history": [
-    {
-      "date": "2026-10-06",
-      "total_eval": 18789217
+  "last_holdings": {
+    "035420": {
+      "name": "NAVER",
+      "qty": 23,
+      "avg_price": 186800,
+      "current_price": 187100,
+      "opened_at": "2026-11-09"
     },
+    "035720": {
+      "name": "카카오",
+      "qty": 25,
+      "avg_price": 31950,
+      "current_price": 32100,
+      "opened_at": "2026-11-09"
+    },
+    "067160": {
+      "name": "SOOP",
+      "qty": 21,
+      "avg_price": 37971,
+      "current_price": 36950,
+      "opened_at": "2026-11-09"
+    },
+    "091160": {
+      "name": "KODEX 반도체",
+      "qty": 34,
+      "avg_price": 85144,
+      "current_price": 86980,
+      "opened_at": "2026-11-09"
+    }
+  },
+  "history": [
     {
       "date": "2026-10-06",
       "total_eval": 18789217
@@ -240,6 +265,10 @@
     {
       "date": "2026-11-06",
       "total_eval": 17018815
+    },
+    {
+      "date": "2026-11-09",
+      "total_eval": 17069195
     }
   ],
   "completed_trades": [
