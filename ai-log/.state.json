@@ -27,13 +27,16 @@
       "avg_price": 85144,
       "current_price": 86980,
       "opened_at": "2026-11-09"
+    },
+    "430690": {
+      "name": "한싹",
+      "qty": 137,
+      "avg_price": 3630,
+      "current_price": 3630,
+      "opened_at": "2026-11-09"
     }
   },
   "history": [
-    {
-      "date": "2026-10-06",
-      "total_eval": 18789217
-    },
     {
       "date": "2026-10-07",
       "total_eval": 18571452
@@ -269,6 +272,10 @@
     {
       "date": "2026-11-09",
       "total_eval": 17069195
+    },
+    {
+      "date": "2026-11-09",
+      "total_eval": 17069135
     }
   ],
   "completed_trades": [

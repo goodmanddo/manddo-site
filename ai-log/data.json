@@ -47,6 +47,15 @@
       "weight_pct": 17,
       "hold_days": 0,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
+    {
+      "name": "한싹",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
     }
   ],
   "exits": [],
@@ -75,6 +84,12 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
+    },
+    {
+      "name": "한싹",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
     }
   ],
   "return_history": [
