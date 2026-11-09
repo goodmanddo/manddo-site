@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T09:01:48",
+  "generated_at": "2026-11-09T16:00:09",
   "count": 18,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
@@ -14,19 +14,19 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 208500,
+      "price": 209000,
       "dday": 17,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 0.7,
-          "excess": 22.4
+          "ret": 1.0,
+          "excess": 24.1
         },
         "d30": {
           "status": "done",
-          "ret": 4.9,
-          "excess": 19.5
+          "ret": 5.2,
+          "excess": 21.4
         },
         "d7": {
           "status": "pending"
@@ -45,19 +45,19 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10110,
+      "price": 10500,
       "dday": 17,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -5.2,
-          "excess": 16.5
+          "ret": -1.5,
+          "excess": 21.6
         },
         "d30": {
           "status": "done",
-          "ret": -1.8,
-          "excess": 12.8
+          "ret": 1.9,
+          "excess": 18.1
         },
         "d7": {
           "status": "pending"
@@ -76,19 +76,19 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10110,
+      "price": 10500,
       "dday": 17,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -5.2,
-          "excess": 16.8
+          "ret": -1.5,
+          "excess": 21.6
         },
         "d30": {
           "status": "done",
-          "ret": -1.8,
-          "excess": 13.2
+          "ret": 1.9,
+          "excess": 18.1
         },
         "d7": {
           "status": "pending"
@@ -107,19 +107,19 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 10110,
+      "price": 10500,
       "dday": 22,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": -7.2,
-          "excess": 10.7
+          "ret": -3.7,
+          "excess": 15.5
         },
         "d30": {
           "status": "done",
-          "ret": 0.7,
-          "excess": 13.0
+          "ret": 4.6,
+          "excess": 18.3
         },
         "d7": {
           "status": "pending"
@@ -138,19 +138,19 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 223500,
+      "price": 217500,
       "dday": 24,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 20.4,
-          "excess": 29.6
+          "ret": 17.2,
+          "excess": 27.1
         },
         "d30": {
           "status": "done",
-          "ret": 22.9,
-          "excess": 34.4
+          "ret": 19.6,
+          "excess": 31.7
         },
         "d7": {
           "status": "pending"
@@ -169,19 +169,19 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 224000,
+      "price": 217500,
       "dday": 24,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 20.7,
-          "excess": 29.9
+          "ret": 17.2,
+          "excess": 27.1
         },
         "d30": {
           "status": "done",
-          "ret": 23.1,
-          "excess": 34.5
+          "ret": 19.6,
+          "excess": 31.7
         },
         "d7": {
           "status": "pending"
@@ -200,19 +200,19 @@
       "date_label": "",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 224000,
+      "price": 217500,
       "dday": 24,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 20.7,
-          "excess": 29.9
+          "ret": 17.2,
+          "excess": 27.1
         },
         "d30": {
           "status": "done",
-          "ret": 23.1,
-          "excess": 34.6
+          "ret": 19.6,
+          "excess": 31.7
         },
         "d7": {
           "status": "pending"
@@ -231,14 +231,14 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 12030,
+      "price": 11940,
       "dday": 33,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 3.7,
-          "excess": 17.4
+          "ret": 2.9,
+          "excess": 18.4
         },
         "d30": {
           "status": "pending"
@@ -260,14 +260,14 @@
       "date_label": "",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 12040,
+      "price": 11940,
       "dday": 33,
       "launched": false,
       "milestones": {
         "d40": {
           "status": "done",
-          "ret": 3.8,
-          "excess": 17.7
+          "ret": 2.9,
+          "excess": 18.4
         },
         "d30": {
           "status": "pending"
@@ -289,7 +289,7 @@
       "date_label": "2026년 연내 출시 목표 (잠정)",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 34300,
+      "price": 33800,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -316,7 +316,7 @@
       "date_label": "2026년 연내 출시 목표 (잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 208500,
+      "price": 209000,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -343,7 +343,7 @@
       "date_label": "2026년 하반기 (잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 12100,
+      "price": 11940,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -370,7 +370,7 @@
       "date_label": "2026년 연내 출시 목표(잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 9740,
+      "price": 9430,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -397,7 +397,7 @@
       "date_label": "2026년 연내 출시 목표(잠정)",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 208500,
+      "price": 209000,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -424,7 +424,7 @@
       "date_label": "2026년 연내 예정",
       "bench": "069500",
       "bench_name": "코스피200",
-      "price": 34500,
+      "price": 33800,
       "dday": 52,
       "launched": false,
       "milestones": {
@@ -451,7 +451,7 @@
       "date_label": "2027년 1분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 12030,
+      "price": 11940,
       "dday": 83,
       "launched": false,
       "milestones": {
@@ -478,7 +478,7 @@
       "date_label": "2027년 1분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 12030,
+      "price": 11940,
       "dday": 83,
       "launched": false,
       "milestones": {
@@ -505,7 +505,7 @@
       "date_label": "2027년 2분기 예정",
       "bench": "229200",
       "bench_name": "코스닥150",
-      "price": 12100,
+      "price": 11940,
       "dday": 172,
       "launched": false,
       "milestones": {
