@@ -10,8 +10,17 @@
   "today_loss_count": 1,
   "win_rate": 39,
   "total_trades": 108,
-  "ai_commentary": "오늘은 NAVER, 카카오, SOOP 등 신규 편입. 시작 이후 누적 -12.9%.",
+  "ai_commentary": "오늘은 깨끗한나라우, NAVER, 카카오 등 신규 편입. 시작 이후 누적 -12.9%.",
   "new_buys": [
+    {
+      "name": "깨끗한나라우",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 1,
+      "hold_days": 0,
+      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
+    },
     {
       "name": "NAVER",
       "slug": "naver",
@@ -75,6 +84,12 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
+    },
+    {
+      "name": "깨끗한나라우",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 1
     }
   ],
   "return_history": [

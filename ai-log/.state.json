@@ -1,5 +1,12 @@
 {
   "last_holdings": {
+    "004545": {
+      "name": "깨끗한나라우",
+      "qty": 10,
+      "avg_price": 8820,
+      "current_price": 8820,
+      "opened_at": "2026-11-10"
+    },
     "035420": {
       "name": "NAVER",
       "qty": 23,
@@ -30,10 +37,6 @@
     }
   },
   "history": [
-    {
-      "date": "2026-10-07",
-      "total_eval": 18571452
-    },
     {
       "date": "2026-10-12",
       "total_eval": 18097364
@@ -269,6 +272,10 @@
     {
       "date": "2026-11-10",
       "total_eval": 17416129
+    },
+    {
+      "date": "2026-11-10",
+      "total_eval": 17416119
     }
   ],
   "completed_trades": [
