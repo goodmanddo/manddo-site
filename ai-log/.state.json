@@ -4,43 +4,32 @@
       "name": "NAVER",
       "qty": 23,
       "avg_price": 186800,
-      "current_price": 187100,
+      "current_price": 193000,
       "opened_at": "2026-11-09"
     },
     "035720": {
       "name": "카카오",
       "qty": 25,
       "avg_price": 31950,
-      "current_price": 32100,
+      "current_price": 32050,
       "opened_at": "2026-11-09"
     },
     "067160": {
       "name": "SOOP",
       "qty": 21,
       "avg_price": 37971,
-      "current_price": 36950,
+      "current_price": 38250,
       "opened_at": "2026-11-09"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 34,
       "avg_price": 85144,
-      "current_price": 86980,
-      "opened_at": "2026-11-09"
-    },
-    "430690": {
-      "name": "한싹",
-      "qty": 137,
-      "avg_price": 3630,
-      "current_price": 3630,
+      "current_price": 92580,
       "opened_at": "2026-11-09"
     }
   },
   "history": [
-    {
-      "date": "2026-10-07",
-      "total_eval": 18571452
-    },
     {
       "date": "2026-10-07",
       "total_eval": 18571452
@@ -276,6 +265,10 @@
     {
       "date": "2026-11-09",
       "total_eval": 17069135
+    },
+    {
+      "date": "2026-11-10",
+      "total_eval": 17416129
     }
   ],
   "completed_trades": [
@@ -1121,6 +1114,14 @@
       "date": "2026-11-06",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "한싹",
+      "code": "430690",
+      "return_pct": -0.83,
+      "date": "2026-11-10",
+      "is_win": false,
+      "hold_days": 1
     }
   ]
 }

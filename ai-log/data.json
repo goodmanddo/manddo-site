@@ -1,60 +1,51 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "start_date": "2026-05-03",
-  "cumulative_return": -14.65,
-  "week_return": 0.3,
-  "day_return": 0.3,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -12.92,
+  "week_return": 2.33,
+  "day_return": 2.03,
+  "today_realized_avg": -0.83,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
+  "today_loss_count": 1,
   "win_rate": 39,
-  "total_trades": 107,
-  "ai_commentary": "오늘은 NAVER, 카카오, SOOP 등 신규 편입. 시작 이후 누적 -14.7%.",
+  "total_trades": 108,
+  "ai_commentary": "오늘은 NAVER, 카카오, SOOP 등 신규 편입. 시작 이후 누적 -12.9%.",
   "new_buys": [
     {
       "name": "NAVER",
       "slug": "naver",
       "market": "코스피",
-      "entry_to_current_pct": 0.16,
+      "entry_to_current_pct": 3.32,
       "weight_pct": 25,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "entry_to_current_pct": 0.47,
+      "entry_to_current_pct": 0.31,
       "weight_pct": 5,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "SOOP",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -2.69,
+      "entry_to_current_pct": 0.73,
       "weight_pct": 5,
-      "hold_days": 0,
+      "hold_days": 1,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.16,
-      "weight_pct": 17,
-      "hold_days": 0,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
-    },
-    {
-      "name": "한싹",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.0,
-      "weight_pct": 3,
-      "hold_days": 0,
+      "entry_to_current_pct": 8.73,
+      "weight_pct": 18,
+      "hold_days": 1,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     }
   ],
@@ -71,7 +62,7 @@
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 17
+      "weight_pct": 18
     },
     {
       "name": "카카오",
@@ -84,12 +75,6 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 5
-    },
-    {
-      "name": "한싹",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
     }
   ],
   "return_history": [
@@ -176,6 +161,10 @@
     {
       "date": "2026-11-09",
       "cumulative_return": -14.65
+    },
+    {
+      "date": "2026-11-10",
+      "cumulative_return": -12.92
     }
   ]
 }
