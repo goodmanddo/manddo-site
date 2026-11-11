@@ -1,46 +1,35 @@
 {
   "last_holdings": {
-    "004545": {
-      "name": "깨끗한나라우",
-      "qty": 10,
-      "avg_price": 8820,
-      "current_price": 8820,
-      "opened_at": "2026-11-10"
-    },
     "035420": {
       "name": "NAVER",
       "qty": 23,
       "avg_price": 186800,
-      "current_price": 193000,
+      "current_price": 194300,
       "opened_at": "2026-11-09"
     },
     "035720": {
       "name": "카카오",
       "qty": 25,
       "avg_price": 31950,
-      "current_price": 32050,
+      "current_price": 32000,
       "opened_at": "2026-11-09"
     },
     "067160": {
       "name": "SOOP",
       "qty": 21,
       "avg_price": 37971,
-      "current_price": 38250,
+      "current_price": 36600,
       "opened_at": "2026-11-09"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 34,
       "avg_price": 85144,
-      "current_price": 92580,
+      "current_price": 100105,
       "opened_at": "2026-11-09"
     }
   },
   "history": [
-    {
-      "date": "2026-10-12",
-      "total_eval": 18097364
-    },
     {
       "date": "2026-10-12",
       "total_eval": 18097364
@@ -276,6 +265,10 @@
     {
       "date": "2026-11-10",
       "total_eval": 17416119
+    },
+    {
+      "date": "2026-11-11",
+      "total_eval": 17692131
     }
   ],
   "completed_trades": [
@@ -1128,6 +1121,14 @@
       "return_pct": -0.83,
       "date": "2026-11-10",
       "is_win": false,
+      "hold_days": 1
+    },
+    {
+      "name": "깨끗한나라우",
+      "code": "004545",
+      "return_pct": 29.93,
+      "date": "2026-11-11",
+      "is_win": true,
       "hold_days": 1
     }
   ]

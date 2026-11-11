@@ -1,64 +1,65 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "start_date": "2026-05-03",
-  "cumulative_return": -12.92,
-  "week_return": 2.03,
-  "day_return": 2.03,
-  "today_realized_avg": -0.83,
+  "cumulative_return": -11.54,
+  "week_return": 3.65,
+  "day_return": 1.58,
+  "today_realized_avg": 29.93,
   "today_trade_count": 1,
-  "today_win_count": 0,
-  "today_loss_count": 1,
+  "today_win_count": 1,
+  "today_loss_count": 0,
   "win_rate": 39,
-  "total_trades": 108,
-  "ai_commentary": "오늘은 깨끗한나라우, NAVER, 카카오 등 신규 편입. 시작 이후 누적 -12.9%.",
+  "total_trades": 109,
+  "ai_commentary": "오늘은 NAVER, 카카오, SOOP 등 신규 편입. 1건 익절로 수익 확정. 시작 이후 누적 -11.5%.",
   "new_buys": [
-    {
-      "name": "깨끗한나라우",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.0,
-      "weight_pct": 1,
-      "hold_days": 0,
-      "reason": "단기 흐름 전환 신호와 거래량 증가 동반."
-    },
     {
       "name": "NAVER",
       "slug": "naver",
       "market": "코스피",
-      "entry_to_current_pct": 3.32,
+      "entry_to_current_pct": 4.01,
       "weight_pct": 25,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     },
     {
       "name": "카카오",
       "slug": "kakao",
       "market": "코스피",
-      "entry_to_current_pct": 0.31,
+      "entry_to_current_pct": 0.16,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "SOOP",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 0.73,
-      "weight_pct": 5,
-      "hold_days": 1,
+      "entry_to_current_pct": -3.61,
+      "weight_pct": 4,
+      "hold_days": 2,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 8.73,
-      "weight_pct": 18,
-      "hold_days": 1,
+      "entry_to_current_pct": 17.57,
+      "weight_pct": 19,
+      "hold_days": 2,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     }
   ],
-  "exits": [],
+  "exits": [
+    {
+      "type": "win",
+      "name": "깨끗한나라우",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": 29.93,
+      "hold_days": 1,
+      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
+    }
+  ],
   "weekly_losses": [],
   "holdings": [
     {
@@ -71,7 +72,7 @@
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 18
+      "weight_pct": 19
     },
     {
       "name": "카카오",
@@ -83,13 +84,7 @@
       "name": "SOOP",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 5
-    },
-    {
-      "name": "깨끗한나라우",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 1
+      "weight_pct": 4
     }
   ],
   "return_history": [
@@ -176,6 +171,10 @@
     {
       "date": "2026-11-10",
       "cumulative_return": -12.92
+    },
+    {
+      "date": "2026-11-11",
+      "cumulative_return": -11.54
     }
   ]
 }
