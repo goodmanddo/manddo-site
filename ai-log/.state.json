@@ -27,13 +27,16 @@
       "avg_price": 85144,
       "current_price": 99355,
       "opened_at": "2026-11-09"
+    },
+    "142760": {
+      "name": "모아라이프플러스",
+      "qty": 4273,
+      "avg_price": 117,
+      "current_price": 117,
+      "opened_at": "2026-11-12"
     }
   },
   "history": [
-    {
-      "date": "2026-10-13",
-      "total_eval": 17960775
-    },
     {
       "date": "2026-10-14",
       "total_eval": 17856175
@@ -269,6 +272,10 @@
     {
       "date": "2026-11-12",
       "total_eval": 17359031
+    },
+    {
+      "date": "2026-11-12",
+      "total_eval": 17358961
     }
   ],
   "completed_trades": [

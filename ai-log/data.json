@@ -1,7 +1,7 @@
 {
   "date": "2026-11-12",
   "start_date": "2026-05-03",
-  "cumulative_return": -13.2,
+  "cumulative_return": -13.21,
   "week_return": -0.33,
   "day_return": -1.88,
   "today_realized_avg": 0.0,
@@ -10,8 +10,17 @@
   "today_loss_count": 0,
   "win_rate": 39,
   "total_trades": 109,
-  "ai_commentary": "오늘은 NAVER, 카카오, SOOP 등 신규 편입. 시작 이후 누적 -13.2%.",
+  "ai_commentary": "오늘은 모아라이프플러스, NAVER, 카카오 등 신규 편입. 시작 이후 누적 -13.2%.",
   "new_buys": [
+    {
+      "name": "모아라이프플러스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
     {
       "name": "NAVER",
       "slug": "naver",
@@ -75,6 +84,12 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 4
+    },
+    {
+      "name": "모아라이프플러스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
     }
   ],
   "return_history": [
@@ -164,7 +179,7 @@
     },
     {
       "date": "2026-11-12",
-      "cumulative_return": -13.2
+      "cumulative_return": -13.21
     }
   ]
 }
