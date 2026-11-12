@@ -4,36 +4,32 @@
       "name": "NAVER",
       "qty": 23,
       "avg_price": 186800,
-      "current_price": 194300,
+      "current_price": 181800,
       "opened_at": "2026-11-09"
     },
     "035720": {
       "name": "카카오",
       "qty": 25,
       "avg_price": 31950,
-      "current_price": 32000,
+      "current_price": 31700,
       "opened_at": "2026-11-09"
     },
     "067160": {
       "name": "SOOP",
       "qty": 21,
       "avg_price": 37971,
-      "current_price": 36600,
+      "current_price": 36000,
       "opened_at": "2026-11-09"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 34,
       "avg_price": 85144,
-      "current_price": 100105,
+      "current_price": 99355,
       "opened_at": "2026-11-09"
     }
   },
   "history": [
-    {
-      "date": "2026-10-13",
-      "total_eval": 17960775
-    },
     {
       "date": "2026-10-13",
       "total_eval": 17960775
@@ -269,6 +265,10 @@
     {
       "date": "2026-11-11",
       "total_eval": 17692131
+    },
+    {
+      "date": "2026-11-12",
+      "total_eval": 17359031
     }
   ],
   "completed_trades": [
