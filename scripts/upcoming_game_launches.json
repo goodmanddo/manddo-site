@@ -250,6 +250,40 @@
       "bench": "069500",
       "kind": "신작",
       "note": "자동등록 2026-11-12 (출처 리포트 한 줄 정리)"
+    },
+    {
+      "company": "위메이드",
+      "code": "112040",
+      "game": "나이트크로우W",
+      "date": "20270430",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 2분기 예정",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-13 (출처 디일렉)"
+    },
+    {
+      "company": "컴투스홀딩스",
+      "code": "063080",
+      "game": "도원암귀 크림슨 인페르노 (일본 출시)",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 예정",
+      "bench": "229200",
+      "kind": "해외출시",
+      "note": "자동등록 2026-11-13 (출처 컴투스 2026-11-12 실적발표)"
+    },
+    {
+      "company": "카카오",
+      "code": "035720",
+      "game": "패스 오브 엑자일 2",
+      "date": "20261212",
+      "status": "confirmed",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-13 (출처 게임주 신작 인텔)"
     }
   ],
   "launched_archive": [
