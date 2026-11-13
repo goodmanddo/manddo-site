@@ -1,33 +1,5 @@
 {
   "last_holdings": {
-    "035420": {
-      "name": "NAVER",
-      "qty": 23,
-      "avg_price": 186800,
-      "current_price": 181800,
-      "opened_at": "2026-11-09"
-    },
-    "035720": {
-      "name": "카카오",
-      "qty": 25,
-      "avg_price": 31950,
-      "current_price": 31700,
-      "opened_at": "2026-11-09"
-    },
-    "067160": {
-      "name": "SOOP",
-      "qty": 21,
-      "avg_price": 37971,
-      "current_price": 36000,
-      "opened_at": "2026-11-09"
-    },
-    "091160": {
-      "name": "KODEX 반도체",
-      "qty": 34,
-      "avg_price": 85144,
-      "current_price": 99355,
-      "opened_at": "2026-11-09"
-    },
     "142760": {
       "name": "모아라이프플러스",
       "qty": 4273,
@@ -37,10 +9,6 @@
     }
   },
   "history": [
-    {
-      "date": "2026-10-14",
-      "total_eval": 17856175
-    },
     {
       "date": "2026-10-14",
       "total_eval": 17856175
@@ -276,6 +244,10 @@
     {
       "date": "2026-11-12",
       "total_eval": 17358961
+    },
+    {
+      "date": "2026-11-13",
+      "total_eval": 17103344
     }
   ],
   "completed_trades": [
@@ -1137,6 +1109,38 @@
       "date": "2026-11-11",
       "is_win": true,
       "hold_days": 1
+    },
+    {
+      "name": "NAVER",
+      "code": "035420",
+      "return_pct": -7.76,
+      "date": "2026-11-13",
+      "is_win": false,
+      "hold_days": 4
+    },
+    {
+      "name": "카카오",
+      "code": "035720",
+      "return_pct": -0.94,
+      "date": "2026-11-13",
+      "is_win": false,
+      "hold_days": 4
+    },
+    {
+      "name": "SOOP",
+      "code": "067160",
+      "return_pct": -5.59,
+      "date": "2026-11-13",
+      "is_win": false,
+      "hold_days": 4
+    },
+    {
+      "name": "KODEX 반도체",
+      "code": "091160",
+      "return_pct": 15.58,
+      "date": "2026-11-13",
+      "is_win": true,
+      "hold_days": 4
     }
   ]
 }
