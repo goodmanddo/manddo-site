@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-10-08T15:20:12",
-  "n_rounds": 15,
-  "n_paired": 7,
+  "generated_at": "2026-11-13T15:20:13",
+  "n_rounds": 20,
+  "n_paired": 8,
   "paired_stock": {
-    "n": 7,
-    "winrate": 57,
-    "mean": -0.41,
-    "cum": -2.9
+    "n": 8,
+    "winrate": 50,
+    "mean": -1.34,
+    "cum": -10.7
   },
   "paired_etf": {
-    "n": 7,
-    "winrate": 43,
-    "mean": 0.3,
-    "cum": 2.1
+    "n": 8,
+    "winrate": 50,
+    "mean": 2.23,
+    "cum": 17.8
   },
   "rounds": [
     {
@@ -149,6 +149,51 @@
       "stock_ret": -6.5,
       "etf_name": "KODEX 반도체",
       "etf_ret": -2.42
+    },
+    {
+      "buy_date": "2026-10-12",
+      "sell_date": "2026-10-16",
+      "round": 24,
+      "stock_name": "두산에너빌리티",
+      "stock_ret": -13.9,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-10-20",
+      "sell_date": "2026-10-23",
+      "round": 25,
+      "stock_name": "오리온",
+      "stock_ret": -1.15,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-10-26",
+      "sell_date": "2026-10-30",
+      "round": 26,
+      "stock_name": "한국전력",
+      "stock_ret": 0.35,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-11-02",
+      "sell_date": "2026-11-06",
+      "round": 27,
+      "stock_name": "하이트진로",
+      "stock_ret": 2.92,
+      "etf_name": null,
+      "etf_ret": null
+    },
+    {
+      "buy_date": "2026-11-09",
+      "sell_date": "2026-11-13",
+      "round": 28,
+      "stock_name": "NAVER",
+      "stock_ret": -7.81,
+      "etf_name": "KODEX 반도체",
+      "etf_ret": 15.69
     }
   ]
 }
