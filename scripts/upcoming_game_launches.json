@@ -296,6 +296,54 @@
       "bench": "229200",
       "kind": "해외출시",
       "note": "자동등록 2026-11-14 (출처 EBN)"
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "PUBG: 데드넷",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-14 (출처 EBN)"
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "노 로우(NO LAW)",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-14 (출처 EBN)"
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "타래: 언바운드",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-14 (출처 게임메카)"
+    },
+    {
+      "company": "엔씨소프트",
+      "code": "036570",
+      "game": "라이크 오어 다이(Like or Die)",
+      "date": "20270731",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 하반기",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-14 (출처 뉴스핌)"
     }
   ],
   "launched_archive": [
