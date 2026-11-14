@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-14T09:01:03",
-  "count": 27,
+  "generated_at": "2026-11-14T22:01:36",
+  "count": 31,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
     {
@@ -735,6 +735,87 @@
       "post_ret": null
     },
     {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "PUBG: 데드넷",
+      "launch_date": "20270131",
+      "status": "expected",
+      "note": "자동등록 2026-11-14 (출처 EBN)",
+      "tentative": true,
+      "date_label": "2027년",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 198200,
+      "dday": 78,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "노 로우(NO LAW)",
+      "launch_date": "20270131",
+      "status": "expected",
+      "note": "자동등록 2026-11-14 (출처 EBN)",
+      "tentative": true,
+      "date_label": "2027년",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 198200,
+      "dday": 78,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "타래: 언바운드",
+      "launch_date": "20270131",
+      "status": "expected",
+      "note": "자동등록 2026-11-14 (출처 게임메카)",
+      "tentative": true,
+      "date_label": "2027년",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 198200,
+      "dday": 78,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
       "company": "카카오게임즈",
       "code": "293490",
       "game": "도깨비의세계 (글로벌(스팀) 출시)",
@@ -774,6 +855,33 @@
       "bench_name": "코스닥150",
       "price": 14040,
       "dday": 167,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "엔씨소프트",
+      "code": "036570",
+      "game": "라이크 오어 다이(Like or Die)",
+      "launch_date": "20270731",
+      "status": "expected",
+      "note": "자동등록 2026-11-14 (출처 뉴스핌)",
+      "tentative": true,
+      "date_label": "2027년 하반기",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 179500,
+      "dday": 259,
       "launched": false,
       "milestones": {
         "d40": {
