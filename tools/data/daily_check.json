@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T15:50:06",
+  "updated_at": "2026-11-15T21:30:05",
   "total": {
     "current": {
       "rounds": 6,
@@ -15,6 +15,105 @@
     }
   },
   "rounds": [
+    {
+      "week": "2026-11-16",
+      "current": {
+        "rows": [
+          {
+            "code": "000660",
+            "name": "SK하이닉스",
+            "slot": "main",
+            "planned": true,
+            "slot_label": "메인"
+          },
+          {
+            "code": "000990",
+            "name": "DB하이텍",
+            "slot": "rank2",
+            "planned": true,
+            "slot_label": "서브 · 같은섹터2"
+          },
+          {
+            "code": "042700",
+            "name": "한미반도체",
+            "slot": "rank3",
+            "planned": true,
+            "slot_label": "서브 · 같은섹터3"
+          }
+        ],
+        "avg": {},
+        "result": null
+      },
+      "extra": {
+        "sectors": [
+          "반도체",
+          "2차전지"
+        ],
+        "rows": [
+          {
+            "code": "007340",
+            "name": "DN오토모티브",
+            "sector": "2차전지",
+            "icon": "🔋",
+            "kind": "both",
+            "new": true
+          },
+          {
+            "code": "004490",
+            "name": "세방전지",
+            "sector": "2차전지",
+            "icon": "🔋",
+            "kind": "both",
+            "new": true
+          },
+          {
+            "code": "222800",
+            "name": "심텍",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "nps",
+            "new": false
+          },
+          {
+            "code": "108320",
+            "name": "LX세미콘",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "div",
+            "new": true
+          },
+          {
+            "code": "093520",
+            "name": "매커스",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "div",
+            "new": true
+          }
+        ],
+        "dropped": [
+          "다우데이타",
+          "두산테스나",
+          "윈스테크넷",
+          "아이디스"
+        ],
+        "avg": {},
+        "result": null
+      },
+      "bench": [
+        {
+          "code": "KS11",
+          "name": "코스피"
+        },
+        {
+          "code": "KQ11",
+          "name": "코스닥"
+        }
+      ],
+      "days": [],
+      "status": "대기",
+      "bench_result": {}
+    },
     {
       "week": "2026-11-09",
       "current": {
