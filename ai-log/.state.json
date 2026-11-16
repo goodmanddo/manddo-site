@@ -1,18 +1,49 @@
 {
   "last_holdings": {
+    "000660": {
+      "name": "SK하이닉스",
+      "qty": 3,
+      "avg_price": 1213000,
+      "current_price": 1120000,
+      "opened_at": "2026-11-16"
+    },
+    "000990": {
+      "name": "DB하이텍",
+      "qty": 10,
+      "avg_price": 80800,
+      "current_price": 74300,
+      "opened_at": "2026-11-16"
+    },
+    "042700": {
+      "name": "한미반도체",
+      "qty": 4,
+      "avg_price": 180600,
+      "current_price": 169700,
+      "opened_at": "2026-11-16"
+    },
+    "091160": {
+      "name": "KODEX 반도체",
+      "qty": 29,
+      "avg_price": 97268,
+      "current_price": 89695,
+      "opened_at": "2026-11-16"
+    },
     "142760": {
       "name": "모아라이프플러스",
       "qty": 4273,
       "avg_price": 117,
       "current_price": 117,
       "opened_at": "2026-11-12"
+    },
+    "303030": {
+      "name": "지니틱스",
+      "qty": 391,
+      "avg_price": 1276,
+      "current_price": 1276,
+      "opened_at": "2026-11-16"
     }
   },
   "history": [
-    {
-      "date": "2026-10-15",
-      "total_eval": 17177075
-    },
     {
       "date": "2026-10-15",
       "total_eval": 17177075
@@ -248,6 +279,10 @@
     {
       "date": "2026-11-13",
       "total_eval": 17103344
+    },
+    {
+      "date": "2026-11-16",
+      "total_eval": 16500475
     }
   ],
   "completed_trades": [

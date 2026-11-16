@@ -1,73 +1,107 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-16",
   "start_date": "2026-05-03",
-  "cumulative_return": -14.48,
-  "week_return": -1.47,
-  "day_return": -1.47,
-  "today_realized_avg": 0.32,
-  "today_trade_count": 4,
-  "today_win_count": 1,
-  "today_loss_count": 3,
+  "cumulative_return": -17.5,
+  "week_return": -4.95,
+  "day_return": -3.52,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
+  "today_loss_count": 0,
   "win_rate": 39,
   "total_trades": 113,
-  "ai_commentary": "오늘은 모아라이프플러스 등 신규 편입. 1건 익절로 수익 확정. 2건은 손절 규칙에 따라 정리. 시작 이후 누적 -14.5%.",
+  "ai_commentary": "오늘은 SK하이닉스, DB하이텍, 한미반도체 등 신규 편입. 시작 이후 누적 -17.5%.",
   "new_buys": [
+    {
+      "name": "SK하이닉스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -7.67,
+      "weight_pct": 20,
+      "hold_days": 0,
+      "reason": "기관·외국인 수급 흐름 개선 신호 확인."
+    },
+    {
+      "name": "DB하이텍",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -8.04,
+      "weight_pct": 5,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
+    {
+      "name": "한미반도체",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -6.04,
+      "weight_pct": 4,
+      "hold_days": 0,
+      "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
+    },
+    {
+      "name": "KODEX 반도체",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": -7.79,
+      "weight_pct": 16,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
+    {
+      "name": "지니틱스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
+    },
     {
       "name": "모아라이프플러스",
       "slug": "",
       "market": "코스피",
       "entry_to_current_pct": 0.0,
       "weight_pct": 3,
-      "hold_days": 1,
+      "hold_days": 4,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "exits": [
+  "exits": [],
+  "weekly_losses": [],
+  "holdings": [
     {
-      "type": "loss",
-      "name": "NAVER",
-      "slug": "naver",
-      "market": "코스피",
-      "return_pct": -7.76,
-      "hold_days": 4,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "loss",
-      "name": "SOOP",
+      "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "return_pct": -5.59,
-      "hold_days": 4,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+      "weight_pct": 20
     },
     {
-      "type": "win",
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "return_pct": 15.58,
-      "hold_days": 4,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    }
-  ],
-  "weekly_losses": [
-    {
-      "name": "SOOP",
-      "slug": "",
-      "return_pct": -5.59,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+      "weight_pct": 16
     },
     {
-      "name": "NAVER",
-      "slug": "naver",
-      "return_pct": -7.76,
-      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
-    }
-  ],
-  "holdings": [
+      "name": "DB하이텍",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 5
+    },
+    {
+      "name": "한미반도체",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 4
+    },
     {
       "name": "모아라이프플러스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
+      "name": "지니틱스",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
@@ -157,6 +191,10 @@
     {
       "date": "2026-11-13",
       "cumulative_return": -14.48
+    },
+    {
+      "date": "2026-11-16",
+      "cumulative_return": -17.5
     }
   ]
 }
