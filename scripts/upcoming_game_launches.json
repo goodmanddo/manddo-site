@@ -428,6 +428,30 @@
       "bench": "069500",
       "kind": "해외출시",
       "note": "자동등록 2026-11-15 (출처 이코노미사이언스·EBN)"
+    },
+    {
+      "company": "넷마블",
+      "code": "251270",
+      "game": "샹그릴라 프론티어: 일곱 최강종 등록",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 초",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-16 (출처 게임뷰)"
+    },
+    {
+      "company": "컴투스",
+      "code": "078340",
+      "game": "도원암귀 크림슨 인페르노 (일본 출시)",
+      "date": "20261130",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 예정",
+      "bench": "229200",
+      "kind": "해외출시",
+      "note": "자동등록 2026-11-16 (출처 디지털데일리·워크투데이)"
     }
   ],
   "launched_archive": [
