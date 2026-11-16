@@ -452,6 +452,42 @@
       "bench": "229200",
       "kind": "해외출시",
       "note": "자동등록 2026-11-16 (출처 디지털데일리·워크투데이)"
+    },
+    {
+      "company": "넷마블",
+      "code": "251270",
+      "game": "가디언 테일즈: 디그닷",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 (잠정)",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-16 (출처 경향게임스)"
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "인조이(inZOI) 정식출시 + PS5 버전",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 (잠정)",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-16 (출처 데일리안)"
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "팰월드 모바일",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 (잠정)",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-16 (출처 데일리안)"
     }
   ],
   "launched_archive": [
