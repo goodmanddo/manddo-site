@@ -3,7 +3,7 @@
   "start_date": "2026-05-03",
   "cumulative_return": -17.5,
   "week_return": -4.95,
-  "day_return": -3.52,
+  "day_return": -3.53,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
@@ -47,6 +47,15 @@
       "weight_pct": 16,
       "hold_days": 0,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
+    {
+      "name": "카티스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "지니틱스",
@@ -93,6 +102,12 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 4
+    },
+    {
+      "name": "카티스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
     },
     {
       "name": "모아라이프플러스",
