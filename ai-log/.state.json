@@ -4,35 +4,28 @@
       "name": "SK하이닉스",
       "qty": 3,
       "avg_price": 1213000,
-      "current_price": 1120000,
+      "current_price": 1098000,
       "opened_at": "2026-11-16"
     },
     "000990": {
       "name": "DB하이텍",
       "qty": 10,
       "avg_price": 80800,
-      "current_price": 74300,
+      "current_price": 72500,
       "opened_at": "2026-11-16"
     },
     "042700": {
       "name": "한미반도체",
       "qty": 4,
       "avg_price": 180600,
-      "current_price": 169700,
+      "current_price": 165300,
       "opened_at": "2026-11-16"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 29,
       "avg_price": 97268,
-      "current_price": 89695,
-      "opened_at": "2026-11-16"
-    },
-    "140430": {
-      "name": "카티스",
-      "qty": 205,
-      "avg_price": 2435,
-      "current_price": 2435,
+      "current_price": 87600,
       "opened_at": "2026-11-16"
     },
     "142760": {
@@ -41,20 +34,9 @@
       "avg_price": 117,
       "current_price": 117,
       "opened_at": "2026-11-12"
-    },
-    "303030": {
-      "name": "지니틱스",
-      "qty": 391,
-      "avg_price": 1276,
-      "current_price": 1276,
-      "opened_at": "2026-11-16"
     }
   },
   "history": [
-    {
-      "date": "2026-10-19",
-      "total_eval": 17363577
-    },
     {
       "date": "2026-10-19",
       "total_eval": 17363577
@@ -290,6 +272,10 @@
     {
       "date": "2026-11-16",
       "total_eval": 16500405
+    },
+    {
+      "date": "2026-11-17",
+      "total_eval": 16328680
     }
   ],
   "completed_trades": [
@@ -1183,6 +1169,22 @@
       "date": "2026-11-13",
       "is_win": true,
       "hold_days": 4
+    },
+    {
+      "name": "카티스",
+      "code": "140430",
+      "return_pct": -3.49,
+      "date": "2026-11-17",
+      "is_win": false,
+      "hold_days": 1
+    },
+    {
+      "name": "지니틱스",
+      "code": "303030",
+      "return_pct": 2.04,
+      "date": "2026-11-17",
+      "is_win": true,
+      "hold_days": 1
     }
   ]
 }
