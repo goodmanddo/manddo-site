@@ -548,6 +548,54 @@
       "bench": "069500",
       "kind": "신작",
       "note": "자동등록 2026-11-17 (출처 뉴스핌)"
+    },
+    {
+      "company": "엔씨소프트",
+      "code": "036570",
+      "game": "호라이즌 스틸 프론티어스",
+      "date": "20261130",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 말~2027년 1분기 예정",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-18 (출처 파이낸셜뉴스)"
+    },
+    {
+      "company": "엔씨소프트",
+      "code": "036570",
+      "game": "타임 테이커스(Time Takers)",
+      "date": "20261130",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 예정",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-18 (출처 아이뉴스24)"
+    },
+    {
+      "company": "위메이드",
+      "code": "112040",
+      "game": "나이트크로우(원작) (중국 출시)",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 예정",
+      "bench": "229200",
+      "kind": "해외출시",
+      "note": "자동등록 2026-11-18 (출처 테크M)"
+    },
+    {
+      "company": "위메이드",
+      "code": "112040",
+      "game": "프로젝트 탈(TAL) (글로벌 출시)",
+      "date": "20270731",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 하반기 예정",
+      "bench": "229200",
+      "kind": "해외출시",
+      "note": "자동등록 2026-11-18 (출처 인벤)"
     }
   ],
   "launched_archive": [
