@@ -4,28 +4,28 @@
       "name": "SK하이닉스",
       "qty": 3,
       "avg_price": 1213000,
-      "current_price": 1098000,
+      "current_price": 1144000,
       "opened_at": "2026-11-16"
     },
     "000990": {
       "name": "DB하이텍",
       "qty": 10,
       "avg_price": 80800,
-      "current_price": 72500,
+      "current_price": 74300,
       "opened_at": "2026-11-16"
     },
     "042700": {
       "name": "한미반도체",
       "qty": 4,
       "avg_price": 180600,
-      "current_price": 165300,
+      "current_price": 167700,
       "opened_at": "2026-11-16"
     },
     "091160": {
       "name": "KODEX 반도체",
       "qty": 29,
       "avg_price": 97268,
-      "current_price": 87600,
+      "current_price": 89755,
       "opened_at": "2026-11-16"
     },
     "142760": {
@@ -37,10 +37,6 @@
     }
   },
   "history": [
-    {
-      "date": "2026-10-20",
-      "total_eval": 17218917
-    },
     {
       "date": "2026-10-20",
       "total_eval": 17218917
@@ -276,6 +272,10 @@
     {
       "date": "2026-11-17",
       "total_eval": 16328680
+    },
+    {
+      "date": "2026-11-18",
+      "total_eval": 16556775
     }
   ],
   "completed_trades": [

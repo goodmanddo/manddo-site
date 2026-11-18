@@ -1,51 +1,51 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "start_date": "2026-05-03",
-  "cumulative_return": -18.36,
-  "week_return": -1.04,
-  "day_return": -1.04,
-  "today_realized_avg": -0.73,
-  "today_trade_count": 2,
-  "today_win_count": 1,
-  "today_loss_count": 1,
+  "cumulative_return": -17.22,
+  "week_return": 0.34,
+  "day_return": 1.4,
+  "today_realized_avg": 0.0,
+  "today_trade_count": 0,
+  "today_win_count": 0,
+  "today_loss_count": 0,
   "win_rate": 39,
   "total_trades": 115,
-  "ai_commentary": "오늘은 SK하이닉스, DB하이텍, 한미반도체 등 신규 편입. 1건 익절로 수익 확정. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -18.4%.",
+  "ai_commentary": "오늘은 SK하이닉스, DB하이텍, 한미반도체 등 신규 편입. 시작 이후 누적 -17.2%.",
   "new_buys": [
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -9.48,
-      "weight_pct": 20,
-      "hold_days": 1,
+      "entry_to_current_pct": -5.69,
+      "weight_pct": 21,
+      "hold_days": 2,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     },
     {
       "name": "DB하이텍",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -10.27,
+      "entry_to_current_pct": -8.04,
       "weight_pct": 4,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "한미반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -8.47,
+      "entry_to_current_pct": -7.14,
       "weight_pct": 4,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -9.94,
+      "entry_to_current_pct": -7.72,
       "weight_pct": 16,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
@@ -54,30 +54,11 @@
       "market": "코스피",
       "entry_to_current_pct": 0.0,
       "weight_pct": 3,
-      "hold_days": 5,
+      "hold_days": 6,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
     }
   ],
-  "exits": [
-    {
-      "type": "loss",
-      "name": "카티스",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": -3.49,
-      "hold_days": 1,
-      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
-    },
-    {
-      "type": "win",
-      "name": "지니틱스",
-      "slug": "",
-      "market": "코스피",
-      "return_pct": 2.04,
-      "hold_days": 1,
-      "reason": "목표 수익 구간 도달. 분할 익절로 수익 확정."
-    }
-  ],
+  "exits": [],
   "weekly_losses": [
     {
       "name": "카티스",
@@ -91,7 +72,7 @@
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 20
+      "weight_pct": 21
     },
     {
       "name": "KODEX 반도체",
@@ -202,6 +183,10 @@
     {
       "date": "2026-11-17",
       "cumulative_return": -18.36
+    },
+    {
+      "date": "2026-11-18",
+      "cumulative_return": -17.22
     }
   ]
 }
