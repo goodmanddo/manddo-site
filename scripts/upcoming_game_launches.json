@@ -596,6 +596,30 @@
       "bench": "229200",
       "kind": "해외출시",
       "note": "자동등록 2026-11-18 (출처 인벤)"
+    },
+    {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "미공개 신작(제목 미정)",
+      "date": "20270731",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 하반기 예정(잠정)",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-18 (출처 한국신용신문)"
+    },
+    {
+      "company": "시프트업",
+      "code": "462870",
+      "game": "프로젝트 스피릿(Project Spirit)",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 예정(잠정)",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-18 (출처 나무위키 종합(2026-11))"
     }
   ],
   "launched_archive": [
