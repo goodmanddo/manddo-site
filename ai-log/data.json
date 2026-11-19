@@ -1,22 +1,22 @@
 {
   "date": "2026-11-19",
   "start_date": "2026-05-03",
-  "cumulative_return": -16.47,
-  "week_return": 2.32,
-  "day_return": 0.91,
+  "cumulative_return": -15.91,
+  "week_return": 2.99,
+  "day_return": 1.57,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 39,
   "total_trades": 115,
-  "ai_commentary": "오늘은 SK하이닉스, DB하이텍, 한미반도체 등 신규 편입. 시작 이후 누적 -16.5%.",
+  "ai_commentary": "오늘은 SK하이닉스, DB하이텍, 한미반도체 등 신규 편입. 시작 이후 누적 -15.9%.",
   "new_buys": [
     {
       "name": "SK하이닉스",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -3.13,
+      "entry_to_current_pct": -2.47,
       "weight_pct": 21,
       "hold_days": 3,
       "reason": "기관·외국인 수급 흐름 개선 신호 확인."
@@ -25,8 +25,8 @@
       "name": "DB하이텍",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -8.04,
-      "weight_pct": 4,
+      "entry_to_current_pct": -6.06,
+      "weight_pct": 5,
       "hold_days": 3,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
@@ -34,7 +34,7 @@
       "name": "한미반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -6.59,
+      "entry_to_current_pct": -4.54,
       "weight_pct": 4,
       "hold_days": 3,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
@@ -43,7 +43,7 @@
       "name": "KODEX 반도체",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -5.85,
+      "entry_to_current_pct": -3.87,
       "weight_pct": 16,
       "hold_days": 3,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
@@ -84,7 +84,7 @@
       "name": "DB하이텍",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 4
+      "weight_pct": 5
     },
     {
       "name": "한미반도체",
@@ -186,7 +186,7 @@
     },
     {
       "date": "2026-11-19",
-      "cumulative_return": -16.47
+      "cumulative_return": -15.91
     }
   ]
 }
