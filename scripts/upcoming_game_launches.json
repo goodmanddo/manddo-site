@@ -620,6 +620,30 @@
       "bench": "069500",
       "kind": "신작",
       "note": "자동등록 2026-11-18 (출처 나무위키 종합(2026-11))"
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "스캐빈저 톰(Scavenger Tom)",
+      "date": "20261231",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내(잠정)",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-19 (출처 소비자가만드는신문)"
+    },
+    {
+      "company": "넷마블",
+      "code": "251270",
+      "game": "샹그릴라 프론티어",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 1분기",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-19 (출처 인벤)"
     }
   ],
   "launched_archive": [
