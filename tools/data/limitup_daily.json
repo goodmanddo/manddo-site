@@ -1,14 +1,21 @@
 {
-  "updated_at": "2026-11-20T09:10:08",
+  "updated_at": "2026-11-20T20:05:03",
   "start": "2026-10-26",
   "total": {
     "days": 6,
     "avg": 4.31,
     "win": 2,
     "cum": 24.73,
-    "fill_rate": 25.5
+    "fill_rate": 25.0
   },
   "days": [
+    {
+      "date": "2026-11-20",
+      "limitup": 3,
+      "ordered": 3,
+      "filled": 0,
+      "status": "미체결"
+    },
     {
       "date": "2026-11-19",
       "limitup": 12,
