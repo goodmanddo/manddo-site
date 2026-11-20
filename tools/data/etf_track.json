@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-13T15:20:13",
-  "n_rounds": 20,
-  "n_paired": 8,
+  "generated_at": "2026-11-20T15:20:10",
+  "n_rounds": 21,
+  "n_paired": 9,
   "paired_stock": {
-    "n": 8,
-    "winrate": 50,
-    "mean": -1.34,
-    "cum": -10.7
+    "n": 9,
+    "winrate": 44,
+    "mean": -2.11,
+    "cum": -19.0
   },
   "paired_etf": {
-    "n": 8,
-    "winrate": 50,
-    "mean": 2.23,
-    "cum": 17.8
+    "n": 9,
+    "winrate": 44,
+    "mean": 0.53,
+    "cum": 4.8
   },
   "rounds": [
     {
@@ -194,6 +194,15 @@
       "stock_ret": -7.81,
       "etf_name": "KODEX 반도체",
       "etf_ret": 15.69
+    },
+    {
+      "buy_date": "2026-11-16",
+      "sell_date": "2026-11-20",
+      "round": 29,
+      "stock_name": "SK하이닉스",
+      "stock_ret": -8.33,
+      "etf_name": "KODEX 반도체",
+      "etf_ret": -13.02
     }
   ]
 }
