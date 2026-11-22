@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T15:50:03",
+  "updated_at": "2026-11-22T21:30:05",
   "total": {
     "current": {
       "rounds": 7,
@@ -15,6 +15,103 @@
     }
   },
   "rounds": [
+    {
+      "week": "2026-11-23",
+      "current": {
+        "rows": [
+          {
+            "code": "033780",
+            "name": "KT&G",
+            "slot": "main",
+            "planned": true,
+            "slot_label": "메인"
+          },
+          {
+            "code": "058470",
+            "name": "리노공업",
+            "slot": "rank2",
+            "planned": true,
+            "slot_label": "서브 · 같은섹터2"
+          },
+          {
+            "code": "097950",
+            "name": "CJ제일제당",
+            "slot": "rank3",
+            "planned": true,
+            "slot_label": "서브 · 같은섹터3"
+          }
+        ],
+        "avg": {},
+        "result": null
+      },
+      "extra": {
+        "sectors": [
+          "반도체",
+          "보안"
+        ],
+        "rows": [
+          {
+            "code": "222800",
+            "name": "심텍",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "nps",
+            "new": false
+          },
+          {
+            "code": "131970",
+            "name": "두산테스나",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "nps",
+            "new": true
+          },
+          {
+            "code": "108320",
+            "name": "LX세미콘",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "div",
+            "new": false
+          },
+          {
+            "code": "093520",
+            "name": "매커스",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "div",
+            "new": false
+          },
+          {
+            "code": "041520",
+            "name": "이엘씨",
+            "sector": "반도체",
+            "icon": "🔲",
+            "kind": "div",
+            "new": true
+          }
+        ],
+        "dropped": [
+          "세방전지",
+          "DN오토모티브"
+        ],
+        "avg": {},
+        "result": null
+      },
+      "bench": [
+        {
+          "code": "KS11",
+          "name": "코스피"
+        },
+        {
+          "code": "KQ11",
+          "name": "코스닥"
+        }
+      ],
+      "days": [],
+      "status": "대기",
+      "bench_result": {}
+    },
     {
       "week": "2026-11-16",
       "current": {
