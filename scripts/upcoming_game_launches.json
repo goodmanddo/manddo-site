@@ -756,6 +756,30 @@
       "bench": "229200",
       "kind": "신작",
       "note": "자동등록 2026-11-22 (출처 리포트 한 줄 정리)"
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "갓 세이브 버밍엄",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 1분기 예정",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-22 (출처 인벤 컨콜 기사)"
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "템빨용사",
+      "date": "20261130",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2026년 연내 예정",
+      "bench": "069500",
+      "kind": "신작",
+      "note": "자동등록 2026-11-22 (출처 서울타임즈뉴스)"
     }
   ],
   "launched_archive": [
