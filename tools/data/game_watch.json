@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-22T09:01:01",
-  "count": 66,
+  "generated_at": "2026-11-22T22:01:24",
+  "count": 67,
   "milestone_note": "각 수치는 '출시 D-40/D-30/D-7 시점 종가 대비 현재 수익률'. 출시일은 잠정이며 변동될 수 있음.",
   "items": [
     {
@@ -287,6 +287,37 @@
           "status": "done",
           "ret": -11.0,
           "excess": 0.8
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "크래프톤",
+      "code": "259960",
+      "game": "템빨용사",
+      "launch_date": "20261130",
+      "status": "expected",
+      "note": "자동등록 2026-11-22 (출처 서울타임즈뉴스)",
+      "tentative": true,
+      "date_label": "2026년 연내 예정",
+      "bench": "069500",
+      "bench_name": "코스피200",
+      "price": 202000,
+      "dday": 8,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "done",
+          "ret": 3.9,
+          "excess": 19.0
+        },
+        "d30": {
+          "status": "done",
+          "ret": 10.9,
+          "excess": 27.0
         },
         "d7": {
           "status": "pending"
@@ -1088,33 +1119,6 @@
       "post_ret": null
     },
     {
-      "company": "엔씨소프트",
-      "code": "036570",
-      "game": "아스트라에 오라티오",
-      "launch_date": "20270131",
-      "status": "expected",
-      "note": "자동등록 2026-11-15 (출처 경향게임스·게임뷰)",
-      "tentative": true,
-      "date_label": "2027년 1분기 예정",
-      "bench": "229200",
-      "bench_name": "코스닥150",
-      "price": 179400,
-      "dday": 70,
-      "launched": false,
-      "milestones": {
-        "d40": {
-          "status": "pending"
-        },
-        "d30": {
-          "status": "pending"
-        },
-        "d7": {
-          "status": "pending"
-        }
-      },
-      "post_ret": null
-    },
-    {
       "company": "넷마블",
       "code": "251270",
       "game": "샹그릴라 프론티어: 일곱 최강종",
@@ -1666,6 +1670,33 @@
       "bench": "229200",
       "bench_name": "코스닥150",
       "price": 10330,
+      "dday": 70,
+      "launched": false,
+      "milestones": {
+        "d40": {
+          "status": "pending"
+        },
+        "d30": {
+          "status": "pending"
+        },
+        "d7": {
+          "status": "pending"
+        }
+      },
+      "post_ret": null
+    },
+    {
+      "company": "카카오게임즈",
+      "code": "293490",
+      "game": "갓 세이브 버밍엄",
+      "launch_date": "20270131",
+      "status": "expected",
+      "note": "자동등록 2026-11-22 (출처 인벤 컨콜 기사)",
+      "tentative": true,
+      "date_label": "2027년 1분기 예정",
+      "bench": "229200",
+      "bench_name": "코스닥150",
+      "price": 12660,
       "dday": 70,
       "launched": false,
       "milestones": {
