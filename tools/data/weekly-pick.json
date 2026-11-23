@@ -5,7 +5,11 @@
   "week_end": "2026-11-27",
   "status": "active",
   "picks": {
-    "manddo": null,
+    "manddo": {
+      "code": "033780",
+      "name": "KT&G",
+      "reason": "경기 방어주"
+    },
     "ai": {
       "code": "033780",
       "name": "KT&G",
@@ -68,5 +72,5 @@
       }
     }
   },
-  "updated_at": "2026-11-23 09:00:09"
+  "updated_at": "2026-11-23 09:30:01"
 }
