@@ -1,5 +1,33 @@
 {
   "last_holdings": {
+    "033780": {
+      "name": "KT&G",
+      "qty": 24,
+      "avg_price": 179895,
+      "current_price": 178800,
+      "opened_at": "2026-11-23"
+    },
+    "058470": {
+      "name": "리노공업",
+      "qty": 17,
+      "avg_price": 45288,
+      "current_price": 44700,
+      "opened_at": "2026-11-23"
+    },
+    "091180": {
+      "name": "KODEX 자동차",
+      "qty": 144,
+      "avg_price": 20237,
+      "current_price": 20190,
+      "opened_at": "2026-11-23"
+    },
+    "097950": {
+      "name": "CJ제일제당",
+      "qty": 4,
+      "avg_price": 180300,
+      "current_price": 176000,
+      "opened_at": "2026-11-23"
+    },
     "142760": {
       "name": "모아라이프플러스",
       "qty": 4273,
@@ -9,10 +37,6 @@
     }
   },
   "history": [
-    {
-      "date": "2026-10-26",
-      "total_eval": 16814258
-    },
     {
       "date": "2026-10-26",
       "total_eval": 16814258
@@ -248,6 +272,10 @@
     {
       "date": "2026-11-20",
       "total_eval": 16190425
+    },
+    {
+      "date": "2026-11-23",
+      "total_eval": 16128800
     }
   ],
   "completed_trades": [
