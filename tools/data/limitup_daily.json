@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T09:10:07",
+  "updated_at": "2026-11-24T20:05:06",
   "start": "2026-10-26",
   "total": {
     "days": 6,
@@ -9,6 +9,13 @@
     "fill_rate": 23.5
   },
   "days": [
+    {
+      "date": "2026-11-24",
+      "limitup": 12,
+      "ordered": 5,
+      "filled": 3,
+      "status": "보유중"
+    },
     {
       "date": "2026-11-23",
       "limitup": 8,
