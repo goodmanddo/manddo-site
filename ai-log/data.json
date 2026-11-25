@@ -10,8 +10,17 @@
   "today_loss_count": 0,
   "win_rate": 38,
   "total_trades": 119,
-  "ai_commentary": "오늘은 KT&G, 리노공업, KODEX 자동차 등 신규 편입. 시작 이후 누적 -17.2%.",
+  "ai_commentary": "오늘은 티와이홀딩스우, KT&G, 리노공업 등 신규 편입. 시작 이후 누적 -17.2%.",
   "new_buys": [
+    {
+      "name": "티와이홀딩스우",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.09,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "변동성 축소 후 방향성 회복 구간 포착."
+    },
     {
       "name": "KT&G",
       "slug": "",
@@ -78,6 +87,12 @@
     },
     {
       "name": "모아라이프플러스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
+      "name": "티와이홀딩스우",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3

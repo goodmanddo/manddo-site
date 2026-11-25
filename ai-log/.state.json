@@ -34,13 +34,16 @@
       "avg_price": 117,
       "current_price": 117,
       "opened_at": "2026-11-12"
+    },
+    "36328K": {
+      "name": "티와이홀딩스우",
+      "qty": 144,
+      "avg_price": 3457,
+      "current_price": 3460,
+      "opened_at": "2026-11-25"
     }
   },
   "history": [
-    {
-      "date": "2026-10-28",
-      "total_eval": 16934353
-    },
     {
       "date": "2026-10-28",
       "total_eval": 16934353
@@ -276,6 +279,10 @@
     {
       "date": "2026-11-25",
       "total_eval": 16563883
+    },
+    {
+      "date": "2026-11-25",
+      "total_eval": 16564183
     }
   ],
   "completed_trades": [
