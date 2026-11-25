@@ -4,28 +4,28 @@
       "name": "KT&G",
       "qty": 24,
       "avg_price": 179895,
-      "current_price": 183700,
+      "current_price": 183200,
       "opened_at": "2026-11-23"
     },
     "058470": {
       "name": "리노공업",
       "qty": 17,
       "avg_price": 45288,
-      "current_price": 48500,
+      "current_price": 45750,
       "opened_at": "2026-11-23"
     },
     "091180": {
       "name": "KODEX 자동차",
       "qty": 144,
       "avg_price": 20237,
-      "current_price": 22185,
+      "current_price": 21920,
       "opened_at": "2026-11-23"
     },
     "097950": {
       "name": "CJ제일제당",
       "qty": 4,
       "avg_price": 180300,
-      "current_price": 180200,
+      "current_price": 191100,
       "opened_at": "2026-11-23"
     },
     "142760": {
@@ -37,10 +37,6 @@
     }
   },
   "history": [
-    {
-      "date": "2026-10-28",
-      "total_eval": 16934353
-    },
     {
       "date": "2026-10-28",
       "total_eval": 16934353
@@ -276,6 +272,10 @@
     {
       "date": "2026-11-24",
       "total_eval": 16615080
+    },
+    {
+      "date": "2026-11-25",
+      "total_eval": 16563883
     }
   ],
   "completed_trades": [

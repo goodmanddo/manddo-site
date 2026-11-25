@@ -1,51 +1,51 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "start_date": "2026-05-03",
-  "cumulative_return": -16.92,
-  "week_return": 3.01,
-  "day_return": 3.01,
+  "cumulative_return": -17.18,
+  "week_return": 2.7,
+  "day_return": -0.31,
   "today_realized_avg": 0.0,
   "today_trade_count": 0,
   "today_win_count": 0,
   "today_loss_count": 0,
   "win_rate": 38,
   "total_trades": 119,
-  "ai_commentary": "오늘은 KT&G, 리노공업, KODEX 자동차 등 신규 편입. 시작 이후 누적 -16.9%.",
+  "ai_commentary": "오늘은 KT&G, 리노공업, KODEX 자동차 등 신규 편입. 시작 이후 누적 -17.2%.",
   "new_buys": [
     {
       "name": "KT&G",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 2.12,
+      "entry_to_current_pct": 1.84,
       "weight_pct": 27,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "리노공업",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 7.09,
+      "entry_to_current_pct": 1.02,
       "weight_pct": 5,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "KODEX 자동차",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 9.63,
+      "entry_to_current_pct": 8.32,
       "weight_pct": 19,
-      "hold_days": 1,
+      "hold_days": 2,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": -0.06,
-      "weight_pct": 4,
-      "hold_days": 1,
+      "entry_to_current_pct": 5.99,
+      "weight_pct": 5,
+      "hold_days": 2,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     }
   ],
@@ -74,7 +74,7 @@
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 4
+      "weight_pct": 5
     },
     {
       "name": "모아라이프플러스",
@@ -84,10 +84,6 @@
     }
   ],
   "return_history": [
-    {
-      "date": "2026-10-27",
-      "cumulative_return": -15.97
-    },
     {
       "date": "2026-10-28",
       "cumulative_return": -15.33
@@ -167,6 +163,10 @@
     {
       "date": "2026-11-24",
       "cumulative_return": -16.92
+    },
+    {
+      "date": "2026-11-25",
+      "cumulative_return": -17.18
     }
   ]
 }
