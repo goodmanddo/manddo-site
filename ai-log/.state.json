@@ -34,13 +34,16 @@
       "avg_price": 117,
       "current_price": 117,
       "opened_at": "2026-11-12"
+    },
+    "355390": {
+      "name": "크라우드웍스",
+      "qty": 854,
+      "avg_price": 585,
+      "current_price": 585,
+      "opened_at": "2026-11-26"
     }
   },
   "history": [
-    {
-      "date": "2026-10-29",
-      "total_eval": 16877803
-    },
     {
       "date": "2026-10-29",
       "total_eval": 16877803
@@ -276,6 +279,10 @@
     {
       "date": "2026-11-26",
       "total_eval": 16326483
+    },
+    {
+      "date": "2026-11-26",
+      "total_eval": 16326413
     }
   ],
   "completed_trades": [

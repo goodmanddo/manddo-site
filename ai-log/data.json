@@ -10,8 +10,17 @@
   "today_loss_count": 1,
   "win_rate": 38,
   "total_trades": 120,
-  "ai_commentary": "오늘은 KT&G, 리노공업, KODEX 자동차 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -18.4%.",
+  "ai_commentary": "오늘은 크라우드웍스, KT&G, 리노공업 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -18.4%.",
   "new_buys": [
+    {
+      "name": "크라우드웍스",
+      "slug": "",
+      "market": "코스피",
+      "entry_to_current_pct": 0.0,
+      "weight_pct": 3,
+      "hold_days": 0,
+      "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
+    },
     {
       "name": "KT&G",
       "slug": "",
@@ -95,6 +104,12 @@
     },
     {
       "name": "모아라이프플러스",
+      "slug": "",
+      "market": "코스피",
+      "weight_pct": 3
+    },
+    {
+      "name": "크라우드웍스",
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
