@@ -1,71 +1,79 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "start_date": "2026-05-03",
-  "cumulative_return": -17.18,
-  "week_return": -0.31,
-  "day_return": -0.31,
-  "today_realized_avg": 0.0,
-  "today_trade_count": 0,
+  "cumulative_return": -18.37,
+  "week_return": -1.74,
+  "day_return": -1.44,
+  "today_realized_avg": -11.48,
+  "today_trade_count": 1,
   "today_win_count": 0,
-  "today_loss_count": 0,
+  "today_loss_count": 1,
   "win_rate": 38,
-  "total_trades": 119,
-  "ai_commentary": "오늘은 티와이홀딩스우, KT&G, 리노공업 등 신규 편입. 시작 이후 누적 -17.2%.",
+  "total_trades": 120,
+  "ai_commentary": "오늘은 KT&G, 리노공업, KODEX 자동차 등 신규 편입. 1건은 손절 규칙에 따라 정리. 시작 이후 누적 -18.4%.",
   "new_buys": [
-    {
-      "name": "티와이홀딩스우",
-      "slug": "",
-      "market": "코스피",
-      "entry_to_current_pct": 0.09,
-      "weight_pct": 3,
-      "hold_days": 0,
-      "reason": "변동성 축소 후 방향성 회복 구간 포착."
-    },
     {
       "name": "KT&G",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.84,
-      "weight_pct": 27,
-      "hold_days": 2,
+      "entry_to_current_pct": -0.22,
+      "weight_pct": 26,
+      "hold_days": 3,
       "reason": "최근 매물대 정리 후 수급 우호 전환 포착."
     },
     {
       "name": "리노공업",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 1.02,
+      "entry_to_current_pct": 3.23,
       "weight_pct": 5,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "변동성 축소 후 방향성 회복 구간 포착."
     },
     {
       "name": "KODEX 자동차",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 8.32,
+      "entry_to_current_pct": 4.78,
       "weight_pct": 19,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "수급 개선 신호와 단기 추세 회복 구간에서 진입."
     },
     {
       "name": "CJ제일제당",
       "slug": "",
       "market": "코스피",
-      "entry_to_current_pct": 5.99,
+      "entry_to_current_pct": 5.38,
       "weight_pct": 5,
-      "hold_days": 2,
+      "hold_days": 3,
       "reason": "거래량 확대와 차트 흐름 안정으로 신규 편입."
     }
   ],
-  "exits": [],
-  "weekly_losses": [],
+  "exits": [
+    {
+      "type": "loss",
+      "name": "티와이홀딩스우",
+      "slug": "",
+      "market": "코스피",
+      "return_pct": -11.48,
+      "hold_days": 1,
+      "reason": "손절 규칙 적용. 진입 시나리오 재검토 필요."
+    }
+  ],
+  "weekly_losses": [
+    {
+      "name": "티와이홀딩스우",
+      "slug": "",
+      "return_pct": -11.48,
+      "lesson": "손절 규칙을 지킨 건 맞지만, 진입 시점 재검토 필요."
+    }
+  ],
   "holdings": [
     {
       "name": "KT&G",
       "slug": "",
       "market": "코스피",
-      "weight_pct": 27
+      "weight_pct": 26
     },
     {
       "name": "KODEX 자동차",
@@ -90,19 +98,9 @@
       "slug": "",
       "market": "코스피",
       "weight_pct": 3
-    },
-    {
-      "name": "티와이홀딩스우",
-      "slug": "",
-      "market": "코스피",
-      "weight_pct": 3
     }
   ],
   "return_history": [
-    {
-      "date": "2026-10-28",
-      "cumulative_return": -15.33
-    },
     {
       "date": "2026-10-29",
       "cumulative_return": -15.61
@@ -182,6 +180,10 @@
     {
       "date": "2026-11-25",
       "cumulative_return": -17.18
+    },
+    {
+      "date": "2026-11-26",
+      "cumulative_return": -18.37
     }
   ]
 }
