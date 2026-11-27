@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-20T15:20:10",
-  "n_rounds": 21,
-  "n_paired": 9,
+  "generated_at": "2026-11-27T15:20:13",
+  "n_rounds": 22,
+  "n_paired": 10,
   "paired_stock": {
-    "n": 9,
-    "winrate": 44,
-    "mean": -2.11,
-    "cum": -19.0
+    "n": 10,
+    "winrate": 40,
+    "mean": -2.09,
+    "cum": -20.9
   },
   "paired_etf": {
-    "n": 9,
-    "winrate": 44,
-    "mean": 0.53,
-    "cum": 4.8
+    "n": 10,
+    "winrate": 50,
+    "mean": 1.25,
+    "cum": 12.5
   },
   "rounds": [
     {
@@ -203,6 +203,15 @@
       "stock_ret": -8.33,
       "etf_name": "KODEX 반도체",
       "etf_ret": -13.02
+    },
+    {
+      "buy_date": "2026-11-23",
+      "sell_date": "2026-11-27",
+      "round": 30,
+      "stock_name": "KT&G",
+      "stock_ret": -1.89,
+      "etf_name": "KODEX 자동차",
+      "etf_ret": 7.71
     }
   ]
 }
