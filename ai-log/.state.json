@@ -1,32 +1,11 @@
 {
   "last_holdings": {
-    "033780": {
-      "name": "KT&G",
-      "qty": 24,
-      "avg_price": 179895,
-      "current_price": 179500,
-      "opened_at": "2026-11-23"
-    },
-    "058470": {
-      "name": "리노공업",
-      "qty": 17,
-      "avg_price": 45288,
-      "current_price": 46750,
-      "opened_at": "2026-11-23"
-    },
-    "091180": {
-      "name": "KODEX 자동차",
-      "qty": 144,
-      "avg_price": 20237,
-      "current_price": 21205,
-      "opened_at": "2026-11-23"
-    },
-    "097950": {
-      "name": "CJ제일제당",
-      "qty": 4,
-      "avg_price": 180300,
-      "current_price": 190000,
-      "opened_at": "2026-11-23"
+    "070300": {
+      "name": "퀀텀레일",
+      "qty": 2127,
+      "avg_price": 235,
+      "current_price": 235,
+      "opened_at": "2026-11-27"
     },
     "142760": {
       "name": "모아라이프플러스",
@@ -34,20 +13,9 @@
       "avg_price": 117,
       "current_price": 117,
       "opened_at": "2026-11-12"
-    },
-    "355390": {
-      "name": "크라우드웍스",
-      "qty": 854,
-      "avg_price": 585,
-      "current_price": 585,
-      "opened_at": "2026-11-26"
     }
   },
   "history": [
-    {
-      "date": "2026-10-30",
-      "total_eval": 16920547
-    },
     {
       "date": "2026-10-30",
       "total_eval": 16920547
@@ -283,6 +251,10 @@
     {
       "date": "2026-11-26",
       "total_eval": 16326413
+    },
+    {
+      "date": "2026-11-27",
+      "total_eval": 16438939
     }
   ],
   "completed_trades": [
@@ -1231,6 +1203,46 @@
       "return_pct": -11.48,
       "date": "2026-11-26",
       "is_win": false,
+      "hold_days": 1
+    },
+    {
+      "name": "KT&G",
+      "code": "033780",
+      "return_pct": -2.11,
+      "date": "2026-11-27",
+      "is_win": false,
+      "hold_days": 4
+    },
+    {
+      "name": "리노공업",
+      "code": "058470",
+      "return_pct": 14.82,
+      "date": "2026-11-27",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "KODEX 자동차",
+      "code": "091180",
+      "return_pct": 7.4,
+      "date": "2026-11-27",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "CJ제일제당",
+      "code": "097950",
+      "return_pct": 4.22,
+      "date": "2026-11-27",
+      "is_win": true,
+      "hold_days": 4
+    },
+    {
+      "name": "크라우드웍스",
+      "code": "355390",
+      "return_pct": 8.55,
+      "date": "2026-11-27",
+      "is_win": true,
       "hold_days": 1
     }
   ]
