@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-26T20:05:07",
+  "updated_at": "2026-11-27T09:10:10",
   "start": "2026-10-26",
   "total": {
-    "days": 8,
-    "avg": 1.76,
-    "win": 2,
-    "cum": 10.04,
+    "days": 9,
+    "avg": 2.49,
+    "win": 3,
+    "cum": 19.19,
     "fill_rate": 25.5
   },
   "days": [
@@ -14,7 +14,8 @@
       "limitup": 11,
       "ordered": 5,
       "filled": 1,
-      "status": "보유중"
+      "status": "완료",
+      "ret": 8.32
     },
     {
       "date": "2026-11-25",
