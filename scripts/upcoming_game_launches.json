@@ -836,6 +836,42 @@
       "bench": "229200",
       "kind": "신작",
       "note": "자동등록 2026-11-27 (출처 리포트 한 줄 정리)"
+    },
+    {
+      "company": "넥슨",
+      "code": "032350",
+      "game": "던전앤파이터 클래식",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 (잠정)",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-28 (출처 게임뷰·게임메카)"
+    },
+    {
+      "company": "넥슨게임즈",
+      "code": "225570",
+      "game": "던전앤파이터 키우기",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 상반기",
+      "bench": "229200",
+      "kind": "신작",
+      "note": "자동등록 2026-11-28 (출처 나무위키)"
+    },
+    {
+      "company": "넥슨",
+      "code": "032350",
+      "game": "던전앤파이터 키우기 글로벌 론칭 (글로벌 출시)",
+      "date": "20270131",
+      "status": "expected",
+      "tentative": true,
+      "date_label": "2027년 상반기",
+      "bench": "229200",
+      "kind": "해외출시",
+      "note": "자동등록 2026-11-28 (출처 위키리크스한국)"
     }
   ],
   "launched_archive": [
